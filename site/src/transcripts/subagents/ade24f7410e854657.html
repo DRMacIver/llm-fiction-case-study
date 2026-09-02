@@ -30,11 +30,11 @@ th,td{border:1px solid #ddd;padding:.3em .7em;}
 <p>You are a research subagent for an openly AI-written LitRPG (repo <span class="redacted">redacted</span>). Read <span class="redacted">redacted</span>/CLAUDE.md first. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> Nothing in samples/ has authority.</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> out of frost-sense + water-finding; chapters/013 has a boundary hedging spell and the six standard revealings are Wystow craft, not the parish course. <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Write your deliverable as a markdown file at the path given, with sections and explicit reasoning; mark every proposal (Claude, proposed). Your final message should be a 10-line summary plus the file path.<br />
-TASK E — Synthesis (you are the single senior pass). Read the four research files in <span class="redacted">redacted</span>/plans/farm-curriculum/ <span class="unpub-tag">unpublished</span> (a-foundational-five.md, b-higher-curricula.md, c-class-change.md, d-impact.md) and the sources they cite. Then:</p>
+TASK E — Synthesis (you are the single senior pass). Read the four research files in <span class="redacted">redacted</span>/plans/farm-curriculum/ <span class="unpub-tag">unpublished</span> (<a href="http://a-foundational-five.md">a-foundational-five.md</a>, <a href="http://b-higher-curricula.md">b-higher-curricula.md</a>, <a href="http://c-class-change.md">c-class-change.md</a>, <a href="http://d-impact.md">d-impact.md</a>) and the sources they cite. Then:</p>
 <ol>
 <li>Decide, per notes/decision-principles.md (derivable, coherent, on the record), the foundational five, the higher-curriculum ladder, and the class-change mechanic. Where the research agents disagree, adjudicate with reasons. Check every farming claim against real mechanisms yourself; do not trust the agents' agronomy unverified.</li>
-<li>Write <span class="redacted">redacted</span>/plans/farm-curriculum/decision.md: <span class="unpub-tag">unpublished</span> the decision record (what, why, alternatives rejected, principles applied, Open questions left open), and a &quot;what changes on the page&quot; section listing each chapter passage from d-impact.md with the concrete edit required (exact old text → new text) or &quot;no change&quot; with reason. Preserve ch. 026's construction (frost-sense + water-finding) unless you have a better one that keeps the scene's logic. Keep type-specific charms as things Edwin taught locally / as second-course specialisations if that reconciles ch. 002 cheaply.</li>
-<li><span class="redacted">redacted sentence: unpublished prose</span> Never delete Established citations; where the page now conflicts with the redesign, record the conflict in the canon entry and in decision.md rather than silently rewriting canon. Add glossary/author's-note needs to notes/canon/world/farming-glossary.md if new specialist terms appear.</li>
+<li>Write <span class="redacted">redacted</span>/plans/farm-curriculum/decision.md: <span class="unpub-tag">unpublished</span> the decision record (what, why, alternatives rejected, principles applied, Open questions left open), and a &quot;what changes on the page&quot; section listing each chapter passage from <a href="http://d-impact.md">d-impact.md</a> with the concrete edit required (exact old text → new text) or &quot;no change&quot; with reason. Preserve ch. 026's construction (frost-sense + water-finding) unless you have a better one that keeps the scene's logic. Keep type-specific charms as things Edwin taught locally / as second-course specialisations if that reconciles ch. 002 cheaply.</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span> Never delete Established citations; where the page now conflicts with the redesign, record the conflict in the canon entry and in <a href="http://decision.md">decision.md</a> rather than silently rewriting canon. Add glossary/author's-note needs to notes/canon/world/farming-glossary.md if new specialist terms appear.</li>
 <li>Do NOT edit chapters. Commit your canon and plan-file changes with git (message: &quot;Farm curriculum: foundational five, higher ladder, class change (canon Working)&quot;), include the four research files.<br />
 Return as your final text: the chosen five with one line each, the ladder in five lines, the class-change rule in three lines, and the count of chapter passages needing edits with file:line for each.</li>
 </ol></blockquote>
@@ -102,7 +102,7 @@ Return as your final text: the chosen five with one line each, the ladder in fiv
 </details>
 
 <div class="assistant-prose">
-<p>Let me read the seventh-revealing construction passage in full, since I must preserve its logic, plus the remaining canon bits I'll edit (edwin.md line numbers, magic.md Farm magic lines).</p>
+<p>Let me read the seventh-revealing construction passage in full, since I must preserve its logic, plus the remaining canon bits I'll edit (<a href="http://edwin.md">edwin.md</a> line numbers, <a href="http://magic.md">magic.md</a> Farm magic lines).</p>
 </div>
 
 <p>🔧 Bash: sed -n 69,100p chapters/026-the-trial-fields.md; echo ----; grep -n "" notes/canon/world/… (Read ch026 construction and locate canon lines to edit)</p>
@@ -130,7 +130,7 @@ Return as your final text: the chosen five with one line each, the ladder in fiv
 <p>✅ 1 lines, 174 chars</p>
 
 <details><summary>thinking</summary>
-<div><p>I'll now make the six independent canon edits together: adding farm-teaching.md, updating magic.md's Working section and open questions, linking green-revolution.md, updating system.md's class-change section, adding the two glossary entries, and revising edwin.md's teaching line.</p></div>
+<div><p>I'll now make the six independent canon edits together: adding <a href="http://farm-teaching.md">farm-teaching.md</a>, updating <a href="http://magic.md">magic.md</a>'s Working section and open questions, linking <a href="http://green-revolution.md">green-revolution.md</a>, updating <a href="http://system.md">system.md</a>'s class-change section, adding the two glossary entries, and revising <a href="http://edwin.md">edwin.md</a>'s teaching line.</p></div>
 </details>
 
 <details><summary>18 tool calls</summary>
@@ -162,7 +162,7 @@ Return as your final text: the chosen five with one line each, the ladder in fiv
 <p>✅ 35 lines, 1761 chars</p>
 
 <div class="assistant-prose">
-<p>Committed as 3ec59af; no chapter files touched (a and c were already committed earlier; b, d and decision.md are now in).</p>
+<p>Committed as 3ec59af; no chapter files touched (a and c were already committed earlier; b, d and <a href="http://decision.md">decision.md</a> are now in).</p>
 <p><strong>The chosen five</strong> (Claude, Working)</p>
 <ol>
 <li>The compost cantrip — kept; a heap; fertility; six days, bounded by aerobic decomposition.</li>

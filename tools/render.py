@@ -85,7 +85,7 @@ def esc(text: str) -> str:
     return _join_adjacent_spans(escaped)
 
 
-_MD = MarkdownIt("commonmark", {"html": False, "breaks": True}).enable("table")
+_MD = MarkdownIt("commonmark", {"html": False, "breaks": True, "linkify": True}).enable("table").enable("linkify")
 
 _TABLE_RE = re.compile(r"<table>.*?</table>", re.DOTALL)
 
