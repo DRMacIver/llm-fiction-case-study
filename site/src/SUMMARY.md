@@ -42,5 +42,5 @@
   - [2026-08-27: Building the System and starting the draft](transcripts/10c1dd77-c31a-4be9-a7b6-23651a4792b4.md)
   - [2026-08-27: Rebuilding the draft through several full rewrites](transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md)
   - [2026-08-30: Finishing the rewrite and publishing to Royal Road](transcripts/d1679987-c781-4167-82f2-4fb2b67962c1.md)
-  - [2026-08-31: Redrafting the second act, scene by scene](transcripts/c214c046-1bb3-4385-abee-f924d8349bad.md)
+  - [2026-08-31: Mapping the setting](transcripts/c214c046-1bb3-4385-abee-f924d8349bad.md)
   - [2026-09-02: Drafting to the end of book one](transcripts/7257e15f-eb7f-4d0b-83e8-dde205ef5352.md)

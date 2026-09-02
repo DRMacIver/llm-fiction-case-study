@@ -28,8 +28,8 @@
     "blurb": "A short session building a local web tool for reading and commenting on draft chapters in a Royal Road style layout, with logic to keep comment anchors attached to the right text across edits. Two small follow-up requests improved the visibility of scene breaks and the styling of in-story system message boxes."
   },
   "c214c046-1bb3-4385-abee-f924d8349bad": {
-    "title": "Redrafting the second act, scene by scene",
-    "blurb": "A short session redrafting part of book one's second act using a gated, scene-by-scene pipeline of drafting, automated review, and author approval. Partway through, the process caught itself at risk of reusing earlier draft text too closely, paused to flag the issue, and worked out a fix before continuing."
+    "title": "Mapping the setting",
+    "blurb": "A short session building an SVG map of the area covered by book one, worked out from the geography and travel distances already recorded in canon so the travel regions and the reach of Edwin's weather working stay consistent with each other."
   },
   "d1679987-c781-4167-82f2-4fb2b67962c1": {
     "title": "Finishing the rewrite and publishing to Royal Road",

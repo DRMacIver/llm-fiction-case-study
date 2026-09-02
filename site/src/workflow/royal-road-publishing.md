@@ -1,6 +1,6 @@
 # Royal Road publishing automation
 
-Royal Road, the web fiction site the book is published on, has no public API for uploading chapters. What it has is a normal web form, so the project's publishing tool drives that form directly: a headless browser, scripted with Playwright, logs in once and keeps the session persisted locally, then submits chapter content the same way a human clicking through the site would.
+Royal Road, the web fiction site the book is published on, has no public API for uploading chapters. What it has is a normal web form, so the project's publishing tool logs in once through a real browser driven by Playwright, then submits the site's own forms directly over HTTP using the saved session, sending what a human filling in the form would send.
 
 ## What the tool does
 

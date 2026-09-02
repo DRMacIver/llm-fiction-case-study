@@ -16,7 +16,7 @@ Topics. Some spoilers are not a word but a subject, so the plot threads that car
 
 Unpublished scenes. Scene numbers above 40 and the planning files behind them are visible as filenames, because a transcript where every path is a black box is unreadable, but they are tagged as unpublished and their contents never appear.
 
-File contents. This is the strongest rule and it is applied blind. When a transcript shows a file being read or written, the site shows that it happened and what followed from it, not what was in the file. That is why the transcripts can be published at all: the prose of the novel, the canon files, and the sealed answers to the book's unresolved mysteries all pass through those sessions constantly, and none of them are ever shown.
+File contents. This is the strongest rule and it is applied blind, with one exception. When a transcript shows a file being read or written, the site shows that it happened and what followed from it, not what was in the file. That is why the transcripts can be published at all: the prose of the novel, the canon files, and the sealed answers to the book's unresolved mysteries all pass through those sessions constantly, and after the point where the story's premise is first set out, none of them are shown. Before that point, in the project's very first session, the rule is looser, and [Start with the voice, not the story](howto/voice-first.md) says more about why.
 
 Private information. Local filesystem paths, machine details, and anything else identifying about where the work was done are removed. The novel's own repository is not named or linked here.
 

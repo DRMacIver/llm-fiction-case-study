@@ -4,7 +4,7 @@ This page is for readers who have never opened a terminal and would like to try 
 
 ## What David actually used
 
-David ran everything from the command line on a Mac, in a terminal window, using the Claude Code command-line tool on a Claude Max subscription. His novel was a folder of plain text files in Markdown format, kept under git version control, and every conversation in the transcripts on this site happened inside that folder. That is the setup the transcripts show. It is not the only one that works, and for most people starting today it is probably not the easiest.
+David ran everything from the command line on a Mac, in a terminal window, using the Claude Code command-line tool. He was, by his own account, on a Claude Max subscription. The transcripts confirm the Mac, the terminal and the single project folder but carry no billing information. His novel was a folder of plain text files in Markdown format, kept under git version control, and every conversation in the transcripts on this site happened inside that folder. That is the setup the transcripts show. It is not the only one that works, and for most people starting today it is probably not the easiest.
 
 ## The easier route: the desktop app
 
@@ -14,7 +14,7 @@ The one thing you give up is that the command line makes it slightly easier to r
 
 ## What you need
 
-An account with Claude Code access. At the time of writing that means a Claude Pro or Max subscription, a Team or Enterprise plan, or pay-as-you-go API credits through the Claude Console. The free tier does not include it. Plan names and limits change, so check <https://claude.com/pricing> rather than trusting this page. Usage is metered in rolling windows, and a project like this one runs through a good deal of it, which is why David was on the largest individual plan and still watched his budget.
+An account with Claude Code access. At the time of writing that means a Claude Pro or Max subscription, a Team or Enterprise plan, or pay-as-you-go API credits through the Claude Console. The free tier does not include it. Plan names and limits change, so check <https://claude.com/pricing> rather than trusting this page. Usage is metered in rolling windows, and a project like this one runs through a good deal of it. David was on the largest individual plan and the transcripts show him watching the budget even so.
 
 A computer with a folder you can dedicate to the project. Nothing else. Git, the version-control tool, is usually already present on a Mac and can be installed on Windows from <https://git-scm.com>. If it is missing, Claude Code will tell you and can usually talk you through installing it.
 
@@ -36,4 +36,4 @@ Claude Code keeps a record of every session on your own computer, in a hidden fo
 
 ## If you get stuck
 
-Ask the model. That sounds glib but it is the honest answer and the one the transcripts show David using. Claude Code can explain what a terminal is, why a command failed, and what a permission prompt means, and asking it costs nothing but a little of your usage. The first hour is the hardest, and most of the difficulty is the unfamiliarity of the surroundings rather than anything about the writing.
+Ask the model. That sounds glib but it is the honest answer. Claude Code can explain what a terminal is, why a command failed, and what a permission prompt means, and asking it costs nothing but a little of your usage. The first hour is the hardest, and most of the difficulty is the unfamiliarity of the surroundings rather than anything about the writing.
