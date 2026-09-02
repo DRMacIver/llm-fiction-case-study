@@ -60,9 +60,9 @@ Be paranoid about: numbers (count them yourself, check the direction of comparis
 <p>✅ 7 lines, 210 chars — ./tools/redact.py / ./tests/test_redact.py / ./build/redact.log</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import re s=open('tools/redact.py').read() print(len(…</p>
 <p>✅ 64 lines, 2662 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rc "…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rc "[[" . 2&gt;/dev/null | grep -v ":0" | head -20 echo "total…</p>
 <p>✅ 5 lines, 115 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rn "…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rn "[[\|redacted" tools/*.py | grep -v spoilers.json | grep…</p>
 <p>✅ 26 lines, 2307 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -c "class=\"redacted\"" transcripts/*.md 2&gt;/dev/null | awk -F…</p>
 <p>✅ 3 lines, 41 chars</p>

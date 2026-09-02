@@ -139,12 +139,12 @@ Verify each high and medium report against the file. For confirmed leaks fix the
 <p>✅ 16 lines, 10702 chars</p>
 <p>🔧 Read site/src/transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md</p>
 <p>✅ 10 lines, 1880 chars</p>
-<p>🔧 Bash: grep -rc "redacted sentence:…</p>
+<p>🔧 Bash: grep -rc "redacted sentence: [[redacted:\|redacted sentence: &lt;span" site/src/transcripts/…</p>
 <p>✅ 4 lines, 252 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>This reveals a real bug: later redaction passes re-scan text that already contains <span class="redacted">...</span> markers from earlier passes, sometimes matching inside the marker text itself and corrupting it. Let me verify and fix.</p>
+<p>This reveals a real bug: later redaction passes re-scan text that already contains <code>[[...]]</code> markers from earlier passes, sometimes matching inside the marker text itself and corrupting it. Let me verify and fix.</p>
 </div>
 
 <details><summary>6 tool calls</summary>
@@ -338,7 +338,7 @@ Verify each high and medium report against the file. For confirmed leaks fix the
 <p><strong>Root-cause fixes (<code>tools/redact.py</code>):</strong></p>
 <ol>
 <li>New <code>_redact_private_paths</code> — regex-based redaction of Claude Code project-storage paths (<code>.claude/projects/...</code>), this tool's scratch dir (<code>/private/tmp/claude-501/...</code>), <code>toolu_...</code> ids, <code>wf_&lt;hex&gt;-&lt;hex&gt;</code> workflow-run ids, and bare <code>feedback-*.md</code> memory filenames. This was the single largest leak class in the reports — hundreds of unredacted private filesystem paths.</li>
-<li>Fixed a marker-corruption bug: later redaction passes were re-scanning text already containing <code><span class="redacted">...</span></code> markers from the topic-sentence pass, sometimes matching <em>inside</em> a marker's own topic name and corrupting it (e.g. <code><span class="redacted">redacted sentence: ⟦redacted: event</span>/mortality⟧</code>). Added <code>_apply_outside_markers</code> to protect already-redacted spans from every later pass.</li>
+<li>Fixed a marker-corruption bug: later redaction passes were re-scanning text already containing <code>[[...]]</code> markers from the topic-sentence pass, sometimes matching <em>inside</em> a marker's own topic name and corrupting it (e.g. <code>[[redacted sentence: [[redacted: event]]/mortality]]</code>). Added <code>_apply_outside_markers</code> to protect already-redacted spans from every later pass.</li>
 </ol>
 <p><strong><code>tools/spoilers.json</code>:</strong> added ~14 new literal terms and broadened the `handover/succession topic regex, covering confirmed hard-spoiler and unpublished-detail leaks that named no existing term (series structure/book-count outline, &quot;<span class="redacted">redacted</span>&quot;, Ferrin's healing void, several unpublished-scene mechanism/prose fragments).</p>
 <p><strong>Rejected as false positives</strong> (one-line reasons in the report): the entire d1679987 &quot;unpublished-prose-quoted&quot; batch (verbatim but from <em>published</em> scenes 39/40), one already-redacted character-reference fragment, one vague framing sentence whose substance is now redacted, and a report entry describing already-public character names.</p>

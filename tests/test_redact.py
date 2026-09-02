@@ -535,3 +535,12 @@ def test_meta_profile_disables_premise_cutoff_in_redact_transcript(spoilers):
     text = redacted["turns"][0]["blocks"][0]["text"]
     assert "Halla" not in text
     assert counts.by_category.get("character") == 1
+
+
+def test_literal_marker_brackets_in_source_are_not_protected(spoilers):
+    # Regression: a transcript quoting an old marker label like
+    # "⟦redacted sentence: Edwin's death⟧" must not smuggle the label through.
+    counts = redact.RedactionCounts()
+    out = redact.redact_text("sed s/⟦redacted sentence: Edwin's death⟧/x/", spoilers, counts)
+    assert "Edwin's death" not in out
+    assert "⟦redacted sentence⟧" in out

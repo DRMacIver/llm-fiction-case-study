@@ -472,6 +472,11 @@ def redact_text(
     """
     if not text:
         return text
+    # Literal marker brackets in the *source* text (e.g. a transcript quoting
+    # an earlier version of this tool's own output) would otherwise be
+    # mistaken for our markers and protected from later passes, letting the
+    # quoted contents through unredacted. Neutralise them first.
+    text = text.replace(CHAR_MARK, "[[").replace(CHAR_MARK_CLOSE, "]]")
     counts.total_chars += len(text)
     if anonymize_patterns:
         text = _anonymize(text, anonymize_patterns, anonymize_placeholder, counts)

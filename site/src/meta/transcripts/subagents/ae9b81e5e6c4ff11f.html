@@ -186,11 +186,11 @@ Background: this site (an mdBook in <span class="redacted">redacted: private</sp
 </tr>
 </tbody>
 </table></div>
-<p>No file in this batch needs a category <strong>(b)</strong> spoiler-free placeholder note: once the two regex fixes above are applied, every file either drops under the 15% threshold (the <code>doctor</code>-only and most <code>handover</code>-filename-only files) or keeps a small number of genuinely spoiler-bearing sentences redacted in an otherwise-intact, readable transcript (<code>a416afea7d1becaac</code>, <code>a6f17340b096d994f</code>, <code>ae9c1657aed8a33f8</code>, <code>af63e30c05e5e1195</code>). None of the 14 collapses into an unreadable wall of <span class="redacted">redacted sentence</span>` markers once the bare-word over-matches are removed — the redaction that remains is sparse and the surrounding tool output/prose still carries the transcript.</p>
+<p>No file in this batch needs a category <strong>(b)</strong> spoiler-free placeholder note: once the two regex fixes above are applied, every file either drops under the 15% threshold (the <code>doctor</code>-only and most <code>handover</code>-filename-only files) or keeps a small number of genuinely spoiler-bearing sentences redacted in an otherwise-intact, readable transcript (<code>a416afea7d1becaac</code>, <code>a6f17340b096d994f</code>, <code>ae9c1657aed8a33f8</code>, <code>af63e30c05e5e1195</code>). None of the 14 collapses into an unreadable wall of <code>[[redacted sentence]]</code> markers once the bare-word over-matches are removed — the redaction that remains is sparse and the surrounding tool output/prose still carries the transcript.</p>
 <h2>Broader regex sanity check</h2>
 <p>Totals from <code>build/redaction-report.json</code> across all files:</p>
 <ul>
-<li>`topic:handover/succession: 484 hits<br />
+<li><code>topic:handover/succession</code>: 484 hits<br />
 <span class="redacted">redacted sentence</span><br />
 <span class="redacted">redacted sentence</span><br />
 <span class="redacted">redacted sentence</span></li>

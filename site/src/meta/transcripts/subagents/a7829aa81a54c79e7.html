@@ -30,7 +30,7 @@ th,td{border:1px solid #ddd;padding:.3em .7em;}
 <p>You are working in the repo <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (the novel project, read-only, never modify it; its git history is readable with git -C) and <span class="redacted">redacted: private</span> (read-only). Do NOT touch anything else outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto.<br />
 Rules: use uv for Python (uv run; never global installs). Prefer Python to bash. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. No em dashes anywhere in prose (use commas, full stops, or spaced hyphens). Keep prose plain.<br />
 Background: this site (an mdBook in <span class="redacted">redacted: private</span>) chronicles how the novel &quot;How to Save the World&quot; (Royal Road, <a href="https://www.royalroad.com/fiction/189685/how-to-save-the-world">https://www.royalroad.com/fiction/189685/how-to-save-the-world</a>) was written with Claude Code in <span class="redacted">redacted: private</span> between 2026-08-24 and 2026-09-02. The site is entirely LLM-generated and says so. Published chapters are scenes 1-40 of draft/book-01/scenes. <span class="redacted">redacted sentence</span> The redaction term list is <span class="redacted">redacted: private</span> Never quote story prose. Never name the autoroad repository URL or say where it is hosted.</p>
-<p><span class="redacted">redacted sentence</span> Redaction markers like <span class="redacted">redacted: character</span> are the redactor working correctly and are not leaks. Discussion of craft, voice rules, LLM tells, tooling, workflows, Royal Road publishing mechanics, and anything about scenes 1-40 is fine. Be precise, quote exactly, do not pad.<br />
+<p><span class="redacted">redacted sentence</span> Redaction markers like [[redacted: character]] are the redactor working correctly and are not leaks. Discussion of craft, voice rules, LLM tells, tooling, workflows, Royal Road publishing mechanics, and anything about scenes 1-40 is fine. Be precise, quote exactly, do not pad.<br />
 Assigned text: the subagent transcripts in <span class="redacted">redacted: private</span> (.md files, sorted by name) whose index modulo 40 equals 14. List them with Python (sorted(glob)), then read each; skip nothing. Leave summary empty. Return structured output only.</p></blockquote>
 
 
@@ -124,7 +124,7 @@ Assigned text: the subagent transcripts in <span class="redacted">redacted: priv
 <p><strong>Private information</strong> - No unauthorized emails, tokens, or credentials found (noreply@anthropic.com is a standard automation address, not private).</p>
 </li>
 </ol>
-<p>All 43 files properly use the redaction framework: character names shown as &quot;<span class="redacted">redacted: character</span>&quot;, places as &quot;<span class="redacted">redacted: place</span>&quot;, and unpublished file references tagged with [unpublished].</p>
+<p>All 43 files properly use the redaction framework: character names shown as &quot;[[redacted: character]]&quot;, places as &quot;[[redacted: place]]&quot;, and unpublished file references tagged with [unpublished].</p>
 </div>
 
 <p>🔧 StructuredOutput ({"leaks": [], "over_redacted": [], "summary": ""})</p>
