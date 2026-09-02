@@ -1,24 +1,24 @@
 # Expect to throw work away
 
-The book on Royal Road is the third draft. The first was a complete draft of book one, all three acts, written on the second day of the project and reclassified as groundwork on the fourth. The second included a full second act of some sixty-five scenes, drafted in a single push on 30 August and pulled the same evening. Neither will be read by anyone. Both were necessary, and the project's ability to discard them cheaply is a larger part of why the published book is any good than any individual rule about prose.
+The book on Royal Road is the third draft. The first was a complete draft of book one, all three acts, written on the second day of the project and reclassified as groundwork on the fourth. The second included a full second act of some sixty-five scenes, drafted in a single push on 30 August and pulled the same evening. Neither will be read by anyone. Both were necessary. Discarding them cheaply mattered more to the published book than any individual rule about prose.
 
-This is the part of the process people are least prepared for, because with a model producing text quickly it is tempting to treat every draft as an asset. Most of them are not. They are how you find out what the rules should have been.
+With a model producing text this fast, it's tempting to treat every draft as an asset. Most of them are not. They are how you find out what the rules should have been.
 
 ## The two big discards
 
-The first draft was written fast, before the voice rules had been tested against real output at length and before the dialogue work described on [the loop page](the-loop.md). By 27 August enough had been learned about what was wrong with it that fixing it in place was going to cost more than starting again, so it was declared scaffolding. The [chronicle entry](../chronicle/2026-08-27.md) records that this made a batch of earlier decisions about locked voice choices moot, which was a relief rather than a loss, since nothing published depended on them.
+The first draft was written fast, before the voice rules had been tested against real output at length and before the dialogue work described on [the loop page](the-loop.md). By 27 August enough had been learned about what was wrong with it that fixing it in place was going to cost more than starting again, so it was declared groundwork. The [chronicle entry](../chronicle/2026-08-27.md) records that this made a batch of earlier decisions about the book's voice moot, and nothing published depended on them.
 
 The second discard was sharper. On [30 August](../chronicle/2026-08-30.md) a whole act was drafted with the canon and editorial checks running as it went, and it passed them. Then the overlap checker, written minutes earlier that same evening, showed that the new prose was too close to earlier rejected material. It read as recycled. The act was moved into a folder marked do not open, a rule about this specific kind of contamination went straight into the voice guide, and one scene was redrafted from a clean brief that night, with a second the next morning, to confirm the new process worked before anyone committed to redoing the rest.
 
 ## What the signs were
 
-In both cases the draft was locally fine and globally wrong. Individual scenes read acceptably. The problem was a property of the whole: a voice that had drifted generic across the whole book, or an act whose phrasing echoed something that should have been forgotten. Checks that run scene by scene do not catch this. A reader reading a stretch cold does, and so does a tool that looks across the whole corpus, which is why the project's most consequential tools, the census and the overlap checker, are corpus-level rather than scene-level.
+In both cases the individual scenes read acceptably, but the draft as a whole was wrong. The problem was in the whole book, not any one scene: a voice that had drifted generic across it, or an act whose phrasing echoed something that should have been forgotten. Checks that run scene by scene do not catch this. A reader reading a stretch cold does, and so does a tool that looks across the whole corpus. That's why the project's most consequential tools, the census and the overlap checker, are corpus-level rather than scene-level.
 
-The other sign was a fix that kept growing. When repairing a draft turns into re-engineering scene after scene, and each repair reveals the next, the draft is telling you the underlying rules have changed since it was written.
+The other sign was a fix that kept growing. When repairing a draft turns into re-engineering scene after scene, and each repair reveals the next, that is the sign the underlying rules have changed since the draft was written.
 
 ## Making discarding cheap
 
-Three things made the project's discards survivable. Drafts lived in version control, so throwing one away meant moving a directory, not losing anything. The knowledge extracted from a bad draft was already in the rule files by the time the draft was discarded, so the draft's value had been harvested. And the exemplars, the small set of pieces David actually liked, were kept separately from the drafts, so a discard never took the voice with it. The one time this went wrong, when early exemplar chapters were deleted as scaffolding on the first day, it took a few hours that same afternoon to diagnose the resulting voice drift and restore them.
+A few things made the project's discards survivable. Drafts lived in version control, so throwing one away meant moving a directory, not losing anything. Whatever a bad draft taught the project was already written into the rule files by the time it was discarded. And the exemplars, the small set of pieces David actually liked, were kept separately from the drafts, so a discard never took the voice with it. The one time this went wrong, early exemplar chapters were deleted as scaffolding on the first day. It took a few hours that same afternoon to work out that the voice had drifted because of it, and to restore them.
 
 ## Steps you can take
 
