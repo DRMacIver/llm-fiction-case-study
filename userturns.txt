@@ -1,0 +1,70 @@
+== 2026-09-02T13:48:55.543Z
+ This is a new project to build a website. The goal of the website is to chronicle the process of building the novel currently in ../autoroad, because people have been
+  asking about my workflow. In ../hegel-blog-post there is another unrelated project about how to write technical material in my voice. You should draw on that heavily,
+  though the project should be very clear that this is a fully automated website built by an LLM, not actually human authored.
+
+  I would like you to build as much of this in workflows as possible, farming out work that can be farmed out to the smallest models you can (e.g. haiku should do a lot of
+  the grunt research, sonnet should do a lot of the boring work, Opus should coordinate). You can monitor and write copy where necessary but don't run any other fable agents and try to minimise the amount of work you do yourself.
+
+  I would like to include a nicely rendered version of transcripts for as much of the autoroad project as possible. Anything that would be a spoiler for future plots (e.g. Edwin dies at the end, plague, medicine, etc) should be redacted, and contents of files and the like should not be shown. Tool use should be shown in some simplified form. As much as possible of this should be done before an agent sees it through automated scripts.
+
+Where possible, high level descriptions of specific features of the workflow should be written, and a high level chronicle of the history of the project and how it evolved, things that happened along the way, etc.
+
+This will be published on github pages. You should pick some reasonable theme for it, Err on the side of plain - more like a rustbook than like royalroad
+
+Be careful about token spend and if you find that we cross 50% of my remaining weekly token budget while working on this, stop and say so rather than continuing spending.
+
+Feel free to ask me any questions you like right now, but once we've talked about this I would like to be able to leave you to it.
+
+== 2026-09-02T14:52:30.835Z
+There's no remote at present, but feel free to make one. Let's say... llm-fiction-case-study ?
+
+== 2026-09-02T15:35:23.675Z
+The transcripts have a lot of unrendered markdown in them.
+
+== 2026-09-02T15:36:50.275Z
+I'm seeing things like "redacted sentence: plague/epidemic" - you definitely shouldn't include spoilers in the reasons for redacting!
+
+== 2026-09-02T15:38:09.472Z
+Also this is in https://drmaciver.github.io/llm-fiction-case-study/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.html which doesn't have anything about the current fiction in it at all.
+
+Also it would be informative to include the original scenes and voice samples in it, as those aren't actually spoilery at all.
+
+Basically any transcript from before I reveal the premise shouldn't have redactions.
+
+== 2026-09-02T16:23:26.239Z
+I think something I'm looking from this that isn't really present (maybe you need to write this bit rather than a small subagent) is some sort of high level synthesis and organisation. The biggest thing people are looking for from this is "How do I do this myself?" and I think it's currently all too in the weeds. I think the detailed examples are useful and I like the material that is there, but it would be good if it had more how to material focusing on the back and forth and how it goes, concrete steps to take, and broad lessons in how to make it work that can be adapted to people's specific instances (backed with specific examples from the material)
+
+== 2026-09-02T16:36:10.891Z
+Can you write yourself a skill based on the hegel-blog-post repo and the autoroad repo for building a workflow for fact and consistency checking writing, and then apply it to the contents of this repo?
+
+== 2026-09-02T16:37:30.420Z
+Also RE the howto: I think this should start with a very basic "how to set up claude code, a git repo, etc" for people who may be assumed to have minimal programming skills (tell them that I did it using the command line and how to do that, but offer the desktop app as an attractive alternative)
+
+== 2026-09-02T16:56:06.218Z
+URLs like you have in https://drmaciver.github.io/llm-fiction-case-study/howto/setup.html should be links (it's fine to display them as URLs but they should be clickable)
+
+== 2026-09-02T17:01:51.031Z
+Wait for the fact check to come back to modify anything (partly because I want to see if it catches this), but I think the advice in here has drifted a bit from what I actually did. In particular there's a lot of places where it suggests I should be the one maintaining files with checks, but almost 100% of that was telling the agent to write and maintain those files.
+
+== 2026-09-02T17:24:59.451Z
+Yes I'm on a 20x max plan and it's worth saying that because this was an expensive process.
+
+== 2026-09-02T17:26:16.431Z
+No that's fair. I blew through my token budget pretty heavily doing this. I think I could do it cheaper if I were to start again from scratch, but I couldn't have done it from scratch this way on a Pro.
+
+== 2026-09-02T17:26:39.505Z
+BTW can you write a README for the project?
+
+== 2026-09-02T17:30:00.324Z
+Yeah, sure, I hadn't thought about licensing but CC BY 4.0 sounds fine.
+
+== 2026-09-02T17:49:50.729Z
+https://drmaciver.github.io/llm-fiction-case-study/ has a bunch of broken links on it. Can you run a link checker on the site and fix everything that's wrong?
+
+== 2026-09-02T18:37:57.285Z
+This is all still a bit claude voiced. Can you follow the techniques of voice definition and editing defined in this repo and in our source material to do a pass over it to fix that?
+
+== 2026-09-02T19:05:41.115Z
+can you write a follow on section that has a the making of the making of about how this repo was done? redact any mention of Hegel (replace the hegel-blog-post string with a clearly anonymised name formatted differently and adjust wording) but otherwise don't redact much from the transcripts
+

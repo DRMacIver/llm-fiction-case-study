@@ -12,7 +12,7 @@ David asked for a stop if the work passed half of his remaining weekly allowance
 | Render review and fixes | 17 | 1.6M |
 | Writing check | 130 | 6.6M |
 | Voice pass | 172 | 8.4M |
-| Single agents, about a dozen | | 0.7M |
+| Single agents, six | | 0.7M |
 | Total | about 450 | about 26M |
 
 Tokens here are as reported by the Workflow tool for its subagents, mostly input, spread across Haiku, Sonnet and Opus. The session's own context is not included. The two checking passes, fact and voice, are more than half the total, which matches David's observation about the novel: the cost was dominated by checking rather than by drafting.

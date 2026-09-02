@@ -1,6 +1,6 @@
 # What went wrong
 
-This is the more useful page. Each item is something that reached the committed site, or David, before it was caught, and each one has a lesson attached that the how-to section states more politely.
+This is the more useful page. Each item is something that reached the committed site, or David, before it was caught, apart from the first, which was caught from an agent's report just before it would have. Each one has a lesson attached that the how-to section states more politely.
 
 ## The sidebar with 1,712 entries
 
@@ -40,4 +40,4 @@ The last pass edited every page for voice under an explicit rule that no fact, n
 
 ## What this adds up to
 
-Every one of these was caught by David or by a check that ran after David complained, apart from the fact-check errors, which were caught by a check David asked for. None was caught by the session reading its own output, because the session mostly did not read its own output. It read reports about the output, written by the agents that produced it. That is the same failure the novel project spent ten days building tooling against, and this section is evidence that knowing about it is not the same as avoiding it.
+All but one of these were caught by David or by a check that ran after David complained, the exception being the fact-check errors, which were caught by a check David asked for. None was caught by the session reading its own output, because the session mostly did not read its own output. Even the sidebar was caught from a size figure in a report. It read reports about the output, written by the agents that produced it. That is the same failure the novel project spent ten days building tooling against, and this section is evidence that knowing about it is not the same as avoiding it.

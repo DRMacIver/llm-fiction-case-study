@@ -12,7 +12,7 @@ The prose index builds a set of hashed seven-word shingles from every unpublishe
 
 The redactor applies, in order: private-information patterns (local paths, session identifiers, addresses), a curated list of spoiler terms and their variants, sentence-level patterns for the hard spoilers, an "unpublished" tag on any scene number above the published boundary, and finally the shingle check, which blanks any sentence sharing a seven-word run with unpublished prose. Markers are deliberately uninformative. An early version labelled each one with the category or topic it had removed, and David pointed out that "redacted sentence: plague" is not much of a redaction.
 
-The renderer turns the redacted JSON into mdBook pages for the nine sessions and standalone HTML pages for the 1,712 subagents, which are kept out of the sidebar because a sidebar with 1,700 entries is not a sidebar. Conversation text is rendered from Markdown to HTML with raw HTML escaped and only explicit URLs linked.
+The renderer turns the redacted JSON into mdBook pages for the nine sessions and standalone HTML pages for the subagents, 1,712 of them when the site was first built and about 2,200 by the end of the day because the novel's own session was still running and spawning more. They are kept out of the sidebar because a sidebar with 1,700 entries is not a sidebar. Conversation text is rendered from Markdown to HTML with raw HTML escaped and only explicit URLs linked.
 
 ## The workflows
 
@@ -24,13 +24,13 @@ Six Workflow runs did the bulk of the work. Each is a script that fans agents ou
 
 **Prose guard** added the shingle index after the leak sweep found quoted draft prose that no term list could catch, then swept the main sessions again. Twenty-two agents.
 
-**Render review** came after David looked at the live site and found unrendered Markdown, harness notifications attributed to him, and other basic errors. Ten Sonnet reviewers sampled pages and catalogued 29 defect classes. One fixer traced them to a handful of root causes and added 38 regression tests. A pre-premise agent in that run was blocked by a safety classifier and had to be rerun on its own. Seventeen agents.
+**Render review** came after David looked at the live site and found unrendered Markdown, harness notifications attributed to him, and other basic errors. Ten Sonnet reviewers sampled pages and catalogued 29 defect classes. One fixer traced them to a handful of root causes and added 60 regression tests. A pre-premise agent in that run was blocked by a safety classifier and had to be rerun on its own. Seventeen agents.
 
 **Writing check** fact-checked the prose pages. It is described in [What went wrong](what-went-wrong.md), because of what it found. One hundred and thirty agents.
 
 **Voice pass** ported the voice-checking method from «OTHER-PROJECT»: a mechanical linter and a catalogue of named devices, three blind reviews per page, one editor per page with every fact frozen, and a diff check per page for any claim that had moved. One hundred and seventy-two agents.
 
-Between the workflows, a dozen or so single agents did bounded jobs: convert Markdown in the transcripts to HTML, implement the pre-premise rule, research the two source projects' checking practices, gather current Claude Code setup facts from the documentation, apply the fact-check fixes, and render this project's own transcripts for this section.
+Between the workflows, six single agents did bounded jobs: convert Markdown in the transcripts to HTML, implement the pre-premise rule, research the two source projects' checking practices, gather current Claude Code setup facts from the documentation, apply the fact-check fixes, and render this project's own transcripts for this section.
 
 ## The division of labour
 

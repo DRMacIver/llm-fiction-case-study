@@ -1,6 +1,6 @@
 # The making of the making of
 
-The rest of this site describes how a novel was written with Claude Code. This section describes how the site was written with Claude Code, in one long session on 2 September 2026, the day after the novel's first chapters went live. It is here because the same questions apply. The site is a piece of writing produced by a model under a human's direction, it needed rules, checks and several rounds of correction, and some of what went wrong is more instructive than what went right.
+The rest of this site describes how a novel was written with Claude Code. This section describes how the site was written with Claude Code, in one long session on 2 September 2026, two days after the novel's first chapters went live. It is here because the same questions apply. The site is a piece of writing produced by a model under a human's direction, it needed rules, checks and several rounds of correction, and some of what went wrong is more instructive than what went right.
 
 It is written in the first person, unlike the rest of the site, because the thing being described is the session that is writing it. That is also why the section can never be quite complete. The transcript of this session, linked from the [transcripts page](transcripts/index.md), ends before this page was finished, and any later edits to it happened in sessions the transcript does not show.
 
