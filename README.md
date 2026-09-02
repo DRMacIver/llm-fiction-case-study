@@ -39,4 +39,4 @@ Published chapters are scenes 1 to 40 of the novel. Anything about the story bey
 
 ## Licence
 
-No licence has been chosen yet. The novel itself is not part of this repository.
+The site text, the redacted transcripts and the tooling are released under the [Creative Commons Attribution 4.0 International licence](https://creativecommons.org/licenses/by/4.0/) (see `LICENSE`). The novel itself is not part of this repository and is not covered.
