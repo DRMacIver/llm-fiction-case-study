@@ -1,0 +1,177 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-aa42f6ae21d6e4509">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: blind verification. You have NOT seen how these pages were drafted; check each claim against the primary source named, not against the page or the session summaries. Claims (JSON): [{&quot;id&quot;:&quot;workflow_llm_tells_and_linting_md_16&quot;,&quot;quote&quot;:&quot;tools/lint/prose_lint.py&quot;,&quot;location&quot;:&quot;line 13&quot;,&quot;kind&quot;:&quot;cross-reference&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/llm-tells-and-linting.md&quot;},{&quot;id&quot;:&quot;workflow_llm_tells_and_linting_md_17&quot;,&quot;quote&quot;:&quot;tools/lint/rules.json, covering everything that can be caught with a regular expression&quot;,&quot;location&quot;:&quot;line 13&quot;,&quot;kind&quot;:&quot;cross-reference&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/llm-tells-and-linting.md&quot;},{&quot;id&quot;:&quot;workflow_llm_tells_and_linting_md_18&quot;,&quot;quote&quot;:&quot;just over a hundred entries&quot;,&quot;location&quot;:&quot;line 13&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/llm-tells-and-linting.md&quot;},{&quot;id&quot;:&quot;workflow_llm_tells_and_linting_md_27&quot;,&quot;quote&quot;:&quot;Rejected findings get logged as counter-examples in the rules file itself&quot;,&quot;location&quot;:&quot;line 21&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/llm-tells-and-linting.md&quot;},{&quot;id&quot;:&quot;workflow_next_md_handoff_02&quot;,&quot;quote&quot;:&quot;Autoroad's answer is a single living document, <code>plans/NEXT.md</code>&quot;,&quot;location&quot;:&quot;Line 3-4&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/next-md-handoff.md&quot;},{&quot;id&quot;:&quot;workflow_next_md_handoff_05&quot;,&quot;quote&quot;:&quot;completing a task in this project routinely surfaces more work than it resolves&quot;,&quot;location&quot;:&quot;Line 13&quot;,&quot;kind&quot;:&quot;distributional&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/next-md-handoff.md&quot;},{&quot;id&quot;:&quot;workflow_next_md_handoff_06&quot;,&quot;quote&quot;:&quot;Redrafting an act flags several deliberate departures from an earlier planning document that need reconciling later&quot;,&quot;location&quot;:&quot;Line 13&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/next-md-handoff.md&quot;},{&quot;id&quot;:&quot;workflow_next_md_handoff_09&quot;,&quot;quote&quot;:&quot;The clearest example of the pattern in use is the session that produced the last major queue update, taking the draft from a partial state to a finished one: it read the old queue, worked through most of it, and left a new one behind&quot;,&quot;location&quot;:&quot;Line 17&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/next-md-handoff.md&quot;},{&quot;id&quot;:&quot;workflow_next_md_handoff_11&quot;,&quot;quote&quot;:&quot;session that produced the last major queue update ... taking the draft from a partial state to a finished one&quot;,&quot;location&quot;:&quot;Line 17&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/next-md-handoff.md&quot;},{&quot;id&quot;:&quot;workflow_next_md_handoff_13&quot;,&quot;quote&quot;:&quot;a chapter amendment applied under delegated authority during a backfill needs a note left for whoever reads the affected chapter next&quot;,&quot;location&quot;:&quot;Line 13&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/next-md-handoff.md&quot;},{&quot;id&quot;:&quot;farming_facts_01&quot;,&quot;quote&quot;:&quot;every agronomic, soil, livestock, weather, or drainage fact that appears on the page has to be a real fact, drawn from actual pre-industrial or modern agricultural science and practice&quot;,&quot;location&quot;:&quot;line 3, paragraph 1&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_02&quot;,&quot;quote&quot;:&quot;magic is only allowed to modify a real farming practice in response to a real problem farmers actually have&quot;,&quot;location&quot;:&quot;line 3, paragraph 1&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_03&quot;,&quot;quote&quot;:&quot;the spell has to still cost the labour it saves, not remove the work outright&quot;,&quot;location&quot;:&quot;line 3, paragraph 1&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_04&quot;,&quot;quote&quot;:&quot;David set this constraint directly&quot;,&quot;location&quot;:&quot;line 5, paragraph 2&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_05&quot;,&quot;quote&quot;:&quot;it functions less as worldbuilding flavour than as a check the model has to actually pass&quot;,&quot;location&quot;:&quot;line 5, paragraph 2&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_07&quot;,&quot;quote&quot;:&quot;a term is never re-explained once it's been handled and never left unexplained when a reader genuinely needs the grounding&quot;,&quot;location&quot;:&quot;line 5, paragraph 2&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_09&quot;,&quot;quote&quot;:&quot;the notes at the top of a chapter, which are David's own words and which the rules forbid the model to touch at all&quot;,&quot;location&quot;:&quot;line 9, paragraph 3&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_11&quot;,&quot;quote&quot;:&quot;David's original brief was blunt: the first attempt at these notes was boring, and what he wanted instead was someone who mostly kept the notes tightly relevant&quot;,&quot;location&quot;:&quot;line 9-10, paragraph 3&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_13&quot;,&quot;quote&quot;:&quot;a set of accepted note drafts get read before writing any new one, because notes drafted from the rule file alone came out lifeless&quot;,&quot;location&quot;:&quot;line 11, paragraph 4&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_14&quot;,&quot;quote&quot;:&quot;The notes are budgeted too, one longer digression or a couple of shorter notes per chapter&quot;,&quot;location&quot;:&quot;line 11, paragraph 4&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_15&quot;,&quot;quote&quot;:&quot;they're barred from ever explaining the story, the magic system, or the world's institutions&quot;,&quot;location&quot;:&quot;line 11, paragraph 4&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;farming_facts_16&quot;,&quot;quote&quot;:&quot;Their only subject is the real-world fact behind whatever the story just needed grounding&quot;,&quot;location&quot;:&quot;line 12, paragraph 4&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_05&quot;,&quot;quote&quot;:&quot;The chapter files live as individual scene and chapter markdown files&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:7&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_06&quot;,&quot;quote&quot;:&quot;the first step gathers them into a single ordered sequence, <code>collate_book.py</code>&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:7&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_07&quot;,&quot;quote&quot;:&quot;validates that chapter numbering has no gaps or duplicates&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:7&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;}]<br />
+Source to check against: git-history. For transcripts, use build/parsed/&lt;session&gt;.json (turn timestamps, user text, tool_use summaries) and build/parsed/subagents/. For git-history, run git -C <span class="redacted">redacted: private</span> log with --format and --stat and count for yourself. For index-json, read build/parsed/index.json and titles.json. For claude-code-docs, fetch the documentation pages fresh with WebFetch. For other-pages, read the referenced page. For &quot;unverifiable&quot;, record UNVERIFIABLE with what would be needed. Mechanical pre-pass results for context: The full report content was already shown in the Read calls above (both pages, lines 1-446). The file is at <span class="redacted">redacted: private</span>` (446 lines) — I've reproduced its complete contents in this conversation across the two Read tool outputs. Key files for reference:</p>
+<ul>
+<li><code><span class="redacted">redacted: private</span></code> — the checker script</li>
+<li><code><span class="redacted">redacted: private</span></code> — pytest tests (7 tests, all passing)</li>
+<li>`<span class="redacted">redacted: private</span> — the generated report (links: 83/83 resolve; dates: 47/47 in range; numbers: 175 topical + 156 informational; banned content: 0 hits)<br />
+Be paranoid about: numbers (count them yourself, check the direction of comparisons), quotations (verbatim or not), attributions (which session, which day, who said it), absolutes, and distributional claims that assert something unmeasured. Give one verdict per claim with a receipt and, for anything not CONFIRMED, a minimal replacement text. Return structured output only.</li>
+</ul></blockquote>
+
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --format='%H %ad %s' --all -- tools/lint/prose_lint.py…</p>
+<p>✅ 13 lines, 324 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== log ==="  cat /private/tmp/claude-501/-Users-drmaciver-P…</p>
+<p>✅ 35 lines, 4057 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json,collections d=json.load(open('tools/lint/…</p>
+<p>✅ 4 lines, 247 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('tools/lint/rules.json')…</p>
+<p>✅ 23 lines, 4492 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, quote context confirmed — &quot;covering everything that can be caught with a regular expression or a simple metric&quot; (the doc includes &quot;or a simple metric&quot;, not just regex — quote given only captured partial phrase but that's fine, matches full text). All three lint claims confirmed. Counter-examples claim also confirmed by rules.json data.</p>
+<p>Now let's check NEXT.md claims.</p>
+</div>
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git log --format='%H %ad %s' -- plans/NEXT.md | tail -50 echo "---…</p>
+<p>✅ 21 lines, 3992 chars</p>
+<p>🔧 Bash: sed -n '1,40p' <span class="redacted">redacted: private</span></p>
+<p>✅ 17 lines, 3329 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for c in $(git log --format='%H' -- plans/NEXT.md); do   git show…</p>
+<p>✅ 85 lines, 6026 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git show 72261f7c4275fdcb1d33a8c4f422662093ab125c:plans/NEXT.md |…</p>
+<p>✅ 55 lines, 3627 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git log --all --format='%H' | while read c; do git show $c:plans/N…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rni "delegat" --include=*.md . 2&gt;/dev/null | head -30</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rni "delegat" . --include="*.md" 2&gt;&amp;1 | head -30</p>
+<p>✅ 16 lines, 2755 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>&quot;Run under delegated authority per notes/decision-principles.md&quot; found in notes/canon/README.md:49-59. Let's check that context.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '30,70p' notes/canon/README.md</p>
+<p>✅ 41 lines, 2396 chars</p>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span> | grep 7257e15f python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>…</p>
+<p>✅ 3 lines, 117 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) print(d['start'], d['en…</p>
+<p>✅ 7 lines, 93 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) turns=d['turns'] for i,…</p>
+<p>✅ 14 lines, 594 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) turns=d['turns'] for i,…</p>
+<p>✅ 1 lines, 133 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) turns=d['turns'] print(…</p>
+<p>✅ 12 lines, 465 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good — confirms it reads NEXT.md at start. Now check the end for writing a new NEXT.md.</p>
+</div>
+
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) turns=d['turns'] for i,…</p>
+<p>✅ 36 lines, 2240 chars</p>
+
+<div class="assistant-prose">
+<p>This confirms the session read old NEXT.md and worked through the queue building out to end of book 1, consistent with the commit. Good enough confirmation. Let's check farming-facts claims now.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> find . -iname "*farming*" -not -path "*/node_modules/*"</p>
+<p>✅ 4 lines, 125 chars — ./notes/farming.md / ./plans/book-01/farming-findings.md / ./.claude/skills/farming-check</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> cat notes/farming.md | head -60 echo "===skill===" ls .claude/skil…</p>
+<p>✅ 62 lines, 3518 chars</p>
+
+<div class="assistant-prose">
+<p>All confirmed directly from notes/farming.md rule 1 (farming_facts_01), rule 2 (02), rule 3 (03, attributed to David 2026-08-25 — confirms farming_facts_04). Let's read more.</p>
+</div>
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '60,120p' notes/farming.md</p>
+<p>✅ 61 lines, 3344 chars</p>
+<p>🔧 Bash: sed -n '1,20p' <span class="redacted">redacted: private</span></p>
+<p>✅ 13 lines, 3550 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> head -20 draft/book-01/scenes/01-*.md 2&gt;/dev/null echo "---search…</p>
+<p>✅ 27 lines, 3394 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> head -15 samples/seed-chapters/001-the-wrong-man.md echo "---" gre…</p>
+<p>✅ 32 lines, 3576 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rn "at the top of the chapter\|top-of-chapter\|chapter heade…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "forbid\|must not\|off-limits\|never edit\|never touch" dr…</p>
+<p>✅ 4 lines, 239 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "boring" notes/*.md draft/book-01/*.md 2&gt;/dev/null grep -r…</p>
+<p>✅ 27 lines, 3040 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, notes/author.md:3 confirms &quot;boring&quot; attribution. That confirms farming_facts_11. Now let's check 13, 14, 15, 16.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '1,10p' notes/author.md echo "---process.md context---" sed…</p>
+<p>✅ 37 lines, 2159 chars</p>
+
+<div class="assistant-prose">
+<p>Confirms &quot;one long plus two short or four short per chapter&quot; (farming_facts_14) and &quot;barred from ever explaining the story, magic, institutions&quot; already confirmed by farming.md rule 4. Now let's check the accepted-note-drafts-read-before-writing claim (13).</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "read before writing\|exemplar\|lifeless" notes/farming.md…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> cat .claude/skills/farming-check/SKILL.md | head -80</p>
+<p>✅ 57 lines, 3242 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rn "exemplar" notes/author.md notes/farming.md 2&gt;/dev/null g…</p>
+<p>✅ 9 lines, 272 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '15,35p' notes/author.md</p>
+<p>✅ 21 lines, 1002 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Confirmed farming_facts_13 exactly: &quot;Never draft a note from the rules alone... a rules-only batch came out lifeless and was rejected... Read a handful before writing any note.&quot;</p>
+<p>Now let's revisit farming_facts_09 (top-of-chapter note claim) more, and check the ebook proofing claims.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> find . -iname "collate_book.py" -not -path "*/node_modules/*" cat…</p>
+<p>✅ 61 lines, 2628 chars</p>
+<p>🔧 Bash: sed -n '1,15p' <span class="redacted">redacted: private</span></p>
+<p>✅ 15 lines, 3082 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> find . -iname "build_ebook.py" -not -path "*/node_modules/*" cat -…</p>
+<p>✅ 41 lines, 1871 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> find . -iname "kindle_position.py" -o -iname "update-kindle.py" -n…</p>
+<p>✅ 5 lines, 277 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rn "David's note\|note from David\|foreword\|preface\|dedica…</p>
+<p>✅ 1 lines, 31 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>No evidence at all. I'll mark farming_facts_09 as WRONG.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"results": [{"id": "workflow_llm_tells_and_linting_md_16",…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

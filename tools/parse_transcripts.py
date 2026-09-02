@@ -51,14 +51,14 @@ def _parse_ts(ts: str | None) -> "datetime | None":
         return None
 
 
-def is_pre_cutoff(ts: str | None) -> bool:
+def is_pre_cutoff(ts: str | None, cutoff: "datetime | None" = PREMISE_CUTOFF) -> bool:
     """True if a turn/block timestamp is strictly before the premise-reveal
     cutoff (or the cutoff is unset/unparseable, in which case everything is
     treated as post-cutoff -- i.e. no extra content is kept)."""
-    if PREMISE_CUTOFF is None:
+    if cutoff is None:
         return False
     parsed = _parse_ts(ts)
-    return parsed is not None and parsed < PREMISE_CUTOFF
+    return parsed is not None and parsed < cutoff
 
 
 # Bash heredoc payload: `<<'EOF' ... EOF` / `<<-EOF ... EOF` / `<<EOF ... EOF`
@@ -99,7 +99,7 @@ CAT_LIKE_RE = re.compile(
 # small helpers
 
 
-def truncate(s: str, n: int) -> str:
+def truncate(s: str, n: int, repo_root: str = REPO_ROOT) -> str:
     """Character-truncate to `n` chars.
 
     This runs *before* tools/redact.py ever sees the text, so there are no
@@ -122,21 +122,21 @@ def truncate(s: str, n: int) -> str:
     # straddles it.
     pos = 0
     while True:
-        idx = s.find(REPO_ROOT, pos)
+        idx = s.find(repo_root, pos)
         if idx == -1 or idx >= cut:
             break
-        end = idx + len(REPO_ROOT)
+        end = idx + len(repo_root)
         cut = max(cut, end)
         pos = end
     return s[:cut] + "…"
 
 
-def relpath(p: str | None) -> str | None:
+def relpath(p: str | None, repo_root: str = REPO_ROOT) -> str | None:
     if not p:
         return p
-    if p.startswith(REPO_ROOT + "/"):
-        return p[len(REPO_ROOT) + 1 :]
-    if p == REPO_ROOT:
+    if p.startswith(repo_root + "/"):
+        return p[len(repo_root) + 1 :]
+    if p == repo_root:
         return "."
     return p
 
@@ -242,12 +242,13 @@ def summarize_tool_use(
     tool_input: dict,
     workflow_scripts: dict[str, Path],
     keep_full_content: bool = False,
+    repo_root: str = REPO_ROOT,
 ) -> dict:
     block: dict[str, Any] = {"kind": "tool_use", "tool": name}
 
     if name in FILE_TOOLS:
         path = tool_input.get("file_path") or tool_input.get("notebook_path")
-        block["file"] = relpath(path)
+        block["file"] = relpath(path, repo_root=repo_root)
         if keep_full_content and name == "Write" and tool_input.get("content") is not None:
             block["content"] = tool_input["content"]
         elif keep_full_content and name == "Edit":
@@ -259,7 +260,7 @@ def summarize_tool_use(
 
     if name == "Bash":
         raw_command = strip_ansi(tool_input.get("command", "")) or ""
-        block["command"] = truncate(raw_command, CMD_TRUNC)
+        block["command"] = truncate(raw_command, CMD_TRUNC, repo_root=repo_root)
         if tool_input.get("description"):
             block["description"] = strip_ansi(tool_input["description"])
         if keep_full_content and _HEREDOC_RE.search(raw_command):
@@ -316,6 +317,7 @@ def summarize_tool_result(
     content: Any,
     tool_use_result: dict | None,
     tool_use_index: dict[str, dict],
+    repo_root: str = REPO_ROOT,
 ) -> dict:
     block: dict[str, Any] = {"kind": "tool_result"}
 
@@ -332,7 +334,7 @@ def summarize_tool_result(
     block["size"] = {"lines": text.count("\n") + (1 if text else 0), "chars": len(text)}
 
     if is_error:
-        block["error"] = truncate(text, ERROR_TRUNC)
+        block["error"] = truncate(text, ERROR_TRUNC, repo_root=repo_root)
         return block
 
     matched = tool_use_index.get(tool_use_id) if tool_use_id else None
@@ -346,7 +348,9 @@ def summarize_tool_result(
         if not CAT_LIKE_RE.search(command):
             lines = stdout.splitlines()[:3]
             if lines:
-                block["stdout_preview"] = [truncate(strip_ansi(l), BASH_LINE_TRUNC) for l in lines]
+                block["stdout_preview"] = [
+                    truncate(strip_ansi(l), BASH_LINE_TRUNC, repo_root=repo_root) for l in lines
+                ]
 
     return block
 
@@ -387,7 +391,13 @@ class ParsedTranscript:
         }
 
 
-def parse_transcript(session_id: str, lines: Iterable[dict]) -> ParsedTranscript:
+def parse_transcript(
+    session_id: str,
+    lines: Iterable[dict],
+    repo_root: str = REPO_ROOT,
+    premise_cutoff: "datetime | None" = PREMISE_CUTOFF,
+    keep_content_enabled: bool = True,
+) -> ParsedTranscript:
     result = ParsedTranscript(session_id=session_id)
     tool_use_index: dict[str, dict] = {}  # tool_use_id -> {"name":..., "input":...}
     current: Turn | None = None
@@ -524,7 +534,7 @@ def parse_transcript(session_id: str, lines: Iterable[dict]) -> ParsedTranscript
                     if item.get("type") == "tool_result":
                         tu_id = item.get("tool_use_id")
                         block = summarize_tool_result(
-                            tu_id, item.get("content"), tur, tool_use_index
+                            tu_id, item.get("content"), tur, tool_use_index, repo_root=repo_root
                         )
                         block["tool"] = (
                             tool_use_index.get(tu_id, {}).get("name") if tu_id else None
@@ -566,7 +576,11 @@ def parse_transcript(session_id: str, lines: Iterable[dict]) -> ParsedTranscript
                     tool_input = item.get("input", {}) or {}
                     tool_use_index[item.get("id")] = {"name": name, "input": tool_input}
                     block = summarize_tool_use(
-                        name, tool_input, {}, keep_full_content=is_pre_cutoff(ts)
+                        name,
+                        tool_input,
+                        {},
+                        keep_full_content=keep_content_enabled and is_pre_cutoff(ts, premise_cutoff),
+                        repo_root=repo_root,
                     )
                     block["tool_use_id"] = item.get("id")
                     current.blocks.append(block)
@@ -689,13 +703,25 @@ def summarize_for_index(parsed: ParsedTranscript, has_subagents: bool) -> dict:
 # top-level driver
 
 
-def process_session(session_jsonl: Path, out_dir: Path) -> tuple[dict, int, list[str]]:
+def process_session(
+    session_jsonl: Path,
+    out_dir: Path,
+    repo_root: str = REPO_ROOT,
+    premise_cutoff: "datetime | None" = PREMISE_CUTOFF,
+    keep_content_enabled: bool = True,
+) -> tuple[dict, int, list[str]]:
     """Returns (index_entry, n_subagents_written, failures)."""
     session_id = session_jsonl.stem
     session_dir = session_jsonl.parent / session_id
     failures: list[str] = []
 
-    parsed = parse_transcript(session_id, read_jsonl(session_jsonl))
+    parsed = parse_transcript(
+        session_id,
+        read_jsonl(session_jsonl),
+        repo_root=repo_root,
+        premise_cutoff=premise_cutoff,
+        keep_content_enabled=keep_content_enabled,
+    )
     agent_files = find_agent_files(session_dir)
     link_agent_ids_via_meta(parsed, agent_files)
     annotate_agent_and_workflow_links(parsed)
@@ -710,7 +736,13 @@ def process_session(session_jsonl: Path, out_dir: Path) -> tuple[dict, int, list
     n_written = 0
     for agent_id, info in agent_files.items():
         try:
-            sub_parsed = parse_transcript(agent_id, read_jsonl(info["jsonl"]))
+            sub_parsed = parse_transcript(
+                agent_id,
+                read_jsonl(info["jsonl"]),
+                repo_root=repo_root,
+                premise_cutoff=premise_cutoff,
+                keep_content_enabled=keep_content_enabled,
+            )
         except Exception as exc:  # pragma: no cover - defensive
             failures.append(f"{session_id}/{agent_id}: {exc}")
             continue
@@ -737,11 +769,21 @@ def process_session(session_jsonl: Path, out_dir: Path) -> tuple[dict, int, list
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", type=Path, default=DEFAULT_SRC)
-    ap.add_argument("--out", type=Path, default=Path(__file__).resolve().parents[1] / "build")
+    ap.add_argument("--source", default="autoroad", help="source name from tools/sources.json")
+    ap.add_argument("--src", type=Path, default=None, help="override the source's transcripts dir")
+    ap.add_argument("--out", type=Path, default=None, help="override the source's output dir")
     args = ap.parse_args()
 
-    session_files = sorted(args.src.glob("*.jsonl"))
+    from tools.sources import load_source
+
+    src_cfg = load_source(args.source)
+    src_dir = args.src if args.src is not None else src_cfg.transcripts_dir
+    out_dir = args.out if args.out is not None else src_cfg.out_dir
+    repo_root = src_cfg.repo_root
+    premise_cutoff = PREMISE_CUTOFF if src_cfg.premise_cutoff else None
+    keep_content_enabled = src_cfg.keep_file_contents
+
+    session_files = sorted(src_dir.glob("*.jsonl"))
     index: list[dict] = []
     total_subagents = 0
     total_turns = 0
@@ -749,19 +791,25 @@ def main() -> None:
 
     for session_jsonl in session_files:
         try:
-            entry, n_sub, sess_failures = process_session(session_jsonl, args.out)
+            entry, n_sub, sess_failures = process_session(
+                session_jsonl,
+                out_dir,
+                repo_root=repo_root,
+                premise_cutoff=premise_cutoff,
+                keep_content_enabled=keep_content_enabled,
+            )
         except Exception as exc:  # pragma: no cover - defensive
             failures.append(f"{session_jsonl.name}: {exc}")
             continue
         index.append(entry)
         total_subagents += n_sub
         failures.extend(sess_failures)
-        parsed_path = args.out / "parsed" / f"{session_jsonl.stem}.json"
+        parsed_path = out_dir / "parsed" / f"{session_jsonl.stem}.json"
         with open(parsed_path) as fh:
             total_turns += len(json.load(fh)["turns"])
 
-    (args.out / "parsed").mkdir(parents=True, exist_ok=True)
-    with open(args.out / "parsed" / "index.json", "w") as fh:
+    (out_dir / "parsed").mkdir(parents=True, exist_ok=True)
+    with open(out_dir / "parsed" / "index.json", "w") as fh:
         json.dump({"sessions": index}, fh, indent=2)
 
     print(f"sessions: {len(index)}")

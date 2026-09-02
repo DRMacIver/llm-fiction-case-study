@@ -433,3 +433,105 @@ def test_subagent_transcript_starting_after_cutoff_gets_full_redaction(spoilers)
     redacted, counts = redact.redact_transcript(doc, spoilers, is_subagent=True)
     text = redacted["turns"][0]["blocks"][0]["text"]
     assert "Halla" not in text
+
+
+# ---------------------------------------------------------------------------
+# "meta" source profile: anonymisation map, broad private-path redaction,
+# and disabling scene-number/unpublished-path tagging + the premise cutoff.
+
+
+def test_anonymize_patterns_replace_longest_match_first():
+    patterns = redact.build_anonymize_patterns(
+        ["hegel-blog-posts", "hegel-blog-post", "hegel-skill", "hegelator", "hegel"]
+    )
+    counts = redact.RedactionCounts()
+    out = redact._anonymize(
+        "Check hegel-blog-post and hegel-skill and hegelator and bare Hegel.",
+        patterns,
+        "«OTHER-PROJECT»",
+        counts,
+    )
+    assert out == (
+        "Check «OTHER-PROJECT» and «OTHER-PROJECT» and «OTHER-PROJECT» and bare «OTHER-PROJECT»."
+    )
+    assert counts.by_category["anonymized"] == 4
+
+
+def test_anonymize_does_not_touch_unrelated_words():
+    patterns = redact.build_anonymize_patterns(["hegel"])
+    counts = redact.RedactionCounts()
+    out = redact._anonymize("Hegelianism is unrelated.", patterns, "«OTHER-PROJECT»", counts)
+    assert out == "Hegelianism is unrelated."
+    assert counts.by_category == {}
+
+
+def test_redact_text_applies_anonymize_map_before_other_passes(spoilers):
+    patterns = redact.build_anonymize_patterns(["hegel-blog-post"])
+    counts = redact.RedactionCounts()
+    out = redact.redact_text(
+        "See /Users/drmaciver/Projects/hegel-blog-post for details.",
+        spoilers,
+        counts,
+        anonymize_patterns=patterns,
+        anonymize_placeholder="«OTHER-PROJECT»",
+        broad_private_paths=True,
+    )
+    assert "hegel-blog-post" not in out
+    assert "/Users/" not in out
+    assert "⟦redacted: private⟧" in out
+
+
+def test_broad_private_paths_redacts_any_users_path(spoilers):
+    counts = redact.RedactionCounts()
+    out = redact.redact_text(
+        "cd /Users/drmaciver/Projects/some-other-repo && ls",
+        spoilers,
+        counts,
+        broad_private_paths=True,
+    )
+    assert "/Users/" not in out
+    assert "⟦redacted: private⟧" in out
+
+
+def test_narrow_private_paths_leave_other_users_paths_alone_by_default(spoilers):
+    # The "full" (autoroad) profile's default private-path regex only
+    # covers Claude Code project storage / the scratch dir, not an
+    # arbitrary "/Users/..." path -- unlike the "meta" profile above.
+    counts = redact.RedactionCounts()
+    out = redact.redact_text(
+        "cd /Users/drmaciver/Projects/some-other-repo && ls",
+        spoilers,
+        counts,
+    )
+    assert "/Users/drmaciver/Projects/some-other-repo" in out
+
+
+def test_enable_paths_and_scenes_false_skips_scene_and_unpublished_tagging(path_spoilers):
+    counts = redact.RedactionCounts()
+    out = redact.redact_text(
+        "See scene 57 and plans/book-05/overview.md for details.",
+        path_spoilers,
+        counts,
+        enable_paths_and_scenes=False,
+    )
+    assert "unpublished" not in out
+    assert "scene 57" in out
+    assert "plans/book-05/overview.md" in out
+
+
+def test_meta_profile_disables_premise_cutoff_in_redact_transcript(spoilers):
+    # Even a turn timestamped well before premise_revealed_at gets full
+    # (term/topic) redaction when premise_cutoff_enabled=False.
+    doc = {
+        "turns": [
+            {
+                "role": "user",
+                "timestamp": "2020-01-01T00:00:00Z",
+                "blocks": [_text_block("Halla walked on.")],
+            }
+        ]
+    }
+    redacted, counts = redact.redact_transcript(doc, spoilers, premise_cutoff_enabled=False)
+    text = redacted["turns"][0]["blocks"][0]["text"]
+    assert "Halla" not in text
+    assert counts.by_category.get("character") == 1

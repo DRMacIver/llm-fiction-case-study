@@ -1,0 +1,85 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in an author's note at t…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in an author's note at t…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a151eb779ef50a1bb">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in an author's note at the bottom of a chapter of a novel (persona rules: <span class="redacted">redacted</span>/notes/author.md; note rules 4-7 in <span class="redacted">redacted</span>/notes/farming.md). Never rewrite. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;notes&quot;.</li>
+<li>Read <span class="redacted">redacted</span>/draft/book-01/author-notes/81-what-specifically-goes-wrong.md <span class="unpub-tag">unpublished</span> in full.</li>
+<li>Report EVERY candidate as {rule_id, quote (exact, short), reason}. Read one sentence either side before flagging. Also flag: winking at the persona's own enthusiasm, credentials offered to license a fact, &quot;not X but Y&quot;, floating epigrams, world content (explaining magic/System/institutions), the note annotating why a scene was written. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/author-notes/81-what-specifically-goes-wrong.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 4 lines, 1340 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+<p>🔧 Bash: grep -n '"tier":\s*"semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 59 lines, 1707 chars</p>
+<p>🔧 Bash: grep -B 5 '"lens":\s*"notes"' <span class="redacted">redacted</span>/tools/lint/rules.json | grep -E '("id"|"lens")'</p>
+<p>✅ 4 lines, 79 chars</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
+<p>✅ 15 lines, 336 chars — ID: non-witnessable-anecdote / Name: Persona anecdote nobody could have witnessed / Lens: notes</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
+<p>✅ 89 lines, 4062 chars — === non-witnessable-anecdote === / { /   "id": "non-witnessable-anecdote",</p>
+<p>🔧 Read draft/book-01/author-notes/81-what-specifically-goes-wrong.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 1 lines, 93 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me analyze the author's note against the semantic+notes rules and the additional patterns.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
+<p>✅ 8 lines, 1353 chars — === Semantic+Notes Rules to Check === / non-witnessable-anecdote: Check every persona anecdote as a story: could a person actually have seen what it claims? One thermometer cannot 'watch cold arrive downhill'; a sudden drop on it can. / </p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json import re  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as…</p>
+<p>✅ 5 lines, 164 chars — Rule ID: negative-parallelism / Scope: ['scene', 'note', 'plan'] / Pattern: \bnot\s+[^,.;:!?]{2,45},\s*but\s+(?!(he|she|it|they|we|i|you|there|the)\b)</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' # Analyze the note for rule violations  note = """**A payment in kind, v…</p>
+<p>✅ 22 lines, 993 chars — Check 1 - non-witnessable-anecdote: NO VIOLATION (no persona anecdotes) /  / Check 2 - note-explains-the-story: UNCLEAR (provides real-world facts but doesn't point at page)</p>
+</details>
+
+<div class="assistant-prose">
+<p>Based on my analysis of the author's note at <span class="redacted">redacted</span>/draft/book-01/author-notes/81-what-specifically-goes-wrong.md <span class="unpub-tag">unpublished</span>, I found the following violations:</p>
+<p><strong>Against the 4 semantic+notes rules:</strong></p>
+<ol>
+<li><strong>non-witnessable-anecdote</strong>: No persona anecdotes present. ✓</li>
+<li><strong>note-explains-the-story</strong>: Provides real-world historical facts without explicitly connecting to the scene. Unclear violation; may be allowed as real-world context.</li>
+<li><strong>note-digression-discipline</strong>: <strong>VIOLATION FOUND</strong> - &quot;I'll stop.&quot; at end of first section</li>
+<li><strong>unexplained-specialist-term</strong>: Not applicable; the note explains terms rather than using them without gloss.</li>
+</ol>
+<p><strong>Against additional flagged patterns:</strong></p>
+<ul>
+<li><strong>&quot;not X but Y&quot; structure</strong>: Present in &quot;the payment was not set in money at all: it was set as a quantity of wheat, barley and oats&quot;</li>
+</ul>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": [{"rule_id": "note-digression-discipline", "…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

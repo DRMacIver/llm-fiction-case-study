@@ -1,0 +1,101 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in an author's note at t…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in an author's note at t…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a536db17ab4ffedfd">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in an author's note at the bottom of a chapter of a novel (persona rules: <span class="redacted">redacted</span>/notes/author.md; note rules 4-7 in <span class="redacted">redacted</span>/notes/farming.md). Never rewrite. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;wit&quot;.</li>
+<li>Read <span class="redacted">redacted</span>/draft/book-01/author-notes/42-a-factors-woman.md <span class="unpub-tag">unpublished</span> in full.</li>
+<li>Report EVERY candidate as {rule_id, quote (exact, short), reason}. Read one sentence either side before flagging. Also flag: winking at the persona's own enthusiasm, credentials offered to license a fact, &quot;not X but Y&quot;, floating epigrams, world content (explaining magic/System/institutions), the note annotating why a scene was written. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in the author's note. Let me start by reading the rules and the note file.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/author-notes/42-a-factors-woman.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 4 lines, 1219 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+<p>🔧 Bash: grep -n '"lens":\s*"wit"' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 10 lines, 229 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 300 lines, 16819 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 150 lines, 7622 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 50 lines, 3045 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me read the author.md file to understand the rules for author's notes:</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Read notes/author.md</p>
+<p>✅ 169 lines, 9649 chars</p>
+<p>🔧 Read notes/farming.md</p>
+<p>✅ 50 lines, 3005 chars</p>
+<p>🔧 Read notes/farming.md</p>
+<p>✅ 50 lines, 3341 chars</p>
+<p>🔧 Read draft/book-01/scenes/42-a-factors-woman.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 48 lines, 7655 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Based on my analysis of the author's note against all semantic + wit rules and the specified flags:</p>
+<p><strong>Semantic + wit rules checked:</strong></p>
+<ol>
+<li>triad-swerve-budget - not present</li>
+<li>long-build-short-drop-budget - not present</li>
+<li>quiet-the-way-budget - not present</li>
+<li>aphorism-budget - not present</li>
+<li>ornament-wit - not present</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>wrong-world-metaphor - not present</li>
+<li>joke-rhythm-no-logic - not present (no jokes in technical explanation)</li>
+<li>weak-comic-beat-flat - not present</li>
+<li>joke-character-could-not-make - not applicable (author's note, not dialogue)</li>
+</ol>
+<p><strong>Special flags:</strong></p>
+<ul>
+<li>Winking at enthusiasm - not present</li>
+<li>Credentials to license facts - not present</li>
+<li>&quot;not X but Y&quot; construction - not present</li>
+<li>Floating epigrams - not present</li>
+<li>World content explaining System/institutions - allowed by farming.md rule 4 (&quot;Specialist knowledge gets an author's note... A note explains what is real: the farming, the soil, the weather, the drainage, the history&quot;)</li>
+<li>Note explaining why scene was written - not present</li>
+</ul>
+<p>The note explains real-world survey and measurement methodology, which is explicitly licensed by the farming guidelines. The prose is straightforward technical writing without detected prose failures in the semantic + wit lens.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": []})</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

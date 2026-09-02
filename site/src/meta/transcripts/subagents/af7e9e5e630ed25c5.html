@@ -1,0 +1,67 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-af7e9e5e630ed25c5">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (voice guide and skills, read-only) and <span class="redacted">redacted: private</span> <span class="redacted">redacted: private</span> <span class="redacted">redacted: private</span> (read-only; nothing else in autoroad). Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit anything under site/src/transcripts/.<br />
+Context: the site's prose pages (site/src/introduction.md, about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md) are written in a voice modelled on David MacIver's, per <span class="redacted">redacted: private</span> and <span class="redacted">redacted: private</span> but in the third person: the narrator is the pipeline, not David, and the site is openly LLM-written. David has read them and says they are still &quot;a bit Claude voiced&quot;. The pages were fact-checked yesterday (see <span class="redacted">redacted: private</span>); every factual claim, number, date, name, attribution and link must be preserved exactly. This pass changes how things are said, never what is said.</p>
+<p>Task: verify that the voice edit of site/src/howto/index.md changed no facts. Run: git -C <span class="redacted">redacted: private</span> diff -- site/src/howto/index.md &gt; scratch file, read the diff. For every changed hunk, compare before and after and report any place where a number, date, name, attribution, causal claim, quantity word (most, several, two, a dozen), link target or link text changed meaning, or where a claim was added or removed. Rephrasing that preserves meaning is fine and should not be reported. Also confirm every markdown link in the new file still points at an existing file (check with Python). Return structured output only.</p></blockquote>
+
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: git diff -- site/src/howto/index.md &gt; /private/tmp/claude-501/-Users-drmaciver-Projects-a…</p>
+<p>✅ 1 lines, 130 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa8-c87b47800a5c/scratchpad/diff.txt</p>
+<p>✅ 36 lines, 6400 chars</p>
+<p>🔧 Bash: git -C <span class="redacted">redacted: private</span> diff -- site/src/howto/index.md | head -50; echo "---"; git -C…</p>
+<p>✅ 64 lines, 6534 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, this is the correct diff for index.md (my earlier redirect to a file apparently picked up stale content — ignore that; using this one, which matches <code>git -C ... diff -- site/src/howto/index.md</code>).</p>
+<p>Now let me check each hunk carefully.</p>
+<p>Hunk 1: &quot;David's impression... they were not asking&quot; → &quot;were not, he thinks, asking&quot; - same meaning, attribution preserved. &quot;tries to say what the process was&quot; → &quot;process actually was&quot; - fine. &quot;as evidence rather than as the point&quot; → &quot;are evidence here, not the point&quot; - same.</p>
+<p>Hunk 2: &quot;expensive in the plain sense&quot; → &quot;expensive&quot; - drops &quot;in the plain sense&quot; but meaning preserved (not a fact change).</p>
+<p>Hunk 3 (big one): &quot;turn that judgement into a written rule, a checked example, or a tool&quot; → &quot;into something written down, a rule, a checked example, a tool&quot; - same three items preserved. &quot;Then the loop ran again at a slightly higher level&quot; → &quot;Then the same loop ran again, but aimed at the process itself rather than at a single piece of writing&quot; - this changes the causal/descriptive claim: &quot;higher level&quot; replaced with &quot;aimed at the process itself rather than a single piece of writing&quot; — check if this is meaning-equivalent or a factual rephrasing.</p>
+<p>Also added: &quot;, and each of those is covered in the pages below.&quot; — this is an added claim.</p>
+<p>Last line: &quot;If you read one page, read the loop. If you read two, add the one on throwing work away, because it is the part people are least prepared for.&quot; → &quot;Read the loop first. Read throwing work away second: it covers discarding the five-book plan and the first full draft of book one.&quot;</p>
+<p>This changes reasoning: original reason &quot;because it is the part people are least prepared for&quot; replaced with &quot;it covers discarding the five-book plan and the first full draft of book one&quot; — a different justification, and this is a new specific factual claim (that throwing-away covers those two specific things). Let me check throwing-away.md content to see if that's accurate — but more importantly this is a changed claim: original attribution of importance vs. new specific content description. This should be flagged as a changed claim (reason for recommendation changed, plus added specific content claim).</p>
+<p>Let me check link targets.</p>
+</div>
+
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import re, os path = "site/src/howto/index.md" content = open(path).rea…</p>
+<p>✅ 11 lines, 358 chars — site/src/workflow/index.md True / site/src/chronicle/index.md True / site/src/howto/setup.md True</p>
+
+<div class="assistant-prose">
+<p>All links resolve to existing files.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"input": "{\"links_ok\": true, \"changed_claims\": [{\"bef…)</p>
+<p>✅ 1 lines, 177 chars</p>
+<p>🔧 StructuredOutput ({"changed_claims": [{"before": "Then the loop ran again at…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

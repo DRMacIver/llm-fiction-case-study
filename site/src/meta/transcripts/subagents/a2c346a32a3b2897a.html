@@ -1,0 +1,126 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>I am writing a beginner's setup page for people with minimal programm…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>I am writing a beginner's setup page for people with minimal programm…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a2c346a32a3b2897a">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>I am writing a beginner's setup page for people with minimal programming experience who want to use Claude Code to write a novel. Please give me accurate, current facts (with source URLs) on:</p>
+<ol>
+<li>How to install the Claude Code CLI on macOS, Windows and Linux: the recommended install command(s) today (native installer script, Homebrew, npm, winget etc.), and which is recommended for non-programmers.</li>
+<li>The Claude Code desktop app: what platforms it is on, how to get it, whether it needs the terminal at all, whether it includes git handling or a way to open a project folder, and how it differs in practice from the CLI for a non-programmer.</li>
+<li>What account/subscription is needed (Pro, Max tiers; API key alternative), and roughly what the plan names are and how usage limits work at a high level. Don't quote prices unless you are confident they are current.</li>
+<li>How a beginner runs <code>claude</code> in a folder, what <code>/init</code> does, how CLAUDE.md works, and how to resume a previous session.</li>
+<li>Whether git needs to be installed separately on each platform and the minimal way to install it (Xcode command line tools on Mac, Git for Windows, etc.), and whether Claude Code can initialise and commit to a repo on the user's behalf if asked.</li>
+<li>Anything a non-programmer commonly gets stuck on in the first hour (permissions prompts, permission modes, the terminal itself).</li>
+</ol>
+<p>Return a compact factual brief, about 600 words, with URLs. Flag anything you are unsure of rather than guessing.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll fetch the official Claude Code documentation to give you accurate, current information.</p>
+</div>
+
+<details><summary>18 tool calls</summary>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/claude_code_docs_map.md</p>
+<p>✅ 44 lines, 1801 chars</p>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/setup.md</p>
+<p>✅ 685 lines, 31068 chars</p>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/quickstart.md</p>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/authentication.md</p>
+<p>✅ 260 lines, 28454 chars</p>
+<p>✅ 357 lines, 13340 chars</p>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/desktop-quickstart.md</p>
+<p>✅ 143 lines, 11629 chars</p>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/overview.md</p>
+<p>✅ 246 lines, 16619 chars</p>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/memory.md</p>
+<p>✅ 474 lines, 37273 chars</p>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/permission-modes.md</p>
+<p>✅ 24 lines, 2090 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 150 lines, 23059 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>I have gathered comprehensive, current information from the official Claude Code documentation. Here's an accurate brief for your beginners guide:</p>
+<hr />
+<h2><strong>Claude Code Setup for Novel Writers: A Beginner's Factual Brief</strong></h2>
+<h3><strong>1. Installation (Recommended for Non-Programmers)</strong></h3>
+<p><strong>Best option for non-programmers: Desktop app</strong> (no terminal required)</p>
+<p><strong>Native installer (also recommended for CLI):</strong></p>
+<ul>
+<li><strong>macOS/Linux:</strong> <code>curl -fsSL https://claude.ai/install.sh | bash</code> (auto-updates)</li>
+<li><strong>Windows (PowerShell):</strong> <code>irm https://claude.ai/install.ps1 | iex</code> (auto-updates)</li>
+<li><strong>Alternatives:</strong> Homebrew, WinGet, or Linux package managers (require manual updates)</li>
+</ul>
+<p>Sources: <a href="https://code.claude.com/docs/en/setup.md">https://code.claude.com/docs/en/setup.md</a>, <a href="https://code.claude.com/docs/en/overview.md">https://code.claude.com/docs/en/overview.md</a></p>
+<h3><strong>2. Desktop App vs CLI</strong></h3>
+<p>The <strong>desktop app</strong> is purpose-built for non-programmers: no terminal needed, drag-and-drop layout with file browser, visual diff review, and a built-in file browser to open project folders. The CLI is more powerful for advanced users but requires terminal comfort. Both share the same underlying engine and work identically for creative writing tasks.</p>
+<p><strong>Platforms:</strong> macOS, Windows (x64 + ARM64), and Ubuntu/Debian (beta). Download at <a href="https://claude.ai/code">https://claude.ai/code</a> or through your app store.</p>
+<p>Git handling: The desktop app includes built-in git support—Claude can commit changes, create branches, and open PRs if you ask it to.</p>
+<p>Sources: <a href="https://code.claude.com/docs/en/desktop-quickstart.md">https://code.claude.com/docs/en/desktop-quickstart.md</a></p>
+<h3><strong>3. Account Requirements</strong></h3>
+<p>Claude Code requires:</p>
+<ul>
+<li><strong>Claude Pro</strong> or <strong>Claude Max</strong> subscription (recommended), or</li>
+<li><strong>Claude for Teams/Enterprise</strong>, or</li>
+<li><strong>Claude Console</strong> (API access with pre-paid credits)</li>
+</ul>
+<p>Free Claude.ai does not include Claude Code access. Pricing and tier details at <a href="https://claude.com/pricing">https://claude.com/pricing</a> (not quoted here as prices change frequently).</p>
+<p>Sources: <a href="https://code.claude.com/docs/en/setup.md">https://code.claude.com/docs/en/setup.md</a>, <a href="https://code.claude.com/docs/en/authentication.md">https://code.claude.com/docs/en/authentication.md</a></p>
+<h3><strong>4. Getting Started</strong></h3>
+<p><strong>Running Claude:</strong></p>
+<pre><code class="language-bash">cd /path/to/your/novel/project
+claude
+</code></pre>
+<p><strong><code>/init</code> command:</strong> Generates a <code>CLAUDE.md</code> file automatically by analyzing your project structure. This file tells Claude your project conventions, build commands, and guidelines—it loads into every session.</p>
+<p><strong><code>CLAUDE.md</code>:</strong> A markdown file you create or edit to give Claude persistent instructions (e.g., &quot;my character names,&quot; &quot;tone should be literary fiction,&quot; &quot;chapters go in <code>/chapters/</code>&quot;). Lives in your project root; survives across sessions. Run <code>/memory</code> in a session to view and edit it.</p>
+<p><strong>Resuming sessions:</strong> Type <code>/resume</code> to pick up a previous conversation, or <code>claude -c</code> to continue the most recent session in the current directory.</p>
+<p>Sources: <a href="https://code.claude.com/docs/en/memory.md">https://code.claude.com/docs/en/memory.md</a>, <a href="https://code.claude.com/docs/en/quickstart.md">https://code.claude.com/docs/en/quickstart.md</a></p>
+<h3><strong>5. Git Requirements</strong></h3>
+<p><strong>Git installation (separate):</strong></p>
+<ul>
+<li><strong>macOS:</strong> Usually pre-installed; if not, Xcode command line tools include Git</li>
+<li><strong>Windows:</strong> Download <a href="https://git-scm.com/downloads/win">Git for Windows</a> (optional but recommended for Bash tool)</li>
+<li><strong>Linux:</strong> <code>apt install git</code> or equivalent for your distro</li>
+</ul>
+<p><strong>Claude's git handling:</strong> Claude can initialise a repo (<code>git init</code>), stage files, commit with messages, and create branches—all conversationally. You don't need to know git commands; just ask &quot;commit my changes with a message about this revision.&quot;</p>
+<p>Sources: <a href="https://code.claude.com/docs/en/setup.md">https://code.claude.com/docs/en/setup.md</a>, <a href="https://code.claude.com/docs/en/quickstart.md">https://code.claude.com/docs/en/quickstart.md</a></p>
+<h3><strong>6. Common Beginner Friction Points</strong></h3>
+<p><strong>Permission prompts</strong> (Manual mode): When you first start, Claude may ask approval before editing files or running commands. On Pro/Max (default auto mode), a background classifier approves safe actions instead—fewer prompts. Press <code>Shift+Tab</code> to toggle modes anytime.</p>
+<p><strong>Permission modes:</strong></p>
+<ul>
+<li><strong>Manual</strong> (<code>default</code>): Every action asks you</li>
+<li><strong>Auto</strong> (Pro/Max default): Classifier approves safe actions</li>
+<li><strong>Plan mode:</strong> Claude proposes changes without editing</li>
+</ul>
+<p>Non-programmers typically prefer <strong>Auto</strong> (fewer decisions) or <strong>Plan</strong> (review-before-edit). Flag: <code>--permission-mode auto</code></p>
+<p><strong>Terminal anxiety:</strong> Use the desktop app to avoid the terminal entirely, or ask Claude questions in plain English—it understands &quot;what does this project do?&quot; and &quot;add a function that does X.&quot;</p>
+<p>Sources: <a href="https://code.claude.com/docs/en/permission-modes.md">https://code.claude.com/docs/en/permission-modes.md</a>, <a href="https://code.claude.com/docs/en/quickstart.md">https://code.claude.com/docs/en/quickstart.md</a></p>
+<hr />
+<p><strong>Flags I'm uncertain about:</strong> Price tier names may have shifted since documentation was published. Desktop app Linux beta status—check <a href="https://claude.ai/code">https://claude.ai/code</a> for current platform availability.</p>
+</div>
+</body></html>

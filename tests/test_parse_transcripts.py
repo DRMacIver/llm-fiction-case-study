@@ -630,3 +630,66 @@ def test_end_to_end_pre_cutoff_write_gets_content_post_cutoff_does_not():
     assert pre_write["content"] == "early sample prose"
     assert post_write["tool"] == "Write"
     assert "content" not in post_write
+
+
+# ---------------------------------------------------------------------------
+# per-source parametrization: repo_root, premise_cutoff, keep_content_enabled
+# (see tools/sources.py / tools/sources.json "meta" profile).
+
+
+def test_relpath_and_summarize_tool_use_use_custom_repo_root():
+    from tools.parse_transcripts import summarize_tool_use
+
+    block = summarize_tool_use(
+        "Read",
+        {"file_path": "/Users/drmaciver/Projects/autoroad-howto/tools/render.py"},
+        {},
+        repo_root="/Users/drmaciver/Projects/autoroad-howto",
+    )
+    assert block["file"] == "tools/render.py"
+
+
+def test_parse_transcript_with_no_premise_cutoff_never_keeps_full_content():
+    from datetime import datetime, timezone
+
+    lines = [
+        assistant_block(
+            {
+                "type": "tool_use",
+                "id": "tu1",
+                "name": "Write",
+                "input": {"file_path": "/x/y.md", "content": "some content"},
+            },
+            ts="2000-01-01T00:00:00.000Z",  # far before any real cutoff
+        )
+    ]
+    parsed = parse_transcript("sess-nocutoff", lines, premise_cutoff=None)
+    block = parsed.turns[0].blocks[0]
+    assert "content" not in block
+
+    # Sanity: the same line *would* keep content with a cutoff after it.
+    cutoff = datetime(2999, 1, 1, tzinfo=timezone.utc)
+    parsed2 = parse_transcript("sess-withcutoff", lines, premise_cutoff=cutoff)
+    block2 = parsed2.turns[0].blocks[0]
+    assert block2.get("content") == "some content"
+
+
+def test_keep_content_enabled_false_overrides_cutoff():
+    from datetime import datetime, timezone
+
+    lines = [
+        assistant_block(
+            {
+                "type": "tool_use",
+                "id": "tu1",
+                "name": "Write",
+                "input": {"file_path": "/x/y.md", "content": "some content"},
+            },
+            ts="2000-01-01T00:00:00.000Z",
+        )
+    ]
+    cutoff = datetime(2999, 1, 1, tzinfo=timezone.utc)
+    parsed = parse_transcript(
+        "sess-forced-off", lines, premise_cutoff=cutoff, keep_content_enabled=False
+    )
+    assert "content" not in parsed.turns[0].blocks[0]

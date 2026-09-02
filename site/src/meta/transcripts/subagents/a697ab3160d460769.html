@@ -1,0 +1,258 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in the repo [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in the repo [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a697ab3160d460769">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in the repo <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only, never modify it; git -C for history). Do NOT touch anything else outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto.<br />
+Rules: uv for Python (uv run). Prefer Python to bash. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. No em dashes in prose.<br />
+Background: the site chronicles how the novel &quot;How to Save the World&quot; was written with Claude Code. Published chapters are scenes 1-40 of <span class="redacted">redacted: private</span> <span class="redacted">redacted sentence</span> Redaction config: <span class="redacted">redacted: private</span> pipeline: tools/parse_transcripts.py -&gt; tools/redact.py -&gt; tools/render.py -&gt; mdbook build site. Read tools/FORMAT_NOTES.md and build/leak-fix-report.md for context.</p>
+<p>Task: add a deterministic guard against quoted unpublished story prose. Term redaction cannot catch a transcript that quotes a sentence from an unpublished scene. Build tools/prose_index.py that constructs a shingle index (normalise: lowercase, strip punctuation, collapse whitespace; 7-word shingles, hashed) from ALL unpublished story text: scenes numbered above 40 in <span class="redacted">redacted: private</span> everything under plans/, notes/theme.md, notes/concept.md, notes/premise.md, notes/canon/, summaries/, and every version of story files that exists only in git history (the deleted chapters/, rewrite/, draft/book-01/rejected-act2/ trees: enumerate blobs with git -C <span class="redacted">redacted: private</span> rev-list --all + ls-tree, or git log --all --diff-filter=D --name-only, and read them with git show). Also index the published scenes 1-40 SEPARATELY so we can distinguish &quot;quotes published prose&quot; (allowed) from &quot;quotes unpublished prose&quot; (must redact). Save the index to build/prose-index.pkl (gitignored); do not write any story text into the repo.<br />
+Then extend tools/redact.py: after term/topic redaction, for every text, thinking, tool_use summary and tool_result preview, split into sentences, and if a sentence contains any shingle from the unpublished index that is NOT in the published index, replace the sentence with <span class="redacted">redacted sentence: unpublished prose</span>. Sentences under 7 words cannot match; that is acceptable. Count these in build/redaction-report.json under a new category. Make sure common short phrases do not trigger (7 words is the guard; if you find false positives on boilerplate like CLAUDE.md rules text, exclude notes/voices.md-style non-story files from the index or raise to 8 words and say so).<br />
+Write tests (synthetic corpus). Run the full pipeline including render and mdbook build. Report: index size, number of sentences redacted by the new rule per session, three example redacted sentences' context (without quoting the prose), and any false positives you noticed.</p></blockquote>
+
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: ls tools/ &amp;&amp; cat tools/FORMAT_NOTES.md 2&gt;/dev/null | head -100</p>
+<p>✅ 108 lines, 5764 chars</p>
+<p>🔧 Bash: wc -l tools/redact.py tools/render.py tools/spoilers.json &amp;&amp; cat build/leak-fix-report.md…</p>
+<p>✅ 84 lines, 6256 chars</p>
+<p>🔧 Read tools/redact.py</p>
+<p>✅ 355 lines, 14249 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; ls draft/book-01/scenes | tail -30 &amp;&amp; echo --- &amp;&amp; ls plans note…</p>
+<p>✅ 84 lines, 1535 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; find . -maxdepth 1 -iname "summar*" &amp;&amp; find . -type d -iname su…</p>
+<p>✅ 4 lines, 41 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, <code>summaries/</code> exists at root. Let's look at the deleted trees list and get git blob enumeration approach.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --all --diff-filter=D --name-only --pretty=format: | so…</p>
+<p>✅ 39 lines, 1093 chars</p>
+<p>🔧 Bash: ls tests 2&gt;/dev/null; find . -iname "test_*" -o -iname "*_test.py" | grep -v node_modules…</p>
+<p>✅ 38 lines, 907 chars</p>
+
+<div class="assistant-prose">
+<p>build/ is already gitignored, good. Let's peek at test_redact.py for style conventions.</p>
+</div>
+
+<p>🔧 Bash: sed -n '1,60p' tests/test_redact.py</p>
+<p>✅ 60 lines, 1779 chars</p>
+
+<div class="assistant-prose">
+<p>Now let's build prose_index.py. First check size of scenes 41+ etc., and check current git repo (autoroad) blob counts to bound the enumeration cost.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git rev-list --all | wc -l du -sh .git</p>
+<p>✅ 2 lines, 18 chars —      625 /  67M	.git</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git rev-list --all --objects -- chapters/ rewrite/ draft/book-0…</p>
+<p>✅ 6 lines, 213 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git rev-list --all --objects -- chapters/ rewrite/ draft/book-0…</p>
+<p>✅ 7 lines, 350 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good — that works. Now let's write the prose_index.py script.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git rev-list --all --objects -- chapters/ rewrite/ draft/book-0…</p>
+<p>✅ 2 lines, 17 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat notes/theme.md | wc -l; sed -n '1,15p' notes/theme.md echo…</p>
+<p>✅ 38 lines, 1524 chars</p>
+<p>🔧 Write tools/prose_index.py</p>
+<p>✅ 1 lines, 157 chars</p>
+<p>🔧 Bash: uv run python -m tools.prose_index</p>
+<p>✅ 1 lines, 186 chars — prose index: 1058 unpublished sources -&gt; 931817 shingles; 40 published sources -&gt; 43481 shingles (shingle size 7); saved to <span class="redacted">redacted: private</span></p>
+</details>
+
+<div class="assistant-prose">
+<p>Works. Now let's integrate into redact.py: sentence-level check against the prose index.</p>
+</div>
+
+<p>🔧 Edit tools/redact.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit tools/redact.py</p>
+<p>✅ 1 lines, 162 chars</p>
+
+<div class="assistant-prose">
+<p>Now thread <code>prose_index</code> through redact_text, redact_block, redact_transcript, and main().</p>
+</div>
+
+<p>🔧 Edit tools/redact.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit tools/redact.py</p>
+<p>✅ 1 lines, 162 chars</p>
+
+<div class="assistant-prose">
+<p>Now update <code>main()</code> to load prose index and pass through, and record its own report category.</p>
+</div>
+
+<p>🔧 Edit tools/redact.py</p>
+<p>✅ 1 lines, 162 chars</p>
+
+<div class="assistant-prose">
+<p>Now update index.json redaction call too, and per-file report to break out per-file redaction count for the new category (already handled since it's under by_category, but task wants explicit count in report; by_category already covers it as <code>prose_guard:unpublished_quote</code>).</p>
+</div>
+
+<p>🔧 Edit tools/redact.py</p>
+<p>✅ 1 lines, 162 chars</p>
+
+<div class="assistant-prose">
+<p>Now let's run tests and check nothing broke.</p>
+</div>
+
+<p>🔧 Bash: uv run pytest -q 2&gt;&amp;1 | tail -30</p>
+<p>✅ 2 lines, 98 chars</p>
+
+<div class="assistant-prose">
+<p>Now write tests for the new guard using a synthetic corpus.</p>
+</div>
+
+<p>🔧 Write tests/test_prose_index.py</p>
+<p>✅ 1 lines, 162 chars</p>
+
+<div class="assistant-prose">
+<p>Now tests for the redact.py guard using a synthetic ProseIndex fixture.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: tail -20 tests/test_redact.py</p>
+<p>✅ 20 lines, 750 chars</p>
+<p>🔧 Write tests/test_prose_guard.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Bash: uv run pytest -q 2&gt;&amp;1 | tail -40</p>
+<p>✅ 3 lines, 178 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>All pass. Now run the full pipeline.</p>
+</div>
+
+<p>🔧 Bash: cat tools/parse_transcripts.py | grep -n "def main" | head; ls build 2&gt;/dev/null</p>
+<p>✅ 7 lines, 121 chars</p>
+
+<div class="assistant-prose">
+<p>build/parsed already exists. Let's rerun the full pipeline: parse -&gt; prose_index -&gt; redact -&gt; render -&gt; mdbook build.</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: uv run python -m tools.parse_transcripts 2&gt;&amp;1 | tail -20</p>
+<p>✅ 4 lines, 56 chars</p>
+<p>🔧 Bash: uv run python -m tools.prose_index 2&gt;&amp;1 | tail -5 uv run python -m tools.redact 2&gt;&amp;1 | ta…</p>
+<p>✅ 11 lines, 794 chars</p>
+<p>🔧 Edit tools/prose_index.py</p>
+<p>✅ 1 lines, 167 chars</p>
+<p>🔧 Bash: uv run python -c "from tools.prose_index import main; main()" uv run python -m tools.reda…</p>
+<p>✅ 2 lines, 228 chars</p>
+<p>🔧 Bash: uv run python -c " import json r = json.load(open('build/redaction-report.json')) print(j…</p>
+<p>✅ 21 lines, 516 chars</p>
+<p>🔧 Bash: uv run python -c " import json r = json.load(open('build/redaction-report.json')) files =…</p>
+<p>✅ 5 lines, 239 chars</p>
+<p>🔧 Bash: uv run python -c " import json doc = json.load(open('build/redacted/subagents/af468e88aec…</p>
+<p>✅ 57 lines, 4029 chars</p>
+<p>🔧 Bash: uv run python -c " import json doc = json.load(open('build/redacted/3ef92e14-71be-4557-a7…</p>
+<p>✅ 67 lines, 4919 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>These are genuine spoiler-quoting sentences (chapter facts extraction from unpublished chapters) — working correctly. Let's spot-check for false positives elsewhere, e.g. sentences that are boilerplate-y but happened to match. Check the redaction-report for sessions with high density but low other categories, and grep for any suspiciously generic sentence removed.</p>
+</div>
+
+<details><summary>18 tool calls</summary>
+<p>🔧 Bash: uv run python -c " import json, glob count=0 for path in glob.glob('build/redacted//*.jso…</p>
+<p>✅ 6 lines, 255 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa8-c87b47800a5c/scratchpad/fp_scan.txt</p>
+<p>✅ 80 lines, 3598 chars</p>
+<p>🔧 Bash: uv run python -c " import json from tools import redact, prose_index idx = redact.load_pr…</p>
+<p>✅ 1 lines, 610 chars</p>
+<p>🔧 Bash: uv run python -c " import json doc = json.load(open('build/parsed/subagents/a408021493f9d…</p>
+<p>✅ 1 lines, 502 chars</p>
+<p>🔧 Bash: uv run python -c " import json doc = json.load(open('build/parsed/subagents/a11830db351b4…</p>
+<p>✅ 1 lines, 703 chars</p>
+<p>🔧 Bash: uv run python -c " import json, glob, random from tools import redact idx = redact.load_p…</p>
+<p>✅ 1 lines, 140 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa8-c87b47800a5c/scratchpad/sample_matches.txt</p>
+<p>✅ 261 lines, 13022 chars</p>
+<p>🔧 Bash: uv run python -m tools.render 2&gt;&amp;1 | tail -20</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; which mdbook &amp;&amp; mdbook build 2&gt;&amp;1 | tail -40</p>
+<p>✅ 4 lines, 167 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Build succeeded. Now run the full test suite once more and gather stats per session for the report.</p>
+</div>
+
+<p>🔧 Bash: uv run pytest -q 2&gt;&amp;1 | tail -10</p>
+<p>✅ 3 lines, 178 chars</p>
+<p>🔧 Bash: uv run python -c " import json r = json.load(open('build/redaction-report.json')) files =…</p>
+<p>✅ 10 lines, 479 chars</p>
+
+<div class="assistant-prose">
+<p>All good. Final check that build dir stays gitignored and nothing story-related got committed.</p>
+</div>
+
+<p>🔧 Bash: git status --short | head -20</p>
+<p>✅ 20 lines, 543 chars</p>
+<p>🔧 Bash: ls notes/ 2&gt;/dev/null | head; git diff --stat tools/spoilers.json tools/parse_transcripts…</p>
+<p>✅ 6 lines, 245 chars</p>
+
+<div class="assistant-prose">
+<p>These are pre-existing uncommitted changes from before this session (not something I did — I never touched parse_transcripts.py, render.py, spoilers.json, or notes/). This is prior work-in-progress state; my changes are only tools/prose_index.py, tools/redact.py, and the two new test files. No story text was written into the repo.</p>
+</div>
+
+<p>🔧 Bash: git diff --stat tools/redact.py; git status --short tools/prose_index.py tests/test_prose…</p>
+<p>✅ 5 lines, 212 chars</p>
+
+<div class="assistant-prose">
+<p>Good — <code>build/</code> correctly doesn't show (gitignored), confirming no story text was staged into the repo.</p>
+<h2>Summary</h2>
+<p>Built <code>tools/prose_index.py</code> and extended <code>tools/redact.py</code> with a deterministic shingle-based guard against quoted unpublished story prose.</p>
+<p><strong>Index</strong> (<code>tools/prose_index.py</code>, output <code>build/prose-index.pkl</code>, gitignored):</p>
+<ul>
+<li>Normalizes text (lowercase, strip punctuation, collapse whitespace) and hashes 7-word shingles with blake2b (8-byte digests) — only hashes are stored, never prose.</li>
+<li>Unpublished set: scenes 41+ from the working tree, <code>plans/**</code>, <code>notes/theme.md</code>/<code>concept.md</code>/<code>premise.md</code>/<code>canon/**</code>, <code>summaries/**</code>, plus every <code>.md</code> blob that ever existed under the deleted <code>chapters/</code>, <code>rewrite/</code>, and <code>draft/book-01/rejected-act2/</code> trees, enumerated via <code>git rev-list --all --objects -- &lt;prefixes&gt;</code> (deduped by content-addressed blob sha) and read with <code>git cat-file -p</code>.</li>
+<li>Published set: scenes 1-40, indexed separately.</li>
+<li>Result on current autoroad history: 1058 unpublished sources → 931,817 shingles; 40 published sources → 43,481 shingles.</li>
+</ul>
+<p>**Guard (<code>tools/redact.py</code>): runs last in <code>redact_text</code>, after term/topic/path/scene-number redaction. Splits each text/thinking/tool_use/tool_result field into sentences (reusing the existing sentence splitter), hashes each sentence's shingles, and if any hash is in <code>unpublished - published</code> (precomputed once as <code>unpublished_only</code>), replaces the whole sentence with <span class="redacted">redacted sentence: unpublished prose</span><code>and counts it under the new</code>prose_guard:unpublished_quote<code>report category.</code>load_prose_index()` degrades gracefully (guard disabled, with a warning) if the pickle hasn't been built yet.</p>
+<p><strong>Tests</strong>: <code>tests/test_prose_index.py</code> (normalization, shingling, determinism, pickle round-trip) and <code>tests/test_prose_guard.py</code> (synthetic corpus covering: unpublished sentence redacted, published sentence left alone, a sentence shared by both sets left alone, sub-7-word sentences never matching, guard disabled with no index, redaction confined to the offending sentence only, threading through <code>redact_transcript</code>/tool_result previews). Full suite: 77 passed.</p>
+<p><strong>Full pipeline</strong> run end-to-end: <code>parse_transcripts</code> → <code>prose_index</code> (invoked via <code>python -c &quot;from tools.prose_index import main; main()&quot;</code>, not <code>-m</code>, so the pickled class's <code>__module__</code> resolves correctly across processes — noted in the docstring) → <code>redact</code> → <code>render</code> → <code>mdbook build</code>, all succeeded.</p>
+<p><strong>Results</strong>: 24,243 sentences redacted by the new rule across all 1721 transcript files this run. Per top-level session: <code>0c653b33-...</code> 866, <code>3ef92e14-...</code> 880, <code>10c1dd77-...</code> 611, <code>7257e15f-...</code> 267, <code>d1679987-...</code> 151, <code>c214c046-...</code> 31, <code>61a194e2-...</code> 54, <code>92c486ed-...</code> 2, <code>be6bcf16-...</code> 1 (subagent transcripts carry the bulk of the remainder, e.g. one file at 1252).</p>
+<p>Three example contexts (no prose quoted):</p>
+<ol>
+<li>A &quot;consolidate the magic ledger&quot; subagent whose output cites <code>notes/canon/system.md</code> and <code>chapters/007-the-east-road.md</code> for mana-mechanic claims — several of its bullet points collapsed to the marker.</li>
+<li>A &quot;probe extractor&quot; subagent's fact-list for an unpublished chapter (<code>chapters/014-the-overdue-delve.md</code> etc.) — most bullets under its <code>## Facts</code> heading were sentence-redacted.</li>
+<li>A <code>cat</code>-style Bash tool_use whose command output was a literal excerpt of <code>rewrite/book-01/arc-02/scenes/04-a-page-of-instructions.md</code> — the excerpted body lines were redacted.</li>
+</ol>
+<p><strong>False positives</strong>: none found. I specifically scanned for boilerplate-triggered hits (searched for markers near &quot;CLAUDE.md&quot;/&quot;instructions&quot;/&quot;you are&quot;) and manually inspected ~30 of them plus a random sample of ~15 more: every hit traced to genuine verbatim reuse of an indexed unpublished source — either actual scene/chapter prose quoted in a subagent's tool output, or task-instruction text that had itself been copy-pasted verbatim out of a <code>plans/</code> file into a subagent prompt (which does leak plan content, e.g. scene lists, canon facts). No coincidental generic-English collisions turned up, so 7-word shingles and the current source list needed no adjustment.</p>
+<p>Files touched: <code><span class="redacted">redacted: private</span></code> (new), <code><span class="redacted">redacted: private</span></code> (edited), <code><span class="redacted">redacted: private</span></code> (new), <code><span class="redacted">redacted: private</span></code> (new). <code>build/prose-index.pkl</code> and `build/redaction-report.json regenerated (gitignored, not committed). No changes made outside this repo.</p>
+</div>
+</body></html>

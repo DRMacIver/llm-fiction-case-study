@@ -1,0 +1,320 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: [redacted] (a novel-writing project). This is a READ-ONLY resea…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted] (a novel-writing project). This is a READ-ONLY resea…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a7199c325ea18f58e">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span> (a novel-writing project). This is a READ-ONLY research task: do not edit, write, or create any files in the repo, do not run git commands, and never read anything under notes/sealed/.</p>
+<p>Task: perform the &quot;extraction&quot; half of consistency-backfill for four scenes: draft/book-01/scenes/41-calm-hands.md <span class="unpub-tag">unpublished</span>, 42-a-factors-woman.md <span class="unpub-tag">unpublished</span>, 43-two-lines-one-field.md <span class="unpub-tag">unpublished</span>, 44-where-they-stopped-writing.md <span class="unpub-tag">unpublished</span>.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> Then read the four scene files.</p>
+<p>For EACH of the four scenes produce, exhaustively but tersely:</p>
+<ol>
+<li>ESTABLISHED FACTS the scene states that canon does not yet record: names, roles, ages, places, distances, prices, dates/days, System text (Skill/Level boxes verbatim), procedures, who-knows-what. Give exact quote + scene number/filename for each.</li>
+<li>IMPLICATIONS beyond what's stated (character history, geography, economy, institutions, magic mechanics, timeline) that canon should hold as Working claims. Cite the scene.</li>
+<li>CONTRADICTIONS with existing canon: quote both the scene and the canon file/section that conflicts.</li>
+<li>OPEN QUESTIONS from notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> that the scene touches, and whether it resolves one (flag if so — open questions should not be resolved casually).</li>
+</ol>
+<p>Do NOT include anything about the cause of the &quot;silent soil&quot; mystery (that's a sealed answer — don't discuss or speculate on its cause).</p>
+<p>Organize your final output by canon target file, e.g. &quot;## characters/peri.md&quot;, &quot;## world/timeline.md&quot;, &quot;## world/geography.md&quot;, &quot;## characters/minor.md&quot; — group all findings that would land in that file together, each bullet citing which scene it came from. This is so a later pass can apply canon updates file by file.</p>
+<p>Return the full organized markdown text as your final report (this is the primary deliverable — write it out in full, don't just summarize that you did it). Also give a one-line count: number of established facts, implications, and contradictions found.</p></blockquote>
+
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: echo "--README--" &amp;&amp; cat notes/canon/README.md &amp;&amp; echo "--system--" &amp;&amp; cat notes/canon/sy…</p>
+<p>✅ 44 lines, 2213 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 1 lines, 197 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> notes/canon/characters/*.md notes/can…</p>
+<p>✅ 35 lines, 1470 chars —       84 notes/canon/README.md /     1193 notes/canon/system.md /      201 notes/canon/deferred-beats.md</p>
+</details>
+
+<div class="assistant-prose">
+<p>This is a large task. Given the effort budget, I'll delegate the heavy extraction/cross-reference work to a sonnet subagent (per project rules, opus for judgment-heavy synthesis; this is largely mechanical extraction/cross-referencing, so sonnet fits, but given the volume and need for careful contradiction-spotting, I'll use opus for quality). I'll launch one opus fork-style fresh agent with full file contents context isn't available to it (fresh agent), so I need to give it paths to read itself.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Read draft/book-01/scenes/41-calm-hands.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 60 lines, 8238 chars</p>
+<p>🔧 Read draft/book-01/scenes/42-a-factors-woman.md <span class="unpub-tag">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/43-two-lines-one-field.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 52 lines, 7691 chars</p>
+<p>✅ 48 lines, 7655 chars</p>
+<p>🔧 Read draft/book-01/scenes/44-where-they-stopped-writing.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 42 lines, 6572 chars</p>
+<p><span id="agent-a9ee1439818a648a5"></span>🔧 <a href="a9ee1439818a648a5.html">Agent: Extract canon backfill from 4 scenes</a></p>
+<p>✅ 6 lines, 1067 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>The extraction agent is running in the background (reading full canon plus the four scenes and producing the organized report). I'll wait for its completion notification before delivering the final report.</p>
+</div>
+
+
+<p class="system-note">⚙ background task finished — Agent "Extract canon backfill from 4 scenes" finished</p>
+
+
+<div class="assistant-prose">
+<p>The extraction is complete. Full report below.</p>
+<h2>characters/peri.md</h2>
+<p><strong>Established (new)</strong></p>
+<ul>
+<li><code>[Skill unlocked: Farm Magic - Level 1.]</code> — Peri's box, verbatim, at the trough after turning Mattie's heap, 27 Cornmonth (41-calm-hands.md <span class="unpub-tag">unpublished</span>). Note the box uses a <strong>spaced hyphen</strong>, not the em dash of the canon exemplar in <code>system.md</code> (&quot;Skill unlocked: Swordsmanship — Level 1.&quot;).<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Turned the whole heap by hand with Tess, an hour's work, outside-to-middle, every forkful (41).<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> It isn't that. <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Initialled the sheet <em>P.M.</em> and turned it round for <span class="redacted">redacted</span> to read (42).<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> It stops the next threepence.&quot; (42)<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Implications (Working)</strong></p>
+<ul>
+<li>Farm magic's first level arrives on the page (41) — earned by live cast plus labour, not granted.</li>
+<li>Her cross-class farm magic keeps the same skill-out discipline as sword/fate work; the daily-not-weekly drill ruling is now stated in a second skill.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>New register: an argument aimed at a third party not present (the factor).</li>
+<li>Voice check (flag for voice files, not canon): rule 6d (tally of own utterances) doesn't fire; &quot;It - it answered&quot; (41) is the no-em-dash rule displacing the dash false-start.</li>
+</ul>
+<h2>characters/mattie-ordish.md</h2>
+<p><strong>Established (new)</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> Confirms byre, stable, cobbled yard, mounting block, trough.</p>
+<ul>
+<li>Has a dog (41).</li>
+<li>At the worm count, all faces turn to her unbidden as &quot;who had written the letter&quot;; she says nothing (42). Grants <span class="redacted">redacted</span> a mill copy &quot;when it was fair-copied&quot; (42).<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>; unmoved fifty years (43) — new.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Ruling on the three causes: &quot;Write all three.&quot; (43)<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Coils the chain into its bag, thumb on the ring (43).<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>characters/minor.md</h2>
+<p><strong>Tess Ordish (15)</strong></p>
+<ul>
+<li>Milking done by seven; sits on the mounting block through the lesson (41).<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Kept the count page, said figures back, read the whole page back correctly from the top, names first (42). Recorded as a counter with her age against her name (42).</li>
+</ul>
+<p><strong>Burl</strong></p>
+<ul>
+<li>Dug at the worm count (42); held the gatepost end of the west line, and of both lines on the 15th rerun (43).</li>
+</ul>
+<p><span class="redacted">redacted</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Docking dated: factor's man cut 1s 3d/quarter on every Fenholt farm's barley &quot;a fortnight back&quot; ≈ 13 Cornmonth, &quot;on the word rings&quot; (42).</li>
+<li>His arithmetic: 1s3d × 40 acres ≈ £9 = a hired man Harvestmonth–spring; so the man goes at Harvestmonth (42).<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted</span></p>
+<ul>
+<li>Refuses the board posting on procedural, not personal, grounds: Charter's crown grant covers only the Deep/warrens/their output; guildmaster (at his sister's) controls what goes up (44).</li>
+<li>&quot;The board's public … That's what it's for.&quot; (44)</li>
+<li>Explains the wardens' slate mechanism and history in full (44) — see dungeons.md below.</li>
+<li>Names <span class="redacted">redacted</span> <span class="redacted">redacted</span> as yesterday's warden, then adds warmly, &quot;in a different voice&quot;: &quot;She'll be in before six. She generally is.&quot; (44) — flag: his first line with any warmth; current voice rules give him none.</li>
+</ul>
+<p><strong>The alehouse keeper</strong> — was at the Ordish dinner the night before; Edwin invited the parish deliberately through him (42).</p>
+<p>Guildmaster <span class="redacted">redacted</span>** — still &quot;at his sister's&quot; at the time of the Day 15 board visit (44). See Contradiction 3 below.</p>
+<h2>characters/edwin.md</h2>
+<p>**Established (new)<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> Puts his own hand on the heap during her cast (41).<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Keeps a book, entries dated with hour and place; his entry for 41 quoted verbatim, including <strong>T.O.</strong> as Tess's initials.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Stood back, hands in pockets, letting Peri run the count (42); untouched the chain/tag/cord/pole entirely on the 15th rerun (43).</li>
+<li>Self-correction: had meant to make the &quot;wider question/<span class="redacted">redacted</span>/Sennet&quot; argument himself (the one that &quot;emptied that kitchen&quot;), but Peri spoke first; afterward: &quot;That was well done … I'd have talked about the <span class="redacted">redacted</span>.&quot; (42)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Reads the Charter board &quot;for what was not on it,&quot; recognizes procedural refusal from &quot;four hundred parish councils&quot; and doesn't argue it (44).</li>
+<li>Told Ferrin, at the gate, morning of the 15th, that his blessing is the sheet's day zero — promise from scene 42 <span class="unpub-tag">unpublished</span> kept in scene 44 <span class="unpub-tag">unpublished</span>.</li>
+</ul>
+<p><strong>Implications (Working, flagged for reconciliation, not hardened)</strong></p>
+<ul>
+<li>&quot;some thousands of faces&quot; (41) sits loosely against existing ~200-taught / compost-automation timeline figures — record as Working, don't build a hard count on it.</li>
+<li>&quot;three hundred years&quot; (41) is idiomatic rounding against the ~331-year figure; fine as speech.</li>
+</ul>
+<h2>characters/ferrin.md</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Prompted by Peri's question in 42 (&quot;Does he get told? <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>characters/<span class="redacted">redacted</span>.md</h2>
+<ul>
+<li>Named to Edwin/Peri for the first time by <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>&quot;She'll be in before six. She generally is.&quot; (44) — new habit on record; her 28 Cornmonth visit now doubly recorded (her own account elsewhere plus this slate).</li>
+</ul>
+<h2>characters/sorrel.md</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<h2>world/farm-teaching.md</h2>
+<p><strong>Established (new)</strong></p>
+<ul>
+<li>Full teaching sequence for the compost cantrip on the page: dry casts (wrist check) → quiz on purpose/mechanism → live cast → hand-turn immediately after (41).</li>
+<li>Mechanism as taught/recited: &quot;It doesn't make anything. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Cantrip/turning effects are confounded without a control heap — acknowledged on-page (41).</li>
+<li>Fenholt's parish never had the compost cantrip, only the blessing, from &quot;the teacher that came&quot; (Tess, 41).</li>
+</ul>
+<p><strong>Implications (Working)</strong></p>
+<ul>
+<li>Dry-then-live progression with wrist-watching is the parish course's actual pedagogy generally.</li>
+<li>Limit-sentences are taught as unexplained recitations, passed on without the teacher knowing the reason — succession-theme relevant.</li>
+</ul>
+<h2>world/magic.md / world/magic-explained.md</h2>
+<p><strong>Established (new)</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Visible signature of a live cast: veteran = &quot;brushing off flies&quot;; first-timer = visibly effortful (41).<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Contradiction / tension</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> has Edwin explicitly disclaim any known reason. Not a hard contradiction (narration vs. in-world knowledge) but canon should record that <strong>no character on the page knows the mechanism</strong>, and that sentence should never be voiced by a character.</p>
+<h2>world/system.md</h2>
+<p><strong>Established (new)</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li><strong>Punctuation flag:</strong> scene's box uses a spaced hyphen; canon's exemplar (ch. 018) uses an em dash. Needs a house decision — one of the two is wrong.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Level 1 glossed from receiving end: &quot;One is where everything starts&quot; / preemptive wrist-correction (41).<br />
+<span class="redacted">redacted sentence: unpublished prose</span> Everybody does.&quot; — consistent with existing canon.</li>
+</ul>
+<p><strong>Implication (Working)</strong></p>
+<ul>
+<li>Peri's own tally (&quot;three boxes … not one came where the thing happened&quot;) gives a checkable box count as of Day 13 — worth reconciling against the canonical box inventory.</li>
+</ul>
+<h2>world/silent-soil.md</h2>
+<p><strong>Established (new) — geometry/measurement facts only (no cause speculation)</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>West line defined: SW gatepost (Mattie's chain-point since Seedmonth) to the SE boundary stone; crosses the arcs from the side; laid with cord + sighting poles, then chained (43).<br />
+<span class="redacted">redacted sentence: unpublished prose</span> Canon should record the two lines as differently reliable instruments.</li>
+<li>Circle-fitting method and result, in detail: nine dated/chained stakes on the outer arc's leading edge; three-point circle fits done three times independently. Stump-line-adjacent stakes → centre ~100 yards back down the stump line, south and a little west. West-line-adjacent stakes → centre <strong>40 yards east of the first</strong>. (43)</li>
+<li>Error budget stated: chain disagreement ≈ 2 links across 200 yards; 40 yards ≈ &quot;the best part of two chains,&quot; ruled out as chaining error (43).</li>
+<li>Three unranked possible causes stated verbatim (geometry/shape only — no cause speculation): (1) not a circle at all; (2) a circle whose true centre lies outside the field entirely; (3) Edwin's own hand/stake placement on the west line (43).</li>
+<li>15th rerun with Edwin touching nothing: Mattie on stump end, Burl on gatepost end of both, Peri finding the west edge herself. <strong>Stump line: 9ch73. West line: 6ch18.</strong> (43)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Stump line rate reconfirmed: 23 links / 5 days = ~1 yard/day (43).</li>
+<li>Recurring stopping point restated: &quot;it's past my <span class="redacted">redacted</span>... <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Contradiction</strong></p>
+<ol>
+<li>Thirty vs. <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> consistently uses <strong>forty</strong> yards as both the finding and the ruled-out-chaining-error figure. The &quot;thirty yards&quot; parenthetical in canon is a stale figure and should be corrected to forty.</li>
+</ol>
+<p><strong>Open-question contact — flag, not resolved</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> sets a <em>procedural precedent</em> for how such shortfalls get written up (as instrument uncertainty, pending a month's more chaining) but explicitly declines to rule on this specific case yet.</p>
+<ul>
+<li>Does <strong>not</strong> resolve &quot;the four sites' <span class="redacted">redacted</span> of beginning.&quot;</li>
+<li>Correctly stays agnostic on mechanism/cause throughout, consistent with the standing rule that canon never resolves this.</li>
+</ul>
+<h2>world/institutions.md</h2>
+<p><strong>Established (new)</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Arithmetic: delve date 10 Haymonth, &quot;forty-nine days later&quot; only a postponement notice with no new date (44).</li>
+<li><span class="redacted">redacted</span>'s authority boundary and the board's public-read status stated explicitly (44).</li>
+</ul>
+<p><strong>Implication (Working)</strong></p>
+<ul>
+<li>The board functions as a negative record instrument (absence = finding) as well as positive; the undated hiring notice is a second, softer version of the same institutional-stall signal.</li>
+</ul>
+<h2>world/dungeons.md</h2>
+<p><strong>Established (new) — the wardens' slate</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s) (44).</p>
+<ul>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Status: kept as a warden custom, unowned/unread by the clerk, of unknown origin; &quot;It says In. It always says In.&quot; (44)</li>
+</ul>
+<p><strong>Implications (Working)</strong></p>
+<ul>
+<li>Two-slate paper trail for the mouth-air test: one at the chain, one (mirror) at the house — the house copy essentially unread by anyone but wardens.</li>
+<li>Roughly fortnightly-or-better warden visits implied by three entries across three weeks, three different hands = at least 3 wardens rotating through before 28 Cornmonth.</li>
+<li>Collision-hazard flag: &quot;the seventh&quot; appears bare (no month given in dialogue) — must always be paired with &quot;Cornmonth&quot; to avoid ambiguity against other dated entries elsewhere in canon.</li>
+</ul>
+<h2>world/timeline.md</h2>
+<p>All four scenes land on already-established days; every checkable figure agrees. New entries to add:</p>
+<ul>
+<li><strong>Day 13 (27 Cornmonth), 07:00</strong> — compost cantrip taught at Ordish yard heap; box arrives at the trough (41). (Timeline currently only records the worm count for Day 13.)</li>
+<li><strong>Day 13, 16:00</strong> — first protocol worm count (42) ✓ consistent with canon.</li>
+<li><strong>Day 13, that night</strong> — sheet ruled, day-zero = 12 Seedmonth (42) ✓.</li>
+<li>Day 13, backdated reference: factor's docking &quot;a fortnight back&quot; ≈ 13 Cornmonth (42).</li>
+<li><strong>Day 14 (28 Cornmonth)</strong> — west line laid, 6ch20 (43); Charter-house slate mirror entry 10am &quot;In&quot; (44, mirroring <span class="redacted">redacted</span>'s own 28 Cornmonth chain-side reading).</li>
+<li><strong>Day 15 (29 Cornmonth), morning</strong> — Edwin gives Ferrin day-zero in writing (44); both lines rerun: stump 9ch73 / west 6ch18 (43) ✓.</li>
+<li><strong>Day 15, afternoon</strong> — Charter house visit; <span class="redacted">redacted</span>'s refusal; board read; wardens' slate found (44).<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Contradictions</strong><br />
+2. Minor/non-fix note: &quot;Three in three weeks&quot; (7→28 Cornmonth = exactly 3 weeks) is correct phrasing even though the last interval (14→28) is only a fortnight — flagging only so a later drafter doesn't &quot;correct&quot; it unnecessarily.<br />
+3. <span class="redacted">redacted</span>'s whereabouts / Deep's new date, real divergence. Existing timeline records <span class="redacted">redacted</span> ruling that morning (Day 15) that Holm Deep is reset to 2 Fallowmonth. Scene 44 <span class="unpub-tag">unpublished</span> has the guildmaster still &quot;at his sister's&quot; during the same-day board visit, and the Deep notice on the board still reads &quot;put off... a new date would follow&quot; — i.e., no new date posted yet. This needs deliberate reconciliation (timeline entry superseded for the third draft, or the board scene understood as stale by hours) — flagging, not ruling.</p>
+<h2>world/geography.md</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Ordish farm yard: north-walled, cobbled, with byre, stable, mounting block, trough (41).</li>
+<li>South <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Holm Deep ≈ five miles from the Charter house, per <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>world/development.md (parish economy)</h2>
+<p><strong>Established (new)</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Wage benchmark: 1s3d/quarter × 40 acres ≈ £9 = cost of a hired man Harvestmonth–spring (42).</li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Implication (Working)</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<h2>Cross-cutting / uncertain</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span> If Tess counts as one of the &quot;four,&quot; the &quot;hands in the ground&quot; phrasing is loose; if not, a fourth counter is unnamed. Needs a ruling before the sheet is cited again.</p>
+<ul>
+<li><strong>Box punctuation</strong> (spaced hyphen vs. em dash) is a house-wide decision affecting every future System box — flagged above under system.md.</li>
+<li><strong>Knowledge state as of Day 15</strong>: Ferrin knows he's day zero; parish knows inside-count is zero; <span class="redacted">redacted</span> will get a mill copy; Charter has refused the board posting; Wystow has not yet received the sheet; the factor hasn't read anything yet.</li>
+<li>No scene speculates on the cause of the field phenomenon; the two surviving possibilities (not-a-circle / off-field true centre) are purely geometric, and the third (measurement error) was struck for a stated methodological reason. This posture is correct per the standing &quot;canon stays agnostic&quot; rule.</li>
+<li>No deferred question is resolved improperly — the only trigger fired (the Farm Magic skill name/box) was already pre-ruled for exactly this scene.</li>
+</ul>
+<p><strong>COUNTS: 71 established facts, 14 implications, 3 contradictions found.</strong></p>
+</div>
+</body></html>

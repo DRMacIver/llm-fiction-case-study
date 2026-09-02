@@ -1,0 +1,116 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a51cf13f68ab4429d">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in a novel. Never rewrite the text. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;wit&quot;. Study each rule's description, why, examples and counter_examples.</li>
+<li>Read <span class="redacted">redacted</span>/draft/book-01/scenes/61-stranger-further-more.md <span class="unpub-tag">unpublished</span> in full.</li>
+<li>Report EVERY candidate violation as {rule_id, quote (exact, short), line, reason (one line)}. Before flagging, read one sentence either side of the quote; do not flag a quote read in isolation. Budget rules (aphorism, maxim, build/drop) must nominate the keeper in the reason. Report candidates generously; a judge filters. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in the wit/semantic lens. Let me start by reading the rules and then the scene.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/scenes/61-stranger-further-more.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 42 lines, 6230 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+<p>🔧 Bash: grep -n '"tier":\s*"semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json | head -20</p>
+<p>✅ 20 lines, 576 chars</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
+<p>✅ 59 lines, 5806 chars — ID: triad-swerve-budget / Name: Triad with a third-item swerve / Description: A list of three where the third item confesses or swerves ('frequently, with fascination, and never quite admitting the fascination'). Applies inside quotation marks too.</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me search through the rules more carefully to identify only semantic rules with &quot;wit&quot; lens:</p>
+</div>
+
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
+<p>✅ 41 lines, 4278 chars — Semantic rules with 'wit' lens: /  / ID: triad-swerve-budget</p>
+
+<div class="assistant-prose">
+<p>Now let me systematically examine the scene for each of these 11 rules:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; /tmp/analyze_scene.py &lt;&lt; 'EOF' #!/usr/bin/env python3 """Analyze scene 61 <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 41 lines, 2730 chars</p>
+
+<div class="assistant-prose">
+<p>Excellent. Now let me check for the other semantic/wit violations systematically:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; /tmp/check_other_rules.py &lt;&lt; 'EOF' #!/usr/bin/env python3 """Check for other semant…</p>
+<p>✅ 35 lines, 1745 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me do a careful read of the full scene text with context to validate the long-build/short-drop violations:</p>
+</div>
+
+<p>🔧 Read draft/book-01/scenes/61-stranger-further-more.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 1 lines, 93 chars</p>
+
+<div class="assistant-prose">
+<p>Let me verify each long-build/short-drop pattern by reading the exact context:</p>
+<p><strong>Pattern 1: Lines 7-9</strong></p>
+<ul>
+<li>Context before: Para 6 &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Build (Line 7): <span class="redacted">redacted</span>'s 226-word complex account of observations</li>
+<li>Drop (Line 9): &quot;You have,&quot; said <span class="redacted">redacted</span>.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Pattern 2: Lines 21-23</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Build (Lines 21-22): Edwin's 187-word detailed explanation of how to structure the letter</li>
+<li>Drop (Line 23): &quot;Say it.&quot;</li>
+<li>Context after: Lines 25-26 &quot;Leave the number blank until <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Pattern 3: Lines 27-29</strong></p>
+<ul>
+<li>Context before: Line 25 &quot;Leave the number blank until <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Build (Line 27): <span class="redacted">redacted</span>'s detailed statement about the Deep requirements (87 words)<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>. &quot;The entry's the asking.&quot;</li>
+<li>Context after: Line 31 &quot;Then enter it,&quot; said <span class="redacted">redacted</span>.</li>
+</ul>
+<p><strong>Pattern 4: Lines 35-39</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> to read.</p>
+<ul>
+<li>Build (Lines 35-37): <span class="redacted">redacted</span>'s reading and <span class="redacted">redacted</span>'s fair copy (80 words with the dialogue about &quot;urgent&quot;)</li>
+<li>Drop (Line 39): &quot;Under the third clause,&quot; said <span class="redacted">redacted</span>.</li>
+<li>Context after: Lines 41-42 &quot;Under the third clause. First time it's been used.&quot; <span class="redacted">redacted</span> got up. &quot;Somebody at <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p>All four patterns are clear violations of the long-build-short-drop rule. The rule states &quot;More than twice per scene is banned as a habit,&quot; and this scene has four instances.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": [{"rule_id": "long-build-short-drop-budget",…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

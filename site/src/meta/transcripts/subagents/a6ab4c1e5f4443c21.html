@@ -1,0 +1,106 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a6ab4c1e5f4443c21">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: blind verification. You have NOT seen how these pages were drafted; check each claim against the primary source named, not against the page or the session summaries. Claims (JSON): [{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_06&quot;,&quot;quote&quot;:&quot;A deferral with no trigger counts as a defect in the canon file rather than a legitimate state.&quot;,&quot;location&quot;:&quot;line 5&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_07&quot;,&quot;quote&quot;:&quot;Earlier in the project, a mystery was introduced on the page without anyone having actually decided what its answer was.&quot;,&quot;location&quot;:&quot;line 9&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_08&quot;,&quot;quote&quot;:&quot;chapters kept accumulating evidence around it. By the time anyone checked, there was a real risk that no answer would fit everything already written.&quot;,&quot;location&quot;:&quot;line 9&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_09&quot;,&quot;quote&quot;:&quot;an open question now has to be either resolved, ruled as a working decision, or deferred with a stated trigger, no exceptions&quot;,&quot;location&quot;:&quot;line 9&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_11&quot;,&quot;quote&quot;:&quot;the actual answer is written down before or at the moment the mystery appears on the page, but it's written only by a subagent and never shown to David unless he explicitly asks&quot;,&quot;location&quot;:&quot;line 11&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_12&quot;,&quot;quote&quot;:&quot;A session asking, deliberately without wanting the content, whether a coherent explanation for one such mystery actually existed: [2026-08-27, checking a sealed answer exists]&quot;,&quot;location&quot;:&quot;line 11&quot;,&quot;kind&quot;:&quot;cross-reference&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_13&quot;,&quot;quote&quot;:&quot;Canon isn't written speculatively ahead of the story.&quot;,&quot;location&quot;:&quot;line 15&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_18&quot;,&quot;quote&quot;:&quot;the model proposed and David accepted&quot;,&quot;location&quot;:&quot;line 5&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_23&quot;,&quot;quote&quot;:&quot;If canon and an earlier accepted chapter turn out to disagree, both get flagged, and the decision belongs to David rather than to the model&quot;,&quot;location&quot;:&quot;line 18&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_next_md_handoff_10&quot;,&quot;quote&quot;:&quot;2026-09-02, drafting to the end of book one&quot;,&quot;location&quot;:&quot;Line 17&quot;,&quot;kind&quot;:&quot;date&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/next-md-handoff.md&quot;},{&quot;id&quot;:&quot;farming_facts_17&quot;,&quot;quote&quot;:&quot;The same instinct for grounding shows up outside farming as well, in the session that built an actual map of the story's setting&quot;,&quot;location&quot;:&quot;line 13, paragraph 5&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/farming-facts-and-author-notes.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_01&quot;,&quot;quote&quot;:&quot;Before a chapter goes anywhere near Royal Road, David reads it&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:3&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_02&quot;,&quot;quote&quot;:&quot;for a project this size he reads a fair amount of it on a Kindle rather than on a screen&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:3&quot;,&quot;kind&quot;:&quot;distributional&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_03&quot;,&quot;quote&quot;:&quot;Getting a current draft onto the device turned out to need its own small pipeline&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:3&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_04&quot;,&quot;quote&quot;:&quot;dropping a fresh file on the Kindle and reading from the start, throws away reading position every time the book changes&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:3-4&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_13&quot;,&quot;quote&quot;:&quot;AZW3 is used deliberately rather than the older MOBI format&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:9&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_14&quot;,&quot;quote&quot;:&quot;MOBI pagination is known to freeze on the device's current firmware when a book is updated in place&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:9&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_15&quot;,&quot;quote&quot;:&quot;Avoiding that meant building out the Kindle-native format from the start&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:9&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_27&quot;,&quot;quote&quot;:&quot;a stale index is the other common cause of freezes&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:15&quot;,&quot;kind&quot;:&quot;distributional&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_28&quot;,&quot;quote&quot;:&quot;macOS leaves behind when writing to an external volume&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:15&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_29&quot;,&quot;quote&quot;:&quot;The original version of this script was built in a single sitting once the need for it became obvious&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:17&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_30&quot;,&quot;quote&quot;:&quot;grew afterwards into the fuller collate-build-position pipeline described above&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:17&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_ebook_kindle_proofing_md_31&quot;,&quot;quote&quot;:&quot;2026-08-25, syncing the book to a Kindle&quot;,&quot;location&quot;:&quot;workflow/ebook-kindle-proofing.md:17&quot;,&quot;kind&quot;:&quot;date&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/ebook-kindle-proofing.md&quot;},{&quot;id&quot;:&quot;workflow_royal_road_publishing_md_14&quot;,&quot;quote&quot;:&quot;Every command in the tool operates only after that step has already happened by David's own hand on the actual site.&quot;,&quot;location&quot;:&quot;Line 13&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/royal-road-publishing.md&quot;},{&quot;id&quot;:&quot;workflow_royal_road_publishing_md_15&quot;,&quot;quote&quot;:&quot;automation handles the mechanical, repeatable part of getting text formatted and uploaded correctly, but the decision to actually go live sits outside anything the model can trigger on its own&quot;,&quot;location&quot;:&quot;Line 13&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/royal-road-publishing.md&quot;}]<br />
+Source to check against: transcripts. For transcripts, use build/parsed/&lt;session&gt;.json (turn timestamps, user text, tool_use summaries) and build/parsed/subagents/. For git-history, run git -C <span class="redacted">redacted: private</span> log with --format and --stat and count for yourself. For index-json, read build/parsed/index.json and titles.json. For claude-code-docs, fetch the documentation pages fresh with WebFetch. For other-pages, read the referenced page. For &quot;unverifiable&quot;, record UNVERIFIABLE with what would be needed. Mechanical pre-pass results for context: The full report content was already shown in the Read calls above (both pages, lines 1-446). The file is at <span class="redacted">redacted: private</span>` (446 lines) — I've reproduced its complete contents in this conversation across the two Read tool outputs. Key files for reference:</p>
+<ul>
+<li><code><span class="redacted">redacted: private</span></code> — the checker script</li>
+<li><code><span class="redacted">redacted: private</span></code> — pytest tests (7 tests, all passing)</li>
+<li>`<span class="redacted">redacted: private</span> — the generated report (links: 83/83 resolve; dates: 47/47 in range; numbers: 175 topical + 156 informational; banned content: 0 hits)<br />
+Be paranoid about: numbers (count them yourself, check the direction of comparisons), quotations (verbatim or not), attributions (which session, which day, who said it), absolutes, and distributional claims that assert something unmeasured. Give one verdict per claim with a receipt and, for anything not CONFIRMED, a minimal replacement text. Return structured output only.</li>
+</ul></blockquote>
+
+
+<details><summary>44 tool calls</summary>
+<p>🔧 Bash: ls build/parsed | head -30 &amp;&amp; cat build/parsed/index.json | head -100</p>
+<p>✅ 111 lines, 4262 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for f in build/parsed/*.json; do echo "== $f =="; python3 -c " imp…</p>
+<p>✅ 20 lines, 641 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('build/parsed/10c1dd77-c…</p>
+<p>✅ 1 lines, 86 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('build/parsed/10c1dd77-c…</p>
+<p>✅ 7 lines, 216 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('build/parsed/10c1dd77-c…</p>
+<p>✅ 1 lines, 136 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa8-c87b47800a5c/scratchpad/silentsoil.txt</p>
+<p>✅ 157 lines, 40323 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "Sealed answers\|load-bearing mystery\|load-bearing myster…</p>
+<p>✅ 34 lines, 2052 chars</p>
+<p>🔧 Bash: sed -n '1,25p' <span class="redacted">redacted: private</span></p>
+<p>✅ 17 lines, 3929 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> find . -iname "*consistency*" 2&gt;/dev/null | grep -v node_modules</p>
+<p>✅ 2 lines, 72 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> cat .claude/skills/consistency-backfill/SKILL.md 2&gt;/dev/null | hea…</p>
+<p>✅ 185 lines, 9994 chars</p>
+<p>🔧 Bash: grep -n "map" <span class="redacted">redacted: private</span> | head -20 echo --- sed -n '1,20p' <span class="redacted">redacted: private</span></p>
+<p>✅ 15 lines, 3831 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('build/parsed/c214c046-1…</p>
+<p>✅ 29 lines, 2500 chars</p>
+<p>🔧 Bash: grep -n "c214c046" <span class="redacted">redacted: private</span></p>
+<p>✅ 1 lines, 46 chars</p>
+<p>🔧 Bash: sed -n '28,36p' <span class="redacted">redacted: private</span></p>
+<p>✅ 9 lines, 1290 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('build/parsed/c214c046-1…</p>
+<p>✅ 29 lines, 2006 chars</p>
+<p>🔧 Bash: sed -n '1,25p' <span class="redacted">redacted: private</span></p>
+<p>✅ 17 lines, 3371 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('build/parsed/92c486ed-6…</p>
+<p>✅ 193 lines, 14832 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('build/parsed/92c486ed-6…</p>
+<p>✅ 24 lines, 2395 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git log --oneline --all -- scripts/collate_book.py scripts/build_e…</p>
+<p>✅ 10 lines, 588 chars</p>
+<p>🔧 Bash: sed -n '1,20p' <span class="redacted">redacted: private</span></p>
+<p>✅ 17 lines, 3433 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('build/parsed/d1679987-c…</p>
+<p>✅ 81 lines, 7459 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('build/parsed/d1679987-c…</p>
+<p>✅ 23 lines, 4746 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Confirms claims 14 &amp; 15 for royal-road-publishing.md well: &quot;runs only after you press Launch,&quot; &quot;refuses ... will never touch the Launch button itself.&quot; Both CONFIRMED.</p>
+<p>Now check the two remaining: workflow_next_md_handoff_10 (date claim) and workflow_canon_and_claim_levels_md_23.</p>
+</div>
+
+<p>🔧 Bash: sed -n '1,25p' <span class="redacted">redacted: private</span> | tail -15</p>
+<p>✅ 15 lines, 3294 chars</p>
+
+<div class="assistant-prose">
+<p>Session 7257e15f matches 2026-09-02 date from index.json already confirmed above (start 2026-09-02T10:18, first prompt about building to end of book 1). CONFIRMED.</p>
+<p>Now let's check the claim_23 discrepancy more carefully by re-reading full quote context and CLAUDE.md for any nuance that reconciles &quot;canon wins&quot; vs &quot;David decides.&quot;</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "canon wins\|flag the earlier chapter\|disagree\|conflict"…</p>
+<p>✅ 5 lines, 467 chars</p>
+<p>🔧 StructuredOutput ({"results": [{"id": "workflow_canon_and_claim_levels_md_06"…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

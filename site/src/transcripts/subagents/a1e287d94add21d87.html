@@ -1,0 +1,121 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in an author's note at t…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in an author's note at t…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a1e287d94add21d87">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in an author's note at the bottom of a chapter of a novel (persona rules: <span class="redacted">redacted</span>/notes/author.md; note rules 4-7 in <span class="redacted">redacted</span>/notes/farming.md). Never rewrite. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;sense&quot;.</li>
+<li>Read <span class="redacted">redacted</span>/draft/book-01/author-notes/73-thirteen-down.md <span class="unpub-tag">unpublished</span> in full.<br />
+Also apply the standing SENSE lens: restate each factual claim flatly and check it is coherent with itself and its neighbours (rule_id &quot;sense-lens&quot;).</li>
+<li>Report EVERY candidate as {rule_id, quote (exact, short), reason}. Read one sentence either side before flagging. Also flag: winking at the persona's own enthusiasm, credentials offered to license a fact, &quot;not X but Y&quot;, floating epigrams, world content (explaining magic/System/institutions), the note annotating why a scene was written. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you find LLM-prose failure modes in this author's note. Let me start by reading the relevant files.</p>
+</div>
+
+<details><summary>28 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/author-notes/73-thirteen-down.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 6 lines, 1492 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1 lines, 204 chars</p>
+<p>🔧 Bash: grep -n '"lens": "sense"' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 8 lines, 199 chars</p>
+<p>🔧 Bash: sed -n '1450,1490p' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 41 lines, 2356 chars</p>
+<p>🔧 Bash: sed -n '1520,1560p' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 41 lines, 2620 chars</p>
+<p>🔧 Bash: sed -n '1750,1790p' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 41 lines, 1519 chars</p>
+<p>🔧 Bash: sed -n '1770,1820p' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 51 lines, 2747 chars</p>
+<p>🔧 Bash: sed -n '1940,1990p' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 51 lines, 2042 chars</p>
+<p>🔧 Bash: sed -n '1965,2015p' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 51 lines, 3005 chars</p>
+<p>🔧 Bash: sed -n '2090,2140p' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 51 lines, 3288 chars</p>
+<p>🔧 Bash: sed -n '2140,2160p' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 21 lines, 1093 chars</p>
+<p>🔧 Bash: sed -n '2142,2158p' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 17 lines, 835 chars</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json', 'r') as f:…</p>
+<p>✅ 8 lines, 447 chars — shape-filled-fact-unchecked: Shape filled, fact unchecked / missing-qualifier: Bare noun phrase that wants an adjective or qualifier / near-idiom-general: Coined near-idioms (general)</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me check this author's note against the identified semantic + sense rules:</p>
+</div>
+
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json import re  # Load rules with open('<span class="redacted">redacted</span>/tools/lint/rul…</p>
+<p>✅ 9 lines, 512 chars — Semantic + Sense rules to apply: /   - shape-filled-fact-unchecked: Shape filled, fact unchecked /   - missing-qualifier: Bare noun phrase that wants an adjective or qualifier</p>
+
+<div class="assistant-prose">
+<p>Now let me analyze the note carefully against these rules and the standing sense lens:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt; 'EOF' Note text analysis for 73-thirteen-down.md <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 80 lines, 4714 chars</p>
+
+<div class="assistant-prose">
+<p>Based on my analysis of the author's note against all 8 semantic + sense rules and the standing SENSE lens, I found that:</p>
+<ol>
+<li>
+<p><strong>shape-filled-fact-unchecked</strong>: All factual claims restate coherently. The three sections (underground marking, dry stone, lamp angle) each form internally consistent, logically sound explanations. No contradictions or fact-checks that fail.</p>
+</li>
+<li>
+<p><strong>missing-qualifier</strong>: All bare nouns are contextually anchored (&quot;the rule underground,&quot; &quot;the work,&quot; &quot;the surface&quot;).</p>
+</li>
+<li>
+<p><strong>near-idiom-general</strong>: &quot;Point out&quot; is standard. &quot;Cut to sit&quot; as a section heading is poetic/intentional shorthand for the concept, not a false technical claim—the text then explains dry-stone masonry correctly.</p>
+</li>
+<li>
+<p><strong>ambiguous-word</strong>: Words used in expected senses (hold=support, stone=material, opening=passage).</p>
+</li>
+<li>
+<p><strong>dangling-back-reference</strong>: Not applicable; no unanchored references.</p>
+</li>
+<li>
+<p><strong>continuity-within-scene</strong>: All informational flow is coherent across all three sections.</p>
+</li>
+<li>
+<p><strong>missing-connective</strong>: Transitions are marked (&quot;So,&quot; &quot;which,&quot; &quot;The same light&quot;) or inferrable. No breaks.</p>
+</li>
+<li>
+<p><strong>cause-left-out</strong>: Reasons are supplied (&quot;when the count is made again later&quot;; because &quot;no mortar to break&quot;).</p>
+</li>
+</ol>
+<p>Special checks: No winking, credentials, &quot;not X but Y&quot; rhetorical form, floating epigrams, or scene-explanation meta-commentary. Real-world content (cave marking, masonry, physics) is explicitly allowed per <em>farming.md</em>.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": []})</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

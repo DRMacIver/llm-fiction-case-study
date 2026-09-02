@@ -1,0 +1,211 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Read and follow [redacted] exactly. Your batch: chapters 19–…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Read and follow [redacted] exactly. Your batch: chapters 19–…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a20c46c9d55f450f2">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Read and follow <span class="redacted">redacted: private</span> exactly. Your batch: chapters 19–26 (scenes 41–57). Batch id for the glossary file: A.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll read the brief first.</p>
+</div>
+
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 34 lines, 4305 chars</p>
+
+<div class="assistant-prose">
+<p>I'll start with the required reading.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cat notes/author.md &amp;&amp; echo "=====EXEMPLARS=====" &amp;&amp; cat notes/author-note-exemplars.md (Read persona and exemplars)</p>
+<p>✅ 45 lines, 2228 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span> (Read full author + exemplars)</p>
+<p>✅ 45 lines, 2228 chars</p>
+<p>🔧 Read notes/author.md</p>
+<p>✅ 165 lines, 9431 chars</p>
+<p>🔧 Read notes/author-note-exemplars.md</p>
+<p>✅ 166 lines, 28861 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the rules, glossary, existing notes, and chapter map.</p>
+</div>
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Bash: sed -n '1,200p' notes/farming.md &gt; /tmp/x1.txt; wc -l notes/farming.md; ls draft/book-01/… (check farming.md and notes dir)</p>
+<p>✅ 42 lines, 1057 chars</p>
+<p>🔧 Read notes/farming.md</p>
+<p>✅ 126 lines, 7489 chars</p>
+<p>🔧 Bash: cat draft/book-01/author-notes/README.md &amp;&amp; echo "=====JSON=====" &amp;&amp; python3 -c " import… (README and chapters.json)</p>
+<p>✅ 17 lines, 1020 chars</p>
+<p>🔧 Bash: python3 -c " import json;d=json.load(open('publishing/chapters.json')) for k,v in d.items… (Chapters 19-26 mapping)</p>
+<p>✅ 29 lines, 974 chars</p>
+<p>🔧 Bash: ls draft/book-01/scenes/ | sed -n '41,60p'; python3 -c " import json;d=json.load(open('pu… (list scenes beyond 41)</p>
+<p>✅ 22 lines, 2456 chars</p>
+<p>🔧 Bash: cd draft/book-01/scenes &amp;&amp; ls | sed -n '39,56p' (scene filenames 39-55)</p>
+<p>✅ 18 lines, 450 chars</p>
+<p>🔧 Bash: cd draft/book-01/scenes &amp;&amp; ls | grep -E '^(39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|5… (list target scenes)</p>
+<p>✅ 17 lines, 463 chars</p>
+<p>🔧 Read draft/book-01/scenes/41-calm-hands.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 60 lines, 8238 chars</p>
+<p>🔧 Read notes/canon/world/farming-glossary.md</p>
+<p>✅ 495 lines, 29185 chars</p>
+<p>🔧 Bash: cd draft/book-01/author-notes &amp;&amp; for f in 36-write-both.md 38-twelve-stakes.md 39-read-it… (read recent notes)</p>
+<p>✅ 20 lines, 7309 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the scenes for my batch.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: cd draft/book-01/scenes &amp;&amp; for f in 42-a-factors-woman.md <span class="unpub-tag">unpublished</span> 43-two-lines-one-… (scenes 42-44)</p>
+<p>✅ 142 lines, 21617 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> 46-a-list-of-houses.md <span class="unpub-tag">unpublished</span>… (scenes 45-47)</p>
+<p>✅ 150 lines, 19196 chars</p>
+<p>🔧 Bash: cd draft/book-01/scenes &amp;&amp; for f in 48-the-eleventh-of-cornmonth.md <span class="unpub-tag">unpublished</span> 49-the-… (scenes 48-50)</p>
+<p>✅ 102 lines, 15649 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> 52-eleven-hazel-twigs.md <span class="unpub-tag">unpublished</span>… (scenes 51-55)</p>
+<p>✅ 19 lines, 1779 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 217 lines, 32371 chars</p>
+<p>🔧 Bash: cd draft/book-01/author-notes &amp;&amp; cat 04-four-minutes.md; echo "-----11"; cat 11-reports.m… (read notes 04,11,30,31)</p>
+<p>✅ 13 lines, 4412 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now writing the notes.</p>
+</div>
+
+<details><summary>34 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; cat &gt; 41-calm-hands.md <span class="unpub-tag">unpublished</span> &lt;&lt;'EOF'… (write ch19 note)</p>
+<p>✅ 1 lines, 25 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; cat &gt; 42-a-factors-woman.md <span class="unpub-tag">unpublished</span> &lt;&lt;'… (write ch20 note)</p>
+<p>✅ 1 lines, 30 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; cat &gt; 44-where-they-stopped-writing.md <span class="unpub-tag">unpublished</span>… (write ch21 note)</p>
+<p>✅ 1 lines, 41 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; cat &gt; 46-a-list-of-houses.md <span class="unpub-tag">unpublished</span> &lt;&lt;… (write ch22 note)</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; cat &gt; 48-the-eleventh-of-cornmonth.md <span class="unpub-tag">unpublished</span>… (write ch23 note)</p>
+<p>✅ 1 lines, 40 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> &lt;&lt;'EOF' **Not fed** - th… (write ch24 note)</p>
+<p>✅ 1 lines, 40 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; python3 - &lt;&lt;'EOF' import re,io <span class="redacted">redacted sentence: unpublished prose</span>… (trim ch24)</p>
+<p>✅ 1 lines, 40 chars — <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; cat &gt; 52-eleven-hazel-twigs.md <span class="unpub-tag">unpublished</span>… (write ch25 note)</p>
+<p>✅ 1 lines, 33 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; python3 - &lt;&lt;'EOF' p='52-eleven-hazel-twigs.md… (trim ch25)</p>
+<p>✅ 1 lines, 33 chars —      302 52-eleven-hazel-twigs.md <span class="unpub-tag">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; python3 - &lt;&lt;'EOF' p='52-eleven-hazel-twigs.md… (write ch26 note)</p>
+<p>✅ 2 lines, 67 chars</p>
+<p>🔧 Bash: uv run tools/lint/prose_lint.py --scope note draft/book-01/author-notes/41-calm-hands.md… (run prose lint)</p>
+<p>✅ 28 lines, 2383 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; python3 - &lt;&lt;'EOF' import re def ed(p,pairs):… (fix lint and rerun)</p>
+<p>✅ 6 lines, 310 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/author-notes &amp;&amp; python3 - &lt;&lt;'EOF' def ed(p,pairs):     s=open… (apply fixes and rerun lint)</p>
+<p>✅ 2 lines, 102 chars</p>
+<p>🔧 Bash: uv run tools/lint/prose_lint.py --scope note draft/book-01/author-notes/41-calm-hands.md… (rerun lint from repo root)</p>
+<p>✅ 5 lines, 260 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' p='draft/book-01/author-notes/52-eleven-hazel-twigs.md <span class="unpub-tag">unpublished</span>' s… (trim to budget)</p>
+<p>✅ 4 lines, 160 chars — &lt;corpus of 1 files&gt;:1:1: [warn] indefinite-pronoun-budget: 'x2 in 300w = 66.7/10000w (max 11)' /     ...\b(nobody|somebody|anybody)\b... / </p>
+<p>🔧 Write <span class="redacted">redacted: private</span></p>
+<p>✅ 1 lines, 220 chars</p>
+<p>🔧 Bash: grep -n '—' draft/book-01/author-notes/4*.md draft/book-01/author-notes/5*.md | grep -v '… (check em dashes and word counts)</p>
+<p>✅ 8 lines, 256 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Done.</p>
+<p><strong>Files written</strong> (all in <span class="redacted">redacted</span>/draft/book-01/author-notes/<code>), one per chapter on the chapter's first scene. Note: </code>publishing/chapters.json` puts chapters 19-26 at scenes <strong>41-55</strong>, not 41-57 as the brief said; I followed the JSON.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Ch</th>
+<th>File</th>
+<th>Lead term</th>
+<th>Words</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>19</td>
+<td><code>41-calm-hands.md <span class="unpub-tag">unpublished</span></code></td>
+<td><strong>Weed seed in a heap</strong> (+ Against a wall)</td>
+<td>267</td>
+</tr>
+<tr>
+<td>20</td>
+<td><code>42-a-factors-woman.md <span class="unpub-tag">unpublished</span></code></td>
+<td><strong>Who counted</strong> (+ Two links)</td>
+<td>259</td>
+</tr>
+<tr>
+<td>21</td>
+<td><code>44-where-they-stopped-writing.md <span class="unpub-tag">unpublished</span></code></td>
+<td><strong>Why a hill breathes</strong> (digression, &quot;I'll stop.&quot;) (+ A slate on a nail)</td>
+<td>296</td>
+</tr>
+<tr>
+<td>22</td>
+<td><code>46-a-list-of-houses.md <span class="unpub-tag">unpublished</span></code></td>
+<td><strong>The fortnight that decides the year</strong> (+ Staddle stones)</td>
+<td>249</td>
+</tr>
+<tr>
+<td>23</td>
+<td>`48-the-eleventh-of-cornmonth.md <span class="unpub-tag">unpublished</span></td>
+<td><strong>Growth stages</strong> (+ Somebody else's book)</td>
+<td>278</td>
+</tr>
+<tr>
+<td><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>`</td>
+<td><strong>Not fed</strong> (ergot) (+ Seed corn)</td>
+<td>286</td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td><code>52-eleven-hazel-twigs.md <span class="unpub-tag">unpublished</span></code></td>
+<td><strong>Folding</strong> (+ Dung on the sward, Short in the bite)</td>
+<td>300</td>
+</tr>
+<tr>
+<td>26</td>
+<td><code>54-before-the-charter.md <span class="unpub-tag">unpublished</span></code></td>
+<td><strong>Trial plots</strong> (+ A candle at the mouth)</td>
+<td>278</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Owed terms discharged:</strong> &quot;fold / folding ground&quot; (ch. 25) and &quot;thin in the bite&quot;, which the prose renders as &quot;short in the bite&quot; (ch. 25, short note as previously ruled). &quot;Keeping eels&quot; was already done; &quot;spit&quot; already done. Still owed after this batch: pan, hay that heats, the drove as a fen lane.</p>
+<p><strong>Autobiographical claims made:</strong> none. No new persona claim appears in any of the eight notes, so nothing needs logging in <code>notes/author.md</code>. (Two places in the deleted-draft ledger, hill breathing and staddle stones, get their first <em>published</em> placement here; both are stated impersonally.)</p>
+<p><strong>Glossary additions file:</strong> <code><span class="redacted">redacted: private</span></code> — 17 new entries in the glossary's own format, plus eight terms deliberately deferred, folded or dropped with reasons, plus what remains owed. The glossary itself was not edited.</p>
+<p><strong>Lint:</strong> <code>uv run tools/lint/prose_lint.py --scope note</code> over the eight files: <strong>0 errors, 2 warnings</strong> at first pass after fixes, now 0 errors and one corpus-level `indefinite-pronoun-budget warning at 27.1 per 10,000 words against a limit of 11 per 10,000 — I disagree with that one; &quot;nobody/somebody/anybody&quot; is core persona register and appears six times across 2,215 words, which reads as ordinary English rather than a tic. Everything else (negative-parallelism split, &quot;nought&quot;, &quot;the whole&quot;, causal-which budget, intensifier budget, arithmetic-metaphor, note length) was fixed by rewriting. No em dashes anywhere.</p>
+<p>I did not run git, per the brief.</p>
+</div>
+</body></html>

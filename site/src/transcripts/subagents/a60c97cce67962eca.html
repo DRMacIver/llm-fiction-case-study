@@ -1,0 +1,97 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a60c97cce67962eca">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in a novel. Never rewrite the text. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;wit&quot;. Study each rule's description, why, examples and counter_examples.</li>
+<li>Read <span class="redacted">redacted</span>/draft/book-01/scenes/41-calm-hands.md <span class="unpub-tag">unpublished</span> in full.</li>
+<li>Report EVERY candidate violation as {rule_id, quote (exact, short), line, reason (one line)}. Before flagging, read one sentence either side of the quote; do not flag a quote read in isolation. Budget rules (aphorism, maxim, build/drop) must nominate the keeper in the reason. Report candidates generously; a judge filters. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in this scene. Let me start by reading the rules and the scene.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1181 lines, 51958 chars</p>
+<p>🔧 Read draft/book-01/scenes/41-calm-hands.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 60 lines, 8238 chars</p>
+
+<div class="assistant-prose">
+<p>Let me read more of the rules file to find all rules with &quot;tier&quot;: &quot;semantic&quot; and &quot;lens&quot;: &quot;wit&quot;.</p>
+</div>
+
+<p>🔧 Bash: grep -n '"lens": "wit"' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 10 lines, 229 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 600 lines, 34510 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me check the rules I've found and read the full scene again to look for violations. The semantic wit rules I found are:</p>
+<ol>
+<li><strong>triad-swerve-budget</strong> (line 1181-1205)</li>
+<li><strong>long-build-short-drop-budget</strong> (line 1207-1228)</li>
+<li><strong>quiet-the-way-budget</strong> (line 1231-1251)</li>
+<li><strong>aphorism-budget</strong> (line 1254-1276)</li>
+<li><strong>ornament-wit</strong> (line 1373-1390)</li>
+<li><strong>jukebox-flourish</strong> (line 1393-1411)</li>
+<li><strong>wrong-world-metaphor</strong> (line 1414-1433)</li>
+<li><strong>joke-rhythm-no-logic</strong> (line 1436-1461)</li>
+<li><strong>weak-comic-beat-flat</strong> (line 1637-1653)</li>
+<li><strong>joke-character-could-not-make</strong> (line 1714-1730)</li>
+</ol>
+<p>Now let me carefully read through the scene 41 <span class="unpub-tag">unpublished</span>-calm-hands.md and look for violations of these rules. I already have the scene text. Let me analyze it carefully.</p>
+</div>
+
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt; 'EOF' ANALYZING SCENE 41 <span class="unpub-tag">unpublished</span> FOR SEMANTIC WIT VIOL…</p>
+<p>✅ 15 lines, 941 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me carefully analyze the scene for each semantic wit rule, reading context around each line:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt; 'EOF' SEMANTIC WIT RULES CHECK FOR SCENE 41 <span class="unpub-tag">unpublished</span>  1…</p>
+<p>✅ 49 lines, 2121 chars</p>
+
+<div class="assistant-prose">
+<p>Based on my thorough analysis of scene 41 <span class="unpub-tag">unpublished</span> &quot;Calm hands&quot; against all semantic wit rules, I found no violations. The scene demonstrates careful control of its wit devices:</p>
+<ul>
+<li><strong>Long-build-short-drop rhythm</strong> appears exactly twice (at max budget): &quot;Hers were soft&quot; and &quot;He saw it on hers&quot;</li>
+<li><strong>All similes are functional</strong>: fence post (explains stiffness), coming up a hill (physical state), and being handed a bill (emotional response to notification)</li>
+<li><strong>No pure aphorisms</strong>: technical statements are exposition stuck to Peri's particulars, not portable generalizations</li>
+<li><strong>No ornament-wit</strong>: observations describe what actually happens rather than narrator decoration</li>
+<li><strong>No weak comic beats or jukebox flourishes</strong>: every figurative device does work for the scene</li>
+</ul>
+<p>The scene stays cleanly within all budgets and semantic wit constraints.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": []})</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

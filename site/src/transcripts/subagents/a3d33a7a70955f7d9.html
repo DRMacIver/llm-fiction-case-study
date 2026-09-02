@@ -1,0 +1,125 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a3d33a7a70955f7d9">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in a novel. Never rewrite the text. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;narration&quot;. Study each rule's description, why, examples and counter_examples.</li>
+<li>Read <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> in full.</li>
+<li>Report EVERY candidate violation as {rule_id, quote (exact, short), line, reason (one line)}. Before flagging, read one sentence either side of the quote; do not flag a quote read in isolation. Budget rules (aphorism, maxim, build/drop) must nominate the keeper in the reason. Report candidates generously; a judge filters. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in that scene. Let me start by reading the rules file and identifying the semantic/narration rules.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1181 lines, 51958 chars</p>
+
+<div class="assistant-prose">
+<p>Let me continue reading the rules file to find all semantic/narration rules.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: grep -n '"tier":\s*"semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 59 lines, 1707 chars</p>
+<p>🔧 Bash: grep -B 10 '"lens":\s*"narration"' <span class="redacted">redacted</span>/tools/lint/rules.json | grep -E '("id"|"len…</p>
+<p>✅ 12 lines, 287 chars</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
+<p>✅ 12 lines, 623 chars — generalising-clause-budget: Generalising closing clause budget / windup-tag-budget: Windup dialogue tags / wants-gerund-budget: Rural 'wants [gerund]'</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
+<p>✅ 95 lines, 8498 chars — ================================================================================ / ID: generalising-clause-budget / Name: Generalising closing clause budget</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me read the scene file to hunt for violations.</p>
+</div>
+
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+<p>✅ 48 lines, 8127 chars</p>
+
+<div class="assistant-prose">
+<p>Let me read the scene and systematically check for violations of each semantic narration rule.</p>
+</div>
+
+<p>🔧 Bash: wc -w <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+<p>✅ 1 lines, 93 chars —     1582 <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+
+<div class="assistant-prose">
+<p>Now let me systematically check this 1582-word scene against the 12 semantic narration rules. I'll look carefully for violations with context.</p>
+<p><strong>Checking against each semantic narration rule:</strong></p>
+<p><strong>1. generalising-clause-budget</strong> (max 1 per 3,500 words, about THESE people):<br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Line 7: &quot;the way she took everything&quot; (about Mattie taking his explanation in pieces) — This characterizes Mattie specifically, not people in general. Acceptable.</li>
+</ul>
+<p><strong>2. windup-tag-budget</strong> (max 1 per 3,500 words, &lt;15 words):<br />
+<span class="redacted">redacted sentence: unpublished prose</span> Acceptable.</p>
+<p><strong>3. wants-gerund-budget</strong> (max 1 per 1,800 words, never as narration for tasks):</p>
+<ul>
+<li>Not present in this scene.</li>
+</ul>
+<p><strong>4. prose-not-at-rest</strong> (sentences must sometimes merely report; must find 3 consecutive plain sentences):</p>
+<ul>
+<li>Line 21: &quot;It cost almost nothing.&quot; — Plain sentence, good.</li>
+<li>The scene contains significant technical exposition (lines 7-8 on historical whip-setting methods, line 21 on the growth-hold charm) that is complex but functional to the work being described, not ornamental.</li>
+</ul>
+<p><strong>5. unlocated-narration</strong> (knowledge must travel by named route):<br />
+<span class="redacted">redacted sentence: unpublished prose</span> Borderline, but the context shows repeated known behavior, not floating omniscience.</p>
+<p><strong>6. motive-off-page</strong> (deliberate odd acts paid within two chapters or motive on page):<br />
+<span class="redacted">redacted sentence: unpublished prose</span> Why the road specifically? <span class="redacted">redacted sentence: unpublished prose</span> Borderline but acceptable given the &quot;always&quot; frames.</p>
+<p><strong>7. viewpoint-overreach</strong> (POV reports facts they cannot know):</p>
+<ul>
+<li>Not found. Edwin's knowledge is bounded appropriately; Peri's observations are her own.</li>
+</ul>
+<p><strong>8. nominalised-absence</strong> (silence, process, &quot;-ing&quot; as subject):</p>
+<ul>
+<li>Line 15: &quot;the not-saying run&quot; (dialogue) — This is in dialogue and is poetic speech, acceptable in character voice.</li>
+<li>Not present in narration.</li>
+</ul>
+<p><strong>9. description-list</strong> (one noticed thing, not a list, not described twice):<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Functional rather than ornamental list. Acceptable.</p>
+<p><strong>10. rest-register-misplaced</strong> (trade process only for work being done):</p>
+<ul>
+<li>Line 21 onward describes whips being set — this IS work being done. The McPhee register is appropriate here.</li>
+</ul>
+<p><strong>11. unearned-authority</strong> (orders without established authority):</p>
+<ul>
+<li>Not found. Edwin explains; Peri decides. No unearned command.</li>
+</ul>
+<p><strong>12. likeability-drift</strong> (character becomes unlikeable/bratty):</p>
+<ul>
+<li>Not found. Both Edwin and Peri are characteristically reasonable and thoughtful.</li>
+</ul>
+<p>After thorough analysis, I find no clear violations of the semantic narration rules. The prose follows the prescribed voice well, technical exposition is functional and bounded, and no characters issue unearned commands or become inexplicably unlikeable.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": []})</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

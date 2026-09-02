@@ -1,0 +1,235 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] Do not git commit. Do not edit…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] Do not git commit. Do not edit…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a6caf17cefb9785dd">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> Do not git commit. Do not edit anything under site/src/howto/ (another editor owns those files right now). Read <span class="redacted">redacted: private</span> the &quot;Problems found&quot; section (items 1 to 22) and the &quot;Drift and ambiguity&quot; section.</p>
+<p>Apply the proposed fixes for every problem that lives in site/src/workflow/<em>.md, site/src/chronicle/</em>.md, site/src/about.md, site/src/introduction.md or site/src/transcripts/titles.json. That is items 7, 11, 12, 13, 15, 17, 18, 20 and 21 at least, plus the titles.json swap noted in item 17 (check both entries against the first user turn in build/parsed/index.json before swapping; c214c046 is the SVG map session and d1679987 is the redraft-and-publish session). Also apply any drift or ambiguity fixes in those files that are clearly right on their own evidence; skip ones that need author judgement and list them. Keep the voice of the surrounding prose, no em dashes, no semicolons, British spelling. Where a fix says to cite VOICE.md section 3.7 or similar, write it as prose, not a code reference.</p>
+<p>Then rerun <code>uv run python tools/render.py</code> (so the index picks up titles.json) and <code>mdbook build site</code>, and confirm no warnings. Finally, add a &quot;Resolution (2026-09-02)&quot; block at the top of fact-check.md listing, per item number, what you changed and in which file, leaving placeholders &quot;(howto pages: fixed separately)&quot; for items in howto/. Return that resolution block.</p></blockquote>
+
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Bash: cat -n <span class="redacted">redacted: private</span></p>
+<p>✅ 29 lines, 1949 chars</p>
+<p>🔧 Read fact-check.md</p>
+<p>✅ 573 lines, 57923 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo ---workflow/README.md--- cat -n site/src/workflow/README.md e…</p>
+<p>✅ 132 lines, 26680 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo ---chronicle/2026-08-25.md--- cat -n site/src/chronicle/2026-…</p>
+<p>✅ 83 lines, 11706 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('build/parsed/index.json…</p>
+<p>✅ 3 lines, 126 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '110,160p' build/parsed/index.json</p>
+<p>✅ 48 lines, 2021 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> cat -n site/src/chronicle/2026-08-31.md echo ---introduction--- ca…</p>
+<p>✅ 39 lines, 5987 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo ---chronicle/README.md--- cat -n site/src/chronicle/README.md…</p>
+<p>✅ 54 lines, 9189 chars</p>
+<p>🔧 Bash: sed -n '1,45p' <span class="redacted">redacted: private</span></p>
+<p>✅ 45 lines, 2271 chars</p>
+<p>🔧 Edit site/src/workflow/README.md</p>
+<p>✅ 1 lines, 174 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now item 11 and 18 in overlap-checking.md:</p>
+</div>
+
+<p>🔧 Edit site/src/workflow/overlap-checking.md</p>
+<p>✅ 1 lines, 184 chars</p>
+<p>🔧 Edit site/src/workflow/overlap-checking.md</p>
+<p>✅ 1 lines, 184 chars</p>
+
+<div class="assistant-prose">
+<p>Now item 12, royal-road-publishing.md:</p>
+</div>
+
+<p>🔧 Edit site/src/workflow/royal-road-publishing.md</p>
+<p>✅ 1 lines, 189 chars</p>
+<p>🔧 Edit site/src/workflow/next-md-handoff.md</p>
+<p>✅ 1 lines, 183 chars</p>
+
+<div class="assistant-prose">
+<p>Now the drift fix for next-md-handoff.md line 15 (dated history &quot;at the bottom&quot;):</p>
+</div>
+
+<p>🔧 Edit site/src/workflow/next-md-handoff.md</p>
+<p>✅ 1 lines, 183 chars</p>
+<p>🔧 Edit site/src/workflow/canon-and-claim-levels.md</p>
+<p>✅ 1 lines, 190 chars</p>
+
+<div class="assistant-prose">
+<p>Now the drift fix in canon-and-claim-levels.md line 17 (&quot;softer thematic consistency last&quot;):</p>
+</div>
+
+<p>🔧 Edit site/src/workflow/canon-and-claim-levels.md</p>
+<p>✅ 1 lines, 190 chars</p>
+
+<div class="assistant-prose">
+<p>Now item 17: farming-facts-and-author-notes.md link text fix and titles.json swap.</p>
+</div>
+
+<p>🔧 Edit site/src/workflow/farming-facts-and-author-notes.md</p>
+<p>✅ 1 lines, 198 chars</p>
+
+<div class="assistant-prose">
+<p>Now swap the titles.json entries for c214c046 and d1679987:</p>
+</div>
+
+<p>🔧 Edit site/src/transcripts/titles.json</p>
+<p>✅ 1 lines, 179 chars</p>
+
+<div class="assistant-prose">
+<p>I need to reconsider the titles.json swap — let me re-verify against the real session content before finalizing.</p>
+</div>
+
+<p>🔧 Read site/src/transcripts/titles.json</p>
+<p>✅ 39 lines, 4902 chars</p>
+<p>🔧 Edit site/src/transcripts/titles.json</p>
+<p>✅ 1 lines, 179 chars</p>
+
+<div class="assistant-prose">
+<p>Now item 20 (chronicle/2026-08-25.md census range) and item 21 (about.md) and chronicle/README.md drift fix.</p>
+</div>
+
+<p>🔧 Edit site/src/chronicle/2026-08-25.md</p>
+<p>✅ 1 lines, 179 chars</p>
+<p>🔧 Edit site/src/chronicle/README.md</p>
+<p>✅ 1 lines, 175 chars</p>
+
+<div class="assistant-prose">
+<p>Now item 21, about.md — scope the File contents paragraph:</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Edit site/src/about.md</p>
+<p>✅ 1 lines, 164 chars</p>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span></p>
+<p>✅ 1 lines, 70 chars — <span class="redacted">redacted: private</span></p>
+<p>🔧 Edit site/src/about.md</p>
+<p>✅ 1 lines, 164 chars</p>
+<p>🔧 Bash: head -5 <span class="redacted">redacted: private</span></p>
+<p>✅ 5 lines, 868 chars</p>
+<p>🔧 Edit site/src/about.md</p>
+<p>✅ 1 lines, 164 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's check introduction.md for anything applicable. It seemed fine (no problems listed for it). Let's double-check items 7-22 didn't touch introduction.md, and review the drift items I may have missed for chronicle files, then rerun build.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "introduction.md" fact-check.md | head -20</p>
+<p>✅ 20 lines, 3655 chars</p>
+<p>🔧 Bash: uv run python tools/render.py 2&gt;&amp;1 | tail -50</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: mdbook build site 2&gt;&amp;1 | tail -80</p>
+<p>✅ 3 lines, 142 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>No warnings. Let's verify the titles.json swap propagated correctly into rendered transcripts and check farming-facts page renders fine.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "Mapping the setting\|redrafting scene by scene\|mapping t…</p>
+<p>✅ 4 lines, 1011 chars</p>
+
+<div class="assistant-prose">
+<p>Everything renders correctly and builds without warnings. Now let's add the Resolution block to fact-check.md.</p>
+</div>
+
+<p>🔧 Edit fact-check.md</p>
+<p>✅ 1 lines, 160 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for f in site/src/workflow/README.md site/src/workflow/overlap-che…</p>
+<p>✅ 11 lines, 426 chars</p>
+
+<div class="assistant-prose">
+<p>Clean — no em dashes or semicolons introduced. Build already verified with no warnings. Rebuilding once more to confirm after the fact-check.md edit (not part of site, but confirming site is stable):</p>
+</div>
+
+<p>🔧 Bash: mdbook build site 2&gt;&amp;1 | tail -20 &amp;&amp; git status --short</p>
+<p>✅ 28 lines, 995 chars</p>
+
+<div class="assistant-prose">
+<p>Work complete. Ran <code>uv run python tools/render.py</code> and <code>mdbook build site</code> — both completed with no warnings.</p>
+<p>Changes made (only in <code>site/src/workflow/*.md</code>, <code>site/src/chronicle/*.md</code>, <code>site/src/about.md</code>, <code>site/src/transcripts/titles.json</code>; nothing in <code>site/src/howto/</code>):</p>
+<ul>
+<li><strong>workflow/README.md</strong>: fixed the invented discovery-move stats and dropped the unsupported &quot;continuous action&quot; exception.</li>
+<li><strong>workflow/overlap-checking.md</strong>: reattributed the never-open rule to the voice document (as prose, not a code citation), and fixed the cleanup/redraft sequencing.</li>
+<li><strong>workflow/royal-road-publishing.md</strong>: corrected the Playwright-vs-HTTP claim.</li>
+<li><strong>workflow/next-md-handoff.md</strong>: fixed the mislabeled queue item, and reworded the &quot;dated history at the bottom&quot; drift note.</li>
+<li><strong>workflow/canon-and-claim-levels.md</strong>: fixed the canon-wins resolution and the &quot;thematic consistency last&quot; ordering claim.</li>
+<li><strong>workflow/farming-facts-and-author-notes.md</strong>: fixed the transcript link text.</li>
+<li><strong>chronicle/2026-08-25.md</strong>: fixed the census chapter range (1–23).</li>
+<li><strong>chronicle/README.md</strong>: fixed &quot;dozens&quot; to &quot;over a hundred&quot; fabricated citations.</li>
+<li><strong>about.md</strong>: scoped the File contents paragraph to note the pre-premise exception, linking to <code>howto/voice-first.md</code>.</li>
+<li><strong>transcripts/titles.json</strong>: verified both sessions against <code>build/parsed/index.json</code>'s first user turns — <code>c214c046</code> is genuinely the SVG-map session (now titled &quot;Mapping the setting&quot;) and <code>d1679987</code> is the redraft-and-publish session, which already carried the correct title, so only <code>c214c046</code>'s entry needed replacing rather than a literal swap.</li>
+</ul>
+<p>Skipped as needing author judgement: <code>workflow/voice-and-exemplars.md</code> lines 11/17 (fair paraphrases, no concrete fix proposed). <code>chronicle/2026-08-26.md</code> was checked and found already correct as written — no change needed.</p>
+<p>The Resolution block added at the top of <code>fact-check.md</code>:</p>
+<pre><code>## Resolution (2026-09-02)
+​
+Fixes applied for the numbered problems below, all in `site/src/workflow/*.md`, `site/src/chronicle/*.md`, `site/src/about.md`, and `site/src/transcripts/titles.json`. Items in `howto/` are the other editor's and are marked as fixed separately.
+​
+1. (howto pages: fixed separately)
+2. (howto pages: fixed separately)
+3. (howto pages: fixed separately)
+4. (howto pages: fixed separately)
+5. (howto pages: fixed separately)
+6. (howto pages: fixed separately)
+7. <span class="redacted">redacted sentence</span>
+8. (howto pages: fixed separately)
+9. (howto pages: fixed separately)
+10. (howto pages: fixed separately)
+11. `workflow/overlap-checking.md`: reattributed the never-open rule from `CLAUDE.md` to the project's voice document, written as prose rather than a code-style citation.
+12. `workflow/royal-road-publishing.md`: rewrote the opening claim so the tool is described as logging in once through Playwright and then submitting the site's own forms directly over HTTP, rather than driving the whole publishing flow through a browser.
+13. `workflow/next-md-handoff.md`: replaced the &quot;advisory pass checking that explanations weren't cut for brevity&quot; description with the actual mechanical &quot;because&quot;/write-verb-tic thinning pass.
+14. (howto pages: fixed separately)
+15. `workflow/canon-and-claim-levels.md`: changed the canon-conflict resolution from &quot;both get flagged, and the decision belongs to David&quot; to &quot;canon wins and the earlier chapter is flagged for revision&quot;, matching the consistency-check skill.
+16. (howto pages: fixed separately)
+17. `workflow/farming-facts-and-author-notes.md`: changed the transcript link text from &quot;2026-08-31, redrafting scene by scene&quot; to &quot;2026-08-31, mapping the setting&quot;. `site/src/transcripts/titles.json`: checked both sessions' first user turns in `build/parsed/index.json` and corrected the mislabelling; `c214c046` (an 08-31 session whose first turn asks for an SVG map of the setting) now carries a title and blurb describing the mapping session, and `d1679987` (the 08-30/08-31 session whose first turn is the scene-by-scene redraft brief) keeps the &quot;Finishing the rewrite and publishing to Royal Road&quot; title and blurb, which already matched its real content.
+18. `workflow/overlap-checking.md`: corrected the sequence so the repository cleanup that deleted the discarded drafts is described as happening on the morning of 31 August so the overlap checker could run against git history during that day's redraft, rather than after the redraft was accepted.
+19. (howto pages: fixed separately)
+20. `chronicle/2026-08-25.md`: changed the language census range from &quot;chapters 1 to 21&quot; to &quot;chapters 1 to 23&quot;, matching the source note and `workflow/llm-tells-and-linting.md`.
+21. `about.md`: scoped the File contents paragraph to note the pre-premise exception in the project's first session, with a pointer to `howto/voice-first.md`.
+22. (howto pages: fixed separately)
+​
+Drift and ambiguity fixes also applied, on their own clear evidence:
+​
+- `workflow/README.md`: dropped the unsupported &quot;unless it's one continuous action split across them&quot; exception to the four-scene repeat rule; no source uses this framing.
+- `workflow/canon-and-claim-levels.md`: changed &quot;core facts and continuity first, softer thematic consistency last&quot; to &quot;core facts and continuity first, with theme weighted softer than the rest&quot;, since theme is not literally last in the consistency-check skill's priority list.
+- `workflow/next-md-handoff.md`: reworded &quot;canon files, which do keep dated history at the bottom&quot; to describe dated rulings as a permanent record woven through the file, since they are interleaved through `notes/canon/characters/*.md` rather than gathered at the foot.
+- `chronicle/README.md`: changed &quot;dozens of them&quot; to &quot;over a hundred of them&quot; for the fabricated citations, matching the precise count (110) given elsewhere on the site.
+​
+Drift and ambiguity items reviewed and left alone because they need author judgement rather than a clear-cut correction:
+​
+- `workflow/voice-and-exemplars.md` lines 11 and 17: flagged as paraphrases presented close to quotation (&quot;Rules exist to annotate the exemplars&quot;; the &quot;don't listen perfectly&quot; rationale). Both are fair summaries of source material rather than errors, and the fact-check proposes no specific rewording, so left as the author's own phrasing.
+- `chronicle/2026-08-26.md` (&quot;already been established&quot;): checked against the source: the page already separates the pre-existing green-revolution framing (&quot;had already been established&quot;) from the specific ceiling rule settled that day (&quot;the limit settled on was&quot;), which is the distinction the fact-check asked for. No change needed.
+</code></pre>
+<p>No commit was made per your instructions.</p>
+</div>
+</body></html>

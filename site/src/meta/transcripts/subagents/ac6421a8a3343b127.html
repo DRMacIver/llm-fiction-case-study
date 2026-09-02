@@ -1,0 +1,104 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-ac6421a8a3343b127">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: cross-page consistency check on one topic. Do introduction.md, about.md, howto/README.md, howto/setup.md and transcripts framing agree on what the site is, what is redacted, the pre-premise exception, which names are allowed, and what is never shown? Read all the pages named plus any others relevant under <span class="redacted">redacted: private</span> (not transcripts/). Where two passages disagree, decide which is right by going to ground truth in priority order, and report: contradiction (cannot both be true), drift (compatible but one strains the other), or ambiguity (readable either way). Quote both passages with page and heading. Say which to change and give the minimal replacement. No findings is a valid result. Return structured output only.</p></blockquote>
+
+
+<details><summary>22 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; wc -l introduction.md about.md howto/README.md howto/setup.md 2…</p>
+<p>🔧 Read site/src/introduction.md</p>
+<p>✅ 26 lines, 3326 chars</p>
+<p>✅ 5 lines, 106 chars —       25 introduction.md /       31 about.md /       29 howto/README.md</p>
+<p>🔧 Read site/src/about.md</p>
+<p>✅ 32 lines, 3821 chars</p>
+<p>🔧 Read site/src/howto/README.md</p>
+<p>🔧 Read site/src/howto/setup.md</p>
+<p>✅ 30 lines, 3517 chars</p>
+<p>✅ 40 lines, 5771 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat transcripts/README.md 2&gt;&amp;1</p>
+<p>✅ 19 lines, 3229 chars</p>
+<p>🔧 Bash: grep -rn "pre-premise\|premise" site/src --include=*.md 2&gt;&amp;1</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>🔧 Bash: grep -rn "40\b\|scene numbers\|published chapters\|Scenes 1 to" site/src --include=*.md 2…</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>🔧 Bash: grep -rn "pre-premise\|premise" site/src -r 2&gt;&amp;1; echo ---; grep -rln "40" site/src 2&gt;&amp;1</p>
+<p>✅ 12 lines, 2245 chars</p>
+<p>🔧 Bash: grep -rn "pre-premise\|before the premise\|day one\|day 1\b" site/src/introduction.md sit…</p>
+<p>✅ 1 lines, 348 chars</p>
+<p>🔧 Bash: grep -rln "40" site/src/introduction.md site/src/about.md site/src/howto site/src/workflo…</p>
+<p>✅ 3 lines, 93 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Found the &quot;pre-premise exception&quot; — in howto/voice-first.md. Let's check its context and compare against about.md's redaction policy, which doesn't mention this exception at all.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Read site/src/howto/voice-first.md</p>
+<p>✅ 25 lines, 4205 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "redacted" transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca…</p>
+<p>✅ 30 lines, 7301 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '900,1000p' transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; awk 'NR&gt;=780 &amp;&amp; NR&lt;=2189' transcripts/0c653b33-1efd-45bb-b7ab-2…</p>
+<p>✅ 1 lines, 2 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; awk 'NR&gt;=780 &amp;&amp; NR&lt;=2189' transcripts/0c653b33-1efd-45bb-b7ab-2…</p>
+<p>✅ 11 lines, 2132 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "Edwin\|Peri Millbrook\|Moss\b" introduction.md about.…</p>
+<p>✅ 4 lines, 1954 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Consistent across pages. Now let's check the &quot;40&quot; scenes number consistency and the setup.md against actual Claude Code docs (permission modes, resume command).</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: sed -n '1,50p' site/src/chronicle/2026-08-25.md | grep -n "40\|scene"</p>
+<p>✅ 2 lines, 1203 chars</p>
+<p>🔧 Bash: cat notes/session-summaries.md | grep -n "40\|scene 4\|scenes 1" | head -20</p>
+<p>✅ 1 lines, 73 chars</p>
+<p>🔧 ToolSearch ({"query": "select:WebFetch"})</p>
+<p>✅ 1 lines, 51 chars</p>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/permission-modes</p>
+<p>✅ 24 lines, 2090 chars</p>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/setup</p>
+<p>✅ 685 lines, 31068 chars</p>
+<p>🔧 Bash: grep -n "scene 40\|scenes 1 to 40\|published.*40\|40.*published" site/src/chronicle/*.md…</p>
+<p>✅ 1 lines, 31 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>No corroboration found elsewhere but no contradiction either — leaving that aside as it's outside the requested topic. I have enough for the report.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"findings": [{"klass": "drift", "a": "about.md \u2014 \"Wh…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

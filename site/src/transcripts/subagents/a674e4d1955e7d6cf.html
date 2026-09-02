@@ -1,0 +1,104 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a674e4d1955e7d6cf">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in a novel. Never rewrite the text. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;sense&quot;. Study each rule's description, why, examples and counter_examples.</li>
+<li>Read <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> in full.<br />
+Also apply the standing SENSE lens regardless of the catalogue: restate each factual claim of every sentence flatly and check it is coherent with itself and with the sentences around it (a shape filled but the fact unchecked; a number that cannot be right; a connective that miswires a contrast; a garden-path parse). Report those with rule_id &quot;sense-lens&quot;.</li>
+<li>Report EVERY candidate violation as {rule_id, quote (exact, short), line, reason (one line)}. Before flagging, read one sentence either side of the quote; do not flag a quote read in isolation. Budget rules (aphorism, maxim, build/drop) must nominate the keeper in the reason. Report candidates generously; a judge filters. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in that scene. Let me start by reading the rules and then the scene file.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+<p>✅ 42 lines, 6449 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+<p>🔧 Bash: grep -A 20 '"tier": "semantic"' tools/lint/rules.json | grep -B 15 '"lens": "sense"'</p>
+<p>✅ 118 lines, 8282 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me identify the semantic rules with lens=&quot;sense&quot; and study them carefully.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: grep -B 10 '"lens": "sense"' <span class="redacted">redacted</span>/tools/lint/rules.json | grep '"id"' | sed 's/.*"i…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json | python3 -c " import json, sys data = json.load(sys…</p>
+<p>✅ 31 lines, 1462 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json | python3 -c " import json, sys data = json.load(sys…</p>
+<p>✅ 63 lines, 7147 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me systematically apply these rules to the scene by reading it carefully:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; /tmp/analyze_scene.py &lt;&lt; 'EOF' # Analyze scene 63 <span class="unpub-tag">unpublished</span> for sense-lens viol…</p>
+<p>✅ 20 lines, 1885 chars</p>
+
+<div class="assistant-prose">
+<p>Let me analyze the scene carefully for semantic/sense violations by applying each rule:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; /tmp/scene_analysis.txt &lt;&lt; 'EOF' SCENE 63 <span class="unpub-tag">unpublished</span> ANALYSIS - Semantic/Sense R…</p>
+<p>✅ 53 lines, 2934 chars</p>
+
+<div class="assistant-prose">
+<p>After thorough analysis, let me compile my findings. I'll do a systematic check of each semantic/sense rule against the scene:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; /tmp/final_check.txt &lt;&lt; 'EOF' FINAL SENSE-LENS REVIEW OF SCENE 63 <span class="unpub-tag">unpublished</span>  Ru…</p>
+<p>✅ 37 lines, 2117 chars</p>
+
+<div class="assistant-prose">
+<p>Based on my thorough analysis of scene 63 <span class="unpub-tag">unpublished</span> against all semantic/sense rules and the standing sense lens, I found the scene to be remarkably coherent. I verified:</p>
+<ul>
+<li>All factual claims cohere under flat restatement</li>
+<li>Temporal sequences are logically consistent (timeline from day 2 stop to day 5-6 reversal of cave system is reported as observed phenomenon, not unsupported narrative)</li>
+<li>Physical continuity is maintained (characters' positions, objects, actions track coherently)</li>
+<li>Geographic references are acceptable as established local knowledge between speakers</li>
+<li>No unanchored callbacks requiring re-anchoring</li>
+<li>Logical connectives present between sentences</li>
+<li>No words used in unexpected senses</li>
+<li>No invented idiom phrases<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Time mathematics check out (3:30 PM + 4 hours setting + 8 hours holding = 3:30 AM, with stated 4 AM limit)</li>
+</ul>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": []})</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

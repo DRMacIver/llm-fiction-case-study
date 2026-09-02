@@ -1,0 +1,77 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a7374e0676680b223">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: try to REFUTE this finding. A finder has flagged a problem in the site's prose; your job is to show the original text was in fact right, or the finding is a misreading, or the proposed fix is worse than the original. Read a wider window than the quoted sentence (the whole section) and go to ground truth in priority order. If you cannot refute it with a receipt, say refuted=false. Default to refuted=true only if the evidence is genuinely ambiguous. Finding (JSON): {&quot;id&quot;:&quot;howto_delegation_md_05&quot;,&quot;verdict&quot;:&quot;OVERSTATED&quot;,&quot;receipt&quot;:&quot;build/parsed/10c1dd77-c31a-4be9-a7b6-23651a4792b4.json turn 2026-08-27T08:16:05Z: 'You're running subagents as fable again... Please restart that workflow using opus at most, and sonnet where appropriate' -&gt; committed as autoroad commit 04c6c8b (2026-08-27 09:37): 'Never run a subagent, workflow agent, or Task on Fable... opus for judgement-heavy work... sonnet for extraction, search, and mechanical passes.' The earlier, broader instruction 'Please stop running fable subagents for everything' is dated 2026-08-25 (session 0c653b33, turn 10:49:42Z), not 27 August. No turn in either 27 August session contains language about 'stop reaching for subagents for every small task' or 'keep the interactive back and forth in the main session' — those appear to be the writer's synthesis, not a quoted or dated policy moment.&quot;,&quot;receipt_kind&quot;:&quot;ran-it-myself&quot;,&quot;explanation&quot;:&quot;The 27 August feedback that is actually documented and became CLAUDE.md policy is specifically about never running subagents on the Fable model and choosing opus vs. sonnet by task type (judgement vs. mechanical) — it does not address whether to use subagents at all for small tasks, nor does it say to keep interactive back-and-forth in the main session. The 'stop using subagents for everything' feedback that does exist is from 25 August, two days earlier, in a different session. The claim conflates two distinct pieces of feedback from two different days into one dated, paraphrased 'house policy' quote.&quot;,&quot;proposed_fix&quot;:&quot;Partway through 27 August David gave feedback that became house policy: never run subagents on the cheap-but-budget-limited Fable model, use opus for judgement-heavy subagent work and sonnet for mechanical passes (a policy that built on his 25 August instruction to stop running Fable subagents for everything).&quot;,&quot;claim&quot;:{&quot;id&quot;:&quot;howto_delegation_md_05&quot;,&quot;quote&quot;:&quot;Partway through 27 August David gave feedback that became house policy: stop reaching for subagents for every small task, keep the interactive back and forth in the main session, and push bulk mechanical work to cheaper models in the background.&quot;,&quot;location&quot;:&quot;What stayed in the main session, line 9&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/delegation.md&quot;}}<br />
+Return structured output only.</p></blockquote>
+
+
+<p>🔧 Bash: grep -n "" <span class="redacted">redacted: private</span> | sed -n '1,40p'</p>
+<p>✅ 32 lines, 4924 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git show 04c6c8b --stat &gt; /private/tmp/claude-501/-Users-drmaci…</p>
+<p>✅ 58 lines, 2794 chars</p>
+
+<div class="assistant-prose">
+<p>This confirms the finding precisely: the committed CLAUDE.md policy from 27 August is only about &quot;Never run a subagent... on Fable&quot; and opus/sonnet model choice — nothing about &quot;stop reaching for subagents for every small task&quot; or &quot;keep interactive back and forth in the main session.&quot;</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: D=/private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa…</p>
+<p>✅ 1 lines, 16 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) for k in d: print(k, ty…</p>
+<p>✅ 6 lines, 126 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) for t in d['turns']:…</p>
+<p>✅ 1 lines, 136 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa8-c87b47800a5c/scratchpad/user_turns.txt</p>
+<p>✅ 75 lines, 1511 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) for t in d['turns'][:6]…</p>
+<p>✅ 164 lines, 5256 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Let me check the exact 08:14–08:16 turns for the &quot;fable&quot; and &quot;stop reaching for subagents&quot; content.</p>
+</div>
+
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) for t in d['turns']:…</p>
+<p>✅ 21 lines, 641 chars</p>
+
+<div class="assistant-prose">
+<p>This directly confirms the finding: the 27 August feedback is entirely about Fable budget and opus/sonnet model choice, not about reducing subagent usage for small tasks or keeping work in the main session. Let me also verify the 25 August &quot;stop running fable subagents for everything&quot; quote to confirm it's the actual source of the broader claim.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>'+__import__('glob').glob('…</p>
+<p>✅ 1 lines, 41 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) for t in d['turns']:…</p>
+<p>✅ 28 lines, 2996 chars</p>
+<p>🔧 StructuredOutput ({"refuted": false, "why": "The finding is correct and I cou…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>

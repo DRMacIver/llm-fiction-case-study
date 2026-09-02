@@ -1,0 +1,668 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-af98742bd1c6edf4b">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only) and <span class="redacted">redacted: private</span> (raw Claude Code transcripts, read-only). Do NOT touch anything else outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python (uv run). Do not pipe output to tail/grep; write to a file and read it. Do not git commit.<br />
+Context: tools/parse_transcripts.py parses raw jsonl into build/parsed/; tools/redact.py redacts into build/redacted/ (spoiler markers are generic <span class="redacted">redacted</span> / <span class="redacted">redacted sentence</span>; labelled ones are only &quot;private&quot; and &quot;unpublished prose&quot;); tools/render.py renders site/src/transcripts/&lt;session&gt;.md (mdBook pages) and site/src/transcripts/subagents/&lt;id&gt;.html (standalone pages); mdbook build site produces site/book. Read tools/FORMAT_NOTES.md first. Published site: <a href="https://drmaciver.github.io/llm-fiction-case-study/">https://drmaciver.github.io/llm-fiction-case-study/</a> . Another agent very recently changed render.py to convert markdown prose to HTML; always work from the current file state (git diff shows uncommitted changes) and never revert others' work.</p>
+<p>Task: fix every defect class found by the review, generalising from the examples to the root cause. Defects grouped by class (JSON): {&quot;harness-notification-as-user&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;task-notification&gt;&lt;br /&gt;\n&lt;task-id&gt;wnsvk4och&lt;/task-id&gt;&lt;br /&gt;...&lt;/task-notification&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;Harness-injected &lt;\task-notification&gt; blocks (agent/subagent completion reports, containing task-id, tool-use-id, result, usage stats) are rendered inside a blockquote labeled '<strong>David:</strong>', i.e. attributed to the human as if he typed the raw XML notification. This occurs at least 16 times in the first 2500 lines (e.g. lines 213-226, 1140-1152, 1301-1329, 1339-1368, 1735-1747, 1791-1804, 1933-1945, 1993-2018, 2035-2048, 2126-2150, 2184-2196, 2319-2343, 2447-2459). Root cause is almost certainly in the parser/renderer: these are role='user' turns in the raw transcript (because the harness injects them as user-role messages) but the renderer blindly labels every user-role turn 'David:' without recognizing the &lt;\task-notification&gt; wrapper and rendering it as a system/tool event instead.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation...Continue the conversation from where it left off without asking the user any further questions...&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;The /compact auto-generated conversation summary (explicitly addressed to Claude, instructing it to 'resume directly, do not acknowledge the summary') is rendered as a message from 'David:' (around line 948-1065), immediately followed by a duplicate-looking '<strong>David:</strong> ran <code>/compact</code>' turn and then a '&lt;local-command-stdout&gt;' turn also labeled David. This is the same root cause as the task-notification issue: any harness/system content placed on a user-role turn is mislabeled as the human author.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;task-notification&gt;&lt;br/&gt;&lt;task-id&gt;wnsvk4och&lt;/task-id&gt;...&lt;/task-notification&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;Harness task-notification blocks (async Workflow/Agent completion pings, including fixed boilerplate note text about re-notification) are rendered inside a blockquote headed 'David:', attributing the raw notification and its embedded multi-hundred-word JSON result payload to the human author as if he typed it. Confirmed 34 occurrences in this session page alone (matches for the closing '&lt;\/task-notification&gt;&lt;/p&gt;&lt;/blockquote&gt;' pattern), versus 7 cases correctly nested inside a tool-result &lt;li&gt; as part of an assistant turn's own tool loop. This is the dominant, highest-impact defect: readers see raw escaped-JSON tool/workflow output presented as authored by David. Likely a parser gap: a task-notification arrives as a real-input-shaped 'user' line (plain string) so it starts a new turn like ordinary prose, but should be special-cased as harness output the way local-command-caveat already is, rather than rendered as a human blockquote.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;task-notification&gt;&lt;br /&gt;&lt;task-id&gt;wnsvk4och&lt;/task-id&gt;...&lt;/task-notification&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;Harness task-notification blocks (from background Agent/Workflow tool completions) are parsed as ordinary 'real input' user turns and rendered as if David personally typed them, labeled '&lt;strong&gt;David:&lt;/strong&gt;' in a blockquote. Occurs 30 times in this 2500-line sample (63 'David:' blockquote turns total, most are notifications/tool-plumbing, not real prose). The whole XML payload (task-id, tool-use-id, output-file, status, summary, result, diagnostics, usage counters, resumeFromRunId workflow-replay instructions) is dumped verbatim as body text attributed to the human author. Root cause is upstream of rendering: build/parsed/<em>.json already records these as role='user' turns since the JSONL line is a real-input user line per FORMAT_NOTES.md; nothing downstream special-cases the &lt;\task-notification&gt; wrapper.&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;...Problem Solving:&lt;br /&gt;Established a de-LLMed authorial voice...&lt;/p&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;All user messages:&lt;/p&gt;\n&lt;ul&gt;&lt;li&gt;Initial brief: LLM publishing experiment...&lt;/li&gt;...&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;The auto-compaction summary (a multi-hundred-line harness-generated recap with sections like 'Problem Solving', 'All user messages', plus explicit meta-instructions to the model such as &quot;Continue the conversation from where it left off without asking the user any further questions... do not acknowledge the summary&quot;) is rendered as a single '&lt;strong&gt;David:&lt;/strong&gt;' blockquote turn, indistinguishable from real user prose. Same root cause as the task-notification issue: it is a real-input user line at the JSONL level, so the parser/renderer treat it as ordinary human speech.&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;site/src/transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;task-notification&gt;&lt;br /&gt;&lt;task-id&gt;wp4ui46l1&lt;/task-id&gt;... &lt;result&gt;{...976 findings JSON dump...}&lt;/result&gt;&lt;/task-notification&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;Task/agent-completion notifications (&lt;\task-notification&gt; blocks with full agent results, diagnostics, and usage stats) are rendered inside a blockquote labelled 'David:' as though the user typed them. This is the most serious and frequent defect in the sample: at least 15 distinct task-notification blocks appear in the sampled 2500 lines (31 raw occurrences of the literal string 'task-notification'), several containing huge raw JSON dumps (e.g. a ~9KB escaped-JSON workflow result with nested quotes) misattributed as user speech. A reader would conclude David is pasting giant technical payloads rather than the harness delivering background-task results to the assistant.&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;site/src/transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;local-command-stdout&gt;[2mCompacted (ctrl+o to see full summary)[22m&lt;/local-command-stdout&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;A /compact command's stdout, including raw ANSI escape sequences rendered as literal text ('[2m'/'[22m' instead of being stripped or interpreted), appears inside a 'David:' blockquote. Immediately preceding it, the auto-generated pre-compaction context summary (containing instructions like 'Continue the conversation from where it left off without asking the user any further questions... do not preface with I'll continue') is also wrongly attributed to David inside its own blockquote. Both the ANSI leak and the harness-authored compaction summary are misattributed as user-authored text.&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;medium&quot;},{&quot;page&quot;:&quot;d1679987-c781-4167-82f2-4fb2b67962c1.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;task-notification&gt;&lt;br /&gt;\n&lt;task-id&gt;ac6789311bd50ce6d&lt;/task-id&gt;&lt;br /&gt;...&lt;result&gt;Findings report...&lt;/task-notification&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;Harness task-notification blocks (containing the full subagent result, sometimes tens of KB of report text) are rendered inside a '&lt;strong&gt;David:&lt;/strong&gt;' blockquote, i.e. attributed to the human as if he wrote/pasted the raw XML notification. Seen at least 3 times in this slice (subagent 'Persona lens', 'Compile prose-lint rule catalogue', and the /compact continuation summary which is also wrapped as a David blockquote). 12 occurrences of the literal string 'task-notification' in the sampled 2500 lines.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;d1679987-c781-4167-82f2-4fb2b67962c1.md&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt; ran &lt;code&gt;/chrome&lt;/code&gt;&lt;/p&gt;\n&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;local-command-stdout&gt;(no content)&lt;/local-command-stdout&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;Slash-command invocations and their &lt;local-command-stdout&gt;/&lt;local-command-caveat&gt; harness wrappers are rendered as ordinary David chat turns (e.g. '/chrome', '/compact', with the raw stdout tag shown verbatim as something David said). 4 occurrences of local-command-stdout in the sample.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;d1679987-c781-4167-82f2-4fb2b67962c1.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation...&lt;/p&gt;...Pick up the last task as if &lt;span class=&quot;redacted&quot;&gt;redacted: event&lt;/span&gt; never happened.&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;The auto-generated /compact continuation summary (a system/harness-authored recap, several hundred lines long) is rendered as a single David chat turn, misattributing a large block of system-authored text to the human speaker.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;site/src/transcripts/7257e15f-eb7f-4d0b-83e8-dde205ef5352.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;task-notification&gt;&lt;br /&gt;\n&lt;task-id&gt;ab911b4dce02f3485&lt;/task-id&gt;&lt;br /&gt;...&lt;result&gt;I've read both scenes... &lt;h1&gt;Part A — Facts and canon&lt;/h1&gt; ...&lt;li&gt;...&lt;/task-notification&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;Four large blocks (roughly lines 1004-1095, 1110-1146, 1165-1224, 1234-1359) render raw &lt;\task-notification&gt; harness payloads — including the full text of a background subagent's report — inside a blockquote labelled '&lt;strong&gt;David:&lt;/strong&gt;', i.e. attributed to the human author as if he typed thousands of words of subagent lens-report prose. Worse, the payload is only partially escaped: the wrapper tags (&lt;\task-notification&gt;, &lt;task-id&gt;, &lt;result&gt;, &lt;\/task-notification&gt;) show up as literal escaped text (&lt;result&gt;) glued directly onto the report content, while the report's own markdown (headers, bold, lists, code spans) IS separately markdown-rendered into real &lt;h1&gt;/&lt;h2&gt;/&lt;ul&gt;/&lt;strong&gt; elements in the middle of the same blockquote — producing a page that mixes rendered HTML structure with stray literal-looking pseudo-XML tags, all inside a supposed user quote, and closing with raw &lt;li&gt;...&lt;/task-notification&gt;&lt;/li&gt; and a leaked &lt;usage&gt;&lt;subagent_tokens&gt;112910&lt;/subagent_tokens&gt;... block. This should not be rendered as a David-authored blockquote at all, and if shown, the &lt;result&gt; body should be handled independently of the XML wrapper (either fully escaped as one block, or fully unwrapped and never mixed).&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;c214c046-1bb3-4385-abee-f924d8349bad.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;task-notification&gt;...&lt;result&gt;Good, confirms Book 1...&lt;h2&gt;Book 1 Geography — Full Extraction&lt;/h2&gt;&lt;h3&gt;1. Named places&lt;/h3&gt;...&lt;table&gt;(travel table)&lt;/table&gt;...&lt;/result&gt;&lt;br /&gt;&lt;usage&gt;...&lt;/usage&gt;&lt;br /&gt;&lt;/task-notification&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;The entire ~200-line subagent task-notification (source lines 19-223) — including the subagent's full markdown report with rendered h2/h3 headings, bulleted lists and a multi-column table — is wrapped in a blockquote and attributed to 'David:'. This is a synthetic harness message (delivered when a background subagent finishes), not something David wrote, and it dwarfs every real turn in the session. Compounding it, the wrapper tags (task-notification, result, usage) render as literal escaped text while the markdown inside &lt;result&gt; is fully rendered as HTML (headings/table/lists), producing a half-raw/half-rendered mega-turn under David's name. Root cause per FORMAT_NOTES.md: task-notification lines arrive as a 'real input' user line (plain string) so the parser starts an ordinary David turn with it, same class of bug as other harness wrappers (system-reminder, local-command-caveat) but here far larger and rich enough to read as genuine authored content.&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;site/book/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.html&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;\n&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;task-notification&gt;&lt;br /&gt;\n&lt;task-id&gt;wnsvk4och&lt;/task-id&gt;&lt;br /&gt;...&lt;/task-notification&gt;&lt;/p&gt;\n&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;Harness <code>&lt;\\task-notification&gt;</code> blocks (containing task-id, tool-use-id, output-file, full JSON/text results, diagnostics and usage stats) are rendered inside a blockquote labelled 'David:', i.e. presented as if the user typed them. Occurs 13 times in this single transcript (lines 516, 1967, 2215, 2270, 2907, 2982, 3193, 3282, 3342, 3471, 3552, 3749, 3914) and is clearly systemic across the site, not a one-off. These blocks also dump raw internal plumbing (task ids, tool-use ids, output-file paths, per-agent diagnostics, subagent token counts) that reads as noise/leaked internals rather than authored content.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;task-notification&gt;&lt;br /&gt;&lt;task-id&gt;wnsvk4och&lt;/task-id&gt;...&lt;result&gt;...14068 chars...&lt;/result&gt;...&lt;/task-notification&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;Harness &lt;\task-notification&gt; messages (async Workflow/Agent completion pings, injected as user-role jsonl lines) are classified by the parser as ordinary user turns and rendered as blockquotes labeled '<strong>David:</strong>', exactly like his real prompts. Found ~25 occurrences of this tag pair in this one session (grep count 100 half-tags = ~25-50 notification blocks), e.g. at rendered lines 214-226, 1141-1152, 1302-1329, 1340-1368, 1736-1747, 1792-1804, 1934-1945, 1994-2000+. The parser (build/parsed) already stores these as role:'user', kind:'text' turns indistinguishable from real prompts (confirmed against raw jsonl: message.content is a plain string starting with '&lt;\task-notification&gt;', which per FORMAT_NOTES.md counts as 'real input'). This misattributes large blocks of machine-generated tool-output text to the human author, and dumps raw XML tags, a huge inlined &lt;result&gt; JSON blob (tens of thousands of characters in the worst case), &lt;diagnostics&gt;, and &lt;usage&gt; counters straight into the reading page.&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;local-command-stdout&gt;[2mCompacted (ctrl+o to see full summary)[22m&lt;/local-command-stdout&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;The '&lt;local-command-stdout&gt;' harness wrapper (output of the /compact slash command) is likewise rendered as a 'David:' blockquote, and its ANSI escape codes ([2m ... [22m) leak through raw as garbled bracket text instead of being stripped or rendered as dim styling. Rendered around line 1071.&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;medium&quot;},{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation.&lt;/p&gt; ... 'If you need specific details from before compaction ... read the full transcript at: [redacted: private]'&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;harness-notification-as-user&quot;,&quot;description&quot;:&quot;The auto-injected post-/compact conversation summary (harness-generated, not authored by David) is likewise attributed to 'David:' via a blockquote, around rendered line 950+. It also instructs the reader to consult a transcript file path (redacted) -- content that only makes sense as harness scaffolding, not authorial dialogue.&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;medium&quot;}],&quot;tool-result-noise&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;local-command-stdout&gt;[2mCompacted (ctrl+o to see full summary)[22m&lt;/local-command-stdout&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;tool-result-noise&quot;,&quot;description&quot;:&quot;Raw ANSI escape sequences from the CLI's local-command-stdout leak into the rendered page as literal bracket codes '[2m' / '[22m' (the ESC control character appears to have been stripped upstream, leaving the bare SGR parameter text behind) instead of being stripped entirely or rendered as plain 'Compacted'. <span class="redacted">redacted sentence</span> It's low-sensitivity content (a fixed attribution footer) but it's unredacted internal tooling boilerplate bleeding through around a sentence that was otherwise judged sensitive enough to redact, and the abrupt mid-token truncation ('&lt;noreply@ant…') reads as broken/garbled rather than intentional.&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;low&quot;},{&quot;page&quot;:&quot;site/src/transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;&quot;,&quot;plans/book-01/arc-01-findings/002.md &lt;span class=&quot;redacted&quot;&gt;unpublished&lt;/span&gt;&quot;, ... (hundreds of chars of raw JSON list/array syntax with embedded file paths and quote marks)&quot;,&quot;klass&quot;:&quot;tool-result-noise&quot;,&quot;description&quot;:&quot;Inside the same misattributed task-notification block, a large raw JSON blob (a workflow's &lt;diagnostics&gt; field: an array-of-objects listing dozens of file paths with embedded escaped quotes, commas and brackets) is dumped verbatim into the page with only per-sentence redaction applied, not restructured or summarized. The result is a long, unreadable run of JSON syntax mixed with redaction spans that adds no value to a reader and is a strong candidate for suppression or collapsing into a details/summary block the way ordinary tool calls are.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;medium&quot;},{&quot;page&quot;:&quot;site/src/transcripts/7257e15f-eb7f-4d0b-83e8-dde205ef5352.md&quot;,&quot;excerpt&quot;:&quot;&lt;usage&gt;&lt;subagent_tokens&gt;112910&lt;/subagent_tokens&gt;&lt;tool_uses&gt;38&lt;/tool_uses&gt;&lt;duration_ms&gt;455097&lt;/duration_ms&gt;&lt;/usage&gt;&quot;,&quot;klass&quot;:&quot;tool-result-noise&quot;,&quot;description&quot;:&quot;Internal harness bookkeeping (token/tool-use/duration usage stats) leaks into the rendered page as raw escaped XML text at the tail end of each task-notification block described above — noise with no reader value, occurring at least 4 times.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;medium&quot;},{&quot;page&quot;:&quot;site/book/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.html&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;🔧 ToolSearch&lt;/p&gt;\n\n&lt;p&gt;✅ 2 lines, 104 chars&lt;/p&gt;\n\n&lt;p&gt;✅ 4 lines, 173 chars — total 0 / drwxr-xr-x@   3 drmaciver  staff    96 24 Aug 12:43 . / drwxr-xr-x  103 drmaciver  staff  3296 24 Aug 12:32 ..&lt;/p&gt;&quot;,&quot;klass&quot;:&quot;tool-result-noise&quot;,&quot;description&quot;:&quot;Tool-call previews inside &lt;details&gt; blocks routinely show raw <code>ls -la</code> / directory-listing output fragments and other low-level tool-result snippets (byte counts, line counts) with no real narrative value, cluttering the collapsed tool-call summaries. Not wrong per se, but adds noise typical of unfiltered tool-result previews rather than a curated summary (multiple occurrences throughout the file, e.g. lines 22-28).&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;broken-details&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;li&gt;&lt;code&gt;.../plans/book-01/arc-03.md&lt;/code&gt; ... Revisions entry ... added. (Its &quot;Open questions...&quot; ...)&lt;/result&gt;&lt;br /&gt;\n&lt;usage&gt;...&lt;/usage&gt;&lt;br /&gt;\n&lt;/task-notification&gt;&lt;/li&gt;\n&lt;/ul&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;broken-details&quot;,&quot;description&quot;:&quot;Inside several task-notification blocks, the &lt;result&gt; field's own markdown content (bullet lists, bold headers) gets converted to real HTML block elements (&lt;ul&gt;&lt;li&gt;...) while still nested inside an already-open &lt;p&gt; from the surrounding pseudo-XML text. This produces invalid HTML nesting: block-level &lt;ul&gt;/&lt;li&gt; elements sitting inside a &lt;p&gt;, and the block's closing tags ('&lt;/result&gt;', '&lt;\/task-notification&gt;') end up dangling after '&lt;/li&gt;' with no matching opening &lt;li&gt; for that final chunk of text, and the whole thing is inside a &lt;blockquote&gt; that was opened only with a leading &lt;p&gt; for 'David:'. Observed at lines ~1301-1329 and ~1339-1368 (and likely elsewhere with multi-paragraph task-notification results). Browsers will silently repair this by closing the outer &lt;p&gt; early, but the source HTML is malformed and the list content visually merges into the blockquote as if it were the notification's own structured content rather than escaped literal text.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;medium&quot;}],&quot;missing-timestamp&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;(entire 2500-line sample; no timestamp is printed anywhere, e.g. no '## 2026-08-24' headers or per-turn time markers)&quot;,&quot;klass&quot;:&quot;missing-timestamp&quot;,&quot;description&quot;:&quot;The parsed JSON (build/parsed/0c653b33-...json) carries a 'timestamp' field on every turn, but none of that timestamp information appears anywhere in the rendered markdown/HTML for this session in the sampled range — no date/time headers, no per-turn stamps. A reader has no way to tell how long this multi-round session (research, four voice-revision rounds, worldbuilding, compaction) actually took or when it happened.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;},{&quot;page&quot;:&quot;3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;# Finding the voice and starting the draft\n\n&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;This is an experiment in using an LLM to publish a story on royal road...&quot;,&quot;klass&quot;:&quot;missing-timestamp&quot;,&quot;description&quot;:&quot;No turn in the sampled 2500 lines carries a timestamp or date marker anywhere in the rendered page (parsed JSON turns do carry a <code>timestamp</code> field per turn, confirmed via build/parsed/3ef92e14-....json), even though the session spans what is clearly a long multi-day project (dated file references like '2026-08-24' appear only inside embedded tool-result content). Readers have no way to tell when any exchange happened. May be an intentional design choice for the narrative-log style rather than a bug; flagging for confirmation.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;},{&quot;page&quot;:&quot;site/src/transcripts/7257e15f-eb7f-4d0b-83e8-dde205ef5352.md&quot;,&quot;excerpt&quot;:&quot;(whole file)&quot;,&quot;klass&quot;:&quot;missing-timestamp&quot;,&quot;description&quot;:&quot;No timestamps appear anywhere in the rendered page (checked for headings/date markers), even though the content spans a multi-day drafting session (references '30 August' and 'today'); if the source transcript carries turn timestamps they are being dropped entirely by the renderer.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;duplicate-compact-turns&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;/compact&lt;/p&gt;&lt;/blockquote&gt;\n\n\n&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;This session is being continued...&lt;/p&gt;&lt;/blockquote&gt;\n\n\n&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt; ran &lt;code&gt;/compact&lt;/code&gt;&lt;/p&gt;\n\n\n&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;local-command-stdout&gt;...&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;duplicate-compact-turns&quot;,&quot;description&quot;:&quot;Around lines 944-1072, the single act of running /compact is rendered as four separate consecutive 'David:' turns (the literal '/compact' command, the full auto-generated summary, a second differently-formatted 'ran <code>/compact</code>' line, and the local-command-stdout), all attributed to David. This reads as David repeating himself and talking to himself; it should collapse into one clearly-labeled 'ran /compact' system event.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;medium&quot;}],&quot;unrendered-markdown-after-redaction&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;li&gt;<strong>ch. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Names the spell and explains what it rests on...&lt;/li&gt;&quot;,&quot;klass&quot;:&quot;unrendered-markdown-after-redaction&quot;,&quot;description&quot;:&quot;Within one of the misattributed task-notification blocks (session line ~3662-3666), the embedded result markdown is only partially rendered: '## Findings' headers and the top-level '1.' list became real &lt;h2&gt;/&lt;ol&gt; elements, but several list items retain literal, unrendered '</strong>' bold markers around chapter references (e.g. '<strong>ch. [redacted]</strong> Names the spell...'). The redaction appears to have swallowed the closing '' of these spans, leaving the markdown-to-HTML pass with an unpaired emphasis marker it can't convert, so raw asterisks leak into the rendered page. Distinct from the top-level misattribution defect above.&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;medium&quot;}],&quot;redaction-glued-to-tool-file-path&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;🔧 Read plans/book-01/overview.md &lt;span class=&quot;redacted&quot;&gt;unpublished&lt;/span&gt;&lt;/p&gt;&quot;,&quot;klass&quot;:&quot;redaction-glued-to-tool-file-path&quot;,&quot;description&quot;:&quot;The redactor appends a bare '<span class="unpub-tag">unpublished</span>' marker directly onto a tool_use block's file path/field (confirmed against build/parsed, where the same block's file is the clean string 'plans/book-01/overview.md' with no trailing text) rather than onto the piece of surrounding prose it actually redacted. This produces nonsensical rendered lines like 'Read plans/book-01/overview.md <span class="unpub-tag">unpublished</span>', 'Write notes/theme.md <span class="unpub-tag">unpublished</span>', and 'Read plans/book-01/arc-01.md <span class="unpub-tag">unpublished</span>' scattered through tool-call summaries. Counted 59 occurrences of a file field containing '<span class="redacted">...</span>' across this session's redacted JSON (build/redacted/0c653b33-....json), the large majority of the 'notes/theme.md <span class="unpub-tag">unpublished</span>' / 'plans/book-01/{overview,arc-01}.md <span class="unpub-tag">unpublished</span>' shape rather than the correct whole-path-is-private case. Root cause is in the redactor, which is matching/replacing text without regard to which structural field (prose vs. tool_use.file) it lands in.&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;medium&quot;}],&quot;ansi-code-leak&quot;:[{&quot;page&quot;:&quot;3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;local-command-stdout&gt;[2mCompacted (ctrl+o to see full summary)[22m&lt;/local-command-stdout&gt;&lt;/p&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;ansi-code-leak&quot;,&quot;description&quot;:&quot;Raw ANSI SGR bracket codes ([2m ... [22m, ESC byte apparently stripped but the bracket/number/letter sequence left behind) leak into rendered text from a /compact local-command-stdout block, attributed to David. Only instance found in-sample but the pattern (local-command-stdout capturing terminal-formatted text) likely recurs at every /compact or similar slash command elsewhere in the corpus.&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;medium&quot;}],&quot;unrendered-markdown&quot;:[{&quot;page&quot;:&quot;3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;...anticlimactic warm landing.\n\n## 2. How the narrative voice works\n\nThe engine is &lt;strong&gt;free indirect discourse wearing an omniscient narrator's coat&lt;/strong&gt;. Third person past, one POV per &lt;code&gt;</em><em><em>&lt;/code&gt;-marked section...&quot;,&quot;klass&quot;:&quot;unrendered-markdown&quot;,&quot;description&quot;:&quot;Inside task-notification &lt;result&gt; payloads, the embedded markdown document is only partially converted: literal two-character '\n' sequences (78 occurrences in-sample) stay visible instead of becoming line/paragraph breaks, and block-level '## N. Heading' markdown headers are left as literal text, while inline emphasis (<strong>bold</strong>) in the same string was separately converted to &lt;strong&gt; tags. This inconsistent partial rendering suggests markdown-to-HTML conversion is applied to the wrong granularity (perhaps the whole notification XML is escaped first, then some other pass finds and converts <strong>bold</strong> substrings, but never unescapes \n or handles block headers) rather than rendering the embedded document as markdown.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;medium&quot;},{&quot;page&quot;:&quot;d1679987-c781-4167-82f2-4fb2b67962c1.md&quot;,&quot;excerpt&quot;:&quot;&lt;result&gt;{&quot;synthesis&quot;:&quot;Written to &lt;code&gt;...pilot-report.md&lt;/code&gt; and committed.\n\n# Prose-lint pilot run — synthesis\n\nScope: 4 files...## 1. Confirmed findings by file\n\n### &lt;code&gt;draft/book-01/scenes/02...&lt;/code&gt;\n\n| Quote | Rule | Why |\n|---|---|---|\n| ...&quot;,&quot;klass&quot;:&quot;unrendered-markdown&quot;,&quot;description&quot;:&quot;Large subagent-report payloads (a JSON string whose value is a full markdown document with headers, tables, and code fences) are dumped as one long escaped run of text with literal backslash-n sequences instead of real newlines, and with markdown headers/tables/code fences left as plain escaped text rather than rendered — none of the '##', '|---|---|---|' table syntax, or fenced code renders; it all reads as a single unbroken paragraph/list-item wall of text with visible \n characters and HTML entities (&quot;, &lt;, &gt;). Occurs at least twice in the sample (~1000+ words each) inside task-notification blocks that are themselves misattributed to David (see harness-notification-as-user).&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;ae03fa0157c981962.html&quot;,&quot;excerpt&quot;:&quot;&lt;li&gt;\n&lt;p&gt;<strong>Chain reading notation (e.g. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;&lt;/p&gt;\n&lt;/li&gt;&quot;,&quot;klass&quot;:&quot;unrendered-markdown&quot;,&quot;description&quot;:&quot;A markdown bold marker ('<strong>Chain reading notation...') is left as literal asterisks instead of being rendered as &lt;strong&gt;, in a list item immediately after several redacted-sentence list items. Suggests the redaction substitution (raw HTML span inserted into markdown source) interfered with the markdown-to-HTML pass for this paragraph, so the parser never found the matching closing '</strong>' (it's inside the now-redacted text) and left the opening marker literal.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;medium&quot;},{&quot;page&quot;:&quot;site/book/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.html&quot;,&quot;excerpt&quot;:&quot;## 2. How the narrative voice works\n\nThe engine is &lt;strong&gt;free indirect discourse...&lt;/strong&gt; Third person past, one POV per &lt;code&gt;</strong></em>&lt;/code&gt;-marked section... 1. &lt;strong&gt;A constant authorial narrator&lt;/strong&gt; ...&quot;,&quot;klass&quot;:&quot;unrendered-markdown&quot;,&quot;description&quot;:&quot;Inside the task-notification's embedded &lt;result&gt; text (a synthesized markdown document returned by a subagent workflow, ~line 347), bold (</em><em>..</em><em>) was converted to &lt;strong&gt;, but markdown headers (## 2. ...) and numbered lists (1. ..., 2. ...) were left as literal text rather than converted to &lt;h2&gt;/&lt;ol&gt;&lt;li&gt;. This half-rendering (some markdown converted, some left raw) makes a multi-thousand-word embedded document unreadable as one giant paragraph with stray '##' and '1.' markers.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;medium&quot;},{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;Source: &lt;em&gt;Avaunt&lt;/em&gt; ... crucially, the jargon isn't authorial flavor... [literal '\n\n' two-character sequences left unrendered inside the &lt;result&gt; field text instead of being turned into paragraph breaks]&quot;,&quot;klass&quot;:&quot;unrendered-markdown&quot;,&quot;description&quot;:&quot;Inside the task-notification &lt;result&gt; dump, the original JSON-escaped '\n\n' sequences are carried through as literal backslash-n characters rather than real newlines/paragraph breaks, so nested markdown structure (headings, lists) inside the quoted result never renders as markdown at all -- it's inert text glued together with '&lt;br /&gt;' from the outer XML-to-HTML conversion. Downstream of the same task-notification-as-user defect but a distinct rendering symptom.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;medium&quot;}],&quot;broken-code-span-with-redaction&quot;:[{&quot;page&quot;:&quot;3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;li&gt;<code>&lt;span class=\&quot;redacted\&quot;&gt;redacted: private&lt;/span&gt;&lt;span class=\&quot;redacted\&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;&lt;span class=\&quot;unpublished\&quot;&gt;unpublished&lt;/span&gt;, 9 wks/2 ch 90 &lt;span class=\&quot;unpublished\&quot;&gt;unpublished&lt;/span&gt;); return run...&quot;,&quot;klass&quot;:&quot;broken-code-span-with-redaction&quot;,&quot;description&quot;:&quot;A markdown inline-code span (backtick-delimited) that originally wrapped redacted content lost its closing backtick / partner content to redaction, leaving a stray literal backtick character visible in rendered output instead of a &lt;code&gt; element (2 occurrences in-sample, both in the same list). The redaction pass appears to substitute placeholder spans without checking whether it broke an enclosing markdown code span, so the leftover backtick renders as plain punctuation.&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;notification-html-nesting&quot;:[{&quot;page&quot;:&quot;3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;li&gt;&lt;code&gt;&lt;span class=\&quot;redacted\&quot;&gt;redacted: private&lt;/span&gt;/plans/book-01/arc-03.md&lt;/code&gt; &lt;span class=\&quot;redacted\&quot;&gt;unpublished&lt;/span&gt; — routing caveat replaced...(the log entry records it resolved.)&amp;lt;/result&amp;gt;&lt;br /&gt;&amp;lt;usage&amp;gt;...&amp;lt;/usage&amp;gt;&lt;br /&gt;&amp;lt;/task-notification&amp;gt;&lt;/li&gt;\n&lt;/ul&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;notification-html-nesting&quot;,&quot;description&quot;:&quot;Because task-notification &lt;result&gt; content sometimes itself contains markdown list markup that gets converted to real &lt;ul&gt;/&lt;li&gt; HTML, the notification's closing tags land inside that generated list (a &lt;blockquote&gt; opened before the &lt;ul&gt;, and the &lt;/li&gt;&lt;/ul&gt; closes just before &lt;/blockquote&gt;), producing a &lt;ul&gt; whose last &lt;li&gt; spans hundreds of lines of unrelated notification metadata (diagnostics, usage counters) rather than a clean list item. Browsers will likely auto-recover this, but the structural nesting is not what was intended and makes the DOM fragile.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;malformed-list-nesting&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;li&gt;&lt;span id=\&quot;agent-a37dabf9778487ad1\&quot;&gt;&lt;/span&gt;... &lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&amp;lt;task-notification&amp;gt;...&amp;lt;/task-notification&amp;gt;&lt;/li&gt;&lt;/ol&gt;&lt;/blockquote&gt;&quot;,&quot;klass&quot;:&quot;malformed-list-nesting&quot;,&quot;description&quot;:&quot;One task-notification's own &lt;ol&gt; result list is left open across the notification boundary: the block opens with </code>&lt;ol&gt;&lt;li&gt;<code>for the agent's numbered result, and the closing</code>&lt;/li&gt;&lt;/ol&gt;<code> appears only after the entire task-notification content (including the trailing &lt;usage&gt; line), so the notification's closing tag sits nested one level inside the agent's own list markup ('...&amp;lt;/task-notification&amp;gt;&lt;/li&gt;&lt;/ol&gt;&lt;/blockquote&gt;'). This produces list nesting that does not match the logical structure (the notification wrapper vs. the agent's own ordered list are conflated) even though the tags happen to balance.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;truncated-tool-summary&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;🔧 Bash: sed -n 70,104p notes/sealed/peri-pre-choosing.md; echo; echo ---DEBTS---; sed -n 1856,188… (Check sealed Peri household, soil's Peri debts, and canon o…)&quot;,&quot;klass&quot;:&quot;truncated-tool-summary&quot;,&quot;description&quot;:&quot;Several tool-call summary lines in the collapsed &lt;details&gt; tool-call lists are hard-truncated mid-word with an ellipsis ('…') inside the visible command text, sometimes cutting off in the middle of a shell pipeline or the description in parentheses, e.g. 'Check sealed Peri household, soil's Peri debts, and canon o…'. This happens repeatedly (dozens of times in the sample) and makes many of the compact 'X tool calls' summaries unreadable/uninformative — a reader cannot tell what the command actually did.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;broken-markdown-emphasis&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;li&gt;**</code>notes/canan/characters/&lt;span class=&quot;redacted&quot;&gt;redacted: character&lt;/span&gt;&lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;&lt;/li&gt;&quot;,&quot;klass&quot;:&quot;broken-markdown-emphasis&quot;,&quot;description&quot;:&quot;An assistant-prose bullet contains a literal unrendered '</em><em>' markdown bold marker (and a misspelled path fragment 'canan' instead of 'canon') left as raw text alongside a backtick-quoted path, i.e. markdown emphasis syntax that never got converted to &lt;strong&gt;/&lt;em&gt; and is visible verbatim to the reader: '&lt;li&gt;</em><em><code>notes/canan/characters/...'. This is a half-rendered markdown artifact distinct from the general prose-to-HTML conversion elsewhere in the page (which mostly works).&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;unhelpful-label&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&amp;lt;note&amp;gt;A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.&amp;lt;/note&amp;gt;&quot;,&quot;klass&quot;:&quot;unhelpful-label&quot;,&quot;description&quot;:&quot;Because every task-notification is rendered as spoken by 'David', this internal harness explanatory note ('A task-notification fires each time this agent stops...The user can send it another message and resume it') also reads as David explaining the notification system to himself/to Claude, which is confusing and backwards — it's harness documentation, not user commentary. This recurs with each of the ~15 task-notification instances that include it.&quot;,&quot;likely_layer&quot;:&quot;parser&quot;,&quot;severity&quot;:&quot;medium&quot;},{&quot;page&quot;:&quot;site/src/transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;&lt;strong&gt;David:&lt;/strong&gt; ran &lt;code&gt;/compact&lt;/code&gt;&lt;/p&gt;&quot;,&quot;klass&quot;:&quot;unhelpful-label&quot;,&quot;description&quot;:&quot;A synthetic 'David: ran /compact' line (not a blockquote, a plain paragraph, unlike every other David turn which is wrapped in a blockquote) is inserted to represent the slash command invocation. It's inconsistent in styling with the rest of the transcript's turn markers (no blockquote, different visual weight) and sits directly before the ANSI-laden local-command-stdout blockquote that duplicates/represents the same event, so the same user action is represented twice in two different visual styles within three lines.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;double-escaped-html&quot;:[{&quot;page&quot;:&quot;d1679987-c781-4167-82f2-4fb2b67962c1.md&quot;,&quot;excerpt&quot;:&quot;def contamination_runs(scene_text: str, corpus_ngrams: frozenset[str]) -&amp;amp;gt; list[str]:&quot;,&quot;klass&quot;:&quot;double-escaped-html&quot;,&quot;description&quot;:&quot;Code excerpted inside a subagent's &lt;result&gt; text has its '-&gt;' HTML-escaped to '-&amp;gt;' and then re-escaped a second time to '-&amp;amp;gt;' when rendered, so the page literally displays the text '-&amp;amp;gt;' instead of '-&gt;'. Layer above (redact/render) is double-encoding entities already escaped upstream.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;medium&quot;},{&quot;page&quot;:&quot;abcd531dd837554ac.html&quot;,&quot;excerpt&quot;:&quot;&lt;title&gt;Repo: &amp;lt;span class=&amp;quot;redacted&amp;quot;&amp;gt;redacted: private&amp;lt;/span&amp;gt;. &amp;lt;span class=&amp;quot;redacted&amp;quot;&amp;gt;redacted sentence: unpublished prose&amp;lt;/span&amp;gt; The…&lt;/title&gt; ... &lt;h1&gt;Repo: &amp;lt;span class=&amp;quot;redacted&amp;quot;&amp;gt;redacted: private&amp;lt;/span&amp;gt;. ...&lt;/h1&gt;&quot;,&quot;klass&quot;:&quot;double-escaped-html&quot;,&quot;description&quot;:&quot;Recurring in 5 of the 12 sampled pages (abcd531dd837554ac.html, ae03fa0157c981962.html, ac81d4cfd8b74d9e6.html, aaff9bdb7f7fd3fd9.html, a6e6f4d1713986515.html). When the truncated first-line-of-prompt used for the page title/h1 contains a redaction span (already rendered as real </code>&lt;span class=&quot;redacted&quot;&gt;...&lt;/span&gt; HTML by the redactor/renderer), the title/h1 builder re-escapes that HTML for insertion into &lt;title&gt;/&lt;h1&gt;, so the literal tag syntax (&lt;span class=&quot;redacted&quot;&gt;...&lt;/span&gt;) shows up as visible text in the browser tab title and the on-page heading instead of rendering as the intended grey 'redacted' pill (or a plain-text fallback like '[redacted]'). Because the same prompt text renders correctly a few lines later in the blockquote body, this looks like a bug in whichever code builds the truncated title/h1 string in render.py — it should escape the original plain prompt text before truncating, not re-escape the already-redacted HTML fragment.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;},{&quot;page&quot;:&quot;site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md&quot;,&quot;excerpt&quot;:&quot;&lt;code&gt;unzip -p book-1.epub '<em>.xhtml' | sed 's/&amp;lt;[^&amp;gt;]</em>&amp;gt;//g' | grep -c &quot;Thursday\|Tuesday&quot;&lt;/code&gt;&quot;,&quot;klass&quot;:&quot;double-escaped-html&quot;,&quot;description&quot;:&quot;One instance (rendered line 3045) of double HTML-escaping: a shell command containing '&lt;' and '&gt;' was escaped twice, so the browser will show the literal text '&lt;' and '&gt;' inside the code span instead of the intended '&lt;' '&gt;' characters that make up the sed regex. Likely happens when angle brackets inside a task-notification's nested/escaped result string get entity-escaped once by an inner step and again by the final HTML render.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;broken-redaction-label&quot;:[{&quot;page&quot;:&quot;d1679987-c781-4167-82f2-4fb2b67962c1.md&quot;,&quot;excerpt&quot;:&quot;&lt;li&gt;&lt;code&gt;plans/publishing.md&lt;/code&gt; &lt;span class=&quot;redacted&quot;&gt;unpublished&lt;/span&gt;&lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;&lt;/li&gt;&quot;,&quot;klass&quot;:&quot;broken-redaction-label&quot;,&quot;description&quot;:&quot;Several redaction markers use the bare label 'unpublished' (not 'unpublished prose') and are spliced directly into the middle of file paths / sentences with no separating space or punctuation, producing garbled text like 'plans/NEXT.md <span class="unpub-tag">unpublished</span>' or two adjacent redaction spans with no connecting words. 8 occurrences of this bare-'unpublished' label pattern in the sample; inconsistent with the documented label set ('private', 'unpublished prose').&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;medium&quot;}],&quot;redaction-created-numbering-gap&quot;:[{&quot;page&quot;:&quot;d1679987-c781-4167-82f2-4fb2b67962c1.md&quot;,&quot;excerpt&quot;:&quot;11. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; &lt;strong&gt;description-list&lt;/strong&gt; — &quot;Sorrel was tall and plain...&quot;\n...\n13. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; &lt;strong&gt;aphorism-budget&lt;/strong&gt;&quot;,&quot;klass&quot;:&quot;redaction-created-numbering-gap&quot;,&quot;description&quot;:&quot;Inside a subagent report's numbered findings list, item 12 is entirely a redacted sentence (finding text fully removed), leaving the visible numbering jump from 11 straight to 13 with no indication an item was elided — reads as a rendering/content gap rather than a redaction.&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;tool-call-preview-noise&quot;:[{&quot;page&quot;:&quot;d1679987-c781-4167-82f2-4fb2b67962c1.md&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;🔧 Bash: cd &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt; &amp;&amp; python3 - &lt;&lt; 'EOF' s = open('draft/book-01/VOICE.md').read() ...&quot;,&quot;klass&quot;:&quot;tool-call-preview-noise&quot;,&quot;description&quot;:&quot;Nearly every Bash tool-call preview line concatenates the full heredoc script (sometimes hundreds of chars of python/shell) onto one line with no wrapping/formatting, and repeatedly needs a 'redacted: private' span spliced into the middle of a cd path — reads as noisy raw command dumps rather than a readable summary. Widespread throughout the sample (dozens of instances).&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;truncation-splits-redaction-marker&quot;:[{&quot;page&quot;:&quot;site/src/transcripts/7257e15f-eb7f-4d0b-83e8-dde205ef5352.md&quot;,&quot;excerpt&quot;:&quot;cat &gt; draft/book-01/scenes/41-calm-hands.md &lt;span class=&quot;redacted&quot;&gt;unpublished&lt;/span&gt; &lt;&lt;'EOF' # 41 — Calm hands  &lt;span class=&quot;redacted&quot;&gt;red… (Draft scene 41 <span class="redacted">unpublished&lt;/span&gt;)&quot;,&quot;klass&quot;:&quot;truncation-splits-redaction-marker&quot;,&quot;description&quot;:&quot;The <code>truncate()</code> helper in tools/render.py character-truncates raw text (bash command previews and tool-call descriptions) at a fixed length BEFORE/without regard to where a ⟦redacted...</span> marker or a &lt;span class=&quot;redacted&quot;&gt; tag falls. When <span class="redacted">redacted</span> lands inside a marker or inside the HTML span tag itself, the closing ⟧ or closing &lt;/span&gt; is lost, leaving either a raw literal '<span class="redacted">unpublished' fragment loose in the page text, or an unclosed &lt;span class=&quot;redacted&quot;&gt; tag that swallows the rest of the paragraph's markup (visible as broken/nested spans, e.g. '&lt;span class=&quot;redacted&quot;&gt;unp…' with no closing tag). Confirmed by diffing against build/redacted/…json, which has the well-formed marker '⟦unpublished</span>' before truncation — so the corruption is introduced in the render layer's truncate() call, not upstream. Occurs at least 20 times in this file alone (lines 167, 184, 205, 249, 287, 324, 359, 378, 403, 553, 587, 641, 700, 723, 754, 796, 832, 867, 922, 951), always in Bash tool-call summaries/descriptions from scene 41 onward.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;}],&quot;ansi-escape-leak&quot;:[{&quot;page&quot;:&quot;be6bcf16-d9e6-4525-85d6-ce35993a5324.md&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;&lt;local-command-stdout&gt;Set model to [1mOpus 5[22m and saved as your default for new sessions&lt;/local-command-stdout&gt;&lt;/p&gt;&quot;,&quot;klass&quot;:&quot;ansi-escape-leak&quot;,&quot;description&quot;:&quot;Raw ANSI SGR bracket codes ('[1m' ... '[22m') from a /model command's terminal output leaked into the rendered page as literal text instead of being stripped or interpreted, inside a &lt;local-command-stdout&gt; block that is itself rendered as if David wrote it (attributed 'David:'). Reads as garbled text: 'Set model to [1mOpus 5[22m and saved...'.&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;medium&quot;}],&quot;missing-tool-description&quot;:[{&quot;page&quot;:&quot;92c486ed-62f3-40a9-8d7d-b9dd6554d07e.md&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;🔧 ToolSearch&lt;/p&gt;&lt;p&gt;✅ 1 lines, 50 chars&lt;/p&gt;&quot;,&quot;klass&quot;:&quot;missing-tool-description&quot;,&quot;description&quot;:&quot;Non-Bash tool calls (ToolSearch here; also Artifact/Skill/Write/Edit/Read in c214c046) render with just the bare tool name and no parenthetical description, unlike Bash calls which always show '(Some description)'. Minor but inconsistent labelling makes these entries uninformative — e.g. '🔧 ToolSearch' and '🔧 Artifact' give the reader no idea what was searched for or published. Occurs repeatedly across sessions (at least 6 instances across the two files sampled).&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;adjacent-redaction-spans&quot;:[{&quot;page&quot;:&quot;61a194e2-4e55-494c-bb3e-5d225e267758.md&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;&lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;&lt;span class=&quot;redacted&quot;&gt;redacted: character&lt;/span&gt; charm is exactly where a designer would start.&lt;/p&gt;&quot;,&quot;klass&quot;:&quot;adjacent-redaction-spans&quot;,&quot;description&quot;:&quot;Two or more redaction spoiler spans are rendered back-to-back with no separating space/punctuation, producing run-together labels ('...unpublished prose&lt;/span&gt;&lt;span...character&lt;/span&gt; charm...'). Happens repeatedly in this session (at least 6 occurrences, e.g. lines 46, 62, 188, 214, 216, 218) whenever consecutive redacted sentences/terms abut in the source; reads awkwardly and can misleadingly suggest a single label applies when two different reasons are stacked.&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;fully-redacted-toolcall-noise&quot;:[{&quot;page&quot;:&quot;61a194e2-4e55-494c-bb3e-5d225e267758.md&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;🔧 Bash: cd &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;&lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;&lt;/p&gt;&quot;,&quot;klass&quot;:&quot;fully-redacted-toolcall-noise&quot;,&quot;description&quot;:&quot;A Bash tool-call preview line is redacted down to two adjacent spoiler spans with literally no visible command text at all ('🔧 Bash: cd [redacted][redacted]'), giving the reader a tool-call entry that conveys nothing but is still displayed as if it were informative content in the transcript.&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;redacted-table-row-collapse&quot;:[{&quot;page&quot;:&quot;abcd531dd837554ac.html&quot;,&quot;excerpt&quot;:&quot;&lt;tr&gt;\n&lt;td&gt;&lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;&lt;/td&gt;\n&lt;td&gt;&lt;/td&gt;\n&lt;td&gt;&lt;/td&gt;\n&lt;td&gt;&lt;/td&gt;\n&lt;td&gt;&lt;/td&gt;\n&lt;/tr&gt;&quot;,&quot;klass&quot;:&quot;redacted-table-row-collapse&quot;,&quot;description&quot;:&quot;In a 5-column markdown table ('Ranked pattern list'), several whole rows were redacted at the sentence level; the redaction marker ends up alone in the first &lt;td&gt; while the remaining 4 cells of that row render empty, and the visible '#' numbering column (1,3,5,7,10,11,12,13) skips the redacted rows' numbers, making the table look broken/incomplete rather than clearly indicating 'a row was withheld here'. Likely an unavoidable consequence of sentence-granularity redaction applied inside table-cell markdown before the table is parsed, but it degrades table readability more than a single inline redaction would.&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;broken-redaction-marker&quot;:[{&quot;page&quot;:&quot;site/book/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.html&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;🔧 Bash: cd &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;; grep -l -i &quot;&lt;span class=&quot;redacted&quot;&gt;redacted: object&lt;/span&gt;&quot; chapters/*.md; grep -n -i &quot;&lt;span class=&quot;redac… (Check when '<span class="redacted">redacted: object&lt;/span&gt;' is first used)&lt;/p&gt;&quot;,&quot;klass&quot;:&quot;broken-redaction-marker&quot;,&quot;description&quot;:&quot;When the same ⟦redacted: object</span> marker appears twice in one tool-call string (once in the command, once in the truncated description shown in parentheses), the command copy is converted correctly to a balanced &lt;span class=&quot;redacted&quot;&gt;...&lt;/span&gt;, but the description copy is corrupted: the literal <span class="redacted">redacted: object text is left unconverted while the closing </span> becomes a stray, unmatched &lt;/span&gt; tag with no opening &lt;span&gt;. This leaks raw <span class="redacted">...</span> marker syntax into the page and emits unbalanced HTML (a dangling close tag that can silently close/disrupt later inline formatting). Confirmed against build/redacted/0c653b33....json, where the marker is correctly paired at that location (<span class="redacted">redacted: object</span> ... <span class="redacted">redacted: object</span>), so the corruption is introduced by render.py's marker-to-span conversion, not the redaction step. Similar truncated/leaked <span class="redacted">...</span> text (not this specific mismatch, just raw bracket leakage in truncated tool-call summaries) also appears at lines 1907, 2471, 2542, 4073, 4110, 4604, 5068.&quot;,&quot;likely_layer&quot;:&quot;renderer&quot;,&quot;severity&quot;:&quot;high&quot;}],&quot;malformed-redaction-label&quot;:[{&quot;page&quot;:&quot;site/book/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.html&quot;,&quot;excerpt&quot;:&quot;&lt;p&gt;🔧 Write notes/theme.md &lt;span class=&quot;redacted&quot;&gt;unpublished&lt;/span&gt;&lt;/p&gt;\n...\n&lt;p&gt;Committed: &lt;code&gt;notes/theme.md&lt;/code&gt;, &lt;span class=&quot;redacted&quot;&gt;unpublished&lt;/span&gt; wired into both consistency skills...&quot;,&quot;klass&quot;:&quot;malformed-redaction-label&quot;,&quot;description&quot;:&quot;A third redaction label variant, bare 'unpublished' (missing the 'redacted sentence:' / 'redacted:' prefix and the 'prose' suffix used everywhere else, e.g. 'redacted sentence: unpublished prose'), appears dozens of times across this transcript and also in site/book/transcripts/index.html (line 193: '...Read plans/NEXT.md, unpublished then draft/book-01/VOICE.md...'). <span class="redacted">redacted sentence</span> It is also cut off mid-string by preview truncation ('&lt;noreply@ant…'), leaving a dangling angle bracket. Two occurrences: lines 1426 and 1475.&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;low&quot;}],&quot;leaked-private-path&quot;:[{&quot;page&quot;:&quot;build/redacted/0c653b33-1efd-45bb-b7ab-26ed3dca981e.json (feeds site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md)&quot;,&quot;excerpt&quot;:&quot;&quot;No change made — the chapter is already under budget.\n\n<span class="redacted">redacted: private</span> (prose only...&quot; -- rendered unredacted at line ~2905, immediately alongside sibling occurrences of the <em>same kind</em> of path that ARE correctly redacted to 'redacted: private' a few sentences earlier/later in the same blob&quot;,&quot;klass&quot;:&quot;leaked-private-path&quot;,&quot;description&quot;:&quot;The redactor misses some absolute <span class="redacted">redacted: private</span> paths when they occur inside deeply-nested/escaped JSON strings inside a subagent's tool-result text (itself embedded inside a task-notification &lt;result&gt; field). Confirmed present unredacted in build/redacted/0c653b33-....json (grep found it there, not just in the renderer), so the defect is in tools/redact.py's matching, not the HTML renderer. Neighboring, structurally identical paths in the same JSON blob ARE redacted, showing the miss is inconsistent/pattern-dependent (likely a length or regex-boundary issue when multiple escaped quote levels are present).&quot;,&quot;likely_layer&quot;:&quot;redactor&quot;,&quot;severity&quot;:&quot;high&quot;}]}<br />
+Reviewer overall notes: [&quot;The sample is otherwise clean (no double-escaping, no broken redaction markers in code spans, no markdown tables, tool-call summaries render fine) but has one dominant, systemic defect: harness-injected content (task-notification blocks from background agents/workflows, the auto-compaction summary, and local-command-stdout) is rendered as if David personally wrote it, appearing repeatedly (16+ times in 2500 lines) inside '<strong>David:</strong>' blockquotes, including raw pseudo-XML tags, leaked ANSI codes, and in a few cases malformed nested HTML where the notification's own markdown gets converted to real block elements inside an already-open &lt;p&gt;. This is a renderer-layer issue (role='user' is used by the harness for these system messages, and render.py doesn't distinguish them from real user turns) and is the single highest-priority fix for this session. A secondary, lower-severity issue is that per-turn timestamps exist in the parsed data but are dropped entirely by the renderer.&quot;}&quot;,&quot;Reviewed the full rendered session page site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md (the file is only 5,027 lines after the latest render.py changes — the requested 6000-9000 line range no longer exists, so the whole file was reviewed instead, cross-checked against build/parsed and build/redacted for the same session id). The single dominant defect is systemic misattribution: harness <code>&lt;\\task-notification&gt;</code> blocks — async Workflow/Agent completion messages, including boilerplate about re-notification and large embedded JSON result payloads — are rendered inside 'David:' blockquotes 34 times in this page alone, making it look like the human co-author is pasting raw tool telemetry. This is a renderer/parser gap: FORMAT_NOTES.md's existing special-case for local-command-caveat pairs doesn't cover task-notification, so it falls through to being treated as ordinary real-input prose. Two secondary defects trace to the redactor: (1) a redaction marker gets glued directly onto tool_use file-path fields (confirmed against build/parsed's clean values) producing garbled lines like 'Read plans/book-01/overview.md <span class="unpub-tag">unpublished</span>' — 59 such occurrences in this session's redacted JSON; and (2) redacting mid-sentence around markdown bold markers occasionally leaves an unpaired '</em><em>' that the markdown pass can't convert, so raw asterisks leak into a couple of list items inside one of the misattributed notification blocks. A minor, low-severity leak of unredacted commit-boilerplate text (truncated 'noreply@ant…') around an otherwise-redacted sentence was also noted. No unclosed &lt;details&gt;/&lt;div&gt;/&lt;blockquote&gt; tags, no broken tables, and no double-escaped HTML entities were found in this file (all open/close tag counts balance, and the one '&amp;lt;' sighting was inside a code sample showing a literal shell sed command, which is correct as-is).&quot;,&quot;The dominant, highest-severity problem in this sample is architectural, not cosmetic: harness-generated content that happens to arrive as a JSONL 'real-input user' line — task-notification XML blocks from background Agent/Workflow completions, the /compact auto-compaction summary, and /compact's local-command-stdout — is rendered exactly like David's own prose, under a '&lt;strong&gt;David:&lt;/strong&gt;' blockquote label. This happens 30+ times in just the first 2500 lines (63 total 'David:' turns, the majority of which are plumbing, not real human input). The parser correctly follows FORMAT_NOTES.md's documented rule (a real-input user line always starts a new turn) but nothing distinguishes 'a human typed this' from 'the harness injected this' among real-input lines, so the fix likely belongs in the parser (tag task-notification/compaction-summary/local-command-stdout content with a distinct block type) with the renderer then choosing a different label ('system' or similar) and possibly collapsing/summarizing it rather than dumping the full XML payload with diagnostics and usage counters as reader-facing prose. Secondary issues: markdown inside &lt;\task-notification&gt;&lt;result&gt; payloads is only half-converted (literal \\n text and un-rendered ## headers survive alongside converted <strong>bold</strong>), the /compact command leaks raw ANSI SGR bracket codes, redaction occasionally strands a bare backtick where it clipped a code span, and notification closing tags sometimes land inside a generated &lt;ul&gt;, mis-nesting the DOM. No missing-timestamp, double-escaping-of-already-escaped-HTML, or broken/unclosed &lt;details&gt; issues were found in this range (all 51 &lt;details&gt; opens had matching closes); table-pipe breakage and truly empty turns were not observed either.&quot;,&quot;The dominant, high-severity defect in this sample is systematic misattribution: harness-generated task-notification blocks (background workflow/agent completion reports, often containing large raw JSON results, diagnostics, and internal explanatory notes about the notification system itself) are rendered inside blockquotes labelled 'David:', making it look like the user is pasting huge technical payloads and reciting harness documentation. This occurs at least 15 times in the sampled 2500 lines and is clearly a parser-layer classification problem (these are tool/system-originated messages, not user messages) rather than a rendering bug — the HTML itself is well-formed in most of these cases. A related instance shows the /compact local-command-stdout (with literal unstripped ANSI escape codes '[2m'/'[22m') and the harness's own pre-compaction summary text also wrongly attributed to David. Secondary, lower-severity issues found: a large raw-JSON diagnostics blob dumped verbatim inside one task-notification (tool-result noise, not collapsed/summarized); one instance of list-nesting that conflates the notification wrapper with the agent's own &lt;ol&gt; result list; a systematic pattern of tool-call one-line summaries being truncated mid-word with '…' inside the collapsed &lt;details&gt;/summary tool-call lists, making many of them unreadable; one leaked-through raw '</em>*' markdown emphasis marker plus a typo'd path; and an inconsistent, unblockquoted 'David: ran /compact' pseudo-turn used alongside the (also misattributed) local-command-stdout block for the same event. No table-breaking-pipe, no unresolved &lt;details&gt; block, no redaction-marker-inside-code-span, and no double-escaped-HTML (&amp;lt;) issues were found in this sample — the &lt;/&gt; escaping for the notification tags is in fact correct HTML display of literal angle brackets, it is the attribution/speaker-labelling that is wrong, not the character escaping itself.&quot;,&quot;Reviewed site/src/transcripts/d1679987-c781-4167-82f2-4fb2b67962c1.md lines 2000-4500 (rendered file lines ~2000-3400+ covering the author's-notes/publishing/language-police portion of the session). The most serious and repeated problem is harness content being attributed to David: full &lt;\task-notification&gt; XML blocks (subagent results, sometimes 1000+ words), local-command-stdout wrappers, and the entire auto-generated /compact continuation summary all render inside '&lt;strong&gt;David:&lt;/strong&gt;' blockquotes, making it look like the human pasted raw system output or wrote a multi-page recap. Nested inside those misattributed blocks is a second serious defect: large subagent report payloads that are themselves JSON-embedded markdown documents (headers, tables, code fences) are rendered as one giant escaped wall of text with literal \\n sequences and HTML entities instead of being parsed as markdown — tables and headers never render. Also found: one clear double-escaping case (-&gt; escaped twice to -&amp;gt;), a redaction-label inconsistency (bare 'unpublished' spliced mid-sentence/mid-path instead of 'unpublished prose'), a case where a fully-redacted list item produces a numbering gap (11 → 13) with no visible marker, and generally noisy unwrapped one-line Bash tool-call previews throughout. No broken/unclosed &lt;details&gt; tags were found in this range (81 open vs 82 close due to one pre-existing &lt;/details&gt; at the very top of the slice, i.e. balanced). No markdown-table-broken-by-pipes or ANSI-code noise was observed in this particular slice.&quot;,&quot;Two systemic, high-severity rendering defects dominate this session page. (1) tools/render.py's truncate() helper character-truncates raw command/description text without any awareness of <span class="redacted">redacted...</span> markers or the &lt;span class=\&quot;redacted\&quot;&gt; tags substituted for them, so truncated previews frequently cut mid-marker or mid-tag, leaving literal stray '<span class="redacted">unpublished' text or unclosed &lt;span&gt; tags loose in the page (confirmed by comparing against build/redacted/7257e15f....json, which holds the well-formed marker before truncation — so the bug is introduced in render.py, not upstream). This recurs at least 20 times in this one file, concentrated in Bash tool-call summaries from scene 41 onward. (2) Four large harness task-notification payloads (each containing a full subagent report) are rendered verbatim inside blockquotes labelled 'David:', misattributing thousands of words of tool-generated content to the human author; within those blocks the XML wrapper tags are only escaped as literal text while the report's own markdown is separately rendered as real HTML, producing a confusing hybrid of escaped-looking tags and live headers/lists, and each block ends with leaked &lt;usage&gt; token/duration bookkeeping. No timestamps appear anywhere in the page (minor, worth confirming whether the source data even has them). No table, double-escaping, or empty/duplicate-turn defects were found in this file. Root cause for both major classes is the render layer (tools/render.py): the truncate() function needs to be marker-aware (truncate before redaction/markup, or skip cut points inside a marker/tag), and task-notification/system content needs to be detected and either suppressed or rendered in a clearly non-David-attributed, consistently-escaped way rather than being fed through as blockquoted user text.&quot;,&quot;Reviewed the four short sessions in full. The dominant, high-severity defect is in c214c046 (Redrafting the second act): a background subagent's completion is delivered to the harness as a synthetic &lt;\task-notification&gt; user-turn, and because FORMAT_NOTES.md's parser treats any plain-string 'user' line as real human input, the renderer attributes an entire ~200-line worldbuilding report (with rendered headings, lists and a data table) to 'David:' inside a blockquote — while the wrapper's own XML tags stay literally escaped, so the same blockquote mixes raw tag text with fully-rendered markdown. This is the same bug class as other harness-message-as-user issues (system-reminder, local-command-caveat) but far more damaging here because of its size and because it reads as genuine authored content. be6bcf16 shows a smaller instance of the same root cause plus a distinct redaction-layer bug: raw ANSI SGR bracket codes ('[1mOpus 5[22m') leaking through local-command-stdout output verbatim. Remaining findings are lower-severity polish issues: non-Bash tool-call entries (ToolSearch, Artifact, Skill, Write, Edit, Read) render with no descriptive text unlike Bash entries, and consecutive redaction spans in 61a194e2 sometimes abut with no separator, occasionally collapsing a tool-call preview into pure noise. 92c486ed was otherwise clean of structural defects.&quot;,&quot;Sampled the 4 largest, 4 median, and 4 smallest subagent HTML pages under site/src/transcripts/subagents/. The 4 smallest pages (single Read+StructuredOutput agents) rendered cleanly with no defects found. The main finding is a serious, recurring double-escaping bug affecting the page &lt;title&gt; and &lt;h1&gt; whenever the agent's initiating prompt itself contained redaction-marker HTML: the title/h1 generator appears to take the already-HTML-rendered prompt text (with real &lt;span&gt; tags in it) and run it through an HTML-escaping step meant for plain text, so the literal tag markup shows up as visible text ('&lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;') in the browser tab and in the on-page H1 heading. This occurred in 5 of the 12 sampled pages (every page whose spawning prompt led with something that got redacted), so it is likely widespread across the corpus, not a rare edge case. Secondary findings: one instance of literal unrendered markdown bold syntax ('Chain reading notation...') left un-rendered inside a list item, apparently because a redaction substitution interfered with the markdown-to-HTML pass; and a formatting quirk where a whole-sentence redaction that fell inside a markdown table row collapses onto one column, leaving the row's other cells empty and breaking the '#' sequence numbering in that ranked-list table (cosmetic, arguably an unavoidable side effect of sentence-level redaction). No harness-notification leakage, no broken/unclosed &lt;details&gt; blocks (all 12 files had balanced open/close tags), no double-escaped &amp;lt; sequences, no redaction markers found inside &lt;code&gt;/&lt;pre&gt; blocks, no tool-result JSON/ANSI noise, and no empty or duplicated turns in this sample.&quot;,&quot;Reviewed site/book/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.html (7730 lines, sampled lines 1-1500 plus targeted greps across the full file) and site/book/transcripts/index.html (README does not exist; index.html serves that role). The single biggest, most consequential defect is systemic: raw &lt;\task-notification&gt; harness payloads (task-ids, output-file paths, full JSON results, per-agent diagnostics, token/duration usage) are rendered inside 'David:' blockquotes as if the user authored them — 13 instances in this one transcript, clearly a site-wide rendering-layer bug in how task-notification messages get attributed to the human speaker rather than flagged as tool/system output. Second, there is a genuine HTML-corruption bug in the redaction-marker-to-span conversion: when a ⟦redacted: X</span> marker recurs inside the same tool-call string (once in the command, once in its truncated parenthetical description), the second occurrence sometimes converts asymmetrically, leaving raw <span class="redacted">...</span> bracket text plus an unmatched closing &lt;/span&gt; tag — confirmed by diffing against build/redacted's correctly-paired markers, so the bug is in render.py, not the redaction step. Third, a bare 'unpublished' redaction label (missing the standard 'redacted sentence:'/'prose' wrapper) appears repeatedly, both in this transcript and in index.html's chapter-description column, reading as a dangling, ungrammatical fragment. A lower-severity leak lets a partial git co-author trailer and email fragment survive redaction of an otherwise-hidden commit message. Finally, embedded multi-paragraph markdown documents returned by subagent workflows (inside task-notification results) are only half-converted — bold text becomes &lt;strong&gt; but headers and numbered lists stay as literal '##'/'1.' text — and tool-call detail blocks routinely surface raw, low-value tool-result fragments (ls output, byte/line counts) as noise. No unclosed &lt;details&gt;, escaped-HTML double-encoding, or broken markdown tables were found in the sampled region.&quot;&quot;,&quot;Sampling 10 random assistant turns (indices 7,27,29,35,61,67,75,174,188,204) in build/parsed/0c653b33-1efd-45bb-b7ab-26ed3dca981e.json against the raw jsonl found the tool_use/tool_result/text block sequences themselves faithful, correctly ordered, non-duplicated, and correctly timestamped -- no parser fidelity bugs among the assistant turns sampled. The real, high-impact problem is on the user-turn side: walking the first ~40 user turns turned up a systematic defect class the sampling of assistant turns wouldn't have caught -- harness-generated <code>&lt;\\task-notification&gt;</code> messages (Workflow/Agent async-completion pings), the <code>&lt;local-command-stdout&gt;</code> wrapper for /compact, and the auto-injected post-compaction conversation-summary text are all real-input user jsonl lines by the letter of FORMAT_NOTES.md's parsing rule, so the parser correctly-per-spec but wrongly-per-intent treats them as David's own prompts and the renderer prints them as '<strong>David:</strong> ...' blockquotes. In this one session that produces roughly two dozen blockquotes 'from David' that are actually raw XML/ANSI harness noise, including at least one that inlines a ~14,000-character tool-result JSON blob wholesale. This is the dominant defect by volume and reader-facing severity; everything else found (a double-escaping spot, an ANSI-code leak, and a redaction miss on private file paths inside nested escaped JSON, confirmed present already in build/redacted/ rather than introduced by the renderer) is comparatively minor. Recommend the parser special-case real-input user lines that start with the harness tags (&lt;\task-notification&gt;, &lt;local-command-stdout&gt;, &lt;local-command-stdout&gt; siblings, and the 'This session is being continued from...' compaction-summary boilerplate) into a distinct non-David block kind, and separately have the redactor be re-run/checked against nested-escaped JSON strings (the fenholt.md leak proves at least one such pattern slips through).&quot;]<br />
+Rules: fix at the right layer (parser for classification of harness messages, which should become a compact 'system' block kind rendered as a small grey line such as &quot;⚙ background task completed&quot; or &quot;⚙ system reminder&quot; with the payload dropped, never as David's words; renderer for markdown/escaping/details problems; redactor for marker placement). Add a regression test per class. Verify the raw jsonl format in the transcripts dir when unsure how a harness message looks; tools/FORMAT_NOTES.md documents what is known, update it. After fixing, run the pipeline: uv run python tools/parse_transcripts.py; uv run python -c &quot;from tools.prose_index import main; main()&quot;; uv run python tools/redact.py; uv run python tools/render.py; uv run pytest -q; mdbook build site. Re-read the same excerpts to confirm each class is gone. Write build/render-fix-report.md listing each class, the root cause, the fix, and anything you could not fix. Return that report.</p></blockquote>
+
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: ls tools/ &amp;&amp; echo --- &amp;&amp; cat tools/FORMAT_NOTES.md</p>
+<p>✅ 127 lines, 6727 chars</p>
+<p>🔧 Bash: wc -l tools/parse_transcripts.py tools/redact.py tools/render.py</p>
+<p>✅ 4 lines, 100 chars —      551 tools/parse_transcripts.py /      501 tools/redact.py /      545 tools/render.py</p>
+<p>🔧 Read tools/parse_transcripts.py</p>
+<p>✅ 552 lines, 22847 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's look at the raw jsonl format for these harness messages to understand exact shapes.</p>
+</div>
+
+<details><summary>32 tool calls</summary>
+<p>🔧 Bash: grep -l "task-notification" ~/.claude/projects/-Users-drmaciver-Projects-autoroad/*.jsonl…</p>
+<p>✅ 3 lines, 335 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json with open('0c653b33-1efd-45bb-b7ab-26ed3d…</p>
+<p>✅ 1 lines, 128 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa8-c87b47800a5c/scratchpad/tn.txt</p>
+<p>✅ 85 lines, 47681 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> 2&gt;/dev/null; cd <span class="redacted">redacted: private</span> python3 -c " import json with…</p>
+<p>✅ 1 lines, 133 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa8-c87b47800a5c/scratchpad/compact.txt</p>
+<p>✅ 70 lines, 6573 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json with open('0c653b33-1efd-45bb-b7ab-26ed3d…</p>
+<p>✅ 22 lines, 3819 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for f in d1679987-c781-4167-82f2-4fb2b67962c1 be6bcf16-d9e6-4525-8…</p>
+<p>✅ 31 lines, 3631 chars</p>
+<p>🔧 Read tools/render.py</p>
+<p>✅ 546 lines, 24371 chars</p>
+<p>🔧 Read tools/redact.py</p>
+<p>✅ 502 lines, 21208 chars</p>
+<p>🔧 Bash: python3 -c " import json d = json.load(open('tools/spoilers.json')) print(list(d.keys()))…</p>
+<p>✅ 18 lines, 851 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json, re, glob pat = re.compile(r'^/\S+\$') fo…</p>
+<p>✅ 22 lines, 1286 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rn "redacted" site/theme site/book.toml site/src/*.css 2&gt;/de…</p>
+<p>✅ 24 lines, 582 chars</p>
+<p>🔧 Read site/theme/custom.css</p>
+<p>✅ 26 lines, 529 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> find . -path ./site/book -prune -o -iname "test_*" -print -o -inam…</p>
+<p>✅ 39 lines, 1031 chars</p>
+<p>🔧 Read tests/test_parse_transcripts.py</p>
+<p>✅ 301 lines, 12176 chars</p>
+<p>🔧 Read tests/test_render.py</p>
+<p>✅ 281 lines, 10502 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's check test_redact.py to understand test conventions there.</p>
+</div>
+
+<p>🔧 Read tests/test_redact.py</p>
+<p>✅ 236 lines, 8877 chars</p>
+
+<div class="assistant-prose">
+<p>Now let's implement the parser changes.</p>
+</div>
+
+<p>🔧 Edit tools/parse_transcripts.py</p>
+<p>✅ 1 lines, 173 chars</p>
+
+<div class="assistant-prose">
+<p>Now update <code>summarize_tool_use</code> and <code>summarize_tool_result</code> to strip ANSI:</p>
+</div>
+
+<p>🔧 Edit tools/parse_transcripts.py</p>
+<p>✅ 1 lines, 173 chars</p>
+<p>🔧 Edit tools/parse_transcripts.py</p>
+<p>✅ 1 lines, 173 chars</p>
+
+<div class="assistant-prose">
+<p>Now the main turn-assembly change:</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Edit tools/parse_transcripts.py</p>
+<p>✅ 1 lines, 173 chars</p>
+<p>🔧 Edit tools/parse_transcripts.py</p>
+<p>✅ 1 lines, 173 chars</p>
+<p>🔧 Bash: uv run pytest tests/test_parse_transcripts.py -q 2&gt;&amp;1 | tail -40</p>
+<p>✅ 2 lines, 98 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, all still pass. Now let's write a quick manual test against the real session to validate the new behavior before writing formal tests.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c " from tools.parse_transcripts import parse_trans…</p>
+<p>✅ 8 lines, 968 chars</p>
+
+<div class="assistant-prose">
+<p>Excellent, working as intended. Let's check the /compact command block picked up its output correctly.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c " from tools.parse_transcripts import parse_trans…</p>
+<p>✅ 4 lines, 367 chars</p>
+
+<div class="assistant-prose">
+<p>ANSI stripped, output merged. Now let's move to redact.py: add TEXT_BLOCK_FIELDS entries and the word-boundary fix.</p>
+</div>
+
+<p>🔧 Edit tools/redact.py</p>
+<p>✅ 1 lines, 162 chars</p>
+
+<div class="assistant-prose">
+<p>Now update TEXT_BLOCK_FIELDS and the &quot;unpublished&quot; tag styling separation (marker text stays same; render.py will distinguish). Also add <code>system_note</code> and <code>command</code> output fields:</p>
+</div>
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Edit tools/redact.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit tools/redact.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit tools/redact.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Bash: uv run pytest tests/test_redact.py -q 2&gt;&amp;1 | tail -30</p>
+<p>✅ 2 lines, 98 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the marker-aware <code>truncate()</code>:</p>
+</div>
+
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+
+<div class="assistant-prose">
+<p>Now fix the double-escaped title/h1 bug in <code>render_subagent_pages</code>:</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "esc_inline\|esc(" tools/render.py</p>
+<p>✅ 16 lines, 1139 chars</p>
+<p>🔧 Read tools/render.py</p>
+<p>✅ 30 lines, 1549 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now update the four title-related call sites, plus fix the comment/edit I made earlier in <code>render_subagent_pages</code>:</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "esc_inline\|esc_title" tools/render.py | sed -n '1,40p'</p>
+<p>✅ 17 lines, 1175 chars</p>
+<p>🔧 Read tools/render.py</p>
+<p>✅ 60 lines, 2683 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now update the comment in <code>render_subagent_pages</code> (which mentioned esc_inline previously) to reference <code>esc_title</code>:</p>
+</div>
+
+<p>🔧 Read tools/render.py</p>
+<p>✅ 20 lines, 1285 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+
+<div class="assistant-prose">
+<p>Now let's update <code>render_turn</code> for the new <code>system</code> role and <code>command</code> output, plus <code>tool_use_summary</code> fallback:</p>
+</div>
+
+<p>🔧 Read tools/render.py</p>
+<p>✅ 100 lines, 4425 chars</p>
+
+<div class="assistant-prose">
+<p>Now let's apply the edits: fallback in <code>tool_use_summary</code>, system_note text helper, and <code>render_turn</code> updates.</p>
+</div>
+
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+
+<div class="assistant-prose">
+<p>Now the missing-timestamp fix in <code>render_transcript_body</code>:</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Read tools/render.py</p>
+<p>✅ 15 lines, 781 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "def render_transcript_body" -A 10 tools/render.py</p>
+<p>✅ 11 lines, 445 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit site/theme/custom.css</p>
+<p>✅ 1 lines, 168 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's update <code>SUBAGENT_STYLE</code> in render.py to mirror these classes:</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "SUBAGENT_STYLE" -A 25 tools/render.py | head -30</p>
+<p>✅ 30 lines, 1681 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+
+<div class="assistant-prose">
+<p>Now let's run the existing test suite to see what breaks with these render.py changes.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest tests/ -q 2&gt;&amp;1 | tail -60</p>
+<p>✅ 3 lines, 178 chars</p>
+<p>🔧 Read tests/test_parse_transcripts.py</p>
+<p>✅ 10 lines, 784 chars</p>
+<p>🔧 Edit tests/test_parse_transcripts.py</p>
+<p>✅ 1 lines, 178 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest tests/test_parse_transcripts.py -q 2&gt;&amp;1 | tail -60</p>
+<p>✅ 2 lines, 98 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>All pass. Now let's add redact.py tests.</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Edit tests/test_redact.py</p>
+<p>✅ 1 lines, 167 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest tests/test_redact.py -q 2&gt;&amp;1 | tail -100</p>
+<p>✅ 2 lines, 98 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c " import json from tools import redact data = {…</p>
+<p>✅ 1 lines, 72 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c " import re SENT = re.compile(r'(?&lt;=[.!?])\s+|\n+…</p>
+<p>✅ 2 lines, 74 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c " import json, tempfile, pathlib from tools impor…</p>
+<p>✅ 1 lines, 27 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> cat &gt; /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-h…</p>
+<p>✅ 1 lines, 25 chars</p>
+<p>🔧 Edit tests/test_redact.py</p>
+<p>✅ 1 lines, 167 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest tests/test_redact.py -q 2&gt;&amp;1 | tail -60</p>
+<p>✅ 2 lines, 98 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's add render.py tests for the remaining classes.</p>
+</div>
+
+<p>🔧 Read tests/test_render.py</p>
+<p>✅ 25 lines, 743 chars</p>
+<p>🔧 Edit tests/test_render.py</p>
+<p>✅ 1 lines, 167 chars</p>
+
+<div class="assistant-prose">
+<p>Now add truncate marker-awareness tests, tool_use_summary fallback, render_turn system/command-output, date markers, and subagent page title double-escape regression:</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Read tests/test_render.py</p>
+<p>✅ 20 lines, 709 chars</p>
+<p>🔧 Edit tests/test_render.py</p>
+<p>✅ 1 lines, 167 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest tests/test_render.py -q 2&gt;&amp;1 | tail -100</p>
+<p>✅ 13 lines, 837 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c " from tools import render s = '<span class="redacted">redacted sentence: unpublished prose</span>…</p>
+<p>✅ 1 lines, 117 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c " from tools import render s = '<span class="redacted">redacted sentence: unpublished prose</span>…</p>
+<p>✅ 3 lines, 223 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good catch — fixed. Now let's add the remaining render tests: <code>tool_use_summary</code> fallback, <code>render_turn</code> for system role and command output, date markers, and subagent title double-escape regression.</p>
+</div>
+
+<p>🔧 Read tests/test_render.py</p>
+<p>✅ 45 lines, 1719 chars</p>
+<p>🔧 Edit tests/test_render.py</p>
+<p>✅ 1 lines, 167 chars</p>
+
+<div class="assistant-prose">
+<p>Now let's find where <code>render_turn</code> tests live and add system/command-output tests:</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "def test_render_turn" tests/test_render.py</p>
+<p>✅ 4 lines, 217 chars</p>
+<p>🔧 Read tests/test_render.py</p>
+<p>✅ 30 lines, 1287 chars</p>
+<p>🔧 Edit tests/test_render.py</p>
+<p>✅ 1 lines, 167 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's add <code>render_transcript_body</code> date-marker test and the subagent title double-escape regression test:</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "def test_render_session_writes_markdown_page\|def test_re…</p>
+<p>✅ 4 lines, 249 chars</p>
+<p>🔧 Read tests/test_render.py</p>
+<p>✅ 70 lines, 2728 chars</p>
+<p>🔧 Edit tests/test_render.py</p>
+<p>✅ 1 lines, 167 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest tests/test_render.py -q 2&gt;&amp;1 | tail -100</p>
+<p>✅ 2 lines, 98 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>All pass. Let's run the whole suite now.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest -q 2&gt;&amp;1 | tail -60</p>
+<p>✅ 3 lines, 179 chars</p>
+
+<div class="assistant-prose">
+<p>All 120 tests pass. Now let's run the actual pipeline as instructed.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python tools/parse_transcripts.py 2&gt;&amp;1 | tail -40</p>
+<p>✅ 4 lines, 56 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c "from tools.prose_index import main; main()" 2&gt;&amp;1…</p>
+<p>✅ 1 lines, 186 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python tools/redact.py 2&gt;&amp;1 | tail -40</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python tools/render.py 2&gt;&amp;1 | tail -60</p>
+<p>✅ 1 lines, 31 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's run the full test suite again post-pipeline, then build the mdBook site.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest -q 2&gt;&amp;1 | tail -40</p>
+<p>✅ 3 lines, 179 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> which mdbook 2&gt;&amp;1 cd site &amp;&amp; mdbook build 2&gt;&amp;1 | tail -80</p>
+<p>✅ 4 lines, 167 chars</p>
+
+<div class="assistant-prose">
+<p>Build succeeded. Now let's re-read the actual excerpts the reviewer flagged to confirm each defect class is gone.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -c "task-notification" site/src/transcripts/0c653b33-1efd-45b…</p>
+<p>✅ 10 lines, 661 chars</p>
+
+<div class="assistant-prose">
+<p>No more task-notification leakage, and 71 real &quot;David:&quot; turns vs the earlier much larger inflated count. Let's inspect the /compact area directly and check for duplicate turns:</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '925,945p' site/src/transcripts/0c653b33-1efd-45bb-b7ab-26e…</p>
+<p>✅ 21 lines, 2940 chars</p>
+
+<div class="assistant-prose">
+<p>This is exactly the clean, collapsed representation intended — one system note, one &quot;David: ran /compact&quot; line, one small output note. Let's check the ANSI/unpublished-label/adjacent-span/title issues on the built site.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== ansi leftover check ===" grep -rn "\[2m\|\[22m\|\[1m" si…</p>
+<p>✅ 7 lines, 622 chars</p>
+
+<div class="assistant-prose">
+<p>No ANSI leftovers, <code>unpub-tag</code> styling applied, no double-escaped <code>&lt;span&gt;</code> markup in any subagent page title/h1. Let's check for the double-escaping title bug on the specific pages the reviewer flagged and check the date markers + adjacent spans:</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for f in abcd531dd837554ac ae03fa0157c981962 ac81d4cfd8b74d9e6 aaf…</p>
+<p>✅ 10 lines, 503 chars</p>
+
+<div class="assistant-prose">
+<p>Clean readable titles, no leaked HTML markup. Let's check date markers appear and check the ae03fa0157c981962.html &quot;unrendered-markdown&quot; bold issue:</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -c "date-marker" site/src/transcripts/0c653b33-1efd-45bb-b7ab…</p>
+<p>✅ 5 lines, 195 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '828,838p' site/src/transcripts/subagents/ae03fa0157c981962…</p>
+<p>✅ 11 lines, 363 chars</p>
+
+<div class="assistant-prose">
+<p>The stray `` markdown marker is gone — resolved cleanly by the delimiter-balancing pass. Now let's verify the adjacent-redaction-spans fix on the actual site and the fully-redacted tool-call classes are unaffected (accepted, not touched):</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -o '&lt;/span&gt; &lt;span class="redacted"' site/src/transcripts/*.md…</p>
+<p>✅ 2 lines, 17 chars</p>
+
+<div class="assistant-prose">
+<p>No unglued adjacent spans remain. Let's check the leaked-private-path example and the double-escaped <code>-&gt;</code> code sample and truncation-splits-marker examples:</p>
+</div>
+
+<details><summary>28 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== private path leak check ===" grep -n "fenholt.md" site/s…</p>
+<p>✅ 7 lines, 234 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "<span class="redacted">redacted: private</span>" site/src/transcripts/0c653b33-1efd-4…</p>
+<p>✅ 2 lines, 176 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "<span class="redacted">" site/src/transcripts/d1679987-c781-4167-82f2-4fb2b67962c1.md echo "---" grep -n "⟦redacted: private</span>…</p>
+<p>✅ 2 lines, 258 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c " import json d = json.load(open('build/redacted/…</p>
+<p>✅ 4 lines, 277 chars</p>
+<p>🔧 Read tools/parse_transcripts.py</p>
+<p>✅ 15 lines, 379 chars</p>
+<p>🔧 Edit tools/parse_transcripts.py</p>
+<p>✅ 1 lines, 173 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "^from tools.parse_transcripts import" tests/test_parse_tr…</p>
+<p>✅ 1 lines, 39 chars</p>
+<p>🔧 Read tests/test_parse_transcripts.py</p>
+<p>✅ 12 lines, 245 chars</p>
+<p>🔧 Edit tests/test_parse_transcripts.py</p>
+<p>✅ 1 lines, 178 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "def test_bash_tool_use_truncated_and_has_description" -A…</p>
+<p>✅ 7 lines, 293 chars</p>
+<p>🔧 Edit tests/test_parse_transcripts.py</p>
+<p>✅ 1 lines, 178 chars</p>
+<p>🔧 Bash: python3 -c "print(len('<span class="redacted">redacted: private</span>'))"</p>
+<p>✅ 1 lines, 2 chars</p>
+<p>🔧 Edit tests/test_parse_transcripts.py</p>
+<p>✅ 1 lines, 178 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "^def test_truncate_short_text_untouched" tests/test_parse…</p>
+<p>✅ 1 lines, 45 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, only one. Let's run the tests.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest tests/test_parse_transcripts.py -q 2&gt;&amp;1 | tail -60</p>
+<p>✅ 29 lines, 2015 chars</p>
+<p>🔧 Edit tools/parse_transcripts.py</p>
+<p>✅ 1 lines, 173 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest tests/test_parse_transcripts.py -q 2&gt;&amp;1 | tail -60</p>
+<p>✅ 2 lines, 98 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>All pass now. Let's re-run the full pipeline to verify the actual leak is fixed.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest -q 2&gt;&amp;1 | tail -20 uv run python tools/parse_transcr…</p>
+<p>✅ 8 lines, 279 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "<span class="redacted">redacted: private</span>" site/src/transcripts/0c653b33-1efd-4…</p>
+<p>✅ 1 lines, 31 chars</p>
+
+<div class="assistant-prose">
+<p>Leak resolved. Let's also rebuild the mdBook and do a broader corpus-wide sweep for leftover raw REPO_ROOT / stray markers / ANSI codes across all files.</p>
+</div>
+
+<details><summary>24 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; mdbook build 2&gt;&amp;1 | tail -20</p>
+<p>✅ 3 lines, 142 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== leftover raw REPO_ROOT across all rendered pages ===" gr…</p>
+<p>✅ 10 lines, 282 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rl "…</p>
+<p>✅ 14 lines, 682 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "<span class="redacted">redacted</span>" site/src/transcripts/README.md | head -3 echo…</p>
+<p>✅ 5 lines, 580 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '30,60p' site/src/transcripts/subagents/a17f2ea07f735cbb9.h…</p>
+<p>✅ 31 lines, 4859 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> find ~/.claude/projects/-Users-drmaciver-Projects-autoroad -name "…</p>
+<p>✅ 3 lines, 403 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json with open('3ef92e14-71be-4557-a7d1-f251a7…</p>
+<p>✅ 2 lines, 418 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json with open('7257e15f-eb7f-4d0b-83e8-dde205…</p>
+<p>✅ 2 lines, 716 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rl "SYSTEM NOTIFICATION - NOT USER INPUT" . 2&gt;/dev/null | wc…</p>
+<p>✅ 15 lines, 1043 chars</p>
+<p>🔧 Read tools/parse_transcripts.py</p>
+<p>✅ 45 lines, 2021 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "TASK_NOTIFICATION_PREFIX\|stripped.startswith(TASK_NOTIFI…</p>
+<p>✅ 2 lines, 122 chars</p>
+<p>🔧 Read tools/parse_transcripts.py</p>
+<p>✅ 20 lines, 1314 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's fix the detection to not require the tag at the very start (handling the <code>[SYSTEM NOTIFICATION - NOT USER INPUT]</code> preamble that precedes it for subagents):</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Edit tools/parse_transcripts.py</p>
+<p>✅ 1 lines, 173 chars</p>
+<p>🔧 Read tools/parse_transcripts.py</p>
+<p>✅ 55 lines, 2815 chars</p>
+<p>🔧 Edit tools/parse_transcripts.py</p>
+<p>✅ 1 lines, 173 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's add a regression test for this variant and re-run everything.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "def test_task_notification_becomes_system_note_not_user_t…</p>
+<p>✅ 26 lines, 1209 chars</p>
+<p>🔧 Edit tests/test_parse_transcripts.py</p>
+<p>✅ 1 lines, 178 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest -q 2&gt;&amp;1 | tail -40</p>
+<p>✅ 3 lines, 179 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>All tests pass. Now re-run the full pipeline and rebuild:</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python tools/parse_transcripts.py 2&gt;&amp;1 | tail -10 uv run py…</p>
+<p>✅ 9 lines, 429 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== task-notification leaks (excluding README/legit prose me…</p>
+<p>✅ 8 lines, 246 chars</p>
+
+<div class="assistant-prose">
+<p>All clean now (the only remaining <code>⟦</code> hit is the legitimate explanatory sentence in README.md). Let's also do a final broad sweep for any other harness-notification variants we might have missed (searching in raw jsonl for other bracket-style system messages not yet covered):</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import json, glob, re seen = {} for fn in glob.glob('…</p>
+<p>✅ 5 lines, 109 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "🔧 ToolSearch\|🔧 Artifact" site/src/transcripts/*.md site/…</p>
+<p>✅ 6 lines, 818 chars</p>
+
+<div class="assistant-prose">
+<p>Now shows meaningful info instead of a bare <code>🔧 ToolSearch</code>. Let's check <code>date-marker</code> shows up sensibly across a couple more sessions, and spot-check the &quot;unpub-tag&quot; rendering on the live site more broadly.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for f in site/src/transcripts/*.md; do   n=$(grep -c "date-marker"…</p>
+<p>✅ 10 lines, 739 chars — site/src/transcripts/0c653b33-1efd-45bb-b7ab-26ed3dca981e.md: 2 date markers / site/src/transcripts/10c1dd77-c31a-4be9-a7b6-23651a4792b4.md: 1 date markers / site/src/transcripts/3ef92e14-71be-4557-a7d1-f251a7410081.md: 4 date markers</p>
+
+<div class="assistant-prose">
+<p>Good. Now let's do a final full pytest run and double-check the multi-part-session chunking didn't get broken (0c653b33 was noted as 5027 lines / large):</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> ls site/src/transcripts/*part* 2&gt;/dev/null wc -l site/src/transcri…</p>
+<p>✅ 5 lines, 305 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -c 'href="' site/src/transcripts/0c653b33-1efd-45bb…</p>
+<p>✅ 3 lines, 6 chars</p>
+
+<div class="assistant-prose">
+<p>Everything checks out — 4 clean <code>/compact</code> events matching 4 compaction-summary notes, and subagent links intact. Now let's update <code>tools/FORMAT_NOTES.md</code> to document these new behaviors, as instructed.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Read tools/FORMAT_NOTES.md</p>
+<p>✅ 20 lines, 1033 chars</p>
+<p>🔧 Read tools/FORMAT_NOTES.md</p>
+<p>✅ 20 lines, 1241 chars</p>
+<p>🔧 Edit tools/FORMAT_NOTES.md</p>
+<p>✅ 1 lines, 168 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's add a dedicated new section documenting the harness-output-as-real-input shapes, right after the <code>user</code> lines section:</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Read tools/FORMAT_NOTES.md</p>
+<p>✅ 15 lines, 958 chars</p>
+<p>🔧 Edit tools/FORMAT_NOTES.md</p>
+<p>✅ 1 lines, 168 chars</p>
+<p>🔧 Read tools/FORMAT_NOTES.md</p>
+<p>✅ 40 lines, 2681 chars</p>
+<p>🔧 Read tools/FORMAT_NOTES.md</p>
+<p>✅ 24 lines, 1285 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's append a section documenting the redaction/rendering robustness fixes for future maintainers:</p>
+</div>
+
+<p>🔧 Edit tools/FORMAT_NOTES.md</p>
+<p>✅ 1 lines, 168 chars</p>
+
+<div class="assistant-prose">
+<p>Now let's run the complete pipeline one final time end-to-end to make sure everything is consistent, then write the report.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest -q 2&gt;&amp;1 | tail -10 echo "---" uv run python tools/pa…</p>
+<p>✅ 13 lines, 613 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git status --short | head -40</p>
+<p>✅ 40 lines, 2280 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git diff pyproject.toml</p>
+<p>✅ 16 lines, 377 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git status --short | wc -l git diff --stat -- tools/ tests/ site/t…</p>
+<p>✅ 10 lines, 590 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good — 1736 changed files total (mostly the regenerated <code>build/</code> and <code>site/</code> output, expected). Now let's write the required report.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span></p>
+<p>✅ 1 lines, 31 chars — (Bash completed with no output)</p>
+<p>🔧 Write build/render-fix-report.md</p>
+<p>✅ 1 lines, 163 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest -q 2&gt;&amp;1 | tail -5 git diff --stat -- tests/ | tail -5</p>
+<p>✅ 7 lines, 450 chars</p>
+<p>🔧 Edit build/render-fix-report.md</p>
+<p>✅ 1 lines, 173 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's do one final full verification pass to make sure everything is in a consistent, green state.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest -q 2&gt;&amp;1 | tail -5 echo "=== pipeline ===" uv run pyt…</p>
+<p>✅ 17 lines, 678 chars</p>
+
+<div class="assistant-prose">
+<p>Everything is clean and green. Here is the report.</p>
+</div>
+
+<p>🔧 Read build/render-fix-report.md</p>
+<p>✅ 333 lines, 18967 chars</p>
+
+<div class="assistant-prose">
+<h2>Summary</h2>
+<p>Fixed every defect class from the review by tracing them to a small set of root causes (not 25 separate patches):</p>
+<ol>
+<li><strong>Harness output rendered as if David/the subagent said it</strong> (the dominant defect) — <code>&lt;task-notification&gt;</code>, the <code>/compact</code> auto-summary, and <code>&lt;local-command-stdout&gt;</code> all arrive as real-input-shaped <code>user</code> lines and were rendered as human speech. Fixed in the parser (<code>tools/parse_transcripts.py</code>): these now become a <code>system_note</code> block on a <code>role=&quot;system&quot;</code> turn (payload dropped, just a short label kept) or fold into the preceding <code>command</code> block; the renderer shows them as a small un-attributed <code>⚙ ...</code> line, never a blockquote. Also caught, via a full-corpus grep rather than just the review's excerpts, a second variant where a subagent's own <code>&lt;task-notification&gt;</code> is prefixed with a <code>[SYSTEM NOTIFICATION - NOT USER INPUT]</code> warning paragraph that the original code didn't recognize either.</li>
+<li><strong>ANSI escape leaks</strong>, <strong>markdown delimiters left unbalanced by redaction</strong>, <strong>a redactor word-boundary bug that could miss a private path</strong>, <strong>truncation splitting a redaction marker or <code>REPO_ROOT</code> in half</strong> (found in two independent places — <code>render.py</code> and <code>parse_transcripts.py</code>), <strong>titles double-escaped when they start with a redacted marker</strong>, <strong>the bare &quot;unpublished&quot; flag looking like a hidden-spoiler pill</strong>, <strong>adjacent redaction spans with no separator</strong>, <strong>tool calls with no description</strong>, and <strong>missing timestamps</strong> — each fixed at its root layer (parser/redactor/renderer per the given rule).</li>
+</ol>
+<p>Added 38 regression tests (125 pass, up from 87). Ran the full pipeline (<code>parse_transcripts.py</code> → <code>prose_index</code> → <code>redact.py</code> → <code>render.py</code> → <code>mdbook build</code>) end to end and re-verified against the live rendered corpus: zero remaining <code>task-notification</code>/<code>SYSTEM NOTIFICATION</code> leaks, zero raw <span class="redacted">redacted: private</span><code>path leaks, zero ANSI leaks, zero double-escaped</code>&lt;span&gt;` in any title, across all 9 sessions and 1712 subagent pages.</p>
+<p>A handful of low-severity items (fully-redacted tool-call lines, table-row/list-numbering side effects of sentence-level redaction, a git commit trailer surviving next to a redacted subject, generic long-command truncation) were investigated and left as accepted, documented design tradeoffs rather than bugs — explained in the report.</p>
+<p>Full report: <code><span class="redacted">redacted: private</span></code></p>
+<p>Key files changed: <code>tools/parse_transcripts.py</code>, <code>tools/redact.py</code>, <code>tools/render.py</code>, <code>site/theme/custom.css</code>, <code>tools/FORMAT_NOTES.md</code>, <code>tests/test_parse_transcripts.py</code>, <code>tests/test_redact.py</code>, <code>tests/test_render.py</code>, plus the regenerated <code>site/src/transcripts/**</code> and `site/book/**.</p>
+</div>
+</body></html>

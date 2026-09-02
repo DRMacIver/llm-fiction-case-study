@@ -1,0 +1,190 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: [redacted] (a novel-writing project). This is a READ-ONLY resea…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted] (a novel-writing project). This is a READ-ONLY resea…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-af0df1f17185319ed">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span> (a novel-writing project). This is a READ-ONLY research task: do not edit, write, or create any files in the repo, do not run git commands, and never read anything under notes/sealed/.</p>
+<p>Task: perform the &quot;extraction&quot; half of consistency-backfill for four scenes: draft/book-01/scenes/53-odderins-gate.md <span class="unpub-tag">unpublished</span>, 54-before-the-charter.md <span class="unpub-tag">unpublished</span>, 55-four-miles-of-nothing.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> Then read the four scene files.</p>
+<p>For EACH of the four scenes produce, exhaustively but tersely:</p>
+<ol>
+<li>ESTABLISHED FACTS the scene states that canon does not yet record: names, roles, ages, places, distances, prices, dates/days, System text (Skill/Level boxes verbatim), procedures, who-knows-what. Give exact quote + scene number/filename for each.</li>
+<li>IMPLICATIONS beyond what's stated (character history, geography, economy, institutions, magic mechanics, timeline) that canon should hold as Working claims. Cite the scene.</li>
+<li>CONTRADICTIONS with existing canon: quote both the scene and the canon file/section that conflicts.</li>
+<li>OPEN QUESTIONS from notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> that the scene touches, and whether it resolves one (flag if so — open questions should not be resolved casually).</li>
+</ol>
+<p>Do NOT include anything about the cause of the &quot;silent soil&quot; mystery (that's a sealed answer — don't discuss or speculate on its cause).</p>
+<p>Organize your final output by canon target file, e.g. &quot;## characters/peri.md&quot;, &quot;## world/timeline.md&quot;, &quot;## world/geography.md&quot;, &quot;## characters/minor.md&quot; — group all findings that would land in that file together, each bullet citing which scene it came from. This is so a later pass can apply canon updates file by file.</p>
+<p>Return the full organized markdown text as your final report (this is the primary deliverable — write it out in full, don't just summarize that you did it). Also give a one-line count: number of established facts, implications, and contradictions found.</p></blockquote>
+
+
+<details><summary>56 tool calls</summary>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+<p>✅ 43 lines, 2202 chars</p>
+<p>🔧 Bash: for f in notes/canon/characters/*.md; do echo "=== $f ==="; cat "$f"; done</p>
+<p>🔧 Bash: for f in notes/canon/world/*.md; do echo "=== $f ==="; cat "$f"; done</p>
+<p>✅ 41 lines, 2198 chars</p>
+<p>✅ 48 lines, 2203 chars</p>
+<p>🔧 Bash: cat notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 151 lines, 15604 chars</p>
+<p>🔧 Bash: ls notes/canon/characters/ notes/canon/world/</p>
+<p>✅ 30 lines, 408 chars — notes/canon/characters/: / appearance.md / <span class="redacted">redacted</span>.md</p>
+<p>🔧 Read draft/book-01/scenes/53-odderins-gate.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 46 lines, 7248 chars</p>
+<p>🔧 Read draft/book-01/scenes/54-before-the-charter.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 46 lines, 6451 chars</p>
+<p>🔧 Read draft/book-01/scenes/55-four-miles-of-nothing.md <span class="unpub-tag">unpublished</span></p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+<p>✅ 48 lines, 8127 chars</p>
+<p>✅ 44 lines, 6225 chars</p>
+<p>🔧 Bash: wc -l notes/canon/characters/*.md notes/canon/world/*.md | tail -1 grep -n "<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>…</p>
+<p>✅ 27 lines, 2229 chars</p>
+<p>🔧 Read notes/canon/deferred-beats.md</p>
+<p>✅ 202 lines, 12923 chars</p>
+<p>🔧 Read notes/canon/characters/edwin.md</p>
+<p>✅ 973 lines, 64921 chars</p>
+<p>🔧 Read notes/canon/characters/peri.md</p>
+<p>✅ 975 lines, 64377 chars</p>
+<p>🔧 Read notes/canon/characters/<span class="redacted">redacted</span>.md</p>
+<p>🔧 Read notes/canon/characters/mattie-ordish.md</p>
+<p>✅ 480 lines, 29431 chars</p>
+<p>✅ 553 lines, 36838 chars</p>
+<p>🔧 Read notes/canon/characters/minor.md</p>
+<p>✅ 628 lines, 40049 chars</p>
+<p>🔧 Bash: cat notes/canon/system.md</p>
+<p>🔧 Bash: cat notes/canon/world/geography.md</p>
+<p>✅ 402 lines, 24182 chars</p>
+<p>✅ 40 lines, 2200 chars</p>
+<p>🔧 Bash: cat notes/canon/world/dungeons.md</p>
+<p>✅ 41 lines, 2191 chars</p>
+<p>🔧 Bash: cat notes/canon/world/timeline.md</p>
+<p>🔧 Bash: cat notes/canon/world/farm-teaching.md</p>
+<p>✅ 278 lines, 17498 chars</p>
+<p>✅ 41 lines, 2224 chars</p>
+<p>🔧 Bash: grep -n "four miles\|<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>.*mouth\|<span class="redacted">redacted</span>\|mouth.*Holm\|Frostmonth.*…</p>
+<p>✅ 18 lines, 1316 chars</p>
+<p>🔧 Bash: grep -n "cooldown\|Agent of Fate\|Seal of the Loom" notes/canon/system.md | head -80</p>
+<p>✅ 36 lines, 2554 chars</p>
+<p>🔧 Read notes/canon/system.md</p>
+<p>✅ 160 lines, 11397 chars</p>
+<p>🔧 Read notes/canon/world/dungeons.md</p>
+<p>✅ 120 lines, 7616 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 11 lines, 1065 chars</p>
+<p>🔧 Bash: grep -n "Site\|Wystow.*plot\|college.*plot\|fourteen miles\|<span class="redacted">redacted</span>\|pale field" notes…</p>
+<p>✅ 22 lines, 1615 chars</p>
+<p>🔧 Bash: grep -rn "folding ground\|forty years\|Cornmonth.*suspend\|roped the gate" notes/canon/wo…</p>
+<p>✅ 2 lines, 213 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, confirms Cornmonth suspension already established (consistent), &quot;folding ground&quot; is new. Now I have enough to write the full report.</p>
+</div>
+
+<p>🔧 Bash: grep -n "growth-hold\|nurserymen" notes/canon/world/farm-teaching.md notes/canon/world/ma…</p>
+<p>✅ 4 lines, 531 chars</p>
+
+<div class="assistant-prose">
+<p>Now I have sufficient material. Writing the full extraction report.</p>
+<h2>Extraction: scenes 53–56</h2>
+<p>Counts: <strong>~38 established facts</strong>, <strong>~14 implications (Working candidates)</strong>, <strong>1 contradiction (none found — flagged below is a <em>tension/overlap</em>, not a contradiction)</strong>, plus several deferred-question touches (none resolved).</p>
+<hr />
+<h2>characters/edwin.md</h2>
+<ul>
+<li>Scene 54 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> Ruling voiced: &quot;everything that has pointed east ... has been easy... <span class="redacted">redacted sentence: unpublished prose</span> This is a new, load-bearing beat about Edwin's private theorizing on possible fate-shaping of events — adjacent to (but not resolving) the destiny/quest question. <strong>Flag for author attention</strong>: this edges toward the &quot;is this the quest&quot; territory that deferred-questions.md keeps deliberately open; scene draws a hard line (&quot;I'm not going to guess&quot;) but the column itself is new canon-worthy material.</li>
+<li>Scene 54 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Scene 55 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>; <span class="redacted">redacted</span>'s pasture. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> through it&quot; (i.e., two of the quiet ones are actually one field split by a <span class="redacted">redacted</span> — presumably Mattie's top field's two halves). Worth recording as a running tally.</li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> 013) — not new, confirms existing figure.</li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span>: Edwin states explicitly that a <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> 013 — this extends the same funding mechanism to the pale-field <span class="redacted">redacted</span>/fence work). <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>characters/peri.md</h2>
+<ul>
+<li>Scene 54 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> 001) but this is the first time she catalogues <em>specific, dated real-world events</em> as possible fate-shaping (mis-sorted parcel, roof leak, cut oak, cobbler's last, site spacing) rather than abstract expectation. New, specific instance.</li>
+<li>Scene 54 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span>**: **<code>[Agent of Fate — Level 6.]</code> — a new class-level box, landing while Peri is setting a whip on the first afternoon of setting the whips (7 Harvestmonth per scene dating; whips went in on 7th/8th of Harvestmonth). <span class="redacted">redacted sentence: unpublished prose</span> Scene 53 <span class="unpub-tag">unpublished</span>–56 place a class box (Level 6) well before that, on/around 7-8 Harvestmonth (~Day ~35, before the Deep delve on 21 Harvestmonth). This needs reconciliation with the existing &quot;Level 26... <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> This should be reconciled explicitly.</li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span>: The ability mechanics of the class-level box are demonstrated concretely for the first time: &quot;A class level shortens the cooldown. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Should be recorded as the on-page citation for that system.md rule.</li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span>: Peri's Weave question of noon on the 8th: worded since the 5th, two versions discarded (one &quot;ring&quot; framing rejected pending confirmation the field is a ring; one asking if there's a middle at all). <span class="redacted">redacted sentence: unpublished prose</span> 013. Scene 56 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <strong>This is a citation/dating conflict worth flagging</strong>: is this the <em>same</em> Weave answer being re-cited at its original ch. 013 date, or is scene 56 <span class="unpub-tag">unpublished</span> presenting it as being asked and answered afresh on 8 Harvestmonth? If the latter, it contradicts the one-question-per-day/no-banking Weave ruling only if it's meant to be a <em>new</em> casting — but if it's a new casting of the <em>same</em> wording it should logically produce the same answer only by coincidence, which the scene doesn't flag. Needs author reconciliation: most likely scene 56 <span class="unpub-tag">unpublished</span> is the <strong>actual drafted scene that ch. 013's material was always describing</strong> (i.e., this is that scene, being backfilled now, and 013's &quot;second exemplar&quot; citation should be updated to point to scene 56 <span class="unpub-tag">unpublished</span> rather than a phantom &quot;ch. 013&quot;). Treat as a canon-integration action item, not necessarily an error.</li>
+</ul>
+<h2>characters/<span class="redacted">redacted</span>.md</h2>
+<ul>
+<li>Scene 55 <span class="unpub-tag">unpublished</span>: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Scene 55 <span class="unpub-tag">unpublished</span>: <span class="redacted">redacted</span> states the four-mile rule in first person again, consistent verbatim with dungeons.md's established quote (ch. 024) — this scene appears to be an earlier/parallel occasion of the same rule being stated (dated by internal reference to <span class="redacted">redacted</span>'s pasture, which per silent-soil.md/geography.md was walked ch. 013 — i.e., this scene predates or coincides with the already-established Fallowmonth application of the rule at the <span class="redacted">redacted</span>). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> and further from anything else,&quot; with no mouth at all within reach of Ranner's Sluice (<span class="redacted">redacted</span>'s nearest mouth is 40 miles north, already established; <span class="redacted">redacted</span> confirms no dungeon entry ever recorded for the Sluice). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> with date and distances, in the Charter's book.</li>
+<li>Scene 55 <span class="unpub-tag">unpublished</span>: <span class="redacted">redacted</span>'s process/character beat: writes &quot;no&quot; against her own stated preference, unprompted acknowledgment from Peri that she wanted it to be &quot;yes.&quot; Consistent with established characterization (<span class="redacted">redacted</span>.md rule 6d parallel, &quot;writes what she walked&quot; — matches &quot;I write what I walked... whether or not I like it&quot;).</li>
+</ul>
+<h2>characters/mattie-ordish.md</h2>
+<ul>
+<li>Scene 54 <span class="unpub-tag">unpublished</span>: Confirms/re-stages the already-established ch. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> 013, Established) with expanded/different phrasing. <strong>Possible duplication/contradiction to flag</strong>: mattie-ordish.md already has this scene cited to ch. 013 with slightly different wording (&quot;It's my field. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> These read as the same dramatic beat told twice with variant wording — needs reconciliation as to which is the canonical page text (likely scene 54 <span class="unpub-tag">unpublished</span> supersedes/<em>is</em> the drafted version of the previously-cited ch. 013 beat, per the numbering migration already flagged for peri.md above).</li>
+<li>Scene 54 <span class="unpub-tag">unpublished</span>**: Mattie says &quot;Tess can do the dinner&quot; while she attends the Charter house — minor scheduling detail, consistent with Tess's established household role.</li>
+</ul>
+<h2>characters/minor.md</h2>
+<ul>
+<li>**Scene 53 <span class="unpub-tag">unpublished</span> (<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Genuinely new established fact, not currently in minor.md, geography.md, or silent-soil.md.</li>
+<li>Scene 53 <span class="unpub-tag">unpublished</span>: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Edwin has examined two of <span class="redacted">redacted</span>'s fields (this one and one other, unnamed — likely the verge/bank Edwin mentions in his own tally).</li>
+<li>Scene 53 <span class="unpub-tag">unpublished</span>: Terms of the monument protocol at <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>&quot; note with the specific <em>reasoning</em> <span class="redacted">redacted</span> gives.</li>
+<li>Scene 53 <span class="unpub-tag">unpublished</span>: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Scene 53 <span class="unpub-tag">unpublished</span>: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s 2 rings) not previously stated numerically in this form.</li>
+<li>Scene 55 <span class="unpub-tag">unpublished</span>: <span class="redacted">redacted</span> (guildmaster) rules that the Wystow matter is &quot;not Charter work&quot; and that <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>/<span class="redacted">redacted</span>, consistent with established Charter-clerk-record dynamics (minor.md's <span class="redacted">redacted</span>/<span class="redacted">redacted</span> collision ruling).</li>
+<li>Scene 55 <span class="unpub-tag">unpublished</span>: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> New specific fact about the depth/completeness of the Charter's dungeon record.</li>
+<li>Scene 55 <span class="unpub-tag">unpublished</span>: The map used is &quot;<span class="redacted">redacted</span>'s,&quot; and &quot;<span class="redacted">redacted</span> signed it&quot; — new small fact establishing map provenance/authority for the fen region.</li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> 011, 013, 015, 021) — this scene appears to BE (or duplicate) that already-cited material; likely another citation-migration case.</li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span>**: The younger nephew has his own [Farm Magic]-adjacent skill/nudge that &quot;has moved twice&quot; without him understanding why — a minor NPC datapoint on how the nudge/level system is experienced by an ordinary person, useful color for system.md's &quot;everyone casts the five&quot; section.</li>
+</ul>
+<h2>world/geography.md / world/silent-soil.md</h2>
+<ul>
+<li><strong>Scene 53 <span class="unpub-tag">unpublished</span></strong>: Reconfirms **&quot;a box of soil ... <span class="redacted">redacted sentence: unpublished prose</span> 010/013), not new.</li>
+<li>Scene 55 <span class="unpub-tag">unpublished</span>/53: Confirms <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Scene 53 <span class="unpub-tag">unpublished</span>'s &quot;fourteen miles west of here&quot; (of Fenholt, from <span class="redacted">redacted</span>'s own mouth) and &quot;nineteen miles from Holm Deep&quot; (scene 55 <span class="unpub-tag">unpublished</span>) are new specific figures tying the pale field into the four-mile-rule distance network precisely, and should be cross-checked/merged into geography.md's Working reconciliation table.</li>
+<li>Scene 54 <span class="unpub-tag">unpublished</span>**: The Wystow trial plots' fence was <strong>roped</strong>, and the college &quot;kept its own people off&quot; — restates already-established suspension facts (silent-soil.md ~line 402: &quot;Trials suspended. No entry pending inquiry. By order.&quot;) with the added detail that the plots were physically roped off, not merely posted. Minor new physical detail.</li>
+<li>**Scene 54 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s/pale field]... <span class="redacted">redacted sentence: unpublished prose</span> yours is this year's.&quot; Re-reading: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <strong>Cross-check needed</strong>: silent-soil.md's &quot;Site B&quot; entry (pale field) is dated to &quot;before your daughter was born&quot; (~40 years, per scene 53 <span class="unpub-tag">unpublished</span>) which is consistent with being the oldest of three, and the college's site (two springs = ~2 years) is younger than that but older than Mattie's (this year). This ordering (pale field oldest &gt; college site &gt; Ordish field youngest) should be verified against silent-soil.md's existing site-age table (I did not have space to fully cross-reference every clause of silent-soil.md's ages section — flag for the canon-updater to explicitly reconcile scene 54 <span class="unpub-tag">unpublished</span>'s stated relative ages against silent-soil.md's existing per-site age data, since silent-soil.md is large and dating claims there are sensitive/deferred-question-adjacent per deferred-questions.md's &quot;the four sites' <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> is bound by [the silent-soil ruling]; do not date casually.&quot;)</li>
+<li><strong>Flag — Deferred question touched</strong>: deferred-questions.md §0 explicitly restricts dating of the pale field and the <span class="redacted">redacted</span> as &quot;bound by&quot; the sealed silent-soil answer. <span class="redacted">redacted sentence: unpublished prose</span> This should be checked against the sealed answer for consistency (a subagent/author task, not something I can verify or should speculate about here) — I am flagging the touch-point only, not the content.</li>
+</ul>
+<h2>world/dungeons.md</h2>
+<ul>
+<li>Scene 55 <span class="unpub-tag">unpublished</span>**: New leakage-adjacent datapoint: Holm Deep's chain-candle test showed **nothing either way for the full 2 Harvestmonth session — first null reading <span class="redacted">redacted</span> has had &quot;at Holm in nine years.&quot; Add to the leakage-count series as a qualitative (non-numeric) data point between the existing Cornmonth 19 and <span class="redacted">redacted</span> on 13/14 Harvestmonth.</li>
+<li>Scene 55 <span class="unpub-tag">unpublished</span>**: The four-mile rule applied and ruled **negative for both the Ordish top field (5+ miles from Holm Deep, wrong side of causeway for a &quot;<span class="redacted">redacted</span>,&quot; which &quot;takes dry going every time&quot;) and <span class="redacted">redacted</span>'s pasture (19 miles from Holm Deep, no other mouth within reach — <span class="redacted">redacted</span>'s is 40 miles north and <span class="redacted">redacted</span> confirms no entry ever recorded near the Sluice). This closes (for now) the &quot;is a nearby dungeon leaking into these fields&quot; hypothesis for both known extra-Fenholt sites, on the record, witnessed by <span class="redacted">redacted</span>.</li>
+<li>Scene 55 <span class="unpub-tag">unpublished</span>: A new mechanistic clarification of the four-mile rule's &quot;dry going&quot; clause: &quot;a <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> specifically) require dry ground to travel, which the scene uses to further rule out the Ordish field even though it's within the rule's outer bound of &quot;further if it's wet.&quot;</li>
+</ul>
+<h2>world/farm-teaching.md</h2>
+<ul>
+<li>Scene 56 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> New: it is explicitly called &quot;the nurserymen's&quot; spell, and &quot;no parish [Edwin] had taught had ever needed it&quot; (i.e., it's a specialist sheet item outside the universal five, consistent with existing &quot;not universal&quot; framing but now with an on-page casting).</li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Scene 56 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>world/timeline.md</h2>
+<ul>
+<li>Confirms/adds specific dates: <strong>5 Harvestmonth</strong> — Mattie told, Edwin goes to the Charter house that afternoon (scene 54 <span class="unpub-tag">unpublished</span>). <strong>6th–8th Harvestmonth</strong> — fence goes up 6th, whips go in 7th–8th (scene 56 <span class="unpub-tag">unpublished</span>); Peri's Level 6 box lands &quot;the first afternoon&quot; of whip-setting (7th), her Weave question asked &quot;at noon on the eighth.&quot; <span class="redacted">redacted</span>'s gate scene (53) and the Charter/<span class="redacted">redacted</span> scene (55) fall in this same window (55 explicitly references &quot;the second,&quot; i.e. 2 Harvestmonth, for <span class="redacted">redacted</span>'s null Holm Deep reading, and is a Charter meeting that must postdate scene 54 <span class="unpub-tag">unpublished</span>'s 5 Harvestmonth Charter visit — likely occurring shortly after). These should be slotted into the existing Harvestmonth timeline alongside the already-fixed 21 Harvestmonth Deep delve etc.</li>
+</ul>
+<hr />
+<h3>Notable non-findings</h3>
+<ul>
+<li>Scenes 53–55 are largely <em>confirmatory</em> of already-established silent-soil.md/geography.md/dungeons.md material (the pale field's basic facts, <span class="redacted">redacted</span>'s identity, the four-mile rule's wording, Wystow's suspended trials) rather than newly establishing it — the main new content is backstory (the folding-ground history), specific protocol numbers (six stakes, ash, ring counts), and the two negative four-mile-rule rulings now formally on the record.</li>
+<li>No violations of the sealed silent-soil material were found or discussed in this extraction; the only sealed-adjacent items are flagged above as touch-points for a separate, appropriately-routed check (dating the pale field; the Wystow trial-plot/Amos Rundle overlap noted below), never as content.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> discusses as one of the three silent-soil sites. If both are meant to be the same physical ground, Rundle's tenancy and rent grievance should be cross-referenced against scene 54 <span class="unpub-tag">unpublished</span>'s account of the suspension (Cornmonth, roped gate, four signatories) to keep the two threads consistent — this is a structural note, not a contradiction I can resolve here.</li>
+</ul>
+</div>
+</body></html>

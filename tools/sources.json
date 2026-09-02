@@ -1,0 +1,38 @@
+{
+  "sources": {
+    "autoroad": {
+      "transcripts_dir": "~/.claude/projects/-Users-drmaciver-Projects-autoroad",
+      "repo_root": "/Users/drmaciver/Projects/autoroad",
+      "out_dir": "build",
+      "site_dir": "site/src/transcripts",
+      "summary_marker": "- [Transcripts](transcripts/index.md)",
+      "summary_prefix": "",
+      "profile": "full",
+      "premise_cutoff": true,
+      "keep_file_contents": true,
+      "user_label": "David",
+      "anonymize": []
+    },
+    "meta": {
+      "transcripts_dir": "~/.claude/projects/-Users-drmaciver-Projects-autoroad-howto",
+      "repo_root": "/Users/drmaciver/Projects/autoroad-howto",
+      "out_dir": "build/meta",
+      "site_dir": "site/src/meta/transcripts",
+      "summary_marker": "  - [Transcripts of this project](meta/transcripts/index.md)",
+      "summary_prefix": "  ",
+      "profile": "meta",
+      "premise_cutoff": false,
+      "keep_file_contents": false,
+      "user_label": "David",
+      "anonymize": [
+        "hegel-blog-posts",
+        "hegel-blog-post",
+        "hegel-skill",
+        "hegelator",
+        "hegel",
+        "drmaciver-personal-website"
+      ],
+      "anonymize_placeholder": "«OTHER-PROJECT»"
+    }
+  }
+}

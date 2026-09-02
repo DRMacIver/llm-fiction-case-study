@@ -1,0 +1,74 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a140a3770caa3cfb0">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in a novel. Never rewrite the text. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;sense&quot;. Study each rule's description, why, examples and counter_examples.</li>
+<li>Read <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> in full.<br />
+Also apply the standing SENSE lens regardless of the catalogue: restate each factual claim of every sentence flatly and check it is coherent with itself and with the sentences around it (a shape filled but the fact unchecked; a number that cannot be right; a connective that miswires a contrast; a garden-path parse). Report those with rule_id &quot;sense-lens&quot;.</li>
+<li>Report EVERY candidate violation as {rule_id, quote (exact, short), line, reason (one line)}. Before flagging, read one sentence either side of the quote; do not flag a quote read in isolation. Budget rules (aphorism, maxim, build/drop) must nominate the keeper in the reason. Report candidates generously; a judge filters. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+<p>✅ 46 lines, 8487 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+<p>🔧 Bash: grep -A 30 '"tier":\s*"semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json | head -200</p>
+<p>✅ 200 lines, 7630 chars</p>
+<p>🔧 Bash: grep -B 5 '"lens":\s*"sense"' <span class="redacted">redacted</span>/tools/lint/rules.json | head -100</p>
+<p>✅ 55 lines, 2013 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json | jq -r '.[] | select(.tier == "semantic" and .lens…</p>
+<p>✅ 8 lines, 161 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json | jq '.[] | select(.tier == "semantic" and .lens ==…</p>
+<p>✅ 179 lines, 9924 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Looking at this scene, I'll examine it against the 8 semantic &quot;sense&quot; rules and apply the standing SENSE lens to restate and verify all factual claims.</p>
+</div>
+
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+<p>✅ 1 lines, 93 chars</p>
+
+<div class="assistant-prose">
+<p>After thoroughly examining scene 67 <span class="unpub-tag">unpublished</span> against the 8 semantic &quot;sense&quot; rules (shape-filled-fact-unchecked, missing-qualifier, near-idiom-general, ambiguous-word, dangling-back-reference, continuity-within-scene, missing-connective, and cause-left-out) and applying the standing SENSE lens by restating all factual claims flatly:</p>
+<p><strong>Timeline verified:</strong> Attack midnight–3am → <span class="redacted">redacted</span> arrives/takes charge → Current time (noon) when count is read. The 3-day margin-walk and 18-day delve timeline are coherent.</p>
+<p><strong>Counts verified:</strong> 9 hurt / 0 dead / 69 killed and counted (68 small + 1 long) / ~300 loose / 12 named beasts killed separately.</p>
+<p><strong>Physical continuity:</strong> Peri unmarked, others at post injured (<span class="redacted">redacted</span> confirmed). Edwin watched from 400 yards, had one near-miss at 3am (creature turned away from water). Sluice-keeper barricaded and survived. All actions track.</p>
+<p><strong>Causal connections:</strong> <span class="redacted">redacted</span> reads count publicly (doors open) specifically because she fears rumor exaggeration will worsen accurate reporting. Each major statement carries its cause within one sentence either side.</p>
+<p><strong>Connectives:</strong> Transitions between scenes (street disperses → Edwin at table; count reading → Peri appears) are implicit but clear. No &quot;and/but&quot; reversals of logic.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s manner of presenting financial/organizational authority.</p>
+<p>The scene is internally consistent with no restated facts contradicting what the page has established.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": []})</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

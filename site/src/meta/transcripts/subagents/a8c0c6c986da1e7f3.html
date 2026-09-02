@@ -1,0 +1,164 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a8c0c6c986da1e7f3">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: blind verification. You have NOT seen how these pages were drafted; check each claim against the primary source named, not against the page or the session summaries. Claims (JSON): [{&quot;id&quot;:&quot;workflow_README_md_10&quot;,&quot;quote&quot;:&quot;The notes that appear at the top of a Royal Road chapter, the ones addressed to readers as the author, are the one piece of text the rules forbid the model&quot;,&quot;location&quot;:&quot;line 13-14&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/README.md&quot;},{&quot;id&quot;:&quot;workflow_README_md_11&quot;,&quot;quote&quot;:&quot;Everything else, story prose and the in-story notes at the foot of each chapter included, is machine-written&quot;,&quot;location&quot;:&quot;line 13&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/README.md&quot;},{&quot;id&quot;:&quot;workflow_README_md_16&quot;,&quot;quote&quot;:&quot;The project's notes are explicit that this was deliberately not delegated to subagents, because a persistent session holding the whole conversation in mind produced better prose&quot;,&quot;location&quot;:&quot;line 19-20&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/README.md&quot;},{&quot;id&quot;:&quot;workflow_voice_and_exemplars_md_03&quot;,&quot;quote&quot;:&quot;The mechanism is a <code>VOICE.md</code> file kept alongside each draft, naming specific chapters to read, in a specific order&quot;,&quot;location&quot;:&quot;Line 4&quot;,&quot;kind&quot;:&quot;other&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/voice-and-exemplars.md&quot;},{&quot;id&quot;:&quot;workflow_voice_and_exemplars_md_04&quot;,&quot;quote&quot;:&quot;The current one points at six scenes from the accepted third draft&quot;,&quot;location&quot;:&quot;Line 5&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/voice-and-exemplars.md&quot;},{&quot;id&quot;:&quot;workflow_voice_and_exemplars_md_05&quot;,&quot;quote&quot;:&quot;a scene built on eleven years of shorthand between two characters&quot;,&quot;location&quot;:&quot;Line 5&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/voice-and-exemplars.md&quot;},{&quot;id&quot;:&quot;workflow_voice_and_exemplars_md_09&quot;,&quot;quote&quot;:&quot;where the written rules and the exemplar prose seem to disagree, the exemplars win, because they are later, checked by the author, and consistent with everything else&quot;,&quot;location&quot;:&quot;Line 11&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/voice-and-exemplars.md&quot;},{&quot;id&quot;:&quot;workflow_voice_and_exemplars_md_10&quot;,&quot;quote&quot;:&quot;Rules exist to annotate the exemplars, pointing at what specifically to notice, not to substitute for reading them&quot;,&quot;location&quot;:&quot;Line 11&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/voice-and-exemplars.md&quot;},{&quot;id&quot;:&quot;workflow_voice_and_exemplars_md_11&quot;,&quot;quote&quot;:&quot;a fairly detailed rulebook: how much narrative distance the narrator keeps, where wit is allowed to come from (events, not decoration), a hard cap on em dashes in body text&quot;,&quot;location&quot;:&quot;Line 15&quot;,&quot;kind&quot;:&quot;other&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/voice-and-exemplars.md&quot;},{&quot;id&quot;:&quot;workflow_voice_and_exemplars_md_12&quot;,&quot;quote&quot;:&quot;chapters end mid-flow on forward-pointing work rather than a crafted final beat, because a tidy closing cadence is one of the more reliable tells that a paragraph was written by a model&quot;,&quot;location&quot;:&quot;Line 15&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/voice-and-exemplars.md&quot;},{&quot;id&quot;:&quot;workflow_voice_and_exemplars_md_13&quot;,&quot;quote&quot;:&quot;thirteen binding rules evolved from rounds where readers were given dialogue with the speaker tags stripped and asked to reassign each line&quot;,&quot;location&quot;:&quot;Line 17&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/voice-and-exemplars.md&quot;},{&quot;id&quot;:&quot;workflow_voice_and_exemplars_md_15&quot;,&quot;quote&quot;:&quot;some characters simply don't listen perfectly, because a cast that always responds precisely to what was just said is another version of the same uniformity problem&quot;,&quot;location&quot;:&quot;Line 17&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/voice-and-exemplars.md&quot;},{&quot;id&quot;:&quot;workflow_voice_and_exemplars_md_18&quot;,&quot;quote&quot;:&quot;d1679987-c781-4167-82f2-4fb2b67962c1.md&quot;,&quot;location&quot;:&quot;Line 19&quot;,&quot;kind&quot;:&quot;cross-reference&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/voice-and-exemplars.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_01&quot;,&quot;quote&quot;:&quot;Canon, in this project, means the directory of files recording what's been established about the world, the characters, and the timeline, kept separate from the plans and separate from the prose itself.&quot;,&quot;location&quot;:&quot;line 3&quot;,&quot;kind&quot;:&quot;other&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_02&quot;,&quot;quote&quot;:&quot;Established means the fact is on the page in an accepted chapter, and the entry cites where.&quot;,&quot;location&quot;:&quot;line 5&quot;,&quot;kind&quot;:&quot;other&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_03&quot;,&quot;quote&quot;:&quot;Working means it's binding until someone overrules it but hasn't actually appeared in the story yet&quot;,&quot;location&quot;:&quot;line 5&quot;,&quot;kind&quot;:&quot;other&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_10&quot;,&quot;quote&quot;:&quot;A related instrument, kept separate from ordinary canon, is a directory of sealed answers&quot;,&quot;location&quot;:&quot;line 11&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_14&quot;,&quot;quote&quot;:&quot;A skill called consistency-backfill runs after a chapter is drafted and checked&quot;,&quot;location&quot;:&quot;line 15&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_15&quot;,&quot;quote&quot;:&quot;reading what the chapter implies, not just what it states outright, and updating canon files to match: recording a stated fact as Established, an implied one as Working&quot;,&quot;location&quot;:&quot;line 15&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_16&quot;,&quot;quote&quot;:&quot;where canon was previously silent on something the chapter now depends on, deciding the smallest binding commitment and recording that as Working too&quot;,&quot;location&quot;:&quot;line 15&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_17&quot;,&quot;quote&quot;:&quot;Where a chapter conflicts with existing canon, the fix is proposed but never applied silently: it goes back to David as a flagged decision&quot;,&quot;location&quot;:&quot;line 15&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_19&quot;,&quot;quote&quot;:&quot;The counterpart skill, consistency-check, runs the other direction: given a draft, it checks every claim against the canon files in priority order&quot;,&quot;location&quot;:&quot;line 17&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_20&quot;,&quot;quote&quot;:&quot;core facts and continuity first, softer thematic consistency last&quot;,&quot;location&quot;:&quot;line 17&quot;,&quot;kind&quot;:&quot;other&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_21&quot;,&quot;quote&quot;:&quot;reports contradictions, or the weaker category the project calls drift, where a claim is technically compatible with canon but strains it&quot;,&quot;location&quot;:&quot;line 17&quot;,&quot;kind&quot;:&quot;other&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;},{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_22&quot;,&quot;quote&quot;:&quot;Neither skill is allowed to weaken or delete an existing canon entry to make a draft fit.&quot;,&quot;location&quot;:&quot;line 17&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;}]<br />
+Source to check against: autoroad-files. For transcripts, use build/parsed/&lt;session&gt;.json (turn timestamps, user text, tool_use summaries) and build/parsed/subagents/. For git-history, run git -C <span class="redacted">redacted: private</span> log with --format and --stat and count for yourself. For index-json, read build/parsed/index.json and titles.json. For claude-code-docs, fetch the documentation pages fresh with WebFetch. For other-pages, read the referenced page. For &quot;unverifiable&quot;, record UNVERIFIABLE with what would be needed. Mechanical pre-pass results for context: The full report content was already shown in the Read calls above (both pages, lines 1-446). The file is at <span class="redacted">redacted: private</span>` (446 lines) — I've reproduced its complete contents in this conversation across the two Read tool outputs. Key files for reference:</p>
+<ul>
+<li><code><span class="redacted">redacted: private</span></code> — the checker script</li>
+<li><code><span class="redacted">redacted: private</span></code> — pytest tests (7 tests, all passing)</li>
+<li>`<span class="redacted">redacted: private</span> — the generated report (links: 83/83 resolve; dates: 47/47 in range; numbers: 175 topical + 156 informational; banned content: 0 hits)<br />
+Be paranoid about: numbers (count them yourself, check the direction of comparisons), quotations (verbatim or not), attributions (which session, which day, who said it), absolutes, and distributional claims that assert something unmeasured. Give one verdict per claim with a receipt and, for anything not CONFIRMED, a minimal replacement text. Return structured output only.</li>
+</ul></blockquote>
+
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; find . -iname "*VOICE*" -o -iname "*canon*" | grep -v node_modu…</p>
+<p>✅ 32 lines, 1409 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat draft/book-01/VOICE.md &gt; /private/tmp/claude-501/-Users-drm…</p>
+<p>✅ 1 lines, 130 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa8-c87b47800a5c/scratchpad/voice.md</p>
+<p>✅ 272 lines, 17188 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "speaker tag\|stripped\|reassign" notes/*.md 2&gt;/dev/nul…</p>
+<p>✅ 4 lines, 610 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '150,260p' notes/dialogue-voices.md</p>
+<p>✅ 111 lines, 6897 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "^##\|^###" notes/dialogue-voices.md | head -80</p>
+<p>✅ 30 lines, 1511 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "thirteen\|binding rule" notes/*.md .claude/skills 2&gt;/…</p>
+<p>✅ 24 lines, 3540 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Confirms &quot;thirteen exemplified rules&quot; and rule 8 &quot;people don't listen perfectly.&quot; Let me check counts precisely and the reasoning given.</p>
+</div>
+
+<details><summary>24 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '1,20p' notes/voices.md echo === sed -n '130,300p' notes…</p>
+<p>✅ 22 lines, 1125 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '130,300p' notes/voices.md</p>
+<p>✅ 171 lines, 10574 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '195,270p' notes/process.md</p>
+<p>✅ 76 lines, 4391 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '300,420p' notes/voices.md</p>
+<p>✅ 121 lines, 7359 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '140,160p' notes/scene-first-proposal.md</p>
+<p>✅ 21 lines, 1184 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "uniform" notes/*.md draft/book-01/VOICE.md 2&gt;/dev/null</p>
+<p>✅ 7 lines, 1552 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '160,225p' notes/llm-tells.md</p>
+<p>✅ 66 lines, 3802 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "^[0-9]\+\.\|competence" notes/llm-tells.md | head -30</p>
+<p>✅ 18 lines, 1420 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '47,50p' notes/llm-tells.md</p>
+<p>✅ 4 lines, 297 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; find . -path ./node_modules -prune -o -iname "*consistency-back…</p>
+<p>✅ 2 lines, 72 chars — ./.claude/skills/consistency-backfill / ./.claude/skills/consistency-check</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat .claude/skills/consistency-backfill/SKILL.md</p>
+<p>✅ 92 lines, 5145 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; find notes -iname "*seal*" ; grep -rln "sealed" notes/*.md 2&gt;/d…</p>
+<p>✅ 5 lines, 103 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Confirmed: <code>notes/sealed</code> directory exists, separate from <code>notes/canon</code>.</p>
+</div>
+
+<details><summary>18 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat .claude/skills/consistency-check/SKILL.md</p>
+<p>✅ 92 lines, 4832 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "Royal Road\|author's note\|author-note\|addressed to r…</p>
+<p>✅ 21 lines, 2188 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '25,50p' notes/process.md</p>
+<p>✅ 26 lines, 1439 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "foreword\|human-written\ humans write\|David writes\|…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "author's note\|note at the top\|note at the head\|foo…</p>
+<p>✅ 14 lines, 1903 chars</p>
+<p>🔧 Bash: sed -n '1,30p' <span class="redacted">redacted: private</span> 2&gt;/dev/null || find <span class="redacted">redacted: private</span> -iname "README…</p>
+<p>✅ 27 lines, 4640 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rln "AI-generated\|AI generated\|generated by\|disclosure…</p>
+<p>✅ 1 lines, 41 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; ls; grep -rln "AI-generated\|AI generated\|openly AI\|disclosur…</p>
+<p>✅ 21 lines, 228 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat publishing/*.md 2&gt;/dev/null | head -100; echo ---; ls publi…</p>
+<p>✅ 33 lines, 1466 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>This is direct confirmation. Let me check the <code>top-notes</code> directory to confirm these are human-written, not model-drafted.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; ls publishing/top-notes | head; cat publishing/top-notes/* 2&gt;/d…</p>
+<p>✅ 15 lines, 689 chars</p>
+
+<div class="assistant-prose">
+<p>Excellent, fully confirmed for both claims 10 and 11. Now let me check the &quot;not delegated to subagents&quot; causal claim (16).</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "overwhelmingly worse\|not by a subagent\|never by a su…</p>
+<p>✅ 3 lines, 302 chars</p>
+
+<div class="assistant-prose">
+<p>Already confirmed above from VOICE.md lines 133-138: &quot;The scenes are drafted by the main session holding all prior feedback, never by a subagent drafter. The workflow draft (<code>rewrite/book-01/</code>) followed every rule and was 'overwhelmingly worse'; this draft is what a single writer with the whole conversation in mind produces.&quot; This directly matches the claim. Now let me check the remaining voice-and-exemplars claims (03, 04, 05, 09, 10, 11, 12, 18) against VOICE.md already read.</p>
+</div>
+
+<p>🔧 Bash: sed -n '1,25p' site/src/workflow/voice-and-exemplars.md</p>
+<p>✅ 19 lines, 3605 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "narrative distance" notes/*.md draft/book-01/VOICE.md…</p>
+<p>✅ 2 lines, 199 chars</p>
+
+<div class="assistant-prose">
+<p>Good, confirms &quot;narrative distance&quot; is a real dimension used. All elements verified. Now check claim 12 (chapters end mid-flow) and 18 (transcript filename cross-ref).</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: ls build/parsed | grep d1679987</p>
+<p>✅ 1 lines, 41 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('build/parsed/d1679987-c781-4167-82f2-4fb2b6796…</p>
+<p>✅ 1 lines, 75 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('build/parsed/d1679987-c781-4167-82f2-4fb2b6796…</p>
+<p>✅ 6 lines, 90 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('build/parsed/d1679987-c781-4167-82f2-4fb2b6796…</p>
+<p>✅ 5 lines, 33 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('build/parsed/d1679987-c781-4167-82f2-4fb2b6796…</p>
+<p>✅ 6 lines, 247 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('build/parsed/d1679987-c781-4167-82f2-4fb2b6796…</p>
+<p>✅ 2 lines, 1048 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Confirmed exactly: user prompt says &quot;Read plans/NEXT.md, then draft/book-01/VOICE.md in full ... then draft/book-01/README.md, STATUS.md, SCENES.md, and the exemplar scenes VOICE.md §1 names.&quot; Matches claim 18 perfectly (session date 2026-08-30, timestamp matches).</p>
+<p>Now I have enough to finalize all verdicts.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"results": [{"id": "workflow_README_md_10", "verdict": "CO…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

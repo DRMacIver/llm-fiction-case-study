@@ -1,0 +1,119 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-ac09292833dd71896">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in a novel. Never rewrite the text. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;world&quot;. Study each rule's description, why, examples and counter_examples.</li>
+<li>Read <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> in full.</li>
+<li>Report EVERY candidate violation as {rule_id, quote (exact, short), line, reason (one line)}. Before flagging, read one sentence either side of the quote; do not flag a quote read in isolation. Budget rules (aphorism, maxim, build/drop) must nominate the keeper in the reason. Report candidates generously; a judge filters. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in the novel. Let me start by reading the rules file and identifying the semantic + world rules.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1181 lines, 51958 chars</p>
+
+<div class="assistant-prose">
+<p>Let me continue reading the rules file to find all semantic + world rules.</p>
+</div>
+
+<p>🔧 Bash: grep -n '"tier":\s*"semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json | head -20 (Find all rules with semantic tier)</p>
+<p>✅ 20 lines, 576 chars</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json', 'r') as f:… (Extract all semantic + world rules from rules.json)</p>
+<p>✅ 47 lines, 4980 chars — ============================================================ / ID: worldbuilding-to-save-a-line / Name: Worldbuilding invented to save a line</p>
+
+<div class="assistant-prose">
+<p>Now let me read the scene file.</p>
+</div>
+
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+<p>✅ 44 lines, 5426 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me search for the specific semantic + world rules to understand what I need to check:</p>
+</div>
+
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json', 'r') as f:… (List all semantic + world rules)</p>
+<p>✅ 19 lines, 423 chars — SEMANTIC + WORLD RULES: /  / ID: worldbuilding-to-save-a-line</p>
+
+<div class="assistant-prose">
+<p>Let me now systematically check the scene against each of these 6 rules:</p>
+</div>
+
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  # Load rules with open('<span class="redacted">redacted</span>/tools/lint/rules.json',… (Display semantic + world rule details for analysis)</p>
+<p>✅ 35 lines, 3324 chars — ====================================================================== / RULE: canon-scale-contradiction / Name: Fact contradicting canon's scale</p>
+
+<div class="assistant-prose">
+<p>Now I'll carefully check the scene against each rule. I've already read the full scene, so let me analyze it systematically:</p>
+<p><strong>1. worldbuilding-to-save-a-line</strong>: Checking for invented canon to justify lines</p>
+<ul>
+<li>The hazel twigs explanation (line 29) is practical reasoning responding to Peri's look, not invented canon</li>
+<li>The pale field details reference earlier scenes (Ranner's Sluice) - established canon</li>
+<li>No violations found</li>
+</ul>
+<p><strong>2. tech-level-anachronism</strong>: Checking for pre-industrial anachronisms</p>
+<ul>
+<li>Objects mentioned: books, pen, lamp, chain, trowel, sample boxes, census, hazel twigs, chalk</li>
+<li>All consistent with pre-industrial tech level</li>
+<li>No violations found</li>
+</ul>
+<p><strong>3. canon-scale-contradiction</strong>: Checking numbers bound to age-markers</p>
+<ul>
+<li>Rule specifies: only flag &quot;number bound to a person by an age-marker (&quot;he was&quot;, &quot;aged&quot;, &quot;years old&quot;)&quot;</li>
+<li>Numbers present: 4 middles, 40 yards, quarter mile, 8 days, 14 miles, 6 things, 22 Cornmonth, 2 dozen, 16 days</li>
+<li>None are bound to person ages with age-markers</li>
+<li>Numbers are internally consistent within the scene</li>
+<li>No violations meeting the rule's criteria</li>
+</ul>
+<p><strong>4. system-terminology</strong>: Checking for wrong nouns for world things</p>
+<ul>
+<li>Terms used: &quot;SIGNS&quot; (notebook category), &quot;bands&quot;, &quot;middles&quot;, &quot;outer arc&quot; (field phenomena), &quot;Seal&quot;, &quot;binding&quot;, &quot;census&quot;</li>
+<li>All appear to use established terminology correctly</li>
+<li>No violations found</li>
+</ul>
+<p><strong>5. italics-misplaced</strong>: Checking for emphasis italics on unstressed words</p>
+<ul>
+<li>Line 9: &quot;<em>quiet</em>&quot; - emphasized as the guess label; appropriately stressed in &quot;the guess was <em>quiet</em>&quot; ✓</li>
+<li>Line 17: Full passage italicized - quoted from Edwin's book, appropriately quoted ✓</li>
+<li>Line 21: &quot;<em>lost</em>&quot; and &quot;<em>spent</em>&quot; - italicized as quoted word choices being discussed ✓</li>
+<li>No violations found</li>
+</ul>
+<p><strong>6. contamination-overlap</strong>: Checking for sentences matching deleted drafts</p>
+<ul>
+<li>Rule requires mechanical tool check (overlap_check.py) - not to be done by manual hunting</li>
+<li>Cannot verify without running the tool</li>
+</ul>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": []})</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a517d1cbe2bac7a58">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: cross-page consistency check on one topic. Do the pages agree about what the human did versus the model (author notes at top vs bottom of chapters, who writes sealed files, who approves rules), and about the content and order of the rule files (CLAUDE.md, VOICE.md, NEXT.md, llm-tells.md)? Read all the pages named plus any others relevant under <span class="redacted">redacted: private</span> (not transcripts/). Where two passages disagree, decide which is right by going to ground truth in priority order, and report: contradiction (cannot both be true), drift (compatible but one strains the other), or ambiguity (readable either way). Quote both passages with page and heading. Say which to change and give the minimal replacement. No findings is a valid result. Return structured output only.</p></blockquote>
+
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rln "CLAUDE.md\|VOICE.md\|NEXT.md\|llm-tells" . --include…</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rl "CLAUDE.md\|VOICE.md\|NEXT.md\|llm-tells" . 2&gt;/dev/null</p>
+<p>✅ 561 lines, 24969 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; wc -l workflow/claude-md-rules.md workflow/next-md-handoff.md w…</p>
+<p>✅ 12 lines, 385 chars —       19 workflow/claude-md-rules.md /       17 workflow/next-md-handoff.md /       19 workflow/voice-and-exemplars.md</p>
+</details>
+
+<div class="assistant-prose">
+<p>These are stub/short pages. Let me read them all together.</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; for f in workflow/claude-md-rules.md workflow/next-md-handoff.m…</p>
+<p>✅ 19 lines, 2217 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa8-c87b47800a5c/tool-results/bk1sikl8v.txt</p>
+<p>✅ 1 lines, 102 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 253 lines, 46724 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "author.s note\|author note" howto workflow chronicle…</p>
+<p>✅ 3 lines, 1882 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rln "author" . | grep -v transcripts</p>
+<p>✅ 9 lines, 216 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat -n workflow/farming-facts-and-author-notes.md</p>
+<p>✅ 13 lines, 3641 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "top of\|bottom of\|foot of\|persona" . | grep -v tran…</p>
+<p>✅ 9 lines, 5846 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span> 2&gt;/dev/null | grep -n -i "sealed\|mystery\|david"</p>
+<p>✅ 10 lines, 689 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Ground truth confirms &quot;except on request&quot; (claude-md-rules.md matches CLAUDE.md line 112-114 exactly). The other two pages overstate it as absolute.</p>
+</div>
+
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 25 lines, 1572 chars</p>
+
+<div class="assistant-prose">
+<p>Confirmed contradiction. Now let's check &quot;who approves rules&quot; — order of rule files consistency (CLAUDE.md pointer order vs write-it-down.md order). Both say: exemplars, voice rules, tells catalogue, premise/limits, canon — consistent. Good.</p>
+<p>Let's check content/order of CLAUDE.md, VOICE.md, NEXT.md, llm-tells.md relationships across pages for other discrepancies (e.g., file paths named).</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: grep -n "voices.md\|notes/voices\|VOICE.md\|llm-tells.md\|notes/farming" <span class="redacted">redacted: private</span>…</p>
+<p>✅ 5 lines, 421 chars</p>
+<p>🔧 Bash: sed -n '1,50p' <span class="redacted">redacted: private</span></p>
+<p>✅ 49 lines, 2667 chars</p>
+<p>🔧 Bash: grep -n "top of a\|top-of-chapter\|reader-facing note\|addressed to readers" <span class="redacted">redacted: private</span>…</p>
+<p>✅ 4 lines, 3331 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>These are consistent. That's sufficient — I found one solid contradiction. Let me finalize.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"findings": [{"klass": "contradiction", "a": "workflow/cla…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

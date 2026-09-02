@@ -1,0 +1,148 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: [redacted] (a novel-writing project). This is a READ-ONLY resea…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted] (a novel-writing project). This is a READ-ONLY resea…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a39a90424a7627bf0">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span> (a novel-writing project). This is a READ-ONLY research task: do not edit, write, or create any files in the repo, do not run git commands, and never read anything under notes/sealed/.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>, 46-a-list-of-houses.md <span class="unpub-tag">unpublished</span>, 47-dont-tell-me-yet.md <span class="unpub-tag">unpublished</span>, 48-the-eleventh-of-cornmonth.md <span class="unpub-tag">unpublished</span>.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> Then read the four scene files.</p>
+<p>For EACH of the four scenes produce, exhaustively but tersely:</p>
+<ol>
+<li>ESTABLISHED FACTS the scene states that canon does not yet record: names, roles, ages, places, distances, prices, dates/days, System text (Skill/Level boxes verbatim), procedures, who-knows-what. Give exact quote + scene number/filename for each.</li>
+<li>IMPLICATIONS beyond what's stated (character history, geography, economy, institutions, magic mechanics, timeline) that canon should hold as Working claims. Cite the scene.</li>
+<li>CONTRADICTIONS with existing canon: quote both the scene and the canon file/section that conflicts.</li>
+<li>OPEN QUESTIONS from notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> that the scene touches, and whether it resolves one (flag if so — open questions should not be resolved casually).</li>
+</ol>
+<p>Do NOT include anything about the cause of the &quot;silent soil&quot; mystery (that's a sealed answer — don't discuss or speculate on its cause).</p>
+<p>Organize your final output by canon target file, e.g. &quot;## characters/peri.md&quot;, &quot;## world/timeline.md&quot;, &quot;## world/geography.md&quot;, &quot;## characters/minor.md&quot; — group all findings that would land in that file together, each bullet citing which scene it came from. This is so a later pass can apply canon updates file by file.</p>
+<p>Return the full organized markdown text as your final report (this is the primary deliverable — write it out in full, don't just summarize that you did it). Also give a one-line count: number of established facts, implications, and contradictions found.</p></blockquote>
+
+
+<details><summary>36 tool calls</summary>
+<p>🔧 Bash: echo "--README--" &amp;&amp; cat notes/canon/README.md &amp;&amp; echo "--SYSTEM--" &amp;&amp; cat notes/canon/sy…</p>
+<p>✅ 44 lines, 2213 chars</p>
+<p>🔧 Bash: for f in notes/canon/characters/*.md; do echo "===$f==="; cat "$f"; done</p>
+<p>🔧 Bash: for f in notes/canon/world/*.md; do echo "===$f==="; cat "$f"; done</p>
+<p>✅ 41 lines, 2196 chars</p>
+<p>✅ 48 lines, 2199 chars</p>
+<p>🔧 Bash: cat notes/canon/README.md; echo "===SYSTEM==="; cat notes/canon/system.md</p>
+<p>✅ 43 lines, 2201 chars</p>
+<p>🔧 Bash: cat notes/canon/deferred-beats.md; echo "===DQ==="; cat notes/canon/deferred-questions.md…</p>
+<p>✅ 353 lines, 27836 chars</p>
+<p>🔧 Bash: wc -l notes/canon/characters/*.md notes/canon/world/*.md</p>
+<p>✅ 27 lines, 1108 chars —       92 notes/canon/characters/appearance.md /      244 notes/canon/characters/<span class="redacted">redacted</span>.md /      972 notes/canon/characters/edwin.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> 46-a-list-of-houses.md <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 191 lines, 23866 chars</p>
+<p>🔧 Bash: grep -n -i "<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>\|Holm Deep\|Charter\|roster\|Fallowmonth\|<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span>…</p>
+<p>🔧 Bash: grep -n -i "<span class="redacted">redacted</span>" notes/canon/characters/<span class="redacted">redacted</span>.md | head -80</p>
+<p>✅ 17 lines, 1234 chars</p>
+<p>✅ 150 lines, 15837 chars</p>
+<p>🔧 Bash: sed -n '1,110p' notes/canon/world/dungeons.md</p>
+<p>✅ 110 lines, 6507 chars</p>
+<p>🔧 Bash: grep -n "Cornmonth\|scene 4[4-9]\|scene 43 <span class="unpub-tag">unpublished</span>\|ch\. 04[4-9]\|Choosing\|11 Corn…</p>
+<p>✅ 48 lines, 3524 chars</p>
+<p>🔧 Bash: sed -n '190,260p' notes/canon/world/timeline.md</p>
+<p>✅ 71 lines, 4217 chars</p>
+<p>🔧 Bash: grep -n -i "nine steadings\|withy bed\|<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>…</p>
+<p>✅ 55 lines, 5611 chars</p>
+<p>🔧 Bash: sed -n '1,60p' notes/canon/characters/<span class="redacted">redacted</span>.md</p>
+<p>✅ 60 lines, 3534 chars</p>
+<p>🔧 Bash: grep -n -i "<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 55 lines, 5595 chars</p>
+<p>🔧 Bash: grep -n -i "barley\|band\|arc's leading edge\|edge goes out\|yard a day\|ripen" notes/can…</p>
+<p>✅ 30 lines, 2083 chars</p>
+<p>🔧 Bash: sed -n '150,165p' notes/canon/characters/minor.md; echo ---; grep -n -i "<span class="redacted">redacted</span>" note…</p>
+<p>✅ 17 lines, 855 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 2 lines, 203 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Enough grounding gathered. Here is the extraction report.</p>
+<h2>characters/<span class="redacted">redacted</span>.md</h2>
+<ul>
+<li>[46, 45] New on-page physical description of <span class="redacted">redacted</span> (none exists in characters/<span class="redacted">redacted</span>.md<code>or</code>appearance.md currently — <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Consistent with existing &quot;gear as Peri listed it&quot; entry but adds body description (&quot;not tall&quot;) not previously recorded. <strong>Established fact to add.</strong></li>
+<li>[45] Edwin's read on <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> ch. 012&quot;) but with new phrasing worth citing to scene 45 <span class="unpub-tag">unpublished</span> as the re-established source.</li>
+<li><strong>[46] Gear rationale, richer than canon's terse list</strong>: exact reasons given in her own voice — hook is &quot;a fen bill... <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.md gear entry (four-foot billhook, dented hood, restitched glove, left-shoulder wear) — this scene supplies the <em>reasons</em>, which is new content to fold into <span class="redacted">redacted</span>.md.</li>
+<li><strong>[46] New quantified fact</strong>: &quot;For the person behind me&quot; — the rope is explicitly for whoever follows her on a delve/walk. Not previously on record.</li>
+<li><strong>[46] New quantified fact</strong>: since Weedmonth, <span class="redacted">redacted</span> has walked out to the chain eleven times, nine &quot;mine&quot; (her own book), two chalked by <span class="redacted">redacted</span> and <span class="redacted">redacted</span> on her request &quot;if they were passing the post.&quot; Cross-check against dungeons.md's leakage-count citations (Weedmonth 4/Haymonth 7/Cornmonth 19) — not in conflict, this is a separate tally (visits, not counts) and is new.</li>
+<li><strong>[46] Confirms existing fact, new phrasing</strong>: &quot;Four times... Before Weedmonth, and not since&quot; — down Holm Deep four times before <span class="redacted">redacted</span>, matches <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> (chs. 014, 015).&quot; No new information, re-established via scene 46 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>[46] New</strong>: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>[47] New forward-pointing beat</strong>: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Flag as a <strong>deferred beat</strong> (Edwin's own hands-on read of the mouth) rather than resolving it now.</li>
+<li><strong>[47] New date claim</strong>: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> 014).&quot; Confirms rather than creates.</li>
+</ul>
+<h2>characters/minor.md (<span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, Mattie/Tess, corn factor's man)</h2>
+<ul>
+<li><strong>[45] Confirms existing figures, no new facts</strong>: <span class="redacted">redacted</span> 68, guildmaster 22 years, roster arithmetic (19 on the wall, 4 dead/gone unstruck, 3 over-sixty daylight-only, <span class="redacted">redacted</span>+<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>/<span class="redacted">redacted</span> entries exactly. Re-establishes via scene 45 <span class="unpub-tag">unpublished</span>, no contradiction, no new fact.</li>
+<li>[45] New characterization/quote for <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s clerk-as-record-keeper characterization; consistent with minor.md's existing <span class="redacted">redacted</span> entry (&quot;hides behind the book,&quot; &quot;enters every count within the day&quot;).</li>
+<li><strong>[45] New institutional procedure, worth recording</strong>: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s compliance — fetching <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, plus Edwin/Peri as witnesses) before it goes to the board. This is a Charter norm not previously on record: rulings that affect a named rostered hand are read back to that hand before posting. <strong>New Established fact</strong>, candidate for <code>institutions.md</code>'s Charter-practice section.</li>
+<li>[45] <span class="redacted">redacted</span>: named and present, &quot;a big slow-spoken man,&quot; fetched from the pump, on the roster, &quot;stood at that chain.&quot; Matches minor.md's existing terse &quot;<span class="redacted">redacted</span> (counts; the second gate;...)&quot; entry — adds a first physical/character beat for <span class="redacted">redacted</span>, which minor.md currently lacks.</li>
+<li><strong>[45] New Edwin beat</strong>: Edwin asks <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> This bridges the Holm Deep/Charter thread and the barley-field thread on the page — worth recording as the mechanism by which the worm-count data becomes available to the corn factor's man (relevant to scene 48 <span class="unpub-tag">unpublished</span>'s corn-factor visit). <strong>New Established fact.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> ch. 009&quot;): in scene 48 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> No new canon fact, but establishes she is physically present for the Day-15 Charter-house scene, which the existing timeline entry for that day did not explicitly place her at.</li>
+</ul>
+<h2>world/institutions.md (the Fenholt Charter)</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> (it already is recorded as fired elsewhere in dungeons.md/timeline.md, so this is a migration note, not a new resolution).</p>
+<ul>
+<li><strong>[45] Confirms, does not add</strong>: day rate 1s 8d for Charter delvers vs 3s + dinner for Marsh's drains — matches institutions.md's pricing table exactly.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> farm (<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s, the two Hobbs, the <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <strong>No contradiction — confirms via new dialogue-form citation</strong>, but adds concrete detail not previously recorded: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>world/geography.md</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Scene 46 <span class="unpub-tag">unpublished</span> is a clean dramatization of already-Established geography; cite scene 46 <span class="unpub-tag">unpublished</span> alongside the existing ch. 009/013-015 citations as the scene now carrying this material on the page.</p>
+<h2>world/dungeons.md (Holm Deep)</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span> in nine years&quot;); the mouth &quot;still drawing&quot; as of &quot;yesterday&quot; per the slate. All match dungeons.md's existing Established entry verbatim in substance. Cite scene 45 <span class="unpub-tag">unpublished</span> as the new on-page source, migrating the citation from ch. 012/019 (deleted draft) to the live scene.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> Minor addition.</p>
+<ul>
+<li><strong>[46/47] Confirms</strong>: <span class="redacted">redacted</span> down Holm Deep four times before <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>world/timeline.md</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Scene 48 <span class="unpub-tag">unpublished</span> dramatizes the <em>derivation</em>: Edwin's barley-rate backward calculation (± 7 days), then Mattie's correction via the corn factor's man's dated docket (11th) and her own observation of the edge beginning to go on the 13th, narrowing it to &quot;the eleventh or twelfth.&quot; <strong>This scene supplies the on-page methodology and witnessed corroboration for a fact timeline.md already carries as Established</strong> — recommend migrating timeline.md's citation for this line from the deleted ch. 013 to scene 48 <span class="unpub-tag">unpublished</span>, and adding the corn-factor's-man corroboration detail (11 Cornmonth docket date; edge visibly going by 13 Cornmonth) as new supporting evidence.</p>
+<ul>
+<li><strong>[45] Confirms Day 15 (29 Cornmonth) Charter-house scene</strong> — <span class="redacted">redacted</span>'s ruling, <span class="redacted">redacted</span>'s counts, the board — matches timeline.md's existing Day 15 entry precisely (including the &quot;eleven weeks and five days&quot; / &quot;held forty-nine... hold thirty-three&quot; language). Recommend migrating the citation from ch. 012 to scene 45 <span class="unpub-tag">unpublished</span>.</li>
+<li><strong>[47] Confirms Day 18 (2 Harvestmonth)</strong>: <span class="redacted">redacted</span>'s stated plan to be at the mouth that day matches the existing entry &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>characters/edwin.md / characters/peri.md (relationship material)</h2>
+<ul>
+<li><strong>[48] New characterization beat, not yet in canon</strong>: Edwin notices that the barley edge's calculated pass-date (11 Cornmonth) falls four days before Peri's arrival and binding of his life — &quot;Neither of them wrote it.&quot; Both Edwin and Peri privately register the coincidence and say nothing. This is a small but real emotional beat about the two dates sitting close together; recommend a Working note in <code>characters/edwin.md</code> and/or <code>characters/peri.md</code> under their relationship material, since it's a scene beat about their bond rather than a plot fact.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>[45] Small Edwin beat</strong>: Edwin sits silent through the whole Charter-house scene, unasked, and privately judges both <span class="redacted">redacted</span> and <span class="redacted">redacted</span> &quot;right&quot; with &quot;nothing in the room to correct&quot; — consistent with his established analytical, non-intervening habit; not a new canon fact, just voice-consistent behavior.</li>
+</ul>
+<h2>Open questions touched (from deferred-questions.md) — none resolved</h2>
+<ul>
+<li>None of these four scenes touch or resolve any row in <code>notes/canon/deferred-questions.md</code>. <span class="unpub-tag">unpublished</span> They dramatize already-scheduled, already-Established Day 15–18 material (Holm Deep's postponement ruling, the fen-margin houses, the barley band-dating) rather than opening or closing any deferred question. In particular:
+<ul>
+<li>The silent-soil cluster is <strong>not discussed or speculated on</strong> in any of the four scenes beyond the already-canonical &quot;barley band&quot; mechanics (which is explicitly the non-sealed, page-visible layer) — no sealed material was touched or needs mention.</li>
+<li><span class="redacted">redacted</span>'s &quot;How long before <span class="redacted">redacted</span> is believed&quot; and &quot;grandmother's people&quot; rows are untouched.</li>
+<li>The Frostmonth tide-mark and dungeon-break design-doc rows are untouched (scene 47 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>No holiday, god, realm/capital/king, or Edwin's-class-name proper noun is used anywhere in the four scenes — clean on the standing-constraint list.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Counts:</strong> ~19 established/confirmed facts (including several genuinely new items: the Charter's &quot;read-it-back-to-everyone-it-concerns&quot; procedure, <span class="redacted">redacted</span>'s gear-rationale quotes, the rope's purpose, her eleven-visits tally, <span class="redacted">redacted</span>'s first characterization beat, Edwin's board request for the worm count, and the corn-factor docket corroboration), ~5 implications/forward-pointing beats (Edwin's still-owed hands-on visit to the Deep's mouth; the Edwin/Peri date-coincidence beat; Edwin's deliberate teaching method with Peri), 0 contradictions found.</p>
+</div>
+</body></html>

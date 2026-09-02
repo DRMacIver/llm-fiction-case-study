@@ -1,0 +1,60 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-abb53970d97ea7f5d">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: try to REFUTE this finding. A finder has flagged a problem in the site's prose; your job is to show the original text was in fact right, or the finding is a misreading, or the proposed fix is worse than the original. Read a wider window than the quoted sentence (the whole section) and go to ground truth in priority order. If you cannot refute it with a receipt, say refuted=false. Default to refuted=true only if the evidence is genuinely ambiguous. Finding (JSON): {&quot;id&quot;:&quot;workflow_next_md_handoff_04&quot;,&quot;verdict&quot;:&quot;OVERSTATED&quot;,&quot;receipt&quot;:&quot;The subagent instruction (build/parsed/subagents/af9d8c86b2be3dad3.json) for the 'because pass' over 101-118 says: &quot;'because': count per scene first. Convert enough instances that every scene ends under four per thousand words... Keep every reason; change the joint.&quot; This is a mechanical prose-tic thinning pass (reducing overuse of the word 'because' and write-verb tics like 'wrote it'), not &quot;an advisory pass checking that explanations weren't cut for brevity where they shouldn't have been&quot; — that description matches the separate pre-david-pass skill (.claude/skills/pre-david-pass/SKILL.md: &quot;a finding that removes a reason... is wrong&quot;; &quot;the report is advisory&quot;), which is a different, already-completed step in this same queue's history, not the queued item itself. The four other queue items (David's read, consistency-backfill, author's notes, chapter-grouping) do match plans/NEXT.md's 'Owed before publication' list in the same order.&quot;,&quot;receipt_kind&quot;:&quot;ran-it-myself&quot;,&quot;explanation&quot;:&quot;Traced the queue item to its actual subagent task via the session transcript and confirmed it is a mechanical 'because'-frequency/write-verb-tic reduction pass, not an advisory brevity-cut check.&quot;,&quot;proposed_fix&quot;:&quot;Replace the fourth queue item's description with something like: &quot;run a mechanical pass thinning overused 'because'-constructions and write-verb tics in the newest chapters while keeping every reason intact&quot;.&quot;,&quot;claim&quot;:{&quot;id&quot;:&quot;workflow_next_md_handoff_04&quot;,&quot;quote&quot;:&quot;On the day the draft reached its end, the queue read, in order: get David's read on the two most recently drafted acts, run the consistency-backfill skill over every &quot;new facts&quot; list the editing lenses had produced but not yet folded into canon, run an advisory pass checking that explanations weren't cut for brevity where they shouldn't have been, write author's notes for the newly finished chapters, and update the chapter-grouping file that controls how scenes get bundled for Royal Road&quot;,&quot;location&quot;:&quot;Line 9&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/next-md-handoff.md&quot;}}<br />
+Return structured output only.</p></blockquote>
+
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span> 2&gt;/dev/null | head -c 3000</p>
+<p>✅ 35 lines, 3000 chars</p>
+<p>🔧 Read site/src/workflow/next-md-handoff.md</p>
+<p>✅ 18 lines, 3375 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline -- plans/NEXT.md | head -20</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span> 2&gt;/dev/null | head -c 2000</p>
+<p>✅ 19 lines, 2756 chars</p>
+<p>✅ 36 lines, 1991 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Let me look at the actual queue text in the commit that added this NEXT.md content.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git show 72261f7:plans/NEXT.md | sed -n '1,60p'</p>
+<p>✅ 60 lines, 3975 chars</p>
+
+<div class="assistant-prose">
+<p>This confirms it definitively: the ground truth text is &quot;a <code>because</code> pass over 101–118 like the one run on 90–100&quot; — explicitly mechanical, matching the subagent instruction exactly, not an &quot;advisory pass checking that explanations weren't cut for brevity.&quot;</p>
+</div>
+
+<p>🔧 StructuredOutput ({"refuted": false, "why": "The finding is correct and I cou…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

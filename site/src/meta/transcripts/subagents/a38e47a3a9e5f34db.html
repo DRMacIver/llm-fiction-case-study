@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a38e47a3a9e5f34db">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: try to REFUTE this finding. A finder has flagged a problem in the site's prose; your job is to show the original text was in fact right, or the finding is a misreading, or the proposed fix is worse than the original. Read a wider window than the quoted sentence (the whole section) and go to ground truth in priority order. If you cannot refute it with a receipt, say refuted=false. Default to refuted=true only if the evidence is genuinely ambiguous. Finding (JSON): {&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_23&quot;,&quot;verdict&quot;:&quot;OVERSTATED&quot;,&quot;receipt&quot;:&quot;autoroad .claude/skills/consistency-check/SKILL.md:37 (quoted directly): 'If canon and an earlier chapter conflict, canon wins; flag the earlier chapter too.'&quot;,&quot;receipt_kind&quot;:&quot;quoted-from-source&quot;,&quot;explanation&quot;:&quot;The skill file that governs this exact scenario resolves the conflict automatically in canon's favor and only flags the earlier chapter for revision — it does not say the decision is kicked to David, contradicting the page's claim that 'the decision belongs to David rather than to the model.' (A related but distinct rule elsewhere says the model must never silently delete/weaken canon and must flag conflicts to David — that governs backfill's canon-vs-draft negotiation, not this canon-vs-earlier-chapter case.)&quot;,&quot;proposed_fix&quot;:&quot;Replace with something like: 'If canon and an earlier accepted chapter turn out to disagree, canon wins automatically and the earlier chapter gets flagged for revision, rather than the model silently editing canon to fit what was already written.'&quot;,&quot;claim&quot;:{&quot;id&quot;:&quot;workflow_canon_and_claim_levels_md_23&quot;,&quot;quote&quot;:&quot;If canon and an earlier accepted chapter turn out to disagree, both get flagged, and the decision belongs to David rather than to the model&quot;,&quot;location&quot;:&quot;line 18&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;workflow/canon-and-claim-levels.md&quot;}}<br />
+Return structured output only.</p></blockquote>
+
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: sed -n '1,40p' <span class="redacted">redacted: private</span></p>
+<p>✅ 17 lines, 3929 chars</p>
+<p>🔧 Bash: sed -n '1,60p' <span class="redacted">redacted: private</span></p>
+<p>✅ 60 lines, 3242 chars</p>
+<p>🔧 Bash: find <span class="redacted">redacted: private</span> -type f 2&gt;/dev/null; echo ---; cat <span class="redacted">redacted: private</span> 2&gt;/dev/nu…</p>
+<p>✅ 94 lines, 5229 chars</p>
+<p>🔧 Bash: sed -n '55,120p' <span class="redacted">redacted: private</span></p>
+<p>✅ 38 lines, 1954 chars</p>
+<p>🔧 StructuredOutput ({"refuted": false, "why": "The skill file that governs exac…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>

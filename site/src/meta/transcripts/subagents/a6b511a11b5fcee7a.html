@@ -1,0 +1,126 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in the repo [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in the repo [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a6b511a11b5fcee7a">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in the repo <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (the novel project, read-only, never modify it; its git history is readable with git -C) and <span class="redacted">redacted: private</span> (read-only). Do NOT touch anything else outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto.<br />
+Rules: use uv for Python (uv run; never global installs). Prefer Python to bash. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. No em dashes anywhere in prose (use commas, full stops, or spaced hyphens). Keep prose plain.<br />
+Background: this site (an mdBook in <span class="redacted">redacted: private</span>) chronicles how the novel &quot;How to Save the World&quot; (Royal Road, <a href="https://www.royalroad.com/fiction/189685/how-to-save-the-world">https://www.royalroad.com/fiction/189685/how-to-save-the-world</a>) was written with Claude Code in <span class="redacted">redacted: private</span> between 2026-08-24 and 2026-09-02. The site is entirely LLM-generated and says so. Published chapters are scenes 1-40 of draft/book-01/scenes. <span class="redacted">redacted sentence</span> The redaction term list is <span class="redacted">redacted: private</span> Never quote story prose. Never name the autoroad repository URL or say where it is hosted.</p>
+<p>Task: research the writing workflow's features in <span class="redacted">redacted: private</span> Scope: scripts/ (build_ebook.py, collate_book.py, check_citations.py, kindle scripts), build/, covers/, samples/, book-inspirations/, publishing/ (fiction.json, chapters.json, rr-map.json, top-notes; skip blurb text). Describe the ebook/kindle proofing loop, citation checking, cover work, publishing config.. Read the files, run --help or read docstrings where useful, do not run anything that modifies the repo. Report spoiler-free. Return structured output only.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll research the writing workflow features in the autoroad repository. Let me start by exploring the relevant directories and files.</p>
+</div>
+
+<details><summary>66 tool calls</summary>
+<p>🔧 Bash: find <span class="redacted">redacted: private</span> -type f -name "*.py" | head -20 (Find Python scripts in the autoroad repo)</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span> | head -30 (List top-level directories in autoroad repo)</p>
+<p>✅ 20 lines, 1333 chars</p>
+<p>✅ 25 lines, 1521 chars</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span> (List scripts directory)</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span> (List build directory)</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span> (List covers directory)</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span> (List publishing directory)</p>
+<p>✅ 9 lines, 500 chars — total 40 / drwxr-xr-x@  8 drmaciver  staff   256 31 Aug 22:32 . / drwxr-xr-x@ 24 drmaciver  staff   768  2 Sep 14:40 ..</p>
+<p>✅ 14 lines, 869 chars — total 112 / drwxr-xr-x@  6 drmaciver  staff    192 28 Aug 23:19 __pycache__ / drwxr-xr-x@ 13 drmaciver  staff    416 29 Aug 19:33 .</p>
+<p>✅ 5 lines, 230 chars — total 16 / drwxr-xr-x@  4 drmaciver  staff  128 25 Aug 09:06 . / drwxr-xr-x@ 24 drmaciver  staff  768  2 Sep 14:40 ..</p>
+<p>✅ 5 lines, 238 chars — total 24 / drwxr-xr-x@  4 drmaciver  staff   128 31 Aug 12:25 . / drwxr-xr-x@ 24 drmaciver  staff   768  2 Sep 14:40 ..</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 105 lines, 4109 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 120 lines, 4809 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 211 lines, 10406 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 270 lines, 11064 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 149 lines, 6140 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 7 lines, 248 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 28 lines, 695 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 21 lines, 1154 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 172 lines, 3436 chars</p>
+<p>🔧 Bash: find <span class="redacted">redacted: private</span> -type f | head -30 (List files in covers directory)</p>
+<p>🔧 Bash: find <span class="redacted">redacted: private</span> -type f -name "*.py" | head -20 (Find Python scripts in samples directory)</p>
+<p>🔧 Bash: find <span class="redacted">redacted: private</span> -type f | head -20 (List files in book-inspirations directory)</p>
+<p>✅ 24 lines, 2054 chars</p>
+<p>✅ 1 lines, 72 chars</p>
+<p>✅ 4 lines, 935 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 597 lines, 25066 chars</p>
+<p>🔧 Bash: head -50 <span class="redacted">redacted: private</span> (Inspect cover gallery HTML)</p>
+<p>✅ 50 lines, 1086 chars</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span> (List publishing top-notes directory)</p>
+<p>✅ 4 lines, 169 chars — total 8 / drwxr-xr-x@ 3 drmaciver  staff   96 31 Aug 11:27 . / drwxr-xr-x@ 8 drmaciver  staff  256 31 Aug 22:32 ..</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span> (Read epub build script)</p>
+<p>🔧 Bash: head -100 <span class="redacted">redacted: private</span> (Inspect publishing blurb (partial))</p>
+<p>✅ 27 lines, 1404 chars</p>
+<p>✅ 7 lines, 265 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 15 lines, 716 chars</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span> (List samples directory structure)</p>
+<p>🔧 Bash: python3 <span class="redacted">redacted: private</span> --help (Get help for build_ebook script)</p>
+<p>✅ 15 lines, 830 chars — total 0 / drwxr-xr-x@ 14 drmaciver  staff  448 28 Aug 22:54 . / drwxr-xr-x@ 24 drmaciver  staff  768  2 Sep 14:40 ..</p>
+<p>✅ 6 lines, 155 chars — usage: build_ebook.py [-h] [--title TITLE] [--author AUTHOR] /  / options:</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span> (List round5 samples subdirectory)</p>
+<p>🔧 Bash: python3 <span class="redacted">redacted: private</span> --help 2&gt;&amp;1 || true (Get help for collate_book script)</p>
+<p>🔧 Bash: python3 <span class="redacted">redacted: private</span> --help 2&gt;&amp;1 || true (Get help for check_citations script)</p>
+<p>✅ 10 lines, 542 chars — total 72 / drwxr-xr-x@  9 drmaciver  staff    288 28 Aug 21:44 . / drwxr-xr-x@ 14 drmaciver  staff    448 28 Aug 22:54 ..</p>
+<p>✅ 1 lines, 71 chars — FAIL: no chapters found under <span class="redacted">redacted: private</span></p>
+<p>✅ 15 lines, 704 chars — checked 591 quoted-and-cited phrases /  / FABRICATED (no substantial match anywhere): 0</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 72 lines, 3897 chars</p>
+<p>🔧 Bash: python3 <span class="redacted">redacted: private</span> --help (Get help for update-kindle script)</p>
+<p>🔧 Bash: python3 <span class="redacted">redacted: private</span> 2&gt;&amp;1 | head -30 (Run kindle position tests)</p>
+<p>✅ 24 lines, 1339 chars — usage: update-kindle.py [-h] [--epub EPUB] [--kindle KINDLE] /                         [--reset-position] / </p>
+<p>✅ 4 lines, 195 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 168 lines, 6279 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me check if there are any other important build scripts or utilities I may have missed.</p>
+</div>
+
+<p>🔧 Bash: find <span class="redacted">redacted: private</span> -maxdepth 2 -type f -name "*.py" -o -name "*.sh" | grep -E "(scr… (List all executable scripts in scripts and build directories)</p>
+<p>🔧 Bash: ls -1 <span class="redacted">redacted: private</span> | head -10 (List tools directory)</p>
+<p>✅ 8 lines, 472 chars</p>
+<p>✅ 7 lines, 79 chars</p>
+
+<div class="assistant-prose">
+<p>Now I have enough information to provide a comprehensive structured output. Let me compile the findings.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"features": [{"name": "build_ebook.py", "kind": "tool", "p…)</p>
+<p>✅ 1 lines, 80 chars</p>
+<p>🔧 StructuredOutput ({"features": [{"name": "build_ebook.py", "kind": "tool", "p…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

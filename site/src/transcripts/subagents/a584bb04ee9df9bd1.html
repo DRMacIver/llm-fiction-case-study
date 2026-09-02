@@ -1,0 +1,157 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Read and follow [redacted] (all its reading list and rules a…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Read and follow [redacted] (all its reading list and rules a…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a584bb04ee9df9bd1">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Read and follow <span class="redacted">redacted: private</span> (all its reading list and rules apply). Then do three things:</p>
+<ol>
+<li>
+<p>Chapter 35 (scenes 71, 72) has no author's note. Write draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span> per the brief. Check the notes already written for chapters 28–43 (files 56-…, 58-…, 60-…, 62-…, 64-…, 66-…, 67-…, 69-…, 73-…, 75-…, 77-…, 79-…, 81-…, 83-…, 86-…, 88-…) so you do not repeat any of their terms.</p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> and draft/book-01/author-notes/73-thirteen-down.md <span class="unpub-tag">unpublished</span> both lead with the &quot;why a cave/hill breathes&quot; explanation, which draft/book-01/author-notes/44-where-they-stopped-writing.md <span class="unpub-tag">unpublished</span> already gives (that is the first place it is worked on the page, so 44 keeps it; do not touch 44). Replace the lead item of each of 58 and 73 with a different real-world item drawn from that chapter's own scenes (58+59 for chapter 28; 73+74 for chapter 36), keeping each file's remaining items unless they now read wrong, and keeping each file within the budget. Neither new lead may duplicate a term in any other note file (grep the bold terms across draft/book-01/author-notes/).</p>
+</li>
+<li>
+<p>Write <span class="redacted">redacted: private</span> with the glossary entries for the new terms you introduced and a line saying which entries in glossary-add-B.md (cave breathing at 58) and glossary-add-C.md (cave draught at 73) are now superseded by 44's entry in glossary-add-A.md. Do not edit the glossary itself.</p>
+</li>
+</ol>
+<p>Run the note lint on the three files and fix errors. Report: the three files' lead terms and word counts, any autobiographical claim made, and the glossary file path.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the brief.</p>
+</div>
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 34 lines, 4305 chars</p>
+<p>🔧 Bash: cat notes/author.md &amp;&amp; echo "=====EXEMPLARS=====" &amp;&amp; cat notes/author-note-exemplars.md</p>
+<p>✅ 45 lines, 2228 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
+<p>✅ 45 lines, 2228 chars</p>
+<p>🔧 Read notes/author.md</p>
+<p>✅ 165 lines, 9431 chars</p>
+<p>🔧 Read notes/author-note-exemplars.md</p>
+<p>✅ 166 lines, 28861 chars</p>
+<p>🔧 Bash: sed -n '1,200p' notes/farming.md</p>
+<p>✅ 125 lines, 7092 chars</p>
+<p>🔧 Bash: cat draft/book-01/author-notes/README.md &amp;&amp; echo ==== &amp;&amp; ls draft/book-01/author-notes/ &amp;…</p>
+<p>✅ 17 lines, 740 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; ls draft/book-01/author-notes/; echo "-----"; grep -oh '\*\*[^*]*\*\*' dra…</p>
+<p>✅ 235 lines, 5757 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 19 lines, 6591 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 -c " import json;d=json.load(open('publishing/chapters.json')) for…</p>
+<p>✅ 29 lines, 857 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the scenes I need.</p>
+</div>
+
+<details><summary>26 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; ls draft/book-01/scenes/ | sed -n '68,80p'; echo "======69"; cat draft/boo…</p>
+<p>✅ 86 lines, 13809 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; ls draft/book-01/scenes/7*.md; echo "======"; cat draft/book-01/scenes/71-…</p>
+<p>✅ 89 lines, 12015 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rl "go yellow\|Lamps at the waist\|A candle at the mouth\|Why a lamp…</p>
+<p>✅ 14 lines, 4793 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; for f in 56 60 62 64 66 69 75 77 79 81 83 86 88; do echo "=====$f"; cat dr…</p>
+<p>✅ 60 lines, 18748 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rni "pump\|cholera\|rope\|penned\|beeswax" draft/book-01/author-note…</p>
+<p>✅ 10 lines, 1609 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat draft/book-01/scenes/58-*.md draft/book-01/scenes/59-*.md</p>
+<p>✅ 80 lines, 12673 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rni "causeway\|trackway\|Sweet Track\|withy\|coppic\|willow\|heron\|…</p>
+<p>✅ 4 lines, 803 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat draft/book-01/author-notes/30-twelve-miles-of-flat.md; echo ===54; cat…</p>
+<p>✅ 5 lines, 1272 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat draft/book-01/author-notes/54-before-the-charter.md <span class="unpub-tag">unpublished</span>; ech…</p>
+<p>✅ 4 lines, 1527 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rni "island\|Ramsey\|Ely\|gravel\|roddon" draft/book-01/author-notes…</p>
+<p>✅ 99 lines, 15322 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rni "chalk\|arrow\|junction\|tallow\|candle\|guano\|bat " draft/book…</p>
+<p>✅ 10 lines, 1209 chars</p>
+<p>🔧 Write draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 1 lines, 175 chars</p>
+<p>🔧 Edit draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 1 lines, 185 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the two lead replacements.</p>
+</div>
+
+<details><summary>24 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' import re,io <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 1 lines, 400 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='draft/book-01/author-notes/73-thirteen-down.md <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 11 lines, 888 chars</p>
+<p>🔧 Write draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 1 lines, 185 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>' t=op…</p>
+<p>✅ 6 lines, 205 chars — draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span>:1:1: [warn] note-length: '321 words (max 300)' /  / 0 error(s), 1 warning(s)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 4 lines, 126 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 6 lines, 261 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 8 lines, 340 chars — draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span>:1:1: [warn] note-length: '301 words (max 300)' / &lt;corpus of 3 files&gt;:1:1: [warn] indefinite-pronoun-budget: 'x1 in 891w = 11.2/10000w (max 11)' /     ...\b(nobody|somebody|anybody)\b...</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 21 lines, 1361 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; uv run tools/lint/prose_lint.py --scope note draft/book-01/author-notes/71…</p>
+<p>✅ 4 lines, 160 chars — &lt;corpus of 3 files&gt;:1:1: [warn] indefinite-pronoun-budget: 'x1 in 885w = 11.3/10000w (max 11)' /     ...\b(nobody|somebody|anybody)\b... / </p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1,40p' notes/canon/world/farming-glossary.md; echo ...; grep -n "h…</p>
+<p>✅ 44 lines, 2088 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '370,400p' notes/canon/world/farming-glossary.md; echo "=====scratc…</p>
+<p>✅ 93 lines, 2515 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for f in A B C; do echo "##### $f"; cat glossary-add-$f.md; done</p>
+<p>✅ 381 lines, 23373 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the glossary-add-F file.</p>
+</div>
+
+<p>🔧 Write <span class="redacted">redacted: private</span></p>
+<p>✅ 1 lines, 220 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; uv run tools/lint/prose_lint.py --scope note draft/book-01/author-notes/71…</p>
+<p>✅ 10 lines, 1693 chars</p>
+
+<div class="assistant-prose">
+<p>Done. All three files pass the note lint (0 errors; one corpus-level indefinite-pronoun warning at 11.3/10000 words against a max of 11, well below the existing corpus rate of 28.6, so left as is). Per the brief I did not run git, so nothing is committed.</p>
+<p><strong>Files</strong></p>
+<ul>
+<li>draft/book-01/author-notes/71-in-the-hill.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> 295 words.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>` — new lead <strong>An island in a fen</strong> (peat grew round higher clay-and-gravel ground; fen villages sit on the islands; <em>ey</em> names; Ramsey/Thorney/Whittlesey/Manea/Isle of Ely; shrinkage raises them). Existing <em>A refusal line</em> and <em>Reading a kill</em> kept unchanged. 300 words.</li>
+<li>`draft/book-01/author-notes/73-thirteen-down.md <span class="unpub-tag">unpublished</span> — new lead <strong>Marking the way out</strong> (a passage read in reverse; the back marker does the marking; chalk arrows point outward only; numbering openings so a count can be compared). Existing <em>Cut to sit</em> and <em>Lamps at the waist</em> kept unchanged. 290 words.</li>
+</ul>
+<p>Both new leads are drawn from their own chapter's scenes (the Deep's island of hard ground in scene 59 <span class="unpub-tag">unpublished</span>; <span class="redacted">redacted</span> arrowing and numbering the openings in scene 73 <span class="unpub-tag">unpublished</span>), and neither term duplicates any bold term across <code>draft/book-01/author-notes/</code>. 44-where-they-stopped-writing.md <span class="unpub-tag">unpublished</span>` was not touched.</p>
+<p><strong>Autobiographical claim made</strong> (one, chapter 35): the author has handled straps on the farm that carried two or three hands' repairs, none of them a saddler's. Consistent with the existing farm-summers bio; needs logging in <code>notes/author.md</code>.</p>
+<p><strong>Glossary file</strong>: `<span class="redacted">redacted: private</span> — five new entries, plus the statement that glossary-add-B's <strong>Why a hill breathes (cave breathing)</strong> (ch. 28) and glossary-add-C's <strong>A hill that breathes (cave draught)</strong> (scene 73 <span class="unpub-tag">unpublished</span>) are both superseded by glossary-add-A's <strong>Why a hill breathes</strong> at ch. 21 / scene 44 <span class="unpub-tag">unpublished</span>. The glossary itself was not edited.</p>
+</div>
+</body></html>

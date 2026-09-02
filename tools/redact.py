@@ -53,6 +53,17 @@ _SCENE_FILENAME_RE = re.compile(r"\b0*([0-9]{2,3})-[a-z0-9-]+\.md\b", re.IGNOREC
 _PRIVATE_PATH_RE = re.compile(
     r"(?:/Users/[a-zA-Z0-9_.-]+/\.claude/|/private/tmp/claude-501/)[^\s<>`\"')]*"
 )
+# Broader variant used for the "meta" source profile (this project's own
+# transcripts): unlike the novel's transcripts, whose only private-path
+# leakage is Claude Code project storage / the scratch dir (the literal
+# "/Users/drmaciver/Projects/autoroad" repo path is instead a spoiler `term`
+# in spoilers.json), this project's transcripts can mention *any* local
+# "/Users/<user>/..." path (this repo's own cwd, a sibling project's repo,
+# a home-directory file, ...) -- so every such path is redacted outright
+# rather than only the two known-sensitive prefixes.
+_PRIVATE_PATH_RE_BROAD = re.compile(
+    r"/Users/[a-zA-Z0-9_.-]+(?:/[^\s<>`\"')]*)?"
+)
 _PRIVATE_ID_RE = re.compile(
     r"\btoolu_[A-Za-z0-9]+\b"
     r"|\bwf_[0-9a-f]{6,10}-[0-9a-f]{3}\b"
@@ -246,12 +257,14 @@ def _mark_unpublished_paths(text: str, spoilers: Spoilers, counts: RedactionCoun
     return text
 
 
-def _redact_private_paths(text: str, counts: RedactionCounts) -> str:
+def _redact_private_paths(text: str, counts: RedactionCounts, broad: bool = False) -> str:
     """Blank local filesystem paths / tool-use ids that leak operational
     detail (Claude Code project storage, this tool's scratch dir, toolu_
     ids). Not a story spoiler category -- always the generic "private"
     marker, matching the existing literal /Users/.../autoroad term's
-    category in spoilers.json.
+    category in spoilers.json. ``broad=True`` (the "meta" source profile)
+    redacts any "/Users/<user>/..." path, not just the two known-sensitive
+    prefixes -- see `_PRIVATE_PATH_RE_BROAD`.
     """
 
     def repl(m: re.Match) -> str:
@@ -259,8 +272,33 @@ def _redact_private_paths(text: str, counts: RedactionCounts) -> str:
         counts.redacted_chars += len(m.group(0))
         return f"{CHAR_MARK}redacted: private{CHAR_MARK_CLOSE}"
 
-    text = _PRIVATE_PATH_RE.sub(repl, text)
+    text = (_PRIVATE_PATH_RE_BROAD if broad else _PRIVATE_PATH_RE).sub(repl, text)
     text = _PRIVATE_ID_RE.sub(repl, text)
+    return text
+
+
+def build_anonymize_patterns(terms: list[str]) -> list[re.Pattern]:
+    """Compile an ordered list of whole-word(ish) patterns for the "meta"
+    source's anonymisation map (see tools/sources.json's `anonymize` list).
+    Longest terms first, so e.g. "hegel-blog-post" is matched (and
+    replaced) whole before the later, bare "hegel" pattern would otherwise
+    also match the "hegel" inside it."""
+    ordered = sorted(terms, key=len, reverse=True)
+    return [_word_pattern(t) for t in ordered]
+
+
+def _anonymize(
+    text: str, patterns: list[re.Pattern], placeholder: str, counts: RedactionCounts
+) -> str:
+    if not patterns:
+        return text
+
+    def repl(m: re.Match) -> str:
+        counts.add_category("anonymized")
+        return placeholder
+
+    for pattern in patterns:
+        text = pattern.sub(repl, text)
     return text
 
 
@@ -412,6 +450,10 @@ def redact_text(
     counts: RedactionCounts,
     prose_index=None,
     full: bool = True,
+    enable_paths_and_scenes: bool = True,
+    broad_private_paths: bool = False,
+    anonymize_patterns: list[re.Pattern] | None = None,
+    anonymize_placeholder: str = "",
 ) -> str:
     """Redact ``text``.
 
@@ -419,12 +461,24 @@ def redact_text(
     private-information pass runs: term, topic, scene-number, unpublished-
     path and prose-guard passes are all skipped, since nothing before the
     premise reveal is a story spoiler.
+
+    ``enable_paths_and_scenes=False`` (the "meta" source profile) skips the
+    unpublished-path/scene-number *tagging* passes entirely -- they only
+    make sense against the novel's own scene numbering and plans/ tree.
+    ``broad_private_paths`` widens the private-path redaction to any
+    "/Users/<user>/..." path (see `_redact_private_paths`). ``anonymize_*``
+    apply an unrelated-project anonymisation map (see
+    `build_anonymize_patterns`) before every other pass, everywhere.
     """
     if not text:
         return text
     counts.total_chars += len(text)
+    if anonymize_patterns:
+        text = _anonymize(text, anonymize_patterns, anonymize_placeholder, counts)
     if not full:
-        text = _apply_outside_markers(text, lambda t: _redact_private_paths(t, counts))
+        text = _apply_outside_markers(
+            text, lambda t: _redact_private_paths(t, counts, broad=broad_private_paths)
+        )
         text = _strip_unbalanced_markdown_tokens(text)
         return text
     # Topic (sentence-level) redaction first, so a redacted sentence's
@@ -435,12 +489,16 @@ def redact_text(
     # inserted "⟦...⟧" markers into `text`; keep those spans untouched so
     # a marker's own wording (e.g. a topic name) can't be re-matched and
     # corrupted into a nested marker.
-    text = _apply_outside_markers(text, lambda t: _redact_private_paths(t, counts))
+    text = _apply_outside_markers(
+        text, lambda t: _redact_private_paths(t, counts, broad=broad_private_paths)
+    )
     text = _apply_outside_markers(text, lambda t: _redact_terms(t, spoilers, counts))
-    text = _apply_outside_markers(text, lambda t: _mark_unpublished_paths(t, spoilers, counts))
-    text = _apply_outside_markers(text, lambda t: _mark_scene_numbers(t, spoilers, counts))
+    if enable_paths_and_scenes:
+        text = _apply_outside_markers(text, lambda t: _mark_unpublished_paths(t, spoilers, counts))
+        text = _apply_outside_markers(text, lambda t: _mark_scene_numbers(t, spoilers, counts))
     # Deterministic quoted-unpublished-prose guard, last: a backstop for
-    # whatever term/topic redaction above didn't catch.
+    # whatever term/topic redaction above didn't catch. No-op when
+    # `prose_index` is None (never built/loaded for the "meta" profile).
     text = _apply_outside_markers(
         text, lambda t: _redact_unpublished_prose_sentences(t, prose_index, counts)
     )
@@ -460,15 +518,20 @@ TEXT_BLOCK_FIELDS = {
 
 
 def _redact_value(
-    value, spoilers: Spoilers, counts: RedactionCounts, prose_index=None, full: bool = True
+    value,
+    spoilers: Spoilers,
+    counts: RedactionCounts,
+    prose_index=None,
+    full: bool = True,
+    **kw,
 ):
     if isinstance(value, str):
-        return redact_text(value, spoilers, counts, prose_index, full=full)
+        return redact_text(value, spoilers, counts, prose_index, full=full, **kw)
     if isinstance(value, list):
-        return [_redact_value(v, spoilers, counts, prose_index, full=full) for v in value]
+        return [_redact_value(v, spoilers, counts, prose_index, full=full, **kw) for v in value]
     if isinstance(value, dict):
         return {
-            k: _redact_value(v, spoilers, counts, prose_index, full=full)
+            k: _redact_value(v, spoilers, counts, prose_index, full=full, **kw)
             for k, v in value.items()
         }
     return value
@@ -480,6 +543,7 @@ def redact_block(
     counts: RedactionCounts,
     prose_index=None,
     full: bool = True,
+    **kw,
 ) -> dict:
     block = dict(block)
     kind = block.get("kind")
@@ -487,11 +551,11 @@ def redact_block(
     for field_name in fields:
         if field_name in block and block[field_name] is not None:
             block[field_name] = _redact_value(
-                block[field_name], spoilers, counts, prose_index, full=full
+                block[field_name], spoilers, counts, prose_index, full=full, **kw
             )
     if kind == "tool_result" and "stdout_preview" in block and block["stdout_preview"]:
         block["stdout_preview"] = [
-            redact_text(line, spoilers, counts, prose_index, full=full)
+            redact_text(line, spoilers, counts, prose_index, full=full, **kw)
             for line in block["stdout_preview"]
         ]
     return block
@@ -507,12 +571,27 @@ def _parse_ts(ts: str | None) -> datetime | None:
 
 
 def redact_transcript(
-    doc: dict, spoilers: Spoilers, prose_index=None, is_subagent: bool = False
+    doc: dict,
+    spoilers: Spoilers,
+    prose_index=None,
+    is_subagent: bool = False,
+    premise_cutoff_enabled: bool = True,
+    enable_paths_and_scenes: bool = True,
+    broad_private_paths: bool = False,
+    anonymize_patterns: list[re.Pattern] | None = None,
+    anonymize_placeholder: str = "",
 ) -> tuple[dict, RedactionCounts]:
     counts = RedactionCounts()
     doc = dict(doc)
-    cutoff = spoilers.premise_revealed_at
+    cutoff = spoilers.premise_revealed_at if premise_cutoff_enabled else None
     turns = []
+
+    kw = dict(
+        enable_paths_and_scenes=enable_paths_and_scenes,
+        broad_private_paths=broad_private_paths,
+        anonymize_patterns=anonymize_patterns,
+        anonymize_placeholder=anonymize_placeholder,
+    )
 
     subagent_pre_cutoff = None
     if is_subagent and cutoff is not None:
@@ -534,7 +613,7 @@ def redact_transcript(
             ts = _parse_ts(turn.get("timestamp"))
             full = ts is None or ts >= cutoff
         turn["blocks"] = [
-            redact_block(b, spoilers, counts, prose_index, full=full)
+            redact_block(b, spoilers, counts, prose_index, full=full, **kw)
             for b in turn.get("blocks", [])
         ]
         turns.append(turn)
@@ -542,40 +621,72 @@ def redact_transcript(
     return doc, counts
 
 
-def _iter_parsed_files():
-    for p in sorted(PARSED_DIR.glob("*.json")):
+def _iter_parsed_files(parsed_dir: Path):
+    for p in sorted(parsed_dir.glob("*.json")):
         if p.name == "index.json":
             continue
-        yield p, REDACTED_DIR / p.name, False
-    subdir = PARSED_DIR / "subagents"
+        yield p, p.name, False
+    subdir = parsed_dir / "subagents"
     if subdir.is_dir():
         for p in sorted(subdir.glob("*.json")):
-            yield p, REDACTED_DIR / "subagents" / p.name, True
+            yield p, Path("subagents") / p.name, True
 
 
 def main() -> None:
+    import argparse
+
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--source", default="autoroad", help="source name from tools/sources.json")
+    args = ap.parse_args()
+
+    from tools.sources import load_source
+
+    src_cfg = load_source(args.source)
+    parsed_dir = src_cfg.parsed_dir
+    redacted_dir = src_cfg.redacted_dir
+    report_path = src_cfg.out_dir / "redaction-report.json"
+    profile = src_cfg.profile  # "full" | "meta"
+    enable_paths_and_scenes = profile == "full"
+    broad_private_paths = profile != "full"
+    premise_cutoff_enabled = src_cfg.premise_cutoff
+    anonymize_patterns = build_anonymize_patterns(src_cfg.anonymize) if src_cfg.anonymize else None
+
     spoilers = Spoilers.load()
-    prose_index = load_prose_index()
-    if prose_index is None:
+    # The unpublished-prose sentence guard is a backstop against quoting the
+    # novel's own unpublished prose verbatim -- meaningless (and never
+    # built) for a source that isn't the novel's own transcripts.
+    prose_index = load_prose_index() if profile == "full" else None
+    if profile == "full" and prose_index is None:
         print(
             "warning: no build/prose-index.pkl found (run `uv run python -m "
             "tools.prose_index` first) -- unpublished-prose sentence guard disabled"
         )
-    REDACTED_DIR.mkdir(parents=True, exist_ok=True)
-    (REDACTED_DIR / "subagents").mkdir(parents=True, exist_ok=True)
+    redacted_dir.mkdir(parents=True, exist_ok=True)
+    (redacted_dir / "subagents").mkdir(parents=True, exist_ok=True)
 
     report = {"files": {}, "over_threshold": [], "threshold": DENSITY_THRESHOLD}
     total_counts = RedactionCounts()
 
-    for src, dst, is_subagent in _iter_parsed_files():
+    redact_kw = dict(
+        premise_cutoff_enabled=premise_cutoff_enabled,
+        enable_paths_and_scenes=enable_paths_and_scenes,
+        broad_private_paths=broad_private_paths,
+        anonymize_patterns=anonymize_patterns,
+        anonymize_placeholder=src_cfg.anonymize_placeholder,
+    )
+
+    for src, rel, is_subagent in _iter_parsed_files(parsed_dir):
         doc = json.loads(src.read_text())
-        redacted, counts = redact_transcript(doc, spoilers, prose_index, is_subagent=is_subagent)
+        redacted, counts = redact_transcript(
+            doc, spoilers, prose_index, is_subagent=is_subagent, **redact_kw
+        )
+        dst = redacted_dir / rel
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_text(json.dumps(redacted, indent=1))
 
-        rel = str(dst.relative_to(REDACTED_DIR))
+        rel_str = str(rel)
         density = counts.density()
-        report["files"][rel] = {
+        report["files"][rel_str] = {
             "by_category": counts.by_category,
             "redacted_chars": counts.redacted_chars,
             "total_chars": counts.total_chars,
@@ -583,21 +694,21 @@ def main() -> None:
             "density": density,
         }
         if density > DENSITY_THRESHOLD:
-            report["over_threshold"].append(rel)
+            report["over_threshold"].append(rel_str)
         total_counts.merge(counts)
 
     # copy index.json through untouched (it has no free text worth redacting
     # beyond first_user_prompt, which we do redact)
-    index_src = PARSED_DIR / "index.json"
+    index_src = parsed_dir / "index.json"
     if index_src.is_file():
         index = json.loads(index_src.read_text())
         idx_counts = RedactionCounts()
         for s in index.get("sessions", []):
             if "first_user_prompt" in s:
                 s["first_user_prompt"] = redact_text(
-                    s["first_user_prompt"], spoilers, idx_counts, prose_index
+                    s["first_user_prompt"], spoilers, idx_counts, prose_index, **redact_kw_no_cutoff(redact_kw)
                 )
-        (REDACTED_DIR / "index.json").write_text(json.dumps(index, indent=1))
+        (redacted_dir / "index.json").write_text(json.dumps(index, indent=1))
         total_counts.merge(idx_counts)
 
     report["totals"] = {
@@ -606,9 +717,16 @@ def main() -> None:
         "total_chars": total_counts.total_chars,
         "density": total_counts.density(),
     }
-    REPORT_PATH.write_text(json.dumps(report, indent=2))
+    report_path.write_text(json.dumps(report, indent=2))
     print(f"redacted {len(report['files'])} files; {len(report['over_threshold'])} over "
           f"{DENSITY_THRESHOLD:.0%} density")
+
+
+def redact_kw_no_cutoff(redact_kw: dict) -> dict:
+    """`redact_text` doesn't take `premise_cutoff_enabled` (that only
+    applies at the per-turn level in `redact_transcript`) -- strip it for
+    the direct `redact_text` call on `first_user_prompt`."""
+    return {k: v for k, v in redact_kw.items() if k != "premise_cutoff_enabled"}
 
 
 if __name__ == "__main__":

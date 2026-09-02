@@ -1,0 +1,51 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a3f3e537262da2261">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: try to REFUTE this finding. A finder has flagged a problem in the site's prose; your job is to show the original text was in fact right, or the finding is a misreading, or the proposed fix is worse than the original. Read a wider window than the quoted sentence (the whole section) and go to ground truth in priority order. If you cannot refute it with a receipt, say refuted=false. Default to refuted=true only if the evidence is genuinely ambiguous. Finding (JSON): {&quot;id&quot;:&quot;howto_README_md_07&quot;,&quot;verdict&quot;:&quot;WRONG&quot;,&quot;receipt&quot;:&quot;git -C <span class="redacted">redacted: private</span> log shows commit b6cd810 at 2026-08-24 14:16:45 +0100, 'Add concept notes and two seed chapters,' adding chapters/001-the-wrong-man.md (301 lines) and chapters/002-the-call-declined.md (220 lines) of actual prose fiction — this is only ~2.5 hours into session 1 (which started 2026-08-24T11:52 UTC), well within 'the first day and a half.' Multiple further chapter drafts follow same day (504b550 'Draft chapter 001', 731c3e3 'Draft chapter 002', 70e763e 'Draft chapter 003', etc., all 2026-08-24).&quot;,&quot;receipt_kind&quot;:&quot;ran-it-myself&quot;,&quot;explanation&quot;:&quot;Fiction (full draft chapters, not just voice samples) was written well within the first day, contradicting the claim that the period covered by voice-first.md had no fiction written. Even allowing these early chapters were later discarded, the claim as written ('no fiction was written') is factually false against the git history.&quot;,&quot;proposed_fix&quot;:&quot;Change to something like 'covers the first day and a half, which was mostly spent on voice and premise work before the chapters that stuck were drafted' or verify against voice-first.md's actual scope — the surviving claim that no fiction at all was written in that window is not supported by the commit history.&quot;,&quot;claim&quot;:{&quot;id&quot;:&quot;howto_README_md_07&quot;,&quot;quote&quot;:&quot;covers the first day and a half, in which no fiction was written&quot;,&quot;location&quot;:&quot;line 15&quot;,&quot;kind&quot;:&quot;date&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;}}<br />
+Return structured output only.</p></blockquote>
+
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: sed -n '1,30p' site/src/howto/README.md 2&gt;/dev/null || find . -iname "README.md" -path "*…</p>
+<p>✅ 29 lines, 3435 chars</p>
+<p>🔧 Bash: sed -n '1,200p' site/src/howto/voice-first.md</p>
+<p>✅ 24 lines, 4138 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline b6cd810 -1 --format='%H %ad %s' --date=iso-st…</p>
+<p>✅ 1 lines, 106 chars — b6cd81054fc3fc43a16754855e49b5747273fe88 2026-08-24T14:16:45+01:00 Add concept notes and two seed chapters</p>
+</details>
+
+<div class="assistant-prose">
+<p>Cannot refute. The claim contradicts the site's own linked page: <code>site/src/howto/voice-first.md</code> (the page README.md summarizes) states directly that within the period covered, &quot;the first thing done with it was to write two chapters as exemplars to be imitated, not as chapters to be kept&quot; — i.e., fiction was written, just discarded/throwaway. README.md line 15's unqualified &quot;no fiction was written&quot; is contradicted by the very page it summarizes, and independently by commit b6cd810 (git -C <span class="redacted">redacted: private</span> log, verified above: &quot;2026-08-24T14:16:45+01:00 Add concept notes and two seed chapters,&quot; adding two chapter files), which occurred well inside the &quot;first day and a half&quot; window.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"refuted": false, "why": "README.md line 15 (\"covers the…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

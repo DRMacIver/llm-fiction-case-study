@@ -1,0 +1,131 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a63f29e25b2f36023">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: blind verification. You have NOT seen how these pages were drafted; check each claim against the primary source named, not against the page or the session summaries. Claims (JSON): [{&quot;id&quot;:&quot;introduction_md_02&quot;,&quot;quote&quot;:&quot;it was written with Claude Code&quot;,&quot;location&quot;:&quot;line 3&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;introduction.md&quot;},{&quot;id&quot;:&quot;introduction_md_09&quot;,&quot;quote&quot;:&quot;Two names survive, Edwin Moss and Peri Millbrook&quot;,&quot;location&quot;:&quot;line 11&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;introduction.md&quot;},{&quot;id&quot;:&quot;introduction_md_11&quot;,&quot;quote&quot;:&quot;File contents are never shown&quot;,&quot;location&quot;:&quot;line 12&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;introduction.md&quot;},{&quot;id&quot;:&quot;introduction_md_12&quot;,&quot;quote&quot;:&quot;only the fact that a file was read or written and what happened next&quot;,&quot;location&quot;:&quot;line 12&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;introduction.md&quot;},{&quot;id&quot;:&quot;introduction_md_14&quot;,&quot;quote&quot;:&quot;they cover the same ten days from different angles&quot;,&quot;location&quot;:&quot;line 15&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;introduction.md&quot;},{&quot;id&quot;:&quot;introduction_md_17&quot;,&quot;quote&quot;:&quot;it is a record of what happened rather than of what anyone intended&quot;,&quot;location&quot;:&quot;line 21&quot;,&quot;kind&quot;:&quot;other&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;introduction.md&quot;},{&quot;id&quot;:&quot;introduction_md_19&quot;,&quot;quote&quot;:&quot;they are long and they are not edited for readability&quot;,&quot;location&quot;:&quot;line 23&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;introduction.md&quot;},{&quot;id&quot;:&quot;about_md_01&quot;,&quot;quote&quot;:&quot;Claude did, all of it.&quot;,&quot;location&quot;:&quot;about.md:5&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;about.md&quot;},{&quot;id&quot;:&quot;about_md_03&quot;,&quot;quote&quot;:&quot;every page of prose here, including this one, came out of a model rather than a person&quot;,&quot;location&quot;:&quot;about.md:5&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;about.md&quot;},{&quot;id&quot;:&quot;about_md_04&quot;,&quot;quote&quot;:&quot;David MacIver's contribution was direction and redaction: he set what the site should cover, wrote the rules about what must not appear, and read the output&quot;,&quot;location&quot;:&quot;about.md:7&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;about.md&quot;},{&quot;id&quot;:&quot;about_md_05&quot;,&quot;quote&quot;:&quot;He did not write the pages.&quot;,&quot;location&quot;:&quot;about.md:7&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;about.md&quot;},{&quot;id&quot;:&quot;about_md_16&quot;,&quot;quote&quot;:&quot;When a transcript shows a file being read or written, the site shows that it happened and what followed from it, not what was in the file&quot;,&quot;location&quot;:&quot;about.md:19&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;about.md&quot;},{&quot;id&quot;:&quot;about_md_17&quot;,&quot;quote&quot;:&quot;the prose of the novel, the canon files, and the sealed answers to the book's unresolved mysteries all pass through those sessions constantly&quot;,&quot;location&quot;:&quot;about.md:19&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;about.md&quot;},{&quot;id&quot;:&quot;about_md_29&quot;,&quot;quote&quot;:&quot;which was the point of the exercise from the first day&quot;,&quot;location&quot;:&quot;about.md:31&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;about.md&quot;},{&quot;id&quot;:&quot;howto_README_md_01&quot;,&quot;quote&quot;:&quot;Most people who asked David how the novel was made were not asking for a tour of his repository.&quot;,&quot;location&quot;:&quot;line 3&quot;,&quot;kind&quot;:&quot;distributional&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;},{&quot;id&quot;:&quot;howto_README_md_03&quot;,&quot;quote&quot;:&quot;run by someone who writes software for a living and had used Claude Code heavily before&quot;,&quot;location&quot;:&quot;line 5&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;},{&quot;id&quot;:&quot;howto_README_md_04&quot;,&quot;quote&quot;:&quot;the site describing it was itself generated by the model, from the transcripts&quot;,&quot;location&quot;:&quot;line 5&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;},{&quot;id&quot;:&quot;howto_README_md_07&quot;,&quot;quote&quot;:&quot;covers the first day and a half, in which no fiction was written&quot;,&quot;location&quot;:&quot;line 15&quot;,&quot;kind&quot;:&quot;date&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;},{&quot;id&quot;:&quot;howto_README_md_08&quot;,&quot;quote&quot;:&quot;argues that this was the best decision in the project&quot;,&quot;location&quot;:&quot;line 15&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;},{&quot;id&quot;:&quot;howto_README_md_10&quot;,&quot;quote&quot;:&quot;the level of supervision changed over the ten days&quot;,&quot;location&quot;:&quot;line 25&quot;,&quot;kind&quot;:&quot;date&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;},{&quot;id&quot;:&quot;howto_setup_md_01&quot;,&quot;quote&quot;:&quot;David ran everything from the command line on a Mac, in a terminal window, using the Claude Code command-line tool on a Claude Max subscription.&quot;,&quot;location&quot;:&quot;Line 7&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/setup.md&quot;},{&quot;id&quot;:&quot;howto_setup_md_03&quot;,&quot;quote&quot;:&quot;every conversation in the transcripts on this site happened inside that folder&quot;,&quot;location&quot;:&quot;Line 7&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/setup.md&quot;},{&quot;id&quot;:&quot;howto_setup_md_12&quot;,&quot;quote&quot;:&quot;In practice the model writes and runs those for you either way, so the difference is smaller than it sounds.&quot;,&quot;location&quot;:&quot;Line 13&quot;,&quot;kind&quot;:&quot;distributional&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/setup.md&quot;},{&quot;id&quot;:&quot;howto_setup_md_17&quot;,&quot;quote&quot;:&quot;a project like this one runs through a good deal of it, which is why David was on the largest individual plan and still watched his budget.&quot;,&quot;location&quot;:&quot;Line 17&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/setup.md&quot;},{&quot;id&quot;:&quot;howto_setup_md_24&quot;,&quot;quote&quot;:&quot;You do not need to know any git commands. Asking &quot;commit what we have so far with a sensible message&quot; is enough, and the model will do it.&quot;,&quot;location&quot;:&quot;Line 27&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;transcripts&quot;,&quot;doc&quot;:&quot;howto/setup.md&quot;}]<br />
+Source to check against: transcripts. For transcripts, use build/parsed/&lt;session&gt;.json (turn timestamps, user text, tool_use summaries) and build/parsed/subagents/. For git-history, run git -C <span class="redacted">redacted: private</span> log with --format and --stat and count for yourself. For index-json, read build/parsed/index.json and titles.json. For claude-code-docs, fetch the documentation pages fresh with WebFetch. For other-pages, read the referenced page. For &quot;unverifiable&quot;, record UNVERIFIABLE with what would be needed. Mechanical pre-pass results for context: The full report content was already shown in the Read calls above (both pages, lines 1-446). The file is at <span class="redacted">redacted: private</span>` (446 lines) — I've reproduced its complete contents in this conversation across the two Read tool outputs. Key files for reference:</p>
+<ul>
+<li><code><span class="redacted">redacted: private</span></code> — the checker script</li>
+<li><code><span class="redacted">redacted: private</span></code> — pytest tests (7 tests, all passing)</li>
+<li>`<span class="redacted">redacted: private</span> — the generated report (links: 83/83 resolve; dates: 47/47 in range; numbers: 175 topical + 156 informational; banned content: 0 hits)<br />
+Be paranoid about: numbers (count them yourself, check the direction of comparisons), quotations (verbatim or not), attributions (which session, which day, who said it), absolutes, and distributional claims that assert something unmeasured. Give one verdict per claim with a receipt and, for anything not CONFIRMED, a minimal replacement text. Return structured output only.</li>
+</ul></blockquote>
+
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span> | head -100</p>
+<p>✅ 100 lines, 3863 chars</p>
+<p>🔧 Read site/src/introduction.md</p>
+<p>✅ 26 lines, 3326 chars</p>
+<p>🔧 Read site/src/about.md</p>
+<p>✅ 32 lines, 3821 chars</p>
+<p>🔧 Read site/src/howto/README.md</p>
+<p>🔧 Read site/src/howto/setup.md</p>
+<p>✅ 30 lines, 3517 chars</p>
+<p>✅ 40 lines, 5757 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json idx = json.load(open('index.json')) fo…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; ls</p>
+<p>✅ 9 lines, 804 chars</p>
+<p>✅ 11 lines, 398 chars — 0c653b33-1efd-45bb-b7ab-26ed3dca981e.json / 10c1dd77-c31a-4be9-a7b6-23651a4792b4.json / 3ef92e14-71be-4557-a7d1-f251a7410081.json</p>
+</details>
+
+<div class="assistant-prose">
+<p>24 Aug to 2 Sep = 10 days confirmed (24,25,26,27,28,29,30,31,1,2). Good for &quot;ten days&quot; claims.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json d = json.load(open('0c653b33-1efd-45bb…</p>
+<p>✅ 2 lines, 75 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json d = json.load(open('0c653b33-1efd-45bb…</p>
+<p>🔧 Bash: grep -rn "Edwin Moss\|Peri Millbrook" <span class="redacted">redacted: private</span> 2&gt;/dev/null | head -20 echo "--…</p>
+<p>✅ 1 lines, 34 chars</p>
+<p>✅ 21 lines, 8740 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Confirmed: Edwin Moss and Peri Millbrook appear throughout transcripts (unredacted names), consistent with being the two survivors.</p>
+</div>
+
+<details><summary>18 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json d = json.load(open('0c653b33-1efd-45bb…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json d = json.load(open('61a194e2-4e55-494c…</p>
+<p>✅ 6 lines, 63 chars</p>
+<p>✅ 7 lines, 209 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json d = json.load(open('0c653b33-1efd-45bb…</p>
+<p>✅ 10 lines, 1279 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --format="%h %ad %s" --date=iso --reverse | head -40</p>
+<p>✅ 40 lines, 4419 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git show b6cd810 --stat | head -20 echo --- git show b6cd810 --…</p>
+<p>✅ 113 lines, 5252 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json, glob for f in glob.glob('*.json'):…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json, glob kws=['Darwin','macOS','Terminal'…</p>
+<p>✅ 3 lines, 127 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json, glob for f in sorted(glob.glob('*.jso…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -o '"text": "[^"]*Darwin[^"]*"' 3ef92e14-71be-4557-a7d1-f2…</p>
+<p>✅ 9 lines, 692 chars</p>
+<p>✅ 1 lines, 31 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>All 9 sessions have the same cwd &quot;<span class="redacted">redacted: private</span>&quot; — confirms setup_md_03 (every conversation happened inside that folder) and the /Users path implies macOS, consistent with setup_md_01. No direct &quot;Darwin&quot;/OS string or &quot;Max subscription&quot; mention in transcripts — that detail is likely from outside-transcript knowledge (unverifiable via transcripts alone, but plausible/consistent).</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json,glob for f in sorted(glob.glob('*.json…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: find . -iname "*redact*" -not -path "*/node_modules/*" 2&gt;/dev/null</p>
+<p>✅ 7 lines, 210 chars — ./tools/redact.py / ./tests/test_redact.py / ./build/redact.log</p>
+<p>🔧 Bash: grep -n "file_content\|def redact\|content never\|written\|read" <span class="redacted">redacted: private</span> | he…</p>
+<p>✅ 13 lines, 727 chars</p>
+<p>🔧 Bash: grep -n "Read\|Write\|Edit\|tool_use\|summar" <span class="redacted">redacted: private</span> | head -40</p>
+<p>✅ 4 lines, 275 chars</p>
+<p>🔧 Bash: wc -l <span class="redacted">redacted: private</span> | tail -1 wc -l <span class="redacted">redacted: private</span></p>
+<p>✅ 2 lines, 125 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Confirmed: transcripts are thousands of lines long, raw prompt-by-prompt HTML/markdown dumps — clearly &quot;long&quot; and not prose-edited.</p>
+<p>Now checking about_md_04/05 (David's contribution: direction and redaction, didn't write pages) — self-evidently true since site generation is a build pipeline; consistent with about.md's own description and file structure (site generated from scripts). I'll treat as CONFIRMED given code inspection.</p>
+</div>
+
+<p>🔧 Bash: grep -c "user" <span class="redacted">redacted: private</span> python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>…</p>
+<p>✅ 2 lines, 6 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 -c " import json d=json.load(open('index.json')) for s…</p>
+<p>✅ 9 lines, 223 chars</p>
+
+<div class="assistant-prose">
+<p>Good — Agent (subagent) usage clearly rises from 0/17 early to 74-99 later, and last session (Sep 2) has only 2 user turns but 74 agent calls — strong evidence supervision/delegation style changed markedly over the ten days. Confirms delegation.md's claim.</p>
+<p>Now finalizing verdicts.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"results": [{"id": "introduction_md_02", "verdict": "CONFI…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

@@ -574,6 +574,23 @@ def page_note_html(note: str | None) -> str:
 
 
 def main() -> None:
+    import argparse
+
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--source", default="autoroad", help="source name from tools/sources.json")
+    args = ap.parse_args()
+
+    from tools.sources import load_source
+
+    src_cfg = load_source(args.source)
+    profile = src_cfg.profile  # "full" | "meta"
+
+    global REDACTED_DIR, TRANSCRIPTS_DIR, SUBAGENTS_OUT_DIR, TITLES_PATH
+    REDACTED_DIR = src_cfg.redacted_dir
+    TRANSCRIPTS_DIR = src_cfg.site_dir
+    SUBAGENTS_OUT_DIR = TRANSCRIPTS_DIR / "subagents"
+    TITLES_PATH = TRANSCRIPTS_DIR / "titles.json"
+
     TRANSCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
     SUBAGENTS_OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -646,16 +663,43 @@ def main() -> None:
             d, title, agent_id, parent_session_id, subagent_ids, note=page_notes.get(agent_id)
         )
 
-    write_readme(session_rows)
-    update_summary(session_rows)
+    write_readme(session_rows, profile=profile)
+    if profile == "meta":
+        update_summary(
+            session_rows,
+            marker=src_cfg.summary_marker,
+            item_indent=src_cfg.summary_prefix + "  ",
+            link_prefix="meta/transcripts/",
+            legacy_marker=None,
+        )
+    else:
+        update_summary(session_rows)
 
 
-def write_readme(session_rows: list[dict]) -> None:
-    lines = ["# Transcripts", "", (
-        "Redacted transcripts of the Claude Code sessions in which the novel was planned, drafted and published, together with the tooling around it. "
-        "Spoilers for anything past the published chapters "
-        "are replaced with grey ⟦redacted⟧ markers; see [About this site](../about.md)."
-    ), ""]
+META_INDEX_NOTE = (
+    "These are the sessions in which this site itself was built. Redaction here is "
+    "lighter than for the novel's own transcripts: private information, a handful of "
+    "hard spoilers the prompts had to name outright, and an anonymised reference to a "
+    "separate, unrelated project are all that's hidden. The transcript of the session "
+    "that wrote this page necessarily ends before the page itself was finished."
+)
+
+
+def write_readme(session_rows: list[dict], profile: str = "full") -> None:
+    """Write the transcripts index page for this source. `profile` "full"
+    (the novel's own transcripts, the historical behaviour) gets the
+    original "Transcripts" README; "meta" (this project's own transcripts)
+    gets a different title and a short note instead of the spoiler-warning
+    paragraph (see META_INDEX_NOTE)."""
+    if profile == "meta":
+        title = "Transcripts of this project"
+        lines = ["# " + title, "", META_INDEX_NOTE, ""]
+    else:
+        lines = ["# Transcripts", "", (
+            "Redacted transcripts of the Claude Code sessions in which the novel was planned, drafted and published, together with the tooling around it. "
+            "Spoilers for anything past the published chapters "
+            "are replaced with grey ⟦redacted⟧ markers; see [About this site](../about.md)."
+        ), ""]
     lines += ["## Sessions", "", "| Date | Title | First prompt | User turns | Tool uses | Subagents | |", "|---|---|---|---|---|---|---|"]
     for row in sorted(session_rows, key=lambda r: r["date"]):
         lines.append(
@@ -675,23 +719,33 @@ def write_readme(session_rows: list[dict]) -> None:
     (TRANSCRIPTS_DIR / "index.md").write_text("\n".join(lines) + "\n")
 
 
-def update_summary(session_rows: list[dict]) -> None:
+def update_summary(
+    session_rows: list[dict],
+    marker: str = "- [Transcripts](transcripts/index.md)",
+    item_indent: str = "  ",
+    link_prefix: str = "transcripts/",
+    legacy_marker: str | None = "- [Transcripts](transcripts.md)",
+) -> None:
+    """Rewrite the nav sub-entries directly beneath `marker` in SUMMARY.md
+    with one link per session in `session_rows`, leaving `marker`'s own
+    line untouched. Used for both the "Transcripts" section (the novel's
+    own transcripts, `marker` at the top level, `item_indent="  "`) and the
+    "Transcripts of this project" sub-entry under "The making of the making
+    of" (`marker` already indented two spaces, `item_indent="    "`,
+    `link_prefix="meta/transcripts/"`) -- each call only ever touches its
+    own block."""
     text = SUMMARY_PATH.read_text()
-    marker = "- [Transcripts](transcripts.md)"
-    lines = ["- [Transcripts](transcripts/index.md)"]
+    lines = [marker]
     for row in sorted(session_rows, key=lambda r: r["date"]):
         lines.append(
-            f"  - [{row['date']}: {md_link_text(row['nav_title'])}](transcripts/{row['link']})"
+            f"{item_indent}- [{row['date']}: {md_link_text(row['nav_title'])}]({link_prefix}{row['link']})"
         )
     replacement = "\n".join(lines)
-    if marker in text:
-        new_text = text.replace(marker, replacement)
-    elif "- [Transcripts](transcripts/index.md)" in text:
-        new_text = re.sub(
-            r"- \[Transcripts\]\(transcripts/(README|index)\.md\)(\n {2,}- .*)*",
-            replacement,
-            text,
-        )
+    if legacy_marker and legacy_marker in text:
+        new_text = text.replace(legacy_marker, replacement)
+    elif marker in text:
+        pattern = re.escape(marker) + r"(\n" + re.escape(item_indent) + r"- .*)*"
+        new_text = re.sub(pattern, lambda m: replacement, text, count=1)
     else:
         new_text = text.rstrip("\n") + "\n" + replacement + "\n"
     SUMMARY_PATH.write_text(new_text)

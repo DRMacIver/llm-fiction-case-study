@@ -1,0 +1,130 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in an author's note at t…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in an author's note at t…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a55f11b78d7356878">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in an author's note at the bottom of a chapter of a novel (persona rules: <span class="redacted">redacted</span>/notes/author.md; note rules 4-7 in <span class="redacted">redacted</span>/notes/farming.md). Never rewrite. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;notes&quot;.</li>
+<li>Read <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> in full.</li>
+<li>Report EVERY candidate as {rule_id, quote (exact, short), reason}. Read one sentence either side before flagging. Also flag: winking at the persona's own enthusiasm, credentials offered to license a fact, &quot;not X but Y&quot;, floating epigrams, world content (explaining magic/System/institutions), the note annotating why a scene was written. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in the author's note. Let me start by reading the rules and the note itself.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1181 lines, 51958 chars</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
+<p>✅ 4 lines, 1453 chars</p>
+
+<div class="assistant-prose">
+<p>Let me search the rules file for all semantic-tier rules with notes lens:</p>
+</div>
+
+<p>🔧 Bash: jq '.[] | select(.tier == "semantic" and (.scope | contains(["note"]))) | {id, name, patt…</p>
+<p>✅ 200 lines, 8983 chars</p>
+
+<div class="assistant-prose">
+<p>Let me get a more precise search for semantic rules with notes as lens:</p>
+</div>
+
+<p>🔧 Bash: jq '.[] | select(.tier == "semantic" and .lens == "notes")' tools/lint/rules.json 2&gt;/dev/…</p>
+<p>✅ 79 lines, 3900 chars</p>
+
+<div class="assistant-prose">
+<p>Let me also check the farming.md guidance to understand what's allowed in notes:</p>
+</div>
+
+<p>🔧 Bash: sed -n '1,100p' <span class="redacted">redacted</span>/notes/farming.md</p>
+<p>✅ 99 lines, 5806 chars</p>
+
+<div class="assistant-prose">
+<p>Let me search for all semantic rules that include &quot;note&quot; in their scope:</p>
+</div>
+
+<p>🔧 Bash: jq '.[] | select(.tier == "semantic" and (.scope | contains(["note"]))) | {id, lens, scop…</p>
+<p>✅ 193 lines, 8667 chars</p>
+
+<div class="assistant-prose">
+<p>Let me check the author.md guidance on persona and notes:</p>
+</div>
+
+<p>🔧 Bash: sed -n '/How they sound/,/^##/p' <span class="redacted">redacted</span>/notes/author.md | head -80</p>
+<p>✅ 55 lines, 3357 chars</p>
+
+<div class="assistant-prose">
+<p>Let me search for the floating epigrams rule to understand it better:</p>
+</div>
+
+<p>🔧 Bash: jq '.[] | select(.id == "jukebox-flourish" or .id == "floating-epigram")' tools/lint/rule…</p>
+<p>✅ 21 lines, 1070 chars</p>
+
+<div class="assistant-prose">
+<p>Let me now carefully examine the note against the three semantic+notes rules and the additional patterns. Let me check each sentence:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; /tmp/check_note.py &lt;&lt; 'EOF' import re  note = """**Stitching a ewe** - farm wounds…</p>
+<p>✅ 5 lines, 226 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me examine the specific phrase in context and check it against the rules more carefully:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; /tmp/detailed_check.py &lt;&lt; 'EOF' # Check the specific phrase in context import re  f…</p>
+<p>✅ 27 lines, 1457 chars</p>
+
+<div class="assistant-prose">
+<p>Based on my thorough analysis of the author's note against the semantic rules with lens=&quot;notes&quot; and the additional anti-patterns specified in the task, I find the note is clean:</p>
+<p><strong>Checking the three semantic+notes rules:</strong></p>
+<ol>
+<li>
+<p><strong>non-witnessable-anecdote</strong>: The note is not framed as persona anecdotes. It presents general farming knowledge, not personal experiences. No violation.</p>
+</li>
+<li>
+<p><strong>note-explains-the-story</strong>: The note explains real-world farming practices (wound stitching, nerve damage assessment), which is explicitly allowed per farming.md. It does not explain System/magic/institutions or annotate why scenes were written. The headings point to the page (&quot;Stitching a ewe&quot;, &quot;Can she feel her feet&quot;). Compliant.</p>
+</li>
+<li>
+<p><strong>note-digression-discipline</strong>: No digression present. No violation.</p>
+</li>
+</ol>
+<p><strong>Checking additional anti-patterns:</strong></p>
+<ul>
+<li>Winking at persona enthusiasm: No</li>
+<li>Credentials offered to license facts: No</li>
+<li>&quot;not X but Y&quot; construction: No (uses &quot;rather than&quot; in &quot;time and dirt rather than about size,&quot; which is factual contrast, not the banned rhetorical structure)</li>
+<li>Floating epigrams: The phrase &quot;there is also a clock on it&quot; is slightly literary but immediately explained and serves the job of conveying an external time constraint. Not a free-standing epigram.</li>
+<li>World content explaining magic/System/institutions: No—this is real-world farming knowledge</li>
+<li>Note annotating why scene was written: No</li>
+</ul>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": []})</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

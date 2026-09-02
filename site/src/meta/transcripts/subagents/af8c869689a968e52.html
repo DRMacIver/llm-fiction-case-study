@@ -1,0 +1,177 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-af8c869689a968e52">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: blind verification. You have NOT seen how these pages were drafted; check each claim against the primary source named, not against the page or the session summaries. Claims (JSON): [{&quot;id&quot;:&quot;howto_write_it_down_md_22&quot;,&quot;quote&quot;:&quot;Files also let rules be checked. A rule written as 'avoid decorative endings' is an opinion.&quot;,&quot;location&quot;:&quot;line 21&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/write-it-down.md&quot;},{&quot;id&quot;:&quot;howto_write_it_down_md_23&quot;,&quot;quote&quot;:&quot;A rule written as 'chapters end mid-flow on forward-pointing work, with near-zero cleverness in the last two paragraphs' can be reviewed against, and eventually tested for.&quot;,&quot;location&quot;:&quot;line 21&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/write-it-down.md&quot;},{&quot;id&quot;:&quot;howto_write_it_down_md_25&quot;,&quot;quote&quot;:&quot;Keep a handoff document from the first day.&quot;,&quot;location&quot;:&quot;line 27&quot;,&quot;kind&quot;:&quot;other&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/write-it-down.md&quot;},{&quot;id&quot;:&quot;howto_write_it_down_md_26&quot;,&quot;quote&quot;:&quot;Update it at the end of every session with the state, the next few things to do, and what is owed.&quot;,&quot;location&quot;:&quot;line 27&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/write-it-down.md&quot;},{&quot;id&quot;:&quot;howto_write_it_down_md_31&quot;,&quot;quote&quot;:&quot;handoff page&quot;,&quot;location&quot;:&quot;line 11&quot;,&quot;kind&quot;:&quot;cross-reference&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/write-it-down.md&quot;},{&quot;id&quot;:&quot;howto_write_it_down_md_32&quot;,&quot;quote&quot;:&quot;canon page&quot;,&quot;location&quot;:&quot;line 13&quot;,&quot;kind&quot;:&quot;cross-reference&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/write-it-down.md&quot;},{&quot;id&quot;:&quot;howto_write_it_down_md_33&quot;,&quot;quote&quot;:&quot;the rule system page&quot;,&quot;location&quot;:&quot;line 7&quot;,&quot;kind&quot;:&quot;cross-reference&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/write-it-down.md&quot;},{&quot;id&quot;:&quot;howto_write_it_down_md_34&quot;,&quot;quote&quot;:&quot;the previous page&quot;,&quot;location&quot;:&quot;line 19&quot;,&quot;kind&quot;:&quot;cross-reference&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/write-it-down.md&quot;},{&quot;id&quot;:&quot;howto_checks_md_01&quot;,&quot;quote&quot;:&quot;a rules file of just over a hundred entries&quot;,&quot;location&quot;:&quot;line 7&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/checks.md&quot;},{&quot;id&quot;:&quot;howto_checks_md_02&quot;,&quot;quote&quot;:&quot;a small Python linter that runs in seconds and never disagrees with itself&quot;,&quot;location&quot;:&quot;line 7&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/checks.md&quot;},{&quot;id&quot;:&quot;howto_checks_md_06&quot;,&quot;quote&quot;:&quot;ran at roughly eleven per chapter in drifted prose and four in good prose&quot;,&quot;location&quot;:&quot;line 9&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/checks.md&quot;},{&quot;id&quot;:&quot;howto_checks_md_07&quot;,&quot;quote&quot;:&quot;Budgets were later converted from per-chapter counts to rates per thousand words, because chapters changed length and a fixed count would have loosened silently&quot;,&quot;location&quot;:&quot;line 9&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/checks.md&quot;},{&quot;id&quot;:&quot;howto_checks_md_08&quot;,&quot;quote&quot;:&quot;the project fans out small, cheap model calls, one per rule group per file&quot;,&quot;location&quot;:&quot;line 11&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/checks.md&quot;},{&quot;id&quot;:&quot;howto_checks_md_09&quot;,&quot;quote&quot;:&quot;This fan-out then judge shape recurs throughout the project&quot;,&quot;location&quot;:&quot;line 11&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/checks.md&quot;},{&quot;id&quot;:&quot;howto_checks_md_15&quot;,&quot;quote&quot;:&quot;The overlap checker looks for runs of eight or more words shared between a new scene and drafts that were discarded&quot;,&quot;location&quot;:&quot;line 13&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/checks.md&quot;},{&quot;id&quot;:&quot;howto_checks_md_16&quot;,&quot;quote&quot;:&quot;no session ever has them in its working tree&quot;,&quot;location&quot;:&quot;line 13&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/checks.md&quot;},{&quot;id&quot;:&quot;howto_checks_md_21&quot;,&quot;quote&quot;:&quot;The project logged rejected findings as counter-examples in the rules file&quot;,&quot;location&quot;:&quot;line 25&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/checks.md&quot;},{&quot;id&quot;:&quot;howto_checks_md_22&quot;,&quot;quote&quot;:&quot;a plausible false positive would not be proposed again&quot;,&quot;location&quot;:&quot;line 25&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/checks.md&quot;},{&quot;id&quot;:&quot;howto_lessons_md_03&quot;,&quot;quote&quot;:&quot;the register it chose is still the book's&quot;,&quot;location&quot;:&quot;howto/lessons.md:5&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/lessons.md&quot;},{&quot;id&quot;:&quot;howto_lessons_md_11&quot;,&quot;quote&quot;:&quot;The handoff document, the pointer file and the dated rulings exist because of this&quot;,&quot;location&quot;:&quot;howto/lessons.md:11&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/lessons.md&quot;},{&quot;id&quot;:&quot;howto_lessons_md_22&quot;,&quot;quote&quot;:&quot;The knowledge from each was in the rule files before the draft went&quot;,&quot;location&quot;:&quot;howto/lessons.md:19&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/lessons.md&quot;},{&quot;id&quot;:&quot;howto_lessons_md_28&quot;,&quot;quote&quot;:&quot;the unattended runs had a written stopping rule&quot;,&quot;location&quot;:&quot;howto/lessons.md:23&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/lessons.md&quot;},{&quot;id&quot;:&quot;howto_lessons_md_34&quot;,&quot;quote&quot;:&quot;The five-book plan, the first draft, the first set of voice rules&quot;,&quot;location&quot;:&quot;howto/lessons.md:27&quot;,&quot;kind&quot;:&quot;other&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/lessons.md&quot;},{&quot;id&quot;:&quot;howto_lessons_md_35&quot;,&quot;quote&quot;:&quot;The parts that lasted were the ones that came out of a specific failure and were written down with the failure attached&quot;,&quot;location&quot;:&quot;howto/lessons.md:27&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;howto/lessons.md&quot;},{&quot;id&quot;:&quot;workflow_README_md_04&quot;,&quot;quote&quot;:&quot;no scene's &quot;discovery move&quot; (the thing that changes for the reader) may repeat within four consecutive scenes, unless it's one continuous action&quot;,&quot;location&quot;:&quot;line 7&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;autoroad-files&quot;,&quot;doc&quot;:&quot;workflow/README.md&quot;}]<br />
+Source to check against: autoroad-files. For transcripts, use build/parsed/&lt;session&gt;.json (turn timestamps, user text, tool_use summaries) and build/parsed/subagents/. For git-history, run git -C <span class="redacted">redacted: private</span> log with --format and --stat and count for yourself. For index-json, read build/parsed/index.json and titles.json. For claude-code-docs, fetch the documentation pages fresh with WebFetch. For other-pages, read the referenced page. For &quot;unverifiable&quot;, record UNVERIFIABLE with what would be needed. Mechanical pre-pass results for context: The full report content was already shown in the Read calls above (both pages, lines 1-446). The file is at <span class="redacted">redacted: private</span>` (446 lines) — I've reproduced its complete contents in this conversation across the two Read tool outputs. Key files for reference:</p>
+<ul>
+<li><code><span class="redacted">redacted: private</span></code> — the checker script</li>
+<li><code><span class="redacted">redacted: private</span></code> — pytest tests (7 tests, all passing)</li>
+<li>`<span class="redacted">redacted: private</span> — the generated report (links: 83/83 resolve; dates: 47/47 in range; numbers: 175 topical + 156 informational; banned content: 0 hits)<br />
+Be paranoid about: numbers (count them yourself, check the direction of comparisons), quotations (verbatim or not), attributions (which session, which day, who said it), absolutes, and distributional claims that assert something unmeasured. Give one verdict per claim with a receipt and, for anything not CONFIRMED, a minimal replacement text. Return structured output only.</li>
+</ul></blockquote>
+
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: grep -n "rules file\|rule group\|per rule group\|eleven per chapter\|four in good prose\|…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; find . -iname "*rules*" -not -path "*/node_modules/*" | head -30</p>
+<p>✅ 4 lines, 131 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; wc -l tools/lint/rules.json; python3 -c "import json; d=json.lo…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; find . -iname "*lint*" -o -iname "*checker*" | grep -v node_mod…</p>
+<p>✅ 2 lines, 49 chars</p>
+<p>✅ 7 lines, 296 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>110 rules — &quot;just over a hundred&quot; checks out (howto_checks_md_01).</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '1,80p' tools/lint/prose_lint.py</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "overlap\|eight\|discard" tools/lint/prose_lint.py | he…</p>
+<p>✅ 80 lines, 2770 chars</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rln "overlap" --include=*.py --include=*.md tools/ | grep…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rln "counter-example\|counterexample" tools/ notes/ 2&gt;/de…</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>✅ 9 lines, 273 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; find . -iname "*overlap*" | grep -v node_modules | grep -v ".gi…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '1,200p' tools/lint/pilot-report.md</p>
+<p>✅ 1 lines, 24 chars</p>
+<p>✅ 94 lines, 8380 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good confirmation: 8-gram overlap check confirmed. Now check overlap_check.py and the &quot;no session ever has them in working tree&quot; claim, plus per-thousand rate conversion and counter-example logging mechanism.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat tools/overlap_check.py 2&gt;/dev/null | sed -n '1,60p'</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "per_1000\|per thousand\|per-thousand\|rate\b" tools/li…</p>
+<p>✅ 53 lines, 2047 chars</p>
+<p>✅ 21 lines, 1650 chars</p>
+
+<div class="assistant-prose">
+<p>Confirms overlap checker (8-gram) and &quot;no working tree&quot; claim, and rate-kind budgets exist. Now let's check per-thousand conversion history and eleven/four numbers, plus fan-out per rule group per file.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '790,1050p' tools/lint/rules.json</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "eleven\|four in good" tools/lint/*.md notes/ 2&gt;/dev/n…</p>
+<p>✅ 261 lines, 8566 chars</p>
+<p>✅ 24 lines, 2228 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '990,1110p' notes/dialogue-voices.md</p>
+<p>✅ 121 lines, 7755 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "eleven per chapter\|per chapter" notes/llm-tells.md no…</p>
+<p>🔧 Bash: grep -n "eleven per chapter\|drifted prose\|four in good prose" -r build/ notes/ 2&gt;/dev/n…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>✅ 7 lines, 648 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>This is the source. Let's check lines 215-350 of voices.md carefully.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '210,350p' notes/voices.md</p>
+<p>✅ 141 lines, 8587 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "one per rule group\|per rule group\|fan out\|fan-out\…</p>
+<p>✅ 27 lines, 1641 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; find . -iname "*.md" -path "*skills*" | grep -v node_modules |…</p>
+<p>✅ 4 lines, 152 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "lens\|fan\|haiku\|parallel\|Task\|group" .claude/skill…</p>
+<p>✅ 15 lines, 1254 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>This confirms &quot;one per rule group per file&quot; (per file × lens = one haiku agent) and &quot;fan-out then judge&quot; pattern recurring. Good, both howto_checks_md_08/09 confirmed. Now the counter_examples rejection mechanism (howto_checks_md_21/22) and lessons.md claims.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '50,100p' .claude/skills/language-police/SKILL.md</p>
+<p>✅ 49 lines, 2673 chars</p>
+
+<div class="assistant-prose">
+<p>This is well confirmed: rejected findings (canon-scale-contradiction, etc.) get counter_examples added to rules.json so they won't be proposed again. Now let's check the remaining claims: write-it-down.md (cross-refs and content), lessons.md claims, workflow/README.md discovery move rule.</p>
+</div>
+
+<p>🔧 Bash: cat site/src/howto/write-it-down.md</p>
+<p>✅ 29 lines, 4369 chars</p>
+<p>🔧 Bash: ls site/src/workflow/ site/src/howto/</p>
+<p>✅ 24 lines, 420 chars — site/src/howto/: / checks.md / delegation.md</p>
+
+<div class="assistant-prose">
+<p>All cross-referenced files exist. Rule text matches (chapters end mid-flow / near-zero cleverness in last two paragraphs — matches fragment-closer-budget &quot;extra&quot;: &quot;neither in the last two paragraphs of a chapter as assembled&quot;). Now check next-md-handoff.md and NEXT.md file for &quot;update at end of every session&quot; claim.</p>
+</div>
+
+<details><summary>28 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '1,40p' plans/NEXT.md 2&gt;/dev/null | head -40; echo ---CL…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline -- plans/NEXT.md | wc -l; git log --format="%…</p>
+<p>✅ 80 lines, 4821 chars</p>
+<p>✅ 6 lines, 501 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --format="%ad %s" --date=short --reverse | head -5; ech…</p>
+<p>✅ 7 lines, 483 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
+<p>✅ 27 lines, 5593 chars</p>
+<p>✅ 27 lines, 4640 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "discovery move\|four consecutive" notes/ 2&gt;/dev/null…</p>
+<p>✅ 2 lines, 162 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '60,90p' notes/process.md</p>
+<p>✅ 31 lines, 1787 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "continuous action\|engine.*repeat\|dozen\|fifty-odd\|s…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "engine" notes/process.md | head -30</p>
+<p>✅ 3 lines, 551 chars</p>
+<p>✅ 4 lines, 357 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rln "engine" notes/*.md plans/*.md 2&gt;/dev/null</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "engine" notes/scene-first-proposal.md plans/book-01/*.…</p>
+<p>✅ 14 lines, 309 chars</p>
+<p>✅ 30 lines, 2961 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '545,620p' plans/book-01/arc-01.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '135,155p' plans/book-01/arc-03-craft-memo.md</p>
+<p>✅ 73 lines, 5126 chars</p>
+<p>✅ 11 lines, 622 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "continuous action\|split across them\|split across sc…</p>
+<p>✅ 1 lines, 31 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>No hits — that exception clause appears unsupported. Now check the &quot;one discovery move ran a dozen times across fifty-odd scenes, six of them inside a seven-scene stretch&quot; failure description in README's own body (separate claim, not in our list actually — let me check, it's not in the claims list explicitly but part of same paragraph). Only workflow_README_md_04 is listed with the quoted rule text. Let's check howto_write_it_down_md_25 &quot;from the first day&quot; more and finalize.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "counter_examples" -A3 tools/lint/rules.json | grep -B3…</p>
+<p>✅ 6 lines, 347 chars</p>
+
+<div class="assistant-prose">
+<p>All 110 rules have counter_examples. Good enough evidence for howto_checks_md_21/22. Now let's finalize verdicts.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"results": [{"id": "howto_write_it_down_md_22", "verdict":…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] You MAY read [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] You MAY read [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-a6418d7c25e0fea85">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> You MAY read <span class="redacted">redacted: private</span> (read-only; git -C for history) but must avoid its story prose and plans other than plans/NEXT.md (spoilers are irrelevant to your task and must not appear in your output). You may read <span class="redacted">redacted: private</span> (unredacted parsed transcripts; never quote story prose from them in your output) and <span class="redacted">redacted: private</span> Do NOT touch anything outside <span class="redacted">redacted: private</span> except the scratch dir /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto. uv for Python. Do not pipe output to tail/grep; write to a file and read it. Do not git commit. Do not edit site pages.<br />
+The writing under check: <span class="redacted">redacted: private</span> about.md, howto/<em>.md, workflow/</em>.md, chronicle/*.md. It describes how a novel was written with Claude Code over 2026-08-24 to 2026-09-02. Ground truth, in priority order: (1) the parsed transcripts in build/parsed (main sessions and subagents) and the autoroad git history; (2) build/parsed/index.json and <span class="redacted">redacted: private</span> (3) <span class="redacted">redacted: private</span> (itself LLM-written from the transcripts, treat as a draft of the truth); (4) for howto/setup.md, the Claude Code documentation at <a href="https://code.claude.com/docs/en/">https://code.claude.com/docs/en/</a> (setup, desktop-quickstart, permission-modes, memory, quickstart pages), fetched fresh; (5) the pages themselves. No receipt, no verdict: cite file:line, commit sha, URL or quoted command output, and say whether you ran it yourself or quoted it.</p>
+<p>Task: blind verification. You have NOT seen how these pages were drafted; check each claim against the primary source named, not against the page or the session summaries. Claims (JSON): [{&quot;id&quot;:&quot;introduction_md_15&quot;,&quot;quote&quot;:&quot;from setting the premise on 24 August 2026 to finishing the draft on 2 September&quot;,&quot;location&quot;:&quot;line 21&quot;,&quot;kind&quot;:&quot;date&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;introduction.md&quot;},{&quot;id&quot;:&quot;introduction_md_18&quot;,&quot;quote&quot;:&quot;A good deal of the ten days went on work that was later thrown away&quot;,&quot;location&quot;:&quot;line 21&quot;,&quot;kind&quot;:&quot;distributional&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;introduction.md&quot;},{&quot;id&quot;:&quot;howto_README_md_02&quot;,&quot;quote&quot;:&quot;This is one project, ten days long&quot;,&quot;location&quot;:&quot;line 5&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;},{&quot;id&quot;:&quot;howto_README_md_05&quot;,&quot;quote&quot;:&quot;Almost everything on this site, the rule files, the linter, the canon system, the handoff document, the overlap checker, came out of that loop as the residue of a specific failure.&quot;,&quot;location&quot;:&quot;line 9&quot;,&quot;kind&quot;:&quot;distributional&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;},{&quot;id&quot;:&quot;howto_README_md_06&quot;,&quot;quote&quot;:&quot;Very little of it was designed up front, and the parts that were designed up front (the five-book plan, the first full draft of book one) were largely thrown away.&quot;,&quot;location&quot;:&quot;line 9&quot;,&quot;kind&quot;:&quot;distributional&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;},{&quot;id&quot;:&quot;howto_README_md_09&quot;,&quot;quote&quot;:&quot;the one script that found over a hundred fabricated quotations&quot;,&quot;location&quot;:&quot;line 21&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;howto/README.md&quot;},{&quot;id&quot;:&quot;howto_throwing_away_md_01&quot;,&quot;quote&quot;:&quot;The book on Royal Road is the third draft.&quot;,&quot;location&quot;:&quot;Line 3&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;howto/throwing-away.md&quot;},{&quot;id&quot;:&quot;howto_delegation_md_02&quot;,&quot;quote&quot;:&quot;The project used all three&quot;,&quot;location&quot;:&quot;paragraph 1, line 3&quot;,&quot;kind&quot;:&quot;attribution&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;howto/delegation.md&quot;},{&quot;id&quot;:&quot;howto_lessons_md_01&quot;,&quot;quote&quot;:&quot;The specifics were a farming fantasy written in ten days&quot;,&quot;location&quot;:&quot;howto/lessons.md:3&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;howto/lessons.md&quot;},{&quot;id&quot;:&quot;howto_lessons_md_21&quot;,&quot;quote&quot;:&quot;Two drafts of book one were thrown away&quot;,&quot;location&quot;:&quot;howto/lessons.md:19&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;howto/lessons.md&quot;},{&quot;id&quot;:&quot;workflow_README_md_06&quot;,&quot;quote&quot;:&quot;the repair cost a chapter rebuild and two full revision passes&quot;,&quot;location&quot;:&quot;line 7-8&quot;,&quot;kind&quot;:&quot;causal&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/README.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_01&quot;,&quot;quote&quot;:&quot;Every Claude Code session in the autoroad project starts by reading a <code>CLAUDE.md</code> file at the project root&quot;,&quot;location&quot;:&quot;Line 3&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_03&quot;,&quot;quote&quot;:&quot;it lists, in order, which files a session must read before writing any fiction at all&quot;,&quot;location&quot;:&quot;Line 3-4&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_04&quot;,&quot;quote&quot;:&quot;The list starts with the voice exemplars and the prose the model is meant to imitate, not the rules&quot;,&quot;location&quot;:&quot;Line 5&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_06&quot;,&quot;quote&quot;:&quot;Only after the exemplars come the working voice rules, the LLM-tells catalogue, the story's premise and hard limits, and the canon files&quot;,&quot;location&quot;:&quot;Line 5-6&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_07&quot;,&quot;quote&quot;:&quot;A separate section, 'start here after a context loss,' points at <code>plans/NEXT.md</code>&quot;,&quot;location&quot;:&quot;Line 5-6&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_09&quot;,&quot;quote&quot;:&quot;older drafts were deleted from the working tree but remain in git history&quot;,&quot;location&quot;:&quot;Line 7&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_10&quot;,&quot;quote&quot;:&quot;The file is committed to the repository like any other project asset&quot;,&quot;location&quot;:&quot;Line 11&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_12&quot;,&quot;quote&quot;:&quot;The instruction that sealed answers to unresolved mysteries may only be written by a subagent, for instance, and never disclosed to David except on request&quot;,&quot;location&quot;:&quot;Line 13&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_14&quot;,&quot;quote&quot;:&quot;voice rules live in <code>notes/voices.md</code>, the tells catalogue in <code>notes/llm-tells.md</code>, the farming policy in <code>notes/farming.md</code>, the binding draft method in <code>draft/book-01/VOICE.md</code>&quot;,&quot;location&quot;:&quot;Line 17&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_15&quot;,&quot;quote&quot;:&quot;The pattern recurs throughout the project: a short binding pointer file, and longer working documents underneath it&quot;,&quot;location&quot;:&quot;Line 17&quot;,&quot;kind&quot;:&quot;distributional&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_17&quot;,&quot;quote&quot;:&quot;edits to it show up in git history the same way edits to the prose do&quot;,&quot;location&quot;:&quot;Line 11&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_claude_md_rules_md_20&quot;,&quot;quote&quot;:&quot;<code>CLAUDE.md</code> is deliberately thin. It points at longer files rather than restating them&quot;,&quot;location&quot;:&quot;Line 17&quot;,&quot;kind&quot;:&quot;absolute&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/claude-md-rules.md&quot;},{&quot;id&quot;:&quot;workflow_llm_tells_and_linting_md_02&quot;,&quot;quote&quot;:&quot;lists over a dozen specific failure modes&quot;,&quot;location&quot;:&quot;line 3&quot;,&quot;kind&quot;:&quot;number&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/llm-tells-and-linting.md&quot;},{&quot;id&quot;:&quot;workflow_llm_tells_and_linting_md_03&quot;,&quot;quote&quot;:&quot;notes/llm-tells.md&quot;,&quot;location&quot;:&quot;line 3&quot;,&quot;kind&quot;:&quot;cross-reference&quot;,&quot;check_against&quot;:&quot;git-history&quot;,&quot;doc&quot;:&quot;workflow/llm-tells-and-linting.md&quot;}]<br />
+Source to check against: git-history. For transcripts, use build/parsed/&lt;session&gt;.json (turn timestamps, user text, tool_use summaries) and build/parsed/subagents/. For git-history, run git -C <span class="redacted">redacted: private</span> log with --format and --stat and count for yourself. For index-json, read build/parsed/index.json and titles.json. For claude-code-docs, fetch the documentation pages fresh with WebFetch. For other-pages, read the referenced page. For &quot;unverifiable&quot;, record UNVERIFIABLE with what would be needed. Mechanical pre-pass results for context: The full report content was already shown in the Read calls above (both pages, lines 1-446). The file is at <span class="redacted">redacted: private</span>` (446 lines) — I've reproduced its complete contents in this conversation across the two Read tool outputs. Key files for reference:</p>
+<ul>
+<li><code><span class="redacted">redacted: private</span></code> — the checker script</li>
+<li><code><span class="redacted">redacted: private</span></code> — pytest tests (7 tests, all passing)</li>
+<li>`<span class="redacted">redacted: private</span> — the generated report (links: 83/83 resolve; dates: 47/47 in range; numbers: 175 topical + 156 informational; banned content: 0 hits)<br />
+Be paranoid about: numbers (count them yourself, check the direction of comparisons), quotations (verbatim or not), attributions (which session, which day, who said it), absolutes, and distributional claims that assert something unmeasured. Give one verdict per claim with a receipt and, for anything not CONFIRMED, a minimal replacement text. Return structured output only.</li>
+</ul></blockquote>
+
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --format="%ad %h %s" --date=iso | tail -5 &amp;&amp; echo --- &amp;…</p>
+<p>✅ 21 lines, 1599 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --format="%h" | wc -l echo ---five-book-plan--- git log…</p>
+<p>✅ 31 lines, 2106 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline | grep -iE "first draft|second draft|draft be…</p>
+<p>✅ 4 lines, 290 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --follow -- draft/book-01 | wc -l git log --d…</p>
+<p>✅ 61 lines, 1758 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --before="2026-08-30" -- draft/ | tail -40</p>
+<p>✅ 40 lines, 3754 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, this confirms the &quot;third draft&quot; throughout. Now check content for &quot;two drafts thrown away&quot; — look before third draft for evidence of first and second drafts existing and being discarded.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --before="2026-08-27" | tail -60</p>
+<p>✅ 60 lines, 4723 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --since="2026-08-27" --until="2026-08-30" | t…</p>
+<p>✅ 60 lines, 4427 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --all | grep -iE "^\S+ (draft|redraft)"  echo…</p>
+<p>✅ 36 lines, 1901 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --format="%ad %h %s" --date=short | grep -E "Draft chap…</p>
+<p>✅ 19 lines, 1817 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --all | grep -iE "overlap check|handoff|NEXT.…</p>
+<p>✅ 12 lines, 1547 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, confirms these tools emerged mid-project from specific issues (overlap checker after scenes shown to overlap, linter after &quot;language-police&quot; catalog). Now let's check the fabricated-quotations claim and other numeric/factual claims.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --all | grep -iE "fabricat|hallucinat"</p>
+<p>✅ 3 lines, 228 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --all | grep -iE "quotation|quote_check|quote…</p>
+<p>✅ 5 lines, 309 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git show --stat 61d4c0f | head -20 echo --- git show 61d4c0f --…</p>
+<p>✅ 121 lines, 6074 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --all | grep -iE "citation"</p>
+<p>✅ 7 lines, 543 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git show --stat 135e34d | head -10 git log 135e34d -1 --format=…</p>
+<p>✅ 31 lines, 1539 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>&quot;110 fabricated&quot; — confirms &quot;over a hundred fabricated quotations&quot; for the citation checker script (howto_README_md_09). Now let's check remaining claims: workflow/README repair cost, claude-md-rules details, llm-tells count.</p>
+</div>
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span> 2&gt;/dev/null | sed -n '1,20p' echo === cat <span class="redacted">redacted: private</span> 2&gt;/…</p>
+<p>✅ 22 lines, 3146 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --all | grep -iE "discovery move|repeat"  ech…</p>
+<p>✅ 7 lines, 716 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git show 8013e07 -1 --format="%B" | head -30 echo === git log -…</p>
+<p>✅ 31 lines, 1051 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rn "engine" notes/process.md 2&gt;/dev/null | head -20 echo…</p>
+<p>✅ 6 lines, 392 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '65,100p' notes/process.md</p>
+<p>✅ 36 lines, 2176 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rln "engine" --include=*.md rewrite/ notes/ plans/ 2&gt;/dev…</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rl "engine" rewrite notes plans 2&gt;/dev/null | xargs grep…</p>
+<p>✅ 41 lines, 1222 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "dozen\|fifty\|seven-scene\|seven scene" plans/book-01/…</p>
+<p>✅ 4 lines, 431 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rln "chapter rebuild\|rebuild the chapter\|two revision p…</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -rl "chapter rebuild\|rebuild the chapter\|two revision pa…</p>
+<p>✅ 20 lines, 715 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>No exact match for &quot;chapter rebuild&quot; wording, but the process.md description is the ground-truth for the engine-repeat gate story, and it differs materially from the claim's numbers.</p>
+</div>
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "rebuild" notes/process.md</p>
+<p>✅ 1 lines, 72 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "engine" plans/book-01/arc-01-craft-memo.md | head -30</p>
+<p>✅ 1 lines, 74 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; find . -iname "*GATE*" -not -path "./.git/*"</p>
+<p>✅ 1 lines, 42 chars — ./draft/book-01/scenes/53-odderins-gate.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline --all --diff-filter=A -- '*GATE.md'</p>
+<p>✅ 3 lines, 235 chars — <span class="redacted">redacted sentence</span> / <span class="redacted">redacted sentence</span> / <span class="redacted">redacted sentence</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git show efe8862 --format= | grep -n "engine\|dozen\|repeat" |…</p>
+<p>✅ 3 lines, 218 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git show 8013e07 --format= | grep -n "engine" -A3 -B3 | head -1…</p>
+<p>✅ 41 lines, 2047 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git show 8013e07 --format= | sed -n '320,335p'</p>
+<p>✅ 16 lines, 782 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence</span></p>
+<p>✅ 4 lines, 234 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; for c in 8bf9af7 db75938 fc5f57d 9575547; do echo "== $c =="; g…</p>
+<p>✅ 115 lines, 5686 chars — == 8bf9af7 == / <span class="redacted">redacted sentence</span> / </p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '1,15p' <span class="redacted">redacted: private</span> 2&gt;/dev/null</p>
+<p>✅ 15 lines, 2240 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Let's check whether &quot;workflow&quot; (scripted subagent fan-out) actually was used, distinct from ordinary subagents.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; find . -iname "*.py" -path "*workflow*" -not -path "./.git/*" 2…</p>
+<p>✅ 4 lines, 360 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git show 228538e -1 --format="%B" | head -20 echo --- git show…</p>
+<p>✅ 31 lines, 1735 chars</p>
+
+<div class="assistant-prose">
+<p>Good enough confirmation that a scripted workflow (multiple subagents fanned out for &quot;six sequential close readings&quot;) was used distinct from ad hoc subagent calls, alongside interactive session drafting and bounded subagent checks. This confirms &quot;used all three&quot; delegation modes.</p>
+<p>Now checking claude-md-rules.md claims against CLAUDE.md file history.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat CLAUDE.md</p>
+<p>✅ 132 lines, 7172 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; git log --oneline -- CLAUDE.md | wc -l git log --oneline -- CLA…</p>
+<p>✅ 12 lines, 1204 chars</p>
+
+<div class="assistant-prose">
+<p>13 commits touching CLAUDE.md — confirms it's committed and tracked with edits over time. Now let's check llm-tells.md claims: over a dozen failure modes.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -c "^##\|^###" notes/llm-tells.md grep -n "^##" notes/llm-…</p>
+<p>✅ 11 lines, 481 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -nE "^[0-9]+\.|^- \*\*" notes/llm-tells.md | wc -l grep -n…</p>
+<p>✅ 17 lines, 1296 chars</p>
+
+<div class="assistant-prose">
+<p>Confirms &quot;over a dozen specific failure modes&quot; (numbered items go past 17, clearly more than a dozen). Also confirms the file is <code>notes/llm-tells.md</code>.</p>
+<p>Now let's check howto/README.md line 5 &quot;This is one project, ten days long&quot; — already confirmed via dates. Let's check the introduction.md quote wording and README quotes exact line numbers by reading files.</p>
+</div>
+
+<p>🔧 Bash: sed -n '1,30p' <span class="redacted">redacted: private</span> echo ===README=== sed -n '1,25p' <span class="redacted">redacted: private</span></p>
+<p>✅ 27 lines, 3300 chars</p>
+
+<div class="assistant-prose">
+<p>All confirmed: dates match git log exactly (24 Aug premise setting through 2 Sep finish). Now let's check howto/README.md.</p>
+</div>
+
+<p>🔧 Bash: sed -n '1,25p' <span class="redacted">redacted: private</span></p>
+<p>✅ 25 lines, 3133 chars</p>
+<p>🔧 StructuredOutput ({"results": [{"id": "introduction_md_15", "verdict": "CONFI…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

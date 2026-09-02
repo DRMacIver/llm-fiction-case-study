@@ -1,0 +1,99 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in an author's note at t…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in an author's note at t…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a4ab28b39dda49318">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in an author's note at the bottom of a chapter of a novel (persona rules: <span class="redacted">redacted</span>/notes/author.md; note rules 4-7 in <span class="redacted">redacted</span>/notes/farming.md). Never rewrite. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;sense&quot;.</li>
+<li>Read <span class="redacted">redacted</span>/draft/book-01/author-notes/106-presumed-sound.md <span class="unpub-tag">unpublished</span> in full.<br />
+Also apply the standing SENSE lens: restate each factual claim flatly and check it is coherent with itself and its neighbours (rule_id &quot;sense-lens&quot;).</li>
+<li>Report EVERY candidate as {rule_id, quote (exact, short), reason}. Read one sentence either side before flagging. Also flag: winking at the persona's own enthusiasm, credentials offered to license a fact, &quot;not X but Y&quot;, floating epigrams, world content (explaining magic/System/institutions), the note annotating why a scene was written. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in the author's note. Let me start by reading the rules and the note file.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/author-notes/106-presumed-sound.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 4 lines, 1124 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+
+<div class="assistant-prose">
+<p>Let me continue reading the rules to find all semantic tier rules with sense lens:</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: grep -n '"tier":\s*"semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json | head -20</p>
+<p>✅ 20 lines, 576 chars</p>
+<p>🔧 Bash: jq '.[] | select(.tier == "semantic" and .lens == "sense") | .id' <span class="redacted">redacted</span>/tools/lint/r…</p>
+<p>✅ 8 lines, 177 chars</p>
+<p>🔧 Bash: jq '.[] | select(.tier == "semantic" and .lens == "sense")' <span class="redacted">redacted</span>/tools/lint/rules.j…</p>
+<p>✅ 179 lines, 9924 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me apply the SENSE lens to the author's note by reading it carefully and checking for the semantic/sense violations.</p>
+</div>
+
+<p>🔧 Read draft/book-01/author-notes/106-presumed-sound.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 1 lines, 93 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me systematically check the note against the semantic/sense rules and the standing patterns.</p>
+<p>Reading through the note applying the SENSE lens - restating each factual claim flatly:</p>
+<p><strong>First section (archaeological surveys):</strong></p>
+<ul>
+<li>Claim: Negative survey result only means absence within the sampled grid interval</li>
+<li>Claim: Survey spacing determines detection capability</li>
+<li>Claim: Omitting spacing from reports causes interpretive failure later<br />
+→ All coherent and explained</li>
+</ul>
+<p><strong>Second section (advisory sheets):</strong></p>
+<ul>
+<li>Claim: USDA Farmers' Bulletins started in 1889 (historically accurate)</li>
+<li>Claim: USDA distributed millions of bulletins free (documented)</li>
+<li>Claim: British ministry had equivalent numbered leaflets (documented)</li>
+<li>Claim: Quality advisories were ~400 words, single topic, with data (reasonable)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>The last claim is the issue.</strong> It states a design fact about how these historical documents were meant to be used, but:</p>
+<ol>
+<li>No explanation of significance or evidence</li>
+<li>It ends the note, making it seem important, but stands alone</li>
+<li>It invites the question &quot;why?&quot; without answering</li>
+</ol>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>This matches the <strong>&quot;cause-left-out&quot;</strong> rule: &quot;A stated fact whose significance depends on a cause the page never gives... If a line invites 'why?', answer it in the same speech or the next.&quot;</p>
+<p>The sentence invites elaboration on significance/evidence and gets none. Per the rule: &quot;read one sentence either side before flagging&quot; — the adjacent sentence provides no explanation.</p>
+</div>
+
+<p>🔧 StructuredOutput (<span class="redacted">redacted sentence: unpublished prose</span>)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

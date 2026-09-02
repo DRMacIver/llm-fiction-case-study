@@ -1,0 +1,107 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in an author's note at t…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in an author's note at t…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a64bc168be4fe6a95">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in an author's note at the bottom of a chapter of a novel (persona rules: <span class="redacted">redacted</span>/notes/author.md; note rules 4-7 in <span class="redacted">redacted</span>/notes/farming.md). Never rewrite. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;wit&quot;.</li>
+<li>Read <span class="redacted">redacted</span>/draft/book-01/author-notes/116-a-foot-under.md <span class="unpub-tag">unpublished</span> in full.</li>
+<li>Report EVERY candidate as {rule_id, quote (exact, short), reason}. Read one sentence either side before flagging. Also flag: winking at the persona's own enthusiasm, credentials offered to license a fact, &quot;not X but Y&quot;, floating epigrams, world content (explaining magic/System/institutions), the note annotating why a scene was written. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you identify LLM-prose failure modes in the author's note. Let me start by reading the rules and the note.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/author-notes/116-a-foot-under.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 2 lines, 735 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+
+<div class="assistant-prose">
+<p>Let me search for rules with tier=&quot;semantic&quot; and lens=&quot;wit&quot;:</p>
+</div>
+
+<p>🔧 Bash: grep -n '"lens": "wit"' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 10 lines, 229 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me read the sections with wit lens to identify which have tier=&quot;semantic&quot;:</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 600 lines, 34510 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me verify the full author's note content:</p>
+</div>
+
+<p>🔧 Bash: wc -w <span class="redacted">redacted</span>/draft/book-01/author-notes/116-a-foot-under.md <span class="unpub-tag">unpublished</span> &amp;&amp; cat <span class="redacted">redacted</span>…</p>
+<p>✅ 2 lines, 821 chars</p>
+
+<div class="assistant-prose">
+<p>Now I'll analyze the author's note against the semantic/wit rules. First, let me identify which rules apply to notes:</p>
+<p>From the rules with tier=&quot;semantic&quot; and lens=&quot;wit&quot;, these apply to notes (scope includes &quot;note&quot;):</p>
+<ul>
+<li>triad-swerve-budget</li>
+<li>jukebox-flourish</li>
+<li>wrong-world-metaphor</li>
+<li>joke-rhythm-no-logic</li>
+</ul>
+<p>Now reading the note with one sentence either side (though it's a single continuous passage):</p>
+<p><strong>Analysis:</strong></p>
+<p>The note presents real-world facts about flood physics and safety. Let me check each applicable rule:</p>
+<ol>
+<li>
+<p><strong>triad-swerve-budget</strong>: &quot;six inches... a foot or so... and the number that matters more than either&quot; - there is a three-item list with the third item providing a pivot (&quot;what matters more than either is...&quot;). However, the rule note states &quot;never report a lone instance,&quot; and this appears to be the only such construction in the note, so it falls within budget.</p>
+</li>
+<li>
+<p><strong>jukebox-flourish</strong>: The note contains no figurative language, similes, personifications, or abstract-concrete conjunctions without purpose. All content is functional.</p>
+</li>
+<li>
+<p><strong>wrong-world-metaphor</strong>: No metaphors present; this is real-world physics content explicitly allowed by farming.md.</p>
+</li>
+<li>
+<p><strong>joke-rhythm-no-logic</strong>: No sentences constructed with clever shape but empty propositions. Every statement has substantive content.</p>
+</li>
+</ol>
+<p><strong>Additional flags checked:</strong></p>
+<ul>
+<li>No winking at persona's enthusiasm</li>
+<li>No credentials offered to license facts</li>
+<li>No &quot;not X but Y&quot; rhetorical construction (the negative imperative &quot;it is not to go&quot; is not this pattern)</li>
+<li>No floating epigrams (factual statements are grounded in argument)</li>
+<li>World content is real-world facts explicitly permitted per farming.md</li>
+<li>Note does not annotate why the scene was written; it provides real-world context</li>
+</ul>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": []})</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in an author's note at t…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in an author's note at t…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-abf7a01a77514d93c">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in an author's note at the bottom of a chapter of a novel (persona rules: <span class="redacted">redacted</span>/notes/author.md; note rules 4-7 in <span class="redacted">redacted</span>/notes/farming.md). Never rewrite. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;sense&quot;.</li>
+<li>Read <span class="redacted">redacted</span>/draft/book-01/author-notes/112-seen-and-not-read.md <span class="unpub-tag">unpublished</span> in full.<br />
+Also apply the standing SENSE lens: restate each factual claim flatly and check it is coherent with itself and its neighbours (rule_id &quot;sense-lens&quot;).</li>
+<li>Report EVERY candidate as {rule_id, quote (exact, short), reason}. Read one sentence either side before flagging. Also flag: winking at the persona's own enthusiasm, credentials offered to license a fact, &quot;not X but Y&quot;, floating epigrams, world content (explaining magic/System/institutions), the note annotating why a scene was written. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in the author's note. Let me start by reading the rules file and the note itself.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/author-notes/112-seen-and-not-read.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 4 lines, 1188 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+
+<div class="assistant-prose">
+<p>Let me search for rules with &quot;lens&quot;: &quot;sense&quot; in the rules file.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: grep -n '"lens".*"sense"' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 8 lines, 199 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 150 lines, 10510 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 30 lines, 1991 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 70 lines, 4119 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 100 lines, 5422 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 80 lines, 4743 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Let me verify I have all the semantic sense rules:</p>
+</div>
+
+<p>🔧 Bash: grep -B 5 '"lens".*"sense"' <span class="redacted">redacted</span>/tools/lint/rules.json | grep -E '(^[0-9]+-|"id"|"t…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json', 'r') as f:…</p>
+<p>✅ 9 lines, 217 chars — Semantic + Sense rules: /   - shape-filled-fact-unchecked /   - missing-qualifier</p>
+
+<div class="assistant-prose">
+<p>Now let me analyze this author's note against the semantic &quot;sense&quot; rules and the standing SENSE lens.</p>
+</div>
+
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json', 'r') as f:…</p>
+<p>✅ 31 lines, 1430 chars — shape-filled-fact-unchecked: /   Description: The drafter writes toward the SHAPE a rule asks for — a tally, a noticing beat, a clue plant, a recognition — and fills ... /   Severity: error</p>
+
+<div class="assistant-prose">
+<p>Let me systematically check the author's note against these rules by reading it carefully and testing each sentence.</p>
+</div>
+
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt; 'EOF' ANALYSIS OF AUTHOR'S NOTE: 112-seen-and-not-read.md <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 96 lines, 4807 chars</p>
+
+<div class="assistant-prose">
+<p>I have completed a thorough analysis of the author's note &quot;112-seen-and-not-read.md <span class="unpub-tag">unpublished</span>&quot; against all semantic &quot;sense&quot; rules and the standing SENSE lens.</p>
+<p><strong>Analysis summary:</strong></p>
+<p>I checked all 8 semantic sense rules:</p>
+<ol>
+<li><strong>shape-filled-fact-unchecked</strong>: All factual claims (soil science methods, learning timeline, historical hiring practices) restate flat as coherent and accurate.</li>
+<li><strong>missing-qualifier</strong>: No bare noun phrases requiring clarification; &quot;a practised one&quot; is clearly &quot;hand&quot; from context.</li>
+<li><strong>near-idiom-general</strong>: No coined near-idioms; &quot;takes a dull polish,&quot; &quot;roll out into a thread&quot; are real expressions.</li>
+<li><strong>ambiguous-word</strong>: All words (texture, measured, read, trade, sign, notice) read in their primary senses with clear context.</li>
+<li><strong>dangling-back-reference</strong>: All back-references anchored (&quot;the tests&quot; → &quot;the tests to myself in the order he said them&quot;).</li>
+<li><strong>continuity-within-scene</strong>: No physical or informational breaks; learning from skilled person taking 2 seasons is coherent.</li>
+<li><strong>missing-connective</strong>: Transitions are clear; implicit connectives between ideas are recoverable from context.</li>
+<li><strong>cause-left-out</strong>: &quot;Which nobody warns you about&quot; is explained by the immediately adjacent example (skilled teacher, still took 2 seasons).</li>
+</ol>
+<p><strong>Standing SENSE lens</strong>: All factual claims cohere with each other and neighbors; no contradictions or missing connections detected.</p>
+<p><strong>Additional flags checked</strong>: No winking, credentials offered to license facts, &quot;not X but Y&quot; constructions, floating epigrams, or scene-writing explanations. The note explains real-world content (soil science and hiring practices), which is explicitly permitted per CLAUDE.md.</p>
+</div>
+
+<p>🔧 StructuredOutput ({"candidates": []})</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

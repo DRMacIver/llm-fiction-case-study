@@ -1,0 +1,83 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. Do not run git. Never read notes/sealed/.  Two mech…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. Do not run git. Never read notes/sealed/.  Two mech…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a325c9679b2b41930">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. Do not run git. Never read notes/sealed/.</p>
+<p>Two mechanical merges.</p>
+<ol>
+<li>
+<p>GLOSSARY. Read notes/canon/world/farming-glossary.md (its entry format and its status notes) and the six addition files <span class="redacted">redacted: private</span> The notes were then edited by a farming-check pass, so the AUTHORITATIVE source for what each note now explains is the note files themselves: draft/book-01/author-notes/*.md (bold <strong>Term</strong> items). publishing/chapters.json maps scenes to chapters (a note file is named after its chapter's first scene). Merge: add every term now explained in a note for chapters 19-58 that is not already in the glossary, in the glossary's own format, pointing at the chapter number and note file; drop proposed entries whose note item no longer exists (e.g. cave breathing at 58 and 73 was superseded by ch 21/scene 44 <span class="unpub-tag">unpublished</span>; &quot;The fold&quot; at 118 was replaced; &quot;Stock refusing a patch&quot; at 116 was cut; &quot;Robert Marsham&quot; at 110 was replaced by British Rainfall); record the deferred/unexplained terms the addition files list, in the glossary's deferred style; and re-point any existing entry marked as explained in a deleted-draft chapter (e.g. &quot;explained (ch. 014)&quot;, &quot;ch. 023&quot;) to the third-draft chapter whose note now explains it, or mark it &quot;explained only in deleted draft; unexplained in the published sequence&quot; if none does. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>PERSONA LOG. In notes/author.md, the section &quot;Things the persona has said about themselves on the page&quot; has a &quot;Third draft&quot; list keyed by &quot;ch. NN&quot; where NN was the SCENE number before regrouping (e.g. &quot;ch. 33&quot; = scene 33 = now chapter 15; &quot;ch. 36&quot; = scene 36 = now chapter 16). Re-key every third-draft entry as &quot;scene NN (ch. MM)&quot; using publishing/chapters.json (chapter MM is the one whose &quot;scenes&quot; list contains NN, and the note lives on the chapter's first scene file, so a claim in note file 48-... is scene 48 <span class="unpub-tag">unpublished</span> / ch 23). Verify each claim still exists in its note file (grep for it); mark any that no longer appears as &quot;(no longer on the page)&quot;. Then add every autobiographical claim present in the notes for chapters 19-58 that is not yet logged; read every note file 41-... to 118-... and pick out first-person claims about the author's own life or experience. Known ones: 64 (torch on a night worm count), 66 (Dutch water line sympathies), 71 (straps with two or three hands' repairs), 88 (year's work lost to labels), 96 (peat cores out of order), 104 (scored plots blind, wrong about two), 112 (taught hand texturing in the rain; two seasons; recites the tests), 118 (carried hazel hurdles two at a time). Some may already have been added by another agent; do not duplicate.</p>
+</li>
+</ol>
+<p>Report: the count of glossary entries added, re-pointed, and deferred; the persona entries re-keyed and added; anything you could not resolve.</p></blockquote>
+
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/canon/world/farming-glossary.md</p>
+<p>✅ 494 lines, 27312 chars</p>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span> 2&gt;&amp;1</p>
+<p>✅ 66 lines, 890 chars — a.txt / all-canon.txt / analysis.txt</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/publishing/chapters.json</p>
+<p>✅ 410 lines, 4513 chars</p>
+<p><span id="agent-a1dcf887ac33fc6a9"></span>🔧 <a href="a1dcf887ac33fc6a9.html">Agent: Merge glossary additions and persona log entries</a></p>
+<p>✅ 6 lines, 1067 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>I've launched a sonnet subagent to perform both mechanical merges (glossary and persona log). This is a large task involving cross-referencing ~40 note files against six proposal files, chapters.json, and existing glossary/author.md content, so I'll wait for it to complete and report back with the counts once it finishes.</p>
+</div>
+
+
+<p class="system-note">⚙ background task finished — Agent "Merge glossary additions and persona log entries" finished</p>
+
+
+<div class="assistant-prose">
+<p>Both merges are done (files edited, not committed — per instructions I didn't run git).</p>
+<ol>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<ul>
+<li>~62 new entries added (verified against the actual current note files for chapters 19-58, not the stale proposal files); placed into existing sections plus three new ones: Livestock/injury/stockcraft, Underground and caving, Records/statistics/history.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Known corrections applied: cave breathing now correctly pointed at ch.021/scene 44 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Ledger extended through ch.58; deferred-terms paragraph updated (only <code>pan</code>, <code>hay that heats</code>, <code>the drove</code>, <code>thin in the bite</code> still owed); dated status paragraph added at top.</li>
+<li>Flagged but not fixed (out of scope): the ch.19-40 ledger entries themselves appear stale against current note files — needs its own separate audit.</li>
+</ul>
+<p><strong>2. Persona log</strong> (<code>notes/author.md</code>)</p>
+<ul>
+<li>12 entries re-keyed to &quot;scene NN (ch. MM)&quot; format, all reverified against note files.</li>
+<li>5 new entries added (scenes 64, 66, 71, 112, 118).</li>
+<li>1 expected claim (scene 104 <span class="unpub-tag">unpublished</span>, &quot;scored plots blind, wrong about two&quot;) not found on the page — flagged as likely cut rather than added.</li>
+<li>No additional unlisted autobiographical claims found in a full scan of notes 41-118.</li>
+</ul>
+<p>Files changed: <span class="redacted">redacted</span>/notes/canon/world/farming-glossary.md<code>, </code><span class="redacted">redacted</span>/notes/author.md. Nothing committed — let me know if you want me to commit these.</p>
+</div>
+</body></html>

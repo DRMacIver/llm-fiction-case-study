@@ -1,0 +1,104 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a610a1cd4fd2357eb">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in a novel. Never rewrite the text. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;sense&quot;. Study each rule's description, why, examples and counter_examples.</li>
+<li>Read <span class="redacted">redacted</span>/draft/book-01/scenes/47-dont-tell-me-yet.md <span class="unpub-tag">unpublished</span> in full.<br />
+Also apply the standing SENSE lens regardless of the catalogue: restate each factual claim of every sentence flatly and check it is coherent with itself and with the sentences around it (a shape filled but the fact unchecked; a number that cannot be right; a connective that miswires a contrast; a garden-path parse). Report those with rule_id &quot;sense-lens&quot;.</li>
+<li>Report EVERY candidate violation as {rule_id, quote (exact, short), line, reason (one line)}. Before flagging, read one sentence either side of the quote; do not flag a quote read in isolation. Budget rules (aphorism, maxim, build/drop) must nominate the keeper in the reason. Report candidates generously; a judge filters. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in the scene. Let me start by reading the rules and the scene file.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/scenes/47-dont-tell-me-yet.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 40 lines, 5845 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+
+<div class="assistant-prose">
+<p>Let me search for all rules with tier &quot;semantic&quot; and lens &quot;sense&quot; in the rules.json file.</p>
+</div>
+
+<p>🔧 Bash: grep -A 20 '"tier": "semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json | grep -B 5 '"lens": "se…</p>
+<p>✅ 48 lines, 1903 chars</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
+<p>✅ 47 lines, 4645 chars — ID: shape-filled-fact-unchecked / Name: Shape filled, fact unchecked / Description: The drafter writes toward the SHAPE a rule asks for — a tally, a noticing beat, a clue plant, a recognition — and fills the shape without checking it against the scene's own facts. Restat…</p>
+
+<div class="assistant-prose">
+<p>Now let me analyze the scene systematically for violations of these sense-based rules. I'll go through it carefully, checking each factual claim.</p>
+</div>
+
+<details><summary>32 tool calls</summary>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt; 'EOF' # Analysis of Scene 47 <span class="unpub-tag">unpublished</span>: Don't Tell Me Ye…</p>
+<p>✅ 121 lines, 8405 chars</p>
+<p>🔧 Bash: find draft/book-01/scenes -name "*.md" | sort | head -46 | tail -10</p>
+<p>✅ 10 lines, 458 chars</p>
+<p>🔧 Bash: grep -l "arc\|<span class="redacted">redacted</span>\|alehouse keeper\|the day.*on the door" draft/book-01/scenes/*.m…</p>
+<p>✅ 45 lines, 2130 chars</p>
+<p>🔧 Bash: grep -n "arc" draft/book-01/scenes/01-pellings-half-past-twelve-soft.md | head -20</p>
+<p>✅ 1 lines, 657 chars</p>
+<p>🔧 Bash: grep -n "arc's\|arcs" draft/book-01/scenes/46-a-list-of-houses.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Read draft/book-01/scenes/43-two-lines-one-field.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 52 lines, 7703 chars</p>
+<p>🔧 Bash: grep -n "the door\|cut the hay" draft/book-01/scenes/46-a-list-of-houses.md <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: grep -n "cut the hay\|on the door" draft/book-01/scenes/4[2-6]-*.md</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: grep -n "cut the hay\|cut hay\|the day.*cut" draft/book-01/scenes/*.md | head -30</p>
+<p>✅ 10 lines, 6916 chars</p>
+<p>🔧 Read draft/book-01/scenes/48-the-eleventh-of-cornmonth.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 38 lines, 4718 chars</p>
+<p>🔧 Bash: grep -n "chalk.*door\|on the door\|door.*date\|door.*chalk" draft/book-01/scenes/[1-4][0-…</p>
+<p>✅ 4 lines, 2461 chars</p>
+<p>🔧 Bash: grep -n "<span class="redacted">redacted</span>\|alehouse keeper" draft/book-01/scenes/[1-4][0-9]-*.md | head -30</p>
+<p>✅ 8 lines, 5983 chars</p>
+<p>🔧 Bash: grep -n "Edwin.*looked at.*sky\|looked at.*sky" draft/book-01/scenes/[1-4][0-9]-*.md</p>
+<p>✅ 1 lines, 662 chars</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt; 'EOF' # Detailed Check of Scene 47 <span class="unpub-tag">unpublished</span>  ## Checkin…</p>
+<p>✅ 174 lines, 11840 chars</p>
+<p>🔧 Read draft/book-01/scenes/47-dont-tell-me-yet.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 10 lines, 1465 chars</p>
+<p>🔧 Bash: grep -n "sky\|sky\|skyward\|at the sky" draft/book-01/scenes/*.md | head -40</p>
+<p>✅ 11 lines, 6170 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Based on my detailed analysis of scene 47 <span class="unpub-tag">unpublished</span> against the semantic/sense rules and the standing SENSE lens, I found one violation to report. Let me verify it by reading the full context one more time:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt; 'EOF' # Final Findings for Scene 47 <span class="unpub-tag">unpublished</span>: Don't Tel…</p>
+<p>✅ 44 lines, 2180 chars</p>
+<p>🔧 StructuredOutput (<span class="redacted">redacted sentence: unpublished prose</span>)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

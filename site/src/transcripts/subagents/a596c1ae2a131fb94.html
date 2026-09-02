@@ -1,0 +1,90 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hunter for LLM-prose failure modes in a novel. Never rewrit…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a596c1ae2a131fb94">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hunter for LLM-prose failure modes in a novel. Never rewrite the text. Never read <span class="redacted">redacted</span>/notes/sealed/.</p>
+<ol>
+<li>Read <span class="redacted">redacted</span>/tools/lint/rules.json and select every rule whose &quot;tier&quot; is &quot;semantic&quot; and whose &quot;lens&quot; is &quot;world&quot;. Study each rule's description, why, examples and counter_examples.</li>
+<li>Read <span class="redacted">redacted</span>/draft/book-01/scenes/44-where-they-stopped-writing.md <span class="unpub-tag">unpublished</span> in full.</li>
+<li>Report EVERY candidate violation as {rule_id, quote (exact, short), line, reason (one line)}. Before flagging, read one sentence either side of the quote; do not flag a quote read in isolation. Budget rules (aphorism, maxim, build/drop) must nominate the keeper in the reason. Report candidates generously; a judge filters. If nothing, return an empty list.</li>
+</ol></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for LLM-prose failure modes in this scene. Let me start by reading the rules and then the scene file.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/scenes/44-where-they-stopped-writing.md <span class="unpub-tag">unpublished</span></p>
+<p>✅ 42 lines, 6572 chars</p>
+<p>✅ 1181 lines, 51958 chars</p>
+<p>🔧 Bash: grep -n '"tier":\s*"semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 59 lines, 1707 chars</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json', 'r') as f:…</p>
+<p>✅ 59 lines, 4894 chars — === worldbuilding-to-save-a-line === / Name: Worldbuilding invented to save a line / Tier: semantic</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me search for rules with tier=&quot;semantic&quot; and lens=&quot;world&quot; and examine them more carefully:</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: python3 tools/lint/rules.json &lt;&lt; 'EOF' 2&gt;&amp;1 || python3 &lt;&lt; 'EOF' import json  with open('t…</p>
+<p>✅ 1 lines, 31 chars — (Bash completed with no output)</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 400 lines, 16456 chars</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json', 'r') as f:…</p>
+<p>✅ 17 lines, 422 chars — === worldbuilding-to-save-a-line === / Name: Worldbuilding invented to save a line / </p>
+<p>🔧 Bash: grep -n "worldbuilding-to-save-a-line\|tech-level-anachronism\|canon-scale-contradiction\…</p>
+<p>✅ 6 lines, 244 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 525 lines, 28868 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me check the scene carefully against these 6 semantic/world rules. First, let me run the contamination-overlap check:</p>
+</div>
+
+<p>🔧 Bash: python3 tools/overlap_check.py draft/book-01/scenes/44-where-they-stopped-writing.md <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 1 lines, 87 chars — draft/book-01/scenes/44-where-they-stopped-writing.md <span class="unpub-tag">unpublished</span>: 0 overlapping run(s) of 8+ words</p>
+
+<div class="assistant-prose">
+<p>Now let me carefully read through the scene analyzing it against each semantic world rule. Let me take detailed notes on potential issues:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt; 'EOF' SEMANTIC WORLD RULES CHECKLIST FOR SCENE 44 <span class="unpub-tag">unpublished</span>…</p>
+<p>✅ 37 lines, 2205 chars</p>
+
+<div class="assistant-prose">
+<p>Based on my thorough analysis of scene 44 <span class="unpub-tag">unpublished</span> against the 6 semantic/world rules, here are my findings:</p>
+</div>
+
+<p>🔧 StructuredOutput (<span class="redacted">redacted sentence: unpublished prose</span>)</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

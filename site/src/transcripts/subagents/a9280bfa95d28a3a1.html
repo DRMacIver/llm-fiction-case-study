@@ -1,0 +1,183 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: [redacted] (a novel). Read-only task; do not edit any file, do…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted] (a novel). Read-only task; do not edit any file, do…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a9280bfa95d28a3a1">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span> (a novel). Read-only task; do not edit any file, do not run git, never read notes/sealed/.</p>
+<p>Read draft/book-01/scenes/25-<em>.md through 118-</em>.md in order (94 scenes, ~100k words; use cat in batches). Then read notes/canon/world/timeline.md and notes/canon/characters/{edwin,peri,<span class="redacted">redacted</span>}.md.</p>
+<p>Task: a book-wide CONTINUITY read for the stretch that is about to be published. Report only concrete contradictions between scenes, or between a scene and the timeline/character files, that a careful reader would catch:</p>
+<ul>
+<li>names, ages, spellings of people and places changing</li>
+<li>dates, day counts, durations, distances, sums of money, counts (worms, stakes, chains, people) that disagree with an earlier statement</li>
+<li>who knows what when (a character acting on information they have not been given on the page, or being told the same thing twice as news)</li>
+<li>physical state (<span class="redacted">redacted</span> and <span class="redacted">redacted</span>: which arm, when set, when off; Peri's cut hand; who is carrying what)</li>
+<li>objects appearing/disappearing (the auger, the sword, the notebook, letters)</li>
+<li>weather and time of day within a scene sequence</li>
+<li>the order of events being referred to later in the wrong order</li>
+</ul>
+<p>Do NOT report style, voice, pacing, or things you merely find implausible. Do not report anything about what the silent-soil mystery is; canon is deliberately agnostic on its cause.</p>
+<p>Output: a numbered list, each item: scene numbers involved, the two quoted phrases that conflict (exact, short), one line on which is more likely right given the surrounding scenes and the timeline. Then a short list of &quot;possibly deliberate, check with the author&quot; items. Aim for precision over volume; a reader with only your list must be able to fix each item without re-reading the book.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the scenes.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: ls draft/book-01/scenes/ | head -130 &amp;&amp; echo "---" &amp;&amp; wc -w draft/book-01/scenes/*.md | t…</p>
+<p>✅ 120 lines, 3070 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.md 2&gt;&amp;1; ls notes/canon/characters/</p>
+<p>✅ 14 lines, 272 chars —      891 notes/canon/world/timeline.md /      972 notes/canon/characters/edwin.md /     1338 notes/canon/characters/peri.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; for f in 2[5-9]-* 3[0-9]-* 4[0-4]-*; do echo "=====…</p>
+<p>✅ 21 lines, 1932 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; for f in 2[5-9]-* 3[0-4]-*; do echo "===== $f"; cat…</p>
+<p>✅ 21 lines, 1929 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; S=<span class="redacted">redacted: private</span> &amp;&amp; mkdir -p $S &amp;&amp; python3 -c …</p>
+<p>✅ 11 lines, 1252 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>I'll read the batches in order.</p>
+</div>
+
+<details><summary>38 tool calls</summary>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 570 lines, 75868 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 524 lines, 72431 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 434 lines, 61959 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 420 lines, 65022 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 434 lines, 70741 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 430 lines, 61167 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 408 lines, 59425 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 418 lines, 65139 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 436 lines, 63120 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 192 lines, 27020 chars</p>
+<p>🔧 Bash: sed -n 1,200p notes/canon/world/timeline.md</p>
+<p>✅ 200 lines, 12098 chars</p>
+<p>🔧 Bash: sed -n 200,520p notes/canon/world/timeline.md</p>
+<p>✅ 321 lines, 20220 chars</p>
+<p>🔧 Bash: sed -n 520,700p notes/canon/world/timeline.md</p>
+<p>✅ 181 lines, 10764 chars</p>
+<p>🔧 Bash: sed -n 1,120p notes/canon/characters/<span class="redacted">redacted</span>.md</p>
+<p>✅ 119 lines, 7089 chars</p>
+<p>🔧 Bash: grep -n -i "eighteen\|nineteen\|birthday\|age\|sword\|<span class="redacted">redacted</span>\|notebook\|left hand\|sc…</p>
+<p>✅ 60 lines, 5391 chars</p>
+<p>🔧 Bash: grep -n -i "left-handed\|handed\|staff\|three hundred and fifty\|350\|331\|age" notes/can…</p>
+<p>✅ 40 lines, 2968 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; grep -oh "<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>\|Ferri…</p>
+<p>✅ 36 lines, 416 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; grep -n "ewes\|three hundred ewes\|two hundred and…</p>
+<p>✅ 28 lines, 17700 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; grep -n "eight days it's pushed\|out for five" 59*.…</p>
+<p>✅ 15 lines, 9992 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> character files. The book is unusually tight on dates — most of the arithmetic I checked (the 41/49-day Holm Deep counts, the 82-day &quot;eleven weeks and five days&quot;, the chain figures, Day-N ↔ date, &quot;seventy miles in eleven days&quot;, &quot;twenty-seven days in the parish&quot;) is exactly right. What follows is what a careful reader could catch.</p>
+<h2>Contradictions</h2>
+<ol>
+<li>
+<p><strong>59 vs 60 (same day, 10 Harvestmonth) — how long the mouth has blown.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+60 is right. By the slate read aloud in 59 itself, the mouth drew on 28 Cornmonth, was &quot;nothing either way&quot; on 2 Harvestmonth, and first blew out on the 5th; 63 confirms it on the 13th (&quot;blown out for eight days&quot;). In 59, &quot;eight days&quot; should be five (eight is the gap since it stopped <em>drawing</em>, which the same speech already gives as twelve).</p>
+</li>
+<li>
+<p><strong>56 vs 66 — the Seal's cooldown lands two days early.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+66 is right and is the canon anchor (timeline: cast Day 1 = 15 Cornmonth, returns at midnight ending 13 Harvestmonth). On 7 Harvestmonth the count should read <strong>seven</strong> left, not eight; &quot;eight left&quot; would put the return on the 15th.</p>
+</li>
+<li>
+<p><strong>110 misdates the &quot;least useful adult present&quot; speech.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> Fix 110 to &quot;the tenth&quot;.</p>
+</li>
+<li>
+<p><strong>92 vs 39 — when Edwin last wrote to Sorrel.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+39 is on the page and load-bearing; the 20th of Cornmonth is the date of his letter to <strong>Marsh</strong> (quoted back at him in 85). Either the interval becomes forty days from the 25th, or the sentence needs recasting (&quot;not written her a proper letter since…&quot;).</p>
+</li>
+<li>
+<p>117 — <span class="redacted">redacted</span> agreement figure changes inside one scene.<br />
+<span class="redacted">redacted</span>, at the count: <em>&quot;Nine of eleven ... Two a yard short. That's the figure.&quot;</em> Peri, dictating the entry a page later: <em>&quot;they agree to a hand at ten of twelve and to a yard at two.&quot;</em><br />
+Nine of eleven is right (eleven pegs, two moved a yard). &quot;Ten of twelve&quot; both contradicts it and mis-totals (10 + 2 = 12 ≠ 11); it looks like the twelve <em>stakes</em> leaking into the pegs count.</p>
+</li>
+<li>
+<p><strong>73 vs 54 — where Peri's boots were mended.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> 73 should say Ranner's Sluice — and &quot;done it badly&quot; contradicts the luck the coincidence list is built on.</p>
+</li>
+<li>
+<p><strong>86 — the west-line projection is measured from a reading that does not exist.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+The only west-line readings on the page are 6 ch 20 on 28 Cornmonth (43) and 6 ch 18 on the 29th (43); nothing is chained on &quot;the fourth&quot; of any month. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p><strong>85 vs 89/93 — Edwin's promised date to Marsh is impossible as written.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> I am at your works that day.&quot;* They leave Fenholt on the 4th (89) and it is three days' walk (Blackrow, east house, <span class="redacted">redacted</span> on the 6th), which 93 then treats as being &quot;two days late&quot;. Either the letter should promise a later day, or the two-days-late reckoning at the gate needs rewording — as it stands the most date-careful man in the book writes an arrival date he cannot physically make, and nobody notices.</p>
+</li>
+<li>
+<p>111 — <span class="redacted">redacted</span> misdates the second-gate conversation.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> on the <strong>thirteenth</strong> (canon: &quot;23:52 on the 13th&quot;). The rest of her sentence (&quot;fifty-six days&quot;) is correct as counted from midnight of the 13th/14th.</p>
+</li>
+<li>
+<p><strong>51 vs 52 — the pale-field trip loses its travel day.</strong><br />
+51 (30 Cornmonth): <em>&quot;The day after tomorrow ... Three days: a day there, a day in it, a day back, fourteen miles each way&quot;</em> — 52 has them at <span class="redacted">redacted</span>'s gate <strong>and</strong> hand-walking eleven twigs across the whole afternoon on the 2nd of Harvestmonth, i.e. the day they set out, fourteen miles away. The plan says three days; the prose spends two. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p><strong>43 / 44 / 49 — &quot;the fourteenth&quot; is two different counting systems in adjacent paragraphs.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+The day-numbers count from Peri's arrival (Day 14 = 28 Cornmonth), which no reader can derive; and the stakes were driven on <strong>25 Cornmonth</strong>, so &quot;on the fourteenth, with the stakes&quot; reads as a date that contradicts the stake date. Recommend converting all three to days of the month.</p>
+</li>
+<li>
+<p><strong>110 vs 78 — what Peri's level 7 was for.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> The arm belongs to eight, not seven.</p>
+</li>
+</ol>
+<h2>Scene vs canon files</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>'s title and text say <strong>four</strong> (&quot;Posted the thirtieth&quot;, read on 4 Saltmonth). The scene is right; the canon line is stale.</p>
+<ul>
+<li><code>timeline.md</code> Day 82 and <code>peri.md</code> both record <strong><code>[Agent of Fate — Level 26]</code></strong> at Wystow on 6 Saltmonth; scene 110 <span class="unpub-tag">unpublished</span> says <strong>level ten</strong> (and 117 says eleven). The character file's own &quot;Level curve, superseded&quot; note says 26 was overruled — the Day 82 bullet was never updated.</li>
+<li><span class="redacted">redacted</span>.md Established: *&quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> at the gate at all.</li>
+</ul>
+<h2>Possibly deliberate — check with the author</h2>
+<ul>
+<li>The six weeks / eight weeks <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> writes <em>eight</em>, and 114 has the setter concede <em>&quot;<span class="redacted">redacted</span> was right and he was hopeful.&quot;</em> Reads as intended; flagged only because the timeline lists it under &quot;flagged contradictions&quot;.</li>
+<li><strong>Two boxes, both called &quot;the box.&quot;</strong> In 54 Peri's coincidence list means the anonymous <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> 100 disentangles them explicitly, but the 54 exchange invites a reader to merge them.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> names twelve at the Charter house long table in front of <span class="redacted">redacted</span> and <span class="redacted">redacted</span> (61), and describes her page to Peri in 72; &quot;the dry road&quot; is otherwise established as Edwin-and-Peri ground (62). If there was an off-page walk, fine; otherwise these should read &quot;at the long table&quot;.</li>
+<li>99, <span class="redacted">redacted</span>: <em>&quot;I had a letter from <span class="redacted">redacted</span> dated the eleventh saying the fifteenth.&quot;</em> Edwin wrote to <span class="redacted">redacted</span> on the 11th from <span class="redacted">redacted</span>, thirty-five miles away; a <span class="redacted">redacted</span> letter of the same date is tight to impossible. Probably means &quot;off <span class="redacted">redacted</span>'s letter&quot; — worth a word change.</li>
+<li><strong>66 vs 69, flood depth.</strong> 66: the margin <em>&quot;would go six inches under&quot;</em>; 69: <span class="redacted">redacted</span>'s eight acres hold <em>&quot;a foot of standing water&quot;</em>. Defensible (the flash is the low ground), but the two figures sit four scenes apart on the same water.</li>
+</ul>
+</div>
+</body></html>

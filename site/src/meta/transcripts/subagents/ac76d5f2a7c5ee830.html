@@ -1,0 +1,185 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Read-only research task. You may read [redacted] and [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Read-only research task. You may read [redacted] and [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-ac76d5f2a7c5ee830">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Read-only research task. You may read <span class="redacted">redacted: private</span> and <span class="redacted">redacted: private</span> (including autoroad/.claude/skills/, tools/lint, notes/canon/README.md, notes/llm-tells.md, scripts/check_citations.py, plans/NEXT.md process sections). Do not modify anything. Do not pipe output to tail/grep; write to files in /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto and read them. Avoid reading autoroad story prose (draft/book-01/scenes, plans other than NEXT.md, notes/theme.md, concept.md, premise.md, canon/deferred-questions.md); the method is what matters, not the plot.</p>
+<p>Goal: I am going to write a Claude Code skill for &quot;building a workflow that fact-checks and consistency-checks a piece of writing against its sources&quot;. Report, concretely and with file paths quoted:</p>
+<ol>
+<li>
+<p>«OTHER-PROJECT»: how fact-checking is done. Look at CLAUDE.md, notes/<em>.md, every posts/</em>/fact-check.md, posts/*/research/ and any skill or process files. Extract: the claim-by-claim format, how receipts/evidence are recorded (&quot;ran it myself&quot; vs &quot;quoted from source&quot;), what verdict categories exist, how research is fanned out to small models and synthesised, how the draft is revised after the check, and any rules about LLM tells/voice checks that ride along with the fact check.</p>
+</li>
+<li>
+<p>autoroad: how consistency checking is done. Look at .claude/skills/* (canon-check, consistency, editing lenses, backfill, whatever exists), the claim-level system in notes/canon/README.md, scripts/check_citations.py (what it verifies and how), tools/lint (rules.json structure, lens/judge fan-out, how rejected findings are logged as counter-examples), and the &quot;fan-out of cheap lenses then one judge&quot; pattern. Extract: the priority ordering of checks (hard facts first, drift last), the finding schema (quote, location, reason, severity, verdict), the contradiction vs drift distinction, how findings feed back into rules, and how the checker avoids false positives.</p>
+</li>
+<li>
+<p>Anything either repo says about the failure modes of LLM fact-checkers themselves (confirmation bias, fabricated citations, over-flagging).</p>
+</li>
+</ol>
+<p>Return a structured report of at most 2500 words with quoted snippets and paths. No recommendations, just what the repos actually do.</p></blockquote>
+
+
+<p>🔧 Bash: mkdir -p /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/scratchpad echo…</p>
+<p>✅ 1 lines, 8 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/scratchpad/ls.txt</p>
+<p>✅ 167 lines, 16256 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me read the key files.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> find .claude/skills -maxdepth 3 &gt; /private/tmp/claude-501/-Users-d…</p>
+<p>✅ 7 lines, 597 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/scratchpad/skills.txt</p>
+<p>✅ 11 lines, 352 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/scratchpad/claude_md.txt</p>
+<p>✅ 64 lines, 3616 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the skills themselves and fact-check.md examples.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 48 lines, 2724 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 112 lines, 6005 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 166 lines, 10129 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's look at an actual fact-check.md file to get the concrete format.</p>
+</div>
+
+<p>🔧 Bash: head -100 <span class="redacted">redacted: private</span> &gt; /private/tmp/claude-501/-Users-drmaciver-Projects-autoroa…</p>
+<p>✅ 3 lines, 193 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 189 lines, 22217 chars</p>
+
+<div class="assistant-prose">
+<p>Good, I have the fact-check format fully. Now let's look at the autoroad side.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: find <span class="redacted">redacted: private</span> -maxdepth 2 &gt; /private/tmp/claude-501/-Users-drmaciver-Projects-…</p>
+<p>✅ 34 lines, 2295 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 93 lines, 5103 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 93 lines, 5416 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the lint tool (fan-out lens/judge pattern), canon README, check_citations.py, and llm-tells.md.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 85 lines, 5000 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 152 lines, 9128 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 211 lines, 10406 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Excellent material. Now let's check the tools/lint rules.json structure, notes/llm-tells.md, and plans/NEXT.md process sections, plus editing-pass skill for lens/judge fan-out.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: head -c 3000 <span class="redacted">redacted: private</span> &gt; /private/tmp/claude-501/-Users-drmaciver-Projects-auto…</p>
+<p>✅ 1 lines, 18 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) print(json.dumps(d[0],…</p>
+<p>✅ 53 lines, 2014 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) tiers={} for r in d:…</p>
+<p>✅ 25 lines, 832 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 176 lines, 12822 chars</p>
+<p>🔧 Bash: wc -l <span class="redacted">redacted: private</span> <span class="redacted">redacted: private</span> <span class="redacted">redacted: private</span></p>
+<p>✅ 4 lines, 206 chars —      332 <span class="redacted">redacted: private</span> /      155 <span class="redacted">redacted: private</span> /       94 <span class="redacted">redacted: private</span></p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's check notes/llm-tells.md failure-mode content, plans/NEXT.md process sections, and pilot-report.md for the fan-out lens/judge pattern description and false-positive handling.</p>
+</div>
+
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 95 lines, 8657 chars</p>
+<p>🔧 Bash: sed -n '1,80p' <span class="redacted">redacted: private</span></p>
+<p>✅ 79 lines, 5014 chars</p>
+
+<div class="assistant-prose">
+<p>This is excellent data on the pilot report (fan-out lens/judge, false positive rate, promotion criteria). Now let me check plans/NEXT.md process sections and farming-check skill quickly for priority ordering references, then write the report.</p>
+</div>
+
+<p>🔧 Bash: grep -n "" <span class="redacted">redacted: private</span> | sed -n '1,155p' &gt; /private/tmp/claude-501/-Users-drmaciv…</p>
+<p>✅ 1 lines, 93 chars</p>
+<p>🔧 Read /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/scratchpad/next.txt</p>
+<p>✅ 156 lines, 10554 chars</p>
+
+<div class="assistant-prose">
+<h1>Report: Fact-checking («OTHER-PROJECT») and consistency-checking (autoroad) methodologies</h1>
+<h2>1. «OTHER-PROJECT»: fact-checking</h2>
+<p><strong>Where it lives.</strong> <span class="redacted">redacted: private</span><code> sets the top-level rule: &quot;Factually accurate and fact-checked before the draft is called done&quot; (goal 2), plus a house rule: &quot;Never invent quotes, benchmarks, or output; anything presented as program output must have actually been produced by a program, with the receipt stored in the post's directory.&quot; Pipeline order in CLAUDE.md: brief → research (</code>post-research<code> skill) → experiments → draft → **fact-check** (</code>fact-check<code> skill) → voice pass (</code>voice-pass` skill) → hand off.</p>
+<p><strong>Receipts and the &quot;ran it myself&quot; vs &quot;quoted from source&quot; distinction.</strong> From <code>.claude/skills/post-research/SKILL.md</code> step 2: every research finding needs &quot;a receipt: <code>file:line</code>, commit SHA, URL, or quoted output — and each marked <strong>&quot;ran it myself&quot;</strong> vs <strong>&quot;quoted from source&quot;</strong>.&quot; Rule: &quot;No receipt, no claim.&quot; Research files are explicitly <em>not</em> trusted as ground truth — step 3 (&quot;Verify before you trust&quot;) states &quot;Research reports are drafts of the truth, not the truth,&quot; with a concrete example: a research file claimed PR #424 added <code>Phase::Explain</code>, but the source (<code>src/runner.rs</code>) said &quot;not yet supported.&quot; When a research file is found wrong, it's corrected in place with a <code>CORRECTION:</code> annotation, never silently rewritten — &quot;the record of what was wrong and how it was caught is part of the receipts.&quot;</p>
+<p><strong>Claim-by-claim format.</strong> <code>.claude/skills/fact-check/SKILL.md</code> and the worked example <code>posts/pretty-printing/fact-check.md</code> (54 claims, 4 errors) define it concretely:</p>
+<ul>
+<li>A fresh subagent (sonnet) with the draft, <code>research/</code> and <code>experiments/</code>, and access to primary sources (repo checkouts, URLs), but <em>not</em> the drafting conversation — &quot;familiarity with how a claim was written is exactly what makes errors invisible.&quot;</li>
+<li>The agent enumerates every checkable claim (numbers, names, dates, quoted code, quoted output, API behaviour, history) and checks each against the <em>primary source</em>, not the research report.</li>
+<li>Table format actually used, columns: <code># | Claim | Verification | Verdict</code>, e.g. row 15: <code>&quot;...roughly two thousand lines of implementation...&quot;</code> | <code>git diff --numstat</code> of the actual merge: ~5,968 non-test lines, ~5,115 test lines | <code>WRONG — see Problems #1</code>.</li>
+<li>Verdict categories observed: <code>CONFIRMED</code>, <code>CONFIRMED (behaviorally accurate; ...)</code>, <code>CONFIRMED (abbreviated but accurate)</code>, <code>WRONG</code>, <code>OVERSTATED / ambiguous</code>, and a &quot;Minor formatting difference&quot; tier. The skill text also names <code>unverifiable</code> as a category.</li>
+<li>A &quot;Problems found&quot; section up top lists only the substantive errors with full reasoning, followed by the full 54-row claim log — so the file reads as &quot;settled&quot; once fixed: a <code>&gt; **Resolution (date):**</code> block at the very top of <code>fact-check.md</code> records exactly what was changed to fix each numbered problem.</li>
+</ul>
+<p><strong>Claim classes to be paranoid about</strong> (<code>fact-check/SKILL.md</code> step 3, drawn from all four errors in post 1): numbers/counts (miscounted lines, comparison direction reversed); quoted code (must be byte-verbatim against the pinned commit — a <code>format!</code> block had been &quot;lightly paraphrased,&quot; reflowed but not reworded); absolute statements (&quot;<code>DateTime</code> doesn't have a Debug representation&quot; — false as literally written; chrono's Debug output just isn't valid Rust syntax); distributional claims (&quot;for almost every drawn value&quot; asserts an unmeasured distribution — &quot;Only assert what was actually measured&quot;).</p>
+<p><strong>Fanning research to small models, then synthesis.</strong> <code>post-research/SKILL.md</code> step 2: &quot;One subagent per question, dispatched in parallel: haiku — fetching and summarising public pages, docs, changelogs. sonnet — reading code, git history/archaeology, design or style judgement.&quot; Synthesis happens before drafting (outline step) and again explicitly in fact-check step 7 of the same skill (&quot;Synthesize before drafting&quot;).</p>
+<p><strong>Revision after fact-check.</strong> <code>fact-check/SKILL.md</code> step 5: &quot;Wrong claims get corrected; unverifiable ones get accurately hedged, cut, or turned into an explicit question for David — never smoothed over.&quot; Step 6: &quot;David's edits are in scope&quot; — the pass is re-run after his rewrites too, &quot;the same as after mine.&quot; Step 7: commit the pass (fact-check.md + draft fixes) as its own commit — house rule of one state per commit.</p>
+<p><strong>Voice/LLM-tell riders.</strong> Fact-check and voice-pass are separate skills but run in the same pipeline position (both &quot;before draft is called done,&quot; both &quot;repeat after substantial revision&quot;). <code>voice-pass/SKILL.md</code> runs a mechanical lint (<code>voice_lint.py</code>), a stylometric Claude-vs-human classifier trained on David's corpus (anchors: his prose ~6-8% &quot;Claude,&quot; real Claude prose ~93%, threshold ~30%), then three <em>blind</em> parallel model passes with no access to each other or to revision history: Pass A voice fidelity, Pass B LLMism device hunt (named devices in <code>notes/voice.md</code> §7), Pass C coherency/clarity. A closed feedback loop is specified: whenever David flags a new tell, (1) fix the instance, (2) add a named device entry to <code>notes/voice.md</code> §7, (3) if mechanically detectable, add a lint pattern to <code>voice_lint.py</code> — &quot;The catalogue is the asset; the passes are only as good as it is.&quot;</p>
+<h2>2. autoroad: consistency-checking</h2>
+<p><strong>Skill separation.</strong> <code>consistency-check</code> <em>verifies</em> a draft against existing canon; <code>consistency-backfill</code> <em>grows</em> canon from a chapter's implications (a &quot;two-way negotiation&quot;). Pipeline per <code>notes/canon/README.md</code>/<code>plans/NEXT.md</code>: <strong>draft → flat-restatement pass → canon lens (sonnet, facts) → pre-David pass (opus, advisory, &quot;never cuts a reason&quot;) → commit → author reads → comments applied.</strong> <code>consistency-check/SKILL.md</code> states the same ordering explicitly: &quot;consistency-check → editing-pass → consistency-backfill.&quot;</p>
+<p><strong>Claim levels (<code>notes/canon/README.md</code>, mirrored in <code>consistency-backfill/SKILL.md</code>):</strong> <strong>Established</strong> (on-page in an accepted chapter, cited), <strong>Working</strong> (binding until overruled — design decisions and Claude proposals, attributed), <strong>Open questions</strong> — as of a 2026-08-28 triage, no canon entry may sit as bare &quot;open&quot;: each is <em>answered</em>, <em>ruled</em>, or <em>deferred with a named trigger</em> (tracked centrally in <code>deferred-questions.md</code>). Rule shared by both skills: &quot;never delete or weaken an existing canon entry to accommodate a draft — that decision belongs to the author; flag it as a contradiction instead.&quot;</p>
+<p><strong>Priority ordering of checks in <code>consistency-check/SKILL.md</code>.</strong> Ground truth is read in explicit priority order: (1) <code>notes/canon/**/*.md</code> (system, characters, world, deferred-beats — hardest facts), (2) <code>notes/concept.md</code>/<code>premise.md</code> (design intent), (3) <code>notes/theme.md</code> (&quot;softer than canon: a draft <em>contradicting</em> the theme is a flag, not automatically an error... a draft foreclosing a theme commitment... is a serious finding&quot;), (4) <code>notes/maybe-later.md</code>, then previously accepted chapters in order. &quot;If canon and an earlier chapter conflict, canon wins; flag the earlier chapter too.&quot; What-to-check categories are ordered System mechanics → character continuity/knowledge-state → world facts → timeline → physical/scene continuity → voice-level facts → &quot;affordances have infrastructure&quot; — i.e., hard mechanical/numeric facts first, softer drift-prone checks (theme, register) last.</p>
+<p><strong>Finding schema</strong> (<code>consistency-check/SKILL.md</code>, &quot;Reporting&quot;): most severe first; for each finding — <strong>Quote</strong> the offending line(s) with file/location; <strong>Cite</strong> the conflicting canon (file + canonical statement) or prior-chapter line; <strong>Classify</strong>: <code>contradiction</code> (violates canon), <code>drift</code> (technically compatible but strains established facts), <code>ambiguity</code> (could be read as violating; suggest disambiguation); <strong>Suggest</strong> the minimal fix without applying it — &quot;silent edits to prose are never acceptable in this pass.&quot; &quot;No findings is a valid result; say so plainly rather than inventing nits.&quot;</p>
+<p><strong>Contradiction vs drift, applied.</strong> The distinction is explicitly a severity/certainty split, not a topic split: a numeric or on-page violation is <code>contradiction</code>; something that technically fits but stretches plausibility (e.g., an affordance not backed by established infrastructure) is <code>drift</code>; something readable either way is <code>ambiguity</code>.</p>
+<p><strong>Backfill mechanics</strong> (<code>consistency-backfill/SKILL.md</code>): extract every implication of a scene by category (character history, geography/travel arithmetic, institutions, economy, magic, timeline/season, demography — &quot;Include implications of <em>absence</em>: nobody reacts to X ⇒ X is normal here&quot;), then negotiate: fits canon → record; canon silent → commit to smallest Working addition (&quot;prefer under-specification&quot;); conflicts → propose the cheaper fix (chapter line vs Working canon revision), with Established canon changes and anything with dependents escalated to the author as a flagged decision, never auto-applied. A separate &quot;corner-watch&quot; step flags anything that will constrain future books (hard numbers, absolute statements, world-scale facts) for author sign-off even when internally consistent — &quot;the question is not 'is it consistent' but 'do we want to be stuck with it.'&quot;</p>
+<p><strong>The lens/judge fan-out (<code>tools/lint/</code>).</strong> <code>rules.json</code> holds 110 rules across three tiers — <code>regex</code> (38, cheap deterministic pattern match, e.g. <code>negative-parallelism</code>: <code>\bnot\s+[^,.;:!?]{2,45},\s*but\b</code>), <code>metric</code> (13, budget/count-based, e.g. em-dash rate, aphorism count per scene), and <code>semantic</code> (59, needs judgement, tagged with a <code>lens</code>, e.g. <code>generalising-clause-budget</code> under <code>lens: &quot;narration&quot;</code>). Each rule carries <code>severity</code>, <code>why</code>, <code>source</code> (traced to a specific ruling/comment), <code>examples</code>, <code>counter_examples</code>, and (for regex) an <code>allowed</code> list of pre-cleared matches. <code>rules-notes.md</code> explicitly sorts rules into &quot;Best suited for haiku-level detection&quot; (surface-visible, decidable from a sentence alone), &quot;Workable with care&quot; (needs local context), and &quot;Poorly suited to haiku — needs canon, the whole draft, or taste; route to opus or to a deterministic tool&quot; — e.g. <code>canon-scale-contradiction</code> and <code>system-terminology</code> need <code>notes/canon/**</code>, <code>contamination-overlap</code> should never go to a model at all (&quot;use <code>tools/overlap_check.py</code>, never a model&quot;).</p>
+<p><strong><code>editing-pass/SKILL.md</code></strong> implements the fan-out concretely: &quot;Pass 0: mechanical pre-pass&quot; — deterministic grep for month-name errors, banned lexicon, em-dash budget vs prose-only word count, negative-parallelism shapes, name-spelling variants, word-frequency census — added after &quot;the verifier benchmark showed even good model verifiers miss greppable defects.&quot; Then Pass 1 (sense check: inverted intent, broken logic, reference failures, impossible staging, wrong-way comparisons, dialogue drift) and Pass 2 (voice compliance against <code>notes/voices.md</code>/<code>notes/llm-tells.md</code>). Findings are reported &quot;sense errors are always fix-worthy; voice findings are recommendations the author may overrule.&quot; From <code>draft/book-01/VOICE.md</code> §3.4, quoted in <code>rules-notes.md</code>: &quot;lens findings are advisory, and a finding that cuts an explanation, a reason, an answer or a qualification is presumptively wrong. The pipeline should surface findings, never auto-apply them.&quot;</p>
+<p><strong>False-positive avoidance, concretely measured.</strong> <code>tools/lint/pilot-report.md</code>: a pilot of 19 machine-flagged candidates over 4 files gave 8 confirmed, 2 borderline, 9 false-positive (47% FP overall). Per-rule breakdown showed <code>contamination-overlap</code> and <code>description-list</code> at 0% FP, while <code>canon-scale-contradiction</code>, <code>announce-before-deliver</code>, <code>cause-left-out</code>, <code>implication-stopped-short</code> were 100% FP — diagnosed as one shared cause: &quot;the scanner reads a quote without its neighbouring sentence.&quot; The rule promoted to a hard deterministic gate (<code>contamination-overlap</code>, exact n-gram matching against a corpus of deleted drafts) is the one with a 0% judged FP rate; rules staying &quot;judged&quot; (semantic tier) get counter-examples added directly into <code>rules.json</code> to suppress the specific FP pattern found. Conclusion stated verbatim: &quot;cheap wide hunting plus expensive narrow judging caught real contamination and a real budget overspend... at a cost of nine cheap rejections... With those [fixes], the projected FP rate on this sample falls from 47% to roughly 10%.&quot;</p>
+<p><strong>Citation/quote verification tool.</strong> <code>scripts/check_citations.py</code> — added &quot;after a hallucinated quotation... was found cited as Established to ch. 021 in four canon files while appearing in no chapter at all. It survived a whole-story consistency audit... A soft check did not catch it; this is the mechanical one.&quot; It regex-extracts <code>&quot;quoted text&quot; (ch. NNN)</code> patterns from <code>notes/</code>, <code>plans/</code>, <code>summaries/</code>, normalizes whitespace/quotes/dashes, and checks the quote actually appears (verbatim or per-sentence, for tag-broken quotes) in the cited chapter file. Buckets findings into <code>FABRICATED</code> (no substantial match anywhere), <code>ALTERED</code> (real quote, extended or reworded), <code>WRONG_CHAPTER</code> (verbatim but cited to the wrong chapter). The docstring documents a known blind spot (citation-order ambiguity causing ~7-8 spurious findings) and records that two attempted fixes made results worse — kept as a documented limitation rather than &quot;fixed&quot; incorrectly, with the note &quot;If you try again, do it with a test corpus, not by eye.&quot;</p>
+<h2>3. Stated failure modes of LLM fact/consistency-checkers themselves</h2>
+<ul>
+<li><strong>Fabricated citations/quotes</strong> (autoroad): the <code>check_citations.py</code> docstring's origin story is exactly this — an LLM-authored canon file cited a quotation as &quot;Established... (ch. 021)&quot; that appears nowhere in the text, and it &quot;survived a whole-story consistency audit&quot; because the audit was itself a soft (model) check rather than a mechanical one.</li>
+<li><strong>Confirmation bias / familiarity blindness</strong> («OTHER-PROJECT»): <code>fact-check/SKILL.md</code> step 1 requires the checking agent be denied &quot;the drafting conversation&quot; because &quot;familiarity with how a claim was written is exactly what makes errors invisible.&quot; Similarly <code>voice-pass/SKILL.md</code> requires the three review passes be &quot;blind&quot; — no earlier reviews, no revision history, no knowledge of who wrote which sentence — because &quot;fresh eyes catch what the author-agent has gone blind to; this is load-tested, not theory.&quot;</li>
+<li><strong>Trusting your own research as ground truth</strong> («OTHER-PROJECT»): &quot;Research reports are drafts of the truth, not the truth&quot; — checking must go to primary sources, not to the research/summary layer, because that layer itself can be (and was) wrong.</li>
+<li><strong>Over-flagging / narrow-context false positives</strong> (autoroad): the pilot report's dominant failure mode was a cheap scanner reading a quote in isolation and missing an adjacent sentence that resolved it, producing 100%-FP rules; the fix applied was adding context windows and counter-examples, not discarding the fan-out architecture.</li>
+<li><strong>Model verifiers miss &quot;greppable&quot; defects</strong> (autoroad): `editing-pass/SKILL.md's Pass 0 was added specifically because &quot;the verifier benchmark showed even good model verifiers miss greppable defects&quot; — i.e., LLM judges are worse than deterministic tools at exactly the class of error a regex or exact-match script would catch reliably, which is why the architecture insists on mechanical gates before judgment passes wherever a mechanical gate is possible (contamination-overlap, citation-checking, em-dash counts, banned lexicon).</li>
+<li><strong>Smoothing over uncertainty</strong> («OTHER-PROJECT»): explicit house rule — &quot;When uncertain about a fact or a framing, ask David rather than smoothing over it&quot; — framed as a failure mode to actively resist (an unverifiable claim must be hedged, cut, or escalated, never quietly asserted).</li>
+</ul>
+</div>
+</body></html>
