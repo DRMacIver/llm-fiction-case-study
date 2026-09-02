@@ -1,6 +1,6 @@
 # Transcripts
 
-Full, redacted build transcripts of the Claude Code sessions used to make this site and the novel's tooling. Spoilers for anything past the published chapters are replaced with grey ⟦redacted⟧ markers; see [About this site](../about.md).
+Redacted transcripts of the Claude Code sessions in which the novel was planned, drafted and published, together with the tooling around it. Spoilers for anything past the published chapters are replaced with grey ⟦redacted⟧ markers; see [About this site](../about.md).
 
 ## Sessions
 
@@ -9,7 +9,7 @@ Full, redacted build transcripts of the Claude Code sessions used to make this s
 | 2026-08-24 | Finding the voice and starting the draft | This is an experiment in using an LLM to publish a story on royal road. We're going to do this as quite openly AI gener… | 120 | 503 | 598 | [open](0c653b33-1efd-45bb-b7ab-26ed3dca981e.md) |
 | 2026-08-25 | Working out the world's material history | I think we need some sort of historical development timeline that roughly covers the period from Edwin starting his wor… | 6 | 31 | 0 | [open](61a194e2-4e55-494c-bb3e-5d225e267758.md) |
 | 2026-08-25 | Syncing the book to a Kindle | Can you write a script to update the copy of the book on my kindle (currently mounted) with the latest version of the e… | 4 | 50 | 0 | [open](92c486ed-62f3-40a9-8d7d-b9dd6554d07e.md) |
-| 2026-08-25 | Building a local commenting tool | &lt;local-command-stdout&gt;Set model to &#91;1mOpus 5&#91;22m and saved as your default for new sessions&lt;/local-command-stdout&gt; | 4 | 13 | 0 | [open](be6bcf16-d9e6-4525-85d6-ce35993a5324.md) |
+| 2026-08-25 | Building a local commenting tool | I think at this point what I'd like is to go through the text myself with a fine toothed comb. Can you prepare a commen… | 4 | 13 | 0 | [open](be6bcf16-d9e6-4525-85d6-ce35993a5324.md) |
 | 2026-08-27 | Building the System and starting the draft | don't tell me what it is, but do you actually have a coherent explanation for silent soil in your notes? | 55 | 163 | 85 | [open](10c1dd77-c31a-4be9-a7b6-23651a4792b4.md) |
 | 2026-08-27 | Rebuilding the draft through several full rewrites | I'd like to do a big consistency-check workflow. Can you do a workflow that runs a sonnet agent on each chapter and loo… | 186 | 1067 | 395 | [open](3ef92e14-71be-4557-a7d1-f251a7410081.md) |
 | 2026-08-30 | Finishing the rewrite and publishing to Royal Road | Read plans/NEXT.md, <span class="redacted">unpublished</span> then draft/book-01/VOICE.md in full (§3.7 first — it governs what you may read), then… | 68 | 628 | 556 | [open](d1679987-c781-4167-82f2-4fb2b67962c1.md) |

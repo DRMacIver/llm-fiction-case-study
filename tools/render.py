@@ -452,8 +452,8 @@ def main() -> None:
 
 def write_readme(session_rows: list[dict]) -> None:
     lines = ["# Transcripts", "", (
-        "Full, redacted build transcripts of the Claude Code sessions used to make this "
-        "site and the novel's tooling. Spoilers for anything past the published chapters "
+        "Redacted transcripts of the Claude Code sessions in which the novel was planned, drafted and published, together with the tooling around it. "
+        "Spoilers for anything past the published chapters "
         "are replaced with grey ⟦redacted⟧ markers; see [About this site](../about.md)."
     ), ""]
     lines += ["## Sessions", "", "| Date | Title | First prompt | User turns | Tool uses | Subagents | |", "|---|---|---|---|---|---|---|"]

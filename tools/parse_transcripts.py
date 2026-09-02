@@ -443,7 +443,7 @@ def summarize_for_index(parsed: ParsedTranscript, has_subagents: bool) -> dict:
             for b in turn.blocks:
                 if b.get("kind") == "text":
                     user_turns += 1
-                    if first_prompt is None:
+                    if first_prompt is None and not b["text"].lstrip().startswith("<local-command"):
                         first_prompt = truncate(b["text"], 300)
         for b in turn.blocks:
             if b.get("kind") == "tool_use":
