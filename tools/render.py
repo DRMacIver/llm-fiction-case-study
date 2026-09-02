@@ -253,12 +253,50 @@ def tool_use_line(block: dict, subagent_ids: set[str]) -> str:
     return line
 
 
+def render_tool_use_content(block: dict) -> str | None:
+    """Render the full pre-cutoff content kept on a Write/Edit/Bash-heredoc
+    tool_use block (see tools/parse_transcripts.py's `keep_full_content`),
+    as a collapsible ``<details>`` section. Returns None if the block has no
+    ``content`` field (the normal, post-cutoff case)."""
+    content = block.get("content")
+    if content is None:
+        return None
+    tool = block.get("tool")
+    path = block.get("file") or ""
+    is_md = path.lower().endswith(".md")
+
+    def body_for(text: str) -> str:
+        if is_md:
+            return render_markdown(text)
+        return f"<pre>{esc_inline(text)}</pre>"
+
+    if tool == "Edit":
+        old_string = content.get("old_string") or ""
+        new_string = content.get("new_string") or ""
+        summary = f"contents of {esc_inline(path)}"
+        body = (
+            f"<p><em>old:</em></p>\n{body_for(old_string)}\n"
+            f"<p><em>new:</em></p>\n{body_for(new_string)}"
+        )
+    elif tool == "Write":
+        summary = f"contents of {esc_inline(path)}"
+        body = body_for(content)
+    else:  # Bash heredoc
+        summary = "contents of Bash command"
+        body = f"<pre>{esc_inline(content)}</pre>"
+    return f"<details><summary>{summary}</summary>\n{body}\n</details>\n"
+
+
 def render_block_group(blocks: list[dict], subagent_ids: set[str]) -> str:
     """Render a maximal run of tool_use/tool_result blocks."""
     lines = []
+    extra_content = []
     for b in blocks:
         if b["kind"] == "tool_use":
             lines.append(tool_use_line(b, subagent_ids))
+            content_html = render_tool_use_content(b)
+            if content_html:
+                extra_content.append(content_html)
         elif b["kind"] == "tool_result":
             status = b.get("status", "ok")
             marker = "✅" if status == "ok" else "❌"
@@ -271,10 +309,11 @@ def render_block_group(blocks: list[dict], subagent_ids: set[str]) -> str:
             if b.get("error"):
                 detail += f" — {esc_inline(truncate(b['error'], 150))}"
             lines.append(detail)
+    extra = "".join(extra_content)
     if len(lines) > TOOL_GROUP_THRESHOLD:
         body = "\n".join(f"<p>{ln}</p>" for ln in lines)
-        return f"<details><summary>{len(lines)} tool calls</summary>\n{body}\n</details>\n"
-    return "\n".join(f"<p>{ln}</p>" for ln in lines) + "\n"
+        return f"<details><summary>{len(lines)} tool calls</summary>\n{body}\n</details>\n{extra}"
+    return "\n".join(f"<p>{ln}</p>" for ln in lines) + "\n" + extra
 
 
 def system_note_text(block: dict) -> str:

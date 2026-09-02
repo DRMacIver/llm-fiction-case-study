@@ -20,6 +20,7 @@ from __future__ import annotations
 import json
 import re
 from dataclasses import dataclass, field
+from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -139,6 +140,7 @@ class Spoilers:
     topics: list[TopicRule]
     path_prefixes: list[str]
     scene_threshold: int
+    premise_revealed_at: datetime | None = None
 
     @classmethod
     def load(cls, path: Path = SPOILERS_PATH) -> "Spoilers":
@@ -163,11 +165,16 @@ class Spoilers:
             for t in raw.get("topic_regexes", [])
         ]
         rules = raw.get("unpublished_path_rules", {})
+        premise_revealed_at = None
+        ts = raw.get("premise_revealed_at")
+        if ts:
+            premise_revealed_at = datetime.fromisoformat(ts.replace("Z", "+00:00"))
         return cls(
             terms=terms,
             topics=topics,
             path_prefixes=list(rules.get("path_prefixes", [])),
             scene_threshold=int(rules.get("scene_number_threshold", 40)),
+            premise_revealed_at=premise_revealed_at,
         )
 
 
@@ -400,11 +407,26 @@ def _strip_unbalanced_markdown_tokens(text: str) -> str:
 
 
 def redact_text(
-    text: str, spoilers: Spoilers, counts: RedactionCounts, prose_index=None
+    text: str,
+    spoilers: Spoilers,
+    counts: RedactionCounts,
+    prose_index=None,
+    full: bool = True,
 ) -> str:
+    """Redact ``text``.
+
+    When ``full`` is False (block predates the premise reveal), only the
+    private-information pass runs: term, topic, scene-number, unpublished-
+    path and prose-guard passes are all skipped, since nothing before the
+    premise reveal is a story spoiler.
+    """
     if not text:
         return text
     counts.total_chars += len(text)
+    if not full:
+        text = _apply_outside_markers(text, lambda t: _redact_private_paths(t, counts))
+        text = _strip_unbalanced_markdown_tokens(text)
+        return text
     # Topic (sentence-level) redaction first, so a redacted sentence's
     # contents don't also get double-counted by term redaction; term
     # redaction then still catches things outside those sentences.
@@ -437,42 +459,83 @@ TEXT_BLOCK_FIELDS = {
 }
 
 
-def _redact_value(value, spoilers: Spoilers, counts: RedactionCounts, prose_index=None):
+def _redact_value(
+    value, spoilers: Spoilers, counts: RedactionCounts, prose_index=None, full: bool = True
+):
     if isinstance(value, str):
-        return redact_text(value, spoilers, counts, prose_index)
+        return redact_text(value, spoilers, counts, prose_index, full=full)
     if isinstance(value, list):
-        return [_redact_value(v, spoilers, counts, prose_index) for v in value]
+        return [_redact_value(v, spoilers, counts, prose_index, full=full) for v in value]
     if isinstance(value, dict):
-        return {k: _redact_value(v, spoilers, counts, prose_index) for k, v in value.items()}
+        return {
+            k: _redact_value(v, spoilers, counts, prose_index, full=full)
+            for k, v in value.items()
+        }
     return value
 
 
 def redact_block(
-    block: dict, spoilers: Spoilers, counts: RedactionCounts, prose_index=None
+    block: dict,
+    spoilers: Spoilers,
+    counts: RedactionCounts,
+    prose_index=None,
+    full: bool = True,
 ) -> dict:
     block = dict(block)
     kind = block.get("kind")
     fields = TEXT_BLOCK_FIELDS.get(kind, [])
     for field_name in fields:
         if field_name in block and block[field_name] is not None:
-            block[field_name] = _redact_value(block[field_name], spoilers, counts, prose_index)
+            block[field_name] = _redact_value(
+                block[field_name], spoilers, counts, prose_index, full=full
+            )
     if kind == "tool_result" and "stdout_preview" in block and block["stdout_preview"]:
         block["stdout_preview"] = [
-            redact_text(line, spoilers, counts, prose_index) for line in block["stdout_preview"]
+            redact_text(line, spoilers, counts, prose_index, full=full)
+            for line in block["stdout_preview"]
         ]
     return block
 
 
+def _parse_ts(ts: str | None) -> datetime | None:
+    if not ts:
+        return None
+    try:
+        return datetime.fromisoformat(ts.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
 def redact_transcript(
-    doc: dict, spoilers: Spoilers, prose_index=None
+    doc: dict, spoilers: Spoilers, prose_index=None, is_subagent: bool = False
 ) -> tuple[dict, RedactionCounts]:
     counts = RedactionCounts()
     doc = dict(doc)
+    cutoff = spoilers.premise_revealed_at
     turns = []
+
+    subagent_pre_cutoff = None
+    if is_subagent and cutoff is not None:
+        first_ts = _parse_ts(doc.get("start"))
+        if first_ts is None:
+            for turn in doc.get("turns", []):
+                first_ts = _parse_ts(turn.get("timestamp"))
+                if first_ts is not None:
+                    break
+        subagent_pre_cutoff = first_ts is not None and first_ts < cutoff
+
     for turn in doc.get("turns", []):
         turn = dict(turn)
+        if cutoff is None:
+            full = True
+        elif is_subagent:
+            full = not subagent_pre_cutoff
+        else:
+            ts = _parse_ts(turn.get("timestamp"))
+            full = ts is None or ts >= cutoff
         turn["blocks"] = [
-            redact_block(b, spoilers, counts, prose_index) for b in turn.get("blocks", [])
+            redact_block(b, spoilers, counts, prose_index, full=full)
+            for b in turn.get("blocks", [])
         ]
         turns.append(turn)
     doc["turns"] = turns
@@ -483,11 +546,11 @@ def _iter_parsed_files():
     for p in sorted(PARSED_DIR.glob("*.json")):
         if p.name == "index.json":
             continue
-        yield p, REDACTED_DIR / p.name
+        yield p, REDACTED_DIR / p.name, False
     subdir = PARSED_DIR / "subagents"
     if subdir.is_dir():
         for p in sorted(subdir.glob("*.json")):
-            yield p, REDACTED_DIR / "subagents" / p.name
+            yield p, REDACTED_DIR / "subagents" / p.name, True
 
 
 def main() -> None:
@@ -504,9 +567,9 @@ def main() -> None:
     report = {"files": {}, "over_threshold": [], "threshold": DENSITY_THRESHOLD}
     total_counts = RedactionCounts()
 
-    for src, dst in _iter_parsed_files():
+    for src, dst, is_subagent in _iter_parsed_files():
         doc = json.loads(src.read_text())
-        redacted, counts = redact_transcript(doc, spoilers, prose_index)
+        redacted, counts = redact_transcript(doc, spoilers, prose_index, is_subagent=is_subagent)
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_text(json.dumps(redacted, indent=1))
 

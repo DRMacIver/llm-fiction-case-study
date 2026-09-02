@@ -428,3 +428,83 @@ def test_update_summary_lists_sessions_only(tmp_path, monkeypatch):
     assert "[Transcripts](transcripts/README.md)" in text
     assert "First session" in text
     assert "subagents/" not in text
+
+
+# ---------------------------------------------------------------------------
+# pre-cutoff Write/Edit/Bash-heredoc content rendering
+
+
+def test_render_tool_use_content_returns_none_without_content_field():
+    block = {"kind": "tool_use", "tool": "Write", "file": "samples/x.md"}
+    assert render.render_tool_use_content(block) is None
+
+
+def test_render_tool_use_content_write_markdown_file():
+    block = {
+        "kind": "tool_use",
+        "tool": "Write",
+        "file": "samples/x.md",
+        "content": "# Heading\n\nSome **bold** text.",
+    }
+    html = render.render_tool_use_content(block)
+    assert "<details>" in html
+    assert "contents of samples/x.md" in html
+    assert "<h1>Heading</h1>" in html
+    assert "<strong>bold</strong>" in html
+
+
+def test_render_tool_use_content_write_non_markdown_uses_pre():
+    block = {
+        "kind": "tool_use",
+        "tool": "Write",
+        "file": "scripts/x.py",
+        "content": "print('<hi>')",
+    }
+    html = render.render_tool_use_content(block)
+    assert "<pre>" in html
+    assert "&lt;hi&gt;" in html
+
+
+def test_render_tool_use_content_edit_shows_old_and_new():
+    block = {
+        "kind": "tool_use",
+        "tool": "Edit",
+        "file": "samples/x.md",
+        "content": {"old_string": "before text", "new_string": "after text"},
+    }
+    html = render.render_tool_use_content(block)
+    assert "before text" in html
+    assert "after text" in html
+
+
+def test_render_tool_use_content_bash_heredoc_uses_pre():
+    block = {
+        "kind": "tool_use",
+        "tool": "Bash",
+        "content": "cat <<'EOF' > f.md\nsome content\nEOF",
+    }
+    html = render.render_tool_use_content(block)
+    assert "<pre>" in html
+    assert "some content" in html
+
+
+def test_render_block_group_includes_content_details_for_pre_cutoff_write():
+    blocks = [
+        {
+            "kind": "tool_use",
+            "tool": "Write",
+            "file": "samples/x.md",
+            "content": "full early sample prose",
+        },
+    ]
+    html = render.render_block_group(blocks, set())
+    assert "full early sample prose" in html
+    assert "<details><summary>contents of samples/x.md</summary>" in html
+
+
+def test_render_block_group_no_content_details_when_no_content_field():
+    blocks = [
+        {"kind": "tool_use", "tool": "Write", "file": "draft/book-01/scenes/01-x.md"},
+    ]
+    html = render.render_block_group(blocks, set())
+    assert "contents of" not in html

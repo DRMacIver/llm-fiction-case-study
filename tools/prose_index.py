@@ -41,10 +41,12 @@ unloadable from any other module::
 from __future__ import annotations
 
 import hashlib
+import json
 import pickle
 import re
 import subprocess
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -52,6 +54,20 @@ BUILD_DIR = REPO_ROOT / "build"
 INDEX_PATH = BUILD_DIR / "prose-index.pkl"
 
 AUTOROAD_ROOT = Path("/Users/drmaciver/Projects/autoroad")
+
+SPOILERS_PATH = REPO_ROOT / "tools" / "spoilers.json"
+
+
+def _load_premise_cutoff() -> datetime | None:
+    """Read premise_revealed_at from tools/spoilers.json, if present."""
+    try:
+        raw = json.loads(SPOILERS_PATH.read_text())
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
+    ts = raw.get("premise_revealed_at")
+    if not ts:
+        return None
+    return datetime.fromisoformat(ts.replace("Z", "+00:00"))
 
 SHINGLE_SIZE = 7  # words; sentences under this many words can't match.
 
@@ -201,8 +217,89 @@ def _read_blob(sha: str) -> str:
     return result.stdout
 
 
+def _blob_introduction_dates() -> dict[str, datetime]:
+    """Map each git blob sha (as it appears as the "new" blob in a raw diff)
+    under the paths this module indexes to the earliest commit author date
+    that ever introduced it, across all branches/history.
+
+    A blob is content-addressed, so this dict is keyed purely by sha --
+    the same content re-added at a different path or in a later commit
+    still maps to its true earliest introduction.
+    """
+    pathspecs = [
+        "draft/book-01/scenes",
+        "plans",
+        "notes",
+        "summaries",
+        *DELETED_TREE_PREFIXES,
+    ]
+    cmd = [
+        "git",
+        "-C",
+        str(AUTOROAD_ROOT),
+        "log",
+        "--all",
+        "--format=C:%aI",
+        "--raw",
+        "--abbrev=40",
+        "--",
+        *pathspecs,
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+    dates: dict[str, datetime] = {}
+    current_date: datetime | None = None
+    for line in result.stdout.splitlines():
+        if line.startswith("C:"):
+            current_date = datetime.fromisoformat(line[2:])
+            continue
+        if not line.startswith(":"):
+            continue
+        # ":<oldmode> <newmode> <oldsha> <newsha> <status>\t<path>"
+        meta = line.split("\t", 1)[0]
+        parts = meta.split(" ")
+        if len(parts) < 5:
+            continue
+        new_sha = parts[3]
+        status = parts[4]
+        if status == "D" or set(new_sha) == {"0"} or current_date is None:
+            continue
+        prev = dates.get(new_sha)
+        if prev is None or current_date < prev:
+            dates[new_sha] = current_date
+    return dates
+
+
+def _blob_sha_for_path(path: Path) -> str | None:
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(AUTOROAD_ROOT), "hash-object", str(path)],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+    except subprocess.CalledProcessError:
+        return None
+    sha = result.stdout.strip()
+    return sha if sha else None
+
+
 def build_index(n: int = SHINGLE_SIZE) -> ProseIndex:
     index = ProseIndex(shingle_size=n)
+    cutoff = _load_premise_cutoff()
+    intro_dates = _blob_introduction_dates() if cutoff is not None else {}
+    excluded = 0
+
+    def _is_pre_cutoff(path: Path | None, sha: str | None) -> bool:
+        nonlocal excluded
+        if cutoff is None or sha is None:
+            return False
+        date = intro_dates.get(sha)
+        if date is None:
+            return False
+        if date < cutoff:
+            excluded += 1
+            return True
+        return False
 
     published_paths, unpublished_scene_paths = _iter_current_scenes()
     for p in published_paths:
@@ -210,14 +307,22 @@ def build_index(n: int = SHINGLE_SIZE) -> ProseIndex:
         index.published_source_count += 1
 
     for p in unpublished_scene_paths:
+        sha = _blob_sha_for_path(p)
+        if _is_pre_cutoff(p, sha):
+            continue
         index.unpublished |= shingle_hashes(p.read_text(errors="replace"), n)
         index.unpublished_source_count += 1
 
     for p in _iter_unpublished_tree_files():
+        sha = _blob_sha_for_path(p)
+        if _is_pre_cutoff(p, sha):
+            continue
         index.unpublished |= shingle_hashes(p.read_text(errors="replace"), n)
         index.unpublished_source_count += 1
 
     for _path, sha in _iter_deleted_tree_blobs():
+        if _is_pre_cutoff(_path, sha):
+            continue
         try:
             text = _read_blob(sha)
         except subprocess.CalledProcessError:
@@ -225,17 +330,20 @@ def build_index(n: int = SHINGLE_SIZE) -> ProseIndex:
         index.unpublished |= shingle_hashes(text, n)
         index.unpublished_source_count += 1
 
+    index.excluded_pre_cutoff_blobs = excluded
     return index
 
 
 def main() -> None:
     index = build_index()
     index.save()
+    excluded = getattr(index, "excluded_pre_cutoff_blobs", 0)
     print(
         f"prose index: {index.unpublished_source_count} unpublished sources -> "
         f"{len(index.unpublished)} shingles; {index.published_source_count} "
         f"published sources -> {len(index.published)} shingles "
-        f"(shingle size {index.shingle_size}); saved to {INDEX_PATH}"
+        f"(shingle size {index.shingle_size}); {excluded} pre-cutoff blobs "
+        f"excluded; saved to {INDEX_PATH}"
     )
 
 

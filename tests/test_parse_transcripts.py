@@ -3,6 +3,7 @@ import json
 from tools.parse_transcripts import (
     REPO_ROOT,
     find_agent_files,
+    is_pre_cutoff,
     link_agent_ids_via_meta,
     parse_transcript,
     read_jsonl,
@@ -508,3 +509,124 @@ def test_read_jsonl_skips_blank_and_malformed_lines(tmp_path):
     p.write_text('{"a": 1}\n\n not json \n{"b": 2}\n')
     out = list(read_jsonl(p))
     assert out == [{"a": 1}, {"b": 2}]
+
+
+# ---------------------------------------------------------------------------
+# pre-premise-reveal cutoff: full Write/Edit/Bash-heredoc contents are kept
+# only for tool_use blocks that predate the premise reveal.
+
+PRE_CUTOFF_TS = "2026-08-24T13:00:00.000Z"  # before premise_revealed_at
+POST_CUTOFF_TS = "2026-08-24T14:00:00.000Z"  # after premise_revealed_at
+
+
+def test_is_pre_cutoff():
+    assert is_pre_cutoff(PRE_CUTOFF_TS) is True
+    assert is_pre_cutoff(POST_CUTOFF_TS) is False
+    assert is_pre_cutoff(None) is False
+
+
+def test_write_keeps_content_field_pre_cutoff():
+    block = summarize_tool_use(
+        "Write",
+        {"file_path": "/Users/drmaciver/Projects/autoroad/notes/x.md", "content": "full text"},
+        {},
+        keep_full_content=True,
+    )
+    assert block["content"] == "full text"
+
+
+def test_write_has_no_content_field_post_cutoff():
+    """Post-cutoff Write tool_use blocks must never carry a content field."""
+    block = summarize_tool_use(
+        "Write",
+        {"file_path": "/Users/drmaciver/Projects/autoroad/notes/x.md", "content": "full text"},
+        {},
+        keep_full_content=False,
+    )
+    assert "content" not in block
+
+
+def test_edit_keeps_old_and_new_string_pre_cutoff():
+    block = summarize_tool_use(
+        "Edit",
+        {
+            "file_path": "/Users/drmaciver/Projects/autoroad/notes/x.md",
+            "old_string": "before",
+            "new_string": "after",
+        },
+        {},
+        keep_full_content=True,
+    )
+    assert block["content"] == {"old_string": "before", "new_string": "after"}
+
+
+def test_edit_has_no_content_field_post_cutoff():
+    block = summarize_tool_use(
+        "Edit",
+        {
+            "file_path": "/Users/drmaciver/Projects/autoroad/notes/x.md",
+            "old_string": "before",
+            "new_string": "after",
+        },
+        {},
+        keep_full_content=False,
+    )
+    assert "content" not in block
+
+
+def test_bash_heredoc_keeps_full_command_as_content_pre_cutoff():
+    cmd = "cat <<'EOF' > out.md\n" + ("line " * 100) + "\nEOF"
+    block = summarize_tool_use("Bash", {"command": cmd}, {}, keep_full_content=True)
+    assert block["content"] == cmd
+    assert len(block["command"]) <= 201  # truncated summary field is untouched
+
+
+def test_bash_without_heredoc_has_no_content_even_pre_cutoff():
+    block = summarize_tool_use("Bash", {"command": "ls -la"}, {}, keep_full_content=True)
+    assert "content" not in block
+
+
+def test_bash_heredoc_has_no_content_post_cutoff():
+    cmd = "cat <<'EOF' > out.md\nsome text\nEOF"
+    block = summarize_tool_use("Bash", {"command": cmd}, {}, keep_full_content=False)
+    assert "content" not in block
+
+
+def test_end_to_end_pre_cutoff_write_gets_content_post_cutoff_does_not():
+    lines = [
+        user_text("write scene", ts=PRE_CUTOFF_TS),
+        assistant_block(
+            {
+                "type": "tool_use",
+                "id": "tw1",
+                "name": "Write",
+                "input": {
+                    "file_path": "/Users/drmaciver/Projects/autoroad/samples/x.md",
+                    "content": "early sample prose",
+                },
+            },
+            ts=PRE_CUTOFF_TS,
+        ),
+        tool_result_line("tw1", [{"type": "text", "text": "ok"}], ts=PRE_CUTOFF_TS),
+        user_text("write scene 2", ts=POST_CUTOFF_TS),
+        assistant_block(
+            {
+                "type": "tool_use",
+                "id": "tw2",
+                "name": "Write",
+                "input": {
+                    "file_path": "/Users/drmaciver/Projects/autoroad/draft/book-01/scenes/01-x.md",
+                    "content": "real scene prose",
+                },
+            },
+            ts=POST_CUTOFF_TS,
+        ),
+        tool_result_line("tw2", [{"type": "text", "text": "ok"}], ts=POST_CUTOFF_TS),
+    ]
+    parsed = parse_transcript("sess-cutoff", lines)
+    pre_write = parsed.turns[1].blocks[0]
+    post_write = parsed.turns[3].blocks[0]
+    assert pre_write["tool"] == "Write"
+    assert pre_write["content"] == "early sample prose"
+    assert post_write["tool"] == "Write"
+    assert "content" not in post_write

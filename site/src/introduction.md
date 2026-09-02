@@ -12,7 +12,9 @@ The novel is still being published, so the site is redacted against spoilers. An
 
 ## How to read it
 
-There are three sections, and they cover the same ten days from different angles.
+There are four sections, and they cover the same ten days from different angles.
+
+[How to do this yourself](howto/README.md) is the place to start if your question is practical: what the back and forth between author and model actually looks like, which files and checks a project like this needs, when to throw work away, and which lessons should transfer to a different project. It stands back from the detail and points into the other sections for evidence.
 
 [The workflow](workflow/README.md) is the systems view: the rule files that bind a drafting session, the exemplar-first method for holding a voice, the linting and review passes that hunt for machine-prose habits, the canon system, the handoff document that lets a fresh session pick up where the last one stopped, and the tooling for proofreading, commenting, and publishing. Read this if you want to know how the thing was built.
 

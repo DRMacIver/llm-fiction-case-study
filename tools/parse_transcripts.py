@@ -17,11 +17,56 @@ import argparse
 import json
 import re
 from dataclasses import dataclass, field
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable, Iterator
 
 DEFAULT_SRC = Path.home() / ".claude/projects/-Users-drmaciver-Projects-autoroad"
 REPO_ROOT = "/Users/drmaciver/Projects/autoroad"
+
+TOOLS_DIR = Path(__file__).resolve().parent
+SPOILERS_PATH = TOOLS_DIR / "spoilers.json"
+
+
+def _load_premise_cutoff() -> "datetime | None":
+    try:
+        raw = json.loads(SPOILERS_PATH.read_text())
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
+    ts = raw.get("premise_revealed_at")
+    if not ts:
+        return None
+    return datetime.fromisoformat(ts.replace("Z", "+00:00"))
+
+
+PREMISE_CUTOFF = _load_premise_cutoff()
+
+
+def _parse_ts(ts: str | None) -> "datetime | None":
+    if not ts:
+        return None
+    try:
+        return datetime.fromisoformat(ts.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def is_pre_cutoff(ts: str | None) -> bool:
+    """True if a turn/block timestamp is strictly before the premise-reveal
+    cutoff (or the cutoff is unset/unparseable, in which case everything is
+    treated as post-cutoff -- i.e. no extra content is kept)."""
+    if PREMISE_CUTOFF is None:
+        return False
+    parsed = _parse_ts(ts)
+    return parsed is not None and parsed < PREMISE_CUTOFF
+
+
+# Bash heredoc payload: `<<'EOF' ... EOF` / `<<-EOF ... EOF` / `<<EOF ... EOF`
+# (optionally quoted delimiter). Used only to decide whether a pre-cutoff
+# Bash tool_use's full command text is worth keeping as `content` -- a
+# heredoc is the one Bash shape whose payload can be many lines of quoted
+# file content that `truncate()` would otherwise chop.
+_HEREDOC_RE = re.compile(r"<<-?\s*['\"]?\w+['\"]?")
 
 TEXT_TRUNC = 300
 CMD_TRUNC = 200
@@ -192,18 +237,33 @@ def strip_ansi(s: str | None) -> str | None:
 # tool_use simplification
 
 
-def summarize_tool_use(name: str, tool_input: dict, workflow_scripts: dict[str, Path]) -> dict:
+def summarize_tool_use(
+    name: str,
+    tool_input: dict,
+    workflow_scripts: dict[str, Path],
+    keep_full_content: bool = False,
+) -> dict:
     block: dict[str, Any] = {"kind": "tool_use", "tool": name}
 
     if name in FILE_TOOLS:
         path = tool_input.get("file_path") or tool_input.get("notebook_path")
         block["file"] = relpath(path)
+        if keep_full_content and name == "Write" and tool_input.get("content") is not None:
+            block["content"] = tool_input["content"]
+        elif keep_full_content and name == "Edit":
+            block["content"] = {
+                "old_string": tool_input.get("old_string"),
+                "new_string": tool_input.get("new_string"),
+            }
         return block
 
     if name == "Bash":
-        block["command"] = truncate(strip_ansi(tool_input.get("command", "")), CMD_TRUNC)
+        raw_command = strip_ansi(tool_input.get("command", "")) or ""
+        block["command"] = truncate(raw_command, CMD_TRUNC)
         if tool_input.get("description"):
             block["description"] = strip_ansi(tool_input["description"])
+        if keep_full_content and _HEREDOC_RE.search(raw_command):
+            block["content"] = raw_command
         return block
 
     if name == "Agent":
@@ -505,7 +565,9 @@ def parse_transcript(session_id: str, lines: Iterable[dict]) -> ParsedTranscript
                     name = item.get("name", "")
                     tool_input = item.get("input", {}) or {}
                     tool_use_index[item.get("id")] = {"name": name, "input": tool_input}
-                    block = summarize_tool_use(name, tool_input, {})
+                    block = summarize_tool_use(
+                        name, tool_input, {}, keep_full_content=is_pre_cutoff(ts)
+                    )
                     block["tool_use_id"] = item.get("id")
                     current.blocks.append(block)
             continue

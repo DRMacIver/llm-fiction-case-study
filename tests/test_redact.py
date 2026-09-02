@@ -8,6 +8,7 @@ from tools import redact
 @pytest.fixture()
 def spoilers(tmp_path):
     data = {
+        "premise_revealed_at": "2026-08-24T13:11:27Z",
         "terms": [
             {
                 "term": "Halla",
@@ -339,3 +340,96 @@ def test_command_output_field_is_redacted(spoilers):
     block = {"kind": "command", "name": "/compact", "output": "mentions Halla"}
     out = redact.redact_block(block, spoilers, counts)
     assert "Halla" not in out["output"]
+
+
+# ---------------------------------------------------------------------------
+# pre-premise-reveal cutoff: only the private-info pass runs
+
+
+def _text_block(text):
+    return {"kind": "text", "text": text}
+
+
+def test_pre_cutoff_turn_skips_term_and_topic_redaction(spoilers):
+    doc = {
+        "turns": [
+            {
+                "role": "user",
+                "timestamp": "2026-08-24T13:00:00Z",  # before cutoff
+                "blocks": [_text_block("Halla plans; Edwin died today.")],
+            }
+        ]
+    }
+    redacted, counts = redact.redact_transcript(doc, spoilers)
+    text = redacted["turns"][0]["blocks"][0]["text"]
+    assert text == "Halla plans; Edwin died today."
+    assert counts.by_category == {}
+
+
+def test_pre_cutoff_turn_still_redacts_private_info(spoilers):
+    doc = {
+        "turns": [
+            {
+                "role": "user",
+                "timestamp": "2026-08-24T13:00:00Z",  # before cutoff
+                "blocks": [
+                    _text_block(
+                        "see /Users/drmaciver/.claude/projects/foo/bar.jsonl for details"
+                    )
+                ],
+            }
+        ]
+    }
+    redacted, counts = redact.redact_transcript(doc, spoilers)
+    text = redacted["turns"][0]["blocks"][0]["text"]
+    assert "/Users/drmaciver/.claude" not in text
+    assert "⟦redacted: private⟧" in text
+
+
+def test_post_cutoff_turn_gets_full_redaction(spoilers):
+    doc = {
+        "turns": [
+            {
+                "role": "user",
+                "timestamp": "2026-08-24T14:00:00Z",  # after cutoff
+                "blocks": [_text_block("Halla plans something.")],
+            }
+        ]
+    }
+    redacted, counts = redact.redact_transcript(doc, spoilers)
+    text = redacted["turns"][0]["blocks"][0]["text"]
+    assert "Halla" not in text
+    assert counts.by_category.get("character") == 1
+
+
+def test_subagent_transcript_uses_its_own_first_timestamp_for_every_turn(spoilers):
+    # Subagent's own first timestamp is before the cutoff, so even a later
+    # turn inside it (which individually looks post-cutoff) stays exempt
+    # from term/topic redaction.
+    doc = {
+        "start": "2026-08-24T13:05:00Z",
+        "turns": [
+            {"role": "user", "timestamp": "2026-08-24T13:05:00Z", "blocks": [_text_block("intro")]},
+            {
+                "role": "assistant",
+                "timestamp": "2026-08-24T14:00:00Z",  # would be post-cutoff standalone
+                "blocks": [_text_block("Halla walked on.")],
+            },
+        ],
+    }
+    redacted, counts = redact.redact_transcript(doc, spoilers, is_subagent=True)
+    text = redacted["turns"][1]["blocks"][0]["text"]
+    assert text == "Halla walked on."
+    assert counts.by_category == {}
+
+
+def test_subagent_transcript_starting_after_cutoff_gets_full_redaction(spoilers):
+    doc = {
+        "start": "2026-08-24T14:00:00Z",
+        "turns": [
+            {"role": "user", "timestamp": "2026-08-24T14:00:00Z", "blocks": [_text_block("Halla walked on.")]},
+        ],
+    }
+    redacted, counts = redact.redact_transcript(doc, spoilers, is_subagent=True)
+    text = redacted["turns"][0]["blocks"][0]["text"]
+    assert "Halla" not in text
