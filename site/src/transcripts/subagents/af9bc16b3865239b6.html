@@ -7,34 +7,47 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Gather voice evidence for the character **Edwin Moss** from Book 1 of…</h1><div class="subagent-header"><a href="../10c1dd77-c31a-4be9-a7b6-23651a4792b4.html#agent-af9bc16b3865239b6">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Gather voice evidence for the character **Edwin Moss** from Book 1 of this novel. Read <span class="redacted">redacted: private</span>/notes/canon/characters/ (their file and any others that describe them) and search the chapters at <span class="redacted">redacted: private</span>/chapters/*.md for their dialogue — use grep for their name and read the surrounding scenes; read the chapters where they matter most in full.<br>
-<br>
-Collect:<br>
-- 15–30 QUOTED lines of their dialogue, verbatim, each with a chapter number and one clause of context. Choose lines that are characteristic — how they argue, deflect, joke, teach, refuse, concede — not just plot-carrying lines. Include at least a few where their speech is doing something unusual.<br>
-- Their verbal habits: sentence length, vocabulary, what they never say, rhythms, tics, how they address different people, how their speech changes under pressure.<br>
-- Personality: what they want, what they are good at, what they are wrong about, how they treat people, their humour, their blind spots.<br>
-- Two or three paragraphs' worth of biographical facts (role, situation, history that bears on who they are now) — no more.<br>
-- How other characters describe them, quoted.<br>
-<br>
-Write it all to <span class="redacted">redacted: private</span> Return the path, an approximate word count, and the number of verbatim quotes gathered.<br>
-NOTE: do not speculate about or state any solution to the "silent soil" mystery anywhere in your output. Characters' beliefs about it may be quoted as their beliefs.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Gather voice evidence for the character **Edwin Moss** from Book 1 of…</h1><div class="subagent-header"><a href="../10c1dd77-c31a-4be9-a7b6-23651a4792b4.html#agent-af9bc16b3865239b6">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-27</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Gather voice evidence for the character <strong>Edwin Moss</strong> from Book 1 of this novel. Read <span class="redacted">redacted</span>/notes/canon/characters/ (their file and any others that describe them) and search the chapters at <span class="redacted">redacted</span>/chapters/*.md for their dialogue — use grep for their name and read the surrounding scenes; read the chapters where they matter most in full.</p>
+<p>Collect:</p>
+<ul>
+<li>15–30 QUOTED lines of their dialogue, verbatim, each with a chapter number and one clause of context. Choose lines that are characteristic — how they argue, deflect, joke, teach, refuse, concede — not just plot-carrying lines. Include at least a few where their speech is doing something unusual.</li>
+<li>Their verbal habits: sentence length, vocabulary, what they never say, rhythms, tics, how they address different people, how their speech changes under pressure.</li>
+<li>Personality: what they want, what they are good at, what they are wrong about, how they treat people, their humour, their blind spots.</li>
+<li>Two or three paragraphs' worth of biographical facts (role, situation, history that bears on who they are now) — no more.</li>
+<li>How other characters describe them, quoted.</li>
+</ul>
+<p>Write it all to <span class="redacted">redacted: private</span> Return the path, an approximate word count, and the number of verbatim quotes gathered.<br />
+NOTE: do not speculate about or state any solution to the &quot;silent soil&quot; mystery anywhere in your output. Characters' beliefs about it may be quoted as their beliefs.</p></blockquote>
 
 
 <details><summary>8 tool calls</summary>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/notes/canon/characters/ | grep -i edwin; grep -rli "edwin" ⟦redact…</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/notes/canon/characters/ | grep -i edwin; grep -rli "edwin" <span class="redacted">redacted</span>/notes…</p>
 <p>✅ 9 lines, 555 chars</p>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/chapters/ | head -60</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/chapters/ | head -60</p>
 <p>✅ 31 lines, 716 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/canon/characters/edwin.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/canon/characters/edwin.md</p>
 <p>✅ 417 lines, 25458 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -c '"' *.md | sort -t: -k2 -n -r | head -20</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -c '"' *.md | sort -t: -k2 -n -r | head -20</p>
 <p>✅ 20 lines, 516 chars</p>
 </details>
 
@@ -42,18 +55,18 @@ NOTE: do not speculate about or state any solution to the "silent soil" mystery 
 <p>Good, canon file gives excellent material already. Let me pull dialogue from a spread of key chapters.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n '"' 001-the-wrong-man.md | head -60</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n '"' 001-the-wrong-man.md | head -60</p>
 <p>✅ 47 lines, 7686 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n '"' 002-the-ten-o-clock.md | head -60</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n '"' 002-the-ten-o-clock.md | head -60</p>
 <p>✅ 47 lines, 7200 chars</p>
 
 <div class="assistant-prose">
 <p>This gives excellent quotes already. Let me grab a few more from the pressure-heavy chapters (018, 011, 030, 020).</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n '"' 018-holm-deep.md | sed -n '1,90p'</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n '"' 018-holm-deep.md | sed -n '1,90p'</p>
 <p>✅ 52 lines, 6770 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n '"' 030-the-seventh-revealing.md | sed -n '1,9…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n '"' 030-the-seventh-revealing.md | sed -n '1,90p'</p>
 <p>✅ 33 lines, 4818 chars</p>
 
 <div class="assistant-prose">
@@ -65,7 +78,7 @@ NOTE: do not speculate about or state any solution to the "silent soil" mystery 
 <p>✅ 1 lines, 225 chars</p>
 <p>🔧 Bash: wc -w <span class="redacted">redacted: private</span></p>
 <p>✅ 1 lines, 138 chars —     2271 <span class="redacted">redacted: private</span></p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"path": "<span class="redacted">redacted: private</span>", "words": 2271, "quotes": 30})</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

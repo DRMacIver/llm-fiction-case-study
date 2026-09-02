@@ -7,172 +7,184 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are synthesizing a pilot run of a prose-lint pipeline. Input: per…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a182a17b2f4c34dce">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are synthesizing a pilot run of a prose-lint pipeline. Input: per-file judged findings (below). Produce a concise markdown report: (1) confirmed findings grouped by file, each with quote + rule + one-line reason; (2) borderlines, briefly; (3) false-positive rate per lens/rule — which rules over-fire and should get more counter_examples; (4) any construction confirmed 2+ times across files → propose a tier=regex rule with a draft Python regex; (5) one paragraph on whether haiku-level hunting worked (did judges mostly confirm or mostly reject?). Write the report to <span class="redacted">redacted: private</span>/tools/lint/pilot-report.md and also return it as your final text.<br>
-<br>
-Data:<br>
-[<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "missing-qualifier",<br>
-     "quote": "It's called the Pellings.",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "Proper noun introduced with no qualifier saying what it is (farm, valley, parish), though the surrounding 'a reason every day' gives the reader enough to carry it — a one-word qualifier would settle it."<br>
-    },<br>
-    {<br>
-     "rule_id": "unanswered-question",<br>
-     "quote": "\"From what?\" / \"That hasn't been revealed yet.\"",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "That is the plain, usable answer — she genuinely does not know — and it is not an epigram; the beat is paid for on the page by Edwin's 'Ah.' and her immediate 'But it stands to reason.'"<br>
-    },<br>
-    {<br>
-     "rule_id": "description-list",<br>
-     "quote": "Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said *beans*. On the wall, in a frame, a sampler with a wheat sheaf on it that a farmwife had worked for him one winter.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Five-item room catalogue in sequence; the rule's 'never a list' is binding even though it is framed through Edwin filling the kettle."<br>
-    },<br>
-    {<br>
-     "rule_id": "unearned-authority",<br>
-     "quote": "\"Don't ask it *who*. You've done *who*. Ask it *what*. What am I to save the world from.\"",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "Imperatives to a girl who has not agreed to be taught, but they concern her own question and she immediately refuses them, so the order is answered for on the page."<br>
-    },<br>
-    {<br>
-     "rule_id": "canon-scale-contradiction",<br>
-     "quote": "had done for three hundred years",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Canon has Edwin at three hundred and fifty; 'three hundred years' here is the duration of a habit and of the Pellings work, not his age — no contradiction."<br>
-    },<br>
-    {<br>
-     "rule_id": "canon-scale-contradiction",<br>
-     "quote": "He had seen it twice in three hundred and fifty years.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Matches canon's age for Edwin (notes/canon/world/magic-explained.md, healing.md, magic-theory.md); the other figures in the scene are durations, not ages."<br>
-    },<br>
-    {<br>
-     "rule_id": "contamination-overlap",<br>
-     "quote": "She sat at his kitchen table with her pack still on and looked round the room with open interest, and Edwin, filling the kettle, was aware of what she was seeing.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "tools/overlap_check.py confirms an 8+ word run against the deleted chapters/001-the-wrong-man.md."<br>
-    },<br>
-    {<br>
-     "rule_id": "contamination-overlap",<br>
-     "quote": "What he read on Peri Millbrook nearly made him scald himself.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Verified verbatim 10-word run against chapters/001-the-wrong-man.md."<br>
-    },<br>
-    {<br>
-     "rule_id": "contamination-overlap",<br>
-     "quote": "She was wearing fate magic.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Matched as part of the run 'she was wearing fate magic he had seen it twice in' against chapters/001; flagged for the scene, though the sentence alone is under eight words."<br>
-    },<br>
-    {<br>
-     "rule_id": "contamination-overlap",<br>
-     "quote": "He put her tea in front of her, and his own, and sat down. \"Tell me about this class of yours.\"",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Two verified runs here against chapters/001; the scene shows 26 overlapping runs overall, so contamination is the scene-level finding rather than four isolated sentences."<br>
-    }<br>
-   ],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 10<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/39-read-it-as-six.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "announce-before-deliver",<br>
-     "quote": "and said nothing else, and Edwin put the wax away and did not ask",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "The rule is about a bare naming fragment ('Silence.') preceding the sentence that delivers it; this is a single continuous clause chain with no fragment drumroll."<br>
-    },<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "You alter the date the day the world alters, and you say in the letter what altered it.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Budget is one per scene; this is the scene's strongest and most particular Edwin maxim, so it is the one that should be kept rather than counted as the overflow."<br>
-    },<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "One name is easy to lose; four are not.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Fully portable epigram detached from the particulars, and the scene is already over its one-aphorism budget."<br>
-    },<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "The letters work. They work slowly. Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "A third portable philosophical cap in the same scene, and it lands as the scene's near-final beat where cleverness should be near zero."<br>
-    },<br>
-    {<br>
-     "rule_id": "maxim-capped-speech",<br>
-     "quote": "You alter the date the day the world alters, and you say in the letter what altered it.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "One maxim-capped turn per scene is allowed and it belongs to Edwin; this is that one."<br>
-    },<br>
-    {<br>
-     "rule_id": "maxim-capped-speech",<br>
-     "quote": "Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Second maxim-capped turn in the scene, and it is the closing line, so the scene ends on a cadence rather than a cut."<br>
-    },<br>
-    {<br>
-     "rule_id": "canon-scale-contradiction",<br>
-     "quote": "I have broken exactly one written date in three hundred years",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Canon itself routinely uses 'three hundred years' as the round figure for Edwin's working life alongside his age of three hundred and fifty; the scene also says 'three centuries' consistently."<br>
-    }<br>
-   ],<br>
-   "judge_added": [<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "You hand work to somebody entitled to alter it, or you haven't handed it over at all.",<br>
-     "reason": "A fourth portable epigram, earlier in the same Edwin speech; it is the clearest evidence the scene is well over the one-per-scene budget."<br>
-    }<br>
-   ]<br>
-  },<br>
-  "n_candidates": 7<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "cause-left-out",<br>
-     "quote": "and I have watched a whole row come up as something nobody remembered sowing, and get eaten anyway",<br>
-     "reason": "Scanner misreads 'eaten' as pest damage; the cause is already given in the preceding sentence (seeds look identical, so the row was unidentified), and 'eaten anyway' is the wry payoff, not a withheld reason.",<br>
-     "verdict": "FALSE-POSITIVE"<br>
-    },<br>
-    {<br>
-     "rule_id": "implication-stopped-short",<br>
-     "quote": "The labels matter more than the lids.",<br>
-     "reason": "The rule targets implications never stated; here the very next sentence states it outright (seeds are indistinguishable), which is the completed form the rule's counter-example asks for.",<br>
-     "verdict": "FALSE-POSITIVE"<br>
-    }<br>
-   ],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 2<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/18-living-earth.md",<br>
-  "judged": {<br>
-   "verdicts": [],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 0<br>
- }<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are synthesizing a pilot run of a prose-lint pipeline. Input: per…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a182a17b2f4c34dce">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are synthesizing a pilot run of a prose-lint pipeline. Input: per-file judged findings (below). Produce a concise markdown report: (1) confirmed findings grouped by file, each with quote + rule + one-line reason; (2) borderlines, briefly; (3) false-positive rate per lens/rule — which rules over-fire and should get more counter_examples; (4) any construction confirmed 2+ times across files → propose a tier=regex rule with a draft Python regex; (5) one paragraph on whether haiku-level hunting worked (did judges mostly confirm or mostly reject?). Write the report to <span class="redacted">redacted</span>/tools/lint/pilot-report.md and also return it as your final text.</p>
+<p>Data:<br />
+[<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;missing-qualifier&quot;,<br />
+&quot;quote&quot;: &quot;It's called the Pellings.&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;Proper noun introduced with no qualifier saying what it is (farm, valley, parish), though the surrounding 'a reason every day' gives the reader enough to carry it — a one-word qualifier would settle it.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;unanswered-question&quot;,<br />
+&quot;quote&quot;: &quot;&quot;From what?&quot; / &quot;That hasn't been revealed yet.&quot;&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;That is the plain, usable answer — she genuinely does not know — and it is not an epigram; the beat is paid for on the page by Edwin's 'Ah.' and her immediate 'But it stands to reason.'&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;description-list&quot;,<br />
+&quot;quote&quot;: &quot;Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said <em>beans</em>. On the wall, in a frame, a sampler with a wheat sheaf on it that a farmwife had worked for him one winter.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Five-item room catalogue in sequence; the rule's 'never a list' is binding even though it is framed through Edwin filling the kettle.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;unearned-authority&quot;,<br />
+&quot;quote&quot;: &quot;&quot;Don't ask it <em>who</em>. You've done <em>who</em>. Ask it <em>what</em>. What am I to save the world from.&quot;&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;Imperatives to a girl who has not agreed to be taught, but they concern her own question and she immediately refuses them, so the order is answered for on the page.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;canon-scale-contradiction&quot;,<br />
+&quot;quote&quot;: &quot;had done for three hundred years&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Canon has Edwin at three hundred and fifty; 'three hundred years' here is the duration of a habit and of the Pellings work, not his age — no contradiction.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;canon-scale-contradiction&quot;,<br />
+&quot;quote&quot;: &quot;He had seen it twice in three hundred and fifty years.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Matches canon's age for Edwin (notes/canon/world/magic-explained.md, healing.md, magic-theory.md); the other figures in the scene are durations, not ages.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;contamination-overlap&quot;,<br />
+&quot;quote&quot;: &quot;She sat at his kitchen table with her pack still on and looked round the room with open interest, and Edwin, filling the kettle, was aware of what she was seeing.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;tools/overlap_check.py confirms an 8+ word run against the deleted chapters/001-the-wrong-man.md.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;contamination-overlap&quot;,<br />
+&quot;quote&quot;: &quot;What he read on Peri Millbrook nearly made him scald himself.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Verified verbatim 10-word run against chapters/001-the-wrong-man.md.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;contamination-overlap&quot;,<br />
+&quot;quote&quot;: &quot;She was wearing fate magic.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Matched as part of the run 'she was wearing fate magic he had seen it twice in' against chapters/001; flagged for the scene, though the sentence alone is under eight words.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;contamination-overlap&quot;,<br />
+&quot;quote&quot;: &quot;He put her tea in front of her, and his own, and sat down. &quot;Tell me about this class of yours.&quot;&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Two verified runs here against chapters/001; the scene shows 26 overlapping runs overall, so contamination is the scene-level finding rather than four isolated sentences.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 10<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/39-read-it-as-six.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;announce-before-deliver&quot;,<br />
+&quot;quote&quot;: &quot;and said nothing else, and Edwin put the wax away and did not ask&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;The rule is about a bare naming fragment ('Silence.') preceding the sentence that delivers it; this is a single continuous clause chain with no fragment drumroll.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;You alter the date the day the world alters, and you say in the letter what altered it.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Budget is one per scene; this is the scene's strongest and most particular Edwin maxim, so it is the one that should be kept rather than counted as the overflow.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;One name is easy to lose; four are not.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Fully portable epigram detached from the particulars, and the scene is already over its one-aphorism budget.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;The letters work. They work slowly. Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;A third portable philosophical cap in the same scene, and it lands as the scene's near-final beat where cleverness should be near zero.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;You alter the date the day the world alters, and you say in the letter what altered it.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;One maxim-capped turn per scene is allowed and it belongs to Edwin; this is that one.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Second maxim-capped turn in the scene, and it is the closing line, so the scene ends on a cadence rather than a cut.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;canon-scale-contradiction&quot;,<br />
+&quot;quote&quot;: &quot;I have broken exactly one written date in three hundred years&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Canon itself routinely uses 'three hundred years' as the round figure for Edwin's working life alongside his age of three hundred and fifty; the scene also says 'three centuries' consistently.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;You hand work to somebody entitled to alter it, or you haven't handed it over at all.&quot;,<br />
+&quot;reason&quot;: &quot;A fourth portable epigram, earlier in the same Edwin speech; it is the clearest evidence the scene is well over the one-per-scene budget.&quot;<br />
+}<br />
+]<br />
+},<br />
+&quot;n_candidates&quot;: 7<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;cause-left-out&quot;,<br />
+&quot;quote&quot;: &quot;and I have watched a whole row come up as something nobody remembered sowing, and get eaten anyway&quot;,<br />
+&quot;reason&quot;: &quot;Scanner misreads 'eaten' as pest damage; the cause is already given in the preceding sentence (seeds look identical, so the row was unidentified), and 'eaten anyway' is the wry payoff, not a withheld reason.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;implication-stopped-short&quot;,<br />
+&quot;quote&quot;: &quot;The labels matter more than the lids.&quot;,<br />
+&quot;reason&quot;: &quot;The rule targets implications never stated; here the very next sentence states it outright (seeds are indistinguishable), which is the completed form the rule's counter-example asks for.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 2<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/18-living-earth.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 0<br />
+}<br />
 ]</p></blockquote>
 
 
@@ -181,81 +193,213 @@ Data:<br>
 </div>
 
 <details><summary>6 tool calls</summary>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/tools/lint/ 2&gt;/dev/null || echo MISSING</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/tools/lint/ 2&gt;/dev/null || echo MISSING</p>
 <p>✅ 5 lines, 70 chars — __pycache__ / prose_lint.py / rules-notes.md</p>
-<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span>/tools/lint/pilot-report.md &lt;&lt;'EOF' # Prose-lint pilot run — syn…</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted</span>/tools/lint/pilot-report.md &lt;&lt;'EOF' # Prose-lint pilot run — synthesis  S…</p>
 <p>✅ 1 lines, 2 chars</p>
 <p>🔧 Bash: git add tools/lint/pilot-report.md &amp;&amp; git commit -q -m "Prose-lint pilot report: 8 confir…</p>
 <p>✅ 1 lines, 9 chars — committed</p>
 </details>
 
 <div class="assistant-prose">
-<p>Written to `<span class="redacted">redacted: private</span>/tools/lint/pilot-report.md` and committed.</p>
-<p># Prose-lint pilot run — synthesis</p>
-<p>Scope: 4 files (2 scenes, 2 author's notes), 19 machine candidates, 1 judge-added finding.<br>
+<p>Written to <span class="redacted">redacted</span>/tools/lint/pilot-report.md` and committed.</p>
+<h1>Prose-lint pilot run — synthesis</h1>
+<p>Scope: 4 files (2 scenes, 2 author's notes), 19 machine candidates, 1 judge-added finding.<br />
 Totals: 8 confirmed, 2 borderline, 9 false-positive.</p>
-<p>## 1. Confirmed findings by file</p>
-<p>### `draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md`</p>
-<p>| Quote | Rule | Why |<br>
-|---|---|---|<br>
-| "Bunches of herbs drying from the beam. A dresser of crockery… A stack of seed catalogues… A shelf of small labelled jars… On the wall, in a frame, a sampler…" | `description-list` | Five-item room catalogue in sequence; framing it through Edwin filling the kettle does not exempt it from "never a list". |<br>
-| "She sat at his kitchen table with her pack still on and looked round the room with open interest, and Edwin, filling the kettle, was aware of what she was seeing." | `contamination-overlap` | 8+ word verbatim run against the deleted `chapters/001-the-wrong-man.md`. |<br>
-| "What he read on Peri Millbrook nearly made him scald himself." | `contamination-overlap` | Verified 10-word verbatim run against `chapters/001`. |<br>
-| "She was wearing fate magic." | `contamination-overlap` | Part of the run "she was wearing fate magic he had seen it twice in"; the sentence alone is under eight words. |<br>
-| "He put her tea in front of her, and his own, and sat down. \"Tell me about this class of yours.\"" | `contamination-overlap` | Two verified runs here. |</p>
-<p>**Scene-level verdict:** 26 overlapping runs overall. Contamination is one finding about the whole scene, not four sentence-level fixes — the scene needs redrafting with the groundwork chapter shut, not patching.</p>
-<p>### `draft/book-01/scenes/39-read-it-as-six.md`</p>
-<p>| Quote | Rule | Why |<br>
-|---|---|---|<br>
-| "One name is easy to lose; four are not." | `aphorism-budget` | Fully portable epigram detached from the particulars, in a scene already over budget. |<br>
-| "The letters work. They work slowly. Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send." | `aphorism-budget` | Third portable philosophical cap, landing as the scene's near-final beat where cleverness should be near zero. |<br>
-| "You hand work to somebody entitled to alter it, or you haven't handed it over at all." | `aphorism-budget` (judge-added) | Fourth portable epigram, earlier in the same Edwin speech — the clearest evidence the scene is well over one-per-scene. |<br>
-| "Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send." | `maxim-capped-speech` | Second maxim-capped turn in the scene, and it is the closing line: the scene ends on a cadence rather than a cut. |</p>
-<p>**Scene-level verdict:** the aphorism budget is not overspent by one line but by three. The kept maxim should be "You alter the date the day the world alters…"; the other three come out, and the ending needs re-cutting.</p>
+<h2>1. Confirmed findings by file</h2>
+<h3><code>draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md</code></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Quote</th>
+<th>Rule</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;Bunches of herbs drying from the beam. A dresser of crockery… A stack of seed catalogues… A shelf of small labelled jars… On the wall, in a frame, a sampler…&quot;</td>
+<td><code>description-list</code></td>
+<td>Five-item room catalogue in sequence; framing it through Edwin filling the kettle does not exempt it from &quot;never a list&quot;.</td>
+</tr>
+<tr>
+<td>&quot;She sat at his kitchen table with her pack still on and looked round the room with open interest, and Edwin, filling the kettle, was aware of what she was seeing.&quot;</td>
+<td><code>contamination-overlap</code></td>
+<td>8+ word verbatim run against the deleted <code>chapters/001-the-wrong-man.md</code>.</td>
+</tr>
+<tr>
+<td>&quot;What he read on Peri Millbrook nearly made him scald himself.&quot;</td>
+<td><code>contamination-overlap</code></td>
+<td>Verified 10-word verbatim run against <code>chapters/001</code>.</td>
+</tr>
+<tr>
+<td>&quot;She was wearing fate magic.&quot;</td>
+<td><code>contamination-overlap</code></td>
+<td>Part of the run &quot;she was wearing fate magic he had seen it twice in&quot;; the sentence alone is under eight words.</td>
+</tr>
+<tr>
+<td>&quot;He put her tea in front of her, and his own, and sat down. &quot;Tell me about this class of yours.&quot;&quot;</td>
+<td><code>contamination-overlap</code></td>
+<td>Two verified runs here.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Scene-level verdict:</strong> 26 overlapping runs overall. Contamination is one finding about the whole scene, not four sentence-level fixes — the scene needs redrafting with the groundwork chapter shut, not patching.</p>
+<h3><code>draft/book-01/scenes/39-read-it-as-six.md</code></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Quote</th>
+<th>Rule</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;One name is easy to lose; four are not.&quot;</td>
+<td><code>aphorism-budget</code></td>
+<td>Fully portable epigram detached from the particulars, in a scene already over budget.</td>
+</tr>
+<tr>
+<td>&quot;The letters work. They work slowly. Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send.&quot;</td>
+<td><code>aphorism-budget</code></td>
+<td>Third portable philosophical cap, landing as the scene's near-final beat where cleverness should be near zero.</td>
+</tr>
+<tr>
+<td>&quot;You hand work to somebody entitled to alter it, or you haven't handed it over at all.&quot;</td>
+<td><code>aphorism-budget</code> (judge-added)</td>
+<td>Fourth portable epigram, earlier in the same Edwin speech — the clearest evidence the scene is well over one-per-scene.</td>
+</tr>
+<tr>
+<td>&quot;Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send.&quot;</td>
+<td><code>maxim-capped-speech</code></td>
+<td>Second maxim-capped turn in the scene, and it is the closing line: the scene ends on a cadence rather than a cut.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Scene-level verdict:</strong> the aphorism budget is not overspent by one line but by three. The kept maxim should be &quot;You alter the date the day the world alters…&quot;; the other three come out, and the ending needs re-cutting.</p>
 <p>No confirmed findings in either author's-note file.</p>
-<p>## 2. Borderlines</p>
-<p>- **02 / `missing-qualifier`** — "It's called the Pellings." Proper noun with no word saying what it is (farm, valley, parish). Context carries it; one qualifier would settle it. Cheap fix, low stakes.<br>
-- **02 / `unearned-authority`** — "Don't ask it *who*… Ask it *what*." Imperatives to a girl who has not agreed to be taught, but they concern her own question and she refuses them immediately, so the page pays for it.</p>
+<h2>2. Borderlines</h2>
+<ul>
+<li><strong>02 / <code>missing-qualifier</code></strong> — &quot;It's called the Pellings.&quot; Proper noun with no word saying what it is (farm, valley, parish). Context carries it; one qualifier would settle it. Cheap fix, low stakes.</li>
+<li><strong>02 / <code>unearned-authority</code></strong> — &quot;Don't ask it <em>who</em>… Ask it <em>what</em>.&quot; Imperatives to a girl who has not agreed to be taught, but they concern her own question and she refuses them immediately, so the page pays for it.</li>
+</ul>
 <p>Both are judgement calls the lint is right to surface and wrong to auto-fail.</p>
-<p>## 3. False-positive rate per rule</p>
-<p>| Rule | Fired | Confirmed | FP | FP rate |<br>
-|---|---|---|---|---|<br>
-| `contamination-overlap` | 4 | 4 | 0 | 0% |<br>
-| `description-list` | 1 | 1 | 0 | 0% |<br>
-| `aphorism-budget` | 3 | 2 | 1 | 33% |<br>
-| `maxim-capped-speech` | 2 | 1 | 1 | 50% |<br>
-| `missing-qualifier` | 1 | 0 (borderline) | 0 | — |<br>
-| `unearned-authority` | 1 | 0 (borderline) | 0 | — |<br>
-| `canon-scale-contradiction` | 3 | 0 | 3 | **100%** |<br>
-| `announce-before-deliver` | 1 | 0 | 1 | **100%** |<br>
-| `cause-left-out` | 1 | 0 | 1 | **100%** |<br>
-| `implication-stopped-short` | 1 | 0 | 1 | **100%** |</p>
-<p>**Needs counter_examples urgently:**</p>
-<p>- **`canon-scale-contradiction`** — 3/3 false. It cannot tell an *age* from a *duration*. Counter-examples needed: "three hundred years" as the length of the Pellings work or of a habit; "three hundred years" as canon's own round figure for Edwin's working life beside his age of 350; "three centuries" as a consistent synonym. Better still, narrow the rule to fire only when the number is bound to a person by an age-marker ("he was", "aged", "years old").<br>
-- **`announce-before-deliver`** — the scanner is matching continuous clause chains. The rule targets a *bare naming fragment* ("Silence.") preceding the delivering sentence. Counter-example: "…and said nothing else, and Edwin put the wax away and did not ask." Add a precondition that the announcing unit be a fragment with no finite verb.<br>
-- **`cause-left-out`** and **`implication-stopped-short`** — both fired on author's notes where the cause/implication is stated in the *adjacent* sentence. Both need a look-behind/look-ahead window of one sentence before flagging, plus the two pilot quotes as counter-examples.<br>
-- **`aphorism-budget` / `maxim-capped-speech`** — these do not over-fire so much as mis-*rank*. Both correctly detected overspend and then nominated the line that should be kept. They need a "which one survives" step: flag the set, mark the most particular / least portable member as the keeper, and report the rest.</p>
-<p>## 4. Constructions confirmed 2+ times → propose a regex-tier rule</p>
-<p>Only one construction clears the bar: **`contamination-overlap`**, confirmed 4× in one file (26 runs). It is already tooled by `tools/overlap_check.py` and should be promoted from a judged lens to a hard `tier=regex`-class gate — it needs no judgement at all, and its judged FP rate is 0%.</p>
+<h2>3. False-positive rate per rule</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Fired</th>
+<th>Confirmed</th>
+<th>FP</th>
+<th>FP rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contamination-overlap</code></td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td><code>description-list</code></td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td><code>aphorism-budget</code></td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>33%</td>
+</tr>
+<tr>
+<td><code>maxim-capped-speech</code></td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>50%</td>
+</tr>
+<tr>
+<td><code>missing-qualifier</code></td>
+<td>1</td>
+<td>0 (borderline)</td>
+<td>0</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>unearned-authority</code></td>
+<td>1</td>
+<td>0 (borderline)</td>
+<td>0</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>canon-scale-contradiction</code></td>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+<td><strong>100%</strong></td>
+</tr>
+<tr>
+<td><code>announce-before-deliver</code></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td><strong>100%</strong></td>
+</tr>
+<tr>
+<td><code>cause-left-out</code></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td><strong>100%</strong></td>
+</tr>
+<tr>
+<td><code>implication-stopped-short</code></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td><strong>100%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Needs counter_examples urgently:</strong></p>
+<ul>
+<li><strong><code>canon-scale-contradiction</code></strong> — 3/3 false. It cannot tell an <em>age</em> from a <em>duration</em>. Counter-examples needed: &quot;three hundred years&quot; as the length of the Pellings work or of a habit; &quot;three hundred years&quot; as canon's own round figure for Edwin's working life beside his age of 350; &quot;three centuries&quot; as a consistent synonym. Better still, narrow the rule to fire only when the number is bound to a person by an age-marker (&quot;he was&quot;, &quot;aged&quot;, &quot;years old&quot;).</li>
+<li><strong><code>announce-before-deliver</code></strong> — the scanner is matching continuous clause chains. The rule targets a <em>bare naming fragment</em> (&quot;Silence.&quot;) preceding the delivering sentence. Counter-example: &quot;…and said nothing else, and Edwin put the wax away and did not ask.&quot; Add a precondition that the announcing unit be a fragment with no finite verb.</li>
+<li><strong><code>cause-left-out</code></strong> and <strong><code>implication-stopped-short</code></strong> — both fired on author's notes where the cause/implication is stated in the <em>adjacent</em> sentence. Both need a look-behind/look-ahead window of one sentence before flagging, plus the two pilot quotes as counter-examples.</li>
+<li><strong><code>aphorism-budget</code> / <code>maxim-capped-speech</code></strong> — these do not over-fire so much as mis-<em>rank</em>. Both correctly detected overspend and then nominated the line that should be kept. They need a &quot;which one survives&quot; step: flag the set, mark the most particular / least portable member as the keeper, and report the rest.</li>
+</ul>
+<h2>4. Constructions confirmed 2+ times → propose a regex-tier rule</h2>
+<p>Only one construction clears the bar: <strong><code>contamination-overlap</code></strong>, confirmed 4× in one file (26 runs). It is already tooled by <code>tools/overlap_check.py</code> and should be promoted from a judged lens to a hard <code>tier=regex</code>-class gate — it needs no judgement at all, and its judged FP rate is 0%.</p>
 <p>The gate is not a regex over prose but an exact-run test against the deleted-draft corpus; the regex tier's role is normalisation:</p>
-<p>```python<br>
-import re</p>
-<p># tier=regex, rule_id="contamination-overlap"<br>
-# Normalise a scene to a lowercase word stream, then test every 8-gram<br>
-# against the n-gram set built from the deleted drafts in git history<br>
-# (chapters/, rewrite/, draft/book-01/rejected-act2/).</p>
-<p>WORD_RE = re.compile(r"[a-z0-9']+")<br>
-NGRAM_N = 8</p>
-<p>def ngrams(text: str, n: int = NGRAM_N):<br>
-    words = WORD_RE.findall(text.lower())<br>
-    for i in range(len(words) - n + 1):<br>
-        yield " ".join(words[i:i + n])</p>
-<p>def contamination_runs(scene_text: str, corpus_ngrams: frozenset[str]) -&gt; list[str]:<br>
-    return [g for g in ngrams(scene_text) if g in corpus_ngrams]<br>
-```</p>
-<p>Notes for implementation: report at scene level (a run count and a sample), never as N independent sentence findings — the pilot shows the sentence framing misleads, since "She was wearing fate magic." is under eight words and is only contaminated as part of a longer run. Suggested threshold: any run at all is a finding; ≥5 runs means redraft with the source shut rather than edit.</p>
-<p>The `aphorism-budget` family fired 2+ times as well but is inherently a semantic count, not a surface pattern; it stays a judged lens with a keeper-selection step added.</p>
-<p>## 5. Did haiku-level hunting work?</p>
-<p>Mixed, and the split is informative. Of 19 candidates, judges confirmed 8 and rejected 9 — a bare-majority rejection rate, which on its own would look like a failing hunter. But the rejections are concentrated almost entirely in four rules that fail for one shared reason: the scanner reads a quote without its neighbouring sentence. `canon-scale-contradiction` cannot see that the sentence before names a habit rather than an age; `cause-left-out` and `implication-stopped-short` cannot see that the next sentence supplies exactly what they claim is missing. Where the pattern is genuinely local and surface-visible — verbatim overlap, a five-item list, a portable epigram — the hunter was right every time it fired, and a judge even *added* a finding the scanner missed. So the architecture works: cheap wide hunting plus expensive narrow judging caught real contamination and a real budget overspend across two scenes, at a cost of nine cheap rejections. The fix is not a better hunter model but a one-sentence context window on the candidates it emits, plus the counter-examples listed in §3. With those, the projected FP rate on this sample falls from 47% to roughly 10%, which is comfortably inside what an opus judge should be asked to filter.</p>
+<pre><code class="language-python">import re
+​
+# tier=regex, rule_id=&quot;contamination-overlap&quot;
+# Normalise a scene to a lowercase word stream, then test every 8-gram
+# against the n-gram set built from the deleted drafts in git history
+# (chapters/, rewrite/, draft/book-01/rejected-act2/).
+​
+WORD_RE = re.compile(r&quot;[a-z0-9']+&quot;)
+NGRAM_N = 8
+​
+def ngrams(text: str, n: int = NGRAM_N):
+    words = WORD_RE.findall(text.lower())
+    for i in range(len(words) - n + 1):
+        yield &quot; &quot;.join(words[i:i + n])
+​
+def contamination_runs(scene_text: str, corpus_ngrams: frozenset[str]) -&gt; list[str]:
+    return [g for g in ngrams(scene_text) if g in corpus_ngrams]
+</code></pre>
+<p>Notes for implementation: report at scene level (a run count and a sample), never as N independent sentence findings — the pilot shows the sentence framing misleads, since &quot;She was wearing fate magic.&quot; is under eight words and is only contaminated as part of a longer run. Suggested threshold: any run at all is a finding; ≥5 runs means redraft with the source shut rather than edit.</p>
+<p>The <code>aphorism-budget</code> family fired 2+ times as well but is inherently a semantic count, not a surface pattern; it stays a judged lens with a keeper-selection step added.</p>
+<h2>5. Did haiku-level hunting work?</h2>
+<p>Mixed, and the split is informative. Of 19 candidates, judges confirmed 8 and rejected 9 — a bare-majority rejection rate, which on its own would look like a failing hunter. But the rejections are concentrated almost entirely in four rules that fail for one shared reason: the scanner reads a quote without its neighbouring sentence. <code>canon-scale-contradiction</code> cannot see that the sentence before names a habit rather than an age; <code>cause-left-out</code> and `implication-stopped-short cannot see that the next sentence supplies exactly what they claim is missing. Where the pattern is genuinely local and surface-visible — verbatim overlap, a five-item list, a portable epigram — the hunter was right every time it fired, and a judge even <em>added</em> a finding the scanner missed. So the architecture works: cheap wide hunting plus expensive narrow judging caught real contamination and a real budget overspend across two scenes, at a cost of nine cheap rejections. The fix is not a better hunter model but a one-sentence context window on the candidates it emits, plus the counter-examples listed in §3. With those, the projected FP rate on this sample falls from 47% to roughly 10%, which is comfortably inside what an opus judge should be asked to filter.</p>
 </div>
 </body></html>

@@ -55,8 +55,35 @@ CAT_LIKE_RE = re.compile(
 
 
 def truncate(s: str, n: int) -> str:
+    """Character-truncate to `n` chars.
+
+    This runs *before* tools/redact.py ever sees the text, so there are no
+    ⟦...⟧ markers yet to protect -- but a cut can still land partway
+    through a literal occurrence of REPO_ROOT (e.g. ".../Projects/autoroa"
+    with the trailing "d" chopped off), and a partial match defeats
+    redact.py's later whole-string term match for that exact path, leaking
+    the local username/machine path into the page unredacted -- often right
+    next to an earlier, complete (and therefore correctly redacted) copy of
+    the same path in the same command. Extend the cut through the end of
+    that occurrence instead.
+    """
     s = s if isinstance(s, str) else str(s)
-    return s if len(s) <= n else s[:n] + "…"
+    if len(s) <= n:
+        return s
+    cut = n
+    # str.find's end-of-range argument bounds the whole match, so it can't
+    # find an occurrence that starts before `cut` but extends past it --
+    # walk occurrences from the start instead, extending `cut` whenever one
+    # straddles it.
+    pos = 0
+    while True:
+        idx = s.find(REPO_ROOT, pos)
+        if idx == -1 or idx >= cut:
+            break
+        end = idx + len(REPO_ROOT)
+        cut = max(cut, end)
+        pos = end
+    return s[:cut] + "…"
 
 
 def relpath(p: str | None) -> str | None:
@@ -107,6 +134,59 @@ def read_jsonl(path: Path) -> Iterator[dict]:
 LOCAL_CAVEAT_RE = re.compile(r"^<local-command-caveat>.*</local-command-caveat>$", re.S)
 COMMAND_NAME_RE = re.compile(r"^<command-name>(.*?)</command-name>")
 
+# ---------------------------------------------------------------------------
+# harness-injected "real input" user lines
+#
+# The Claude Code harness delivers several kinds of its *own* output to the
+# model as a real-input (plain-string) `user` line -- the same shape a human
+# prompt takes (see FORMAT_NOTES.md). None of these were typed by the human:
+#
+#   - <task-notification>: an async Agent/Workflow's completion is pushed
+#     back into the conversation this way, often carrying a huge inlined
+#     <result>/<diagnostics>/<usage> payload. The *outcome* is what belongs
+#     in the "how it was built" narrative -- the payload duplicates the
+#     structured tool_use/tool_result plumbing already parsed elsewhere (or,
+#     for an Agent, the linked subagent transcript itself) and is dropped
+#     rather than dumped as if it were prose the human wrote. When the
+#     notification lands on a *subagent* that itself has live background
+#     children, the tag is preceded by an explicit "[SYSTEM NOTIFICATION -
+#     NOT USER INPUT] ... NOT a message from the user" warning paragraph --
+#     detection looks for the tag anywhere in the line, not just at its
+#     start, so this variant is still caught.
+#   - The /compact auto-summary ("This session is being continued from a
+#     previous conversation...") is the harness's own compaction summary,
+#     addressed to the model, not authored by the human.
+#   - <local-command-stdout>: the terminal output of a local slash command
+#     (paired with a preceding <command-name> real-input line -- see
+#     COMMAND_NAME_RE above). Attached to that command's block as `output`
+#     rather than rendered as its own turn.
+#
+# All three are turned into `system_note` blocks on a `role="system"` turn
+# (or folded into the preceding `command` block) instead of a `text` block
+# on an ordinary `role="user"` turn, so the renderer never has to guess
+# after the fact which "user" turns are really the human speaking.
+TASK_NOTIFICATION_PREFIX = "<task-notification>"
+TASK_SUMMARY_RE = re.compile(r"<summary>(.*?)</summary>", re.S)
+TASK_STATUS_RE = re.compile(r"<status>(.*?)</status>", re.S)
+COMPACTION_SUMMARY_PREFIX = (
+    "This session is being continued from a previous conversation"
+)
+LOCAL_COMMAND_STDOUT_PREFIX = "<local-command-stdout>"
+LOCAL_COMMAND_STDOUT_SUFFIX = "</local-command-stdout>"
+
+_ANSI_RE = re.compile(r"\x1b\[[0-9;]*[a-zA-Z]")
+
+
+def strip_ansi(s: str | None) -> str | None:
+    """Strip terminal ANSI/SGR escape sequences (e.g. the `\\x1b[2m...\\x1b[22m`
+    dimming codes around /compact's "Compacted" stdout) so they don't leak
+    into the page as literal bracket-and-digit noise. Requires the real ESC
+    byte, so it never touches text that merely *contains* a literal
+    ``[1m``-shaped substring."""
+    if not s:
+        return s
+    return _ANSI_RE.sub("", s)
+
 
 # ---------------------------------------------------------------------------
 # tool_use simplification
@@ -121,9 +201,9 @@ def summarize_tool_use(name: str, tool_input: dict, workflow_scripts: dict[str, 
         return block
 
     if name == "Bash":
-        block["command"] = truncate(tool_input.get("command", ""), CMD_TRUNC)
+        block["command"] = truncate(strip_ansi(tool_input.get("command", "")), CMD_TRUNC)
         if tool_input.get("description"):
-            block["description"] = tool_input["description"]
+            block["description"] = strip_ansi(tool_input["description"])
         return block
 
     if name == "Agent":
@@ -206,7 +286,7 @@ def summarize_tool_result(
         if not CAT_LIKE_RE.search(command):
             lines = stdout.splitlines()[:3]
             if lines:
-                block["stdout_preview"] = [truncate(l, BASH_LINE_TRUNC) for l in lines]
+                block["stdout_preview"] = [truncate(strip_ansi(l), BASH_LINE_TRUNC) for l in lines]
 
     return block
 
@@ -251,6 +331,10 @@ def parse_transcript(session_id: str, lines: Iterable[dict]) -> ParsedTranscript
     result = ParsedTranscript(session_id=session_id)
     tool_use_index: dict[str, dict] = {}  # tool_use_id -> {"name":..., "input":...}
     current: Turn | None = None
+    # The most recently emitted `command` block (from a <command-name> real-
+    # input line) still waiting to pick up its <local-command-stdout>, if
+    # any -- see the harness-injected-real-input-lines note above.
+    last_command_block: dict | None = None
 
     def flush_ts(ts: str | None) -> None:
         if ts is None:
@@ -273,18 +357,97 @@ def parse_transcript(session_id: str, lines: Iterable[dict]) -> ParsedTranscript
             msg = d.get("message", {})
             content = msg.get("content")
             if isinstance(content, str):
-                if LOCAL_CAVEAT_RE.match(content.strip()):
+                stripped = content.strip()
+                if LOCAL_CAVEAT_RE.match(stripped):
                     continue  # pure noise
-                m = COMMAND_NAME_RE.match(content.strip())
+                if stripped == "/compact":
+                    # The literal command text David typed. /compact is the
+                    # only slash command observed to echo itself this way
+                    # *in addition to* the <command-name>/<local-command-
+                    # stdout> pair a few lines later (every other slash
+                    # command only produces that pair) -- so this line is
+                    # pure duplication of the "ran /compact" command block
+                    # below, not new information.
+                    continue
+                if TASK_NOTIFICATION_PREFIX in stripped:
+                    # An async Agent/Workflow's completion, pushed back into
+                    # the conversation as harness output, not human prose.
+                    # For a subagent that itself has live background
+                    # children, the harness prefixes the notification with
+                    # an explicit "[SYSTEM NOTIFICATION - NOT USER INPUT] ...
+                    # NOT a message from the user" warning block before the
+                    # <task-notification> tag -- checking a plain prefix
+                    # match would leave that variant misattributed to the
+                    # (sub)agent's "User:", the very mistake the warning
+                    # exists to head off. Keep only enough to say "a
+                    # background task finished and here's its one-line
+                    # summary" -- the full <result>/<diagnostics>/<usage>
+                    # payload is dropped (see module note above).
+                    summary_m = TASK_SUMMARY_RE.search(stripped)
+                    status_m = TASK_STATUS_RE.search(stripped)
+                    current = Turn(role="system", timestamp=ts)
+                    current.blocks.append(
+                        {
+                            "kind": "system_note",
+                            "event": "task_notification",
+                            "status": status_m.group(1).strip() if status_m else None,
+                            "summary": summary_m.group(1).strip() if summary_m else None,
+                        }
+                    )
+                    result.turns.append(current)
+                    current = None
+                    last_command_block = None
+                    continue
+                if stripped.startswith(COMPACTION_SUMMARY_PREFIX):
+                    # The harness's own /compact continuation summary,
+                    # addressed to the model ("do not acknowledge the
+                    # summary..."), not authored by David.
+                    current = Turn(role="system", timestamp=ts)
+                    current.blocks.append(
+                        {"kind": "system_note", "event": "compaction_summary"}
+                    )
+                    result.turns.append(current)
+                    current = None
+                    last_command_block = None
+                    continue
+                if stripped.startswith(LOCAL_COMMAND_STDOUT_PREFIX):
+                    inner = stripped[len(LOCAL_COMMAND_STDOUT_PREFIX) :]
+                    if inner.endswith(LOCAL_COMMAND_STDOUT_SUFFIX):
+                        inner = inner[: -len(LOCAL_COMMAND_STDOUT_SUFFIX)]
+                    out_text = (strip_ansi(inner) or "").strip()
+                    if last_command_block is not None:
+                        # Fold the command's own terminal output onto its
+                        # `command` block instead of a separate turn, so one
+                        # slash-command invocation renders as one event
+                        # instead of several disconnected "David:" turns.
+                        if out_text:
+                            last_command_block["output"] = out_text
+                        last_command_block = None
+                    elif out_text:
+                        current = Turn(role="system", timestamp=ts)
+                        current.blocks.append(
+                            {
+                                "kind": "system_note",
+                                "event": "command_output",
+                                "summary": out_text,
+                            }
+                        )
+                        result.turns.append(current)
+                        current = None
+                    continue
+                m = COMMAND_NAME_RE.match(stripped)
                 if m:
                     current = Turn(role="user", timestamp=ts)
-                    current.blocks.append({"kind": "command", "name": m.group(1)})
+                    block = {"kind": "command", "name": m.group(1)}
+                    current.blocks.append(block)
                     result.turns.append(current)
                     current = None  # command turns don't accumulate a reply
+                    last_command_block = block
                     continue
                 current = Turn(role="user", timestamp=ts)
-                current.blocks.append({"kind": "text", "text": content})
+                current.blocks.append({"kind": "text", "text": strip_ansi(content)})
                 result.turns.append(current)
+                last_command_block = None
                 continue
 
             # list content -> tool_result(s), appended to the running

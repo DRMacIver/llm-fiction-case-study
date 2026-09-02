@@ -7,56 +7,57 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are testing a proposed cheap replacement for an expensive method,…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a7c37247c6276691c">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are testing a proposed cheap replacement for an expensive method, for the novel at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it.<br>
-<br>
-## Background<br>
-<br>
-A multi-agent experiment gave each character in a scene its own agent, so no character's dialogue was generated in a context containing the others'. It worked, but cost 6–10x a conventional pass. Its own findings (`samples/round6-isolated/findings.md` — read this in full, especially §2 and §5) conclude that **most of the gain probably came not from context isolation but from the Director writing each line's *want* as a role-bound instruction before any line was generated** — and that a single writer working from a pre-written want-list should recover most of the benefit at about a twentieth of the cost.<br>
-<br>
-That confound has never been tested. You are the test.<br>
-<br>
-## What to do<br>
-<br>
-Rewrite the same scene the other runs used: the opening scene of `chapters/019-a-question-of-rosters.md` — the four dead names struck off the roster at the long table on the twenty-second. Speakers: <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, Edwin; Peri present and silent. Target 1,200–1,800 words. Same events, facts and canon; you may restage freely but may not change what is true.<br>
-<br>
-**The method under test, followed strictly and in this order:**<br>
-<br>
-1. <span class="redacted">redacted sentence: unpublished prose</span> Wants only. No dialogue, no phrasing, not even a fragment. Get the whole scene's spine down as wants first.<br>
-2. Then draft the scene normally, as one writer, from the slot list.<br>
-3. Then score it.<br>
-<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-## Scoring — this is the point of the exercise<br>
-<br>
-Score your scene on the project's own two instruments, exactly as `samples/round6-isolated/findings.md` §2 does, so the numbers are comparable:<br>
-<br>
-- **Prop-cover:** mask every possessive, proper noun, tool, coin, month, date and piece of subject expertise; count what still places.<br>
-- **Swap test:** three lines per speaker in another's mouth; would a *reader* reject them as impossible? **Report the headline number and then separate rejections on *standing/fact* from rejections on *voice alone*.** The voice-alone row is the real result; the other run's numbers are source 1/15 (7%), multi-agent 5/14 (36%).<br>
-<br>
-Score your own scene honestly. You wrote it, so you are biased; compensate by being harsh, and by scoring the *source* scene yourself with the same hand rather than trusting the other run's figures for it.<br>
-<br>
-## Deliverable<br>
-<br>
-`samples/round7-wants/` containing:<br>
-- `slots.md` — the want-list exactly as written in step 1, before any prose. Do not tidy it afterwards.<br>
-- `scene.md` — the scene.<br>
-- `findings.md` — the scores in a table against source and against the multi-agent run; **your verdict on whether the wants alone account for the multi-agent gain**; where the method helped and where you felt it fighting you; how long it took relative to a normal drafting pass; and an honest statement of what a self-scored single-writer test cannot establish.<br>
-<br>
-Then commit.<br>
-<br>
-<span class="redacted">redacted sentence: unpublished prose</span> Either answer is valuable; do not flatter the cheap method because it would be convenient.<br>
-<br>
-Do not edit anything outside `samples/round7-wants/`.<br>
-<br>
-Your final message: the three-way score table, your verdict, and one line on what surprised you.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are testing a proposed cheap replacement for an expensive method,…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a7c37247c6276691c">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are testing a proposed cheap replacement for an expensive method, for the novel at <span class="redacted">redacted</span>. Read <code>CLAUDE.md</code> first and obey it.</p>
+<h2>Background</h2>
+<p>A multi-agent experiment gave each character in a scene its own agent, so no character's dialogue was generated in a context containing the others'. It worked, but cost 6–10x a conventional pass. Its own findings (<code>samples/round6-isolated/findings.md</code> — read this in full, especially §2 and §5) conclude that <strong>most of the gain probably came not from context isolation but from the Director writing each line's <em>want</em> as a role-bound instruction before any line was generated</strong> — and that a single writer working from a pre-written want-list should recover most of the benefit at about a twentieth of the cost.</p>
+<p>That confound has never been tested. You are the test.</p>
+<h2>What to do</h2>
+<p>Rewrite the same scene the other runs used: the opening scene of <code>chapters/019-a-question-of-rosters.md</code> — the four dead names struck off the roster at the long table on the twenty-second. Speakers: <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, Edwin; Peri present and silent. Target 1,200–1,800 words. Same events, facts and canon; you may restage freely but may not change what is true.</p>
+<p><strong>The method under test, followed strictly and in this order:</strong></p>
+<ol>
+<li><span class="redacted">redacted sentence: unpublished prose</span> Wants only. No dialogue, no phrasing, not even a fragment. Get the whole scene's spine down as wants first.</li>
+<li>Then draft the scene normally, as one writer, from the slot list.</li>
+<li>Then score it.</li>
+</ol>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<h2>Scoring — this is the point of the exercise</h2>
+<p>Score your scene on the project's own two instruments, exactly as <code>samples/round6-isolated/findings.md</code> §2 does, so the numbers are comparable:</p>
+<ul>
+<li><strong>Prop-cover:</strong> mask every possessive, proper noun, tool, coin, month, date and piece of subject expertise; count what still places.</li>
+<li><strong>Swap test:</strong> three lines per speaker in another's mouth; would a <em>reader</em> reject them as impossible? <strong>Report the headline number and then separate rejections on <em>standing/fact</em> from rejections on <em>voice alone</em>.</strong> The voice-alone row is the real result; the other run's numbers are source 1/15 (7%), multi-agent 5/14 (36%).</li>
+</ul>
+<p>Score your own scene honestly. You wrote it, so you are biased; compensate by being harsh, and by scoring the <em>source</em> scene yourself with the same hand rather than trusting the other run's figures for it.</p>
+<h2>Deliverable</h2>
+<p><code>samples/round7-wants/</code> containing:</p>
+<ul>
+<li><code>slots.md</code> — the want-list exactly as written in step 1, before any prose. Do not tidy it afterwards.</li>
+<li><code>scene.md</code> — the scene.</li>
+<li><code>findings.md</code> — the scores in a table against source and against the multi-agent run; <strong>your verdict on whether the wants alone account for the multi-agent gain</strong>; where the method helped and where you felt it fighting you; how long it took relative to a normal drafting pass; and an honest statement of what a self-scored single-writer test cannot establish.</li>
+</ul>
+<p>Then commit.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Either answer is valuable; do not flatter the cheap method because it would be convenient.</p>
+<p>Do not edit anything outside <code>samples/round7-wants/</code>.</p>
+<p>Your final message: the three-way score table, your verdict, and one line on what surprised you.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -74,9 +75,9 @@ Your final message: the three-way score table, your verdict, and one line on wha
 <p>✅ 412 lines, 24371 chars</p>
 <p>🔧 Bash: cat notes/voice-exemplars.md &amp;&amp; sed -n '1,120p' notes/llm-tells.md</p>
 <p>✅ 183 lines, 10969 chars</p>
-<p>🔧 Bash: sed -n '120,261p' <span class="redacted">redacted: private</span>/notes/llm-tells.md; echo ======; cat ⟦redacted: pri…</p>
+<p>🔧 Bash: sed -n '120,261p' <span class="redacted">redacted</span>/notes/llm-tells.md; echo ======; cat <span class="redacted">redacted</span>/chapters/019…</p>
 <p>✅ 144 lines, 8405 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/chapters/019-a-question-of-rosters.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/chapters/019-a-question-of-rosters.md</p>
 <p>✅ 199 lines, 21815 chars</p>
 <p>🔧 Bash: ls notes/canon/characters/ &amp;&amp; sed -n '1,340p' notes/dialogue-voices.md</p>
 <p>✅ 348 lines, 23461 chars</p>
@@ -84,15 +85,15 @@ Your final message: the three-way score table, your verdict, and one line on wha
 <p>✅ 281 lines, 17017 chars</p>
 <p>🔧 Bash: sed -n '620,780p' notes/dialogue-voices.md</p>
 <p>✅ 160 lines, 8828 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for f in edwin <span class="redacted">redacted: character</span> peri; do echo "=== $f"; awk…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; for f in edwin <span class="redacted">redacted</span> peri; do echo "=== $f"; awk '/^#+ .*[Vv]oice/{p=…</p>
 <p>✅ 363 lines, 21996 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; echo "=== EDWIN rules"; awk '/^\*\*4\. At an emotional peak/,0' n…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; echo "=== EDWIN rules"; awk '/^\*\*4\. At an emotional peak/,0' notes/cano…</p>
 <p>✅ 101 lines, 6284 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; awk '/^\*\*9\. /,0' notes/canon/characters/edwin.md | head -60; e…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; awk '/^\*\*9\. /,0' notes/canon/characters/edwin.md | head -60; echo "===…</p>
 <p>✅ 151 lines, 9610 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "<span class="redacted">redacted: character</span>\|<span class="redacted">redacted: character</span>\|⟦redacted:…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>" notes/canon/characters/minor.…</p>
 <p>✅ 8 lines, 552 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '180,240p' notes/canon/characters/minor.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '180,240p' notes/canon/characters/minor.md</p>
 <p>✅ 61 lines, 3902 chars</p>
 </details>
 
@@ -100,53 +101,113 @@ Your final message: the three-way score table, your verdict, and one line on wha
 <p>Now chapter 018 and Peri's key rules.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; tail -60 chapters/018-holm-deep.md; echo "=== PERI RULES"; awk '/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; tail -60 chapters/018-holm-deep.md; echo "=== PERI RULES"; awk '/^\*\*6\.…</p>
 <p>✅ 150 lines, 10062 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat samples/round4/parole.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat samples/round4/parole.md</p>
 <p>✅ 110 lines, 5361 chars</p>
 
 <div class="assistant-prose">
 <p>Now I have what I need. Step 1: the want-list, before any prose.</p>
 </div>
 
-<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span>/samples/round7-wants &amp;&amp; cat &gt; <span class="redacted">redacted: private</span>/samples/ro…</p>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted</span>/samples/round7-wants &amp;&amp; cat &gt; <span class="redacted">redacted</span>/samples/round7-wants/slots.m…</p>
 <p>✅ 1 lines, 2 chars</p>
 
 <div class="assistant-prose">
 <p>Step 2: the draft.</p>
 </div>
 
-<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span>/samples/round7-wants/scene.md &lt;&lt;'EOF' # Round 7 — the scene  Wr…</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted</span>/samples/round7-wants/scene.md &lt;&lt;'EOF' # Round 7 — the scene  Written in…</p>
 <p>✅ 1 lines, 73 chars</p>
 
 <div class="assistant-prose">
-<p>Step 3: scoring. Both instruments, run by hand on my scene *and* re-run on the source.</p>
+<p>Step 3: scoring. Both instruments, run by hand on my scene <em>and</em> re-run on the source.</p>
 </div>
 
-<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span>/samples/round7-wants/findings.md &lt;&lt;'EOF' # Round 7 — wants with…</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted</span>/samples/round7-wants/findings.md &lt;&lt;'EOF' # Round 7 — wants without agent…</p>
 <p>✅ 1 lines, 80 chars</p>
 
 <div class="assistant-prose">
-<p>Committed. `samples/round7-wants/` has `slots.md` (27 wants, untidied, including the two bracketed doubts and the struck slot), `scene.md` (1,500 words, 30 turns), and `findings.md`.</p>
-<p>## Three-way table</p>
-<p>**Prop-cover**</p>
-<p>| Sample | Turns | Place | Rate |<br>
-|---|---|---|---|<br>
-| Source ch. 019, my scoring | 45 | 22 | **49%** |<br>
-| Source ch. 019, round 6's scoring | 17 | 6 | 35% |<br>
-| Multi-agent, round 6's scoring | 16 | 13 | 81% |<br>
-| **Wants scene, my scoring** | 30 | 14 | **47%** |</p>
-<p>**Swap test**</p>
-<p>| | Source (mine) | Multi-agent (r6) | **Wants** |<br>
-|---|---|---|---|<br>
-| Headline | 10/15 (67%) | 12/14 (86%) | **12/15 (80%)** |<br>
-| On standing/fact | 4/15 | 7/14 | 6/15 |<br>
-| **On voice alone** | **6/15 (40%)** | 5/14 (36%) | **6/15 (40%)** |<br>
-| r6's figure for source | 1/15 (7%) | | |</p>
-<p>Per-speaker voice-alone is identical between source and wants scene: Edwin 3/3, <span class="redacted">redacted: character</span> 2/3, <span class="redacted">redacted: character</span> 1/3, <span class="redacted">redacted: character</span> 0/3, <span class="redacted">redacted: character</span> 0/3.</p>
-<p>## Verdict</p>
-<p>The wants tie the published source and beat it on neither instrument, so they do not demonstrably recover a multi-agent gain — but this round could not find a gain to recover, because the same hand scores the source at 40% voice-alone where round 6 scored it at 7%. <span class="redacted">redacted sentence: unpublished prose</span> The mechanistic finding is that wants and isolation attack different failures: a want says what a line must do, never who may do it that way, and all four defects in my scene are register bleed into Edwin's constructions (his grading shape, his copula-plus-possessive refusal, his professional modal, his balanced antithesis) — precisely what isolation prevents by construction. Recommendation: keep the wants (cheap, and they caught Edwin's absent-reader warrant sitting in <span class="redacted">redacted: character</span>'s slot before a word of prose), add a construction-ownership check to `editing-pass`, and pay one agent to re-score all three scenes blind before adopting or retiring anything. Cost was ~1.2–1.4x a normal draft pass, one context, against round 6's 6–10x.</p>
-<p>## What surprised me</p>
+<p>Committed. <code>samples/round7-wants/</code> has <code>slots.md</code> (27 wants, untidied, including the two bracketed doubts and the struck slot), <code>scene.md</code> (1,500 words, 30 turns), and <code>findings.md</code>.</p>
+<h2>Three-way table</h2>
+<p><strong>Prop-cover</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Sample</th>
+<th>Turns</th>
+<th>Place</th>
+<th>Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source ch. 019, my scoring</td>
+<td>45</td>
+<td>22</td>
+<td><strong>49%</strong></td>
+</tr>
+<tr>
+<td>Source ch. 019, round 6's scoring</td>
+<td>17</td>
+<td>6</td>
+<td>35%</td>
+</tr>
+<tr>
+<td>Multi-agent, round 6's scoring</td>
+<td>16</td>
+<td>13</td>
+<td>81%</td>
+</tr>
+<tr>
+<td><strong>Wants scene, my scoring</strong></td>
+<td>30</td>
+<td>14</td>
+<td><strong>47%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Swap test</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Source (mine)</th>
+<th>Multi-agent (r6)</th>
+<th><strong>Wants</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Headline</td>
+<td>10/15 (67%)</td>
+<td>12/14 (86%)</td>
+<td><strong>12/15 (80%)</strong></td>
+</tr>
+<tr>
+<td>On standing/fact</td>
+<td>4/15</td>
+<td>7/14</td>
+<td>6/15</td>
+</tr>
+<tr>
+<td><strong>On voice alone</strong></td>
+<td><strong>6/15 (40%)</strong></td>
+<td>5/14 (36%)</td>
+<td><strong>6/15 (40%)</strong></td>
+</tr>
+<tr>
+<td>r6's figure for source</td>
+<td>1/15 (7%)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Per-speaker voice-alone is identical between source and wants scene: Edwin 3/3, <span class="redacted">redacted</span> 2/3, <span class="redacted">redacted</span> 1/3, <span class="redacted">redacted</span> 0/3, <span class="redacted">redacted</span> 0/3.</p>
+<h2>Verdict</h2>
+<p>The wants tie the published source and beat it on neither instrument, so they do not demonstrably recover a multi-agent gain — but this round could not find a gain to recover, because the same hand scores the source at 40% voice-alone where round 6 scored it at 7%. <span class="redacted">redacted sentence: unpublished prose</span> The mechanistic finding is that wants and isolation attack different failures: a want says what a line must do, never who may do it that way, and all four defects in my scene are register bleed into Edwin's constructions (his grading shape, his copula-plus-possessive refusal, his professional modal, his balanced antithesis) — precisely what isolation prevents by construction. Recommendation: keep the wants (cheap, and they caught Edwin's absent-reader warrant sitting in <span class="redacted">redacted</span>'s slot before a word of prose), add a construction-ownership check to <code>editing-pass</code>, and pay one agent to re-score all three scenes blind before adopting or retiring anything. Cost was ~1.2–1.4x a normal draft pass, one context, against round 6's 6–10x.</p>
+<h2>What surprised me</h2>
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 </body></html>

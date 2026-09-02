@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</title><style>
+<html><head><meta charset="utf-8"><title>[redacted]  **Standing rules for every agent in this run** (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,28 +7,39 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a38635807bbfa0aa7">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
-<br>
-**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
-- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
-- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
-- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
-<br>
-Read `notes/process.md` step 6, `.claude/skills/write-arc/SKILL.md` stage 7, `notes/farming.md` (author's-note budget), and the previous `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> The scene set in `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes/` has changed: one scene added (letter-suffixed), two redrafted, several edited. Rebuild every chapter file in `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters/` from the scenes (delete the old chapter files first; `git rm` them), numbered from 001, `# Chapter N: Title` heading, **~2,000 words each, occasionally to 3,000, none over without a reason written down**. Keep the previous assembly's groupings, titles and cuts wherever the scenes still support them, and change what the new scene requires. **At least two cuts fall inside a scene.** Place author's notes against their budget. **Assembly groups, orders, cuts, titles and places notes. It never revoices.** A line that cannot stand goes back to the scene file with a note, not fixed in the chapter.<br>
-<br>
-Rewrite `ASSEMBLY.md` (mapping, word counts, cuts, seams, notes placed). <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> If a gate number fails, say so plainly. Commit.<br>
-<br>
-Your final message: chapter count, word-count range, chapters over 3,000, gate numbers, where the mid-scene cuts fall.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>[redacted]  **Standing rules for every agent in this run** (…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a38635807bbfa0aa7">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p><span class="redacted">redacted sentence</span></p>
+<p><strong>Standing rules for every agent in this run</strong> (from <code>CLAUDE.md</code>; read it first and obey it):</p>
+<ul>
+<li>Never state the content of anything in <code>notes/sealed/</code> outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe <em>shape</em> (counts, which constraints are satisfied, what conflicts) and never content. <code>plans/</code> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).</li>
+<li>`notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Every file you write, you write to disk immediately — a later failure must lose nothing.</li>
+<li>When you finish, <code>git add</code> the files you touched and commit with a short message. Do not commit <code>comments/</code> or anything outside the project.</li>
+</ul>
+<p>Read <code>notes/process.md</code> step 6, <code>.claude/skills/write-arc/SKILL.md</code> stage 7, <code>notes/farming.md</code> (author's-note budget), and the previous <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> The scene set in <span class="redacted">redacted</span>/rewrite/book-01/arc-01/scenes/<code>has changed: one scene added (letter-suffixed), two redrafted, several edited. Rebuild every chapter file in</code><span class="redacted">redacted</span>/rewrite/book-01/arc-01/chapters/<code>from the scenes (delete the old chapter files first;</code>git rm<code>them), numbered from 001,</code># Chapter N: Title` heading, <strong>~2,000 words each, occasionally to 3,000, none over without a reason written down</strong>. Keep the previous assembly's groupings, titles and cuts wherever the scenes still support them, and change what the new scene requires. <strong>At least two cuts fall inside a scene.</strong> Place author's notes against their budget. <strong>Assembly groups, orders, cuts, titles and places notes. It never revoices.</strong> A line that cannot stand goes back to the scene file with a note, not fixed in the chapter.</p>
+<p>Rewrite `ASSEMBLY.md (mapping, word counts, cuts, seams, notes placed). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> If a gate number fails, say so plainly. Commit.</p>
+<p>Your final message: chapter count, word-count range, chapters over 3,000, gate numbers, where the mid-scene cuts fall.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -46,35 +57,35 @@ Your final message: chapter count, word-count range, chapters over 3,000, gate n
 <p>✅ 421 lines, 21123 chars</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> (Read patch)</p>
 <p>✅ 159 lines, 9568 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; for f in *.md; do printf "%s %s\n… (Scene word counts)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01/scenes &amp;&amp; for f in *.md; do printf "%s %s\n" "$(wc -… (Scene word counts)</p>
 <p>✅ 54 lines, 2049 chars</p>
 <p>🔧 Bash: sed -n '/## 7/,/^## 8/p' .claude/skills/write-arc/SKILL.md; echo ====; grep -n -i "author… (Stage 7 and farming note budget)</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; head -20 001-four-ways-of-askin… (Chapter format and notes)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01/chapters &amp;&amp; head -20 001-four-ways-of-asking.md &amp;&amp; e… (Chapter format and notes)</p>
 <p>✅ 2 lines, 35 chars</p>
 <p>✅ 21 lines, 1108 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; grep -n "Author's note" *.md; e… (Find notes and scene breaks)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01/chapters &amp;&amp; grep -n "Author's note" *.md; echo "----… (Find notes and scene breaks)</p>
 <p>✅ 25 lines, 3877 chars</p>
 <p>🔧 Bash: sed -n '/^### 7/,/^### 8/p;/^## Stage 7/,/^## Stage 8/p' .claude/skills/write-arc/SKILL.m… (Stage 7 text)</p>
 <p>✅ 41 lines, 2229 chars</p>
 <p>🔧 Bash: grep -n "^## 7\|^### Stage 7\|^7\." .claude/skills/write-arc/SKILL.md; awk '/Chapter asse… (Stage 7 assembly text)</p>
 <p>✅ 61 lines, 3589 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> (Full note blocks)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> (Full note blocks)</p>
 <p>✅ 15 lines, 2351 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; head -8 04-seal-of-the-loom.md; e… (Scene file format)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01/scenes &amp;&amp; head -8 04-seal-of-the-loom.md; echo "----… (Scene file format)</p>
 <p>✅ 30 lines, 1167 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; for f in 15-*.md 33b-*.md 35-*.md… (Scene openings)</p>
-<p>🔧 Bash: sed -n '1,80p' <span class="redacted">redacted: private</span>/notes/farming.md (Farming note budget)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01/scenes &amp;&amp; for f in 15-*.md 33b-*.md 35-*.md 26-*.md… (Scene openings)</p>
+<p>🔧 Bash: sed -n '1,80p' <span class="redacted">redacted</span>/notes/farming.md (Farming note budget)</p>
 <p>✅ 35 lines, 1328 chars</p>
 <p>✅ 80 lines, 4853 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; grep -n "Seal of the Loom\|rooms… (Locate split points)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01/scenes &amp;&amp; grep -n "Seal of the Loom\|rooms cannot go… (Locate split points)</p>
 <p>✅ 8 lines, 412 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01 &amp;&amp; sed -n '1,5p' chapters/005-come-where.md… (Ch5 opening and scene 25 head)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01 &amp;&amp; sed -n '1,5p' chapters/005-come-where.md; echo "-… (Ch5 opening and scene 25 head)</p>
 <p>✅ 30 lines, 1145 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; for f in *.md; do echo "=== $f"… (Locate old scene breaks)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01/chapters &amp;&amp; for f in *.md; do echo "=== $f"; grep -n… (Locate old scene breaks)</p>
 <p>✅ 99 lines, 2611 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01 &amp;&amp; python3 - &lt;&lt;'EOF' import re,os,glob sc={… (Derive scene break markers)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01 &amp;&amp; python3 - &lt;&lt;'EOF' import re,os,glob sc={} for p i… (Derive scene break markers)</p>
 <p>✅ 44 lines, 3335 chars — <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> (Apply scene 14 seam fix)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> (Apply scene 14 seam fix)</p>
 <p>✅ 8 lines, 377 chars</p>
 </details>
 
@@ -85,23 +96,23 @@ Your final message: chapter count, word-count range, chapters over 3,000, gate n
 <details><summary>22 tool calls</summary>
 <p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span> &amp;&amp; cat &gt; <span class="redacted">redacted: private</span> (Write assembler script)</p>
 <p>✅ 1 lines, 7 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01 &amp;&amp; python3 - &lt;&lt;'EOF' import re for f,pat in… (Find paragraph split indices)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01 &amp;&amp; python3 - &lt;&lt;'EOF' import re for f,pat in [('scene… (Find paragraph split indices)</p>
 <p>✅ 3 lines, 213 chars — scenes/04-seal-of-the-loom.md idx 8 of 18 |  / <span class="redacted">redacted sentence: unpublished prose</span> Seal of the Loom." / <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -i '' "s/('04',(0,17),R)/('04',(0,9),R)/; s/('04',(17,None)… (Remove old chapters and rebuild)</p>
 <p>✅ 2 lines, 76 chars — Exit code 1 / (eval):1: no matches found: rewrite/book-01/arc-01/chapters/*.md</p>
 <p>🔧 Bash: git rm -q rewrite/book-01/arc-01/chapters/*.md &amp;&amp; python3 <span class="redacted">redacted: private</span> (git rm old chapters and rebuild)</p>
 <p>✅ 6 lines, 393 chars — Exit code 1 / Traceback (most recent call last): /   File "<span class="redacted">redacted: private</span>", line 73, in &lt;module&gt;</p>
-<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; python3 ⟦redacted: privat… (Rebuild chapters)</p>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted</span>/rewrite/book-01/arc-01/chapters &amp;&amp; python3 <span class="redacted">redacted: private</span> (Rebuild chapters)</p>
 <p>✅ 17 lines, 428 chars — 1 Four Ways of Asking 2795 / 2 Until Fulfilled 2200 / 3 Both Ends Before the Fork 2609</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; grep -n "^# " *.md | grep -v "^… (Verify seams)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01/chapters &amp;&amp; grep -n "^# " *.md | grep -v "^0..-.*:1:… (Verify seams)</p>
 <p>✅ 35 lines, 1158 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01 &amp;&amp; for f in chapters/*.md; do echo "== $f";… (Run census distribution)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01 &amp;&amp; for f in chapters/*.md; do echo "== $f"; python3… (Run census distribution)</p>
 <p>✅ 120 lines, 7023 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01 &amp;&amp; for f in chapters/0*.md; do python3 ⟦red… (Remaining distribution and em-dash rate)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01 &amp;&amp; for f in chapters/0*.md; do python3 <span class="redacted">redacted</span>/sa… (Remaining distribution and em-dash rate)</p>
 <p>✅ 62 lines, 3740 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01 &amp;&amp; python3 - &lt;&lt;'EOF' import glob,re,os CLOC… (Scene-opening gate regex)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01 &amp;&amp; python3 - &lt;&lt;'EOF' import glob,re,os CLOCK=re.comp… (Scene-opening gate regex)</p>
 <p>✅ 1 lines, 6 chars — 44 0 0</p>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/rewrite/book-01/ &amp;&amp; tail -20 <span class="redacted">redacted: private</span>/rewrite/book-01/F… (Check FLAGS)</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/rewrite/book-01/ &amp;&amp; tail -20 <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md (Check FLAGS)</p>
 <p>✅ 23 lines, 1406 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; python3 - &lt;&lt;'EOF' p='assemble.py'; s=open(p).read() i=s.index('… (Drop peat-wastage note and rebuild)</p>
 <p>✅ 18 lines, 430 chars</p>
@@ -112,13 +123,13 @@ Your final message: chapter count, word-count range, chapters over 3,000, gate n
 </div>
 
 <details><summary>8 tool calls</summary>
-<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> ⟦redacted sentence: serie… (Write ASSEMBLY.md)</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence</span>  <span class="redacted">redacted sentence: unpublished prose</span>… (Write ASSEMBLY.md)</p>
 <p>✅ 2 lines, 119 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; for f in 011 012 013 016; do ec… (Verify chapter endings)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01/chapters &amp;&amp; for f in 011 012 013 016; do echo "== $f… (Verify chapter endings)</p>
 <p>✅ 20 lines, 2533 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> (Fix ch012 ending description)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> (Fix ch012 ending description)</p>
 <p>✅ 1 lines, 91 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01 &amp;&amp; python3 - &lt;&lt;'EOF' p='ASSEMBLY.md'; s=ope… (Fix join paragraph; check ch011 tail)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01 &amp;&amp; python3 - &lt;&lt;'EOF' p='ASSEMBLY.md'; s=open(p).read… (Fix join paragraph; check ch011 tail)</p>
 <p>✅ 5 lines, 152 chars</p>
 </details>
 
@@ -126,30 +137,34 @@ Your final message: chapter count, word-count range, chapters over 3,000, gate n
 <p>Now the GATE.md append.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01 &amp;&amp; cat &gt;&gt; GATE.md &lt;&lt;'EOF'  ---  ## After pa… (Append gate results)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01 &amp;&amp; cat &gt;&gt; GATE.md &lt;&lt;'EOF'  ---  ## After patch (2026… (Append gate results)</p>
 <p>✅ 1 lines, 2 chars</p>
 
 <div class="assistant-prose">
 <p>Now the FLAGS entry and commit.</p>
 </div>
 
-<p>🔧 Bash: cat &gt;&gt; rewrite/book-01/FLAGS.md &lt;&lt;'EOF'  <span class="redacted">redacted sentence: unpublished prose</span> ⟦redacted… (Flag and commit)</p>
+<p>🔧 Bash: cat &gt;&gt; rewrite/book-01/FLAGS.md &lt;&lt;'EOF'  <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span>… (Flag and commit)</p>
 <p>✅ 16 lines, 1057 chars</p>
 
 <div class="assistant-prose">
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Word-count range: 1,608–2,795.** Chapters over 3,000: **none** — no reason needed.</p>
-<p>**Gate numbers (appended to `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Scenes opening date/clock-stamped: **0% (0/44)**, bar under 20% — PASS<br>
-- Scenes announcing their own duration: **0% (0/44)**, bar under 5% — PASS<br>
-- Chapters over 3,000 words: **0 of 16 (0%)**, bar under 1 in 5 — PASS</p>
+<p><strong>Word-count range: 1,608–2,795.</strong> Chapters over 3,000: <strong>none</strong> — no reason needed.</p>
+<p>Gate numbers (appended to <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Scenes opening date/clock-stamped: <strong>0% (0/44)</strong>, bar under 20% — PASS</li>
+<li>Scenes announcing their own duration: <strong>0% (0/44)</strong>, bar under 5% — PASS</li>
+<li>Chapters over 3,000 words: <strong>0 of 16 (0%)</strong>, bar under 1 in 5 — PASS</li>
+</ul>
 <p>No gate number fails. (Em-dashes arc-wide 1.48/1,000, inside the ~2 budget. The census DISTRIBUTION block's figures coverage floor fires on nine of sixteen chapters, as before — demoted per the script's own docstring and finding 2 of the earlier gate run, so not scored.)</p>
-<p>**Mid-scene cuts (two, both preserved from the previous assembly):**<br>
-1. <span class="redacted">redacted sentence: unpublished prose</span><br>
-2. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><strong>Mid-scene cuts (two, both preserved from the previous assembly):</strong></p>
+<ol>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
 <p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Chapters 001–008 are untouched.</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Two flags appended to `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md`: the `25a` notation collision (halves now written 25(i)/25(ii); `plans/book-01/arc-01.md` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Committed as `aee474c`.</p>
+<p>Two flags appended to <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md<code>: the </code>25a<code>notation collision (halves now written 25(i)/25(ii);</code>plans/book-01/arc-01.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Committed as <code>aee474c</code>.</p>
 </div>
 </body></html>

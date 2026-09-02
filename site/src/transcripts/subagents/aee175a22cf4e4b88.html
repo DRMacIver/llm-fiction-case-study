@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-aee175a22cf4e4b88">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="notes", and scope includes "note". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/author-notes/05-in-some-sort-of-order.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-aee175a22cf4e4b88">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;notes&quot;, and scope includes &quot;note&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/author-notes/05-in-some-sort-of-order.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -27,12 +40,12 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>✅ 1216 lines, 49319 chars</p>
 
 <div class="assistant-prose">
-<p>Let me read more of the rules file to find all semantic rules with lens=="notes":</p>
+<p>Let me read more of the rules file to find all semantic rules with lens==&quot;notes&quot;:</p>
 </div>
 
 <details><summary>6 tool calls</summary>
-<p>🔧 Bash: wc -l <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
-<p>✅ 1 lines, 65 chars —     2286 <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>🔧 Bash: wc -l <span class="redacted">redacted</span>/tools/lint/rules.json</p>
+<p>✅ 1 lines, 65 chars —     2286 <span class="redacted">redacted</span>/tools/lint/rules.json</p>
 <p>🔧 Bash: jq -r '.[] | select(.tier == "semantic" and .lens == "notes" and (.scope[] | select(. ==…</p>
 <p>✅ 3 lines, 75 chars</p>
 <p>🔧 Bash: jq '.[] | select(.id == "non-witnessable-anecdote" or .id == "note-explains-the-story" or…</p>
@@ -45,22 +58,32 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 
 <p>🔧 Read draft/book-01/author-notes/05-in-some-sort-of-order.md</p>
 <p>✅ 2 lines, 704 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/author-notes/05-in-some-sort-of-order.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/draft/book-01/author-notes/05-in-some-sort-of-order.md</p>
 <p>✅ 1 lines, 699 chars</p>
 
 <div class="assistant-prose">
-<p>Now let me analyze this author note against the three semantic rules with lens=="notes":</p>
-<p>**Rules to check:**<br>
-1. "non-witnessable-anecdote" - Check if persona anecdotes could actually have been witnessed<br>
-2. "note-explains-the-story" - Notes must be real-world content only; shouldn't explain the magic/System/why scenes were written<br>
-3. "note-digression-discipline" - Digressions must read as complete units (starts, wanders, author notices and returns)</p>
-<p>**Analysis of the note:**</p>
+<p>Now let me analyze this author note against the three semantic rules with lens==&quot;notes&quot;:</p>
+<p><strong>Rules to check:</strong></p>
+<ol>
+<li>&quot;non-witnessable-anecdote&quot; - Check if persona anecdotes could actually have been witnessed</li>
+<li>&quot;note-explains-the-story&quot; - Notes must be real-world content only; shouldn't explain the magic/System/why scenes were written</li>
+<li>&quot;note-digression-discipline&quot; - Digressions must read as complete units (starts, wanders, author notices and returns)</li>
+</ol>
+<p><strong>Analysis of the note:</strong></p>
 <p>The note is a single straightforward paragraph about hay and crop farming. Let me check each rule:</p>
-<p>1. **non-witnessable-anecdote**: This rule applies to "persona anecdotes" - first-person stories claiming to witness something. The note contains no first-person anecdotes or "I" statements; it's objective agricultural explanation. No violation.</p>
-<p>2. **note-explains-the-story**: The note provides real-world farming information about hay drying and root crops. This is appropriate educational content per the project's farming guidelines. It doesn't explain the story's magic, System, or why scenes were written. The content stays factual and real-world grounded. No violation.</p>
-<p>3. **note-digression-discipline**: This note is a single continuous explanation with no digressions (no wandering tangent that returns). No violation.</p>
+<ol>
+<li>
+<p><strong>non-witnessable-anecdote</strong>: This rule applies to &quot;persona anecdotes&quot; - first-person stories claiming to witness something. The note contains no first-person anecdotes or &quot;I&quot; statements; it's objective agricultural explanation. No violation.</p>
+</li>
+<li>
+<p><strong>note-explains-the-story</strong>: The note provides real-world farming information about hay drying and root crops. This is appropriate educational content per the project's farming guidelines. It doesn't explain the story's magic, System, or why scenes were written. The content stays factual and real-world grounded. No violation.</p>
+</li>
+<li>
+<p><strong>note-digression-discipline</strong>: This note is a single continuous explanation with no digressions (no wandering tangent that returns). No violation.</p>
+</li>
+</ol>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

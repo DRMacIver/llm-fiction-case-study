@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</title><style>
+<html><head><meta charset="utf-8"><title>[redacted]  **Standing rules for every agent in this run** (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,42 +7,53 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a8dc544764aeffcd4">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
-<br>
-**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
-- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
-- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
-- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
-<br>
-Read `.claude/skills/editing-pass/SKILL.md`. <span class="redacted">redacted sentence: unpublished prose</span> Never totals.<br>
-<br>
-Your material: scenes 41–47 (the reckoning, the <span class="redacted">redacted: event</span>, the road) in `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> and prior-arc summaries `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> Report findings only, each with the file, the line quoted, and what is wrong; do not write "clean". Write `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/lens/6-mechanical.md`. Do not edit prose. Do not commit.<br>
-<br>
-Your final message: finding count and the worst one.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>[redacted]  **Standing rules for every agent in this run** (…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a8dc544764aeffcd4">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p><span class="redacted">redacted sentence</span></p>
+<p><strong>Standing rules for every agent in this run</strong> (from <code>CLAUDE.md</code>; read it first and obey it):</p>
+<ul>
+<li>Never state the content of anything in <code>notes/sealed/</code> outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe <em>shape</em> (counts, which constraints are satisfied, what conflicts) and never content. <code>plans/</code> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).</li>
+<li>`notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Every file you write, you write to disk immediately — a later failure must lose nothing.</li>
+<li>When you finish, <code>git add</code> the files you touched and commit with a short message. Do not commit <code>comments/</code> or anything outside the project.</li>
+</ul>
+<p>Read <code>.claude/skills/editing-pass/SKILL.md</code>. <span class="redacted">redacted sentence: unpublished prose</span> Never totals.</p>
+<p>Your material: scenes 41–47 (the reckoning, the <span class="redacted">redacted</span>, the road) in <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> and prior-arc summaries <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Report findings only, each with the file, the line quoted, and what is wrong; do not write &quot;clean&quot;. Write <span class="redacted">redacted</span>/rewrite/book-01/arc-03/lens/6-mechanical.md. Do not edit prose. Do not commit.</p>
+<p>Your final message: finding count and the worst one.</p></blockquote>
 
 
 <details><summary>12 tool calls</summary>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/.claude/skills/editing-pass/SKILL.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/.claude/skills/editing-pass/SKILL.md</p>
 <p>✅ 175 lines, 12225 chars</p>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes/ | grep -E '^(04[1-7])'</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes/ | grep -E '^(04[1-7])'</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/llm-tells.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/llm-tells.md</p>
 <p>✅ 322 lines, 19364 chars</p>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes/</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes/</p>
 <p>✅ 47 lines, 1062 chars — 01-the-fork.md / 02-the-stitches.md / <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes for f in 41-the-quarter-day.md ⟦unpu…</p>
-<p>🔧 Bash: grep -n -A3 "Budgets are per 1,000 words" <span class="redacted">redacted: private</span>/notes/voices.md | head -30</p>
-<p>✅ 14 lines, 452 chars — === 41-the-quarter-day.md <span class="redacted">unpublished</span> === /      899 41-the-quarter-day.md <span class="redacted">unpublished</span> / === 42-what-she-owes-him.md <span class="redacted">unpublished</span> ===</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes for f in 41-the-quarter-day.md <span class="unpub-tag">unpublished</span>…</p>
+<p>🔧 Bash: grep -n -A3 "Budgets are per 1,000 words" <span class="redacted">redacted</span>/notes/voices.md | head -30</p>
+<p>✅ 14 lines, 452 chars — === 41-the-quarter-day.md <span class="unpub-tag">unpublished</span> === /      899 41-the-quarter-day.md <span class="unpub-tag">unpublished</span> / === 42-what-she-owes-him.md <span class="unpub-tag">unpublished</span> ===</p>
 <p>✅ 4 lines, 241 chars</p>
 </details>
 
@@ -51,33 +62,33 @@ Your final message: finding count and the worst one.</p></blockquote>
 </div>
 
 <details><summary>22 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes for f in 41-the-quarter-day.md ⟦unpu…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes for f in 41-the-quarter-day.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 41 lines, 2209 chars</p>
 <p>🔧 Read <span class="redacted">redacted: private</span></p>
 <p>✅ 651 lines, 37093 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes FILES="41-the-quarter-day.md ⟦unpubl…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes FILES="41-the-quarter-day.md <span class="unpub-tag">unpublished</span> 42…</p>
 <p>✅ 24 lines, 3002 chars</p>
-<p>🔧 Bash: D=<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes FILES="$D/41-the-quarter-day.md ⟦unpu…</p>
+<p>🔧 Bash: D=<span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes FILES="$D/41-the-quarter-day.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 24 lines, 10092 chars</p>
-<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes/41-the-quarter-day.md ⟦unpublish…</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes/41-the-quarter-day.md <span class="unpub-tag">unpublished</span>; echo…</p>
 <p>✅ 3 lines, 195 chars</p>
-<p>🔧 Bash: D=<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes files=("$D"/41-the-quarter-day.md ⟦un…</p>
+<p>🔧 Bash: D=<span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes files=("$D"/41-the-quarter-day.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 30 lines, 1235 chars</p>
-<p>🔧 Bash: D=<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes grep -n '—' "$D"/42-what-she-owes-him…</p>
+<p>🔧 Bash: D=<span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes grep -n '—' "$D"/42-what-she-owes-him.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 20 lines, 2911 chars</p>
-<p>🔧 Bash: D=<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes files=("$D"/41-the-quarter-day.md ⟦un…</p>
+<p>🔧 Bash: D=<span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes files=("$D"/41-the-quarter-day.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 46 lines, 3007 chars</p>
-<p>🔧 Bash: D=<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes files=("$D"/41-the-quarter-day.md ⟦un…</p>
+<p>🔧 Bash: D=<span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes files=("$D"/41-the-quarter-day.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 24 lines, 2354 chars</p>
-<p>🔧 Bash: D=<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes files=("$D"/41-the-quarter-day.md ⟦un…</p>
+<p>🔧 Bash: D=<span class="redacted">redacted</span>/rewrite/book-01/arc-03/scenes files=("$D"/41-the-quarter-day.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 19 lines, 1491 chars</p>
 <p>🔧 Write rewrite/book-01/arc-03/lens/6-mechanical.md</p>
 <p>✅ 1 lines, 174 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>23 findings reported. The worst: scene 43 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Other notable findings: em-dash budget over in scenes 42, 45, 47 (45 worst at 5.0/1,000); "the whole of" running at ~6x the reference census rate (11 hits in 5,930 words, 4 of them in scene 41 <span class="redacted">unpublished</span> alone); scenes 42 and 43 both over the one-aphorism-per-scene budget; and named empty spans (scene 44 <span class="redacted">unpublished</span> has zero em dashes, scene 45 <span class="redacted">unpublished</span> has zero narrator aphorisms, scenes 42/43/45/46 have zero comedy beats).</p>
-<p>Report written to `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/lens/6-mechanical.md`. No prose edited, nothing committed, per instructions.</p>
+<p>23 findings reported. The worst: scene 43 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Other notable findings: em-dash budget over in scenes 42, 45, 47 (45 worst at 5.0/1,000); &quot;the whole of&quot; running at ~6x the reference census rate (11 hits in 5,930 words, 4 of them in scene 41 <span class="unpub-tag">unpublished</span> alone); scenes 42 and 43 both over the one-aphorism-per-scene budget; and named empty spans (scene 44 <span class="unpub-tag">unpublished</span> has zero em dashes, scene 45 <span class="unpub-tag">unpublished</span> has zero narrator aphorisms, scenes 42/43/45/46 have zero comedy beats).</p>
+<p>Report written to <span class="redacted">redacted</span>/rewrite/book-01/arc-03/lens/6-mechanical.md. No prose edited, nothing committed, per instructions.</p>
 </div>
 </body></html>

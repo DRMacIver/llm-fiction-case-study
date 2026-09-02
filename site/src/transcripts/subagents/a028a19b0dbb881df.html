@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</title><style>
+<html><head><meta charset="utf-8"><title>[redacted]  **Standing rules** (from `CLAUDE.md`; read it fi…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,24 +7,36 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a028a19b0dbb881df">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
-<br>
-**Standing rules** (from `CLAUDE.md`; read it first and obey it): never state sealed content (`notes/sealed/`) outside that directory — shape only; never resolve a canon Open question casually or weaken canon to fit a draft — flag in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md`; the §0 standing constraints in `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-1. Delete `<span class="redacted">redacted: private</span>/rewrite/book-01/chapters/*.md` (`git rm`), re-run `scripts/collate_book.py`, confirm contiguous numbering, and re-run `samples/round5/full-chapter/census.py` over `<span class="redacted">redacted: private</span>/rewrite/book-01/chapters/` into `<span class="redacted">redacted: private</span>/rewrite/book-01/census/` (docstring first; struck rows not scored).<br>
-2. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> The repair pass** — what was changed, the engine table result, and what it cost (scenes merged/deleted, words). Mark `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS-structural.md` items the same way. **No sealed content**; read the new text back for that.<br>
-3. Append a dated entry to `.claude/skills/write-arc/SKILL.md`'s experiment log: the repair pass and its cost, and amend **stage 1 and stage 3** so the engine window (four scenes, on the discovery move, continuous action exempt) is a *rejection* the checkpoint must refuse a scene breakdown on, not a reminder.<br>
-4. Update `plans/NEXT.md` <span class="redacted">unpublished</span> State and Queue: the book is drafted and repaired; what DRMacIver reads first; open flags; what happens after acceptance.<br>
-Commit.<br>
-<br>
-<span class="redacted">redacted sentence: unpublished prose</span></p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>[redacted]  **Standing rules** (from `CLAUDE.md`; read it fi…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a028a19b0dbb881df">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p><span class="redacted">redacted sentence</span></p>
+<p><strong>Standing rules</strong> (from <code>CLAUDE.md</code>; read it first and obey it): never state sealed content (<code>notes/sealed/</code>) outside that directory — shape only; never resolve a canon Open question casually or weaken canon to fit a draft — flag in <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md<code>; the §0 standing constraints in </code>notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<ol>
+<li>Delete <span class="redacted">redacted</span>/rewrite/book-01/chapters/*.md<code> (</code>git rm<code>), re-run </code>scripts/collate_book.py<code>, confirm contiguous numbering, and re-run </code>samples/round5/full-chapter/census.py<code>over</code><span class="redacted">redacted</span>/rewrite/book-01/chapters/<code>into</code><span class="redacted">redacted</span>/rewrite/book-01/census/ (docstring first; struck rows not scored).</li>
+<li><span class="redacted">redacted sentence</span> <span class="redacted">redacted sentence</span> The repair pass — what was changed, the engine table result, and what it cost (scenes merged/deleted, words). Mark <span class="redacted">redacted</span>/rewrite/book-01/FLAGS-structural.md` items the same way. <strong>No sealed content</strong>; read the new text back for that.</li>
+<li>Append a dated entry to <code>.claude/skills/write-arc/SKILL.md</code>'s experiment log: the repair pass and its cost, and amend <strong>stage 1 and stage 3</strong> so the engine window (four scenes, on the discovery move, continuous action exempt) is a <em>rejection</em> the checkpoint must refuse a scene breakdown on, not a reminder.</li>
+<li>Update `plans/NEXT.md <span class="unpub-tag">unpublished</span> State and Queue: the book is drafted and repaired; what DRMacIver reads first; open flags; what happens after acceptance.<br />
+Commit.</li>
+</ol>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p></blockquote>
 
 
 <div class="assistant-prose">
@@ -34,7 +46,7 @@ Commit.<br>
 <details><summary>22 tool calls</summary>
 <p>🔧 Bash: ls rewrite/book-01/ &amp;&amp; ls rewrite/book-01/chapters/ | head -50 &amp;&amp; echo "---" &amp;&amp; ls rewrit…</p>
 <p>✅ 85 lines, 1851 chars</p>
-<p>🔧 Bash: cat CLAUDE.md | head -5 &amp;&amp; echo "=== NEXT" &amp;&amp; cat plans/NEXT.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cat CLAUDE.md | head -5 &amp;&amp; echo "=== NEXT" &amp;&amp; cat plans/NEXT.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 127 lines, 7495 chars</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 278 lines, 15338 chars</p>
@@ -47,7 +59,7 @@ Commit.<br>
 <p>🔧 Bash: ls rewrite/book-01/arc-03/chapters/ &amp;&amp; git log --oneline -12 &amp;&amp; git status --short | head…</p>
 <p>✅ 31 lines, 1373 chars</p>
 <p>🔧 Bash: git rm -q rewrite/book-01/chapters/*.md &amp;&amp; python3 scripts/collate_book.py &amp;&amp; echo "OK" &amp;…</p>
-<p>✅ 6 lines, 218 chars — OK: 54 chapters, 116,092 body words -&gt; <span class="redacted">redacted: private</span>/rewrite/book-01/chapters /   arc-01: 001-016 (16 ch, 34,838 w) /   arc-02: 017-036 (20 ch, 42,255 w)</p>
+<p>✅ 6 lines, 218 chars — OK: 54 chapters, 116,092 body words -&gt; <span class="redacted">redacted</span>/rewrite/book-01/chapters /   arc-01: 001-016 (16 ch, 34,838 w) /   arc-02: 017-036 (20 ch, 42,255 w)</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 1 lines, 31 chars</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
@@ -67,7 +79,7 @@ Commit.<br>
 <p>✅ 7 lines, 472 chars</p>
 <p>🔧 Bash: head -12 rewrite/book-01/census/census-chapters.txt</p>
 <p>✅ 12 lines, 358 chars</p>
-<p>🔧 Bash: python3 - &lt;&lt;'EOF' import re, subprocess, sys from pathlib import Path ROOT = Path('⟦redac…</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import re, subprocess, sys from pathlib import Path ROOT = Path('<span class="redacted">redacted</span>…</p>
 <p>✅ 6 lines, 229 chars</p>
 <p>🔧 Bash: git diff --numstat rewrite/book-01/census/census-chapters.txt &amp;&amp; git diff rewrite/book-01…</p>
 <p>✅ 16 lines, 519 chars</p>
@@ -87,7 +99,7 @@ Commit.<br>
 <p>✅ 30 lines, 2130 chars</p>
 <p>🔧 Bash: for f in rewrite/book-01/chapters/*.md; do if git show HEAD:"$f" &gt;/dev/null 2&gt;&amp;1; then if…</p>
 <p>✅ 9 lines, 457 chars</p>
-<p>🔧 Bash: cat rewrite/book-01/chapters/045-what-nothing-looks-like.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cat rewrite/book-01/chapters/045-what-nothing-looks-like.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 91 lines, 4599 chars</p>
 <p>🔧 Bash: for f in 046-not-reached 047-a-hands-breadth-in-grass 048-nothing-under-it 049-a-post-tha…</p>
 <p>✅ 200 lines, 11485 chars</p>
@@ -101,7 +113,7 @@ Commit.<br>
 <p>Now §11.</p>
 </div>
 
-<p>🔧 Bash: cat &gt;&gt; rewrite/book-01/BOOK-REPORT.md &lt;&lt;'EOF'  ---  ## 11. The repair pass  ⟦redacted sen…</p>
+<p>🔧 Bash: cat &gt;&gt; rewrite/book-01/BOOK-REPORT.md &lt;&lt;'EOF'  ---  ## 11. The repair pass  <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars</p>
 
 <div class="assistant-prose">
@@ -124,7 +136,7 @@ Commit.<br>
 <p>✅ 122 lines, 7622 chars</p>
 <p>🔧 Bash: python3 - &lt;&lt;'PY' from pathlib import Path p=Path('.claude/skills/write-arc/SKILL.md'); t=…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: grep -n "bell" plans/book-02/overview.md <span class="redacted">unpublished</span> | head</p>
+<p>🔧 Bash: grep -n "bell" plans/book-02/overview.md <span class="unpub-tag">unpublished</span> | head</p>
 <p>✅ 3 lines, 210 chars</p>
 </details>
 
@@ -133,31 +145,56 @@ Commit.<br>
 </div>
 
 <details><summary>14 tool calls</summary>
-<p>🔧 Bash: python3 - &lt;&lt;'PY' from pathlib import Path p=Path('plans/NEXT.md <span class="redacted">unpublished</span>'); t=p.read…</p>
+<p>🔧 Bash: python3 - &lt;&lt;'PY' from pathlib import Path p=Path('plans/NEXT.md <span class="unpub-tag">unpublished</span>'); t=p.read…</p>
 <p>✅ 5 lines, 205 chars — Exit code 1 / Traceback (most recent call last): /   File "&lt;stdin&gt;", line 44, in &lt;module&gt;</p>
-<p>🔧 Bash: grep -n "date-stamped scene openings" plans/NEXT.md; <span class="redacted">unpublished</span> sed -n 26,32p plans/NE…</p>
+<p>🔧 Bash: grep -n "date-stamped scene openings" plans/NEXT.md; <span class="unpub-tag">unpublished</span> sed -n 26,32p plans/NE…</p>
 <p>✅ 2 lines, 58 chars</p>
-<p>🔧 Bash: sed -n 25,35p plans/NEXT.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: sed -n 25,35p plans/NEXT.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 11 lines, 798 chars</p>
-<p>🔧 Bash: sed -n 20,25p plans/NEXT.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: sed -n 20,25p plans/NEXT.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 6 lines, 322 chars</p>
-<p>🔧 Bash: python3 - &lt;&lt;'PY' from pathlib import Path p=Path('plans/NEXT.md <span class="redacted">unpublished</span>'); t=p.read…</p>
+<p>🔧 Bash: python3 - &lt;&lt;'PY' from pathlib import Path p=Path('plans/NEXT.md <span class="unpub-tag">unpublished</span>'); t=p.read…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: git add -A rewrite/book-01 plans/NEXT.md <span class="redacted">unpublished</span> .claude/skills/write-arc/SKILL.md…</p>
-<p>✅ 19 lines, 844 chars — M  .claude/skills/write-arc/SKILL.md / M  plans/NEXT.md <span class="redacted">unpublished</span> / M  rewrite/book-01/BOOK-REPORT.md</p>
-<p>🔧 Bash: git commit -q -m "$(cat &lt;&lt;'EOF' ⟦redacted sentence: series structure (Arc/Book numbering)…</p>
-<p>✅ 1 lines, 65 chars — <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>🔧 Bash: git add -A rewrite/book-01 plans/NEXT.md <span class="unpub-tag">unpublished</span> .claude/skills/write-arc/SKILL.md…</p>
+<p>✅ 19 lines, 844 chars — M  .claude/skills/write-arc/SKILL.md / M  plans/NEXT.md <span class="unpub-tag">unpublished</span> / M  rewrite/book-01/BOOK-REPORT.md</p>
+<p>🔧 Bash: git commit -q -m "$(cat &lt;&lt;'EOF' <span class="redacted">redacted sentence</span>  54 chapters, 116,092 body words (-54…</p>
+<p>✅ 1 lines, 65 chars — <span class="redacted">redacted sentence</span></p>
 </details>
 
 <div class="assistant-prose">
-<p>**Book 1, post-repair:** 116,092 body words in **54 chapters** (001–054, contiguous; verified by `scripts/collate_book.py`). <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
-<p>**Whole-book gate rows** (bar / result):</p>
-<p>| Measure | Baseline | Bar | Whole book |<br>
-|---|---|---|---|<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><span class="redacted">redacted sentence: unpublished prose</span> Tightest legal spacing left is PRIVATE at scenes 39/43, legal by one and pre-existing.</p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Committed as 9575547.</p>
+<p><strong>Book 1, post-repair:</strong> 116,092 body words in <strong>54 chapters</strong> (001–054, contiguous; verified by <code>scripts/collate_book.py</code>). <span class="redacted">redacted sentence</span> <span class="redacted">redacted sentence</span></p>
+<p><strong>Whole-book gate rows</strong> (bar / result):</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Baseline</th>
+<th>Bar</th>
+<th>Whole book</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="redacted">redacted sentence: unpublished prose</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="redacted">redacted sentence: unpublished prose</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="redacted">redacted sentence: unpublished prose</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><span class="redacted">redacted sentence</span> <span class="redacted">redacted sentence: unpublished prose</span> Tightest legal spacing left is PRIVATE at scenes 39/43, legal by one and pre-existing.</p>
+<p><span class="redacted">redacted sentence</span> Committed as 9575547.</p>
 </div>
 </body></html>

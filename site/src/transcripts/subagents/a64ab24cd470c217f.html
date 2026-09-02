@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a64ab24cd470c217f">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="wit", and scope includes "note". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/author-notes/06-the-front-from-the-roof.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a64ab24cd470c217f">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;wit&quot;, and scope includes &quot;note&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/author-notes/06-the-front-from-the-roof.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <details><summary>8 tool calls</summary>
@@ -22,9 +35,9 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>✅ 1216 lines, 49319 chars</p>
 <p>🔧 Bash: grep -n '"tier".*"semantic"' tools/lint/rules.json | head -20</p>
 <p>✅ 20 lines, 535 chars</p>
-<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json') as f…</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
 <p>✅ 5 lines, 159 chars — Rules matching tier==semantic, lens==wit, scope includes 'note': /   - triad-swerve-budget /   - jukebox-flourish</p>
-<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json') as f…</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
 <p>✅ 31 lines, 3529 chars — ============================================================ / ID: triad-swerve-budget / Name: Triad with a third-item swerve</p>
 </details>
 
@@ -35,30 +48,34 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <details><summary>6 tool calls</summary>
 <p>🔧 Read draft/book-01/author-notes/06-the-front-from-the-roof.md</p>
 <p>✅ 2 lines, 541 chars</p>
-<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json') as f…</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
 <p>✅ 4 lines, 310 chars — triad-swerve-budget: tier=semantic, lens=wit, scope=['scene', 'note', 'plan'] / jukebox-flourish: tier=semantic, lens=wit, scope=['scene', 'note', 'plan'] / wrong-world-metaphor: tier=semantic, lens=wit, scope=['scene', 'note', 'plan']</p>
-<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json') as f…</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
 <p>✅ 51 lines, 3982 chars — ====================================================================== / RULE: triad-swerve-budget / Name: Triad with a third-item swerve</p>
 </details>
 
 <div class="assistant-prose">
 <p>Now I'll analyze the author note carefully against each of the four selected rules, reading full sentences before and after any candidate violations.</p>
 <p>The note text is:</p>
-<p>&gt; **The moors** - high moorland in a wet country is mostly blanket bog: thousands of years of peat under a living skin of sphagnum moss, and sphagnum holds many times its own weight in water, which you learn the first time you trust a bright green patch of it with your boot. Ground like that is wet in a drought and wetter in everything else. The curlew is the bird of it, a long bubbling call falling away over wet ground, and it is worth going up just to hear. If you have never heard one, the population graphs say you should go soon.</p>
+<blockquote>
+<p><strong>The moors</strong> - high moorland in a wet country is mostly blanket bog: thousands of years of peat under a living skin of sphagnum moss, and sphagnum holds many times its own weight in water, which you learn the first time you trust a bright green patch of it with your boot. Ground like that is wet in a drought and wetter in everything else. The curlew is the bird of it, a long bubbling call falling away over wet ground, and it is worth going up just to hear. If you have never heard one, the population graphs say you should go soon.</p>
+</blockquote>
 <p>Let me check each rule:</p>
-<p>**1. triad-swerve-budget** - Looking for a list of three where the third item confesses or swerves. </p>
-<p>The phrase "The curlew is the bird of it, a long bubbling call falling away over wet ground, and it is worth going up just to hear" has a triadic structure (bird, sound, value judgment), but the third element is a straightforward advocacy, not a swerve or confession in the LLM-characteristic sense that the rule bans. It's a natural progression from description to persuasion, not the kind of winking revelation the rule targets.</p>
-<p>**2. jukebox-flourish** - Checking for flourishes without a nameable job that could be transplanted.</p>
-<p>- "under a living skin of sphagnum moss" - describes the peat's protective layer, serving to explain the moorland's structure<br>
-- "a long bubbling call falling away over wet ground" - describes the curlew's acoustic signature, necessary to convey what makes it worth hearing</p>
+<p><strong>1. triad-swerve-budget</strong> - Looking for a list of three where the third item confesses or swerves.</p>
+<p>The phrase &quot;The curlew is the bird of it, a long bubbling call falling away over wet ground, and it is worth going up just to hear&quot; has a triadic structure (bird, sound, value judgment), but the third element is a straightforward advocacy, not a swerve or confession in the LLM-characteristic sense that the rule bans. It's a natural progression from description to persuasion, not the kind of winking revelation the rule targets.</p>
+<p><strong>2. jukebox-flourish</strong> - Checking for flourishes without a nameable job that could be transplanted.</p>
+<ul>
+<li>&quot;under a living skin of sphagnum moss&quot; - describes the peat's protective layer, serving to explain the moorland's structure</li>
+<li>&quot;a long bubbling call falling away over wet ground&quot; - describes the curlew's acoustic signature, necessary to convey what makes it worth hearing</li>
+</ul>
 <p>Both flourishes serve clear functions for this note's purpose.</p>
-<p>**3. wrong-world-metaphor** - Checking for figures drawing on non-existent machinery/institutions.</p>
-<p>"population graphs say you should go soon" - This references real-world data visualization about an actual bird (curlews), appropriate in an author's note about real-world ecology. Not a metaphor from the story world.</p>
-<p>**4. joke-rhythm-no-logic** - Checking for compression without substance.</p>
-<p>All compressed phrases ("the bird of it," "population graphs say") restate to real propositions: "the characteristic bird of moorland," "current data shows curlew populations are declining."</p>
+<p><strong>3. wrong-world-metaphor</strong> - Checking for figures drawing on non-existent machinery/institutions.</p>
+<p>&quot;population graphs say you should go soon&quot; - This references real-world data visualization about an actual bird (curlews), appropriate in an author's note about real-world ecology. Not a metaphor from the story world.</p>
+<p><strong>4. joke-rhythm-no-logic</strong> - Checking for compression without substance.</p>
+<p>All compressed phrases (&quot;the bird of it,&quot; &quot;population graphs say&quot;) restate to real propositions: &quot;the characteristic bird of moorland,&quot; &quot;current data shows curlew populations are declining.&quot;</p>
 <p>No violations found.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,26 +7,39 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ae6d97226aaed7cf7">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the judge in a prose-lint pipeline for <span class="redacted">redacted: private</span>.<br>
-Target file: the .md file in draft/book-01/author-notes/ whose name starts with 33-. Read it in full. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br>
-Candidates from haiku hunters (be sceptical; they over-report by design):<br>
-[<br>
- {<br>
-  "rule_id": "sense",<br>
-  "quote": "A wind coming round to the west therefore takes a village's noise away from anybody standing east of it, all at once and quite completely, and puts it into the ears of somebody who was not listening.",<br>
-  "reason": "Contradicts preceding statement that 'on the downwind side sound is bent down toward the listener'—east is downwind of a westerly wind, so should receive sound better, not have it taken away."<br>
- }<br>
-]<br>
-For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.<br>
-Additional standing duty for author's notes: take the note's FINAL sentence and rule "fact or gesture?" - a withheld fact the reader must decode is a cute-cryptic-closer violation (add to judge_added); a personal fact that lands (like the iodine closer "I did this at fourteen... never entirely got over it") is fine. Also: notes should usually be under 300 words (warn only), and must be real-world content in the author persona.<br>
-Judge hints: phrases like "you learn", "says you should", "there is only one answer" often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; "wants [gerund]" retired; "nought" retired, write "zero"); "'ll not" in non-first person is a judgement call, not a ban; "[amount] of it" and "I'll say it" are warning signs needing judgement.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ae6d97226aaed7cf7">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the judge in a prose-lint pipeline for <span class="redacted">redacted</span>.<br />
+Target file: the .md file in draft/book-01/author-notes/ whose name starts with 33-. Read it in full. Read <span class="redacted">redacted</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br />
+Candidates from haiku hunters (be sceptical; they over-report by design):<br />
+[<br />
+{<br />
+&quot;rule_id&quot;: &quot;sense&quot;,<br />
+&quot;quote&quot;: &quot;A wind coming round to the west therefore takes a village's noise away from anybody standing east of it, all at once and quite completely, and puts it into the ears of somebody who was not listening.&quot;,<br />
+&quot;reason&quot;: &quot;Contradicts preceding statement that 'on the downwind side sound is bent down toward the listener'—east is downwind of a westerly wind, so should receive sound better, not have it taken away.&quot;<br />
+}<br />
+]<br />
+For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.<br />
+Additional standing duty for author's notes: take the note's FINAL sentence and rule &quot;fact or gesture?&quot; - a withheld fact the reader must decode is a cute-cryptic-closer violation (add to judge_added); a personal fact that lands (like the iodine closer &quot;I did this at fourteen... never entirely got over it&quot;) is fine. Also: notes should usually be under 300 words (warn only), and must be real-world content in the author persona.<br />
+Judge hints: phrases like &quot;you learn&quot;, &quot;says you should&quot;, &quot;there is only one answer&quot; often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; &quot;wants [gerund]&quot; retired; &quot;nought&quot; retired, write &quot;zero&quot;); &quot;'ll not&quot; in non-first person is a judgement call, not a ban; &quot;[amount] of it&quot; and &quot;I'll say it&quot; are warning signs needing judgement.<br />
 You may add violations the hunters missed as judge_added {rule_id, quote, reason}. Never rewrite the text.</p></blockquote>
 
 
@@ -35,13 +48,13 @@ You may add violations the hunters missed as judge_added {rule_id, quote, reason
 </div>
 
 <details><summary>8 tool calls</summary>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/author-notes/ | head -50; echo ---; cat ⟦redacted: p…</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/draft/book-01/author-notes/ | head -50; echo ---; cat <span class="redacted">redacted</span>/draft/book…</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json</p>
 <p>✅ 54 lines, 2247 chars</p>
 <p>✅ 43 lines, 2067 chars</p>
 <p>🔧 Bash: grep -n '"id"' <span class="redacted">redacted: private</span></p>
 <p>✅ 110 lines, 4091 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"verdicts": [{"rule_id": "sense", "quote": "A wind coming…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a4965932e2aa41060">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Also chapters/006-the-handover.md — the groundwork this restages, which the author rates good and which drew no comments from him on this passage. This is the last scene before the road; note whether its ending is a cut or a cadence.<br>
-<br>
-Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a4965932e2aa41060">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Also chapters/006-the-handover.md — the groundwork this restages, which the author rates good and which drew no comments from him on this passage. This is the last scene before the road; note whether its ending is a cut or a cadence.</p>
+<p>Report findings only, per the skill's &quot;How to report&quot;: quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or &quot;cut&quot;. Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -32,51 +43,51 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 <p>✅ 24 lines, 3028 chars</p>
 <p>🔧 Bash: ls draft/book-01/scenes/ &amp;&amp; wc -w draft/book-01/scenes/24-which-way-at-the-bridge.md</p>
 <p>✅ 25 lines, 669 chars — 01-pellings-half-past-twelve-soft.md / 02-a-war-horse-on-a-milk-cart.md / 03-until-fulfilled.md</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; cat 19-the-two-lists.md 20-one-more-week.m…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; cat 19-the-two-lists.md 20-one-more-week.md 21-the-…</p>
 <p>✅ 191 lines, 20226 chars</p>
 <p>🔧 Bash: cat chapters/006-the-handover.md &amp;&amp; echo ==== &amp;&amp; cat notes/canon/characters/sorrel.md &amp;&amp;…</p>
 <p>✅ 93 lines, 10039 chars</p>
 <p>🔧 Bash: cat notes/canon/characters/sorrel.md; echo "===="; cat notes/canon/characters/minor.md</p>
 <p>✅ 44 lines, 2191 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; wc -c *.md</p>
-<p>✅ 9 lines, 169 chars —    14244 <span class="redacted">redacted: character</span>.md /    58881 edwin.md /    20925 ferrin.md</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; cat minor.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; wc -c *.md</p>
+<p>✅ 9 lines, 169 chars —    14244 <span class="redacted">redacted</span>.md /    58881 edwin.md /    20925 ferrin.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; cat minor.md</p>
 <p>✅ 39 lines, 2197 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '1,400p' bkhd5j79p.txt</p>
 <p>✅ 400 lines, 24364 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; head -30 01-pellings-half-past-twelve-soft…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; head -30 01-pellings-half-past-twelve-soft.md &amp;&amp; ec…</p>
 <p>✅ 54 lines, 6076 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "germination\|racks\|Hobbet\|whi…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "germination\|racks\|Hobbet\|which way\|D…</p>
 <p>✅ 18 lines, 1449 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '300,380p;510,540p;720,760p' sorr…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '300,380p;510,540p;720,760p' sorrel.md; ec…</p>
 <p>✅ 223 lines, 13117 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; grep -n "Dob\|chalk\|wall" *.md | grep -v…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; grep -n "Dob\|chalk\|wall" *.md | grep -v "^24"</p>
 <p>✅ 17 lines, 6492 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Read: the skill in full, scenes 01–24, `chapters/006-the-handover.md`, and the canon files (peri, sorrel, minor, edwin — the Dob/wall ruling, Peri's Day-7 kit entry, Sorrel's racks entries).</p>
-<p>## Findings</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-Part 1 — *a pronoun or reference has no clear antecedent*. <span class="redacted">redacted sentence: unpublished prose</span> "Somebody" throws that away and manufactures a mystery agent.<br>
+<p>Read: the skill in full, scenes 01–24, <code>chapters/006-the-handover.md</code>, and the canon files (peri, sorrel, minor, edwin — the Dob/wall ruling, Peri's Day-7 kit entry, Sorrel's racks entries).</p>
+<h2>Findings</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+Part 1 — <em>a pronoun or reference has no clear antecedent</em>. <span class="redacted">redacted sentence: unpublished prose</span> &quot;Somebody&quot; throws that away and manufactures a mystery agent.<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**2.** "Dob was by the gate with nothing in his hands"<br>
-Part 2 — *a beat that notes something must have a proposition under it or go*. <span class="redacted">redacted sentence: unpublished prose</span> Nothing in scenes 01–23 shows Dob carrying chalk (scene 04 gives the wall as his father's cart shed, in the village, and no stub), so "nothing in his hands" registers as pointed absence with nothing for it to be absent from.<br>
-→ cut "with nothing in his hands": "Dob was by the gate, having come up on his own judgment."</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-Part 1 — *an explanation stops halfway* / *a qualification is attached to nothing*. The chain is meant to explain why an eleven-year-old is at the top of the hill at dawn, but the middle step is missing: the wall's standards give the *timing* rule, and only the unstated inference "so the leaving has to be watched, not reported" makes them a reason to climb. The groundwork carried it because "Nobody had consulted him" sat in front of "on his own judgment"; with that clause gone, "on his own judgment" is a qualification with its reason removed (Part 1's last bullet — the Widow Sepp case). <span class="redacted">redacted sentence: unpublished prose</span><br>
-→ "Dob was by the gate, and nobody had asked him to be. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-Part 1 — *check every fact inside the scene*, against scene 21, which settles the autumn course in detail: "The autumn course, pruning and frost-sense". A pruning-and-frost-sense course does not run seed trials. The germination work on the page belongs to Sorrel's list item — the seed order "to be checked against last year's germination figures" — and that order does not arrive from the crossroads for another three weeks, so these trays are not it either. The attribution is inherited from ch. 006, which predates scene 21's naming of the course, and it is now a dependent of that edit.<br>
-→ "forty small trays of germination samples"</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span> They would be in full sun an hour earlier than anyone had planned."</p>
-<p>**6.** "Dob stood where he was, to see it finish."<br>
-Part 1 — *a pronoun has no clear antecedent*. The nearest antecedent is Mrs Hobbet's going home, one clause earlier; the intended referent is the departure, four paragraphs back.<br>
-→ "Dob stood where he was, to see the leaving finish."</p>
-<p>## Closing</p>
-<p>The device a second round would be about is the binding. This is the last scene before the road and the last scene in which the geas is a thing between these two people in a yard; scene 22 has Peri using it out loud ("the binding let me work out which way"), and here Edwin walks east — the direction the binding wants — with no line, of his or the narration's, registering that he is doing the thing he was compelled to do and going anyway. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>To make it work it has to cost one clause, not a paragraph, and it has to come from Edwin's side, since Peri saying anything about it would be her spending the vindication scene 22 established she does not spend: a half-line in the "You'll look after her" beat or in the last movement where he registers that the road east is also the road the binding chose, and that this is the first time the two have pointed the same way. Otherwise cut the destiny half-nod too and let it stay unshadowed on purpose. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><strong>2.</strong> &quot;Dob was by the gate with nothing in his hands&quot;<br />
+Part 2 — <em>a beat that notes something must have a proposition under it or go</em>. <span class="redacted">redacted sentence: unpublished prose</span> Nothing in scenes 01–23 shows Dob carrying chalk (scene 04 gives the wall as his father's cart shed, in the village, and no stub), so &quot;nothing in his hands&quot; registers as pointed absence with nothing for it to be absent from.<br />
+→ cut &quot;with nothing in his hands&quot;: &quot;Dob was by the gate, having come up on his own judgment.&quot;</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+Part 1 — <em>an explanation stops halfway</em> / <em>a qualification is attached to nothing</em>. The chain is meant to explain why an eleven-year-old is at the top of the hill at dawn, but the middle step is missing: the wall's standards give the <em>timing</em> rule, and only the unstated inference &quot;so the leaving has to be watched, not reported&quot; makes them a reason to climb. The groundwork carried it because &quot;Nobody had consulted him&quot; sat in front of &quot;on his own judgment&quot;; with that clause gone, &quot;on his own judgment&quot; is a qualification with its reason removed (Part 1's last bullet — the Widow Sepp case). <span class="redacted">redacted sentence: unpublished prose</span><br />
+→ &quot;Dob was by the gate, and nobody had asked him to be. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+Part 1 — <em>check every fact inside the scene</em>, against scene 21, which settles the autumn course in detail: &quot;The autumn course, pruning and frost-sense&quot;. A pruning-and-frost-sense course does not run seed trials. The germination work on the page belongs to Sorrel's list item — the seed order &quot;to be checked against last year's germination figures&quot; — and that order does not arrive from the crossroads for another three weeks, so these trays are not it either. The attribution is inherited from ch. 006, which predates scene 21's naming of the course, and it is now a dependent of that edit.<br />
+→ &quot;forty small trays of germination samples&quot;</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> They would be in full sun an hour earlier than anyone had planned.&quot;</p>
+<p><strong>6.</strong> &quot;Dob stood where he was, to see it finish.&quot;<br />
+Part 1 — <em>a pronoun has no clear antecedent</em>. The nearest antecedent is Mrs Hobbet's going home, one clause earlier; the intended referent is the departure, four paragraphs back.<br />
+→ &quot;Dob stood where he was, to see the leaving finish.&quot;</p>
+<h2>Closing</h2>
+<p>The device a second round would be about is the binding. This is the last scene before the road and the last scene in which the geas is a thing between these two people in a yard; scene 22 has Peri using it out loud (&quot;the binding let me work out which way&quot;), and here Edwin walks east — the direction the binding wants — with no line, of his or the narration's, registering that he is doing the thing he was compelled to do and going anyway. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>To make it work it has to cost one clause, not a paragraph, and it has to come from Edwin's side, since Peri saying anything about it would be her spending the vindication scene 22 established she does not spend: a half-line in the &quot;You'll look after her&quot; beat or in the last movement where he registers that the road east is also the road the binding chose, and that this is the first time the two have pointed the same way. Otherwise cut the destiny half-nod too and let it stay unshadowed on purpose. <span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 </body></html>

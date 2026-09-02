@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,17 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a91ce6303031acc40">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 17-. Read it in full.<br>
-LENS: wit. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and extract ONLY the rules with "tier": "semantic" and "lens": "wit". Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a91ce6303031acc40">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 17-. Read it in full.<br />
+LENS: wit. Read <span class="redacted">redacted</span>/tools/lint/rules.json and extract ONLY the rules with &quot;tier&quot;: &quot;semantic&quot; and &quot;lens&quot;: &quot;wit&quot;. Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
@@ -25,7 +38,7 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>I'll help you lint the target file for wit-related semantic issues. Let me start by finding the file and reading the rules.</p>
 </div>
 
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | grep "^17-"</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/draft/book-01/scenes/ | grep "^17-"</p>
 <p>✅ 1 lines, 26 chars</p>
 <p>🔧 Read tools/lint/rules.json</p>
 <p>✅ 1196 lines, 51733 chars</p>
@@ -48,43 +61,53 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>Now I'll apply the semantic + wit rules to this scene. Let me extract them and analyze the text carefully.</p>
 </div>
 
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json | python3 -c " import json, sys rules_text…</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json | python3 -c " import json, sys rules_text = sys.std…</p>
 <p>✅ 49 lines, 4311 chars</p>
 
 <div class="assistant-prose">
 <p>Now let me analyze the scene against each of these rules. I'll read through systematically, checking for:</p>
-<p>1. **triad-swerve-budget**: Lists of three where the third item confesses or swerves<br>
-2. **long-build-short-drop-budget**: Long sentence + short fragment rhythm used as engine (max 2/scene)<br>
-3. **quiet-the-way-budget**: "quiet the way X is quiet" (max 1/scene)<br>
-4. **aphorism-budget**: Portable narrator aphorisms (max 1/scene)<br>
-5. **ornament-wit**: Narrator decorating facts vs. event-sourced humor<br>
-6. **jukebox-flourish**: Flourishes without a job<br>
-7. **wrong-world-metaphor**: Metaphors from wrong economy/tech level<br>
-8. **joke-rhythm-no-logic**: Sentence shape without logic underneath<br>
-9. **weak-comic-beat-flat**: Comic observation stated flatly with energy spent<br>
-10. **joke-character-could-not-make**: Dialogue funny for reader but character wouldn't say it</p>
+<ol>
+<li><strong>triad-swerve-budget</strong>: Lists of three where the third item confesses or swerves</li>
+<li><strong>long-build-short-drop-budget</strong>: Long sentence + short fragment rhythm used as engine (max 2/scene)</li>
+<li><strong>quiet-the-way-budget</strong>: &quot;quiet the way X is quiet&quot; (max 1/scene)</li>
+<li><strong>aphorism-budget</strong>: Portable narrator aphorisms (max 1/scene)</li>
+<li><strong>ornament-wit</strong>: Narrator decorating facts vs. event-sourced humor</li>
+<li><strong>jukebox-flourish</strong>: Flourishes without a job</li>
+<li><strong>wrong-world-metaphor</strong>: Metaphors from wrong economy/tech level</li>
+<li><strong>joke-rhythm-no-logic</strong>: Sentence shape without logic underneath</li>
+<li><strong>weak-comic-beat-flat</strong>: Comic observation stated flatly with energy spent</li>
+<li><strong>joke-character-could-not-make</strong>: Dialogue funny for reader but character wouldn't say it</li>
+</ol>
 <p>Reading through the full scene carefully:</p>
-<p>**Quiet-the-way construction found:**<br>
-- "it was quiet the way a full church is quiet" (para 15)<br>
-- This is one instance; budget max 1 per scene. WITHIN BUDGET.</p>
-<p>**Aphorisms found:**<br>
-- "Frightened men do first and write after." (para 9) - This is a portable observation about human nature/psychology responding to the specific situation (the College's decision to send soil before the letter arrived). <span class="redacted">redacted sentence: unpublished prose</span> WITHIN BUDGET (max 1).</p>
-<p>**Metaphors/flourishes:**<br>
-- "A handful of living dirt was a city" - This arises from his sensory experience and explains the complexity he senses. Event-sourced, has a job.<br>
-- "Roots trading with the things on roots, worm and grub and mould" - Personification explaining the system in the soil. Event-sourced, purposeful.<br>
-- "and did not hurry the biscuits" - Shows Sorrel's character; event-sourced characterization, not ornament wit.<br>
-- "the overwatered bed grumbling, the starved bed thin, the weedy one riotous" - Arise from his listening perception, not narrator decoration.</p>
-<p>**No violations found for:**<br>
-- Triad-swerve (no confessing third items)<br>
-- Long-build-short-drop (short fragments like "Silence. Not dead soil." are not followed by pattern engine use)<br>
-- Joke-rhythm-no-logic (examined key lines; all have logic when restated plainly)<br>
-- Weak-comic-beat-flat<br>
-- Joke-character-could-not-make<br>
-- Jukebox-flourish (all flourishes have purposes)<br>
-- Wrong-world-metaphor<br>
-- Ornament-wit (wit is event-sourced throughout)</p>
+<p><strong>Quiet-the-way construction found:</strong></p>
+<ul>
+<li>&quot;it was quiet the way a full church is quiet&quot; (para 15)</li>
+<li>This is one instance; budget max 1 per scene. WITHIN BUDGET.</li>
+</ul>
+<p><strong>Aphorisms found:</strong></p>
+<ul>
+<li>&quot;Frightened men do first and write after.&quot; (para 9) - This is a portable observation about human nature/psychology responding to the specific situation (the College's decision to send soil before the letter arrived). <span class="redacted">redacted sentence: unpublished prose</span> WITHIN BUDGET (max 1).</li>
+</ul>
+<p><strong>Metaphors/flourishes:</strong></p>
+<ul>
+<li>&quot;A handful of living dirt was a city&quot; - This arises from his sensory experience and explains the complexity he senses. Event-sourced, has a job.</li>
+<li>&quot;Roots trading with the things on roots, worm and grub and mould&quot; - Personification explaining the system in the soil. Event-sourced, purposeful.</li>
+<li>&quot;and did not hurry the biscuits&quot; - Shows Sorrel's character; event-sourced characterization, not ornament wit.</li>
+<li>&quot;the overwatered bed grumbling, the starved bed thin, the weedy one riotous&quot; - Arise from his listening perception, not narrator decoration.</li>
+</ul>
+<p><strong>No violations found for:</strong></p>
+<ul>
+<li>Triad-swerve (no confessing third items)</li>
+<li>Long-build-short-drop (short fragments like &quot;Silence. Not dead soil.&quot; are not followed by pattern engine use)</li>
+<li>Joke-rhythm-no-logic (examined key lines; all have logic when restated plainly)</li>
+<li>Weak-comic-beat-flat</li>
+<li>Joke-character-could-not-make</li>
+<li>Jukebox-flourish (all flourishes have purposes)</li>
+<li>Wrong-world-metaphor</li>
+<li>Ornament-wit (wit is event-sourced throughout)</li>
+</ul>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

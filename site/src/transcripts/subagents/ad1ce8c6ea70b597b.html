@@ -7,52 +7,64 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ad1ce8c6ea70b597b">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and <span class="redacted">redacted: private</span>/draft/book-01/scenes/39-read-it-as-six.md. Also read <span class="redacted">redacted: private</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance of that rule, worth a human look), FALSE-POSITIVE (misread, counter-example, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule) into one verdict. Then add to judge_added any clear violations of the semantic rules (scope "scene") the scanners missed. Be strict: the cost of a false CONFIRMED is DRMacIver's time.<br>
-<br>
-Candidates:<br>
-[<br>
- {<br>
-  "rule_id": "announce-before-deliver",<br>
-  "quote": "and said nothing else, and Edwin put the wax away and did not ask",<br>
-  "reason": "Announces Peri's silence (\"said nothing else\") before delivering Edwin's response to that silence; the announcement weakens the impact by priming the reader before the action."<br>
- },<br>
- {<br>
-  "rule_id": "aphorism-budget",<br>
-  "quote": "You alter the date the day the world alters, and you say in the letter what altered it.",<br>
-  "reason": "Portable philosophical aphorism about record-keeping; exceeds max 1 aphorism per scene"<br>
- },<br>
- {<br>
-  "rule_id": "aphorism-budget",<br>
-  "quote": "One name is easy to lose; four are not.",<br>
-  "reason": "Portable epigram about accountability; exceeds max 1 aphorism per scene"<br>
- },<br>
- {<br>
-  "rule_id": "aphorism-budget",<br>
-  "quote": "The letters work. They work slowly. Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send.",<br>
-  "reason": "Portable philosophical statement about written communication; exceeds max 1 aphorism per scene"<br>
- },<br>
- {<br>
-  "rule_id": "maxim-capped-speech",<br>
-  "quote": "You alter the date the day the world alters, and you say in the letter what altered it.",<br>
-  "reason": "First maxim-capped dialogue ending in scene; maxim-capped-speech rule allows one per scene"<br>
- },<br>
- {<br>
-  "rule_id": "maxim-capped-speech",<br>
-  "quote": "Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send.",<br>
-  "reason": "Second maxim-capped dialogue ending in scene; violates one-per-scene budget for maxims"<br>
- },<br>
- {<br>
-  "rule_id": "canon-scale-contradiction",<br>
-  "quote": "I have broken exactly one written date in three hundred years",<br>
-  "reason": "Edwin established as ~350 years old (ch. 006: 'three hundred and fifty') but states 'three hundred years' when referencing his lifetime span"<br>
- }<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ad1ce8c6ea70b597b">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted</span>/tools/lint/rules.json and <span class="redacted">redacted</span>/draft/book-01/scenes/39-read-it-as-six.md. Also read <span class="redacted">redacted</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance of that rule, worth a human look), FALSE-POSITIVE (misread, counter-example, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule) into one verdict. Then add to judge_added any clear violations of the semantic rules (scope &quot;scene&quot;) the scanners missed. Be strict: the cost of a false CONFIRMED is DRMacIver's time.</p>
+<p>Candidates:<br />
+[<br />
+{<br />
+&quot;rule_id&quot;: &quot;announce-before-deliver&quot;,<br />
+&quot;quote&quot;: &quot;and said nothing else, and Edwin put the wax away and did not ask&quot;,<br />
+&quot;reason&quot;: &quot;Announces Peri's silence (&quot;said nothing else&quot;) before delivering Edwin's response to that silence; the announcement weakens the impact by priming the reader before the action.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;You alter the date the day the world alters, and you say in the letter what altered it.&quot;,<br />
+&quot;reason&quot;: &quot;Portable philosophical aphorism about record-keeping; exceeds max 1 aphorism per scene&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;One name is easy to lose; four are not.&quot;,<br />
+&quot;reason&quot;: &quot;Portable epigram about accountability; exceeds max 1 aphorism per scene&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;The letters work. They work slowly. Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send.&quot;,<br />
+&quot;reason&quot;: &quot;Portable philosophical statement about written communication; exceeds max 1 aphorism per scene&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;You alter the date the day the world alters, and you say in the letter what altered it.&quot;,<br />
+&quot;reason&quot;: &quot;First maxim-capped dialogue ending in scene; maxim-capped-speech rule allows one per scene&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;Nothing in that envelope will be less true in twelve days, and if it would be, it isn't ready to send.&quot;,<br />
+&quot;reason&quot;: &quot;Second maxim-capped dialogue ending in scene; violates one-per-scene budget for maxims&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;canon-scale-contradiction&quot;,<br />
+&quot;quote&quot;: &quot;I have broken exactly one written date in three hundred years&quot;,<br />
+&quot;reason&quot;: &quot;Edwin established as ~350 years old (ch. 006: 'three hundred and fifty') but states 'three hundred years' when referencing his lifetime span&quot;<br />
+}<br />
 ]</p></blockquote>
 
 
@@ -61,17 +73,17 @@ Candidates:<br>
 </div>
 
 <details><summary>12 tool calls</summary>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json; echo "=====SCENE====="; cat ⟦redacted: pri…</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json; echo "=====SCENE====="; cat <span class="redacted">redacted</span>/draft/book-0…</p>
 <p>✅ 66 lines, 2240 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat draft/book-01/scenes/39-read-it-as-six.md; echo "=====RULES s…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat draft/book-01/scenes/39-read-it-as-six.md; echo "=====RULES scene-scop…</p>
 <p>✅ 20 lines, 2110 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,400p' draft/book-01/scenes/39-read-it-as-six.md | tail…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1,400p' draft/book-01/scenes/39-read-it-as-six.md | tail -c 12000</p>
 <p>✅ 35 lines, 5571 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 -c " import json rs=json.load(open('tools/lint/rules.json…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 -c " import json rs=json.load(open('tools/lint/rules.json')) ids={…</p>
 <p>✅ 89 lines, 3787 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "hundred and fifty\|three hundred\|four hundred" notes/c…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rn "hundred and fifty\|three hundred\|four hundred" notes/canon/ dra…</p>
 <p>✅ 30 lines, 3141 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"verdicts": [{"rule_id": "announce-before-deliver", "quote…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

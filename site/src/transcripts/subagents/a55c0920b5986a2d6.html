@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read notes/decision-principles.md principl…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. Read notes/decision-principles.md principle 7 (conv…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,16 +7,28 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read notes/decision-principles.md principl…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a55c0920b5986a2d6">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. Read notes/decision-principles.md principle 7 (conventional in form, never borrowed Earth content — weekday names named explicitly), notes/voice-exemplars.md, then grep -rn "Thursday\|Tuesday\|Wednesday\|Monday\|Friday\|Saturday\|Sunday" across chapters/, notes/, summaries/, plans/ <span class="redacted">unpublished</span> (exclude samples/ and .claude/).<br>
-<br>
-Ruling (decided, implement): Earth weekday names are Earth content and come off the page. We do NOT invent seven new day-names for ~9 mentions; instead every weekday reference becomes a FUNCTIONAL day or a date: the ford feud is "the market-day split" / "a feud about market day"; <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> 020 already has Edwin prescribing "a day written down beforehand" — use that); "Tuesday" references become the date or "two days on"; "his other week" phrasing for the rider is fine. Keep sentence rhythm; keep dialogue natural (Peri: "She said Thursdays." → "She said once a week. Same day every week."). Do the same in canon (timeline.md's "5 Fallowmonth = Thursday" entry becomes "5 Fallowmonth = the drill day; weekday names undecided — never on the page"; geography/minor/<span class="redacted">redacted: character</span>/peri/summaries/plans references likewise), keeping the fact that a seven-day week with a fixed market day exists (from "fortnight"). Log the ruling in notes/canon/world/timeline.md's open questions ("weekday names: none on the page; functional days only; design before any appears") and in notes/decision-principles.md under principle 7 as an applied case. Then rebuild the epub exactly as build/ was done: pandoc --toc --toc-depth=1 --epub-chapter-level=1 -o book-1.epub build/title.md chapters/0*.md ; verify zero weekday hits in the extracted text (unzip -p book-1.epub '*.xhtml' | sed 's/&lt;[^&gt;]*&gt;//g' | grep -c "Thursday\|Tuesday"). Commit everything: "Remove Earth weekday names (principle 7); rebuild epub" with trailer "Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;". Return: each replacement (file, before → after) and the epub verification.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. Read notes/decision-principles.md principle 7 (conv…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a55c0920b5986a2d6">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-25</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. Read notes/decision-principles.md principle 7 (conventional in form, never borrowed Earth content — weekday names named explicitly), notes/voice-exemplars.md, then grep -rn &quot;Thursday|Tuesday|Wednesday|Monday|Friday|Saturday|Sunday&quot; across chapters/, notes/, summaries/, plans/ <span class="unpub-tag">unpublished</span> (exclude samples/ and .claude/).</p>
+<p>Ruling (decided, implement): Earth weekday names are Earth content and come off the page. We do NOT invent seven new day-names for ~9 mentions; instead every weekday reference becomes a FUNCTIONAL day or a date: the ford feud is &quot;the market-day split&quot; / &quot;a feud about market day&quot;; <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> 020 already has Edwin prescribing &quot;a day written down beforehand&quot; — use that); &quot;Tuesday&quot; references become the date or &quot;two days on&quot;; &quot;his other week&quot; phrasing for the rider is fine. Keep sentence rhythm; keep dialogue natural (Peri: &quot;She said Thursdays.&quot; → &quot;She said once a week. Same day every week.&quot;). Do the same in canon (timeline.md's &quot;5 Fallowmonth = Thursday&quot; entry becomes &quot;5 Fallowmonth = the drill day; weekday names undecided — never on the page&quot;; geography/minor/<span class="redacted">redacted</span>/peri/summaries/plans references likewise), keeping the fact that a seven-day week with a fixed market day exists (from &quot;fortnight&quot;). Log the ruling in notes/canon/world/timeline.md's open questions (&quot;weekday names: none on the page; functional days only; design before any appears&quot;) and in notes/decision-principles.md under principle 7 as an applied case. Then rebuild the epub exactly as build/ was done: pandoc --toc --toc-depth=1 --epub-chapter-level=1 -o book-1.epub build/title.md chapters/0*.md ; verify zero weekday hits in the extracted text (unzip -p book-1.epub '<em>.xhtml' | sed 's/&lt;[^&gt;]</em>&gt;//g' | grep -c &quot;Thursday|Tuesday&quot;). Commit everything: &quot;Remove Earth weekday names (principle 7); rebuild epub&quot; with trailer &quot;Co-Authored-By: Claude Fable 5 <a href="mailto:noreply@anthropic.com">noreply@anthropic.com</a>&quot;. Return: each replacement (file, before → after) and the epub verification.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -40,7 +52,7 @@ Ruling (decided, implement): Earth weekday names are Earth content and come off 
 <p>✅ 15 lines, 953 chars</p>
 <p>🔧 Bash: python3 - &lt;&lt;'EOF' import re,io edits = [ <span class="redacted">redacted sentence: unpublished prose</span>  ("chapte…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for spec in "notes/theme.md:274,280 <span class="redacted">unpublished</span>" "notes/canon/wo…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> for spec in "notes/theme.md:274,280 <span class="unpub-tag">unpublished</span>" "notes/canon/world/insti…</p>
 <p>✅ 98 lines, 5892 chars</p>
 </details>
 
@@ -49,17 +61,17 @@ Ruling (decided, implement): Earth weekday names are Earth content and come off 
 </div>
 
 <details><summary>16 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 - &lt;&lt;'EOF' edits = [  ("notes/theme.md <span class="redacted">unpublished</span>⟦redact…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> python3 - &lt;&lt;'EOF' edits = [  ("notes/theme.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '345,360p;388,398p;505,570p' notes/canon/world/timeline.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '345,360p;388,398p;505,570p' notes/canon/world/timeline.md</p>
 <p>✅ 93 lines, 5756 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 - &lt;&lt;'EOF' f="notes/canon/world/timeline.md"; s=open(f).rea…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> python3 - &lt;&lt;'EOF' f="notes/canon/world/timeline.md"; s=open(f).read() reps=…</p>
 <p>✅ 1 lines, 2 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 - &lt;&lt;'EOF' f="notes/decision-principles.md"; s=open(f).read…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> python3 - &lt;&lt;'EOF' f="notes/decision-principles.md"; s=open(f).read() a="…</p>
 <p>✅ 1 lines, 69 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for spec in "summaries/book-01.md:46,54" "summaries/book-01.md:140…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> for spec in "summaries/book-01.md:46,54" "summaries/book-01.md:140,146" "su…</p>
 <p>✅ 158 lines, 8853 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 - &lt;&lt;'EOF' edits=[ <span class="redacted">redacted sentence: unpublished prose</span> (…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> python3 - &lt;&lt;'EOF' edits=[ <span class="redacted">redacted sentence: unpublished prose</span> ("summarie…</p>
 <p>✅ 17 lines, 1894 chars</p>
 <p>🔧 Bash: pandoc --toc --toc-depth=1 --epub-chapter-level=1 -o book-1.epub build/title.md chapters/…</p>
 <p>✅ 4 lines, 134 chars</p>
@@ -68,19 +80,25 @@ Ruling (decided, implement): Earth weekday names are Earth content and come off 
 </details>
 
 <div class="assistant-prose">
-<p>Done and committed (e2a1f68). Epub verification: `unzip -p book-1.epub '*.xhtml' | sed 's/&lt;[^&gt;]*&gt;//g' | grep -c "Thursday\|Tuesday"` → **0**.</p>
+<p>Done and committed (e2a1f68). Epub verification: <code>unzip -p book-1.epub '*.xhtml' | sed 's/&lt;[^&gt;]*&gt;//g' | grep -c &quot;Thursday\|Tuesday&quot;</code> → <strong>0</strong>.</p>
 <p>Prose replacements (9 mentions, 5 chapters)</p>
-<p>- `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> Same day every week."<br>
-- `<span class="redacted">redacted: private</span>/chapters/022-the-made-road.md`: "because it was Thursday." → "because it was the drill day."; "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- `<span class="redacted">redacted: private</span>/chapters/031-the-work-continues.md`: "can walk there on Thursday" → "can walk there on market day"</p>
+<ul>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Same day every week.&quot;</li>
+<li><span class="redacted">redacted</span>/chapters/022-the-made-road.md: &quot;because it was Thursday.&quot; → &quot;because it was the drill day.&quot;; &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted</span>/chapters/031-the-work-continues.md: &quot;can walk there on Thursday&quot; → &quot;can walk there on market day&quot;</li>
+</ul>
 <p>Canon / notes (all Earth day-names removed, facts kept)</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span> quote → "on market day". Open question rewritten as the ruling: none on the page ever, functional days only, seven-day week + fixed market day + fixed drill day retained, design all seven under principle 7 before any name is used.<br>
-- `notes/decision-principles.md` principle 7: new "Applied case (DRMacIver, 2026-08-25) — weekday names" paragraph.<br>
-- `notes/canon/world/geography.md` "market day (a Thursday, chs. 001, 003)" → "market day (chs. 001, 003)"; `institutions.md` and `dungeons.md` "a warden Tuesday" → "a warden in two days"; `system.md` "Thursdays, with <span class="redacted">redacted: character</span>" → "The drill day, with <span class="redacted">redacted: character</span>"; `characters/peri.md` ×2 and `characters/<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> "a Thursday drill" → "the weekly drill".</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> quote → &quot;on market day&quot;. Open question rewritten as the ruling: none on the page ever, functional days only, seven-day week + fixed market day + fixed drill day retained, design all seven under principle 7 before any name is used.</p>
+<ul>
+<li><code>notes/decision-principles.md</code> principle 7: new &quot;Applied case (DRMacIver, 2026-08-25) — weekday names&quot; paragraph.</li>
+<li><code>notes/canon/world/geography.md</code> &quot;market day (a Thursday, chs. 001, 003)&quot; → &quot;market day (chs. 001, 003)&quot;; <code>institutions.md</code> and <code>dungeons.md</code> &quot;a warden Tuesday&quot; → &quot;a warden in two days&quot;; <code>system.md</code> &quot;Thursdays, with <span class="redacted">redacted</span>&quot; → &quot;The drill day, with <span class="redacted">redacted</span>&quot;; <code>characters/peri.md</code> ×2 and characters/<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> &quot;a Thursday drill&quot; → &quot;the weekly drill&quot;.</li>
+</ul>
 <p>Summaries / plans</p>
-<p>- `summaries/book-01.md` (×4, incl. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (×3), `plans/book-01/arc-03.md` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Left alone deliberately: historical findings files under `plans/book-01/arc-01-findings/`, <span class="redacted">unpublished</span> `arc-03-findings/` (records of past edits), the Avaunt quote in `notes/avaunt-craft-study.md`, the reader-critique quote in `notes/voices.md:232`, and `notes/premise.md:30`'s craft metaphor — none are on the page or forward-binding.</p>
+<ul>
+<li><code>summaries/book-01.md</code> (×4, incl. <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> (×3), <code>plans/book-01/arc-03.md</code> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p>Left alone deliberately: historical findings files under <code>plans/book-01/arc-01-findings/</code>, <span class="unpub-tag">unpublished</span> <code>arc-03-findings/</code> (records of past edits), the Avaunt quote in <code>notes/avaunt-craft-study.md</code>, the reader-critique quote in <code>notes/voices.md:232</code>, and <code>notes/premise.md:30</code>'s craft metaphor — none are on the page or forward-binding.</p>
 </div>
 </body></html>

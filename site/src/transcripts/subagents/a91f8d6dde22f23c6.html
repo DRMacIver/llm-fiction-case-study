@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a91f8d6dde22f23c6">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/20-one-more-week.md — REBUILT since a previous pass found it placed outside Day 6 and gave Peri knowledge she lacks; it now sits at four o'clock on Day 6 in the study, between scene 19's afternoon at the registers and scene 21's letter after supper. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> under "Owed fixes — Fix 1" (read that spec: not a decision scene, no line quotable as him choosing, the cost said in the vale's units, one other person who fails to notice). Read it after scenes 01–19 and before 21–22 in the same directory (they bind what is on the page: what Peri knows — she has NOT been told about the Fenholt letter or rings; what the registers gave him in 19; the rider at the Drovers since breakfast; Sorrel's two lists). <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a91f8d6dde22f23c6">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/20-one-more-week.md — REBUILT since a previous pass found it placed outside Day 6 and gave Peri knowledge she lacks; it now sits at four o'clock on Day 6 in the study, between scene 19's afternoon at the registers and scene 21's letter after supper. <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> under &quot;Owed fixes — Fix 1&quot; (read that spec: not a decision scene, no line quotable as him choosing, the cost said in the vale's units, one other person who fails to notice). Read it after scenes 01–19 and before 21–22 in the same directory (they bind what is on the page: what Peri knows — she has NOT been told about the Fenholt letter or rings; what the registers gave him in 19; the rider at the Drovers since breakfast; Sorrel's two lists). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Report findings only, per the skill's &quot;How to report&quot;: quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or &quot;cut&quot;. Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -32,7 +43,7 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 <p>✅ 44 lines, 3860 chars</p>
 <p>🔧 Bash: ls draft/book-01/scenes/ &amp;&amp; echo ---- &amp;&amp; cat draft/book-01/scenes/19-*.md draft/book-01/s…</p>
 <p>✅ 140 lines, 13797 chars</p>
-<p>🔧 Bash: sed -n '/Owed fixes/,/Fix 3/p' plans/book-01/arc-01.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: sed -n '/Owed fixes/,/Fix 3/p' plans/book-01/arc-01.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 227 lines, 14851 chars</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 177 lines, 10040 chars</p>
@@ -44,64 +55,102 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 <p>✅ 20 lines, 1023 chars</p>
 <p>🔧 Bash: sed -n '480,540p' notes/canon/world/institutions.md</p>
 <p>✅ 61 lines, 3682 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes; grep -n -i "fortnight\|two weeks\|village\|w…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes; grep -n -i "fortnight\|two weeks\|village\|whole vill…</p>
 <p>✅ 20 lines, 4564 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "frostmonth" notes/canon/world/*.md notes/canon/*.md |…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "frostmonth" notes/canon/world/*.md notes/canon/*.md | head -20…</p>
 <p>✅ 21 lines, 2029 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>## Findings</p>
-<p>**Part 1 — sense, counts, clock**</p>
-<p>1. **"A thing with no name isn't a fortnight's job, whatever I told Sorrel, and I told her a fortnight."**<br>
-Part 1, *check the clock / check who was in the room when a thing was said*. The fortnight has not been said yet. In scene 19 the "two weeks / call it two weeks at the outside" exchange happens when Sorrel brings bread and cheese **up at eight**; this scene is at **four o'clock the same day**. At four he cannot be quoting himself back.<br>
-Replacement: either move the referent to something he has said by four — `"A thing with no name isn't a fortnight's job, whatever I'm going to tell Sorrel tonight."` is worse — or cut the clause: `"A thing with no name isn't a fortnight's job."` Cut is cleanest; scene 19 then carries the fortnight for the first time, at eight, where it belongs and where it lands as self-deception.</p>
-<p>2. **"What I've not had is the five years before that, or the four names against the four plots, and there's a week in those."**<br>
-Part 1, *a word doing a job it cannot do* and *check every count*. Two failures. (a) "the five years before that" reads as five years **earlier** than the registers he has; he means the five years of registers themselves, unread. (b) "the four names against the four plots" invents a count nothing supports: the Wystow letter (scene 16) asked for "the names of who cast the revealings and in what order", which is a list of casters, not one name per plot; and the plots in scene 19 are plot 14, its neighbours (plural, uncounted), and plots at the far corner (plural) — not four.<br>
-Replacement: `"What I've not read is the five years themselves, or which man cast which revealing on which plot, and there's a week in those."`</p>
-<p>3. **"Marsh Barton and Upper Wold sit down at that ford every Frostmonth, in the cold, and they sit down for me"**<br>
-Part 1, *check the dependents* / fact against canon and against scene 21. <span class="redacted">redacted sentence: unpublished prose</span> "Every Frostmonth" additionally hardens a calendar fixture that canon frames as a renegotiation triggered when the frosts change the fords.<br>
-Replacement: `"Marsh Barton and Upper Wold stand on the far bank of that ford in the cold every winter the frosts move it, and they stand there for me, because I've done it for four generations of them. They'll not stand there for a letter."`</p>
-<p>4. **"You'd not know what you were looking at if you had. That's rather the point of it."**<br>
-Part 1, *a pronoun or reference has no clear antecedent*. "It" has three candidates — the ford, the feud, the convening — and the sentence changes meaning under each. Under "the ford" it is a truism; under "the convening" it is the good line.<br>
-Replacement: `"You'd not know what you were looking at if you had. Nobody does. That's what it's worth."` Or, plainer and stronger: `"No. There's nothing to see. That's the whole of what it costs me to have done it."`</p>
-<p>5. **"Nothing's come east of the bridge in three days but that box."**<br>
-Part 1, *weird phrasing / restate flat*. "Come east of the bridge" naturally means travelling **to** a position east of the bridge — outbound — but the sentence needs "come **from** east of the bridge". And restated flat the claim is inert: the Ashway is the post road; things cross it constantly. If the intended proposition is "no other news has come in", say that.<br>
-Replacement: `"Nothing's come over the bridge in three days but that box."` — or cut the sentence; the paragraph does not need it.</p>
-<p>6. **"'I've been doing the provisioning. Eighteen miles a day.'"** followed by Edwin's kit list.<br>
-Part 1, *check every fact* and Part 4, *a line must come from the want*. Eighteen is a number Peri has got out of the books, and Edwin — whose entire method is making people commit a number and then testing it — says nothing about it while correcting her about cheese and twine. He also gives twenty miles as the real figure two scenes later. Him letting a daily-distance figure go unchallenged is the one thing in the scene he would not do.<br>
-Replacement: give him one flat line and let it cost nothing: `"Eighteen miles a day."` / `"Twelve, the first week, and you'll be glad of twelve. Boots you've walked in…"` This costs four words and puts him back in character.</p>
-<p>7. **"Eighteen miles a day" … "it wants to be forty years old and you're eighteen."**<br>
-Part 1, *check every count*. "Eighteen" lands twice in three paragraphs in two unrelated senses, and the second is the joke. Change the first (see finding 6) or the joke goes muddy.</p>
-<p>8. **"He heard how that sounded and did not improve it."**<br>
-Part 1, *a qualification attached to nothing* / Part 2. "Did not improve it" is a shape without a proposition — improve it how, and what would improving have been? The preceding word is "Soil.", which does not obviously want improving.<br>
-Replacement: `"Soil," he said, and left it there.` Or cut the sentence and let "Soil." stand alone against the next line.</p>
-<p>**Part 2 — gesture at meaning**</p>
-<p>9. **"She looked at him with the face she used for things she was going to think about later"**<br>
-Part 2, *a beat that notes something must have a proposition under it*. "The face she used for X" asserts an established repertoire the reader cannot picture and cashes out only as "she was thinking". It is also the second consecutive paragraph in which the narrator tells us what Peri is privately doing with information (see "Peri wrote something in the notebook. He did not see what.", which does the same job better and concretely).<br>
-Replacement: cut; go straight to `She closed the notebook on her pencil.`</p>
-<p>10. **"and it's a small thing, and it's mine. <span class="redacted">redacted sentence: unpublished prose</span><br>
-Part 5, *redundancy — a fact already delivered is not delivered again in a different mouth*, and here in the same mouth: scene 21 has `"I know you know. I'm saying it so I've said it."` opposite Sorrel, which is the earned version because Sorrel answers it. Peri does not, so here it is a construction with nothing on the other side of it.<br>
-Replacement: cut the final sentence; end the speech on `"…and that's that finished, and it's a small thing, and it's mine."`</p>
-<p>**Part 4 — why would this character do or say this**</p>
-<p>11. **"She sat on the bench stool, and looked at the oilskin, and did not ask about it, because she had a list of her own things to ask and it was not on it."**<br>
-Part 4, *what does this person want and what does she know* / Part 1, *does the justification distinguish?* The scene's whole construction depends on Peri failing to notice, and the reason offered — the oilskin is not on her list — is not a reason that holds for **this** person. Peri has been waiting six days for exactly this and prices mules against it; a list she wrote is not a blindfold. The reason must come from something that makes not-asking natural: she thinks she knows what the oilskin is for (registers — which is what he has told Sorrel it is for, and what it is currently under).<br>
-Replacement: `She sat on the bench stool. The oilskin was for the registers; Sorrel had said so in the yard, fourth on the list. She had her own things to ask.`</p>
-<p>12. **"If a man went east," said Edwin, "he'd tell himself he'd be back for the frosts, and he might be."**<br>
-Part 4, *a character being wrong stays wrong at the right resolution* — inverted: this is the one sentence Peri cannot fail to notice, and she answers it with "I've never seen the ford." Everything she is is organised around Edwin going east. Saying "east" in front of her and getting no reaction is not obliviousness on her part; it is the scene protecting itself. It also spends scene 22's "It's starting" in advance, at four o'clock on the same day.<br>
-Replacement: take the direction out and leave the conditional in the vale's units, which is what the spec asks for: `"If I were away for the back end of the year," said Edwin, "I'd tell myself I'd be back for the frosts, and I might be. The trouble is the ford."` A man saying he might be away is something Peri can plausibly file as consulting-trip talk; "east" is not.</p>
-<p>13. **"Soil that six spells say is in good heart"**<br>
-Part 4, *a line must come from the want*. "Six spells" is not his register — they are the six standard revealings throughout, including in his own letter the same evening — and there is no one here to simplify for; Peri has been in his class three weeks.<br>
-Replacement: `"Soil that six revealings say is in good heart"`.</p>
-<p>**Part 6 — weak where it should be strong**</p>
-<p>14. **The opening sentence** (64 words, "and… and… and…", with "at four o'clock" buried in the third clause).<br>
-Part 6, *prefer the participial form to a chain of "and"s in a physical beat*; the clock is the load-bearing fact (the scene's whole placement problem was the clock) and it is the least visible thing in the sentence.<br>
-Replacement: `At four o'clock the oilskin was across the far end of the long bench in the study, under the registers. It had been in the bottom of the stair cupboard for forty years and had gone stiff along every fold, and he was working the folds soft with his thumbs between one plot number and the next when Peri Millbrook came to the door.`</p>
-<p>15. **"and did not put it back in the cupboard, and went back to the seam."**<br>
-Part 6 / Part 5. <span class="redacted">redacted sentence: unpublished prose</span><br>
-Replacement: `When she had gone he moved the registers off the oilskin and went back to the seam.` The oilskin is out on the bench either way; the reader does the arithmetic without being handed the negative.</p>
-<p>---</p>
-<p>**Device a second round would be about:** the failure-to-notice. <span class="redacted">redacted sentence: unpublished prose</span> the scene asks her not to notice a thing it keeps making unmissable, and the cost is that scene 22's "It's starting" is already spent.</p>
-<p>**What it would take:** move the not-noticing out of the narration and into the facts — she has an innocent explanation for the oilskin that Sorrel has already given her (finding 11), the cost is stated with no compass direction in it (finding 12), and the "so it's said" formula that flags a valediction is cut (finding 10). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<h2>Findings</h2>
+<p><strong>Part 1 — sense, counts, clock</strong></p>
+<ol>
+<li>
+<p><strong>&quot;A thing with no name isn't a fortnight's job, whatever I told Sorrel, and I told her a fortnight.&quot;</strong><br />
+Part 1, <em>check the clock / check who was in the room when a thing was said</em>. The fortnight has not been said yet. In scene 19 the &quot;two weeks / call it two weeks at the outside&quot; exchange happens when Sorrel brings bread and cheese <strong>up at eight</strong>; this scene is at <strong>four o'clock the same day</strong>. At four he cannot be quoting himself back.<br />
+Replacement: either move the referent to something he has said by four — <code>&quot;A thing with no name isn't a fortnight's job, whatever I'm going to tell Sorrel tonight.&quot;</code> is worse — or cut the clause: <code>&quot;A thing with no name isn't a fortnight's job.&quot;</code> Cut is cleanest; scene 19 then carries the fortnight for the first time, at eight, where it belongs and where it lands as self-deception.</p>
+</li>
+<li>
+<p><strong>&quot;What I've not had is the five years before that, or the four names against the four plots, and there's a week in those.&quot;</strong><br />
+Part 1, <em>a word doing a job it cannot do</em> and <em>check every count</em>. Two failures. (a) &quot;the five years before that&quot; reads as five years <strong>earlier</strong> than the registers he has; he means the five years of registers themselves, unread. (b) &quot;the four names against the four plots&quot; invents a count nothing supports: the Wystow letter (scene 16) asked for &quot;the names of who cast the revealings and in what order&quot;, which is a list of casters, not one name per plot; and the plots in scene 19 are plot 14, its neighbours (plural, uncounted), and plots at the far corner (plural) — not four.<br />
+Replacement: <code>&quot;What I've not read is the five years themselves, or which man cast which revealing on which plot, and there's a week in those.&quot;</code></p>
+</li>
+<li>
+<p><strong>&quot;Marsh Barton and Upper Wold sit down at that ford every Frostmonth, in the cold, and they sit down for me&quot;</strong><br />
+Part 1, <em>check the dependents</em> / fact against canon and against scene 21. <span class="redacted">redacted sentence: unpublished prose</span> &quot;Every Frostmonth&quot; additionally hardens a calendar fixture that canon frames as a renegotiation triggered when the frosts change the fords.<br />
+Replacement: <code>&quot;Marsh Barton and Upper Wold stand on the far bank of that ford in the cold every winter the frosts move it, and they stand there for me, because I've done it for four generations of them. They'll not stand there for a letter.&quot;</code></p>
+</li>
+<li>
+<p><strong>&quot;You'd not know what you were looking at if you had. That's rather the point of it.&quot;</strong><br />
+Part 1, <em>a pronoun or reference has no clear antecedent</em>. &quot;It&quot; has three candidates — the ford, the feud, the convening — and the sentence changes meaning under each. Under &quot;the ford&quot; it is a truism; under &quot;the convening&quot; it is the good line.<br />
+Replacement: <code>&quot;You'd not know what you were looking at if you had. Nobody does. That's what it's worth.&quot;</code> Or, plainer and stronger: <code>&quot;No. There's nothing to see. That's the whole of what it costs me to have done it.&quot;</code></p>
+</li>
+<li>
+<p><strong>&quot;Nothing's come east of the bridge in three days but that box.&quot;</strong><br />
+Part 1, <em>weird phrasing / restate flat</em>. &quot;Come east of the bridge&quot; naturally means travelling <strong>to</strong> a position east of the bridge — outbound — but the sentence needs &quot;come <strong>from</strong> east of the bridge&quot;. And restated flat the claim is inert: the Ashway is the post road; things cross it constantly. If the intended proposition is &quot;no other news has come in&quot;, say that.<br />
+Replacement: <code>&quot;Nothing's come over the bridge in three days but that box.&quot;</code> — or cut the sentence; the paragraph does not need it.</p>
+</li>
+<li>
+<p><strong>&quot;'I've been doing the provisioning. Eighteen miles a day.'&quot;</strong> followed by Edwin's kit list.<br />
+Part 1, <em>check every fact</em> and Part 4, <em>a line must come from the want</em>. Eighteen is a number Peri has got out of the books, and Edwin — whose entire method is making people commit a number and then testing it — says nothing about it while correcting her about cheese and twine. He also gives twenty miles as the real figure two scenes later. Him letting a daily-distance figure go unchallenged is the one thing in the scene he would not do.<br />
+Replacement: give him one flat line and let it cost nothing: <code>&quot;Eighteen miles a day.&quot;</code> / <code>&quot;Twelve, the first week, and you'll be glad of twelve. Boots you've walked in…&quot;</code> This costs four words and puts him back in character.</p>
+</li>
+<li>
+<p><strong>&quot;Eighteen miles a day&quot; … &quot;it wants to be forty years old and you're eighteen.&quot;</strong><br />
+Part 1, <em>check every count</em>. &quot;Eighteen&quot; lands twice in three paragraphs in two unrelated senses, and the second is the joke. Change the first (see finding 6) or the joke goes muddy.</p>
+</li>
+<li>
+<p><strong>&quot;He heard how that sounded and did not improve it.&quot;</strong><br />
+Part 1, <em>a qualification attached to nothing</em> / Part 2. &quot;Did not improve it&quot; is a shape without a proposition — improve it how, and what would improving have been? The preceding word is &quot;Soil.&quot;, which does not obviously want improving.<br />
+Replacement: <code>&quot;Soil,&quot; he said, and left it there.</code> Or cut the sentence and let &quot;Soil.&quot; stand alone against the next line.</p>
+</li>
+</ol>
+<p><strong>Part 2 — gesture at meaning</strong></p>
+<ol start="9">
+<li>
+<p><strong>&quot;She looked at him with the face she used for things she was going to think about later&quot;</strong><br />
+Part 2, <em>a beat that notes something must have a proposition under it</em>. &quot;The face she used for X&quot; asserts an established repertoire the reader cannot picture and cashes out only as &quot;she was thinking&quot;. It is also the second consecutive paragraph in which the narrator tells us what Peri is privately doing with information (see &quot;Peri wrote something in the notebook. He did not see what.&quot;, which does the same job better and concretely).<br />
+Replacement: cut; go straight to <code>She closed the notebook on her pencil.</code></p>
+</li>
+<li>
+<p>&quot;and it's a small thing, and it's mine. <span class="redacted">redacted sentence: unpublished prose</span><br />
+Part 5, <em>redundancy — a fact already delivered is not delivered again in a different mouth</em>, and here in the same mouth: scene 21 has <code>&quot;I know you know. I'm saying it so I've said it.&quot;</code> opposite Sorrel, which is the earned version because Sorrel answers it. Peri does not, so here it is a construction with nothing on the other side of it.<br />
+Replacement: cut the final sentence; end the speech on <code>&quot;…and that's that finished, and it's a small thing, and it's mine.&quot;</code></p>
+</li>
+</ol>
+<p><strong>Part 4 — why would this character do or say this</strong></p>
+<ol start="11">
+<li>
+<p><strong>&quot;She sat on the bench stool, and looked at the oilskin, and did not ask about it, because she had a list of her own things to ask and it was not on it.&quot;</strong><br />
+Part 4, <em>what does this person want and what does she know</em> / Part 1, <em>does the justification distinguish?</em> The scene's whole construction depends on Peri failing to notice, and the reason offered — the oilskin is not on her list — is not a reason that holds for <strong>this</strong> person. Peri has been waiting six days for exactly this and prices mules against it; a list she wrote is not a blindfold. The reason must come from something that makes not-asking natural: she thinks she knows what the oilskin is for (registers — which is what he has told Sorrel it is for, and what it is currently under).<br />
+Replacement: <code>She sat on the bench stool. The oilskin was for the registers; Sorrel had said so in the yard, fourth on the list. She had her own things to ask.</code></p>
+</li>
+<li>
+<p><strong>&quot;If a man went east,&quot; said Edwin, &quot;he'd tell himself he'd be back for the frosts, and he might be.&quot;</strong><br />
+Part 4, <em>a character being wrong stays wrong at the right resolution</em> — inverted: this is the one sentence Peri cannot fail to notice, and she answers it with &quot;I've never seen the ford.&quot; Everything she is is organised around Edwin going east. Saying &quot;east&quot; in front of her and getting no reaction is not obliviousness on her part; it is the scene protecting itself. It also spends scene 22's &quot;It's starting&quot; in advance, at four o'clock on the same day.<br />
+Replacement: take the direction out and leave the conditional in the vale's units, which is what the spec asks for: <code>&quot;If I were away for the back end of the year,&quot; said Edwin, &quot;I'd tell myself I'd be back for the frosts, and I might be. The trouble is the ford.&quot;</code> A man saying he might be away is something Peri can plausibly file as consulting-trip talk; &quot;east&quot; is not.</p>
+</li>
+<li>
+<p><strong>&quot;Soil that six spells say is in good heart&quot;</strong><br />
+Part 4, <em>a line must come from the want</em>. &quot;Six spells&quot; is not his register — they are the six standard revealings throughout, including in his own letter the same evening — and there is no one here to simplify for; Peri has been in his class three weeks.<br />
+Replacement: <code>&quot;Soil that six revealings say is in good heart&quot;</code>.</p>
+</li>
+</ol>
+<p><strong>Part 6 — weak where it should be strong</strong></p>
+<ol start="14">
+<li>
+<p><strong>The opening sentence</strong> (64 words, &quot;and… and… and…&quot;, with &quot;at four o'clock&quot; buried in the third clause).<br />
+Part 6, <em>prefer the participial form to a chain of &quot;and&quot;s in a physical beat</em>; the clock is the load-bearing fact (the scene's whole placement problem was the clock) and it is the least visible thing in the sentence.<br />
+Replacement: <code>At four o'clock the oilskin was across the far end of the long bench in the study, under the registers. It had been in the bottom of the stair cupboard for forty years and had gone stiff along every fold, and he was working the folds soft with his thumbs between one plot number and the next when Peri Millbrook came to the door.</code></p>
+</li>
+<li>
+<p><strong>&quot;and did not put it back in the cupboard, and went back to the seam.&quot;</strong><br />
+Part 6 / Part 5. <span class="redacted">redacted sentence: unpublished prose</span><br />
+Replacement: <code>When she had gone he moved the registers off the oilskin and went back to the seam.</code> The oilskin is out on the bench either way; the reader does the arithmetic without being handed the negative.</p>
+</li>
+</ol>
+<hr />
+<p><strong>Device a second round would be about:</strong> the failure-to-notice. <span class="redacted">redacted sentence: unpublished prose</span> the scene asks her not to notice a thing it keeps making unmissable, and the cost is that scene 22's &quot;It's starting&quot; is already spent.</p>
+<p><strong>What it would take:</strong> move the not-noticing out of the narration and into the facts — she has an innocent explanation for the oilskin that Sorrel has already given her (finding 11), the cost is stated with no compass direction in it (finding 12), and the &quot;so it's said&quot; formula that flags a valediction is cut (finding 10). <span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 </body></html>

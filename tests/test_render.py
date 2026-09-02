@@ -22,6 +22,78 @@ def test_esc_inline_short_form():
     assert '<span class="redacted">redacted: place</span>' in out
 
 
+def test_esc_gives_bare_unpublished_marker_its_own_tag_class():
+    # "unpublished" isn't hiding anything (the path/scene number it's
+    # attached to stays fully visible), so it must not look like the
+    # "redacted" pill that stands in for genuinely hidden text.
+    out = render.esc("plans/book-01/overview.md ⟦unpublished⟧")
+    assert '<span class="unpub-tag">unpublished</span>' in out
+    assert '<span class="redacted">unpublished</span>' not in out
+
+
+def test_esc_inserts_separator_between_adjacent_redaction_spans():
+    out = render.esc("⟦redacted sentence: unpublished prose⟧⟦redacted: character⟧ charm")
+    assert "</span> <span" in out
+    assert "</span><span" not in out
+
+
+def test_esc_title_never_emits_real_html_markup():
+    out = render.esc_title("Repo: ⟦redacted: private⟧. ⟦redacted sentence: unpublished prose⟧ The plan")
+    assert "<span" not in out
+    assert "[redacted]" in out
+
+
+def test_esc_title_labels_unpublished_marker_distinctly():
+    out = render.esc_title("chapters/57-x.md ⟦unpublished⟧")
+    assert "[unpublished]" in out
+
+
+def test_esc_title_escapes_raw_html_once():
+    out = render.esc_title("<script>alert(1)</script>")
+    assert "<script>" not in out
+    assert "&lt;script&gt;" in out
+    assert "&amp;lt;" not in out  # never double-escaped
+
+
+def test_render_markdown_bullet_list():
+    out = render.render_markdown("- one\n- two\n- three")
+    assert "<ul>" in out
+    assert "<li>one</li>" in out
+    assert "<li>two</li>" in out
+
+
+def test_render_markdown_bold():
+    out = render.render_markdown("this is **bold** text")
+    assert "<strong>bold</strong>" in out
+
+
+def test_render_markdown_fenced_code_block():
+    out = render.render_markdown("some code:\n\n```python\nprint(1)\n```")
+    assert "<pre>" in out
+    assert "<code" in out
+    assert "print(1)" in out
+
+
+def test_render_markdown_table():
+    out = render.render_markdown("| a | b |\n|---|---|\n| 1 | 2 |")
+    assert "<table>" in out
+    assert "<td>1</td>" in out
+    assert '<div class="table-wrap">' in out
+
+
+def test_render_markdown_redaction_marker_inside_bold():
+    out = render.render_markdown("**⟦redacted: character⟧**")
+    assert '<span class="redacted">redacted: character</span>' in out
+    assert "⟦" not in out and "⟧" not in out
+    assert "<strong>" in out
+
+
+def test_render_markdown_escapes_raw_html_in_source():
+    out = render.render_markdown("before <script>alert(1)</script> after")
+    assert "<script>" not in out
+    assert "&lt;script&gt;" in out
+
+
 def test_truncate_short_text_untouched():
     assert render.truncate("hello", 100) == "hello"
 
@@ -30,6 +102,31 @@ def test_truncate_long_text_gets_ellipsis():
     out = render.truncate("x" * 200, 50)
     assert len(out) == 50
     assert out.endswith("…")
+
+
+def test_truncate_never_cuts_inside_a_redaction_marker():
+    # A naive character-cut here would land inside "⟦unpublished⟧",
+    # producing a dangling "⟦unpublished" that esc()/esc_inline() can't
+    # recognise as a marker (no closing ⟧) and so leaks raw bracket text.
+    text = "cat draft/book-01/scenes/41-calm-hands.md ⟦unpublished⟧ <<'EOF'"
+    n = text.index("⟦") + 6  # lands mid-marker
+    out = render.truncate(text, n)
+    assert "⟦unpublished" not in out or "⟦unpublished⟧" in out
+    assert render.esc_inline(out).count("⟦") == 0
+
+
+def test_truncate_extends_through_marker_close_when_cut_lands_inside_it():
+    text = "prefix " + "x" * 5 + "⟦unpublished⟧" + " suffix text that is not shown"
+    out = render.truncate(text, len("prefix ") + 5 + 3)  # cut a few chars into the marker
+    assert out.startswith("prefix xxxxx⟦unpublished⟧")
+    assert out.endswith("…")
+
+
+def test_truncate_backs_up_before_marker_when_no_closing_bracket_present():
+    text = "prefix " + "x" * 5 + "⟦unpublished" + "y" * 50  # malformed: no closing ⟧ anywhere
+    out = render.truncate(text, len("prefix ") + 5 + 3)
+    assert "⟦" not in out
+    assert out == "prefix xxxxx…"
 
 
 def test_truncate_collapses_newlines():
@@ -53,6 +150,17 @@ def test_tool_use_summary_edit():
 def test_tool_use_summary_agent():
     out = render.tool_use_summary({"tool": "Agent", "description": "Canon lens on scene 23"})
     assert "Agent: Canon lens on scene 23" in out
+
+
+def test_tool_use_summary_falls_back_to_input_for_unhandled_tools():
+    out = render.tool_use_summary({"tool": "ToolSearch", "input": '{"query": "notebook"}'})
+    assert out.startswith("ToolSearch (")
+    assert "notebook" in out
+
+
+def test_tool_use_summary_bare_name_when_no_input():
+    out = render.tool_use_summary({"tool": "SomeWeirdTool"})
+    assert out == "SomeWeirdTool"
 
 
 def test_tool_use_line_links_to_known_subagent():
@@ -96,6 +204,45 @@ def test_render_turn_user_david_label():
     assert "<strong>User:</strong>" not in out
 
 
+def test_render_turn_system_note_never_attributed_to_david():
+    turn = {
+        "role": "system",
+        "blocks": [
+            {
+                "kind": "system_note",
+                "event": "task_notification",
+                "summary": 'Agent "Design continent geography" finished',
+            }
+        ],
+    }
+    out = render.render_turn(turn, subagent_ids=set(), user_label="David")
+    assert "David" not in out
+    assert "<blockquote>" not in out
+    assert 'class="system-note"' in out
+    assert "Design continent geography" in out
+    assert "background task finished" in out
+
+
+def test_render_turn_compaction_summary_note():
+    turn = {"role": "system", "blocks": [{"kind": "system_note", "event": "compaction_summary"}]}
+    out = render.render_turn(turn, subagent_ids=set(), user_label="David")
+    assert "David" not in out
+    assert "context compacted" in out
+
+
+def test_render_turn_command_with_output_shows_system_note_not_david_prose():
+    turn = {
+        "role": "user",
+        "blocks": [{"kind": "command", "name": "/compact", "output": "Compacted"}],
+    }
+    out = render.render_turn(turn, subagent_ids=set(), user_label="David")
+    assert "<strong>David:</strong> ran <code>/compact</code>" in out
+    assert 'class="system-note"' in out
+    assert "Compacted" in out
+    # the output line itself isn't inside the "David:" paragraph
+    assert out.count("<strong>David:</strong>") == 1
+
+
 def test_render_turn_assistant_prose_has_border_and_no_label():
     turn = {"role": "assistant", "blocks": [{"kind": "text", "text": "some prose"}]}
     out = render.render_turn(turn, subagent_ids=set())
@@ -136,6 +283,48 @@ def test_md_link_text_escapes_brackets():
     out = render.md_link_text("Set model to [1mOpus 5[22m")
     assert "[" not in out
     assert "]" not in out
+
+
+def test_render_transcript_body_inserts_date_markers_on_date_change():
+    doc = {
+        "turns": [
+            {
+                "role": "user",
+                "timestamp": "2026-08-24T10:00:00.000Z",
+                "blocks": [{"kind": "text", "text": "day one"}],
+            },
+            {
+                "role": "assistant",
+                "timestamp": "2026-08-24T10:05:00.000Z",
+                "blocks": [{"kind": "text", "text": "still day one"}],
+            },
+            {
+                "role": "user",
+                "timestamp": "2026-08-25T09:00:00.000Z",
+                "blocks": [{"kind": "text", "text": "day two"}],
+            },
+        ]
+    }
+    out = render.render_transcript_body(doc, subagent_ids=set())
+    assert out.count('class="date-marker"') == 2
+    assert "2026-08-24" in out
+    assert "2026-08-25" in out
+    assert out.index("2026-08-24") < out.index("day one") < out.index("2026-08-25") < out.index("day two")
+
+
+def test_render_subagent_pages_title_and_h1_not_double_escaped_when_redacted(tmp_path, monkeypatch):
+    # Regression: a subagent's title, built via esc_title() in main() and
+    # previously re-escaped with html.escape() inside render_subagent_pages,
+    # must show up as clean readable text in both <title> and <h1>, never
+    # as literal "<span..." tag syntax.
+    monkeypatch.setattr(render, "SUBAGENTS_OUT_DIR", tmp_path)
+    doc = {"turns": [{"role": "user", "blocks": [{"kind": "text", "text": "do it"}]}]}
+    title = render.esc_title("Repo: ⟦redacted: private⟧ plan")
+    written = render.render_subagent_pages(doc, title, "agent-9", "parent", set())
+    text = written[0].read_text()
+    assert "<span" not in text
+    assert "&lt;span" not in text
+    assert "[redacted]" in text
 
 
 def test_render_session_writes_markdown_page(tmp_path, monkeypatch):

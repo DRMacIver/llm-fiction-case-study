@@ -7,16 +7,28 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Canon consistency check on five newly drafted scenes of the third dra…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a68a3725bd8983ed3">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Canon consistency check on five newly drafted scenes of the third draft of Book 1 of Autoroad: `draft/book-01/scenes/47-dont-tell-me-yet.md <span class="redacted">unpublished</span>`, `48-the-eleventh-of-cornmonth.md <span class="redacted">unpublished</span>`, `49-the-middles-walk.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>`. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> and `draft/book-01/SCENES.md` (the act-two binding list at its foot). Also read scenes 25–46 in `draft/book-01/scenes/` for continuity (not under review) — in particular check every back-reference in 47–51 (the pantry door, the compost, Sennet's grass, the two lines, the stakes, the day-eight starlings, "the tenth", "eight days", "sixteen days", "nine weeks ago", "the twelfth" hay date, the factor's docking) against what the earlier third-draft scenes actually say, not against the old chapters. Do NOT read anything under `notes/sealed/`.<br>
-<br>
-<span class="redacted">redacted sentence: unpublished prose</span> Numbered, terse, no praise.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Canon consistency check on five newly drafted scenes of the third dra…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a68a3725bd8983ed3">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-30</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Canon consistency check on five newly drafted scenes of the third draft of Book 1 of Autoroad: draft/book-01/scenes/47-dont-tell-me-yet.md <span class="unpub-tag">unpublished</span><code>, </code>48-the-eleventh-of-cornmonth.md <span class="unpub-tag">unpublished</span><code>, </code>49-the-middles-walk.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> and <code>draft/book-01/SCENES.md</code> (the act-two binding list at its foot). Also read scenes 25–46 in <code>draft/book-01/scenes/</code> for continuity (not under review) — in particular check every back-reference in 47–51 (the pantry door, the compost, Sennet's grass, the two lines, the stakes, the day-eight starlings, &quot;the tenth&quot;, &quot;eight days&quot;, &quot;sixteen days&quot;, &quot;nine weeks ago&quot;, &quot;the twelfth&quot; hay date, the factor's docking) against what the earlier third-draft scenes actually say, not against the old chapters. Do NOT read anything under <code>notes/sealed/</code>.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Numbered, terse, no praise.</p></blockquote>
 
 
 <details><summary>36 tool calls</summary>
@@ -36,46 +48,52 @@ Canon consistency check on five newly drafted scenes of the third draft of Book 
 <p>🔧 Read notes/canon/characters/edwin.md</p>
 <p>✅ 972 lines, 64776 chars</p>
 <p>✅ 975 lines, 64406 chars</p>
-<p>🔧 Read notes/canon/deferred-questions.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 152 lines, 16105 chars</p>
 <p>🔧 Read notes/canon/system.md</p>
 <p>🔧 Read draft/book-01/SCENES.md</p>
 <p>✅ 216 lines, 18936 chars</p>
 <p>✅ 986 lines, 63247 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; wc -l 47-dont-tell-me-yet.md <span class="redacted">unpublished</span>…</p>
-<p>✅ 6 lines, 202 chars —       43 47-dont-tell-me-yet.md <span class="redacted">unpublished</span> /       45 48-the-eleventh-of-cornmonth.md <span class="redacted">unpublished</span> /       47 49-the-middles-walk.md <span class="redacted">unpublished</span></p>
-<p>🔧 Read draft/book-01/scenes/47-dont-tell-me-yet.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; wc -l 47-dont-tell-me-yet.md <span class="unpub-tag">unpublished</span> 48-the-e…</p>
+<p>✅ 6 lines, 202 chars —       43 47-dont-tell-me-yet.md <span class="unpub-tag">unpublished</span> /       45 48-the-eleventh-of-cornmonth.md <span class="unpub-tag">unpublished</span> /       47 49-the-middles-walk.md <span class="unpub-tag">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/47-dont-tell-me-yet.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 44 lines, 3907 chars</p>
-<p>🔧 Read draft/book-01/scenes/48-the-eleventh-of-cornmonth.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/48-the-eleventh-of-cornmonth.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 46 lines, 4777 chars</p>
-<p>🔧 Read draft/book-01/scenes/49-the-middles-walk.md <span class="redacted">unpublished</span></p>
-<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/49-the-middles-walk.md <span class="unpub-tag">unpublished</span></p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
 <p>✅ 48 lines, 4142 chars</p>
 <p>✅ 52 lines, 4544 chars</p>
-<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
 <p>✅ 46 lines, 3850 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; sed -n '1,60p' 31-the-pantry-door.md; echo…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; sed -n '1,60p' 31-the-pantry-door.md; echo ---43---…</p>
 <p>✅ 160 lines, 14786 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>## Consistency Check — Scenes 47–51 (Third Draft, Book 1)</p>
-<p>### 1. Hard contradictions</p>
-<p>**A. Hay-cut date "the twelfth" contradicts the established nine-weeks interval.**</p>
-<p>- Scene 48 <span class="redacted">unpublished</span>, l.19: *"Middle of Weedmonth," said Mattie. ... <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Nine weeks (63 days) back from Day 9 (doy 232) lands on doy 169 = **19 Weedmonth**, matching `deferred-questions.md`'s own resolution ("Ch. 011 puts <span class="redacted">redacted: place</span> at ~22 Weedmonth"). "The twelfth" is 7–10 days too early, and the 12th of a 30-day month isn't naturally "the middle" either. Fix: change "the twelfth" to something in the 19th–22nd range (e.g. "the twentieth"), or drop the specific day-of-month and let "middle of Weedmonth" stand alone — it's already Established at that level of precision and doesn't need a number.</p>
-<p>No other hard contradictions found. Every other checked figure matches established canon or earlier third-draft scenes exactly: the 60-yard inner ring, the Seedmonth/Weedmonth/Day-10 chain readings (4 ch 00 / 6 ch 60 <span class="redacted">unpublished</span> / 9 ch 50 <span class="redacted">unpublished</span>–9 ch 48 <span class="redacted">unpublished</span>), the reruns at 9 ch 73 <span class="redacted">unpublished</span> / 6 ch 18 (scene 43 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Eight days lost"), which is reproduced essentially word-for-word from `timeline.md`.</p>
-<p>### 2. Deferred questions resolved casually</p>
-<p>None. The west-side-slowing/centre-march material is explicitly kept open on the page ("It might be slowing... two more readings"), consistent with the sealed/deferred status. No mention of Holm Deep, no field/Deep adjacency drawn, no store/heap/charm language near the field, no god/holiday/realm naming.</p>
-<p>### 3. Day/date/calendar errors</p>
-<p>- The hay-cut "twelfth" above.<br>
-- Minor, not an error: scene 51 <span class="redacted">unpublished</span>'s "sixteen days and nothing" for the knot-check is correct under the established inclusive-counting convention (Day 1 = day 1 of the count, Day 16 = day 16), same convention used for the Seal of the Loom cooldown.</p>
-<p>### 4. Sums/distances/acreages/dates</p>
-<p>All check out (see §1). The pale-field trip is scheduled "the day after tomorrow" from Day 16, landing on Day 18 — exactly the canon date for that visit.</p>
-<p>### 5. New facts established (not yet in canon, worth a backfill note)</p>
-<p>- Scene 48 <span class="redacted">unpublished</span> gives a concrete mechanism for the already-canonical 1s 3d docking: the corn factor's man walked the field on 11 Cornmonth (the same day the outer band stopped), was shown it proudly by Mattie, said nothing, and docked the parish afterward — i.e., the docking is now explicitly caused by that visit. This is a plausible, harmless elaboration of an existing fact, not a new open thread, but canon currently doesn't tie the docking to a specific date/witness and should if this scene is accepted.<br>
-- Scene 51 <span class="redacted">unpublished</span> gives a new (previously unestablished) figure: "thirteen miles still to walk that day" as Edwin's memory of Day 8, after the starling sighting. Not contradictory (no existing Day-8 mileage figure to conflict with), but new and should be logged if kept.</p>
-<p>**Files checked:** `<span class="redacted">redacted: private</span>/draft/book-01/scenes/47-dont-tell-me-yet.md <span class="redacted">unpublished</span>`, `48-the-eleventh-of-cornmonth.md <span class="redacted">unpublished</span>`, `49-the-middles-walk.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>`, cross-referenced against `31-the-pantry-door.md`, `38-twelve-stakes.md`, `43-two-lines-one-field.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<h2>Consistency Check — Scenes 47–51 (Third Draft, Book 1)</h2>
+<h3>1. Hard contradictions</h3>
+<p><strong>A. Hay-cut date &quot;the twelfth&quot; contradicts the established nine-weeks interval.</strong></p>
+<ul>
+<li>Scene 48 <span class="unpub-tag">unpublished</span>, l.19: *&quot;Middle of Weedmonth,&quot; said Mattie. ... <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p>Nine weeks (63 days) back from Day 9 (doy 232) lands on doy 169 = <strong>19 Weedmonth</strong>, matching <code>deferred-questions.md</code>'s own resolution (&quot;Ch. 011 puts <span class="redacted">redacted</span> at ~22 Weedmonth&quot;). &quot;The twelfth&quot; is 7–10 days too early, and the 12th of a 30-day month isn't naturally &quot;the middle&quot; either. Fix: change &quot;the twelfth&quot; to something in the 19th–22nd range (e.g. &quot;the twentieth&quot;), or drop the specific day-of-month and let &quot;middle of Weedmonth&quot; stand alone — it's already Established at that level of precision and doesn't need a number.</p>
+<p>No other hard contradictions found. Every other checked figure matches established canon or earlier third-draft scenes exactly: the 60-yard inner ring, the Seedmonth/Weedmonth/Day-10 chain readings (4 ch 00 / 6 ch 60 <span class="unpub-tag">unpublished</span> / 9 ch 50 <span class="unpub-tag">unpublished</span>–9 ch 48 <span class="unpub-tag">unpublished</span>), the reruns at 9 ch 73 <span class="unpub-tag">unpublished</span> / 6 ch 18 (scene 43 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Eight days lost&quot;), which is reproduced essentially word-for-word from <code>timeline.md</code>.</p>
+<h3>2. Deferred questions resolved casually</h3>
+<p>None. The west-side-slowing/centre-march material is explicitly kept open on the page (&quot;It might be slowing... two more readings&quot;), consistent with the sealed/deferred status. No mention of Holm Deep, no field/Deep adjacency drawn, no store/heap/charm language near the field, no god/holiday/realm naming.</p>
+<h3>3. Day/date/calendar errors</h3>
+<ul>
+<li>The hay-cut &quot;twelfth&quot; above.</li>
+<li>Minor, not an error: scene 51 <span class="unpub-tag">unpublished</span>'s &quot;sixteen days and nothing&quot; for the knot-check is correct under the established inclusive-counting convention (Day 1 = day 1 of the count, Day 16 = day 16), same convention used for the Seal of the Loom cooldown.</li>
+</ul>
+<h3>4. Sums/distances/acreages/dates</h3>
+<p>All check out (see §1). The pale-field trip is scheduled &quot;the day after tomorrow&quot; from Day 16, landing on Day 18 — exactly the canon date for that visit.</p>
+<h3>5. New facts established (not yet in canon, worth a backfill note)</h3>
+<ul>
+<li>Scene 48 <span class="unpub-tag">unpublished</span> gives a concrete mechanism for the already-canonical 1s 3d docking: the corn factor's man walked the field on 11 Cornmonth (the same day the outer band stopped), was shown it proudly by Mattie, said nothing, and docked the parish afterward — i.e., the docking is now explicitly caused by that visit. This is a plausible, harmless elaboration of an existing fact, not a new open thread, but canon currently doesn't tie the docking to a specific date/witness and should if this scene is accepted.</li>
+<li>Scene 51 <span class="unpub-tag">unpublished</span> gives a new (previously unestablished) figure: &quot;thirteen miles still to walk that day&quot; as Edwin's memory of Day 8, after the starling sighting. Not contradictory (no existing Day-8 mileage figure to conflict with), but new and should be logged if kept.</li>
+</ul>
+<p><strong>Files checked:</strong> <span class="redacted">redacted</span>/draft/book-01/scenes/47-dont-tell-me-yet.md <span class="unpub-tag">unpublished</span><code>, </code>48-the-eleventh-of-cornmonth.md <span class="unpub-tag">unpublished</span><code>, </code>49-the-middles-walk.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span><code>, cross-referenced against </code>31-the-pantry-door.md<code>, </code>38-twelve-stakes.md<code>, </code>43-two-lines-one-field.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 </body></html>

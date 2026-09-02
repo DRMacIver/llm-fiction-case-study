@@ -7,26 +7,33 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are an independent quality evaluator for a novel being drafted in…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a3a80a166b1a79eb1">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are an independent quality evaluator for a novel being drafted in <span class="redacted">redacted: private</span>. The author (DRMacIver) accepted act one (scenes 01–24) as 'generally very good' and 25–40 as 'pretty good'. <span class="redacted">redacted sentence: unpublished prose</span> The scenes are being redrafted from scratch with an independent read every ~10 scenes. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> and Edwin had converged into one dated-declarative register, (3) Peri's engine had gone quiet (competent secretary rather than a person wrong from the foundations up), plus residual long compound openings. Those were acted on.<br>
-<br>
-Your job: read the standard, then the newest scenes, and give a verdict with evidence, paying particular attention to whether the three warnings were acted on, and to <span class="redacted">redacted: event</span> of Holm Deep (73–76) which is the book's set piece.<br>
-<br>
-The standard: read draft/book-01/VOICE.md in full; then draft/book-01/scenes/01-*, 02-*, 05-*, 06-*, 13-*, 19-* (the exemplars) and 31-*, 36-*, 40-*, 62-*, 64-*, 66-* (accepted/holding register). Then notes/llm-tells.md and notes/premise.md ('not cozy', 'competence porn', 'teeth').<br>
-<br>
-Scenes under evaluation: draft/book-01/scenes/67-* through 76-* (ten scenes). Note 74–76 have not yet had their editing lenses applied; 67–73 have. Skim 41–66 for drift across the whole new stretch.<br>
-<br>
-STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history; do not search for them.<br>
-<br>
-Evaluate with quoted evidence: (1) prose at rest, wit in the events; (2) people say what they mean; (3) distinct voices (Edwin, Peri, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span> as a NEW adult who must not sound like <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, Mattie, Sennet, <span class="redacted">redacted: character</span>); (4) LLM tells at fingerprint rate, especially the writing motif count per scene, negative parallelism, counted templates, anaphora, compound openings, buttons; (5) Peri likeable, active, and wrong in the productive way (her Weave reading in 71; her status boxes in 74/78); (6) scene endings; (7) sameness of shape across ten scenes; (8) <span class="redacted">redacted: event</span>: does it read as work in Edwin's viewpoint, with the power mismatch made literal, without ballad register, and does the Deep material keep its silence (nobody explains the hole; the drain speech in 75 — does Edwin explain more than one look allows?); (9) anything cryptic or abrupt; (10) the emotional line between Edwin and Peri across 67–72 (the order under the barn, the third pressing) — is it legible, earned, and free of any romantic colouring (a hard rule: none allowed).<br>
-<br>
-Then a verdict on its own line: VERDICT: HOLDING / SLIPPING / DEGRADING — with three to six sentences of justification and the two or three most important concrete fixes. Be blunt. Do not edit any file.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are an independent quality evaluator for a novel being drafted in…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a3a80a166b1a79eb1">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are an independent quality evaluator for a novel being drafted in <span class="redacted">redacted</span>. The author (DRMacIver) accepted act one (scenes 01–24) as 'generally very good' and 25–40 as 'pretty good'. <span class="redacted">redacted sentence: unpublished prose</span> The scenes are being redrafted from scratch with an independent read every ~10 scenes. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> and Edwin had converged into one dated-declarative register, (3) Peri's engine had gone quiet (competent secretary rather than a person wrong from the foundations up), plus residual long compound openings. Those were acted on.</p>
+<p>Your job: read the standard, then the newest scenes, and give a verdict with evidence, paying particular attention to whether the three warnings were acted on, and to <span class="redacted">redacted</span> of Holm Deep (73–76) which is the book's set piece.</p>
+<p>The standard: read draft/book-01/VOICE.md in full; then draft/book-01/scenes/01-<em>, 02-</em>, 05-<em>, 06-</em>, 13-<em>, 19-</em> (the exemplars) and 31-<em>, 36-</em>, 40-<em>, 62-</em>, 64-<em>, 66-</em> (accepted/holding register). Then notes/llm-tells.md and notes/premise.md ('not cozy', 'competence porn', 'teeth').</p>
+<p>Scenes under evaluation: draft/book-01/scenes/67-* through 76-* (ten scenes). Note 74–76 have not yet had their editing lenses applied; 67–73 have. Skim 41–66 for drift across the whole new stretch.</p>
+<p>STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="unpub-tag">unpublished</span> or their git history; do not search for them.</p>
+<p>Evaluate with quoted evidence: (1) prose at rest, wit in the events; (2) people say what they mean; (3) distinct voices (Edwin, Peri, <span class="redacted">redacted</span>, <span class="redacted">redacted</span> as a NEW adult who must not sound like <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, Mattie, Sennet, <span class="redacted">redacted</span>); (4) LLM tells at fingerprint rate, especially the writing motif count per scene, negative parallelism, counted templates, anaphora, compound openings, buttons; (5) Peri likeable, active, and wrong in the productive way (her Weave reading in 71; her status boxes in 74/78); (6) scene endings; (7) sameness of shape across ten scenes; (8) <span class="redacted">redacted</span>: does it read as work in Edwin's viewpoint, with the power mismatch made literal, without ballad register, and does the Deep material keep its silence (nobody explains the hole; the drain speech in 75 — does Edwin explain more than one look allows?); (9) anything cryptic or abrupt; (10) the emotional line between Edwin and Peri across 67–72 (the order under the barn, the third pressing) — is it legible, earned, and free of any romantic colouring (a hard rule: none allowed).</p>
+<p>Then a verdict on its own line: VERDICT: HOLDING / SLIPPING / DEGRADING — with three to six sentences of justification and the two or three most important concrete fixes. Be blunt. Do not edit any file.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -38,8 +45,8 @@ Then a verdict on its own line: VERDICT: HOLDING / SLIPPING / DEGRADING — with
 <p>✅ 82 lines, 2124 chars</p>
 <p>🔧 Read draft/book-01/VOICE.md</p>
 <p>✅ 257 lines, 16258 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; cat 01-*.md 02-*.md 05-*.md 06-*.md</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; cat 13-*.md 19-*.md 31-*.md 36-*.md 40-*.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; cat 01-*.md 02-*.md 05-*.md 06-*.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; cat 13-*.md 19-*.md 31-*.md 36-*.md 40-*.md</p>
 <p>✅ 226 lines, 19576 chars</p>
 <p>✅ 24 lines, 2217 chars</p>
 <p>🔧 Bash: cat "<span class="redacted">redacted: private</span>"</p>
@@ -48,69 +55,79 @@ Then a verdict on its own line: VERDICT: HOLDING / SLIPPING / DEGRADING — with
 <p>✅ 22 lines, 3218 chars</p>
 <p>🔧 Read draft/book-01/scenes/36-write-both.md</p>
 <p>✅ 54 lines, 7830 chars</p>
-<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
 <p>✅ 46 lines, 8518 chars</p>
-<p>🔧 Read draft/book-01/scenes/68-it-buys-you-the-night.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/68-it-buys-you-the-night.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 50 lines, 6866 chars</p>
-<p>🔧 Read draft/book-01/scenes/69-under-barrows-barn.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/69-under-barrows-barn.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 38 lines, 7574 chars</p>
-<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
 <p>✅ 36 lines, 6058 chars</p>
-<p>🔧 Read draft/book-01/scenes/71-in-the-hill.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/71-in-the-hill.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 42 lines, 6153 chars</p>
-<p>🔧 Read draft/book-01/scenes/72-not-in-the-line.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/72-not-in-the-line.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 38 lines, 5646 chars</p>
-<p>🔧 Read draft/book-01/scenes/73-thirteen-down.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/73-thirteen-down.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 38 lines, 6266 chars</p>
-<p>🔧 Read draft/book-01/scenes/74-the-first-chamber.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/74-the-first-chamber.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 40 lines, 6592 chars</p>
-<p>🔧 Read draft/book-01/scenes/75-the-second-chamber.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/75-the-second-chamber.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 50 lines, 7266 chars</p>
-<p>🔧 Read draft/book-01/scenes/76-the-bottom.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/76-the-bottom.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 42 lines, 5698 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in [4-7][0-9]-*.md; do w=$(wc -w &lt;$f…</p>
-<p>✅ 39 lines, 3541 chars — 40-zero-at-the-three-depths-we-cut.md w=    1404 write=       5 which=       3 because=3 neg=       0 / 41-calm-hands.md <span class="redacted">unpublished</span> w=    1620 write=       1 which=       4 because=13 neg=       0 / 42-a-factors-woman.md <span class="redacted">unpublished</span> w=    1448 write=       6 which=       1 because=9 neg=       0</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 6[7-9]-*.md 7[0-6]-*.md; do echo…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; for f in [4-7][0-9]-*.md; do w=$(wc -w &lt;$f); wr=$(g…</p>
+<p>✅ 39 lines, 3541 chars — 40-zero-at-the-three-depths-we-cut.md w=    1404 write=       5 which=       3 because=3 neg=       0 / 41-calm-hands.md <span class="unpub-tag">unpublished</span> w=    1620 write=       1 which=       4 because=13 neg=       0 / 42-a-factors-woman.md <span class="unpub-tag">unpublished</span> w=    1448 write=       6 which=       1 because=9 neg=       0</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; for f in 6[7-9]-*.md 7[0-6]-*.md; do echo "=== $f";…</p>
 <p>✅ 40 lines, 4262 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; echo "--the way--"; grep -c "the way " 6[7…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; echo "--the way--"; grep -c "the way " 6[7-9]*.md 7…</p>
 <p>✅ 34 lines, 1673 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; echo EMDASH; grep -c "—" 6[7-9]*.md 7[0-6]…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; echo EMDASH; grep -c "—" 6[7-9]*.md 7[0-6]*.md; ech…</p>
 <p>✅ 27 lines, 2251 chars</p>
-<p>🔧 Read draft/book-01/scenes/64-lamps-on-the-ground.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read draft/book-01/scenes/64-lamps-on-the-ground.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 32 lines, 5641 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in [4-7][0-9]-*.md; do printf "%-45s…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; for f in [4-7][0-9]-*.md; do printf "%-45s " $f; se…</p>
 <p>✅ 40 lines, 5611 chars</p>
 </details>
 
 <div class="assistant-prose">
 <p>I read VOICE.md, the exemplars (01, 02, 05, 06, 13, 19), the accepted/holding register (31, 36, 40, 62, 64, 66), llm-tells/premise, then 67–76 in full, and ran counts across 40–78.</p>
-<p>## The three warnings</p>
-<p>**1. The "writing it down" motif — fixed.** Occurrences of write/wrote/written/writing per scene, whole stretch:</p>
-<p>- 44–57 (the flagged block): 8, 10, 9, 4, 8, 7, 3, 10, 9, 4, 6, **14**, 5, 9<br>
-- 67–76: 5, 4, 6, 4, 4, 5, **1**, **1**, 2, 4</p>
-<p>It is no longer a house verb. Where it survives it is load-bearing (Peri's "I've written it. Twice." in 68 is the emotional line, not a tic; <span class="redacted">redacted: character</span>'s "put my name against it" in 69 is her character). Warning discharged.</p>
-<p>**2. <span class="redacted">redacted: character</span>/Edwin convergence — fixed; a new one starting.** Edwin now carries the long explanatory speeches (the blessing lesson in 68, the drain in 75) and <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> They are cleanly separate. But **<span class="redacted">redacted: character</span> has landed inside <span class="redacted">redacted: character</span>'s syntax**, if not her content. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> The problem is the shared sentence shape: <span class="redacted">redacted: character</span> "That's your knee, not your head", <span class="redacted">redacted: character</span> "That's a tide mark in a cistern", both on clipped That's-X declaratives and both saying numbers flat. She is distinguishable by what she does, not yet by how she sounds. <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, Sennet, Mattie, <span class="redacted">redacted: character</span>, the sluice-keeper ("That'll be the fence, then") are all cleanly themselves.</p>
-<p>**3. Peri's engine — half-fixed, and the fix does not survive into <span class="redacted">redacted: event</span>.** Scene 71 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> 72's "No." / "Show me the buckle." is the single best beat in the ten — active, unexplained-by-her, entirely legible. <span class="redacted">redacted sentence: unpublished prose</span> Across 73–76 — the set piece — she speaks four times. <span class="redacted">redacted sentence: unpublished prose</span> The other number. Not by one.") but it is her only line in the chamber. She is present, competent and silent, which is closer to the old warning than the fix admits. She is likeable and active; she is no longer *wrong* in a way that costs anything.</p>
-<p>## <span class="redacted">redacted: event</span> (73–76)</p>
+<h2>The three warnings</h2>
+<p><strong>1. The &quot;writing it down&quot; motif — fixed.</strong> Occurrences of write/wrote/written/writing per scene, whole stretch:</p>
+<ul>
+<li>44–57 (the flagged block): 8, 10, 9, 4, 8, 7, 3, 10, 9, 4, 6, <strong>14</strong>, 5, 9</li>
+<li>67–76: 5, 4, 6, 4, 4, 5, <strong>1</strong>, <strong>1</strong>, 2, 4</li>
+</ul>
+<p>It is no longer a house verb. Where it survives it is load-bearing (Peri's &quot;I've written it. Twice.&quot; in 68 is the emotional line, not a tic; <span class="redacted">redacted</span>'s &quot;put my name against it&quot; in 69 is her character). Warning discharged.</p>
+<ol start="2">
+<li>
+<p><span class="redacted">redacted</span>/Edwin convergence — fixed; a new one starting. Edwin now carries the long explanatory speeches (the blessing lesson in 68, the drain in 75) and <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> They are cleanly separate. But <span class="redacted">redacted</span> has landed inside <span class="redacted">redacted</span>'s syntax, if not her content. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> The problem is the shared sentence shape: <span class="redacted">redacted</span> &quot;That's your knee, not your head&quot;, <span class="redacted">redacted</span> &quot;That's a tide mark in a cistern&quot;, both on clipped That's-X declaratives and both saying numbers flat. She is distinguishable by what she does, not yet by how she sounds. <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, Sennet, Mattie, <span class="redacted">redacted</span>, the sluice-keeper (&quot;That'll be the fence, then&quot;) are all cleanly themselves.</p>
+</li>
+<li>
+<p>Peri's engine — half-fixed, and the fix does not survive into <span class="redacted">redacted</span>. Scene 71 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> 72's &quot;No.&quot; / &quot;Show me the buckle.&quot; is the single best beat in the ten — active, unexplained-by-her, entirely legible. <span class="redacted">redacted sentence: unpublished prose</span> Across 73–76 — the set piece — she speaks four times. <span class="redacted">redacted sentence: unpublished prose</span> The other number. Not by one.&quot;) but it is her only line in the chamber. She is present, competent and silent, which is closer to the old warning than the fix admits. She is likeable and active; she is no longer <em>wrong</em> in a way that costs anything.</p>
+</li>
+</ol>
+<h2><span class="redacted">redacted</span> (73–76)</h2>
 <p>This is the strongest work in the stretch and it is not close. It reads as work in Edwin's viewpoint throughout. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Ballad register is disarmed on the page rather than avoided — 74 names the four ballads and answers them with a list: "There was no treasure in it. There were no bones of adventurers, no pillars, no carving" and then a poultry-house smell. That is the right move and it is done once.</p>
-<p>The Deep keeps its silence, rigorously. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span>'s mortar line gets no answer and he gets back in the file. The yellow lamps end 76 with an order and no explanation. Nobody explains the hole.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> or no <span class="redacted">redacted: character</span>. I would cut "something" to "water", and let <span class="redacted">redacted: character</span>, not Edwin, be the one who puts the date next to the mouth.</p>
-<p>## Sameness of shape — the live problem</p>
-<p>The residual compound-opening warning was not acted on; it has hardened into the house sentence. Fourteen scenes from 45 to 73 open on **NAME + past verb + at TIME + with/comma-trailer**:</p>
-<p>- 67 "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>."<br>
-- 70 "The <span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- 72 "He asked <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- 73 "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>74/75/76 escape it only by adopting a second template of their own ("The ramp went down…" / "The third way went down…" / "The fifth way was a passage…"). Endings match: 74, 75 and 76 all close on a <span class="redacted">redacted: character</span> instruction to <span class="redacted">redacted: character</span>, two of them containing the word *write*.</p>
-<p>Second tic, new since the "people say what they mean" ruling: **because-density**. 68, 69 and 71 carry ten, ten and eleven *because*es apiece (56 has sixteen). The ruling is right and the explanations are welcome, but they are all being bolted on with the same connective, and it produces a mannerism — "and here's the reason before you ask for it" is now a reflex Edwin has.</p>
-<p>## The emotional line, 67–72</p>
-<p>Legible, earned, and clean. <span class="redacted">redacted sentence: unpublished prose</span> The third pressing in 71 is mutual argument, not intimacy; the reciprocity is Peri writing in *his* book. **No romantic colouring anywhere in the ten.** Nothing cryptic and nothing abrupt: every exchange stands alone, questions get answers, callbacks ("the four things", "not in the line") are restated in full when they carry weight.</p>
+<p>Ballad register is disarmed on the page rather than avoided — 74 names the four ballads and answers them with a list: &quot;There was no treasure in it. There were no bones of adventurers, no pillars, no carving&quot; and then a poultry-house smell. That is the right move and it is done once.</p>
+<p>The Deep keeps its silence, rigorously. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s mortar line gets no answer and he gets back in the file. The yellow lamps end 76 with an order and no explanation. Nobody explains the hole.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> or no <span class="redacted">redacted</span>. I would cut &quot;something&quot; to &quot;water&quot;, and let <span class="redacted">redacted</span>, not Edwin, be the one who puts the date next to the mouth.</p>
+<h2>Sameness of shape — the live problem</h2>
+<p>The residual compound-opening warning was not acted on; it has hardened into the house sentence. Fourteen scenes from 45 to 73 open on <strong>NAME + past verb + at TIME + with/comma-trailer</strong>:</p>
+<ul>
+<li>67 &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.&quot;</li>
+<li>70 &quot;The <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>72 &quot;He asked <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>73 &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p>74/75/76 escape it only by adopting a second template of their own (&quot;The ramp went down…&quot; / &quot;The third way went down…&quot; / &quot;The fifth way was a passage…&quot;). Endings match: 74, 75 and 76 all close on a <span class="redacted">redacted</span> instruction to <span class="redacted">redacted</span>, two of them containing the word <em>write</em>.</p>
+<p>Second tic, new since the &quot;people say what they mean&quot; ruling: <strong>because-density</strong>. 68, 69 and 71 carry ten, ten and eleven <em>because</em>es apiece (56 has sixteen). The ruling is right and the explanations are welcome, but they are all being bolted on with the same connective, and it produces a mannerism — &quot;and here's the reason before you ask for it&quot; is now a reflex Edwin has.</p>
+<h2>The emotional line, 67–72</h2>
+<p>Legible, earned, and clean. <span class="redacted">redacted sentence: unpublished prose</span> The third pressing in 71 is mutual argument, not intimacy; the reciprocity is Peri writing in <em>his</em> book. <strong>No romantic colouring anywhere in the ten.</strong> Nothing cryptic and nothing abrupt: every exchange stands alone, questions get answers, callbacks (&quot;the four things&quot;, &quot;not in the line&quot;) are restated in full when they carry weight.</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>VERDICT: HOLDING</p>
-<p>The prose is at rest, the wit is in the events, nobody talks cryptically, and <span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span> Two of the three warnings are genuinely discharged: the writing motif is down from fourteen a scene to one, and <span class="redacted">redacted: character</span> and Edwin are cleanly separate voices. What has not been fixed is the sentence architecture: fourteen consecutive scenes open on the same clock-stamped compound, three consecutive scenes end on a <span class="redacted">redacted: character</span> order containing "write", and the explain-yourself ruling has produced a ten-per-scene *because* habit. And Peri's engine has been swapped for Peri's silence — 71 and 72 prove she can still carry a scene, but across the set piece she speaks four times and is described as saying nothing in five separate scenes.</p>
-<p>Three fixes, in order: (1) break the opening template — at least half the next stretch should start mid-action, mid-dialogue, or on an object, with the time arriving later or not at all, and 74/75/76's "The Nth way went…" wants the same treatment; (2) give Peri two or three real speeches inside <span class="redacted">redacted: event</span>, at least one of them a wrong reading she commits to out loud and has to withdraw — the status-box thread in 74/78 is the obvious carrier, and her restraint there currently costs her the engine; (3) in 75, cut "something comes up that hole" to water, move the dating of the onset off Edwin, and generally thin the *because* connective by letting a reason sit in its own sentence. Fourth, cheap: give <span class="redacted">redacted: character</span> a syntax of her own before the Fellowship's three arrive and she has to hold a room — right now only her habits, not her sentences, tell her from <span class="redacted">redacted: character</span>.</p>
+<p>The prose is at rest, the wit is in the events, nobody talks cryptically, and <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Two of the three warnings are genuinely discharged: the writing motif is down from fourteen a scene to one, and <span class="redacted">redacted</span> and Edwin are cleanly separate voices. What has not been fixed is the sentence architecture: fourteen consecutive scenes open on the same clock-stamped compound, three consecutive scenes end on a <span class="redacted">redacted</span> order containing &quot;write&quot;, and the explain-yourself ruling has produced a ten-per-scene <em>because</em> habit. And Peri's engine has been swapped for Peri's silence — 71 and 72 prove she can still carry a scene, but across the set piece she speaks four times and is described as saying nothing in five separate scenes.</p>
+<p>Three fixes, in order: (1) break the opening template — at least half the next stretch should start mid-action, mid-dialogue, or on an object, with the time arriving later or not at all, and 74/75/76's &quot;The Nth way went…&quot; wants the same treatment; (2) give Peri two or three real speeches inside <span class="redacted">redacted</span>, at least one of them a wrong reading she commits to out loud and has to withdraw — the status-box thread in 74/78 is the obvious carrier, and her restraint there currently costs her the engine; (3) in 75, cut &quot;something comes up that hole&quot; to water, move the dating of the onset off Edwin, and generally thin the <em>because</em> connective by letting a reason sit in its own sentence. Fourth, cheap: give <span class="redacted">redacted</span> a syntax of her own before the Fellowship's three arrive and she has to hold a room — right now only her habits, not her sentences, tell her from <span class="redacted">redacted</span>.</p>
 </div>
 </body></html>

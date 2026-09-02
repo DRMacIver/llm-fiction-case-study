@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a canon/consistency lens for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</title><style>
+<html><head><meta charset="utf-8"><title>You are a canon/consistency lens for the novel at [redacted]. Read CL…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,20 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a canon/consistency lens for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a6f74f2d198d7242a">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a canon/consistency lens for the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it; do not read notes/sealed/.<br>
-<br>
-Your material: draft/book-01/scenes/16-rings-dont-grow.md, read after scenes 01–15 in the same directory (Day 5, late evening).<br>
-<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span> office shut — see <span class="redacted">redacted: character</span>.md), notes/canon/characters/<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Also chapters/004-three-letters.md, the groundwork this restages. Note the farming claim about clover in a fairy ring — check it against the author's note in ch. 004 and flag if it is not real.<br>
-<br>
-Report FINDINGS ONLY — line quoted, canon file and line, what is wrong. No "clean" verdicts. Briefly and separately: canon the scene could use and does not. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a canon/consistency lens for the novel at [redacted]. Read CL…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a6f74f2d198d7242a">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a canon/consistency lens for the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it; do not read notes/sealed/.</p>
+<p>Your material: draft/book-01/scenes/16-rings-dont-grow.md, read after scenes 01–15 in the same directory (Day 5, late evening).</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> office shut — see <span class="redacted">redacted</span>.md), notes/canon/characters/<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Also chapters/004-three-letters.md, the groundwork this restages. Note the farming claim about clover in a fairy ring — check it against the author's note in ch. 004 and flag if it is not real.</p>
+<p>Report FINDINGS ONLY — line quoted, canon file and line, what is wrong. No &quot;clean&quot; verdicts. Briefly and separately: canon the scene could use and does not. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <details><summary>8 tool calls</summary>
@@ -49,7 +59,7 @@ Report FINDINGS ONLY — line quoted, canon file and line, what is wrong. No "cl
 <p>✅ 30 lines, 2592 chars</p>
 <p>🔧 Bash: grep -n -i "bench\|workroom\|study" notes/canon/characters/edwin.md</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: grep -rn "study window\|workroom window\|the long bench" notes/ chapters/ draft/ plans/ ⟦…</p>
+<p>🔧 Bash: grep -rn "study window\|workroom window\|the long bench" notes/ chapters/ draft/ plans/ <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 11 lines, 4925 chars</p>
 <p>🔧 Bash: grep -n -i -B3 -A10 "You're going to Fenholt\|first beat of.*collapse\|said a day before"…</p>
 <p>✅ 29 lines, 2134 chars</p>
@@ -57,45 +67,49 @@ Report FINDINGS ONLY — line quoted, canon file and line, what is wrong. No "cl
 <p>✅ 23 lines, 1327 chars</p>
 <p>🔧 Read notes/canon/characters/sorrel.md</p>
 <p>✅ 45 lines, 2699 chars</p>
-<p>🔧 Bash: grep -n -i "extension office\|shut\|<span class="redacted">redacted: character</span>" notes/canon/characters/⟦redact…</p>
+<p>🔧 Bash: grep -n -i "extension office\|shut\|<span class="redacted">redacted</span>" notes/canon/characters/<span class="redacted">redacted</span>.md | he…</p>
 <p>✅ 20 lines, 1351 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>That's consistent — good, the field office being shut aligns with canon. Now let me check the farming claim about clover failing in fairy rings against real agronomy and the ch.004 author's note, and check magic.md for "six revealings" naming.</p>
+<p>That's consistent — good, the field office being shut aligns with canon. Now let me check the farming claim about clover failing in fairy rings against real agronomy and the ch.004 author's note, and check magic.md for &quot;six revealings&quot; naming.</p>
 </div>
 
 <p>🔧 Bash: grep -n -i "six revealings\|standard revealings\|revealing" notes/canon/world/magic.md |…</p>
 <p>✅ 11 lines, 776 chars</p>
 
 <div class="assistant-prose">
-<p>Fine, "the six revealings" as shorthand for "the six standard revealings" is acceptable dialogue compression, not a contradiction. The clover-in-fairy-ring farming claim is verified against ch.004's author's note (fungus rings feed grass, outcompeting clover) — this is real agronomy (fairy-ring nitrogen flush favoring grass over clover) and matches, not a new unverified claim since it restages ch.004's established note. Now let me check the arc-01 numbering issue further to see if scene 16 vs scene 20 is a real discrepancy.</p>
+<p>Fine, &quot;the six revealings&quot; as shorthand for &quot;the six standard revealings&quot; is acceptable dialogue compression, not a contradiction. The clover-in-fairy-ring farming claim is verified against ch.004's author's note (fungus rings feed grass, outcompeting clover) — this is real agronomy (fairy-ring nitrogen flush favoring grass over clover) and matches, not a new unverified claim since it restages ch.004's established note. Now let me check the arc-01 numbering issue further to see if scene 16 vs scene 20 is a real discrepancy.</p>
 </div>
 
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | sort echo "---" grep -n -i "scene 16\|scen…</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/draft/book-01/scenes/ | sort echo "---" grep -n -i "scene 16\|scene 20\|rin…</p>
 <p>✅ 21 lines, 681 chars</p>
 
 <div class="assistant-prose">
-<p>## Findings</p>
-<p>**1. "Study" vs. "workroom" — the room is renamed without a canon decision.**<br>
-Scene 16, line 3: *"with the study candle in her hand"* and line 29: *"cleared the long bench under the study window."*</p>
-<p>Every accepted chapter uses **workroom**, not study:<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- `chapters/005-the-sample.md:5,37,39` — "workroom window" / "workroom doorway" ×3<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
+<h2>Findings</h2>
+<p><strong>1. &quot;Study&quot; vs. &quot;workroom&quot; — the room is renamed without a canon decision.</strong><br />
+Scene 16, line 3: <em>&quot;with the study candle in her hand&quot;</em> and line 29: <em>&quot;cleared the long bench under the study window.&quot;</em></p>
+<p>Every accepted chapter uses <strong>workroom</strong>, not study:<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>`notes/canon/characters/edwin.md` never establishes a "study" at all — no hit for "study" or "bench" in that file. So the task brief's own phrase "the long bench under the study window" is not actually sourced from edwin.md; it traces to the current draft batch, not canon. The rename to "study" is not isolated to scene 16 — it's already present in `draft/book-01/scenes/01-pellings-half-past-twelve-soft.md:9`, `07-can-you-actually-fight.md:5`, `09-the-cart-up-the-hill.md:3` — so it reads as a deliberate rewrite-wide rename, but nothing in canon documents that decision, and it now contradicts five accepted-chapter citations of "workroom." Flag for a ruling: is "study" replacing "workroom" project-wide, and does that get written into edwin.md/canon?</p>
-<p>**2. "He went up" — new, unsupported geography.**<br>
-Line 29: *"Then he went up and got out the sample ledger..."* — implies the study/workroom is upstairs. Ch.004's parallel line (127) has no "went up." No canon file (edwin.md, institutions.md) states which floor the workroom/study is on. This is an added claim about the tower's layout with no supporting citation.</p>
-<p>**3. "The one on his own dresser" drops the established tag "mis-sorted parcel."**<br>
+<ul>
+<li><code>chapters/005-the-sample.md:5,37,39</code> — &quot;workroom window&quot; / &quot;workroom doorway&quot; ×3<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><code>notes/canon/characters/edwin.md</code> never establishes a &quot;study&quot; at all — no hit for &quot;study&quot; or &quot;bench&quot; in that file. So the task brief's own phrase &quot;the long bench under the study window&quot; is not actually sourced from edwin.md; it traces to the current draft batch, not canon. The rename to &quot;study&quot; is not isolated to scene 16 — it's already present in <code>draft/book-01/scenes/01-pellings-half-past-twelve-soft.md:9</code>, <code>07-can-you-actually-fight.md:5</code>, <code>09-the-cart-up-the-hill.md:3</code> — so it reads as a deliberate rewrite-wide rename, but nothing in canon documents that decision, and it now contradicts five accepted-chapter citations of &quot;workroom.&quot; Flag for a ruling: is &quot;study&quot; replacing &quot;workroom&quot; project-wide, and does that get written into edwin.md/canon?</p>
+<p><strong>2. &quot;He went up&quot; — new, unsupported geography.</strong><br />
+Line 29: <em>&quot;Then he went up and got out the sample ledger...&quot;</em> — implies the study/workroom is upstairs. Ch.004's parallel line (127) has no &quot;went up.&quot; No canon file (edwin.md, institutions.md) states which floor the workroom/study is on. This is an added claim about the tower's layout with no supporting citation.</p>
+<p><strong>3. &quot;The one on his own dresser&quot; drops the established tag &quot;mis-sorted parcel.&quot;</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**4. Scene numbering vs. the plan's citation.**<br>
-`plans/book-01/arc-01.md:228-230` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> The file under review is **scene 16**, titled "rings-dont-grow," not "the letter that would cross." The content matches the ruling exactly (line does not close the scene; re-refusal and the soil-by-post plan follow, matching almost word for word), so the *ruling* is honored — but the plan's own scene number and title are now stale against the draft's renumbering (`14-three-letters.md`, `15-straight-water.md`, `16-rings-dont-grow.md` — a three-way split of ch.004's material). Worth reconciling arc-01.md's citations to the current file names before they mislead a future check.</p>
-<p>**5. Wording drift, not contradiction (noting for completeness, not a defect):**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> "the six revealings" (scene, twice) vs. "the six standard revealings" (magic.md:40, silent-soil.md:28) — acceptable as spoken shorthand, not flagged as an error.</p>
-<p>## Canon the scene could use and does not</p>
-<p>- No citation ties the Day-5-evening placement to `timeline.md`'s entries around lines 145-151 (Day 5/Day 6 sequence, including the 08:20 box that "pre-empts his letter") — the scene would be strengthened, and the "mis-sorted parcel" ambiguity above resolved, by a line distinguishing the object already on the dresser from the box still in transit.<br>
-- <span class="redacted">redacted: character</span>/the shut extension office (`<span class="redacted">redacted: character</span>.md:23`, `institutions.md:12,714,720`) is implied but never named — the scene could ground "a trial-fields office that... <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s shut-building reasoning, which is otherwise this exact plot mechanism's canon home.</p>
+<p><strong>4. Scene numbering vs. the plan's citation.</strong><br />
+<code>plans/book-01/arc-01.md:228-230</code> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> The file under review is <strong>scene 16</strong>, titled &quot;rings-dont-grow,&quot; not &quot;the letter that would cross.&quot; The content matches the ruling exactly (line does not close the scene; re-refusal and the soil-by-post plan follow, matching almost word for word), so the <em>ruling</em> is honored — but the plan's own scene number and title are now stale against the draft's renumbering (<code>14-three-letters.md</code>, <code>15-straight-water.md</code>, <code>16-rings-dont-grow.md</code> — a three-way split of ch.004's material). Worth reconciling arc-01.md's citations to the current file names before they mislead a future check.</p>
+<p><strong>5. Wording drift, not contradiction (noting for completeness, not a defect):</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> &quot;the six revealings&quot; (scene, twice) vs. &quot;the six standard revealings&quot; (magic.md:40, silent-soil.md:28) — acceptable as spoken shorthand, not flagged as an error.</p>
+<h2>Canon the scene could use and does not</h2>
+<ul>
+<li>No citation ties the Day-5-evening placement to <code>timeline.md</code>'s entries around lines 145-151 (Day 5/Day 6 sequence, including the 08:20 box that &quot;pre-empts his letter&quot;) — the scene would be strengthened, and the &quot;mis-sorted parcel&quot; ambiguity above resolved, by a line distinguishing the object already on the dresser from the box still in transit.</li>
+<li><span class="redacted">redacted</span>/the shut extension office (<span class="redacted">redacted</span>.md:23<code>, </code>institutions.md:12,714,720) is implied but never named — the scene could ground &quot;a trial-fields office that... <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s shut-building reasoning, which is otherwise this exact plot mechanism's canon home.</li>
+</ul>
 </div>
 </body></html>

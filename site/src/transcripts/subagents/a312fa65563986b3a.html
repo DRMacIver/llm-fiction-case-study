@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are the author&#x27;s reader-of-first-resort for the novel at ⟦redacte…</title><style>
+<html><head><meta charset="utf-8"><title>You are the author's reader-of-first-resort for the novel at [redacted]…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,42 +7,50 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the author&#x27;s reader-of-first-resort for the novel at ⟦redacte…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a312fa65563986b3a">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the author's reader-of-first-resort for the novel at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first.<br>
-<br>
-A voice lab has just run. In `<span class="redacted">redacted: private</span>/samples/round5/`:<br>
-- `study/` — craft studies of Herriot, McPhee, Weir (The Martian), Pratchett (The Wee Free Men), and a diagnostic of the current voice.<br>
-- `voices/` — three candidate successor voices with rules.<br>
-- `scenes/` — nine samples: three scenes (discovery, measurement, delve) written in each of the three voices.<br>
-<br>
-Read all nine samples and the three voice specs. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Judge honestly, against one question: **does this make an agricultural mystery exciting, while still being this book?** A voice that is livelier but has become a different, worse book fails. So does a faithful one that is still flat.<br>
-<br>
-Write `<span class="redacted">redacted: private</span>/samples/round5/REPORT.md`:<br>
-<br>
-## Verdict<br>
-Which voice, or which combination, and why — in plain terms the author can disagree with. Commit to a recommendation.<br>
-## Scene by scene<br>
-For each of the three scenes: which voice won it, quoted evidence from the winner and from a loser, and what the comparison teaches. Note where a voice won one scene and lost another — that is diagnostic.<br>
-## What each voice actually costs<br>
-Per voice: what it gains, what it loses against the current prose, and whether the loss is survivable over 300 chapters at a chapter a day.<br>
-## The parts worth keeping regardless<br>
-Individual techniques from any voice or study that should go into the working voice whatever else is decided.<br>
-## Proposed amendments to notes/voices.md and notes/llm-tells.md<br>
-Concrete, quotable: which existing rules to keep, amend, or strike, with the replacement wording. Do NOT edit those files — this is a proposal for DRMacIver, and per CLAUDE.md he makes design decisions.<br>
-## What this lab did not test<br>
-Honest limits. What would need a different experiment.<br>
-<br>
-Do not edit anything outside `samples/round5/`. Also write `<span class="redacted">redacted: private</span>/samples/round5/README.md` orienting a reader to the whole directory.<br>
-<br>
-Your final message is what the author reads in his terminal, on a phone, with the files not visible to him: 20-25 lines. Name the three voices and their bets, give the verdict and the reasoning, quote ONE short line from each voice so he can hear the difference, and state the single most important amendment you are proposing. Plain text, no file paths.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the author's reader-of-first-resort for the novel at [redacted]…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a312fa65563986b3a">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the author's reader-of-first-resort for the novel at <span class="redacted">redacted</span>. Read <code>CLAUDE.md</code> first.</p>
+<p>A voice lab has just run. In <span class="redacted">redacted</span>/samples/round5/`:</p>
+<ul>
+<li><code>study/</code> — craft studies of Herriot, McPhee, Weir (The Martian), Pratchett (The Wee Free Men), and a diagnostic of the current voice.</li>
+<li><code>voices/</code> — three candidate successor voices with rules.</li>
+<li>`scenes/ — nine samples: three scenes (discovery, measurement, delve) written in each of the three voices.</li>
+</ul>
+<p>Read all nine samples and the three voice specs. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Judge honestly, against one question: <strong>does this make an agricultural mystery exciting, while still being this book?</strong> A voice that is livelier but has become a different, worse book fails. So does a faithful one that is still flat.</p>
+<p>Write <span class="redacted">redacted</span>/samples/round5/REPORT.md`:</p>
+<h2>Verdict</h2>
+<p>Which voice, or which combination, and why — in plain terms the author can disagree with. Commit to a recommendation.</p>
+<h2>Scene by scene</h2>
+<p>For each of the three scenes: which voice won it, quoted evidence from the winner and from a loser, and what the comparison teaches. Note where a voice won one scene and lost another — that is diagnostic.</p>
+<h2>What each voice actually costs</h2>
+<p>Per voice: what it gains, what it loses against the current prose, and whether the loss is survivable over 300 chapters at a chapter a day.</p>
+<h2>The parts worth keeping regardless</h2>
+<p>Individual techniques from any voice or study that should go into the working voice whatever else is decided.</p>
+<h2>Proposed amendments to notes/voices.md and notes/llm-tells.md</h2>
+<p>Concrete, quotable: which existing rules to keep, amend, or strike, with the replacement wording. Do NOT edit those files — this is a proposal for DRMacIver, and per CLAUDE.md he makes design decisions.</p>
+<h2>What this lab did not test</h2>
+<p>Honest limits. What would need a different experiment.</p>
+<p>Do not edit anything outside <code>samples/round5/</code>. Also write `<span class="redacted">redacted</span>/samples/round5/README.md orienting a reader to the whole directory.</p>
+<p>Your final message is what the author reads in his terminal, on a phone, with the files not visible to him: 20-25 lines. Name the three voices and their bets, give the verdict and the reasoning, quote ONE short line from each voice so he can hear the difference, and state the single most important amendment you are proposing. Plain text, no file paths.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -66,15 +74,15 @@ Your final message is what the author reads in his terminal, on a phone, with th
 <p>✅ 193 lines, 12770 chars</p>
 <p>🔧 Read samples/round5/study/current-voice.md</p>
 <p>✅ 434 lines, 26395 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/scenes &amp;&amp; for f in discovery-voice-1.md discovery-v…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/scenes &amp;&amp; for f in discovery-voice-1.md discovery-voice-2.md…</p>
 <p>✅ 510 lines, 25185 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/scenes &amp;&amp; for f in measurement-voice-1.md measureme…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/scenes &amp;&amp; for f in measurement-voice-1.md measurement-voice-…</p>
 <p>✅ 549 lines, 26765 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/scenes &amp;&amp; for f in delve-voice-1.md delve-voice-2.m…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/scenes &amp;&amp; for f in delve-voice-1.md delve-voice-2.md delve-v…</p>
 <p>✅ 543 lines, 28194 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; head -c 7000 013-what-the-rings-say.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; head -c 7000 013-what-the-rings-say.md</p>
 <p>✅ 81 lines, 6999 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; head -c 6500 010-the-quiet-field.md; echo; echo "=====…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; head -c 6500 010-the-quiet-field.md; echo; echo "=====018====="…</p>
 <p>✅ 149 lines, 12515 chars</p>
 </details>
 
@@ -82,18 +90,18 @@ Your final message is what the author reads in his terminal, on a phone, with th
 <p>Now I'll write the report.</p>
 </div>
 
-<p>🔧 Bash: mkdir -p /tmp/x &amp;&amp; cat &gt; <span class="redacted">redacted: private</span>/samples/round5/REPORT.md &lt;&lt;'EOF' # Round 5 —…</p>
+<p>🔧 Bash: mkdir -p /tmp/x &amp;&amp; cat &gt; <span class="redacted">redacted</span>/samples/round5/REPORT.md &lt;&lt;'EOF' # Round 5 — verdict…</p>
 <p>✅ 1 lines, 68 chars</p>
-<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span>/samples/round5/README.md &lt;&lt;'EOF' # Round 5 — the voice lab  **W…</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted</span>/samples/round5/README.md &lt;&lt;'EOF' # Round 5 — the voice lab  **Why this e…</p>
 <p>✅ 1 lines, 64 chars</p>
 
 <div class="assistant-prose">
 <p>The three candidates, and the bet each makes about why a reader turns the page.</p>
-<p>The Rising Water bets on imaged consequence: you can picture the world in which this thing wins. "A yard a day is a fifth of a mile in a year."</p>
-<p>The Open Wager bets that mystery is competing hypotheses a reader can score. "That is the list. There is nothing else on it. ... <span class="redacted">redacted sentence: unpublished prose</span> Four of them. Curved."</p>
-<p>The Call-Out bets on jeopardy in a body, in someone's yard, now. "Say it in yards. Not for the book. For me, now, at my own gate."</p>
+<p>The Rising Water bets on imaged consequence: you can picture the world in which this thing wins. &quot;A yard a day is a fifth of a mile in a year.&quot;</p>
+<p>The Open Wager bets that mystery is competing hypotheses a reader can score. &quot;That is the list. There is nothing else on it. ... <span class="redacted">redacted sentence: unpublished prose</span> Four of them. Curved.&quot;</p>
+<p>The Call-Out bets on jeopardy in a body, in someone's yard, now. &quot;Say it in yards. Not for the book. For me, now, at my own gate.&quot;</p>
 <p>Verdict: the Call-Out for the sentences, the Open Wager for the architecture, one instrument from the Rising Water and nothing else.</p>
-<p>The Call-Out won two scenes of three, and it won the two that the book is mostly made of: ordinary procedure and <span class="redacted">redacted: event</span>. Its fuel is also the only renewable one. Dread depletes; a per-chapter symptom paragraph is invisible by chapter forty. Live hypotheses deplete too, and this particular mystery has few. But a named person wanting something done with money on it is inexhaustible, and the story is already structured as two people going farm to farm at other people's request. It is also the least of a departure from what you have.</p>
+<p>The Call-Out won two scenes of three, and it won the two that the book is mostly made of: ordinary procedure and <span class="redacted">redacted</span>. Its fuel is also the only renewable one. Dread depletes; a per-chapter symptom paragraph is invisible by chapter forty. Live hypotheses deplete too, and this particular mystery has few. But a named person wanting something done with money on it is inexhaustible, and the story is already structured as two people going farm to farm at other people's request. It is also the least of a departure from what you have.</p>
 <p>It failed the discovery scene, though, and it failed exactly as its own spec predicted: the yard got so interesting that the actual finding, the four circles whose centres march, never made it into the scene. That is why the Open Wager goes in as plot rules rather than prose. <span class="redacted">redacted sentence: unpublished prose</span> Those belong in arc plans, not sentences. Twice in its own samples the Open Wager had to write a paragraph whose only job was to keep score, and both times it broke its own bans to do it. The scoreboard cannot be carried by the narrator.</p>
 <p>The single most important amendment: openings are entrances, not minutes. No scene may open on a sentence stating its own outcome, duration, or verdict. Forty-six percent of your scenes currently date-stamp themselves and ten percent more announce how long they will take. All three voices invented this rule independently, all nine samples have a better first sentence than their source, and it is the mirror of endings-are-cuts, which is what pushed the weight to the front in the first place.</p>
 <p>Runner-up amendment: the epistemic downgrade rationed to one finding in four. The move is sacred, the rate is fatal.</p>

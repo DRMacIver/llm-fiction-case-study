@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-af92ead5cf233e89c">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/07-can-you-actually-fight.md, read after scenes 01–06 in the same directory (they bind what is on the page). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-af92ead5cf233e89c">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/07-can-you-actually-fight.md, read after scenes 01–06 in the same directory (they bind what is on the page). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Report findings only, per the skill's &quot;How to report&quot;: quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or &quot;cut&quot;. Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -34,52 +45,52 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 316 lines, 28141 chars</p>
 <p>✅ 201 lines, 18259 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat notes/canon/world/farm-teaching.md; echo "=====MAGIC"; cat no…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat notes/canon/world/farm-teaching.md; echo "=====MAGIC"; cat notes/canon…</p>
 <p>✅ 39 lines, 2171 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat notes/canon/characters/edwin.md; echo "=====PERI"; cat notes/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat notes/canon/characters/edwin.md; echo "=====PERI"; cat notes/canon/cha…</p>
 <p>✅ 45 lines, 2190 chars</p>
 <p>🔧 Read <span class="redacted">redacted: private</span></p>
 <p>✅ 1025 lines, 64722 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; wc -l notes/reader-notes-book-1.md; sed -n 1,200p notes/reader-no…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; wc -l notes/reader-notes-book-1.md; sed -n 1,200p notes/reader-notes-book-…</p>
 <p>✅ 200 lines, 11377 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "2026-08-2[789]" notes/canon/characters/*.md | head -60</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "2026-08-2[789]" notes/canon/characters/*.md | head -60</p>
 <p>✅ 60 lines, 6475 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n 20,70p notes/canon/characters/edwin.md; echo ---; sed -n 3…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n 20,70p notes/canon/characters/edwin.md; echo ---; sed -n 385,400p n…</p>
 <p>✅ 129 lines, 7893 chars</p>
 </details>
 
 <div class="assistant-prose">
 <p>Report follows. (No edits made, nothing committed.)</p>
-<p>## Findings</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1, final bullet (dependents of an edit) / fact check.** Scene 04 rewrote Day 1 into the class's *first* casting of the compost cantrip: "the one he teaches third, after a fortnight of heaps with no magic in them", heap "built a fortnight ago", Mrs Tansy doing "the first one. Dry first… Then for real." A revision day of the whole five-spell course on the very next morning is impossible on that timetable — they have not been taught the keeping charm, frost-sense or water-finding, and canon's course is a fortnight a spell (`farm-teaching.md`, lay-masterable). The revision day is groundwork wording (ch. 002, where the cantrip was already in its third week) that scene 04's rewrite has overtaken.<br>
-*Fix:* drop the revision-day frame and make the morning the ordinary next lesson with Peri in it — the cantrip's second day (the heap left alone, a second heap or a dry-cast), with the keeping charm and the blessing appearing as *things Edwin names and refuses to demonstrate out of order* when Peri asks. If the five-in-miniature is wanted, it has to be a later scene in the course.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span> Casting the cantrip on it again the next morning contradicts the lesson the previous scene was built to deliver. "Every wrist soft" also reads as a class fluent in a spell they first cast yesterday, and "the compost bed" is a third object (the class garden has *beds*, wrong in useful ways, and a *heap*): Part 1, a word doing a job it cannot do.<br>
-*Fix:* the class does not cast on that heap. Have them build or dry-cast on a second heap, and set Peri's question "over the new heap" rather than "over the compost bed".</p>
-<p>**3.** *"They did the <span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1, a word doing a job it cannot do.** Dry-casting is established two scenes earlier as "hands and the words and no mana" — it needs no target at all, so "dry-cast *on a fencepost*" is two incompatible things, and "for want of a sick ewe" supplies a reason the dry-cast does not need.<br>
-*Fix:* "They did the <span class="redacted">redacted: mechanic</span> dry, there being no sick beast in the garden to hold the door for."</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1, pronoun with no antecedent — and a repeat of a comment he has already made** (reader-notes §4, ch. 002: *"'make the ewe well' after the case stopped being ewe-specific"*). The scene has generalised the spell to the sick-*beast* blessing; there is no ewe anywhere in it.<br>
+<h2>Findings</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1, final bullet (dependents of an edit) / fact check.</strong> Scene 04 rewrote Day 1 into the class's <em>first</em> casting of the compost cantrip: &quot;the one he teaches third, after a fortnight of heaps with no magic in them&quot;, heap &quot;built a fortnight ago&quot;, Mrs Tansy doing &quot;the first one. Dry first… Then for real.&quot; A revision day of the whole five-spell course on the very next morning is impossible on that timetable — they have not been taught the keeping charm, frost-sense or water-finding, and canon's course is a fortnight a spell (<code>farm-teaching.md</code>, lay-masterable). The revision day is groundwork wording (ch. 002, where the cantrip was already in its third week) that scene 04's rewrite has overtaken.<br />
+<em>Fix:</em> drop the revision-day frame and make the morning the ordinary next lesson with Peri in it — the cantrip's second day (the heap left alone, a second heap or a dry-cast), with the keeping charm and the blessing appearing as <em>things Edwin names and refuses to demonstrate out of order</em> when Peri asks. If the five-in-miniature is wanted, it has to be a later scene in the course.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> Casting the cantrip on it again the next morning contradicts the lesson the previous scene was built to deliver. &quot;Every wrist soft&quot; also reads as a class fluent in a spell they first cast yesterday, and &quot;the compost bed&quot; is a third object (the class garden has <em>beds</em>, wrong in useful ways, and a <em>heap</em>): Part 1, a word doing a job it cannot do.<br />
+<em>Fix:</em> the class does not cast on that heap. Have them build or dry-cast on a second heap, and set Peri's question &quot;over the new heap&quot; rather than &quot;over the compost bed&quot;.</p>
+<p><strong>3.</strong> *&quot;They did the <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1, a word doing a job it cannot do.</strong> Dry-casting is established two scenes earlier as &quot;hands and the words and no mana&quot; — it needs no target at all, so &quot;dry-cast <em>on a fencepost</em>&quot; is two incompatible things, and &quot;for want of a sick ewe&quot; supplies a reason the dry-cast does not need.<br />
+<em>Fix:</em> &quot;They did the <span class="redacted">redacted</span> dry, there being no sick beast in the garden to hold the door for.&quot;</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1, pronoun with no antecedent — and a repeat of a comment he has already made</strong> (reader-notes §4, ch. 002: <em>&quot;'make the ewe well' after the case stopped being ewe-specific&quot;</em>). The scene has generalised the spell to the sick-<em>beast</em> blessing; there is no ewe anywhere in it.<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**5.** *"There were two. Bar the garden gate to her… or teach the class."*<br>
-**Part 1, check every count / Part 5, a thread raised and dropped.** There are three, and he took the third yesterday: he told her to get off his hill, and she is walking up it. The scene never registers that an order he gave has simply failed, which is the fact the morning is actually about.<br>
-*Fix:* make the count honest and let it carry the point — e.g. "There were two, now that *get off my hill* had been tried. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 3, worldbuilding against canon.** This is the scene's definition of the keeping charm, and it defines it as information only. `magic.md` (DRMacIver, 2026-08-26, binding) rules the charm **hybrid**: it reads the history *and* pushes back how long the thing will keep, and the date it reports already includes the push. Ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
-*Fix:* "…the charm that read a fruit's whole year off it, gave it back a week or a season depending on how well it had been picked and packed, and told you the new date: keeps to spring, wants eating this week."</p>
-<p>**7.** *"as she had said before"* / *"as he had said before"*<br>
-**Part 6, the plainest form.** "Before" reads as one prior occasion and kills the joke, which is liturgical repetition; ch. 002's "as she said every time / as he said every time" is the stronger form and he did not query it.<br>
-*Fix:* restore "as she said every time" and "as he said every time".</p>
-<p>**8.** *"and the blessing had held the door"*<br>
-**Part 6.** Dropping ch. 002's "merely" flattens a contrast into two equal claims — the sentence's whole point is that the nursing saved the flock and the blessing did the small part.<br>
+<p><strong>5.</strong> <em>&quot;There were two. Bar the garden gate to her… or teach the class.&quot;</em><br />
+<strong>Part 1, check every count / Part 5, a thread raised and dropped.</strong> There are three, and he took the third yesterday: he told her to get off his hill, and she is walking up it. The scene never registers that an order he gave has simply failed, which is the fact the morning is actually about.<br />
+<em>Fix:</em> make the count honest and let it carry the point — e.g. &quot;There were two, now that <em>get off my hill</em> had been tried. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 3, worldbuilding against canon.</strong> This is the scene's definition of the keeping charm, and it defines it as information only. <code>magic.md</code> (DRMacIver, 2026-08-26, binding) rules the charm <strong>hybrid</strong>: it reads the history <em>and</em> pushes back how long the thing will keep, and the date it reports already includes the push. Ch. <span class="redacted">redacted sentence: unpublished prose</span><br />
+<em>Fix:</em> &quot;…the charm that read a fruit's whole year off it, gave it back a week or a season depending on how well it had been picked and packed, and told you the new date: keeps to spring, wants eating this week.&quot;</p>
+<p><strong>7.</strong> <em>&quot;as she had said before&quot;</em> / <em>&quot;as he had said before&quot;</em><br />
+<strong>Part 6, the plainest form.</strong> &quot;Before&quot; reads as one prior occasion and kills the joke, which is liturgical repetition; ch. 002's &quot;as she said every time / as he said every time&quot; is the stronger form and he did not query it.<br />
+<em>Fix:</em> restore &quot;as she said every time&quot; and &quot;as he said every time&quot;.</p>
+<p><strong>8.</strong> <em>&quot;and the blessing had held the door&quot;</em><br />
+<strong>Part 6.</strong> Dropping ch. 002's &quot;merely&quot; flattens a contrast into two equal claims — the sentence's whole point is that the nursing saved the flock and the blessing did the small part.<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**9.** *"I was twenty-one and three years into the college at Wystow… and I never went back to Wystow."*<br>
-**Part 6, redundancy in a landed beat.** Wystow twice in four sentences, and "three years into the college at Wystow" is limp where the beat wants the plainest form. (The facts themselves are correct against `edwin.md` — 21, three years in, never went back.)<br>
+<p><strong>9.</strong> <em>&quot;I was twenty-one and three years into the college at Wystow… and I never went back to Wystow.&quot;</em><br />
+<strong>Part 6, redundancy in a landed beat.</strong> Wystow twice in four sentences, and &quot;three years into the college at Wystow&quot; is limp where the beat wants the plainest form. (The facts themselves are correct against <code>edwin.md</code> — 21, three years in, never went back.)<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>---</p>
-<p>**Device.** The one a second round would be about is the interrogation itself: three questions from Peri, three answers from Edwin, each answered fully and none of them changing anything — a recitation of the course's virtues with a listener attached, and the shed story delivered as a set piece into a silence Peri does not earn. It works only while the *lesson* is real work in front of them; it fails the moment the lesson is a revision-day parade of five spells the class has not learned, because then the class is scenery and Peri is being told things for the reader.</p>
-<p>**What it would take.** Rebuild it on one live piece of work (finding 1 and 2): the heap that must be left alone, the charm he refuses to show her out of order, the blessing with no beast to bless. Then her questions are interruptions of something with a cost, his answers come out sideways while his hands are busy, and "Can you actually fight?" lands as the question that finally stops the work — rather than as the third item in a list.</p>
+<hr />
+<p><strong>Device.</strong> The one a second round would be about is the interrogation itself: three questions from Peri, three answers from Edwin, each answered fully and none of them changing anything — a recitation of the course's virtues with a listener attached, and the shed story delivered as a set piece into a silence Peri does not earn. It works only while the <em>lesson</em> is real work in front of them; it fails the moment the lesson is a revision-day parade of five spells the class has not learned, because then the class is scenery and Peri is being told things for the reader.</p>
+<p><strong>What it would take.</strong> Rebuild it on one live piece of work (finding 1 and 2): the heap that must be left alone, the charm he refuses to show her out of order, the blessing with no beast to bless. Then her questions are interruptions of something with a cost, his answers come out sideways while his hands are busy, and &quot;Can you actually fight?&quot; lands as the question that finally stops the work — rather than as the third item in a list.</p>
 </div>
 </body></html>

@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ac0e3800bed35281c">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/09-the-cart-up-the-hill.md, read after scenes 01–08 in the same directory (they bind what is on the page). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ac0e3800bed35281c">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/09-the-cart-up-the-hill.md, read after scenes 01–08 in the same directory (they bind what is on the page). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Report findings only, per the skill's &quot;How to report&quot;: quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or &quot;cut&quot;. Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -51,39 +62,39 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 </details>
 
 <div class="assistant-prose">
-<p>## Findings</p>
-<p>**1.** *"and it was the first thing since the previous morning that had gone entirely as he intended."*<br>
-**Part 1 — check every count and every fact inside the scene.** It isn't. Scene 06 has the working itself go exactly as intended and *annoy* him for it ("It annoyed him, slightly, that it had come so easily. He had wanted something to argue with"), and the rain at half past twelve is the back end of that same working, not a separate thing. The sentence also quietly denies Day 1's other completed intention (the fourteenth decided and written in the ledger, scene 05).<br>
-**Fix:** cut from *"and it was the first thing"*; end the sentence at *"clear sky over everything else."*</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> It therefore reaches the vale travelling *west*, out of Wystow, which is why a Wystow clerk's *forward via* line is on it at all. <span class="redacted">redacted sentence: unpublished prose</span><br>
-**Fix:** *"It come west out of Wystow, for their own field office, and somebody's turned it round at the bridge. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 3 — would this exist in a real world occupied by real people?** The Ashway is the vale's post-house on the main east road (`geography.md`, ch. 007: board, postmistress, market shed), the college's letters have gone east and west by it for nineteen years, and a hired rider makes Wystow in four days. "If anything is" makes the east road a dead end, and it is the one sentence the whole decision rests on.<br>
-**Fix:** make the delay the bridge's habit, not the road's emptiness: *"I can take it back down, but it'll lie in the shed at the bridge till somebody's going past the college, and I've seen things lie there a month."*</p>
-<p>**4.** *"A fortnight at the bridge, or a fortnight on his dresser, and from his dresser he could put it in with his own letters to the college, which went east twice a year and could go east once more."*<br>
-**Part 1 — check every inference** (and this is the passage DRMacIver has already queried: *"It's not very clear what he's going to be doing with this"*). Twice a year does not yield a fortnight. As written the plan is arithmetically worse than the alternative it is chosen over, so the reader cannot restate what he has decided to do — which is exactly the previous comment, unrepaired.<br>
-**Fix:** give the dispatch a date he already has. *"A fortnight at the bridge and then the bridge's own habits; or his dresser, and the autumn letter to the college, which was not written yet and would not wait past the frosts. He signed for it."*</p>
-<p>**5.** *"That was all the difference there was, and it was a real one, and he signed for it."*<br>
-**Part 2 — the gesture at meaning.** The sentence announces that a difference matters and declines to say what it is; the flat restatement is empty. It is also the scene's second narrator aphorism, after *"The philosophy of the thing was above his wage"* — one per scene, and that one is the better.<br>
-**Fix:** cut; let the replacement in finding 4 end on the signing.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1 — a word doing a job it cannot do.** He is on his route; he is twenty minutes up a hill he should have stopped at the bottom of, which his own next speech says. "Far" claims a distance the scene then contradicts.<br>
-**Fix:** *"off his route and aware of it."*</p>
-<p>**7.** *"was off the fleeces by evening"*<br>
-**Part 1 — two restatements and no way to choose.** Either the shorn fleeces were out in the rain and dried by evening — which undoes *"Four hundred sheep had been sheared dry,"* the entire point of the half past twelve — or they were under cover and no rain was ever on them.<br>
-**Fix:** *"and was done by evening."*</p>
-<p>**8.** *"watched his rain do what it had been told, twenty miles off"*<br>
-**Part 1 — check every count.** Twenty miles is carried forward unincremented from scene 06, where it is where he *parked* the front overnight, not where the Pellings are. As written it silently fixes the Pellings at twenty miles and has the front sit still from dusk to noon.<br>
-**Fix:** drop the figure — *"watched his rain do what it had been told, a grey slant over the Pellings' side of the vale and clear sky over everything else."*</p>
-<p>**9.** *"about the size for seed samples"*<br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> He is the one man in the six counties who would name this box for what it is at a glance, and the scene has him guess wrong and generically.<br>
-**Fix:** *"a sample box, dovetailed, off somebody's boxing bench, and it was not for him."*</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> and went to find Sorrel about the frost list."*<br>
-**Part 6 — prefer the participial form to a chain of "and"s in a physical beat.**<br>
-**Fix:** *"He carried it in, set it on the kitchen dresser between the crockery that did not match and the seed catalogues, direction to the wall, and went to find Sorrel about the frost list."*</p>
-<p>## The device</p>
+<h2>Findings</h2>
+<p><strong>1.</strong> <em>&quot;and it was the first thing since the previous morning that had gone entirely as he intended.&quot;</em><br />
+<strong>Part 1 — check every count and every fact inside the scene.</strong> It isn't. Scene 06 has the working itself go exactly as intended and <em>annoy</em> him for it (&quot;It annoyed him, slightly, that it had come so easily. He had wanted something to argue with&quot;), and the rain at half past twelve is the back end of that same working, not a separate thing. The sentence also quietly denies Day 1's other completed intention (the fourteenth decided and written in the ledger, scene 05).<br />
+<strong>Fix:</strong> cut from <em>&quot;and it was the first thing&quot;</em>; end the sentence at <em>&quot;clear sky over everything else.&quot;</em></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence</span> It therefore reaches the vale travelling <em>west</em>, out of Wystow, which is why a Wystow clerk's <em>forward via</em> line is on it at all. <span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Fix:</strong> *&quot;It come west out of Wystow, for their own field office, and somebody's turned it round at the bridge. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 3 — would this exist in a real world occupied by real people?</strong> The Ashway is the vale's post-house on the main east road (<code>geography.md</code>, ch. 007: board, postmistress, market shed), the college's letters have gone east and west by it for nineteen years, and a hired rider makes Wystow in four days. &quot;If anything is&quot; makes the east road a dead end, and it is the one sentence the whole decision rests on.<br />
+<strong>Fix:</strong> make the delay the bridge's habit, not the road's emptiness: <em>&quot;I can take it back down, but it'll lie in the shed at the bridge till somebody's going past the college, and I've seen things lie there a month.&quot;</em></p>
+<p><strong>4.</strong> <em>&quot;A fortnight at the bridge, or a fortnight on his dresser, and from his dresser he could put it in with his own letters to the college, which went east twice a year and could go east once more.&quot;</em><br />
+<strong>Part 1 — check every inference</strong> (and this is the passage DRMacIver has already queried: <em>&quot;It's not very clear what he's going to be doing with this&quot;</em>). Twice a year does not yield a fortnight. As written the plan is arithmetically worse than the alternative it is chosen over, so the reader cannot restate what he has decided to do — which is exactly the previous comment, unrepaired.<br />
+<strong>Fix:</strong> give the dispatch a date he already has. <em>&quot;A fortnight at the bridge and then the bridge's own habits; or his dresser, and the autumn letter to the college, which was not written yet and would not wait past the frosts. He signed for it.&quot;</em></p>
+<p><strong>5.</strong> <em>&quot;That was all the difference there was, and it was a real one, and he signed for it.&quot;</em><br />
+<strong>Part 2 — the gesture at meaning.</strong> The sentence announces that a difference matters and declines to say what it is; the flat restatement is empty. It is also the scene's second narrator aphorism, after <em>&quot;The philosophy of the thing was above his wage&quot;</em> — one per scene, and that one is the better.<br />
+<strong>Fix:</strong> cut; let the replacement in finding 4 end on the signing.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1 — a word doing a job it cannot do.</strong> He is on his route; he is twenty minutes up a hill he should have stopped at the bottom of, which his own next speech says. &quot;Far&quot; claims a distance the scene then contradicts.<br />
+<strong>Fix:</strong> <em>&quot;off his route and aware of it.&quot;</em></p>
+<p><strong>7.</strong> <em>&quot;was off the fleeces by evening&quot;</em><br />
+<strong>Part 1 — two restatements and no way to choose.</strong> Either the shorn fleeces were out in the rain and dried by evening — which undoes <em>&quot;Four hundred sheep had been sheared dry,&quot;</em> the entire point of the half past twelve — or they were under cover and no rain was ever on them.<br />
+<strong>Fix:</strong> <em>&quot;and was done by evening.&quot;</em></p>
+<p><strong>8.</strong> <em>&quot;watched his rain do what it had been told, twenty miles off&quot;</em><br />
+<strong>Part 1 — check every count.</strong> Twenty miles is carried forward unincremented from scene 06, where it is where he <em>parked</em> the front overnight, not where the Pellings are. As written it silently fixes the Pellings at twenty miles and has the front sit still from dusk to noon.<br />
+<strong>Fix:</strong> drop the figure — <em>&quot;watched his rain do what it had been told, a grey slant over the Pellings' side of the vale and clear sky over everything else.&quot;</em></p>
+<p><strong>9.</strong> <em>&quot;about the size for seed samples&quot;</em><br />
+<span class="redacted">redacted sentence</span> He is the one man in the six counties who would name this box for what it is at a glance, and the scene has him guess wrong and generically.<br />
+<strong>Fix:</strong> <em>&quot;a sample box, dovetailed, off somebody's boxing bench, and it was not for him.&quot;</em></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> and went to find Sorrel about the frost list.&quot;*<br />
+<strong>Part 6 — prefer the participial form to a chain of &quot;and&quot;s in a physical beat.</strong><br />
+<strong>Fix:</strong> <em>&quot;He carried it in, set it on the kitchen dresser between the crockery that did not match and the seed catalogues, direction to the wall, and went to find Sorrel about the frost list.&quot;</em></p>
+<h2>The device</h2>
 <p>A second round would be about the parcel's disposal: the box is a plot-bearing object that sits on the page as a decision Edwin narrates to himself and never acts on, and the direction turned to the wall is the scene contradicting his stated plan without knowing it — a man who means to post something on does not hide its address from himself.</p>
-<p>To make it work, the disposal has to be one act with a date attached and a reason for the turned face in the same beat: he recognises the box as sample work off a bench he wrote the instructions for, has no business opening another office's sample, decides it goes with the autumn letter, and turns the direction to the wall *because* it is a piece of somebody else's business he has agreed to be responsible for — which is the trap in one gesture. Otherwise cut his reasoning to the signature and let the box be inert on purpose.</p>
+<p>To make it work, the disposal has to be one act with a date attached and a reason for the turned face in the same beat: he recognises the box as sample work off a bench he wrote the instructions for, has no business opening another office's sample, decides it goes with the autumn letter, and turns the direction to the wall <em>because</em> it is a piece of somebody else's business he has agreed to be responsible for — which is the trap in one gesture. Otherwise cut his reasoning to the signature and let the box be inert on purpose.</p>
 </div>
 </body></html>

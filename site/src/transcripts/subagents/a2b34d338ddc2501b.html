@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,17 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a2b34d338ddc2501b">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 31-. Read it in full.<br>
-LENS: narration. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and extract ONLY the rules with "tier": "semantic" and "lens": "narration". Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a2b34d338ddc2501b">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 31-. Read it in full.<br />
+LENS: narration. Read <span class="redacted">redacted</span>/tools/lint/rules.json and extract ONLY the rules with &quot;tier&quot;: &quot;semantic&quot; and &quot;lens&quot;: &quot;narration&quot;. Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
@@ -25,8 +38,8 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>I'll help you lint the narrative in scene 31. Let me start by finding the target file and reading the rules.</p>
 </div>
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes/ -name "31-*" -type f (Find the scene file starting with 31-)</p>
-<p>✅ 1 lines, 77 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/31-the-pantry-door.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes/ -name "31-*" -type f (Find the scene file starting with 31-)</p>
+<p>✅ 1 lines, 77 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/31-the-pantry-door.md</p>
 <p>🔧 Read tools/lint/rules.json</p>
 <p>✅ 1196 lines, 51733 chars</p>
 
@@ -48,32 +61,34 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>Now let me apply the semantic + narration rules to this scene. First, let me extract and understand the specific rules:</p>
 </div>
 
-<p>🔧 Bash: cat &gt; /tmp/extract_rules.py &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/li… (List all semantic + narration rules)</p>
+<p>🔧 Bash: cat &gt; /tmp/extract_rules.py &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.… (List all semantic + narration rules)</p>
 <p>✅ 14 lines, 709 chars</p>
 
 <div class="assistant-prose">
 <p>Now I'll carefully apply each of these 12 semantic + narration rules to the scene, reading context before flagging anything:</p>
 </div>
 
-<p>🔧 Bash: wc -w <span class="redacted">redacted: private</span>/draft/book-01/scenes/31-the-pantry-door.md (Count words in the scene)</p>
-<p>✅ 1 lines, 86 chars —     1208 <span class="redacted">redacted: private</span>/draft/book-01/scenes/31-the-pantry-door.md</p>
+<p>🔧 Bash: wc -w <span class="redacted">redacted</span>/draft/book-01/scenes/31-the-pantry-door.md (Count words in the scene)</p>
+<p>✅ 1 lines, 86 chars —     1208 <span class="redacted">redacted</span>/draft/book-01/scenes/31-the-pantry-door.md</p>
 
 <div class="assistant-prose">
 <p>Based on my careful analysis of the scene (1,208 words) against all 12 semantic + narration rules:</p>
-<p>1. **generalising-clause-budget**: No generalizing closing clauses found. ✓<br>
-2. **windup-tag-budget**: No biographical clauses in dialogue tags. ✓<br>
-3. **wants-gerund-budget**: No "wants doing" constructions. ✓<br>
-4. **prose-not-at-rest**: Good balance; plain reporting prose in middle section (Edwin asking questions) balances shaped opening. ✓<br>
-5. **unlocated-narration**: Private farmhouse scene; no village omniscience. ✓<br>
-6. **motive-off-page**: "wiped her hands down her apron, although they were dry" — motive is clearly implied by preceding validation and cashed out in following dialogue about the fortnight. ✓<br>
-7. **viewpoint-overreach**: All facts available to Edwin through conversation/observation. ✓<br>
-8. **nominalised-absence**: No gerund-subjects or abstract nouns as grammatical subjects. ✓<br>
-9. **description-list**: Descriptions bound to action (reading the door); not enumerated lists. ✓<br>
-10. **rest-register-misplaced**: Work conversation scene; register appropriate. ✓<br>
-11. **unearned-authority**: No unearned orders; guest appropriately directing note-taker. ✓<br>
-12. **likeability-drift**: No moments making characters unlikeable. ✓</p>
+<ol>
+<li><strong>generalising-clause-budget</strong>: No generalizing closing clauses found. ✓</li>
+<li><strong>windup-tag-budget</strong>: No biographical clauses in dialogue tags. ✓</li>
+<li><strong>wants-gerund-budget</strong>: No &quot;wants doing&quot; constructions. ✓</li>
+<li><strong>prose-not-at-rest</strong>: Good balance; plain reporting prose in middle section (Edwin asking questions) balances shaped opening. ✓</li>
+<li><strong>unlocated-narration</strong>: Private farmhouse scene; no village omniscience. ✓</li>
+<li><strong>motive-off-page</strong>: &quot;wiped her hands down her apron, although they were dry&quot; — motive is clearly implied by preceding validation and cashed out in following dialogue about the fortnight. ✓</li>
+<li><strong>viewpoint-overreach</strong>: All facts available to Edwin through conversation/observation. ✓</li>
+<li><strong>nominalised-absence</strong>: No gerund-subjects or abstract nouns as grammatical subjects. ✓</li>
+<li><strong>description-list</strong>: Descriptions bound to action (reading the door); not enumerated lists. ✓</li>
+<li><strong>rest-register-misplaced</strong>: Work conversation scene; register appropriate. ✓</li>
+<li><strong>unearned-authority</strong>: No unearned orders; guest appropriately directing note-taker. ✓</li>
+<li><strong>likeability-drift</strong>: No moments making characters unlikeable. ✓</li>
+</ol>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

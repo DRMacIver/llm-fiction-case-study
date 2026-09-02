@@ -7,42 +7,64 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Below are raw extracted findings about how magic works in a fiction p…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a8669e3967b069a44">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Below are raw extracted findings about how magic works in a fiction project (JSON). Consolidate them into a compact markdown ledger, grouped by topic, deduplicating identical claims while keeping every source path and authority label (list sources compactly after each claim). Keep verbatim quotes only where the wording itself matters. Flag contradictions between findings explicitly under a "Contradictions" heading with the sources on each side. Do not invent anything. Return only the markdown.<br>
-<br>
-[{"topic":"dungeons-and-mana","claim":"A mage can use detecting magics in dungeons but finds no clear information in certain chambers.","quote":"Can you hear the ground? <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: mechanic</span> requires nine days of work to build, with six of those days spent on failed attempts.","quote":"Nine days building <span class="redacted">redacted: mechanic</span>, six of them failing","source":"summaries/book-01.md","authority":"plan"},{"topic":"limits-costs-and-failure","claim":"<span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> using a technique called the nudge with periodic variations.","quote":"weekly drill day with <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Below are raw extracted findings about how magic works in a fiction p…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a8669e3967b069a44">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-30</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Below are raw extracted findings about how magic works in a fiction project (JSON). Consolidate them into a compact markdown ledger, grouped by topic, deduplicating identical claims while keeping every source path and authority label (list sources compactly after each claim). Keep verbatim quotes only where the wording itself matters. Flag contradictions between findings explicitly under a &quot;Contradictions&quot; heading with the sources on each side. Do not invent anything. Return only the markdown.</p>
+<p>[{&quot;topic&quot;:&quot;dungeons-and-mana&quot;,&quot;claim&quot;:&quot;A mage can use detecting magics in dungeons but finds no clear information in certain chambers.&quot;,&quot;quote&quot;:&quot;Can you hear the ground? <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> requires nine days of work to build, with six of those days spent on failed attempts.&quot;,&quot;quote&quot;:&quot;Nine days building <span class="redacted">redacted</span>, six of them failing&quot;,&quot;source&quot;:&quot;summaries/book-01.md&quot;,&quot;authority&quot;:&quot;plan&quot;},{&quot;topic&quot;:&quot;limits-costs-and-failure&quot;,&quot;claim&quot;:&quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> using a technique called the nudge with periodic variations.&quot;,&quot;quote&quot;:&quot;weekly drill day with <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p></blockquote>
 
 
 <div class="assistant-prose">
-<p># Magic Ledger</p>
-<p>## Dungeons and Mana<br>
-- A mage can use detecting magics in dungeons but finds no clear information in certain chambers — "Can you hear the ground? — no control" [summaries/book-01-arc-02.md, plan]<br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>## Limits, Costs and Failure<br>
-- An assay costs a sixpence for each use — "A sixpence for every assay" [summaries/book-01-arc-01.md, plan]<br>
-- <span class="redacted">redacted: mechanic</span> took nine days to build, six of them failing [summaries/book-01.md, plan]<br>
-- <span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Edwin has cast only one spell in 300 years of records — "one spell, one shed" [summaries/book-01-arc-02.md, plan]<br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>## Practitioners and Learning<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- <span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Peri drills Swordsmanship weekly with <span class="redacted">redacted: character</span> using the nudge, with periodic variations — "weekly drill day with <span class="redacted">redacted: character</span>, nudge to be taken and tested" [summaries/book-01-arc-02.md, plan]<br>
-- Edwin settled two hundred years ago and did not move; [Wayfaring] 12 for walking to Fenholt is the skill's first movement since [summaries/book-01-arc-01.md, plan]</p>
-<p>## Other<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Edwin's hypothesis: all five silent soil sites are one phenomenon travelling through space over time [summaries/book-01-arc-03.md, plan]<br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>## Contradictions<br>
-- **Length of Edwin's record vs. his stillness.** "One spell, one shed" is set against 300 years of records [summaries/book-01-arc-02.md, plan], while his settling is dated two hundred years ago [summaries/book-01-arc-01.md, plan]. The findings do not reconcile the 300-year and 200-year spans.<br>
-- **Whether <span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span> Both from the same source; the findings offer no reason for the practice.</p>
+<h1>Magic Ledger</h1>
+<h2>Dungeons and Mana</h2>
+<ul>
+<li>A mage can use detecting magics in dungeons but finds no clear information in certain chambers — &quot;Can you hear the ground? — no control&quot; [summaries/book-01-arc-02.md, plan]<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>Limits, Costs and Failure</h2>
+<ul>
+<li>An assay costs a sixpence for each use — &quot;A sixpence for every assay&quot; [summaries/book-01-arc-01.md, plan]</li>
+<li><span class="redacted">redacted</span> took nine days to build, six of them failing [summaries/book-01.md, plan]</li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Edwin has cast only one spell in 300 years of records — &quot;one spell, one shed&quot; [summaries/book-01-arc-02.md, plan]<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>Practitioners and Learning</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Peri drills Swordsmanship weekly with <span class="redacted">redacted</span> using the nudge, with periodic variations — &quot;weekly drill day with <span class="redacted">redacted</span>, nudge to be taken and tested&quot; [summaries/book-01-arc-02.md, plan]</li>
+<li>Edwin settled two hundred years ago and did not move; [Wayfaring] 12 for walking to Fenholt is the skill's first movement since [summaries/book-01-arc-01.md, plan]</li>
+</ul>
+<h2>Other</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Edwin's hypothesis: all five silent soil sites are one phenomenon travelling through space over time [summaries/book-01-arc-03.md, plan]<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>Contradictions</h2>
+<ul>
+<li><strong>Length of Edwin's record vs. his stillness.</strong> &quot;One spell, one shed&quot; is set against 300 years of records [summaries/book-01-arc-02.md, plan], while his settling is dated two hundred years ago [summaries/book-01-arc-01.md, plan]. The findings do not reconcile the 300-year and 200-year spans.</li>
+<li>Whether <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Both from the same source; the findings offer no reason for the practice.</li>
+</ul>
 </div>
 </body></html>

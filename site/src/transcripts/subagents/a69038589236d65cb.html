@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are verifying a citation-repair pass on the novel&#x27;s notes at ⟦red…</title><style>
+<html><head><meta charset="utf-8"><title>You are verifying a citation-repair pass on the novel's notes at [redacted]…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,25 +7,36 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are verifying a citation-repair pass on the novel&#x27;s notes at ⟦red…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a69038589236d65cb">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are verifying a citation-repair pass on the novel's notes at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first.<br>
-<br>
-Three agents have just repaired citation mismatches across disjoint file sets, reporting to `notes/decisions/citations-*.md`. Read all three reports.<br>
-<br>
-1. **Re-run the checker** — `cd <span class="redacted">redacted: private</span> &amp;&amp; python3 scripts/check_citations.py --min-words 5` — and compare against the starting figures: 482 phrases checked, 206 mismatches (110 fabricated, 38 altered, 58 wrong-chapter). Report the new numbers.<br>
-2. **Confirm the fall is real, not cosmetic.** Sample at least ten repairs across the three domains and verify each against the actual chapter. A count that fell because quotations were deleted rather than corrected is a worse outcome than the original problem — check specifically for that, and for any replacement quotation that does not appear in the cited chapter either.<br>
-3. **Check the demotions.** The important output of this pass is the list of claims canon believed on no evidence. Read each domain's "Claims demoted or cut" section and confirm the demotion actually happened in the canon file, at the right claim level, with a trigger where one is owed.<br>
-4. **Anything still unresolved**, and whether the residue is parser noise or real.<br>
-<br>
-Write `<span class="redacted">redacted: private</span>/notes/decisions/citations-VERIFY.md` with your findings, then **commit everything from this workflow** with a clear message.<br>
-<br>
-Your final message: before/after counts, how many of your ten samples were correctly repaired, the most consequential demotion, and what remains.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are verifying a citation-repair pass on the novel's notes at [redacted]…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a69038589236d65cb">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are verifying a citation-repair pass on the novel's notes at <span class="redacted">redacted</span>. Read <code>CLAUDE.md</code> first.</p>
+<p>Three agents have just repaired citation mismatches across disjoint file sets, reporting to <code>notes/decisions/citations-*.md</code>. Read all three reports.</p>
+<ol>
+<li><strong>Re-run the checker</strong> — cd <span class="redacted">redacted</span> &amp;&amp; python3 scripts/check_citations.py --min-words 5` — and compare against the starting figures: 482 phrases checked, 206 mismatches (110 fabricated, 38 altered, 58 wrong-chapter). Report the new numbers.</li>
+<li><strong>Confirm the fall is real, not cosmetic.</strong> Sample at least ten repairs across the three domains and verify each against the actual chapter. A count that fell because quotations were deleted rather than corrected is a worse outcome than the original problem — check specifically for that, and for any replacement quotation that does not appear in the cited chapter either.</li>
+<li><strong>Check the demotions.</strong> The important output of this pass is the list of claims canon believed on no evidence. Read each domain's &quot;Claims demoted or cut&quot; section and confirm the demotion actually happened in the canon file, at the right claim level, with a trigger where one is owed.</li>
+<li><strong>Anything still unresolved</strong>, and whether the residue is parser noise or real.</li>
+</ol>
+<p>Write `<span class="redacted">redacted</span>/notes/decisions/citations-VERIFY.md with your findings, then <strong>commit everything from this workflow</strong> with a clear message.</p>
+<p>Your final message: before/after counts, how many of your ten samples were correctly repaired, the most consequential demotion, and what remains.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -41,69 +52,69 @@ Your final message: before/after counts, how many of your ten samples were corre
 <p>✅ 466 lines, 27145 chars</p>
 <p>🔧 Bash: python3 scripts/check_citations.py --min-words 5 &gt; <span class="redacted">redacted: private</span> 2&gt;&amp;1; echo "exit $…</p>
 <p>✅ 41 lines, 4633 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; S=<span class="redacted">redacted: private</span> head -30 $S/check.txt; echo ---; grep -c .…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; S=<span class="redacted">redacted: private</span> head -30 $S/check.txt; echo ---; grep -c . $S/check…</p>
 <p>✅ 95 lines, 3815 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; S=<span class="redacted">redacted: private</span> grep -oE '^[a-z][^ :]*\.md:[0-9]+' $S/check…</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git stash list; git show --stat HEAD~4 --oneline | head -20; echo…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; S=<span class="redacted">redacted: private</span> grep -oE '^[a-z][^ :]*\.md:[0-9]+' $S/check.txt | s…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git stash list; git show --stat HEAD~4 --oneline | head -20; echo ===; git…</p>
 <p>✅ 31 lines, 1173 chars</p>
 <p>✅ 10 lines, 527 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git diff --stat 61d4c0f~1 HEAD; echo ===DELETIONS===; git diff 61…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git diff --stat 61d4c0f~1 HEAD; echo ===DELETIONS===; git diff 61d4c0f~1 H…</p>
 <p>✅ 31 lines, 1769 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git diff --numstat 61d4c0f~1 HEAD -- notes/canon plans | awk '{a+…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git diff --numstat 61d4c0f~1 HEAD -- notes/canon plans | awk '{a+=$1;d+=$2…</p>
 <p>✅ 1 lines, 21 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import sys, re, unicodedata, gl…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import sys, re, unicodedata, glob d…</p>
 <p>✅ 1 lines, 2 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git diff 61d4c0f~1 HEAD -- notes/canon/characters &gt; ⟦redacted: pr…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git diff 61d4c0f~1 HEAD -- notes/canon/characters &gt; <span class="redacted">redacted: private</span></p>
 <p>✅ 151 lines, 9507 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; P=<span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span> pyth…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; P=<span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span> python3 …</p>
 <p>✅ 11 lines, 745 chars — <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git diff 61d4c0f~1 HEAD -- notes/canon/world notes/canon/system.m…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git diff 61d4c0f~1 HEAD -- notes/canon/world notes/canon/system.md notes/c…</p>
 <p>✅ 120 lines, 8505 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; P=<span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; P=<span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 14 lines, 784 chars — <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "lets go, things land wrong" notes/canon/world/*.md notes…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "lets go, things land wrong" notes/canon/world/*.md notes/canon/*.…</p>
 <p>✅ 3 lines, 220 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '46,54p' notes/canon/world/geography.md; echo ---; sed -n…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '46,54p' notes/canon/world/geography.md; echo ---; sed -n '35,42p'…</p>
 <p>✅ 19 lines, 1030 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git diff 61d4c0f~1 61d4c0f -- plans &gt; <span class="redacted">redacted: private</span> grep…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git diff 61d4c0f~1 61d4c0f -- plans &gt; <span class="redacted">redacted: private</span> grep…</p>
 <p>✅ 71 lines, 4715 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; P=<span class="redacted">redacted: private</span> python3 $P "would wait on his lordship's en…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; P=<span class="redacted">redacted: private</span> python3 $P "would wait on his lordship's engine…</p>
 <p>✅ 14 lines, 799 chars — FOUND 006 | would wait on his lordship's engineers when the Fenholt business was d / FOUND 005 | had written it because listening could not be taught to everyone, and  / <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "another county" notes/canon/ | head -20; echo "--- defe…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rn "another county" notes/canon/ | head -20; echo "--- deferred-ques…</p>
 <p>✅ 157 lines, 12654 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; P=<span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; P=<span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 16 lines, 1049 chars — <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> The best two were hiring notices</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 1 lines, 285 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.md</p>
 <p>✅ 1 lines, 80 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '54,58p' notes/canon/characters/<span class="redacted">redacted: character</span>.md;…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '54,58p' notes/canon/characters/<span class="redacted">redacted</span>.md; echo ---; grep -n "Y…</p>
 <p>✅ 7 lines, 957 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; S=<span class="redacted">redacted: private</span> grep -vE 'notes/decisions/|arc-01-findings'…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; S=<span class="redacted">redacted: private</span> grep -vE 'notes/decisions/|arc-01-findings' $S/chec…</p>
 <p>✅ 178 lines, 7985 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '186,194p' notes/canon/system.md; echo "---158"; sed -n '1…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '186,194p' notes/canon/system.md; echo "---158"; sed -n '155,160p'…</p>
 <p>✅ 34 lines, 1952 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '285,289p' plans/farm-curriculum/d-impact.md; ⟦unpublished…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '285,289p' plans/farm-curriculum/d-impact.md; <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 7 lines, 900 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; P=<span class="redacted">redacted: private</span> python3 $P "and had never made the book" py…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; P=<span class="redacted">redacted: private</span> python3 $P "and had never made the book" python…</p>
 <p>✅ 16 lines, 750 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for L in 122 248 551 595 155 601; do echo "== $L"; sed -n "$((L-1…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; for L in 122 248 551 595 155 601; do echo "== $L"; sed -n "$((L-1)),$((L+2…</p>
 <p>✅ 30 lines, 1509 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; S=<span class="redacted">redacted: private</span> grep -oE '^[a-z][^ :]*\.md:[0-9]+' $S/check…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; S=<span class="redacted">redacted: private</span> grep -oE '^[a-z][^ :]*\.md:[0-9]+' $S/check.txt | w…</p>
 <p>✅ 4 lines, 16 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; notes/decisions/citations-VERIFY.md &lt;&lt;'EOF' # Verification…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; notes/decisions/citations-VERIFY.md &lt;&lt;'EOF' # Verification of the ci…</p>
 <p>✅ 1 lines, 7 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git add -A notes scripts plans; git status --short; git commit -q…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git add -A notes scripts plans; git status --short; git commit -q -F - &lt;&lt;'…</p>
 <p>✅ 7 lines, 226 chars —  M .gitignore / A  notes/decisions/citations-VERIFY.md / M  notes/sealed/deeps.md</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git rm -r --cached -q scripts/__pycache__; grep -q '__pycache__'…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git rm -r --cached -q scripts/__pycache__; grep -q '__pycache__' .gitignor…</p>
 <p>✅ 5 lines, 211 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>**Before → after.** `check_citations.py --min-words 5`: 482 phrases / 206 findings (110 fabricated, 38 altered, 58 wrong-chapter) → **513 phrases / 98 findings (40 fabricated, 15 altered, 43 wrong-chapter)**. Not like-for-like — the `characters` agent tightened the script mid-pass, which removed a large false-positive class and also caught real findings the original missed. Of the surviving 98, 36 are inside the three repair reports themselves (they quote struck phrases), 22 are the deliberately-untouched `plans/book-01/arc-01-findings/`, <span class="redacted">unpublished</span> 7 are `silent-soil.md`, leaving 33 elsewhere.</p>
-<p>**Samples: 41 checked, 41 correct** (I went well past ten). Every replacement quotation was verified by normalised whole-corpus substring search against `chapters/`, and every one is in the chapter the repair now cites. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s-son line, "a better measurement of her"). The fall is not cosmetic: across `notes/canon/**` and `plans/**` <span class="redacted">unpublished</span> the three commits are **+319 / −191 lines** — replacement plus dated strike-notes, not deletion — and every demoted claim is still present in-file as a demotion. One footnote only: `mattie-ordish.md` renders ch. 013's "It's my field. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Demotions all landed**, at the claimed level, with triggers. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> It is the only demotion that took out a scheduled scene as well as a fact. <span class="redacted">redacted sentence: unpublished prose</span> 020's callback has no antecedent in ch. 009.</p>
-<p>**Remaining.** Most of the residue is one newly visible parser blind spot: canon's `(ch. 021: "quoted words")` style, where the citation *precedes* the quote and the checker binds forward to the next number (accounts for `system.md:158/190/276`, `healing.md:264`, `timeline.md:744`, `README.md:61/67/70` — all read in place, all correctly cited). <span class="redacted">redacted sentence: unpublished prose</span> 010) — recommend a fourth pass there first; and `plans/farm-curriculum/d-impact.md:287` <span class="redacted">unpublished</span> still has the one-word "and **had** never made the book" its two sibling copies had fixed.</p>
-<p>Report at `<span class="redacted">redacted: private</span>/notes/decisions/citations-VERIFY.md`; committed as `2fcc91a` (plus `9caee8b` removing a `__pycache__` file I staged by accident). Note `notes/sealed/<span class="redacted">redacted: character</span>-grandmother-people.md` is showing as modified after my commit — another agent appears to still be writing to it; I left it alone.</p>
+<p><strong>Before → after.</strong> <code>check_citations.py --min-words 5</code>: 482 phrases / 206 findings (110 fabricated, 38 altered, 58 wrong-chapter) → <strong>513 phrases / 98 findings (40 fabricated, 15 altered, 43 wrong-chapter)</strong>. Not like-for-like — the <code>characters</code> agent tightened the script mid-pass, which removed a large false-positive class and also caught real findings the original missed. Of the surviving 98, 36 are inside the three repair reports themselves (they quote struck phrases), 22 are the deliberately-untouched <code>plans/book-01/arc-01-findings/</code>, <span class="unpub-tag">unpublished</span> 7 are <code>silent-soil.md</code>, leaving 33 elsewhere.</p>
+<p><strong>Samples: 41 checked, 41 correct</strong> (I went well past ten). Every replacement quotation was verified by normalised whole-corpus substring search against <code>chapters/</code>, and every one is in the chapter the repair now cites. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s-son line, &quot;a better measurement of her&quot;). The fall is not cosmetic: across <code>notes/canon/**</code> and <code>plans/**</code> <span class="unpub-tag">unpublished</span> the three commits are <strong>+319 / −191 lines</strong> — replacement plus dated strike-notes, not deletion — and every demoted claim is still present in-file as a demotion. One footnote only: <code>mattie-ordish.md</code> renders ch. 013's &quot;It's my field. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><strong>Demotions all landed</strong>, at the claimed level, with triggers. <span class="redacted">redacted sentence</span> It is the only demotion that took out a scheduled scene as well as a fact. <span class="redacted">redacted sentence: unpublished prose</span> 020's callback has no antecedent in ch. 009.</p>
+<p><strong>Remaining.</strong> Most of the residue is one newly visible parser blind spot: canon's <code>(ch. 021: &quot;quoted words&quot;)</code> style, where the citation <em>precedes</em> the quote and the checker binds forward to the next number (accounts for <code>system.md:158/190/276</code>, <code>healing.md:264</code>, <code>timeline.md:744</code>, <code>README.md:61/67/70</code> — all read in place, all correctly cited). <span class="redacted">redacted sentence: unpublished prose</span> 010) — recommend a fourth pass there first; and <code>plans/farm-curriculum/d-impact.md:287</code> <span class="unpub-tag">unpublished</span> still has the one-word &quot;and <strong>had</strong> never made the book&quot; its two sibling copies had fixed.</p>
+<p>Report at <span class="redacted">redacted</span>/notes/decisions/citations-VERIFY.md<code>; committed as </code>2fcc91a<code>(plus</code>9caee8b<code>removing a</code><strong>pycache</strong><code>file I staged by accident). Note</code>notes/sealed/<span class="redacted">redacted</span>-grandmother-people.md is showing as modified after my commit — another agent appears to still be writing to it; I left it alone.</p>
 </div>
 </body></html>

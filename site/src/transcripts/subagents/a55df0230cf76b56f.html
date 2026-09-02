@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a55df0230cf76b56f">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/15-straight-water.md, read after scenes 01–14 in the same directory (they bind what is on the page — including Peri's "saving it" from scene 13 and what Edwin knows). <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: mechanic</span>]), notes/canon/world/geography.md. Also chapters/004-three-letters.md — the groundwork this restages, which the author rates good and which drew no comments from him.<br>
-<br>
-Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a55df0230cf76b56f">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/15-straight-water.md, read after scenes 01–14 in the same directory (they bind what is on the page — including Peri's &quot;saving it&quot; from scene 13 and what Edwin knows). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>]), notes/canon/world/geography.md. Also chapters/004-three-letters.md — the groundwork this restages, which the author rates good and which drew no comments from him.</p>
+<p>Report findings only, per the skill's &quot;How to report&quot;: quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or &quot;cut&quot;. Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -46,9 +57,9 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 <p>🔧 Bash: cat notes/canon/world/geography.md</p>
 <p>✅ 85 lines, 9878 chars</p>
 <p>✅ 402 lines, 24182 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; cat 05*.md 06*.md 07*.md 08*.md 09*.md 10*…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; cat 05*.md 06*.md 07*.md 08*.md 09*.md 10*.md 11*.m…</p>
 <p>✅ 298 lines, 26662 chars</p>
-<p>🔧 Bash: grep -n -i -A40 "<span class="redacted">redacted: mechanic</span>" notes/canon/system.md | head -120</p>
+<p>🔧 Bash: grep -n -i -A40 "<span class="redacted">redacted</span>" notes/canon/system.md | head -120</p>
 <p>✅ 120 lines, 8022 chars</p>
 <p>🔧 Bash: awk '/^He got the map out after supper/,/^He went back to the table and the three letters…</p>
 <p>✅ 48 lines, 8689 chars</p>
@@ -59,24 +70,24 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 </details>
 
 <div class="assistant-prose">
-<p>## Findings — `draft/book-01/scenes/15-straight-water.md`</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1 — check every count and every fact inside the scene.** It is not the first. By her own accounting on the page she has had the four days of answers that found the hill (scene 02, which she calls the foundation of the whole thing), and the "where in the vale am I most needed" answer that sent her to Mrs Hobbet's, which she explicitly filed as quest material — "the Weave sent me there, so I'm keeping it in the file" (scene 13). This is the exact shape of *"'That's twice you've said farmer.' — No it isn't."*<br>
-Replacement: *"I want to do it properly, because it's the first answer that's about the quest and not about finding you."*</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 4 — knowledge states / a line must come from the want; and Part 5 — a thread raised and dropped.** In scene 02 Edwin gives her a specific instruction and stakes himself on it: *"Don't ask it* who*. You've done* who*. Ask it* what*. What am I to save the world from. <span class="redacted">redacted sentence: unpublished prose</span> the single presupposition Edwin has spent two scenes attacking — and neither of them remarks on it. He does not collect on his own offer, and she does not defend the wording against her own stated standard. The scene's central instrument arrives having quietly dropped the two scenes that set it up.<br>
-Fix (device-level, not a rephrase): have her name the swerve herself and give the reason, in her voice — e.g. <span class="redacted">redacted sentence: unpublished prose</span> I couldn't get* what *to a wording I'd trust — every version of it asks the Weave to agree there's a something. So I asked where instead, because a place is a thing it can show me."* That keeps her wrong theory intact (Part 7), keeps her discipline intact, and gives Edwin the opening he then declines to take.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1 — the flat version is empty; Part 6 — the plainest form.** Changing "nonsense out of ballads" to "out of books" was right (Part 3, Literacy — no ballads as the record), but it removed the sentence's only judgement and left the clause repeating the clause after it: *books … books* in eleven words, the first half now saying nothing the second half does not.<br>
-Replacement: *"Her reading of it was nonsense, from a girl who had learned rivers out of books."*</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 3 — rare things stay rare / would this exist; Part 4 — knowledge states.** Edwin has heard of another: he has stood next to the High Seer of the Concord (scene 02) and in scene 05 says outright *"The Concord's seer died or didn't, I've had no letter in forty years either way"* — the seer is precisely an instrument of this kind, and Peri's own scene-02 line puts Fate Magic in the hands of high priests at the end of their careers. The superlative claims an ignorance the preceding scenes have already contradicted, and it is doing no work the sentence needs.<br>
-Replacement: *"put one question to a thing that answers true, and been told about drained country…"*</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1 — a pronoun with no clear antecedent.** *His* reads back to Lord Marsh, the subject, which makes the sentence say Marsh could hire a man and then pay his own costs. The letter's phrase was *expenses met*, i.e. the consultant's.<br>
-Replacement: *"…and meet the expenses."*</p>
-<p>---</p>
+<h2>Findings — <code>draft/book-01/scenes/15-straight-water.md</code></h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1 — check every count and every fact inside the scene.</strong> It is not the first. By her own accounting on the page she has had the four days of answers that found the hill (scene 02, which she calls the foundation of the whole thing), and the &quot;where in the vale am I most needed&quot; answer that sent her to Mrs Hobbet's, which she explicitly filed as quest material — &quot;the Weave sent me there, so I'm keeping it in the file&quot; (scene 13). This is the exact shape of <em>&quot;'That's twice you've said farmer.' — No it isn't.&quot;</em><br />
+Replacement: <em>&quot;I want to do it properly, because it's the first answer that's about the quest and not about finding you.&quot;</em></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 4 — knowledge states / a line must come from the want; and Part 5 — a thread raised and dropped.</strong> In scene 02 Edwin gives her a specific instruction and stakes himself on it: <em>&quot;Don't ask it</em> who*. You've done* who*. Ask it* what*. What am I to save the world from. <span class="redacted">redacted sentence: unpublished prose</span> the single presupposition Edwin has spent two scenes attacking — and neither of them remarks on it. He does not collect on his own offer, and she does not defend the wording against her own stated standard. The scene's central instrument arrives having quietly dropped the two scenes that set it up.<br />
+Fix (device-level, not a rephrase): have her name the swerve herself and give the reason, in her voice — e.g. <span class="redacted">redacted sentence: unpublished prose</span> I couldn't get* what <em>to a wording I'd trust — every version of it asks the Weave to agree there's a something. So I asked where instead, because a place is a thing it can show me.&quot;</em> That keeps her wrong theory intact (Part 7), keeps her discipline intact, and gives Edwin the opening he then declines to take.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1 — the flat version is empty; Part 6 — the plainest form.</strong> Changing &quot;nonsense out of ballads&quot; to &quot;out of books&quot; was right (Part 3, Literacy — no ballads as the record), but it removed the sentence's only judgement and left the clause repeating the clause after it: <em>books … books</em> in eleven words, the first half now saying nothing the second half does not.<br />
+Replacement: <em>&quot;Her reading of it was nonsense, from a girl who had learned rivers out of books.&quot;</em></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 3 — rare things stay rare / would this exist; Part 4 — knowledge states.</strong> Edwin has heard of another: he has stood next to the High Seer of the Concord (scene 02) and in scene 05 says outright <em>&quot;The Concord's seer died or didn't, I've had no letter in forty years either way&quot;</em> — the seer is precisely an instrument of this kind, and Peri's own scene-02 line puts Fate Magic in the hands of high priests at the end of their careers. The superlative claims an ignorance the preceding scenes have already contradicted, and it is doing no work the sentence needs.<br />
+Replacement: <em>&quot;put one question to a thing that answers true, and been told about drained country…&quot;</em></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1 — a pronoun with no clear antecedent.</strong> <em>His</em> reads back to Lord Marsh, the subject, which makes the sentence say Marsh could hire a man and then pay his own costs. The letter's phrase was <em>expenses met</em>, i.e. the consultant's.<br />
+Replacement: <em>&quot;…and meet the expenses.&quot;</em></p>
+<hr />
 <p><span class="redacted">redacted sentence: unpublished prose</span> Neither of them refers to yesterday at all; the farmer at Fenholt is first on his list and the only reason he cannot answer her is the distance a letter goes, which is her sentence, and it goes unclaimed.</p>
-<p>**What it would take:** one line in the unstarted-third-reply paragraph that lets Edwin hear her without conceding to her — after *"Consult whom"*, something at the register of *"He had a letter's reach and forty miles of it, and had been told so on a wall the day before"* — or, if that is too neat, give Peri the collection instead when she arrives, since a second round will otherwise ask why she doesn't. It cannot be fixed by moving words; either the shadow is acknowledged in the construction or the scene has to earn the silence on purpose.</p>
+<p><strong>What it would take:</strong> one line in the unstarted-third-reply paragraph that lets Edwin hear her without conceding to her — after <em>&quot;Consult whom&quot;</em>, something at the register of <em>&quot;He had a letter's reach and forty miles of it, and had been told so on a wall the day before&quot;</em> — or, if that is too neat, give Peri the collection instead when she arrives, since a second round will otherwise ask why she doesn't. It cannot be fixed by moving words; either the shadow is acknowledged in the construction or the scene has to earn the silence on purpose.</p>
 </div>
 </body></html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,17 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ab9327d1244ac8864">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 27-. Read it in full.<br>
-LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id "sense".<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ab9327d1244ac8864">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 27-. Read it in full.<br />
+LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id &quot;sense&quot;.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
@@ -25,13 +38,13 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>I'll help you lint-hunt the scene 27 file. Let me start by finding and reading it.</p>
 </div>
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes/ -name "27-*" -type f (Find the scene file starting with 27-)</p>
-<p>✅ 1 lines, 91 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/27-the-cellar-at-saltings-corner.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes/ -name "27-*" -type f (Find the scene file starting with 27-)</p>
+<p>✅ 1 lines, 91 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/27-the-cellar-at-saltings-corner.md</p>
 <p>🔧 Read draft/book-01/scenes/27-the-cellar-at-saltings-corner.md</p>
 <p>✅ 36 lines, 6563 chars</p>
 
 <div class="assistant-prose">
-<p>Now I'll carefully read this file with the "sense" lens, checking for factual claims that don't cohere, contradictions, incorrect timespans/numbers, and sentences requiring re-reading to parse.</p>
+<p>Now I'll carefully read this file with the &quot;sense&quot; lens, checking for factual claims that don't cohere, contradictions, incorrect timespans/numbers, and sentences requiring re-reading to parse.</p>
 </div>
 
 <p>🔧 Read draft/book-01/scenes/27-the-cellar-at-saltings-corner.md</p>
@@ -39,30 +52,36 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 
 <div class="assistant-prose">
 <p>I'll now systematically check this scene for sense violations using the lens provided.</p>
-<p>Working through the file with the sense lens, I'll examine:<br>
-- Factual claim coherence<br>
-- Internal consistency<br>
-- Numbers and timespans<br>
-- Parseability</p>
-<p>**Timeline check:**<br>
-- Drain re-laid: Seedmonth (line 13)<br>
-- Cellar foul: midsummer (lines 9, 19)<br>
-- Edwin: "It takes a season of that to build to where a cask can taste it, which is why the drain went in at Seedmonth and the cellar went wrong at midsummer" (line 19)</p>
-<p>Seedmonth (seed-planting season, ~April) to Midsummer (June 21) is approximately 2–2.5 months, which aligns reasonably with "a season" (~3 months) as an approximate timeframe. Coherent.</p>
-<p>**Specific claims:**<br>
-- Seven miles walked in an afternoon with stops (line 3): reasonable<br>
-- Grandmother took course 40 years ago (line 5): specific, no contradiction<br>
-- Eels live a fortnight (14 days) normally, sicken in three days at contaminated end (line 9): clear, shows dramatic decline—coherent<br>
-- Three barrels lost, tank affected (lines 9, 25): consistent through scene<br>
-- Sixpence payment for reading (line 21): stated clearly<br>
-- Trowels: one black-handled, one worn iron (line 15): coherent distinction</p>
-<p>**Sensory language:**<br>
-Line 19 uses "taste" ("straw in the taste of it") while line 19 also uses "smell" ("never smells of a yard"), and Peri later (line 33) describes the skill as "knowing what a yard smells like." The sensory mode is slightly mixed but both taste and smell are sensory descriptors of water quality—not a logical contradiction.</p>
-<p>**Complex sentences:**<br>
-Line 17's nested clause about the taint assay ("the one of the six that could be cast alone because it assumed nothing from the three before it") is complex but parses clearly on careful reading.</p>
+<p>Working through the file with the sense lens, I'll examine:</p>
+<ul>
+<li>Factual claim coherence</li>
+<li>Internal consistency</li>
+<li>Numbers and timespans</li>
+<li>Parseability</li>
+</ul>
+<p><strong>Timeline check:</strong></p>
+<ul>
+<li>Drain re-laid: Seedmonth (line 13)</li>
+<li>Cellar foul: midsummer (lines 9, 19)</li>
+<li>Edwin: &quot;It takes a season of that to build to where a cask can taste it, which is why the drain went in at Seedmonth and the cellar went wrong at midsummer&quot; (line 19)</li>
+</ul>
+<p>Seedmonth (seed-planting season, ~April) to Midsummer (June 21) is approximately 2–2.5 months, which aligns reasonably with &quot;a season&quot; (~3 months) as an approximate timeframe. Coherent.</p>
+<p><strong>Specific claims:</strong></p>
+<ul>
+<li>Seven miles walked in an afternoon with stops (line 3): reasonable</li>
+<li>Grandmother took course 40 years ago (line 5): specific, no contradiction</li>
+<li>Eels live a fortnight (14 days) normally, sicken in three days at contaminated end (line 9): clear, shows dramatic decline—coherent</li>
+<li>Three barrels lost, tank affected (lines 9, 25): consistent through scene</li>
+<li>Sixpence payment for reading (line 21): stated clearly</li>
+<li>Trowels: one black-handled, one worn iron (line 15): coherent distinction</li>
+</ul>
+<p><strong>Sensory language:</strong><br />
+Line 19 uses &quot;taste&quot; (&quot;straw in the taste of it&quot;) while line 19 also uses &quot;smell&quot; (&quot;never smells of a yard&quot;), and Peri later (line 33) describes the skill as &quot;knowing what a yard smells like.&quot; The sensory mode is slightly mixed but both taste and smell are sensory descriptors of water quality—not a logical contradiction.</p>
+<p><strong>Complex sentences:</strong><br />
+Line 17's nested clause about the taint assay (&quot;the one of the six that could be cast alone because it assumed nothing from the three before it&quot;) is complex but parses clearly on careful reading.</p>
 <p>All other sentences parse correctly. No timespan is contradictory. No factual claims contradict neighbors.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

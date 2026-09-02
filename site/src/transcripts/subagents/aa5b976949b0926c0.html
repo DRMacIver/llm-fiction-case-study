@@ -7,49 +7,51 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are running a **blind** scoring pass. The point of this exercise…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-aa5b976949b0926c0">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are running a **blind** scoring pass. The point of this exercise is that two previous scorers, using the same named instruments on the same text, disagreed by a factor of five — one scored a sample at 7% and the other at 40%. Before anything can be concluded from those runs, we need one hand scoring everything under one standard.<br>
-<br>
-## The samples<br>
-<br>
-Three prose samples, in `<span class="redacted">redacted: private</span>`: `scene-A.md`, `scene-B.md`, `scene-C.md`. They are different tellings of the same events — a guild's roster being corrected at a table, with the same cast.<br>
-<br>
-**Their provenance is withheld from you deliberately, and you must not try to work it out.** Do not search the repository for matching text, do not open `samples/round6-isolated/`, `samples/round7-wants/`, or `chapters/019-a-question-of-rosters.md`, and do not speculate in your report about which is which. If you notice something that looks like a tell, ignore it and say in your report that you did. One sample is substantially longer than the others; that is an artefact of sampling, not a clue, and your instruments are rates rather than counts.<br>
-<br>
-You may read `notes/dialogue-voices.md` (the instruments and the cast's voice markers), `notes/canon/characters/` and `notes/voices.md`. Read `CLAUDE.md` first and obey it.<br>
-<br>
-## The instruments, and why you must pin them down first<br>
-<br>
-From `notes/dialogue-voices.md`:<br>
-<br>
-- **Prop-cover.** Shuffle the lines, mask every possessive, proper noun, tool, coin, month, date and piece of subject expertise, and count what still places — i.e. what a reader could still attribute to the right speaker.<br>
-- **The swap test.** Take three of each speaker's lines, put them in another speaker's mouth, and ask whether a *reader* — not a grammar checker holding the character files — would reject them as impossible. Then **separate rejections on *standing or fact* (this person is not in a position to say this) from rejections on *voice alone* (this person would not phrase it this way).** The voice-alone figure is the real result.<br>
-<br>
-**Before you score anything**, write down your operationalisation in enough detail that a third party could reproduce your numbers: what exactly counts as a "turn" or a "line" (a paragraph of speech? a sentence? an uninterrupted speech act?); what you mask and what you leave; what threshold of confidence counts as "places"; who you swap each speaker with and how you choose; and what "would reject as impossible" means as against "would find surprising". The disagreement between the previous two scorers is almost certainly hiding in these definitions, so make yours explicit and then hold to them identically across all three samples.<br>
-<br>
-Score the three samples in a randomised order of your own choosing, not A-B-C, and do not look back at an earlier sample's score while doing a later one.<br>
-<br>
-## Deliverable<br>
-<br>
-Write `<span class="redacted">redacted: private</span>/samples/round8-blind/scores.md`:<br>
-<br>
-- **Operationalisation** — the definitions above, written before scoring.<br>
-- **Per-sample scores** — prop-cover and swap test, with the voice-alone row separated, per speaker and in total. Show the line counts. Refer to samples only as A, B and C.<br>
-- **Per-speaker notes** — for each speaker in each sample, what does or does not place, with quoted evidence.<br>
-- **Spread** — how far apart the three samples actually are, and whether the differences are larger than your own uncertainty. **Estimate your own error bar honestly**: re-score one sample's swap test a second time after finishing the others and report whether you got the same number.<br>
-- **On the instruments themselves** — the previous 5x disagreement is the thing that prompted this pass. Having now used them, say where they are underspecified, which of your definitional choices most changes the result, and whether the swap test can support a comparison between separately-produced texts at all or only within a single scorer's pass. Be blunt: if these instruments cannot bear the weight that has been put on them, that is the most useful thing you can report.<br>
-<br>
-Then commit.<br>
-<br>
-Do not edit anything outside `samples/round8-blind/`.<br>
-<br>
-Your final message: the three-way table, the spread against your error bar, and your verdict on whether the instruments can support cross-run comparison.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are running a **blind** scoring pass. The point of this exercise…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-aa5b976949b0926c0">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are running a <strong>blind</strong> scoring pass. The point of this exercise is that two previous scorers, using the same named instruments on the same text, disagreed by a factor of five — one scored a sample at 7% and the other at 40%. Before anything can be concluded from those runs, we need one hand scoring everything under one standard.</p>
+<h2>The samples</h2>
+<p>Three prose samples, in <span class="redacted">redacted: private</span><code>: </code>scene-A.md<code>, </code>scene-B.md<code>, </code>scene-C.md`. They are different tellings of the same events — a guild's roster being corrected at a table, with the same cast.</p>
+<p><strong>Their provenance is withheld from you deliberately, and you must not try to work it out.</strong> Do not search the repository for matching text, do not open <code>samples/round6-isolated/</code>, <code>samples/round7-wants/</code>, or <code>chapters/019-a-question-of-rosters.md</code>, and do not speculate in your report about which is which. If you notice something that looks like a tell, ignore it and say in your report that you did. One sample is substantially longer than the others; that is an artefact of sampling, not a clue, and your instruments are rates rather than counts.</p>
+<p>You may read <code>notes/dialogue-voices.md</code> (the instruments and the cast's voice markers), <code>notes/canon/characters/</code> and <code>notes/voices.md</code>. Read <code>CLAUDE.md</code> first and obey it.</p>
+<h2>The instruments, and why you must pin them down first</h2>
+<p>From <code>notes/dialogue-voices.md</code>:</p>
+<ul>
+<li><strong>Prop-cover.</strong> Shuffle the lines, mask every possessive, proper noun, tool, coin, month, date and piece of subject expertise, and count what still places — i.e. what a reader could still attribute to the right speaker.</li>
+<li><strong>The swap test.</strong> Take three of each speaker's lines, put them in another speaker's mouth, and ask whether a <em>reader</em> — not a grammar checker holding the character files — would reject them as impossible. Then <strong>separate rejections on <em>standing or fact</em> (this person is not in a position to say this) from rejections on <em>voice alone</em> (this person would not phrase it this way).</strong> The voice-alone figure is the real result.</li>
+</ul>
+<p><strong>Before you score anything</strong>, write down your operationalisation in enough detail that a third party could reproduce your numbers: what exactly counts as a &quot;turn&quot; or a &quot;line&quot; (a paragraph of speech? a sentence? an uninterrupted speech act?); what you mask and what you leave; what threshold of confidence counts as &quot;places&quot;; who you swap each speaker with and how you choose; and what &quot;would reject as impossible&quot; means as against &quot;would find surprising&quot;. The disagreement between the previous two scorers is almost certainly hiding in these definitions, so make yours explicit and then hold to them identically across all three samples.</p>
+<p>Score the three samples in a randomised order of your own choosing, not A-B-C, and do not look back at an earlier sample's score while doing a later one.</p>
+<h2>Deliverable</h2>
+<p>Write <code><span class="redacted">redacted</span>/samples/round8-blind/scores.md</code>:</p>
+<ul>
+<li><strong>Operationalisation</strong> — the definitions above, written before scoring.</li>
+<li><strong>Per-sample scores</strong> — prop-cover and swap test, with the voice-alone row separated, per speaker and in total. Show the line counts. Refer to samples only as A, B and C.</li>
+<li><strong>Per-speaker notes</strong> — for each speaker in each sample, what does or does not place, with quoted evidence.</li>
+<li><strong>Spread</strong> — how far apart the three samples actually are, and whether the differences are larger than your own uncertainty. <strong>Estimate your own error bar honestly</strong>: re-score one sample's swap test a second time after finishing the others and report whether you got the same number.</li>
+<li><strong>On the instruments themselves</strong> — the previous 5x disagreement is the thing that prompted this pass. Having now used them, say where they are underspecified, which of your definitional choices most changes the result, and whether the swap test can support a comparison between separately-produced texts at all or only within a single scorer's pass. Be blunt: if these instruments cannot bear the weight that has been put on them, that is the most useful thing you can report.</li>
+</ul>
+<p>Then commit.</p>
+<p>Do not edit anything outside `samples/round8-blind/.</p>
+<p>Your final message: the three-way table, the spread against your error bar, and your verdict on whether the instruments can support cross-run comparison.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -61,7 +63,7 @@ Your final message: the three-way table, the spread against your error bar, and 
 <p>✅ 109 lines, 6054 chars</p>
 <p>🔧 Read notes/dialogue-voices.md</p>
 <p>✅ 1098 lines, 71979 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; wc -w *.md &amp;&amp; ls <span class="redacted">redacted: private</span>/notes/canon/characters/</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; wc -w *.md &amp;&amp; ls <span class="redacted">redacted</span>/notes/canon/characters/</p>
 <p>✅ 13 lines, 175 chars —       29 BRIEF.md /     1576 scene-A.md /     4189 scene-B.md</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat BRIEF.md &amp;&amp; echo ===== &amp;&amp; cat scene-A.md</p>
 <p>✅ 5 lines, 211 chars</p>
@@ -69,11 +71,11 @@ Your final message: the three-way table, the spread against your error bar, and 
 <p>✅ 175 lines, 8133 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat scene-C.md &amp;&amp; echo "=====B=====" &amp;&amp; cat scene-B.md</p>
 <p>✅ 258 lines, 29161 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; for f in <span class="redacted">redacted: character</span>.md edwin.…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; for f in <span class="redacted">redacted</span>.md edwin.md peri.md minor.md;…</p>
 <p>✅ 43 lines, 2239 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; for f in <span class="redacted">redacted: character</span>.md edwin.…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; for f in <span class="redacted">redacted</span>.md edwin.md peri.md minor.md;…</p>
 <p>✅ 244 lines, 14854 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n -i -A25 "<span class="redacted">redacted: character</span>\|…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n -i -A25 "<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>…</p>
 <p>✅ 118 lines, 7670 chars</p>
 </details>
 
@@ -81,23 +83,53 @@ Your final message: the three-way table, the spread against your error bar, and 
 <p>Now I'll write the operationalisation and scores. Let me set up the file.</p>
 </div>
 
-<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span>/samples/round8-blind &amp;&amp; cat &gt; <span class="redacted">redacted: private</span>/samples/ro…</p>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted</span>/samples/round8-blind &amp;&amp; cat &gt; <span class="redacted">redacted</span>/samples/round8-blind/scores.…</p>
 <p>✅ 1 lines, 4 chars</p>
 <p>🔧 Bash: git add samples/round8-blind/scores.md &amp;&amp; git commit -q -m "Round 8: one-hand blind scori…</p>
 <p>✅ 1 lines, 89 chars — 8a20653 Round 8: one-hand blind scoring of three samples, with the instruments' error bar</p>
 
 <div class="assistant-prose">
-<p>Written to `<span class="redacted">redacted: private</span>/samples/round8-blind/scores.md` and committed (8a20653). Scored in the order C, A, B, with C's swap re-scored after B as the error-bar check.</p>
-<p>**The three-way table**</p>
-<p>| | A | B | C |<br>
-|---|---|---|---|<br>
-| Turns scored | 33 | 53 | 16 |<br>
-| **Prop-cover** | **18/33 (55%)** | **25/53 (47%)** | **10/16 (63%)** |<br>
-| Swap: rejections on standing/fact | 9/15 | 8/15 | 9/14 |<br>
-| **Swap: voice alone** | **4/15 (27%)** | **3/15 (20%)** | **3/14 (21%)** |</p>
-<p>**Spread against error bar.** The swap re-score of C returned the same total (3/14) but with one call flipped and one reconsidered underneath it — so a swap score is good to about ±1–2 lines, i.e. ±7 to ±14 points. Against that, 27/21/20 is one number three times: the swap test cannot separate these samples. Prop-cover's 16-point range is about equal to my uncertainty on C, whose sixteen turns make every single call worth 6 points. The real spread is between *speakers*, not samples: <span class="redacted">redacted: character</span> runs 36% in one sample and 100% in another, <span class="redacted">redacted: character</span> is worst everywhere (his bare-figure opener, "Nineteen on the books. Fifteen.", appears in all three and is Edwin's declared passport in every one), <span class="redacted">redacted: character</span> best. In A the most-heard speaker is the least-placed, which moves that total several points on staging alone.</p>
-<p><span class="redacted">redacted: plot</span> — the word "Agreed." — and is unscoreable, which is not the same as 0%.</p>
-<p>**Verdict on the instruments.** The swap test cannot support cross-run comparison. Three reasons: resolution (one judgement is 7 points); it is not scale-free, because the swap partner is whoever happened to get the most turns, and lines swapped into <span class="redacted">redacted: character</span> survive where the same lines swapped into <span class="redacted">redacted: character</span> break — B's low score is partly just that; and the bar is a property of the scorer. The single choice that most changes the result is *impossible* vs *surprising*: I used impossible and got ~20%, and would have got ~60% on the same lines under *surprising* — a factor of two and a half, enough to explain the 7-vs-40 on its own. Separating standing from voice is worth another factor of four (standing rejections ran 8–9/15 against voice-alone 3–4/15). Prop-cover is better but under-reports any record-centred scene by its own 2026-08-28 ruling, and rewards long turns. Both work as per-line diagnostics — they found real miscast lines, quoted in the file — and should not be quoted as totals.</p>
+<p>Written to <span class="redacted">redacted</span>/samples/round8-blind/scores.md and committed (8a20653). Scored in the order C, A, B, with C's swap re-scored after B as the error-bar check.</p>
+<p><strong>The three-way table</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Turns scored</td>
+<td>33</td>
+<td>53</td>
+<td>16</td>
+</tr>
+<tr>
+<td><strong>Prop-cover</strong></td>
+<td><strong>18/33 (55%)</strong></td>
+<td><strong>25/53 (47%)</strong></td>
+<td><strong>10/16 (63%)</strong></td>
+</tr>
+<tr>
+<td>Swap: rejections on standing/fact</td>
+<td>9/15</td>
+<td>8/15</td>
+<td>9/14</td>
+</tr>
+<tr>
+<td><strong>Swap: voice alone</strong></td>
+<td><strong>4/15 (27%)</strong></td>
+<td><strong>3/15 (20%)</strong></td>
+<td><strong>3/14 (21%)</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Spread against error bar.</strong> The swap re-score of C returned the same total (3/14) but with one call flipped and one reconsidered underneath it — so a swap score is good to about ±1–2 lines, i.e. ±7 to ±14 points. Against that, 27/21/20 is one number three times: the swap test cannot separate these samples. Prop-cover's 16-point range is about equal to my uncertainty on C, whose sixteen turns make every single call worth 6 points. The real spread is between <em>speakers</em>, not samples: <span class="redacted">redacted</span> runs 36% in one sample and 100% in another, <span class="redacted">redacted</span> is worst everywhere (his bare-figure opener, &quot;Nineteen on the books. Fifteen.&quot;, appears in all three and is Edwin's declared passport in every one), <span class="redacted">redacted</span> best. In A the most-heard speaker is the least-placed, which moves that total several points on staging alone.</p>
+<p><span class="redacted">redacted</span> — the word &quot;Agreed.&quot; — and is unscoreable, which is not the same as 0%.</p>
+<p><strong>Verdict on the instruments.</strong> The swap test cannot support cross-run comparison. Three reasons: resolution (one judgement is 7 points); it is not scale-free, because the swap partner is whoever happened to get the most turns, and lines swapped into <span class="redacted">redacted</span> survive where the same lines swapped into <span class="redacted">redacted</span> break — B's low score is partly just that; and the bar is a property of the scorer. The single choice that most changes the result is <em>impossible</em> vs <em>surprising</em>: I used impossible and got ~20%, and would have got ~60% on the same lines under <em>surprising</em> — a factor of two and a half, enough to explain the 7-vs-40 on its own. Separating standing from voice is worth another factor of four (standing rejections ran 8–9/15 against voice-alone 3–4/15). Prop-cover is better but under-reports any record-centred scene by its own 2026-08-28 ruling, and rewards long turns. Both work as per-line diagnostics — they found real miscast lines, quoted in the file — and should not be quoted as totals.</p>
 <p>Two samples carried provenance headers. I read them before I knew what they were, held them out of scoring, and did not search the repo.</p>
 </div>
 </body></html>

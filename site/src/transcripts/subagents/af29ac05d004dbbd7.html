@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,104 +7,117 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-af29ac05d004dbbd7">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 40-. Read it in full.<br>
-LENS: world. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and extract ONLY the rules with "tier": "semantic" and "lens": "world". Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-af29ac05d004dbbd7">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 40-. Read it in full.<br />
+LENS: world. Read <span class="redacted">redacted</span>/tools/lint/rules.json and extract ONLY the rules with &quot;tier&quot;: &quot;semantic&quot; and &quot;lens&quot;: &quot;world&quot;. Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
 <details><summary>84 tool calls</summary>
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -name "40-*.md" -type f (Find the target scene file starting with 40-)</p>
-<p>✅ 1 lines, 93 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes -name "40-*.md" -type f (Find the target scene file starting with 40-)</p>
+<p>✅ 1 lines, 93 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.md</p>
 <p>🔧 Read tools/lint/rules.json</p>
 <p>✅ 1196 lines, 51733 chars</p>
-<p>🔧 Bash: grep -E '"tier":\s*"semantic"' <span class="redacted">redacted: private</span>/tools/lint/rules.json | wc -l (Count semantic rules)</p>
+<p>🔧 Bash: grep -E '"tier":\s*"semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json | wc -l (Count semantic rules)</p>
 <p>✅ 1 lines, 8 chars</p>
-<p>🔧 Bash: jq '.[] | select(.tier=="semantic" and .lens=="world") | .id' <span class="redacted">redacted: private</span>/tools/l… (Extract semantic world rules)</p>
+<p>🔧 Bash: jq '.[] | select(.tier=="semantic" and .lens=="world") | .id' <span class="redacted">redacted</span>/tools/lint/rules… (Extract semantic world rules)</p>
 <p>✅ 6 lines, 148 chars</p>
 <p>🔧 Read draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.md</p>
 <p>✅ 60 lines, 7448 chars</p>
-<p>🔧 Bash: jq '.[] | select(.tier=="semantic" and .lens=="world")' <span class="redacted">redacted: private</span>/tools/lint/ru… (Get all semantic world rules with full details)</p>
+<p>🔧 Bash: jq '.[] | select(.tier=="semantic" and .lens=="world")' <span class="redacted">redacted</span>/tools/lint/rules.json (Get all semantic world rules with full details)</p>
 <p>✅ 126 lines, 6310 chars</p>
-<p>🔧 Bash: python3 <span class="redacted">redacted: private</span>/tools/overlap_check.py <span class="redacted">redacted: private</span>/draft/book-01/scen… (Check for contamination overlap with deleted drafts)</p>
-<p>✅ 1 lines, 127 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.md: 0 overlapping run(s) of 8+ words</p>
-<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span>/notes/canon/ (List canon files)</p>
+<p>🔧 Bash: python3 <span class="redacted">redacted</span>/tools/overlap_check.py <span class="redacted">redacted</span>/draft/book-01/scenes/40-zero-at-the-… (Check for contamination overlap with deleted drafts)</p>
+<p>✅ 1 lines, 127 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.md: 0 overlapping run(s) of 8+ words</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted</span>/notes/canon/ (List canon files)</p>
 <p>✅ 9 lines, 507 chars — total 224 / drwxr-xr-x@  8 drmaciver  staff    256 30 Aug 12:02 . / drwxr-xr-x@ 30 drmaciver  staff    960 31 Aug 11:58 ..</p>
-<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span>/notes/canon/world/ (List world canon files)</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted</span>/notes/canon/world/ (List world canon files)</p>
 <p>✅ 21 lines, 1321 chars — total 1000 / drwxr-xr-x@ 20 drmaciver  staff    640 31 Aug 09:48 . / drwxr-xr-x@  8 drmaciver  staff    256 30 Aug 12:02 ..</p>
-<p>🔧 Bash: grep -n '\*' <span class="redacted">redacted: private</span>/draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.… (Find all italics in the scene)</p>
+<p>🔧 Bash: grep -n '\*' <span class="redacted">redacted</span>/draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.md (Find all italics in the scene)</p>
 <p>✅ 3 lines, 2125 chars</p>
-<p>🔧 Bash: grep -i "pencil\|pen\|paper\|writing" <span class="redacted">redacted: private</span>/notes/canon/world/farming-gloss… (Check for writing implements in canon)</p>
+<p>🔧 Bash: grep -i "pencil\|pen\|paper\|writing" <span class="redacted">redacted</span>/notes/canon/world/farming-glossary.md |… (Check for writing implements in canon)</p>
 <p>✅ 5 lines, 327 chars</p>
-<p>🔧 Bash: grep -r "pencil" <span class="redacted">redacted: private</span>/notes/canon/ | head -20 (Search for pencil references in canon)</p>
+<p>🔧 Bash: grep -r "pencil" <span class="redacted">redacted</span>/notes/canon/ | head -20 (Search for pencil references in canon)</p>
 <p>✅ 9 lines, 1245 chars</p>
 <p>🔧 Read notes/canon/world/development.md</p>
 <p>✅ 100 lines, 6075 chars</p>
-<p>🔧 Bash: grep -n "hundred\|age\|year\|season\|years" <span class="redacted">redacted: private</span>/draft/book-01/scenes/40-z… (Search for age and time references)</p>
+<p>🔧 Bash: grep -n "hundred\|age\|year\|season\|years" <span class="redacted">redacted</span>/draft/book-01/scenes/40-zero-at-th… (Search for age and time references)</p>
 <p>✅ 1 lines, 198 chars</p>
-<p>🔧 Bash: grep -r "Sennet" <span class="redacted">redacted: private</span>/notes/canon/characters/ | head -10 (Search for Sennet in character canon)</p>
+<p>🔧 Bash: grep -r "Sennet" <span class="redacted">redacted</span>/notes/canon/characters/ | head -10 (Search for Sennet in character canon)</p>
 <p>✅ 4 lines, 539 chars</p>
-<p>🔧 Bash: grep -A 10 -B 5 "Sennet.*three hundred ewes" <span class="redacted">redacted: private</span>/notes/canon/characters/m… (Get more context about Sennet)</p>
+<p>🔧 Bash: grep -A 10 -B 5 "Sennet.*three hundred ewes" <span class="redacted">redacted</span>/notes/canon/characters/minor.md (Get more context about Sennet)</p>
 <p>✅ 16 lines, 1057 chars</p>
-<p>🔧 Bash: grep -i "skill\|system\|talent\|ability\|power\|magic" <span class="redacted">redacted: private</span>/draft/book-01/… (Search for system terminology)</p>
+<p>🔧 Bash: grep -i "skill\|system\|talent\|ability\|power\|magic" <span class="redacted">redacted</span>/draft/book-01/scenes/40… (Search for system terminology)</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: grep -r "census" <span class="redacted">redacted: private</span>/notes/canon/ | head -20 (Search for census in canon)</p>
+<p>🔧 Bash: grep -r "census" <span class="redacted">redacted</span>/notes/canon/ | head -20 (Search for census in canon)</p>
 <p>✅ 20 lines, 2667 chars</p>
-<p>🔧 Bash: grep -r "L and M\|stakes.*L.*M\|Tess.*burned" <span class="redacted">redacted: private</span>/notes/canon/ 2&gt;/dev/nul… (Search for stakes L and M and Tess)</p>
+<p>🔧 Bash: grep -r "L and M\|stakes.*L.*M\|Tess.*burned" <span class="redacted">redacted</span>/notes/canon/ 2&gt;/dev/null | head… (Search for stakes L and M and Tess)</p>
 <p>✅ 4 lines, 549 chars</p>
-<p>🔧 Bash: grep -r "Tess" <span class="redacted">redacted: private</span>/notes/canon/characters/ | head -10 (Search for Tess in characters)</p>
+<p>🔧 Bash: grep -r "Tess" <span class="redacted">redacted</span>/notes/canon/characters/ | head -10 (Search for Tess in characters)</p>
 <p>✅ 10 lines, 1449 chars</p>
-<p>🔧 Bash: grep -r "picture.*Weave\|picture.*question\|Peri.*question" <span class="redacted">redacted: private</span>/notes/can… (Search for Peri's picture-question method)</p>
+<p>🔧 Bash: grep -r "picture.*Weave\|picture.*question\|Peri.*question" <span class="redacted">redacted</span>/notes/canon/ | hea… (Search for Peri's picture-question method)</p>
 <p>✅ 8 lines, 1120 chars</p>
-<p>🔧 Bash: grep -r "picture\|image\|Weave.*answer" <span class="redacted">redacted: private</span>/notes/canon/world/magic.md |… (Search for pictures/images from Weave in magic canon)</p>
+<p>🔧 Bash: grep -r "picture\|image\|Weave.*answer" <span class="redacted">redacted</span>/notes/canon/world/magic.md | head -20 (Search for pictures/images from Weave in magic canon)</p>
 <p>✅ 3 lines, 390 chars</p>
-<p>🔧 Bash: grep -r "<span class="redacted">redacted: character</span>-ditch\|deep spit\|the spit" <span class="redacted">redacted: private</span>/notes/cano… (Search for <span class="redacted">redacted: character</span>-ditch and deep spit termin…)</p>
+<p>🔧 Bash: grep -r "<span class="redacted">redacted</span>-ditch\|deep spit\|the spit" <span class="redacted">redacted</span>/notes/canon/world/ | head -20 (Search for <span class="redacted">redacted</span>-ditch and deep spit terminology)</p>
 <p>✅ 2 lines, 271 chars</p>
-<p>🔧 Bash: grep -r "dry road\|peri.*road\|question.*road" <span class="redacted">redacted: private</span>/notes/canon/ | head -20 (Search for dry road and Peri's question routine)</p>
+<p>🔧 Bash: grep -r "dry road\|peri.*road\|question.*road" <span class="redacted">redacted</span>/notes/canon/ | head -20 (Search for dry road and Peri's question routine)</p>
 <p>✅ 6 lines, 809 chars</p>
-<p>🔧 Bash: grep -r "peri.*noon\|peri.*question\|noon.*peri" <span class="redacted">redacted: private</span>/notes/canon/characte… (Search for Peri's noon routine)</p>
+<p>🔧 Bash: grep -r "peri.*noon\|peri.*question\|noon.*peri" <span class="redacted">redacted</span>/notes/canon/characters/peri.m… (Search for Peri's noon routine)</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: grep -A 5 -B 5 "Day 24.*Peri's\|Peri.*question" <span class="redacted">redacted: private</span>/notes/canon/world/tim… (Search for Peri's question in timeline)</p>
+<p>🔧 Bash: grep -A 5 -B 5 "Day 24.*Peri's\|Peri.*question" <span class="redacted">redacted</span>/notes/canon/world/timeline.md… (Search for Peri's question in timeline)</p>
 <p>✅ 23 lines, 1318 chars</p>
-<p>🔧 Bash: grep -r "scene 40\|ch.*40\|ch.*040" <span class="redacted">redacted: private</span>/notes/canon/world/timeline.md | h… (Search for scene 40 in timeline)</p>
+<p>🔧 Bash: grep -r "scene 40\|ch.*40\|ch.*040" <span class="redacted">redacted</span>/notes/canon/world/timeline.md | head -10 (Search for scene 40 in timeline)</p>
 <p>✅ 1 lines, 131 chars</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span>/notes/canon/world/timeline.md |… (Find the dig date in timeline)</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>/notes/canon/world/timeline.md | head -20 (Find the dig date in timeline)</p>
 <p>✅ 11 lines, 719 chars</p>
-<p>🔧 Bash: grep -A 10 "Day 12.*26 Cornmonth" <span class="redacted">redacted: private</span>/notes/canon/world/timeline.md | hea… (Get full Day 12 entry from timeline)</p>
+<p>🔧 Bash: grep -A 10 "Day 12.*26 Cornmonth" <span class="redacted">redacted</span>/notes/canon/world/timeline.md | head -30 (Get full Day 12 entry from timeline)</p>
 <p>✅ 11 lines, 671 chars</p>
-<p>🔧 Bash: grep -B 5 -A 5 "Day 86.*Peri's question" <span class="redacted">redacted: private</span>/notes/canon/world/timeline.md (Get Day 86 entry about Peri's question)</p>
+<p>🔧 Bash: grep -B 5 -A 5 "Day 86.*Peri's question" <span class="redacted">redacted</span>/notes/canon/world/timeline.md (Get Day 86 entry about Peri's question)</p>
 <p>✅ 11 lines, 653 chars</p>
-<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span>/summaries/ (List summary files)</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted</span>/summaries/ (List summary files)</p>
 <p>✅ 7 lines, 391 chars — total 152 / drwxr-xr-x@  6 drmaciver  staff    192 25 Aug 01:36 . / drwxr-xr-x@ 22 drmaciver  staff    704 31 Aug 13:54 ..</p>
-<p>🔧 Bash: grep -r "scene 40\|40.*dig\|zero at the three depths" <span class="redacted">redacted: private</span>/summaries/ 2&gt;/d… (Search for scene 40 in summaries)</p>
+<p>🔧 Bash: grep -r "scene 40\|40.*dig\|zero at the three depths" <span class="redacted">redacted</span>/summaries/ 2&gt;/dev/null |… (Search for scene 40 in summaries)</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/plans/ <span class="redacted">unpublished</span> | head -20 (List plans files)</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/plans/ <span class="unpub-tag">unpublished</span> | head -20 (List plans files)</p>
 <p>✅ 10 lines, 108 chars</p>
-<p>🔧 Read plans/NEXT.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read plans/NEXT.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 100 lines, 6229 chars</p>
-<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span>/draft/book-01/scenes/40* 2&gt;/dev/null &amp;&amp; echo "---" &amp;&amp; ls -la ⟦… (Check if scene 40 exists in current draft or rejected)</p>
-<p>✅ 4 lines, 254 chars — Exit code 1 / -rw-r--r--@ 1 drmaciver  staff  7279 31 Aug 18:21 <span class="redacted">redacted: private</span>/draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.md / ---</p>
-<p>🔧 Bash: grep -r "pace.*station\|Edwin.*pace" <span class="redacted">redacted: private</span>/notes/canon/ | head -10 (Search for pacing stations in canon)</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted</span>/draft/book-01/scenes/40* 2&gt;/dev/null &amp;&amp; echo "---" &amp;&amp; ls -la <span class="redacted">redacted</span>… (Check if scene 40 exists in current draft or rejected)</p>
+<p>✅ 4 lines, 254 chars — Exit code 1 / -rw-r--r--@ 1 drmaciver  staff  7279 31 Aug 18:21 <span class="redacted">redacted</span>/draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.md / ---</p>
+<p>🔧 Bash: grep -r "pace.*station\|Edwin.*pace" <span class="redacted">redacted</span>/notes/canon/ | head -10 (Search for pacing stations in canon)</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span>/notes/canon/world/timeline.md (Get context about how stations were set)</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>/notes/canon/world/timeline.md (Get context about how stations were set)</p>
 <p>✅ 11 lines, 664 chars</p>
-<p>🔧 Bash: grep -in "the whole of\|most of the\|all of it\|it's all of" <span class="redacted">redacted: private</span>/draft/bo… (Search for banned quantity constructions)</p>
+<p>🔧 Bash: grep -in "the whole of\|most of the\|all of it\|it's all of" <span class="redacted">redacted</span>/draft/book-01/sce… (Search for banned quantity constructions)</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: grep -o "[0-9][0-9]*" <span class="redacted">redacted: private</span>/draft/book-01/scenes/40-zero-at-the-three-depth… (Find all numbers in the scene)</p>
+<p>🔧 Bash: grep -o "[0-9][0-9]*" <span class="redacted">redacted</span>/draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.… (Find all numbers in the scene)</p>
 <p>✅ 1 lines, 7 chars</p>
 <p>🔧 Bash: grep -n "yards\|feet\|three\|two\|four\|five\|six\|seven\|eight\|nine\|ten\|eleven\|twelv… (Search for all numbers and measurements)</p>
 <p>✅ 20 lines, 5395 chars</p>
-<p>🔧 Bash: grep -r "14.*11.*9\|twenty yards.*fourteen" <span class="redacted">redacted: private</span>/notes/canon/ | head -5 (Check for worm counts in canon)</p>
+<p>🔧 Bash: grep -r "14.*11.*9\|twenty yards.*fourteen" <span class="redacted">redacted</span>/notes/canon/ | head -5 (Check for worm counts in canon)</p>
 <p>✅ 4 lines, 646 chars</p>
-<p>🔧 Bash: sed -n '15p;47p;55p' <span class="redacted">redacted: private</span>/draft/book-01/scenes/40-zero-at-the-three-depths… (Get the three lines with italics)</p>
+<p>🔧 Bash: sed -n '15p;47p;55p' <span class="redacted">redacted</span>/draft/book-01/scenes/40-zero-at-the-three-depths-we-cut.md (Get the three lines with italics)</p>
 <p>✅ 3 lines, 2116 chars</p>
 </details>
 
@@ -117,14 +130,16 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 
 <div class="assistant-prose">
 <p>Based on my comprehensive analysis of scene 40 against all six semantic + world lint rules, I found no violations:</p>
-<p>1. **contamination-overlap**: 0 overlapping runs of 8+ words (verified with overlap_check.py)<br>
-2. <span class="redacted">redacted sentence: unpublished prose</span><br>
-3. **tech-level-anachronism**: All materials fit pre-industrial tech level (pencils are "old but newly cheap" per canon)<br>
-4. **system-terminology**: No terminology violations (census and Weave used correctly)<br>
-5. **worldbuilding-to-save-a-line**: All details are established in canon; no invented worldbuilding<br>
-6. **italics-misplaced**: All italics mark quoted phrases/questions being discussed; no emphasis italics in odd places</p>
+<ol>
+<li><strong>contamination-overlap</strong>: 0 overlapping runs of 8+ words (verified with overlap_check.py)</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>tech-level-anachronism</strong>: All materials fit pre-industrial tech level (pencils are &quot;old but newly cheap&quot; per canon)</li>
+<li><strong>system-terminology</strong>: No terminology violations (census and Weave used correctly)</li>
+<li><strong>worldbuilding-to-save-a-line</strong>: All details are established in canon; no invented worldbuilding</li>
+<li><strong>italics-misplaced</strong>: All italics mark quoted phrases/questions being discussed; no emphasis italics in odd places</li>
+</ol>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

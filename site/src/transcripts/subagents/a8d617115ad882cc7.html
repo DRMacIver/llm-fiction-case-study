@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are working on the novel project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read `CL…</title><style>
+<html><head><meta charset="utf-8"><title>You are working on the novel project at [redacted]. Read `CLAUDE.md`…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,43 +7,53 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are working on the novel project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read `CL…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a8d617115ad882cc7">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-<br>
-You are working on the novel project at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it.<br>
-<br>
-Source material for this pass:<br>
-- `notes/audit/chapters/*.md` — a per-chapter archivist report for all 31 chapters (facts with [stated]/[implied] tags and quoted evidence, back-references, questions, tensions). These were written by agents who had NOT read canon, so they are an independent record of what is on the page. They are reports, not gospel: where a report's claim is load-bearing, verify it against the actual chapter in `chapters/` before acting on it.<br>
-- `notes/canon/**` — the canon files. `notes/canon/README.md` defines the claim levels (Established / Working / Open question) and the citation conventions. Follow them exactly.<br>
-<br>
-Hard rules:<br>
-- **Never resolve a canon Open question casually.** If the chapters imply an answer, record that they do and flag it for DRMacIver; do not close it yourself.<br>
-- **Never delete or weaken canon to fit a draft.** If a chapter and canon contradict, flag the conflict with both citations; do not silently pick a side.<br>
-- Do not edit anything under `chapters/` or `plans/`. <span class="redacted">unpublished</span> Canon files only, and only the ones you own (below).<br>
-- Mark new entries you introduce yourself as **(Claude, Working, 2026-08-27)**. Facts that are genuinely on-page get **Established** with a chapter citation in the existing "ch. NNN" style.<br>
-- `notes/sealed/` holds sealed answers. You MAY read them to check clues cohere. You must NEVER put sealed content into canon files, your report, or any user-facing text — describe only its shape (constraint satisfied / discrepancy exists / confidence).<br>
-<br>
-Your job, in your domain:<br>
-1. **Completeness** — every fact in the chapter reports that belongs in your domain should be present in your canon files, at the right claim level with the right citation. Add what is missing. Existing entries whose citation or claim level is now wrong get corrected.<br>
-2. **Consistency** — find contradictions: chapter-vs-canon, chapter-vs-chapter, and canon-vs-canon. Do the arithmetic on numbers, dates, distances, ages, durations, money and counts.<br>
-3. **Answers to questions** — go through the Questions sections of the reports in your domain. For each: is it already answered in canon? Then note where. Is it answerable by combining what is on the page? Then answer it and add it as Working canon. Is it a genuine hole? Then it goes on the open list.<br>
-4. **Load-bearing mysteries** — per CLAUDE.md, any mystery the story is accumulating evidence for must have a written answer. If you find one whose answer is not written down anywhere, say so prominently (naming the mystery, not inventing the answer).<br>
-<br>
-Write your findings report to `notes/audit/DOMAIN.md` (replace DOMAIN with your domain slug given below), with sections: `## Canon edits made` (file, what, why), `## Contradictions` (each with both citations and a recommendation, ranked by how load-bearing), `## Questions answered` (question → answer → where it now lives), `## Open questions for DRMacIver` (genuine holes and anything needing an author decision), `## Load-bearing mysteries without written answers`.<br>
-<br>
-Your final message should be a compact summary: counts per section, and the three most serious contradictions in one line each. The full detail belongs in the file.<br>
-<br>
-<br>
-Your domain slug: **system-and-magic** (write to `notes/audit/system-and-magic.md`).<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-Do not edit canon files owned by the other domains (system-and-magic, characters, world, timeline) — if you find a problem in their territory, report it instead.<br>
-<br>
-Your domain brief: The System (skills, attributes, classes, levels, notifications, cooldowns), magic and mana, dungeons and how they behave, healing and injury. Pay particular attention to: what abilities cost and how often they can be used; whether notification timing is consistent across chapters; whether anyone does something with magic that canon says is impossible or unprecedented; injury and healing rates across the whole book.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working on the novel project at [redacted]. Read `CLAUDE.md`…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a8d617115ad882cc7">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-27</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working on the novel project at <span class="redacted">redacted</span>. Read <code>CLAUDE.md</code> first and obey it.</p>
+<p>Source material for this pass:</p>
+<ul>
+<li><code>notes/audit/chapters/*.md</code> — a per-chapter archivist report for all 31 chapters (facts with [stated]/[implied] tags and quoted evidence, back-references, questions, tensions). These were written by agents who had NOT read canon, so they are an independent record of what is on the page. They are reports, not gospel: where a report's claim is load-bearing, verify it against the actual chapter in <code>chapters/</code> before acting on it.</li>
+<li><code>notes/canon/**</code> — the canon files. <code>notes/canon/README.md</code> defines the claim levels (Established / Working / Open question) and the citation conventions. Follow them exactly.</li>
+</ul>
+<p>Hard rules:</p>
+<ul>
+<li><strong>Never resolve a canon Open question casually.</strong> If the chapters imply an answer, record that they do and flag it for DRMacIver; do not close it yourself.</li>
+<li>**Never delete or weaken canon to fit a draft. If a chapter and canon contradict, flag the conflict with both citations; do not silently pick a side.</li>
+<li>Do not edit anything under <code>chapters/</code> or <code>plans/</code>. <span class="unpub-tag">unpublished</span> Canon files only, and only the ones you own (below).</li>
+<li>Mark new entries you introduce yourself as <strong>(Claude, Working, 2026-08-27)</strong>. Facts that are genuinely on-page get <strong>Established</strong> with a chapter citation in the existing &quot;ch. NNN&quot; style.</li>
+<li><code>notes/sealed/</code> holds sealed answers. You MAY read them to check clues cohere. You must NEVER put sealed content into canon files, your report, or any user-facing text — describe only its shape (constraint satisfied / discrepancy exists / confidence).</li>
+</ul>
+<p>Your job, in your domain:</p>
+<ol>
+<li><strong>Completeness</strong> — every fact in the chapter reports that belongs in your domain should be present in your canon files, at the right claim level with the right citation. Add what is missing. Existing entries whose citation or claim level is now wrong get corrected.</li>
+<li><strong>Consistency</strong> — find contradictions: chapter-vs-canon, chapter-vs-chapter, and canon-vs-canon. Do the arithmetic on numbers, dates, distances, ages, durations, money and counts.</li>
+<li><strong>Answers to questions</strong> — go through the Questions sections of the reports in your domain. For each: is it already answered in canon? Then note where. Is it answerable by combining what is on the page? Then answer it and add it as Working canon. Is it a genuine hole? Then it goes on the open list.</li>
+<li><strong>Load-bearing mysteries</strong> — per CLAUDE.md, any mystery the story is accumulating evidence for must have a written answer. If you find one whose answer is not written down anywhere, say so prominently (naming the mystery, not inventing the answer).</li>
+</ol>
+<p>Write your findings report to <code>notes/audit/DOMAIN.md</code> (replace DOMAIN with your domain slug given below), with sections: <code>## Canon edits made</code> (file, what, why), <code>## Contradictions</code> (each with both citations and a recommendation, ranked by how load-bearing), <code>## Questions answered</code> (question → answer → where it now lives), <code>## Open questions for DRMacIver</code> (genuine holes and anything needing an author decision), <code>## Load-bearing mysteries without written answers</code>.</p>
+<p>Your final message should be a compact summary: counts per section, and the three most serious contradictions in one line each. The full detail belongs in the file.</p>
+<p>Your domain slug: <strong>system-and-magic</strong> (write to <code>notes/audit/system-and-magic.md</code>).<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+Do not edit canon files owned by the other domains (system-and-magic, characters, world, timeline) — if you find a problem in their territory, report it instead.</p>
+<p>Your domain brief: The System (skills, attributes, classes, levels, notifications, cooldowns), magic and mana, dungeons and how they behave, healing and injury. Pay particular attention to: what abilities cost and how often they can be used; whether notification timing is consistent across chapters; whether anyone does something with magic that canon says is impossible or unprecedented; injury and healing rates across the whole book.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -101,31 +111,31 @@ Your domain brief: The System (skills, attributes, classes, levels, notification
 <p>✅ 76 lines, 25341 chars</p>
 <p>🔧 Bash: f=<span class="redacted">redacted: private</span> sed -n '135,214p' $f</p>
 <p>✅ 80 lines, 25493 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "quarter\|fifth of\|third of him\|bottom third" chapters/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "quarter\|fifth of\|third of him\|bottom third" chapters/015-the-b…</p>
 <p>✅ 8 lines, 3552 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '160,180p' chapters/015-the-break-night.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '160,180p' chapters/015-the-break-night.md</p>
 <p>✅ 19 lines, 1117 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "eighteen\|Wayfaring\|nudges me about my feet\|twelve" ch…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "eighteen\|Wayfaring\|nudges me about my feet\|twelve" chapters/02…</p>
 <p>✅ 12 lines, 4353 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 12 lines, 5355 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "<span class="redacted">redacted: event</span>\|bone-setter\|six weeks\|eight weeks\|…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "<span class="redacted">redacted</span>\|bone-setter\|six weeks\|eight weeks\|fortnight\|arm"…</p>
 <p>✅ 37 lines, 15674 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n '^#' notes/sealed/silent-soil.md; wc -l notes/sealed/sile…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n '^#' notes/sealed/silent-soil.md; wc -l notes/sealed/silent-soil.m…</p>
 <p>✅ 87 lines, 3101 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -c -i "dungeon\|holm deep" notes/sealed/silent-soil.md; grep…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -c -i "dungeon\|holm deep" notes/sealed/silent-soil.md; grep -c -i "s…</p>
 <p>✅ 6 lines, 547 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '2178,2192p;2548,2560p' notes/sealed/silent-soil.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '2178,2192p;2548,2560p' notes/sealed/silent-soil.md</p>
 <p>✅ 28 lines, 1277 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "twenty past three\|half past three\|20\|four in the morn…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "twenty past three\|half past three\|20\|four in the morning\|That…</p>
 <p>✅ 12 lines, 3421 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "ceiling\|thirty\|weeks yet\|stall" chapters/007-the-east…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "ceiling\|thirty\|weeks yet\|stall" chapters/007-the-east-road.md…</p>
 <p>✅ 3 lines, 2050 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "<span class="redacted">redacted: mechanic</span>\|Seal of the Loom\|Agent of Fate\|…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rn "<span class="redacted">redacted</span>\|Seal of the Loom\|Agent of Fate\|Fate Magic\|Swordsm…</p>
 <p>✅ 12 lines, 2532 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "cooldown\|in the meantime" chapters/001-the-wrong-man.md…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "cooldown\|in the meantime" chapters/001-the-wrong-man.md chapters…</p>
 <p>✅ 2 lines, 1024 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "Cornmonth\|Day 1\|Day 0" notes/canon/world/timeline.md |…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "Cornmonth\|Day 1\|Day 0" notes/canon/world/timeline.md | head -20</p>
 <p>✅ 20 lines, 1501 chars</p>
 </details>
 
@@ -134,29 +144,29 @@ Your domain brief: The System (skills, attributes, classes, levels, notification
 </div>
 
 <details><summary>24 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "at level two it will nudge\|A skill about walking\|propo…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "at level two it will nudge\|A skill about walking\|proposed-amend…</p>
 <p>✅ 2 lines, 146 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '118,133p' notes/canon/system.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '118,133p' notes/canon/system.md</p>
 <p>✅ 15 lines, 991 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' import re p='notes/canon/system.md' s=open(p).re…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' import re p='notes/canon/system.md' s=open(p).read()  <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/system.md' s=open(p).read()  a=''…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='notes/canon/system.md' s=open(p).read()  a='''- **Reco…</p>
 <p>✅ 2 lines, 23 chars — RECOVERY ANCHOR MISS / ok</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "to the floor" notes/canon/system.md | head</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "to the floor" notes/canon/system.md | head</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "Recovery, on the page" -A 14 notes/canon/system.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "Recovery, on the page" -A 14 notes/canon/system.md</p>
 <p>✅ 15 lines, 1074 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/system.md' s=open(p).read() a='''…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='notes/canon/system.md' s=open(p).read() a='''- **Recov…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>🔧 Bash: <span class="redacted">redacted sentence</span></p>
 <p>✅ 3 lines, 212 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/magic.md' s=open(p).read()…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/magic.md' s=open(p).read()  <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 2 lines, 111 chars — ok / [This command modified 1 file you've previously read: notes/canon/world/magic.md. Call Read before editing.]</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/magic.md' s=open(p).read()…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/magic.md' s=open(p).read() <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 4 lines, 100 chars — Exit code 1 / Traceback (most recent call last): /   File "&lt;stdin&gt;", line 12, in &lt;module&gt;</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '71,100p' notes/canon/world/magic.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '71,100p' notes/canon/world/magic.md</p>
 <p>✅ 30 lines, 1996 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/magic.md' s=open(p).read()…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/magic.md' s=open(p).read() reps=[ ("…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
 </details>
 
@@ -165,11 +175,11 @@ Your domain brief: The System (skills, attributes, classes, levels, notification
 </div>
 
 <details><summary>6 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/dungeons.md' s=open(p).read…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/dungeons.md' s=open(p).read() <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/healing.md' s=open(p).read(…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/healing.md' s=open(p).read() <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/system.md' s=open(p).read() a='''…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='notes/canon/system.md' s=open(p).read() a='''  - [<span class="redacted">redacted</span>…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
 </details>
 
@@ -177,18 +187,20 @@ Your domain brief: The System (skills, attributes, classes, levels, notification
 <p>Now the findings report.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; notes/audit/system-and-magic.md &lt;&lt;'EOF' # Audit: system and…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; notes/audit/system-and-magic.md &lt;&lt;'EOF' # Audit: system and magic  D…</p>
 <p>✅ 1 lines, 40 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git add -A notes/canon notes/audit/system-and-magic.md &amp;&amp; git com…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git add -A notes/canon notes/audit/system-and-magic.md &amp;&amp; git commit -q -m…</p>
 <p>✅ 1 lines, 53 chars — 289b819 Canon audit: system, magic, dungeons, healing</p>
 
 <div class="assistant-prose">
-<p>Report at `<span class="redacted">redacted: private</span>/notes/audit/system-and-magic.md`; canon edits committed as 289b819.</p>
-<p>**Counts** — Canon edits made: 15 (system.md 9, magic.md 3, dungeons.md 2, healing.md 1 large). Contradictions: 7 (5 real, 2 recorded-as-resolved/flagged elsewhere). Questions answered: 12. Open questions for DRMacIver: 8. Load-bearing mysteries without written answers: 2.</p>
-<p>**Three most serious contradictions**</p>
-<p>1. <span class="redacted">redacted: event</span> at the shed is "eighteen" on the page in five chapters (002:119, 009:41, 014:131, 018:165, 020:147) while DRMacIver's ruling says twenty-one and canon flagged only ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
-2. Edwin's <span class="redacted">redacted: event</span>: ch. 019's bone-setter says "six weeks", but it went on 21 Harvestmonth and came off 17 Saltmonth — fifty-six days, and two later chapters say "eight weeks" outright; healing.md had recorded the six.<br>
-3. [Seal of the Loom] is called a thirty-day cooldown twice, but runs from 15 Cornmonth to midnight of 14 Harvestmonth — 29 days, ~28½ elapsed — against Peri's own elapsed-day counting convention, which she says out loud.</p>
-<p>Prominently: the **Holm Deep origin thread** (tide mark, reversed drain, <span class="redacted">redacted: place</span>, dressed stone, and <span class="redacted">redacted: character</span>'s promised Frostmonth measurement) is a mystery actively accumulating dated evidence with **no written answer anywhere** — the one sealed file explicitly excludes it. The Seal's "Destiny: PENDING / until fulfilled" is the second such case.</p>
+<p>Report at <span class="redacted">redacted</span>/notes/audit/system-and-magic.md; canon edits committed as 289b819.</p>
+<p><strong>Counts</strong> — Canon edits made: 15 (system.md 9, magic.md 3, dungeons.md 2, healing.md 1 large). Contradictions: 7 (5 real, 2 recorded-as-resolved/flagged elsewhere). Questions answered: 12. Open questions for DRMacIver: 8. Load-bearing mysteries without written answers: 2.</p>
+<p><strong>Three most serious contradictions</strong></p>
+<ol>
+<li><span class="redacted">redacted</span> at the shed is &quot;eighteen&quot; on the page in five chapters (002:119, 009:41, 014:131, 018:165, 020:147) while DRMacIver's ruling says twenty-one and canon flagged only ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Edwin's <span class="redacted">redacted</span>: ch. 019's bone-setter says &quot;six weeks&quot;, but it went on 21 Harvestmonth and came off 17 Saltmonth — fifty-six days, and two later chapters say &quot;eight weeks&quot; outright; healing.md had recorded the six.</li>
+<li>[Seal of the Loom] is called a thirty-day cooldown twice, but runs from 15 Cornmonth to midnight of 14 Harvestmonth — 29 days, ~28½ elapsed — against Peri's own elapsed-day counting convention, which she says out loud.</li>
+</ol>
+<p>Prominently: the <strong>Holm Deep origin thread</strong> (tide mark, reversed drain, <span class="redacted">redacted</span>, dressed stone, and <span class="redacted">redacted</span>'s promised Frostmonth measurement) is a mystery actively accumulating dated evidence with <strong>no written answer anywhere</strong> — the one sealed file explicitly excludes it. The Seal's &quot;Destiny: PENDING / until fulfilled&quot; is the second such case.</p>
 </div>
 </body></html>

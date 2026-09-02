@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a442840438fdfb745">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/18-nought-in-every-kind.md, read after scenes 01–17 in the same directory (they bind what is on the page; 17 and 18 are one continuous action at the bench). <span class="redacted">redacted sentence: unpublished prose</span> Also chapters/005-the-sample.md — the groundwork this restages, which the author rates good and which drew no comments from him.<br>
-<br>
-Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a442840438fdfb745">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/18-nought-in-every-kind.md, read after scenes 01–17 in the same directory (they bind what is on the page; 17 and 18 are one continuous action at the bench). <span class="redacted">redacted sentence: unpublished prose</span> Also chapters/005-the-sample.md — the groundwork this restages, which the author rates good and which drew no comments from him.</p>
+<p>Report findings only, per the skill's &quot;How to report&quot;: quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or &quot;cut&quot;. Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -38,20 +49,26 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 <p>✅ 44 lines, 2243 chars</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 45 lines, 2190 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn -i "revealing\|quickening\|assay\|grey book\|marl\|null…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rn -i "revealing\|quickening\|assay\|grey book\|marl\|null case\|cen…</p>
 <p>✅ 80 lines, 8255 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat chapters/005-the-sample.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat chapters/005-the-sample.md</p>
 <p>✅ 119 lines, 17248 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Report on `draft/book-01/scenes/18-nought-in-every-kind.md`.</p>
-<p>**1. "She came and listened. He watched her do it…"** — Part 1, pronoun with no clear antecedent (*"'You' — It's 'I'"*). As a scene file, 18 opens on an unnamed "she" and "he" and does not name Sorrel until paragraph six or Edwin until paragraph seven. Scene 17 supplies the antecedent, but the split falls mid-exchange, which means the opening of 18 reads as a fragment rather than an opening (Part 7, openings are engines). Replacement: `Sorrel came and listened. Edwin watched her do it…` — or move the split to before "Sorrel. Come and listen to this," so 18 opens on Edwin's line.</p>
-<p>**2. "'Nothing left this block,' said Sorrel. 'There was nothing in it to leave.'"** — Part 1 (a word doing a job it cannot do) and Part 2 (the gesture at meaning). *Left* reads first as "remained" and only resolves to "departed" on the second clause; and the second clause is the first clause turned over, which is epigram shape rather than a new claim. It also fails Part 4: she is one beat past asking "Where are the worms?" and states as fact the conclusion the whole rest of the scene is built to earn. Replacement: `"Nothing died on that road," said Sorrel. "There was nothing in here to die."` — plainer, and it is an inference from the absent corpses she has just failed to find, which is what she actually has.</p>
-<p>**3. <span class="redacted">redacted sentence: unpublished prose</span> Nothing can be *driven out* of a corded, sealed box; and *killed* is what the following "Not dead worms" exists to rule out, so the clause pre-empts its own answer. Replacement: `and went through the straw and the bottom of the box with their fingers, methodically, looking for what a long dry road kills: nothing.` (The clause is inherited verbatim from ch. 005, which drew no comment — flagged because the check is per-sentence, not because it is new.)</p>
-<p>**4. <span class="redacted">redacted sentence: unpublished prose</span> Five revealings found nothing wrong; the sixth did not fail to see it — it returned nought, i.e. it saw the thing exactly. The sentence as written says the block beat all six, which the scene has just shown it did not. Replacement: `"Nothing gets to be invisible to five and honest to the sixth."` — or, keeping his voice, `"Nothing gets past the whole set."` Same inheritance caveat as (3).</p>
-<p>**5. The scene's last line — "…and I have no spell that asks *why*, because I never imagined the question."** — Part 7, endings are cuts, not cadences. In ch. 005 this line sat mid-chapter with Sorrel's "You've been frightened before" after it; as scene 18's final sentence it becomes the most quotable line in the scene, italicised, in the last two paragraphs, which is precisely the shape the rule forbids. Fix at the level of <span class="redacted">redacted: place</span>, not the words: run the scene one beat further and end on Sorrel's flat professional question or on her hand going back to the grey book, so the aphorism is passed over rather than landed on.</p>
-<p>**6. No author's note in 17 or 18.** — Part 7, notes attach where the thing is *worked*. The marl scandals and the census of the living are worked here and explained nowhere; ch. 005 carried *Living soil* and *Marl* for exactly this material. Fix: attach the *Living soil* and *Marl* notes to this scene (the *Cutting a sample* note belongs to 17), or record the debt for chapter assembly.</p>
-<p>The device a second round would be about is the recitation of the six revealings: five of them are narrated in a single unbroken voice with Sorrel reduced to a pen, and the comment waiting for it is *"it would flow better as a conversation."* To make it work, Sorrel has to ask for two of the casts rather than record them — she already earns one ("Cast it on the garden") — so the escalation is built by two people instead of delivered by one; short of that, compress the second and fourth into a sentence so the recital is not five paragraphs long.</p>
+<p>Report on <code>draft/book-01/scenes/18-nought-in-every-kind.md</code>.</p>
+<p><strong>1. &quot;She came and listened. He watched her do it…&quot;</strong> — Part 1, pronoun with no clear antecedent (<em>&quot;'You' — It's 'I'&quot;</em>). As a scene file, 18 opens on an unnamed &quot;she&quot; and &quot;he&quot; and does not name Sorrel until paragraph six or Edwin until paragraph seven. Scene 17 supplies the antecedent, but the split falls mid-exchange, which means the opening of 18 reads as a fragment rather than an opening (Part 7, openings are engines). Replacement: <code>Sorrel came and listened. Edwin watched her do it…</code> — or move the split to before &quot;Sorrel. Come and listen to this,&quot; so 18 opens on Edwin's line.</p>
+<p><strong>2. &quot;'Nothing left this block,' said Sorrel. 'There was nothing in it to leave.'&quot;</strong> — Part 1 (a word doing a job it cannot do) and Part 2 (the gesture at meaning). <em>Left</em> reads first as &quot;remained&quot; and only resolves to &quot;departed&quot; on the second clause; and the second clause is the first clause turned over, which is epigram shape rather than a new claim. It also fails Part 4: she is one beat past asking &quot;Where are the worms?&quot; and states as fact the conclusion the whole rest of the scene is built to earn. Replacement: <code>&quot;Nothing died on that road,&quot; said Sorrel. &quot;There was nothing in here to die.&quot;</code> — plainer, and it is an inference from the absent corpses she has just failed to find, which is what she actually has.</p>
+<ol start="3">
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Nothing can be <em>driven out</em> of a corded, sealed box; and <em>killed</em> is what the following &quot;Not dead worms&quot; exists to rule out, so the clause pre-empts its own answer. Replacement: <code>and went through the straw and the bottom of the box with their fingers, methodically, looking for what a long dry road kills: nothing.</code> (The clause is inherited verbatim from ch. 005, which drew no comment — flagged because the check is per-sentence, not because it is new.)</p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Five revealings found nothing wrong; the sixth did not fail to see it — it returned nought, i.e. it saw the thing exactly. The sentence as written says the block beat all six, which the scene has just shown it did not. Replacement: <code>&quot;Nothing gets to be invisible to five and honest to the sixth.&quot;</code> — or, keeping his voice, <code>&quot;Nothing gets past the whole set.&quot;</code> Same inheritance caveat as (3).</p>
+</li>
+</ol>
+<p><strong>5. The scene's last line — &quot;…and I have no spell that asks <em>why</em>, because I never imagined the question.&quot;</strong> — Part 7, endings are cuts, not cadences. In ch. 005 this line sat mid-chapter with Sorrel's &quot;You've been frightened before&quot; after it; as scene 18's final sentence it becomes the most quotable line in the scene, italicised, in the last two paragraphs, which is precisely the shape the rule forbids. Fix at the level of <span class="redacted">redacted</span>, not the words: run the scene one beat further and end on Sorrel's flat professional question or on her hand going back to the grey book, so the aphorism is passed over rather than landed on.</p>
+<p><strong>6. No author's note in 17 or 18.</strong> — Part 7, notes attach where the thing is <em>worked</em>. The marl scandals and the census of the living are worked here and explained nowhere; ch. 005 carried <em>Living soil</em> and <em>Marl</em> for exactly this material. Fix: attach the <em>Living soil</em> and <em>Marl</em> notes to this scene (the <em>Cutting a sample</em> note belongs to 17), or record the debt for chapter assembly.</p>
+<p>The device a second round would be about is the recitation of the six revealings: five of them are narrated in a single unbroken voice with Sorrel reduced to a pen, and the comment waiting for it is <em>&quot;it would flow better as a conversation.&quot;</em> To make it work, Sorrel has to ask for two of the casts rather than record them — she already earns one (&quot;Cast it on the garden&quot;) — so the escalation is built by two people instead of delivered by one; short of that, compress the second and fourth into a sentence so the recital is not five paragraphs long.</p>
 </div>
 </body></html>

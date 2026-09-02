@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;  Ta…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. [redacted]  Task: DRMac…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,31 +7,41 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;  Ta…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-afb28b902ede49470">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Task: DRMacIver flagged "arithmetic" as an overused verbal tic — used often "and often not very naturally". There are ~16 occurrences across chapters 001-010. Sweep them: the metaphorical construction "the X arithmetic" is retired; for each occurrence, either (a) cut/rephrase into plain concrete language in the chapter's own voice (usually best — say the actual thing: the count, the sums, what's being weighed), or (b) keep it ONLY if it is literally about counting/calculation AND is the most natural word there — keep at most 2-3 across all ten chapters. <span class="redacted">redacted sentence: medicine/disease</span> While in each file, also vary any clustered "half past" clock references where a neighbouring phrasing exists naturally (twenty past, near one, o'clock) — only where it reads naturally; the System-clock precision canon stands.<br>
-<br>
-Do NOT touch chapters 011+ (owned by a running workflow), samples/, plans/, <span class="redacted">unpublished</span> or notes/.<br>
-<br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. [redacted]  Task: DRMac…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-afb28b902ede49470">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Task: DRMacIver flagged &quot;arithmetic&quot; as an overused verbal tic — used often &quot;and often not very naturally&quot;. There are ~16 occurrences across chapters 001-010. Sweep them: the metaphorical construction &quot;the X arithmetic&quot; is retired; for each occurrence, either (a) cut/rephrase into plain concrete language in the chapter's own voice (usually best — say the actual thing: the count, the sums, what's being weighed), or (b) keep it ONLY if it is literally about counting/calculation AND is the most natural word there — keep at most 2-3 across all ten chapters. <span class="redacted">redacted sentence</span> While in each file, also vary any clustered &quot;half past&quot; clock references where a neighbouring phrasing exists naturally (twenty past, near one, o'clock) — only where it reads naturally; the System-clock precision canon stands.</p>
+<p>Do NOT touch chapters 011+ (owned by a running workflow), samples/, plans/, <span class="unpub-tag">unpublished</span> or notes/.</p>
+<p><span class="redacted">redacted sentence</span><br />
 Return: per chapter, each occurrence and what you did with it (kept/cut/rephrased, with the new text).</p></blockquote>
 
 
-<p>🔧 Bash: grep -n -A15 "House-word" <span class="redacted">redacted: private</span>/notes/llm-tells.md; ls <span class="redacted">redacted: private</span>/… (Find arithmetic occurrences and rule text)</p>
+<p>🔧 Bash: grep -n -A15 "House-word" <span class="redacted">redacted</span>/notes/llm-tells.md; ls <span class="redacted">redacted</span>/chapters/; grep -r… (Find arithmetic occurrences and rule text)</p>
 <p>✅ 68 lines, 17055 chars</p>
 
 <div class="assistant-prose">
 <p>I'll read the context around each occurrence in chapters 001-010, plus the voice references.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> (Show context around each arithmetic occurrence)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> (Show context around each arithmetic occurrence)</p>
 <p>✅ 96 lines, 13516 chars</p>
 
 <div class="assistant-prose">
@@ -97,33 +107,41 @@ Return: per chapter, each occurrence and what you did with it (kept/cut/rephrase
 </details>
 
 <div class="assistant-prose">
-<p>Done. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> 16 occurrences in chapters 001-010 reduced to 3 kept (all literal counting in dialogue, one per chapter). Per-chapter record:</p>
-<p>**001-the-wrong-man.md**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Both "half past twelve" references left alone: they're the deliberate rain-delivery callback, not a cluster.</p>
-<p>**002-the-ten-o-clock.md**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- "who did the arithmetic out loud" — rephrased: "who put it together out loud"<br>
-- "it's just weather and arithmetic" — **KEPT** (famine speech; literally about the number, feeds "what the number is made of")<br>
+<p>Done. <span class="redacted">redacted sentence</span> 16 occurrences in chapters 001-010 reduced to 3 kept (all literal counting in dialogue, one per chapter). Per-chapter record:</p>
+<p><strong>001-the-wrong-man.md</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**005-the-sample.md**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
+<ul>
+<li>Both &quot;half past twelve&quot; references left alone: they're the deliberate rain-delivery callback, not a cluster.</li>
+</ul>
+<p><strong>002-the-ten-o-clock.md</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**006-the-handover.md**<br>
-- "It's good arithmetic" (pear trees, years to fruit vs. lifespans) — **KEPT** (literal number-weighing in dialogue)<br>
+<ul>
+<li>&quot;who did the arithmetic out loud&quot; — rephrased: &quot;who put it together out loud&quot;</li>
+<li>&quot;it's just weather and arithmetic&quot; — <strong>KEPT</strong> (famine speech; literally about the number, feeds &quot;what the number is made of&quot;)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>005-the-sample.md</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**007-the-east-road.md**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
+<p><strong>006-the-handover.md</strong></p>
+<ul>
+<li>&quot;It's good arithmetic&quot; (pear trees, years to fruit vs. lifespans) — <strong>KEPT</strong> (literal number-weighing in dialogue)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>007-the-east-road.md</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**008-road-lessons.md**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
+<p><strong>008-road-lessons.md</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**009-fenholt.md**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Clock variance: "waking Peri at half past four" → "at twenty past four" (matches the chapter's existing twenty-past phrasings; the canon 12:30 echo at line 41 and "half past eight" left).</p>
-<p>**010-the-quiet-field.md**<br>
+<p><strong>009-fenholt.md</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Clock variance: &quot;waking Peri at half past four&quot; → &quot;at twenty past four&quot; (matches the chapter's existing twenty-past phrasings; the canon 12:30 echo at line 41 and &quot;half past eight&quot; left).</li>
+</ul>
+<p><strong>010-the-quiet-field.md</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>No new abstraction was introduced anywhere — replacements are plain words (sums, count, plan, what he'd said) with no repeated new coinage. Chapters 011+ untouched.</p>
 </div>

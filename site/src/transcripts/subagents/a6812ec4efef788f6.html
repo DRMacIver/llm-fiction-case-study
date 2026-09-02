@@ -7,22 +7,31 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are applying an approved list of dialogue edits to five chapters…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a6812ec4efef788f6">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are applying an approved list of dialogue edits to five chapters of a novel in <span class="redacted">redacted: private</span>. Do NOT commit; do not touch any other files; do not run any git commands except `git diff` to check your work.<br>
-<br>
-Read first: <span class="redacted">redacted: private</span>/notes/voices.md section "Dialogue rules (round four)", and the "How they talk" sections of <span class="redacted">redacted: private</span>/notes/canon/characters/{edwin,peri,<span class="redacted">redacted: character</span>,mattie-ordish,minor}.md.<br>
-<br>
-The list is <span class="redacted">redacted: private</span> 39 entries, each with file, speaker, the exact quoted line, the problem, a finder rewrite, and (often) a skeptic's better_rewrite with finder_rewrite_ok. Rules for choosing: use skeptic_rewrite when present and finder_rewrite_ok is false; when both exist and finder_rewrite_ok is true, use whichever better matches the speaker's "How they talk" entry (prefer the skeptic's when in doubt). Some rewrites describe a structural change (cut a line, merge two speeches, drop an echo and fold into the next speech) rather than a one-for-one replacement; do those as described. Specific decisions already made: in ch. 018 change "Ask your man about that" to "Ask Moss about that"; ch. <span class="redacted">redacted sentence: unpublished prose</span> 019 apply the merged <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: object</span>." echo and the "It wasn't true…" mirror, keeping the "put <span class="redacted">redacted: character</span> on her back" content; ch. 019 cut <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> before if it no longer makes sense. Ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Method: write a Python script (run with `uv run --no-project python`) that does exact-string replacements with `assert text.count(old) == 1` for every edit, so nothing is applied twice or to the wrong place. Read the surrounding paragraph for every edit and make sure the result reads as continuous prose: pronoun references still resolve, no word is now repeated from the adjacent sentence, and no line introduces a fact not already in the chapter (check names against the chapter before using them). If a rewrite would need a fact you cannot verify in the chapter, use a version that does not need it. Do not introduce em dashes, "not X but Y" constructions, or triads with a swerve. Keep the author's note blocks after the final `---` untouched.<br>
-<br>
-Return: a list of every edit applied as (file, old → new, one-line reason), any entries you skipped and why, and anything you noticed that looked wrong but was outside the list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are applying an approved list of dialogue edits to five chapters…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a6812ec4efef788f6">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-25</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are applying an approved list of dialogue edits to five chapters of a novel in <span class="redacted">redacted</span>. Do NOT commit; do not touch any other files; do not run any git commands except <code>git diff</code> to check your work.</p>
+<p>Read first: <span class="redacted">redacted</span>/notes/voices.md section &quot;Dialogue rules (round four)&quot;, and the &quot;How they talk&quot; sections of <span class="redacted">redacted</span>/notes/canon/characters/{edwin,peri,<span class="redacted">redacted</span>,mattie-ordish,minor}.md.</p>
+<p>The list is <span class="redacted">redacted: private</span> 39 entries, each with file, speaker, the exact quoted line, the problem, a finder rewrite, and (often) a skeptic's better_rewrite with finder_rewrite_ok. Rules for choosing: use skeptic_rewrite when present and finder_rewrite_ok is false; when both exist and finder_rewrite_ok is true, use whichever better matches the speaker's &quot;How they talk&quot; entry (prefer the skeptic's when in doubt). Some rewrites describe a structural change (cut a line, merge two speeches, drop an echo and fold into the next speech) rather than a one-for-one replacement; do those as described. Specific decisions already made: in ch. 018 change &quot;Ask your man about that&quot; to &quot;Ask Moss about that&quot;; ch. <span class="redacted">redacted sentence: unpublished prose</span> 019 apply the merged <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.&quot; echo and the &quot;It wasn't true…&quot; mirror, keeping the &quot;put <span class="redacted">redacted</span> on her back&quot; content; ch. 019 cut <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> before if it no longer makes sense. Ch. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Method: write a Python script (run with <code>uv run --no-project python</code>) that does exact-string replacements with <code>assert text.count(old) == 1</code> for every edit, so nothing is applied twice or to the wrong place. Read the surrounding paragraph for every edit and make sure the result reads as continuous prose: pronoun references still resolve, no word is now repeated from the adjacent sentence, and no line introduces a fact not already in the chapter (check names against the chapter before using them). If a rewrite would need a fact you cannot verify in the chapter, use a version that does not need it. Do not introduce em dashes, &quot;not X but Y&quot; constructions, or triads with a swerve. Keep the author's note blocks after the final <code>---</code> untouched.</p>
+<p>Return: a list of every edit applied as (file, old → new, one-line reason), any entries you skipped and why, and anything you noticed that looked wrong but was outside the list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -38,11 +47,11 @@ Return: a list of every edit applied as (file, old → new, one-line reason), an
 <p>✅ 1 lines, 56 chars</p>
 <p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
 <p>✅ 22 lines, 1839 chars</p>
-<p>🔧 Bash: sed -n '176,260p' <span class="redacted">redacted: private</span>/notes/voices.md</p>
+<p>🔧 Bash: sed -n '176,260p' <span class="redacted">redacted</span>/notes/voices.md</p>
 <p>✅ 84 lines, 5110 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; for f in edwin peri ⟦redacted: character…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; for f in edwin peri <span class="redacted">redacted</span> mattie-ordish mino…</p>
 <p>✅ 113 lines, 6768 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; for f in edwin peri ⟦redacted: character…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; for f in edwin peri <span class="redacted">redacted</span> mattie-ordish; do…</p>
 <p>✅ 121 lines, 7042 chars</p>
 </details>
 
@@ -59,25 +68,25 @@ Return: a list of every edit applied as (file, old → new, one-line reason), an
 <p>✅ 2 lines, 156 chars</p>
 <p>🔧 Bash: uv run --no-project python -c " import json;d=json.load(open('<span class="redacted">redacted: private</span>')) for…</p>
 <p>✅ 39 lines, 3543 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; ls | head -40 &amp;&amp; wc -l 012*.md 016*.md 017*.md 018*.md…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; ls | head -40 &amp;&amp; wc -l 012*.md 016*.md 017*.md 018*.md 019*.md</p>
 <p>✅ 37 lines, 890 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; cat -n 012-the-charter-board.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; cat -n 012-the-charter-board.md</p>
 <p>✅ 193 lines, 17957 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; cat -n 016-the-fen-margin.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; cat -n 016-the-fen-margin.md</p>
 <p>✅ 223 lines, 25705 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; cat -n 017-clearing-work.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; cat -n 017-clearing-work.md</p>
 <p>✅ 205 lines, 23256 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 6 lines, 1162 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '1,15p;55,70p;110,125p;185,200p;215,235p' 018-h…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; sed -n '1,15p;55,70p;110,125p;185,200p;215,235p' 018-holm-deep.…</p>
 <p>✅ 84 lines, 6004 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "two of them\|put it through\|killed\|Peri" 01…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "two of them\|put it through\|killed\|Peri" 018-holm-de…</p>
 <p>✅ 19 lines, 3445 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '55,120p' 019-a-question-of-rosters.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; sed -n '55,120p' 019-a-question-of-rosters.md</p>
 <p>✅ 65 lines, 7476 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "owes you anything\|By people who\|gate while…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "owes you anything\|By people who\|gate while I was dri…</p>
 <p>✅ 57 lines, 7689 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "dead names\|struck\|four names" 019-a-questio…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "dead names\|struck\|four names" 019-a-question-of-rost…</p>
 <p>✅ 5 lines, 1524 chars</p>
 </details>
 
@@ -86,7 +95,7 @@ Return: a list of every edit applied as (file, old → new, one-line reason), an
 </div>
 
 <details><summary>6 tool calls</summary>
-<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'PYEOF' import pathlib D = pathlib.Path("<span class="redacted">redacted: private</span>/…</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'PYEOF' import pathlib D = pathlib.Path("<span class="redacted">redacted</span>/…</p>
 <p>✅ 5 lines, 138 chars</p>
 <p>🔧 Bash: git diff -U3 -- chapters/</p>
 <p>✅ 311 lines, 27603 chars</p>
@@ -95,51 +104,55 @@ Return: a list of every edit applied as (file, old → new, one-line reason), an
 </details>
 
 <div class="assistant-prose">
-<p>All 39 entries handled (35 string replacements; four entries merged into neighbours as their rewrites required). No entries skipped. Nothing outside `chapters/012, 016, 017, 018, 019` was touched; author's-note blocks untouched; no em dashes, "not X but Y", or swerve triads introduced.</p>
-<p>**012-the-charter-board.md**<br>
-1. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> on both sides, and leave from the men who own it. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Put the ground in and leave the rest out."` — answers the practical question first (rule 2). I used the skeptic's shape but **not its names**: "Sennet's leave"/"Mattie's <span class="redacted">redacted: character</span>" is a neighbour attribution the chapter does not establish (Sennet appears only later, as a steading on the margin), so I used the chapter's own "the ground either side of hers".<br>
-2. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-3. <span class="redacted">redacted sentence: unpublished prose</span> Keep it on."` (skeptic).<br>
-4. Echo `"It's the same notice."` → `"It is. How long has it been up?"` (skeptic) — Peri's next speech now answers a question asked.<br>
-5. Echo `"The rings."` cut; <span class="redacted">redacted: character</span>'s Weedmonth line folded into his own speech (skeptic's structural version), keeping his pre-emptive defence.<br>
-6. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> "That's the real cost. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-7. <span class="redacted">redacted: character</span> `"That's the trouble with him. <span class="redacted">redacted sentence: unpublished prose</span> Write the number down."` (skeptic).<br>
-8. <span class="redacted">redacted sentence: unpublished prose</span><br>
-9. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**016-the-fen-margin.md**<br>
-10. `"That's a thing to know… Is it a thing to do?"` → `"All right," said <span class="redacted">redacted: character</span>. "What do I do with that?"` (skeptic).<br>
-11. <span class="redacted">redacted sentence: unpublished prose</span><br>
-12. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-13. Echo `"It'll flood <span class="redacted">redacted: character</span>'s bottom eight acres. They're in stubble…"` → `"It will. They're in stubble…"` (skeptic).<br>
-14. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-15. <span class="redacted">redacted sentence: unpublished prose</span><br>
-16. Echo `"It is the whole trade."` → `"It is."`<br>
-17. `"That is not modesty. It is what happened."` → `"I'm not being modest."` (skeptic).</p>
-<p>**017-clearing-work.md**<br>
-18. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-19. <span class="redacted">redacted sentence: unpublished prose</span> They've got eleven. <span class="redacted">redacted sentence: unpublished prose</span><br>
-20. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> "Say that."` (skeptic) — kills the third line generated from one phrase.<br>
-21. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.` (skeptic), stage direction kept in place.<br>
-22. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-23. `"That's not a courtesy. "` cut (skeptic preferred cut over replacement).<br>
-24. <span class="redacted">redacted sentence: unpublished prose</span> Aloud, in front of everybody…`<br>
+<p>All 39 entries handled (35 string replacements; four entries merged into neighbours as their rewrites required). No entries skipped. Nothing outside <code>chapters/012, 016, 017, 018, 019</code> was touched; author's-note blocks untouched; no em dashes, &quot;not X but Y&quot;, or swerve triads introduced.</p>
+<p><strong>012-the-charter-board.md</strong></p>
+<ol>
+<li><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> on both sides, and leave from the men who own it. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Put the ground in and leave the rest out.&quot; — answers the practical question first (rule 2). I used the skeptic's shape but <strong>not its names</strong>: &quot;Sennet's leave&quot;/&quot;Mattie's <span class="redacted">redacted</span>&quot; is a neighbour attribution the chapter does not establish (Sennet appears only later, as a steading on the margin), so I used the chapter's own &quot;the ground either side of hers&quot;.</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted sentence: unpublished prose</span> Keep it on.&quot;` (skeptic).</li>
+<li>Echo <code>&quot;It's the same notice.&quot;</code> → <code>&quot;It is. How long has it been up?&quot;</code> (skeptic) — Peri's next speech now answers a question asked.</li>
+<li>Echo `&quot;The rings.&quot; cut; <span class="redacted">redacted</span>'s Weedmonth line folded into his own speech (skeptic's structural version), keeping his pre-emptive defence.</li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> &quot;That's the real cost. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted</span> &quot;That's the trouble with him. <span class="redacted">redacted sentence: unpublished prose</span> Write the number down.&quot; (skeptic).</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<p><strong>016-the-fen-margin.md</strong><br />
+10. <code>&quot;That's a thing to know… Is it a thing to do?&quot;</code> → &quot;All right,&quot; said <span class="redacted">redacted</span>. &quot;What do I do with that?&quot; (skeptic).<br />
+11. <span class="redacted">redacted sentence: unpublished prose</span><br />
+12. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+13. Echo &quot;It'll flood <span class="redacted">redacted</span>'s bottom eight acres. They're in stubble…&quot;<code>→</code>&quot;It will. They're in stubble…&quot; (skeptic).<br />
+14. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+15. <span class="redacted">redacted sentence: unpublished prose</span><br />
+16. Echo <code>&quot;It is the whole trade.&quot;</code> → <code>&quot;It is.&quot;</code><br />
+17. <code>&quot;That is not modesty. It is what happened.&quot;</code> → <code>&quot;I'm not being modest.&quot;</code> (skeptic).</p>
+<p><strong>017-clearing-work.md</strong><br />
+18. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+19. <span class="redacted">redacted sentence: unpublished prose</span> They've got eleven. <span class="redacted">redacted sentence: unpublished prose</span><br />
+20. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> &quot;Say that.&quot; (skeptic) — kills the third line generated from one phrase.<br />
+21. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>. (skeptic), stage direction kept in place.<br />
+22. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+23. <code>&quot;That's not a courtesy. &quot;</code> cut (skeptic preferred cut over replacement).<br />
+24. <span class="redacted">redacted sentence: unpublished prose</span> Aloud, in front of everybody…<br />
 25. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**018-holm-deep.md**<br>
-26. <span class="redacted">redacted: character</span>'s triad + `"The letter's paper. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>, enter it."` (the scene "when it was put to her" does not establish <span class="redacted">redacted: character</span> present, and his entry is already narrated).<br>
-27. <span class="redacted">redacted sentence: unpublished prose</span> They came anyway. They had breakfast first, standing up."` — I dropped the skeptic's closing `"I've already got that written down."` because it contradicts Edwin's very next line, `"That's the entry. <span class="redacted">redacted sentence: unpublished prose</span><br>
-28. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-29. <span class="redacted">redacted: character</span> `"That's the sentence."` → `"I'll say that once."`, and `you'll say so` → `you say so` (skeptic).<br>
-30. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> did not stop walking. "It'll start on you now. Mine did. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> "Two of them today" is verified: she kills two at line 175.</p>
-<p>**019-a-question-of-rosters.md**<br>
-31. Merged <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: object</span>."` and the `"It wasn't true…"` mirror both dropped, ending `"Then a thing came up <span class="redacted">redacted: place</span> behind my line and put <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> It never touched a road."` — I used the skeptic's behaviour claim rather than "wasn't a <span class="redacted">redacted: object</span>", since the Charter's own finding in this chapter calls it "an unidentified creature".<br>
-32. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> deleted. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.` **Note**: the brief's quoted `"You weren't."` only works if <span class="redacted">redacted: character</span>'s line is kept, which contradicts the instruction to cut it; I followed the cuts, so her opener stays hers and the affirmation is unnecessary. Flag if you wanted the other reading.<br>
-33. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-34. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-35. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Noticed, outside the list (not changed):**<br>
-- The skeptic on entry 35 flags that `notes/canon/characters/<span class="redacted">redacted: character</span>.md` (~lines 33–34) and `summaries/book-01-arc-02.md` (~line 79) cite ch. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>-morning line, which ch. 012 does not contain — and that line is now deleted from ch. 019 too, so both citations are stale.<br>
-- Ch. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s mouth, same family as the items you flagged; it was not on the list.<br>
-- Ch. 017 line 9 has <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Nothing committed; no git commands run beyond `git diff`.</p>
+<p><strong>018-holm-deep.md</strong><br />
+26. <span class="redacted">redacted</span>'s triad + &quot;The letter's paper. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>, enter it.&quot; (the scene &quot;when it was put to her&quot; does not establish <span class="redacted">redacted</span> present, and his entry is already narrated).<br />
+27. <span class="redacted">redacted sentence: unpublished prose</span> They came anyway. They had breakfast first, standing up.&quot;<code>— I dropped the skeptic's closing</code>&quot;I've already got that written down.&quot;<code>because it contradicts Edwin's very next line,</code>&quot;That's the entry. <span class="redacted">redacted sentence: unpublished prose</span><br />
+28. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+29. <span class="redacted">redacted</span> <code>&quot;That's the sentence.&quot;</code> → <code>&quot;I'll say that once.&quot;</code>, and <code>you'll say so</code> → <code>you say so</code> (skeptic).<br />
+30. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> did not stop walking. &quot;It'll start on you now. Mine did. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> &quot;Two of them today&quot; is verified: she kills two at line 175.</p>
+<p><strong>019-a-question-of-rosters.md</strong><br />
+31. Merged <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.&quot;<code>and the</code>&quot;It wasn't true…&quot;<code>mirror both dropped, ending</code>&quot;Then a thing came up <span class="redacted">redacted</span> behind my line and put <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> It never touched a road.&quot; — I used the skeptic's behaviour claim rather than &quot;wasn't a <span class="redacted">redacted</span>&quot;, since the Charter's own finding in this chapter calls it &quot;an unidentified creature&quot;.<br />
+32. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> deleted. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.<code>**Note**: the brief's quoted</code>&quot;You weren't.&quot; only works if <span class="redacted">redacted</span>'s line is kept, which contradicts the instruction to cut it; I followed the cuts, so her opener stays hers and the affirmation is unnecessary. Flag if you wanted the other reading.<br />
+33. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+34. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+35. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><strong>Noticed, outside the list (not changed):</strong></p>
+<ul>
+<li>The skeptic on entry 35 flags that notes/canon/characters/<span class="redacted">redacted</span>.md<code>(~lines 33–34) and</code>summaries/book-01-arc-02.md (~line 79) cite ch. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>-morning line, which ch. 012 does not contain — and that line is now deleted from ch. 019 too, so both citations are stale.</li>
+<li>Ch. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s mouth, same family as the items you flagged; it was not on the list.</li>
+<li>Ch. 017 line 9 has <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p>Nothing committed; no git commands run beyond <code>git diff</code>.</p>
 </div>
 </body></html>

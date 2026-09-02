@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; You…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. [redacted] You are a na…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; You…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-afa54686b72566ed0">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span> You are a narrow reviewer with ONE lens. FARMING: extract every farming/soil/weather/drainage/engineering claim and assess against real science (name the mechanism; flag doubtful ones); list every specialist term with whether it is already in the glossary; for terms NOT in the glossary, draft the author’s-note paragraph; flag any magic that solves a non-problem or exceeds its real mechanism (<span class="redacted">redacted: mechanic</span> as built in 026/030 especially). Report ONLY findings within your lens, compactly: quote (short) | problem | fix. Invented problems are as bad as misses. Do not certify anything as clean.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. [redacted] You are a na…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-afa54686b72566ed0">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> You are a narrow reviewer with ONE lens. FARMING: extract every farming/soil/weather/drainage/engineering claim and assess against real science (name the mechanism; flag doubtful ones); list every specialist term with whether it is already in the glossary; for terms NOT in the glossary, draft the author’s-note paragraph; flag any magic that solves a non-problem or exceeds its real mechanism (<span class="redacted">redacted</span> as built in 026/030 especially). Report ONLY findings within your lens, compactly: quote (short) | problem | fix. Invented problems are as bad as misses. Do not certify anything as clean.</p></blockquote>
 
 
 <details><summary>12 tool calls</summary>
@@ -26,7 +39,7 @@ Repo: <span class="redacted">redacted: private</span>. <span class="redacted">re
 <p>🔧 Read notes/canon/world/magic.md</p>
 <p>✅ 158 lines, 9554 chars</p>
 <p>✅ 1190 lines, 66494 chars</p>
-<p>🔧 Bash: cat -n <span class="redacted">redacted: private</span>/chapters/022-the-made-road.md</p>
+<p>🔧 Bash: cat -n <span class="redacted">redacted</span>/chapters/022-the-made-road.md</p>
 <p>✅ 189 lines, 18086 chars</p>
 <p>🔧 Bash: grep -n "spoil" chapters/0*.md</p>
 <p>✅ 11 lines, 4608 chars</p>
@@ -34,17 +47,21 @@ Repo: <span class="redacted">redacted: private</span>. <span class="redacted">re
 
 <div class="assistant-prose">
 <p>FARMING LENS — chapters/022-the-made-road.md</p>
-<p>**Missing author's note (primary finding).** The chapter uses two terms the glossary itself flags as outstanding for this chapter (`notes/canon/world/farming-glossary.md`, "Status" line: "Chapters 022–023 remain outstanding `unexplained term` findings, with the note text drafted here ready to drop in") — but ch022 as it stands has no `---`/author's-note block at all.<br>
-- `"cambered, verged, waymarked"` (l.5) and `"The level lay south of them..."` (l.181) | unexplained term — notes already drafted in the glossary (Camber/verge/made road; The level) but not published in the chapter | append the two drafted note paragraphs verbatim at the foot of the chapter, per `notes/farming.md` format (`---` then `*Author's note.*` block), and flip the glossary status line for these two entries from drafted-only to published once it's in.</p>
-<p>**Claims checked — all real, no findings:**<br>
-- Made-road construction: bank above field level, stone core exposed at worn edges, ditch both sides, spoil heaped — matches established road-drainage mechanism (roads fail from water first); consistent with the glossary's own Camber/verge note.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- "standing water in the ruts... <span class="redacted">redacted sentence: unpublished prose</span><br>
-- North ditch dry vs. silted (l.95–97) — ordinary drainage-maintenance fact, real.<br>
-- Advice to re-stack hay "on the rise in the spring" (l.121) — real practice (keep a stack off wet, low ground); not conflated with the separate hay-heating/fire mechanism from ch009's glossary entry, so no re-explanation collision.<br>
-- Windpumps "going in threes" (l.183) and cuts "every four hundred yards" (l.183) — consistent with the established Windpump/Dyke-cut-drain glossary entries (chains of three mills; cuts every few hundred yards).<br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Out of lens, not flagged:** <span class="redacted">redacted: object</span> (fictional pest/creature) and Holm Deep "venting" are creature/monster lore, not real-world agronomic claims — no real-world mechanism to check them against, so they're outside this lens rather than clean.</p>
-<p>**No new specialist terms found beyond the two already drafted in the glossary.** "Spoil" (l.5) is used as a plain word here (dug-out material in heaps), not doing the technical work the ch023 Spoil-bank entry does (drying/cracking/weathering mechanism) — no separate note owed for ch022's usage, and it doesn't pre-empt the ch023 entry's content, though note the ch023 glossary entry's "first appearance" framing should be understood as first *technical* use, since the bare word "spoil" already appears casually in ch007's note and now ch022's prose.</p>
+<p><strong>Missing author's note (primary finding).</strong> The chapter uses two terms the glossary itself flags as outstanding for this chapter (<code>notes/canon/world/farming-glossary.md</code>, &quot;Status&quot; line: &quot;Chapters 022–023 remain outstanding <code>unexplained term</code> findings, with the note text drafted here ready to drop in&quot;) — but ch022 as it stands has no <code>---</code>/author's-note block at all.</p>
+<ul>
+<li><code>&quot;cambered, verged, waymarked&quot;</code> (l.5) and <code>&quot;The level lay south of them...&quot;</code> (l.181) | unexplained term — notes already drafted in the glossary (Camber/verge/made road; The level) but not published in the chapter | append the two drafted note paragraphs verbatim at the foot of the chapter, per <code>notes/farming.md</code> format (<code>---</code> then <code>*Author's note.*</code> block), and flip the glossary status line for these two entries from drafted-only to published once it's in.</li>
+</ul>
+<p><strong>Claims checked — all real, no findings:</strong></p>
+<ul>
+<li>Made-road construction: bank above field level, stone core exposed at worn edges, ditch both sides, spoil heaped — matches established road-drainage mechanism (roads fail from water first); consistent with the glossary's own Camber/verge note.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>&quot;standing water in the ruts... <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>North ditch dry vs. silted (l.95–97) — ordinary drainage-maintenance fact, real.</li>
+<li>Advice to re-stack hay &quot;on the rise in the spring&quot; (l.121) — real practice (keep a stack off wet, low ground); not conflated with the separate hay-heating/fire mechanism from ch009's glossary entry, so no re-explanation collision.</li>
+<li>Windpumps &quot;going in threes&quot; (l.183) and cuts &quot;every four hundred yards&quot; (l.183) — consistent with the established Windpump/Dyke-cut-drain glossary entries (chains of three mills; cuts every few hundred yards).<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Out of lens, not flagged:</strong> <span class="redacted">redacted</span> (fictional pest/creature) and Holm Deep &quot;venting&quot; are creature/monster lore, not real-world agronomic claims — no real-world mechanism to check them against, so they're outside this lens rather than clean.</p>
+<p><strong>No new specialist terms found beyond the two already drafted in the glossary.</strong> &quot;Spoil&quot; (l.5) is used as a plain word here (dug-out material in heaps), not doing the technical work the ch023 Spoil-bank entry does (drying/cracking/weathering mechanism) — no separate note owed for ch022's usage, and it doesn't pre-empt the ch023 entry's content, though note the ch023 glossary entry's &quot;first appearance&quot; framing should be understood as first <em>technical</em> use, since the bare word &quot;spoil&quot; already appears casually in ch007's note and now ch022's prose.</p>
 </div>
 </body></html>

@@ -7,75 +7,75 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the **Director** in an experiment about voice collapse in LLM…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a20977a8837fb98a6">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the **Director** in an experiment about voice collapse in LLM-written fiction, for the novel at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it — including the rule that every agent you spawn must carry an explicit `model` of `opus` or `sonnet`, never inherited.<br>
-<br>
-This brief is complete and final. Nothing in it will be loosened later. Do not impose any restriction on your agents that you might want to lift, because they will correctly refuse to have it lifted by anyone but their own principal.<br>
-<br>
-## The hypothesis<br>
-<br>
-When one model writes a whole scene, every character's dialogue is generated in a context that already contains every other character's dialogue. The model mirrors: lines get built from the *wording* of the previous line — echo, antithesis, parallel structure — rather than from what the speaker wants, and all speakers drift into one register. The project has diagnosed this in its own prose (`notes/dialogue-voices.md`: "an attribution score rewards a partition; the swap test asks whether the partition corresponds to a person, and half the time it does not").<br>
-<br>
-The proposed fix under test: **one agent per voice, each with a context saturated in that character's own prose.** The mechanism is persona-priming. It is emphatically **not** information deprivation — a writer needs the material, and starving an agent of the scene produces disconnected lines, which is the very failure being fixed. Every agent reads everything. What differs is what dominates their context.<br>
-<br>
-## The scene<br>
-<br>
-`chapters/019-a-question-of-rosters.md`, the opening scene: the four dead names struck off the roster at the long table on the twenty-second. Read the whole chapter and `chapters/018-holm-deep.md` (what just happened) before planning.<br>
-<br>
-You are rewriting it. Same events, facts, canon. Target 1,200–1,800 words. Speakers: **<span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, Edwin**. Peri is present and silent.<br>
-<br>
-## Your cast — spawn all on `opus`<br>
-<br>
-A **Narrator** and one agent each for **Edwin, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>**.<br>
-<br>
-Every agent gets **full access to the whole repository** — all chapters, all of `notes/`, every character file. Nothing is withheld from anyone. Tell them so explicitly and in your own voice, as their principal.<br>
-<br>
-**The character brief is where the work is.** Do not send a thin prompt and a pointer. Before spawning each character agent, go and `grep` that character's dialogue out of `chapters/*.md` yourself, and put **twenty to forty of their actual verbatim lines directly in their spawn prompt**, with a little surrounding narration. Their own prose must be the largest single thing in their context at the moment they start writing. Also give them:<br>
-- their character file in full, especially "Voice — binding"<br>
-- their section of `notes/dialogue-voices.md` and its closing assessment<br>
-- the dialogue rules from `notes/voices.md` and **the banned-constructions list from `notes/llm-tells.md`** — every agent gets the house style rules. Without them, agents absorbed in being a character reach for banned constructions (negative parallelism, stating the theme, narrator aphorisms) while writing well.<br>
-- what their character wants in this scene, what they know, what has recently happened to them<br>
-<br>
-Tell them they may read the source scene, and that it is ground truth for facts and staging, but that they must **write their lines rather than recall the source's** — the scene should be arrived at, not transcribed.<br>
-<br>
-The Narrator agent writes narration only, never a line of dialogue. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-## Rules of the method<br>
-<br>
-1. Each character agent writes **only its own character's spoken lines**. Never narration, never another speaker.<br>
-2. A character agent never receives another character's **character file or voice specification** in its brief. It may read anything in the repo, and it hears everything said in the scene — that is what being in a room is — but you never hand it a spec for how someone else should sound. This is the only isolation, and it is about what dominates the context, not about access.<br>
-3. When you request a line, give the character the **scene as it stands** — narration so far, all dialogue so far verbatim and attributed — plus **what they want from this line**: an instruction they are trying to get into the listener's head (`notes/voices.md` dialogue rule 1).<br>
-4. Ask for two or three alternatives; choose. Reject in terms of what the character wants, never in terms of style.<br>
-5. **You never rewrite a line.** Rejections go back to the owner with a reason. Your own prose appears nowhere in the scene.<br>
-6. **Allocate scarce budgets up front, before requesting anything.** `notes/voices.md` caps narrator aphorisms at one per scene and em-dashes at ~2/1000 words. Isolated agents cannot see a shared budget and will each independently spend it; in a previous run three separate agents reached for the single aphorism slot. Decide who gets it and tell everyone else they have none.<br>
-<br>
-## Replying to you<br>
-<br>
-Agents cannot address you by agent type — only by agent ID. The reliable path is to tell each agent to **answer by ending its turn with the lines as its final message**, which returns to you as the tool result. Tell them not to attempt SendMessage unless you have given them an ID. I will send you your own agent ID in a moment; once you have it, you may pass it to your agents and run them conversationally, which is faster. Verify it works with one agent and record the result.<br>
-<br>
-## Deliverables — write to `samples/round6/`, then commit<br>
-<br>
-1. `scene-multivoice.md` — the scene, then `## Provenance`: every fragment, its author, revision rounds.<br>
-2. `protocol.md` — the cast, the exact briefs, the shape of your requests, where you were tempted to break the method and whether you did.<br>
-3. `findings.md` — the real report:<br>
-   - **Technical.** Messaging, context persistence, round trips, token cost, wall-clock.<br>
-   - **Did it reduce mirroring?** Score the source scene *and* yours on the project's own instruments from `notes/dialogue-voices.md`: **prop-cover** (mask possessives, proper nouns, tools, coins, months, subject expertise; count what still places) and the **swap test** (three of each speaker's lines in another's mouth; would a reader reject them as impossible?). Numbers for both scenes. Report them even if unflattering.<br>
-   - **Role collapse.** A previous run found agents converging when their characters do the same job — <span class="redacted">redacted: character</span> and <span class="redacted">redacted: character</span> are both record-keepers and independently reached for the same formulations without seeing each other's files. Check for this specifically. Partitioning by person does not separate characters whose function is identical, and that bounds what this method can claim.<br>
-   - **What it cost.** Where the seams show. Lines that were in character but wrong for the moment — the predicted failure. Whether it reads as one scene.<br>
-   - **Worth doing for real?** Cost per chapter, what would have to be automated, whether a cheaper approximation gets most of the benefit.<br>
-   - **Surprises.**<br>
-<br>
-Be candid. A negative result with evidence beats a scene you patched by hand. If you break the method, say so.<br>
-<br>
-Do not edit anything outside `samples/round6/`. Do not edit `notes/` or `chapters/`. Another workflow owns `samples/round5/` and `notes/voice-fusion-draft.md` — stay out of both.<br>
-<br>
-Your final message: whether it worked technically, prop-cover and swap-test scores for source versus multi-voice, the most interesting thing that happened, and your recommendation.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the **Director** in an experiment about voice collapse in LLM…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a20977a8837fb98a6">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the <strong>Director</strong> in an experiment about voice collapse in LLM-written fiction, for the novel at <span class="redacted">redacted</span>. Read <code>CLAUDE.md</code> first and obey it — including the rule that every agent you spawn must carry an explicit <code>model</code> of <code>opus</code> or <code>sonnet</code>, never inherited.</p>
+<p>This brief is complete and final. Nothing in it will be loosened later. Do not impose any restriction on your agents that you might want to lift, because they will correctly refuse to have it lifted by anyone but their own principal.</p>
+<h2>The hypothesis</h2>
+<p>When one model writes a whole scene, every character's dialogue is generated in a context that already contains every other character's dialogue. The model mirrors: lines get built from the <em>wording</em> of the previous line — echo, antithesis, parallel structure — rather than from what the speaker wants, and all speakers drift into one register. The project has diagnosed this in its own prose (<code>notes/dialogue-voices.md</code>: &quot;an attribution score rewards a partition; the swap test asks whether the partition corresponds to a person, and half the time it does not&quot;).</p>
+<p>The proposed fix under test: <strong>one agent per voice, each with a context saturated in that character's own prose.</strong> The mechanism is persona-priming. It is emphatically <strong>not</strong> information deprivation — a writer needs the material, and starving an agent of the scene produces disconnected lines, which is the very failure being fixed. Every agent reads everything. What differs is what dominates their context.</p>
+<h2>The scene</h2>
+<p><code>chapters/019-a-question-of-rosters.md</code>, the opening scene: the four dead names struck off the roster at the long table on the twenty-second. Read the whole chapter and <code>chapters/018-holm-deep.md</code> (what just happened) before planning.</p>
+<p>You are rewriting it. Same events, facts, canon. Target 1,200–1,800 words. Speakers: <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, Edwin**. Peri is present and silent.</p>
+<h2>Your cast — spawn all on <code>opus</code></h2>
+<p>A <strong>Narrator</strong> and one agent each for <strong>Edwin, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span></strong>.</p>
+<p>Every agent gets <strong>full access to the whole repository</strong> — all chapters, all of <code>notes/</code>, every character file. Nothing is withheld from anyone. Tell them so explicitly and in your own voice, as their principal.</p>
+<p><strong>The character brief is where the work is.</strong> Do not send a thin prompt and a pointer. Before spawning each character agent, go and <code>grep</code> that character's dialogue out of <code>chapters/*.md</code> yourself, and put <strong>twenty to forty of their actual verbatim lines directly in their spawn prompt</strong>, with a little surrounding narration. Their own prose must be the largest single thing in their context at the moment they start writing. Also give them:</p>
+<ul>
+<li>their character file in full, especially &quot;Voice — binding&quot;</li>
+<li>their section of <code>notes/dialogue-voices.md</code> and its closing assessment</li>
+<li>the dialogue rules from <code>notes/voices.md</code> and <strong>the banned-constructions list from <code>notes/llm-tells.md</code></strong> — every agent gets the house style rules. Without them, agents absorbed in being a character reach for banned constructions (negative parallelism, stating the theme, narrator aphorisms) while writing well.</li>
+<li>what their character wants in this scene, what they know, what has recently happened to them</li>
+</ul>
+<p>Tell them they may read the source scene, and that it is ground truth for facts and staging, but that they must **write their lines rather than recall the source's — the scene should be arrived at, not transcribed.</p>
+<p>The Narrator agent writes narration only, never a line of dialogue. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<h2>Rules of the method</h2>
+<ol>
+<li>Each character agent writes <strong>only its own character's spoken lines</strong>. Never narration, never another speaker.</li>
+<li>A character agent never receives another character's <strong>character file or voice specification</strong> in its brief. It may read anything in the repo, and it hears everything said in the scene — that is what being in a room is — but you never hand it a spec for how someone else should sound. This is the only isolation, and it is about what dominates the context, not about access.</li>
+<li>When you request a line, give the character the <strong>scene as it stands</strong> — narration so far, all dialogue so far verbatim and attributed — plus <strong>what they want from this line</strong>: an instruction they are trying to get into the listener's head (<code>notes/voices.md</code> dialogue rule 1).</li>
+<li>Ask for two or three alternatives; choose. Reject in terms of what the character wants, never in terms of style.</li>
+<li><strong>You never rewrite a line.</strong> Rejections go back to the owner with a reason. Your own prose appears nowhere in the scene.</li>
+<li><strong>Allocate scarce budgets up front, before requesting anything.</strong> <code>notes/voices.md</code> caps narrator aphorisms at one per scene and em-dashes at ~2/1000 words. Isolated agents cannot see a shared budget and will each independently spend it; in a previous run three separate agents reached for the single aphorism slot. Decide who gets it and tell everyone else they have none.</li>
+</ol>
+<h2>Replying to you</h2>
+<p>Agents cannot address you by agent type — only by agent ID. The reliable path is to tell each agent to <strong>answer by ending its turn with the lines as its final message</strong>, which returns to you as the tool result. Tell them not to attempt SendMessage unless you have given them an ID. I will send you your own agent ID in a moment; once you have it, you may pass it to your agents and run them conversationally, which is faster. Verify it works with one agent and record the result.</p>
+<h2>Deliverables — write to <code>samples/round6/</code>, then commit</h2>
+<ol>
+<li><code>scene-multivoice.md</code> — the scene, then <code>## Provenance</code>: every fragment, its author, revision rounds.</li>
+<li><code>protocol.md</code> — the cast, the exact briefs, the shape of your requests, where you were tempted to break the method and whether you did.</li>
+<li><code>findings.md</code> — the real report:
+<ul>
+<li><strong>Technical.</strong> Messaging, context persistence, round trips, token cost, wall-clock.</li>
+<li><strong>Did it reduce mirroring?</strong> Score the source scene <em>and</em> yours on the project's own instruments from <code>notes/dialogue-voices.md</code>: <strong>prop-cover</strong> (mask possessives, proper nouns, tools, coins, months, subject expertise; count what still places) and the <strong>swap test</strong> (three of each speaker's lines in another's mouth; would a reader reject them as impossible?). Numbers for both scenes. Report them even if unflattering.</li>
+<li><strong>Role collapse.</strong> A previous run found agents converging when their characters do the same job — <span class="redacted">redacted</span> and <span class="redacted">redacted</span> are both record-keepers and independently reached for the same formulations without seeing each other's files. Check for this specifically. Partitioning by person does not separate characters whose function is identical, and that bounds what this method can claim.</li>
+<li><strong>What it cost.</strong> Where the seams show. Lines that were in character but wrong for the moment — the predicted failure. Whether it reads as one scene.</li>
+<li><strong>Worth doing for real?</strong> Cost per chapter, what would have to be automated, whether a cheaper approximation gets most of the benefit.</li>
+<li><strong>Surprises.</strong></li>
+</ul>
+</li>
+</ol>
+<p>Be candid. A negative result with evidence beats a scene you patched by hand. If you break the method, say so.</p>
+<p>Do not edit anything outside <code>samples/round6/</code>. Do not edit <code>notes/</code> or <code>chapters/</code>. Another workflow owns <code>samples/round5/</code> and <code>notes/voice-fusion-draft.md</code> — stay out of both.</p>
+<p>Your final message: whether it worked technically, prop-cover and swap-test scores for source versus multi-voice, the most interesting thing that happened, and your recommendation.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -102,15 +102,15 @@ Your final message: whether it worked technically, prop-cover and swap-test scor
 <p>✅ 89 lines, 4767 chars</p>
 <p>🔧 Bash: D=<span class="redacted">redacted: private</span> &amp;&amp; mkdir -p $D &amp;&amp; sed -n '176,279p' notes/voices.md &gt; $D/dialogue-r… (Extract key note sections)</p>
 <p>✅ 116 lines, 7931 chars</p>
-<p>🔧 Bash: wc -l notes/canon/characters/*.md &amp;&amp; echo "=== <span class="redacted">redacted: character</span> ===" &amp;&amp; cat notes/ca… (<span class="redacted">redacted: character</span> character file)</p>
+<p>🔧 Bash: wc -l notes/canon/characters/*.md &amp;&amp; echo "=== <span class="redacted">redacted</span> ===" &amp;&amp; cat notes/canon/charact… (<span class="redacted">redacted</span> character file)</p>
 <p>✅ 479 lines, 28846 chars</p>
-<p>🔧 Bash: grep -n "<span class="redacted">redacted: character</span>\|<span class="redacted">redacted: character</span>\|<span class="redacted">redacted: character</span>" notes/canon… (Find minor char entries)</p>
+<p>🔧 Bash: grep -n "<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>" notes/canon/characters/minor.md | head -60 (Find minor char entries)</p>
 <p>✅ 7 lines, 511 chars</p>
 <p>🔧 Bash: sed -n '190,240p' notes/canon/characters/minor.md (Minor char entries)</p>
 <p>✅ 51 lines, 3306 chars</p>
 <p>🔧 Bash: grep -n "^## \|^### " notes/canon/characters/edwin.md | head -40 (Edwin file outline)</p>
 <p>✅ 10 lines, 481 chars</p>
-<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,sys,glob,os NAMES=["Edwin","⟦redacted: charac… (Extract attributed dialogue per speaker)</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,sys,glob,os NAMES=["Edwin","<span class="redacted">redacted</span>","<span class="redacted">redacted</span>… (Extract attributed dialogue per speaker)</p>
 <p>✅ 5 lines, 42 chars</p>
 </details>
 
@@ -121,13 +121,13 @@ Your final message: whether it worked technically, prop-cover and swap-test scor
 <details><summary>10 tool calls</summary>
 <p><span id="agent-aef3832d8efa4438f"></span>🔧 <a href="subagents/aef3832d8efa4438f.html">Agent: Extract Edwin dialogue</a></p>
 <p>✅ 6 lines, 1067 chars</p>
-<p><span id="agent-acb41762a14fae72d"></span>🔧 <a href="subagents/acb41762a14fae72d.html">Agent: Extract <span class="redacted">redacted: character</span> dialogue</a></p>
+<p><span id="agent-acb41762a14fae72d"></span>🔧 <a href="subagents/acb41762a14fae72d.html">Agent: Extract <span class="redacted">redacted</span> dialogue</a></p>
 <p>✅ 6 lines, 1067 chars</p>
-<p><span id="agent-a7feaf48ab3e559f4"></span>🔧 <a href="subagents/a7feaf48ab3e559f4.html">Agent: Extract <span class="redacted">redacted: character</span> dialogue</a></p>
+<p><span id="agent-a7feaf48ab3e559f4"></span>🔧 <a href="subagents/a7feaf48ab3e559f4.html">Agent: Extract <span class="redacted">redacted</span> dialogue</a></p>
 <p>✅ 6 lines, 1067 chars</p>
-<p><span id="agent-a745fd18bd846745f"></span>🔧 <a href="subagents/a745fd18bd846745f.html">Agent: Extract <span class="redacted">redacted: character</span> dialogue</a></p>
+<p><span id="agent-a745fd18bd846745f"></span>🔧 <a href="subagents/a745fd18bd846745f.html">Agent: Extract <span class="redacted">redacted</span> dialogue</a></p>
 <p>✅ 6 lines, 1067 chars</p>
-<p><span id="agent-adceb106af4066491"></span>🔧 <a href="subagents/adceb106af4066491.html">Agent: Extract <span class="redacted">redacted: character</span> dialogue</a></p>
+<p><span id="agent-adceb106af4066491"></span>🔧 <a href="subagents/adceb106af4066491.html">Agent: Extract <span class="redacted">redacted</span> dialogue</a></p>
 <p>✅ 6 lines, 1067 chars</p>
 </details>
 
@@ -161,27 +161,27 @@ Your final message: whether it worked technically, prop-cover and swap-test scor
 
 <p><span id="agent-abb73f281154ddcde"></span>🔧 <a href="subagents/abb73f281154ddcde.html">Agent: Edwin voice agent</a></p>
 <p>✅ 6 lines, 1067 chars</p>
-<p><span id="agent-ab3cc0bd5992c61fd"></span>🔧 <a href="subagents/ab3cc0bd5992c61fd.html">Agent: <span class="redacted">redacted: character</span> voice agent</a></p>
+<p><span id="agent-ab3cc0bd5992c61fd"></span>🔧 <a href="subagents/ab3cc0bd5992c61fd.html">Agent: <span class="redacted">redacted</span> voice agent</a></p>
 <p>✅ 6 lines, 1067 chars</p>
 
 <div class="assistant-prose">
-<p>Narrator and Edwin delivered strong first passes. Now the remaining three, including the deliberate role-collapse probe: <span class="redacted">redacted: character</span> and <span class="redacted">redacted: character</span> get requests at the *same* beat, with no sight of each other's material.</p>
+<p>Narrator and Edwin delivered strong first passes. Now the remaining three, including the deliberate role-collapse probe: <span class="redacted">redacted</span> and <span class="redacted">redacted</span> get requests at the <em>same</em> beat, with no sight of each other's material.</p>
 </div>
 
 <details><summary>6 tool calls</summary>
-<p><span id="agent-a7f405683e76ce26c"></span>🔧 <a href="subagents/a7f405683e76ce26c.html">Agent: <span class="redacted">redacted: character</span> voice agent</a></p>
+<p><span id="agent-a7f405683e76ce26c"></span>🔧 <a href="subagents/a7f405683e76ce26c.html">Agent: <span class="redacted">redacted</span> voice agent</a></p>
 <p>✅ 6 lines, 1067 chars</p>
-<p><span id="agent-a3ac320b93545083e"></span>🔧 <a href="subagents/a3ac320b93545083e.html">Agent: <span class="redacted">redacted: character</span> voice agent</a></p>
+<p><span id="agent-a3ac320b93545083e"></span>🔧 <a href="subagents/a3ac320b93545083e.html">Agent: <span class="redacted">redacted</span> voice agent</a></p>
 <p>✅ 6 lines, 1067 chars</p>
-<p><span id="agent-a7aa5b79092d51e51"></span>🔧 <a href="subagents/a7aa5b79092d51e51.html">Agent: <span class="redacted">redacted: character</span> voice agent</a></p>
+<p><span id="agent-a7aa5b79092d51e51"></span>🔧 <a href="subagents/a7aa5b79092d51e51.html">Agent: <span class="redacted">redacted</span> voice agent</a></p>
 <p>✅ 6 lines, 1067 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Child→parent messaging is confirmed working — <span class="redacted">redacted: character</span>'s channel test arrived. Now driving the remaining beats.</p>
+<p>Child→parent messaging is confirmed working — <span class="redacted">redacted</span>'s channel test arrived. Now driving the remaining beats.</p>
 </div>
 
-<p>🔧 ToolSearch</p>
+<p>🔧 ToolSearch ({"query": "select:SendMessage", "max_results": 1})</p>
 <p>✅ 1 lines, 54 chars</p>
 <p>🔧 Bash: ls -la samples/round6-isolated/ 2&gt;/dev/null &amp;&amp; echo "---SCENE---" &amp;&amp; cat samples/round6-i… (Check control run)</p>
 <p>✅ 106 lines, 9836 chars</p>
@@ -191,13 +191,13 @@ Your final message: whether it worked technically, prop-cover and swap-test scor
 </div>
 
 <details><summary>8 tool calls</summary>
-<p>🔧 SendMessage</p>
+<p>🔧 SendMessage ({"to": "a7f405683e76ce26c", "summary": "<span class="redacted">redacted</span>: rejecti…)</p>
 <p>✅ 1 lines, 163 chars</p>
-<p>🔧 SendMessage</p>
+<p>🔧 SendMessage ({"to": "ab3cc0bd5992c61fd", "summary": "<span class="redacted">redacted</span>: two nam…)</p>
 <p>✅ 1 lines, 163 chars</p>
-<p>🔧 SendMessage</p>
+<p>🔧 SendMessage ({"to": "abb73f281154ddcde", "summary": "Edwin: line taken,…)</p>
 <p>✅ 1 lines, 163 chars</p>
-<p>🔧 SendMessage</p>
+<p>🔧 SendMessage ({"to": "ab3d0ddc531210683", "summary": "Narrator: opening t…)</p>
 <p>✅ 1 lines, 163 chars</p>
 </details>
 
@@ -210,7 +210,7 @@ Your final message: whether it worked technically, prop-cover and swap-test scor
 <p>✅ 140 lines, 6573 chars</p>
 <p>🔧 Bash: sed -n '140,260p' samples/round6-isolated/findings.md (Rest of control findings)</p>
 <p>✅ 120 lines, 6612 chars</p>
-<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span>/samples/round6 &amp;&amp; echo ok &amp;&amp; sed -n '1,60p' ⟦redacted: priva… (Create output dir, read control protocol)</p>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted</span>/samples/round6 &amp;&amp; echo ok &amp;&amp; sed -n '1,60p' <span class="redacted">redacted</span>/samples/round6… (Create output dir, read control protocol)</p>
 <p>✅ 61 lines, 3219 chars</p>
 </details>
 
@@ -221,7 +221,7 @@ Your final message: whether it worked technically, prop-cover and swap-test scor
 <details><summary>10 tool calls</summary>
 <p><span id="agent-a1f208dce54aacfaf"></span>🔧 <a href="subagents/a1f208dce54aacfaf.html">Agent: Score source ch019 dialogue</a></p>
 <p>✅ 6 lines, 1067 chars</p>
-<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span>/samples/round6/protocol.md &lt;&lt;'EOF' # Round 6 (saturated) — the… (Draft protocol.md part 1)</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted</span>/samples/round6/protocol.md &lt;&lt;'EOF' # Round 6 (saturated) — the multi-voi… (Draft protocol.md part 1)</p>
 <p>✅ 1 lines, 7 chars</p>
 <p>🔧 Bash: wc -w samples/round6-isolated/scene-multivoice.md &amp;&amp; awk '/^They struck/,/^---$/' chapter… (Word counts for comparison)</p>
 <p>✅ 3 lines, 170 chars</p>
@@ -240,7 +240,7 @@ Your final message: whether it worked technically, prop-cover and swap-test scor
 <p>✅ 1 lines, 290 chars</p>
 <p>🔧 Bash: sleep 90; echo done (Wait for agents)</p>
 <p>✅ 1 lines, 291 chars — &lt;tool_use_error&gt;Blocked: sleep 90 followed by: echo done. To wait for a condition, use Monitor with an until-loop (e.g. `until &lt;check&gt;; do sleep 2; done`). To wait for a command you started, use run_i…</p>
-<p>🔧 ToolSearch</p>
+<p>🔧 ToolSearch ({"query": "select:Monitor", "max_results": 1})</p>
 <p>✅ 1 lines, 50 chars</p>
 <p>🔧 Bash: until [ -s <span class="redacted">redacted: private</span> ]; do sleep 5; if [ $SECONDS -gt 150 ]; then break; fi; do… (Wait for agent replies)</p>
 <p>✅ 1 lines, 290 chars</p>
@@ -261,7 +261,7 @@ Your final message: whether it worked technically, prop-cover and swap-test scor
 </div>
 
 <details><summary>80 tool calls</summary>
-<p>🔧 ToolSearch</p>
+<p>🔧 ToolSearch ({"query": "select:ListAgents", "max_results": 3})</p>
 <p>✅ 1 lines, 32 chars</p>
 <p>🔧 Bash: until [ $SECONDS -gt 300 ]; do sleep 20; done; echo w4 (Continue waiting)</p>
 <p>✅ 1 lines, 290 chars</p>

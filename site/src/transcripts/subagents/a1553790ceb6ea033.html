@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,24 +7,37 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a1553790ceb6ea033">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 29-. Read it in full.<br>
-LENS: closers. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and extract ONLY the rules with "tier": "semantic" and "lens": "closers". Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a1553790ceb6ea033">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 29-. Read it in full.<br />
+LENS: closers. Read <span class="redacted">redacted</span>/tools/lint/rules.json and extract ONLY the rules with &quot;tier&quot;: &quot;semantic&quot; and &quot;lens&quot;: &quot;closers&quot;. Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
 <details><summary>6 tool calls</summary>
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -maxdepth 1 -name "29-*.md" -type f (Find the scene file starting with 29-)</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes -maxdepth 1 -name "29-*.md" -type f (Find the scene file starting with 29-)</p>
 <p>🔧 Read tools/lint/rules.json</p>
-<p>✅ 1 lines, 85 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/29-birds-go-around-a-field.md</p>
+<p>✅ 1 lines, 85 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/29-birds-go-around-a-field.md</p>
 <p>✅ 1196 lines, 51733 chars</p>
 <p>🔧 Read tools/lint/rules.json</p>
 <p>✅ 1200 lines, 67490 chars</p>
@@ -55,29 +68,29 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>Let me check the scene carefully. Reading sentence by sentence for potential violations:</p>
 </div>
 
-<p>🔧 Bash: wc -w <span class="redacted">redacted: private</span>/draft/book-01/scenes/29-birds-go-around-a-field.md (Get word count of the scene)</p>
-<p>✅ 1 lines, 94 chars —     1209 <span class="redacted">redacted: private</span>/draft/book-01/scenes/29-birds-go-around-a-field.md</p>
+<p>🔧 Bash: wc -w <span class="redacted">redacted</span>/draft/book-01/scenes/29-birds-go-around-a-field.md (Get word count of the scene)</p>
+<p>✅ 1 lines, 94 chars —     1209 <span class="redacted">redacted</span>/draft/book-01/scenes/29-birds-go-around-a-field.md</p>
 
 <div class="assistant-prose">
 <p>Scene is 1,209 words. For fragment-closer-budget (max 1 per 1,800 words), the proportional budget is 0.67 fragments. Let me check for violations systematically:</p>
-<p>**Checking fragment-closer-budget (one-word paragraph / three-word beat):**</p>
-<p>Looking at line 39-43:<br>
-"...Supper arrived without being asked for. / It was fowl. / Peri got the notebook out, found the guess column, and marked it, and said nothing at all."</p>
-<p>"It was fowl." is a 3-word beat. It comes after a longer, complex sentence and creates emphasis through brevity and contrast. In a 1,209-word scene with a budget of ~0.67 fragments, this exceeds the allowed frequency.</p>
-<p>**Checking implication-stopped-short:**</p>
-<p>Line 43: "Peri got the notebook out, found the guess column, and marked it, and said nothing at all." - The implication of marking something is cashed out immediately in the next speech (lines 45-46) where Edwin explains the hearsay issue. Context licenses it.</p>
-<p>**Checking tidy-button-ending:**</p>
-<p>Final line: "He paid for both suppers." - This is a plain action/decision, not a resolving button. Rule explicitly allows endings on plain verdicts.</p>
-<p>**Checking cute-cryptic-closer:**</p>
-<p>"He paid for both suppers." lands on a clear fact. No decoding needed.</p>
-<p>**Checking theme-stated:**</p>
+<p><strong>Checking fragment-closer-budget (one-word paragraph / three-word beat):</strong></p>
+<p>Looking at line 39-43:<br />
+&quot;...Supper arrived without being asked for. / It was fowl. / Peri got the notebook out, found the guess column, and marked it, and said nothing at all.&quot;</p>
+<p>&quot;It was fowl.&quot; is a 3-word beat. It comes after a longer, complex sentence and creates emphasis through brevity and contrast. In a 1,209-word scene with a budget of ~0.67 fragments, this exceeds the allowed frequency.</p>
+<p><strong>Checking implication-stopped-short:</strong></p>
+<p>Line 43: &quot;Peri got the notebook out, found the guess column, and marked it, and said nothing at all.&quot; - The implication of marking something is cashed out immediately in the next speech (lines 45-46) where Edwin explains the hearsay issue. Context licenses it.</p>
+<p><strong>Checking tidy-button-ending:</strong></p>
+<p>Final line: &quot;He paid for both suppers.&quot; - This is a plain action/decision, not a resolving button. Rule explicitly allows endings on plain verdicts.</p>
+<p><strong>Checking cute-cryptic-closer:</strong></p>
+<p>&quot;He paid for both suppers.&quot; lands on a clear fact. No decoding needed.</p>
+<p><strong>Checking theme-stated:</strong></p>
 <p>No sentence explicitly states what the story is about (mortality, succession, value of work). The dialogue is about records and guessing, but not meta-thematic.</p>
-<p>**Checking announce-before-deliver:**</p>
-<p>No bare naming fragments (like "Fate magic.") placed before delivery sentences.</p>
-<p>**Checking obliqueness-unpaid:**</p>
-<p>All oblique moments are clarified: "Quiet how?" (line 29) prompts explanation; "Why aren't we going in?" (line 33) is answered with three reasons.</p>
+<p><strong>Checking announce-before-deliver:</strong></p>
+<p>No bare naming fragments (like &quot;Fate magic.&quot;) placed before delivery sentences.</p>
+<p><strong>Checking obliqueness-unpaid:</strong></p>
+<p>All oblique moments are clarified: &quot;Quiet how?&quot; (line 29) prompts explanation; &quot;Why aren't we going in?&quot; (line 33) is answered with three reasons.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": [{"rule_id": "fragment-closer-budget", "quote"…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a9fbf480a3aa53a95">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="narration", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/10-more-work-than-the-day-needed.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a9fbf480a3aa53a95">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;narration&quot;, and scope includes &quot;scene&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/scenes/10-more-work-than-the-day-needed.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -32,32 +45,38 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 
 <div class="assistant-prose">
 <p>Now let me systematically check the scene against the selected rules.</p>
-<p>Based on the rules file, the rules with tier=="semantic", lens=="narration", and scope includes "scene" are:</p>
-<p>1. generalising-clause-budget<br>
-2. windup-tag-budget<br>
-3. wants-gerund-budget<br>
-4. prose-not-at-rest<br>
-5. unlocated-narration<br>
-6. motive-off-page<br>
-7. viewpoint-overreach<br>
-8. nominalised-absence<br>
-9. description-list<br>
-10. rest-register-misplaced<br>
-11. unearned-authority<br>
-12. likeability-drift</p>
+<p>Based on the rules file, the rules with tier==&quot;semantic&quot;, lens==&quot;narration&quot;, and scope includes &quot;scene&quot; are:</p>
+<ol>
+<li>generalising-clause-budget</li>
+<li>windup-tag-budget</li>
+<li>wants-gerund-budget</li>
+<li>prose-not-at-rest</li>
+<li>unlocated-narration</li>
+<li>motive-off-page</li>
+<li>viewpoint-overreach</li>
+<li>nominalised-absence</li>
+<li>description-list</li>
+<li>rest-register-misplaced</li>
+<li>unearned-authority</li>
+<li>likeability-drift</li>
+</ol>
 <p>Let me carefully examine the scene for violations:</p>
-<p>**wants-gerund-budget** (rule: "never as narration's own voice for tasks the narrator is describing — only for characters who'd say it"):<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-  - Context: This is narration describing Edwin's task. The rule explicitly prohibits narration using "wants doing" for tasks being described.<br>
-  - Check neighbors: Line 6 ("He worked through it at the ledger desk, parish by parish, checking the orchard entries against thirty years of his own records.") and line 8 ("He did it today.") are plain narration of action. The "wanted doing" phrase stands as narration's own voice evaluating the work.</p>
-<p>All other rules check clear:<br>
-- **nominalised-absence**: "The knot behind his breastbone did nothing" — "knot" is a concrete metaphor, not a nominalised absence/gerund/'-ness' noun per the rule's specific categories.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- **prose-not-at-rest**: The scene mixes plain load-bearing sentences with shaped ones appropriately.<br>
-- **unlocated-narration**: Knowledge channels are clear (Edwin sent word, word came back; the slater's list; Edwin's weather expertise).<br>
-- Other rules: No violations found for the remaining eight rules.</p>
+<p><strong>wants-gerund-budget</strong> (rule: &quot;never as narration's own voice for tasks the narrator is describing — only for characters who'd say it&quot;):<br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Context: This is narration describing Edwin's task. The rule explicitly prohibits narration using &quot;wants doing&quot; for tasks being described.</li>
+<li>Check neighbors: Line 6 (&quot;He worked through it at the ledger desk, parish by parish, checking the orchard entries against thirty years of his own records.&quot;) and line 8 (&quot;He did it today.&quot;) are plain narration of action. The &quot;wanted doing&quot; phrase stands as narration's own voice evaluating the work.</li>
+</ul>
+<p>All other rules check clear:</p>
+<ul>
+<li><strong>nominalised-absence</strong>: &quot;The knot behind his breastbone did nothing&quot; — &quot;knot&quot; is a concrete metaphor, not a nominalised absence/gerund/'-ness' noun per the rule's specific categories.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>prose-not-at-rest</strong>: The scene mixes plain load-bearing sentences with shaped ones appropriately.</li>
+<li><strong>unlocated-narration</strong>: Knowledge channels are clear (Edwin sent word, word came back; the slater's list; Edwin's weather expertise).</li>
+<li>Other rules: No violations found for the remaining eight rules.</li>
+</ul>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput (<span class="redacted">redacted sentence: unpublished prose</span>)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

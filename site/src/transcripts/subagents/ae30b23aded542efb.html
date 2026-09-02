@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ae30b23aded542efb">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="world", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/08-what-youre-standing-in.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ae30b23aded542efb">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;world&quot;, and scope includes &quot;scene&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/scenes/08-what-youre-standing-in.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -31,26 +44,42 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 </details>
 
 <div class="assistant-prose">
-<p>Now I'll analyze the scene against the selected rules. Let me identify the rules where tier=="semantic", lens=="world", and scope includes "scene":</p>
-<p>1. **worldbuilding-to-save-a-line** - Inventing canon to justify a line<br>
-2. **tech-level-anachronism** - Objects/practices postdating pre-industrial tech level<br>
-3. **canon-scale-contradiction** - Numbers contradicting established canon<br>
-4. **system-terminology** - Wrong nouns for established world terms<br>
-5. **italics-misplaced** - Italics in wrong places (note: no italics in this scene)<br>
-6. ~~contamination-overlap~~ - SKIPPED per instructions</p>
+<p>Now I'll analyze the scene against the selected rules. Let me identify the rules where tier==&quot;semantic&quot;, lens==&quot;world&quot;, and scope includes &quot;scene&quot;:</p>
+<ol>
+<li><strong>worldbuilding-to-save-a-line</strong> - Inventing canon to justify a line</li>
+<li><strong>tech-level-anachronism</strong> - Objects/practices postdating pre-industrial tech level</li>
+<li><strong>canon-scale-contradiction</strong> - Numbers contradicting established canon</li>
+<li><strong>system-terminology</strong> - Wrong nouns for established world terms</li>
+<li><strong>italics-misplaced</strong> - Italics in wrong places (note: no italics in this scene)</li>
+<li>~~contamination-overlap~~ - SKIPPED per instructions</li>
+</ol>
 <p>Now I'll examine the scene systematically:</p>
-<p>**Potential candidates to investigate:**</p>
-<p>1. Looking for anachronisms: "biscuit" appears twice. The rule flags "biscuit tin" as anachronistic (19th century), but plain biscuits are period-appropriate hardened bread products found in pre-industrial contexts. Not a violation.</p>
-<p>2. Looking for scale contradictions: <br>
-   - "Three hundred years ago that was the ordinary running of the world" — this is a duration describing a time period, not an age-marker bound to Edwin. The rule specifically states "Only flag a number bound to a person by an age-marker ("he was", "aged", "years old"); durations of work or habit are not ages."<br>
-   - "Eleven years, and Edwin still could not read her when she did that" — "eleven years" is a duration of their relationship, not an age-marker.<br>
-   - No violations found.</p>
-<p>3. Looking for system terminology errors: "class," "five spells," "compost" are all used correctly for established world terms.</p>
-<p>4. No italics present in the scene.</p>
-<p>5. No evidence of worldbuilding invented to save a line.</p>
+<p><strong>Potential candidates to investigate:</strong></p>
+<ol>
+<li>
+<p>Looking for anachronisms: &quot;biscuit&quot; appears twice. The rule flags &quot;biscuit tin&quot; as anachronistic (19th century), but plain biscuits are period-appropriate hardened bread products found in pre-industrial contexts. Not a violation.</p>
+</li>
+<li>
+<p>Looking for scale contradictions:</p>
+<ul>
+<li>&quot;Three hundred years ago that was the ordinary running of the world&quot; — this is a duration describing a time period, not an age-marker bound to Edwin. The rule specifically states &quot;Only flag a number bound to a person by an age-marker (&quot;he was&quot;, &quot;aged&quot;, &quot;years old&quot;); durations of work or habit are not ages.&quot;</li>
+<li>&quot;Eleven years, and Edwin still could not read her when she did that&quot; — &quot;eleven years&quot; is a duration of their relationship, not an age-marker.</li>
+<li>No violations found.</li>
+</ul>
+</li>
+<li>
+<p>Looking for system terminology errors: &quot;class,&quot; &quot;five spells,&quot; &quot;compost&quot; are all used correctly for established world terms.</p>
+</li>
+<li>
+<p>No italics present in the scene.</p>
+</li>
+<li>
+<p>No evidence of worldbuilding invented to save a line.</p>
+</li>
+</ol>
 <p>After careful examination of the scene against all selected world-lens rules, I find no violations.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

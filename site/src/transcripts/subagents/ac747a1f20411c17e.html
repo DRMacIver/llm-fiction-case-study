@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,17 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ac747a1f20411c17e">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 32-. Read it in full.<br>
-LENS: dialogue. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and extract ONLY the rules with "tier": "semantic" and "lens": "dialogue". Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ac747a1f20411c17e">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 32-. Read it in full.<br />
+LENS: dialogue. Read <span class="redacted">redacted</span>/tools/lint/rules.json and extract ONLY the rules with &quot;tier&quot;: &quot;semantic&quot; and &quot;lens&quot;: &quot;dialogue&quot;. Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
@@ -26,11 +39,11 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 </div>
 
 <details><summary>8 tool calls</summary>
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -name "32-*.md" -type f (Find the scene 32 file)</p>
-<p>✅ 1 lines, 84 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/32-nobodys-going-to-laugh.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes -name "32-*.md" -type f (Find the scene 32 file)</p>
+<p>✅ 1 lines, 84 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/32-nobodys-going-to-laugh.md</p>
 <p>🔧 Read tools/lint/rules.json</p>
 <p>✅ 1196 lines, 51733 chars</p>
-<p>🔧 Bash: grep -n '"lens": "dialogue"' <span class="redacted">redacted: private</span>/tools/lint/rules.json | head -20 (Find dialogue lens rules)</p>
+<p>🔧 Bash: grep -n '"lens": "dialogue"' <span class="redacted">redacted</span>/tools/lint/rules.json | head -20 (Find dialogue lens rules)</p>
 <p>✅ 12 lines, 336 chars</p>
 <p>🔧 Read tools/lint/rules.json</p>
 <p>✅ 1200 lines, 67490 chars</p>
@@ -52,22 +65,22 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 
 <div class="assistant-prose">
 <p>Now I'll check each rule against the scene carefully, reading full context around any potential violations:</p>
-<p>**1. lossy-conversation-budget** - Scene has clean listening throughout. ~1,100 words means budget is ~0.5 instances (acceptable at 0).</p>
-<p>**2. short-mode-requirement** - Multiple short lines present: "May I ask something?" (4w), "I have" (2w), "And since?" (2w). Would need character files to fully assess required constructions, but short mode is present.</p>
-<p>**3. cryptic-dialogue** - All exchanges clear: questions get direct answers with reasons given on the page. Peri's question about who's been in the field is explicitly answered; Edwin's explanation of the ring's growth is clear.</p>
-<p>**4. maxim-capped-speech** - Checking how dialogue turns close. Reading Tess's long turn (lines 37-41) with full context:</p>
-<p>Tess explains her experience factually: "I walked to the middle ring and stood in the middle of it and counted to a hundred. Nothing happened. It's a field. The grass is good. There was no cold, and nothing looked at me, and I felt nothing at all except foolish. I walked out again, and nothing has happened to me since, and that was nine weeks ago, **and every time I say so people look at me as if I've said something wicked.**"</p>
+<p><strong>1. lossy-conversation-budget</strong> - Scene has clean listening throughout. ~1,100 words means budget is ~0.5 instances (acceptable at 0).</p>
+<p><strong>2. short-mode-requirement</strong> - Multiple short lines present: &quot;May I ask something?&quot; (4w), &quot;I have&quot; (2w), &quot;And since?&quot; (2w). Would need character files to fully assess required constructions, but short mode is present.</p>
+<p><strong>3. cryptic-dialogue</strong> - All exchanges clear: questions get direct answers with reasons given on the page. Peri's question about who's been in the field is explicitly answered; Edwin's explanation of the ring's growth is clear.</p>
+<p><strong>4. maxim-capped-speech</strong> - Checking how dialogue turns close. Reading Tess's long turn (lines 37-41) with full context:</p>
+<p>Tess explains her experience factually: &quot;I walked to the middle ring and stood in the middle of it and counted to a hundred. Nothing happened. It's a field. The grass is good. There was no cold, and nothing looked at me, and I felt nothing at all except foolish. I walked out again, and nothing has happened to me since, and that was nine weeks ago, <strong>and every time I say so people look at me as if I've said something wicked.</strong>&quot;</p>
 <p>This closes on a portable, maxim-shaped observation about social judgment—generalized and detachable from the immediate moment. The rule requires dialogue to end functionally (instruction, fact, question, or nothing), not on epigrams or portable lines.</p>
-<p>**5. uniform-dialogue-competence** - Variation present: Tess is functional; Sennet is defensive; alehouse keeper is articulate; Peri is direct; Shawled woman is practical. Cast is differentiated.</p>
-<p>**6. line-without-want** - All major lines have clear wants: permission ("May I ask?"), information ("Who else has been in it?"), answers, reassurance.</p>
-<p>**7. unanswered-question** - Practical questions answered directly: "who has been in the field?" → "I have" / "I have been in it" with explanations.</p>
-<p>**8. reflexive-echo** - No verbatim repetitions of previous lines.</p>
-<p>**9. mirror-retort** - No reused sentence frames with swapped endings.</p>
-<p>**10. speaker-grammar** - Variation evident across speakers (without full character files, but no obvious uniformity of deadpan competence).</p>
-<p>**11. character-too-quick** - Peri asks questions and builds from what she hears; doesn't reason out conclusions she hasn't been given pieces for.</p>
-<p>**12. dialect-grammar** - Plain modern English throughout. Months like "Weedmonth" are world-specific, not dialect. No nonstandard verb forms or folksy archaism.</p>
+<p><strong>5. uniform-dialogue-competence</strong> - Variation present: Tess is functional; Sennet is defensive; alehouse keeper is articulate; Peri is direct; Shawled woman is practical. Cast is differentiated.</p>
+<p><strong>6. line-without-want</strong> - All major lines have clear wants: permission (&quot;May I ask?&quot;), information (&quot;Who else has been in it?&quot;), answers, reassurance.</p>
+<p><strong>7. unanswered-question</strong> - Practical questions answered directly: &quot;who has been in the field?&quot; → &quot;I have&quot; / &quot;I have been in it&quot; with explanations.</p>
+<p><strong>8. reflexive-echo</strong> - No verbatim repetitions of previous lines.</p>
+<p><strong>9. mirror-retort</strong> - No reused sentence frames with swapped endings.</p>
+<p><strong>10. speaker-grammar</strong> - Variation evident across speakers (without full character files, but no obvious uniformity of deadpan competence).</p>
+<p><strong>11. character-too-quick</strong> - Peri asks questions and builds from what she hears; doesn't reason out conclusions she hasn't been given pieces for.</p>
+<p><strong>12. dialect-grammar</strong> - Plain modern English throughout. Months like &quot;Weedmonth&quot; are world-specific, not dialect. No nonstandard verb forms or folksy archaism.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": [{"rule_id": "maxim-capped-speech", "quote": "…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

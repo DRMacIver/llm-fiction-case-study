@@ -7,67 +7,79 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a89c05e539128818e">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and <span class="redacted">redacted: private</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md. Also read <span class="redacted">redacted: private</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope "scene") the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.<br>
-<br>
-Candidates:<br>
-[<br>
- {<br>
-  "rule_id": "maxim-capped-speech",<br>
-  "quote": "It's practically how you know.",<br>
-  "reason": "Peri ends her speech on a portable, abstract observation; she shouldn't deliver aphorisms that way"<br>
- },<br>
- {<br>
-  "rule_id": "maxim-capped-speech",<br>
-  "quote": "What you have found, Miss Millbrook, is a farmer.",<br>
-  "reason": "Edwin's definitive maxim-ending statement; first of two such endings in the scene"<br>
- },<br>
- {<br>
-  "rule_id": "maxim-capped-speech",<br>
-  "quote": "*Saving the world* doesn't describe anything I've done.",<br>
-  "reason": "Edwin's second maxim-ending in one scene, exceeding the one-per-scene budget"<br>
- },<br>
- {<br>
-  "rule_id": "reflexive-echo",<br>
-  "quote": "A farmer,",<br>
-  "reason": "Repeats the word 'farmer' immediately after Edwin's line; echo may be unnecessary beat rather than motivated speech act"<br>
- },<br>
- {<br>
-  "rule_id": "character-too-quick",<br>
-  "quote": "He grows up to be the dark lord. Dark lords are always pale. Everyone starts as a child, and nobody knows until - that's how it goes. And the man in the robe is some sort of cultist. I don't know the order yet.",<br>
-  "reason": "Peri constructs complex dark-lord narrative from two minimal pieces of evidence without foundation; should work things out slowly, not assemble templates fast"<br>
- },<br>
- {<br>
-  "rule_id": "character-too-quick",<br>
-  "quote": "And every master in every book says what you just said, before he takes the hero on.",<br>
-  "reason": "Peri too quickly reasons from Edwin's practical refusal backwards to fit her narrative; imposes hero-story template on plain statement"<br>
- },<br>
- {<br>
-  "rule_id": "description-list",<br>
-  "quote": "Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said *beans*. On the wall, in a frame, a sampler with a wheat sheaf on it that a farmwife had worked for him one winter.",<br>
-  "reason": "Lists multiple noticed things (herbs, dresser, catalogues, jars, sampler) instead of one noticed thing bound to action; rule forbids lists."<br>
- },<br>
- {<br>
-  "rule_id": "unearned-authority",<br>
-  "quote": "You get another question tomorrow. Don't ask it *who*. You've done *who*. Ask it *what*.",<br>
-  "reason": "Edwin issues directives about Peri's magical practice without explicit agreement from her to be commanded, despite neighboring context showing pedagogical intent."<br>
- },<br>
- {<br>
-  "rule_id": "likeability-drift",<br>
-  "quote": "She looked at him with real patience, as at a man who had not done the reading.",<br>
-  "reason": "Line carries slightly condescending tone toward Edwin (looking at him as one who is unprepared/inferior), risking making Peri seem less likeable."<br>
- },<br>
- {<br>
-  "rule_id": "tech-level-anachronism",<br>
-  "quote": "A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said *beans*.",<br>
-  "reason": "\"reagents\" is a chemistry term postdating pre-industrial technology level"<br>
- }<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a89c05e539128818e">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted</span>/tools/lint/rules.json and <span class="redacted">redacted</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md. Also read <span class="redacted">redacted</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope &quot;scene&quot;) the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.</p>
+<p>Candidates:<br />
+[<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;It's practically how you know.&quot;,<br />
+&quot;reason&quot;: &quot;Peri ends her speech on a portable, abstract observation; she shouldn't deliver aphorisms that way&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;What you have found, Miss Millbrook, is a farmer.&quot;,<br />
+&quot;reason&quot;: &quot;Edwin's definitive maxim-ending statement; first of two such endings in the scene&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;<em>Saving the world</em> doesn't describe anything I've done.&quot;,<br />
+&quot;reason&quot;: &quot;Edwin's second maxim-ending in one scene, exceeding the one-per-scene budget&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;reflexive-echo&quot;,<br />
+&quot;quote&quot;: &quot;A farmer,&quot;,<br />
+&quot;reason&quot;: &quot;Repeats the word 'farmer' immediately after Edwin's line; echo may be unnecessary beat rather than motivated speech act&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;character-too-quick&quot;,<br />
+&quot;quote&quot;: &quot;He grows up to be the dark lord. Dark lords are always pale. Everyone starts as a child, and nobody knows until - that's how it goes. And the man in the robe is some sort of cultist. I don't know the order yet.&quot;,<br />
+&quot;reason&quot;: &quot;Peri constructs complex dark-lord narrative from two minimal pieces of evidence without foundation; should work things out slowly, not assemble templates fast&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;character-too-quick&quot;,<br />
+&quot;quote&quot;: &quot;And every master in every book says what you just said, before he takes the hero on.&quot;,<br />
+&quot;reason&quot;: &quot;Peri too quickly reasons from Edwin's practical refusal backwards to fit her narrative; imposes hero-story template on plain statement&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;description-list&quot;,<br />
+&quot;quote&quot;: &quot;Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said <em>beans</em>. On the wall, in a frame, a sampler with a wheat sheaf on it that a farmwife had worked for him one winter.&quot;,<br />
+&quot;reason&quot;: &quot;Lists multiple noticed things (herbs, dresser, catalogues, jars, sampler) instead of one noticed thing bound to action; rule forbids lists.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;unearned-authority&quot;,<br />
+&quot;quote&quot;: &quot;You get another question tomorrow. Don't ask it <em>who</em>. You've done <em>who</em>. Ask it <em>what</em>.&quot;,<br />
+&quot;reason&quot;: &quot;Edwin issues directives about Peri's magical practice without explicit agreement from her to be commanded, despite neighboring context showing pedagogical intent.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;likeability-drift&quot;,<br />
+&quot;quote&quot;: &quot;She looked at him with real patience, as at a man who had not done the reading.&quot;,<br />
+&quot;reason&quot;: &quot;Line carries slightly condescending tone toward Edwin (looking at him as one who is unprepared/inferior), risking making Peri seem less likeable.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;tech-level-anachronism&quot;,<br />
+&quot;quote&quot;: &quot;A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said <em>beans</em>.&quot;,<br />
+&quot;reason&quot;: &quot;&quot;reagents&quot; is a chemistry term postdating pre-industrial technology level&quot;<br />
+}<br />
 ]</p></blockquote>
 
 
@@ -76,13 +88,13 @@ Candidates:<br>
 </div>
 
 <details><summary>8 tool calls</summary>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json</p>
 <p>✅ 59 lines, 2235 chars</p>
 <p>🔧 Read draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md</p>
 <p>✅ 94 lines, 8531 chars</p>
 <p>🔧 Bash: python3 -c " import json rs=json.load(open('tools/lint/rules.json')) for r in rs:     if…</p>
 <p>✅ 163 lines, 7408 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"verdicts": [{"rule_id": "maxim-capped-speech", "quote": "…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

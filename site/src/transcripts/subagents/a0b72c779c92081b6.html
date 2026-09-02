@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are writing a full chapter of the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. R…</title><style>
+<html><head><meta charset="utf-8"><title>You are writing a full chapter of the novel at [redacted]. Read `CLAU…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,34 +7,46 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are writing a full chapter of the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. R…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a0b72c779c92081b6">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are writing a full chapter of the novel at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it, including the rule about reading the voice notes before writing any fiction here.<br>
-<br>
-Read, in order:<br>
-1. `notes/voice-fusion-draft.md` — **this is your binding voice spec.** Read it twice. Where it is silent, `notes/voices.md` and `notes/llm-tells.md` bind.<br>
-2. `notes/voice-exemplars.md` and the exemplar prose it names.<br>
-3. `samples/round5/scenes/discovery-voice-3.md`, `discovery-voice-2.md`, `measurement-voice-3.md`, `delve-voice-3.md` — the round-5 samples the fusion is built from. Hear the register before you write.<br>
-4. <span class="redacted">redacted sentence: unpublished prose</span><br>
-5. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Also `notes/sealed/` — read it so every clue you write coheres with the sealed answer. **Never reveal sealed content anywhere, in prose, notes, or your final message.**<br>
-<br>
-Then rewrite chapter 13 **entire** — the whole chapter, roughly 4,000-4,500 words — in the fusion voice. Same events, same facts, same canon, same chapter position. You may cut, reorder, compress, expand, change what is dramatised versus summarised, change where scenes begin and end, and change which material is in dialogue. You may not change what is true.<br>
-<br>
-This is a **rate test**. Nine hundred words of anything can be sustained; the question is whether this voice survives four thousand. So:<br>
-- Do not front-load. If the good stuff is all in the first eight hundred words the test has failed.<br>
-- Keep the budget table open beside you and stay inside it for the whole chapter, not on average — a device spent three times in one scene and never again is a failure even if the per-1,000 figure is fine.<br>
-- Every scene opening is an entrance, not a minute. Check all of them at the end.<br>
-- The chapter's central finding — four circles that do not share a middle, whose middles walk north-east — **must land in the scene, not be filed.** The Call-Out lost it once already. Do not lose it.<br>
-- End the chapter per the spec.<br>
-<br>
-Write to `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> After the prose, add `## Writer's notes`: where the spec helped, where it fought you, which budget you came closest to blowing and why, and any rule you think is wrong having now tried to write four thousand words under it. Be candid — that section is as valuable as the prose.<br>
-<br>
-Do not edit anything outside `samples/round5/`. Your final message: three lines on how it went, and the one rule you would change.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are writing a full chapter of the novel at [redacted]. Read `CLAU…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a0b72c779c92081b6">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are writing a full chapter of the novel at <span class="redacted">redacted</span>. Read <code>CLAUDE.md</code> first and obey it, including the rule about reading the voice notes before writing any fiction here.</p>
+<p>Read, in order:</p>
+<ol>
+<li><code>notes/voice-fusion-draft.md</code> — <strong>this is your binding voice spec.</strong> Read it twice. Where it is silent, <code>notes/voices.md</code> and <code>notes/llm-tells.md</code> bind.</li>
+<li><code>notes/voice-exemplars.md</code> and the exemplar prose it names.</li>
+<li><code>samples/round5/scenes/discovery-voice-3.md</code>, <code>discovery-voice-2.md</code>, <code>measurement-voice-3.md</code>, <code>delve-voice-3.md</code> — the round-5 samples the fusion is built from. Hear the register before you write.</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Also <code>notes/sealed/</code> — read it so every clue you write coheres with the sealed answer. <strong>Never reveal sealed content anywhere, in prose, notes, or your final message.</strong></li>
+</ol>
+<p>Then rewrite chapter 13 <strong>entire</strong> — the whole chapter, roughly 4,000-4,500 words — in the fusion voice. Same events, same facts, same canon, same chapter position. You may cut, reorder, compress, expand, change what is dramatised versus summarised, change where scenes begin and end, and change which material is in dialogue. You may not change what is true.</p>
+<p>This is a <strong>rate test</strong>. Nine hundred words of anything can be sustained; the question is whether this voice survives four thousand. So:</p>
+<ul>
+<li>Do not front-load. If the good stuff is all in the first eight hundred words the test has failed.</li>
+<li>Keep the budget table open beside you and stay inside it for the whole chapter, not on average — a device spent three times in one scene and never again is a failure even if the per-1,000 figure is fine.</li>
+<li>Every scene opening is an entrance, not a minute. Check all of them at the end.</li>
+<li>The chapter's central finding — four circles that do not share a middle, whose middles walk north-east — <strong>must land in the scene, not be filed.</strong> The Call-Out lost it once already. Do not lose it.</li>
+<li>End the chapter per the spec.</li>
+</ul>
+<p>Write to <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> After the prose, add <code>## Writer's notes</code>: where the spec helped, where it fought you, which budget you came closest to blowing and why, and any rule you think is wrong having now tried to write four thousand words under it. Be candid — that section is as valuable as the prose.</p>
+<p>Do not edit anything outside <code>samples/round5/</code>. Your final message: three lines on how it went, and the one rule you would change.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -73,7 +85,7 @@ Do not edit anything outside `samples/round5/`. Your final message: three lines 
 <p>✅ 190 lines, 17445 chars</p>
 <p>🔧 Read chapters/014-the-overdue-delve.md</p>
 <p>✅ 204 lines, 21457 chars</p>
-<p>🔧 Bash: wc -l notes/canon/characters/{edwin,peri,mattie-ordish,<span class="redacted">redacted: character</span>⟦redacted sen…</p>
+<p>🔧 Bash: wc -l notes/canon/characters/{edwin,peri,mattie-ordish,<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 10 lines, 341 chars —      840 notes/canon/characters/edwin.md /     1146 notes/canon/characters/peri.md /      422 notes/canon/characters/mattie-ordish.md</p>
 <p>🔧 Bash: sed -n 1,120p notes/concept.md &amp;&amp; echo "#### PREMISE" &amp;&amp; sed -n 1,184p notes/premise.md</p>
 <p>✅ 259 lines, 15124 chars</p>
@@ -102,7 +114,7 @@ Do not edit anything outside `samples/round5/`. Your final message: three lines 
 </div>
 
 <details><summary>38 tool calls</summary>
-<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span>/samples/round5/full-chapter &amp;&amp; cat &gt; <span class="redacted">redacted: private</span>⟦red…</p>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted</span>/samples/round5/full-chapter &amp;&amp; cat &gt; <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 2 lines, 31 chars</p>
 <p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'PY' import re,sys t=open(sys.argv[1]).read() body=t.split("*…</p>
 <p>✅ 21 lines, 263 chars</p>
@@ -136,14 +148,14 @@ Do not edit anything outside `samples/round5/`. Your final message: three lines 
 <p>✅ 12 lines, 161 chars</p>
 <p>🔧 Bash: python3 - &lt;&lt;'PY' import re,textwrap <span class="redacted">redacted sentence: unpublished prose</span> s=open(p).read…</p>
 <p>✅ 11 lines, 159 chars — WORDS 4879 / dialogue share 33.9% / n sent 372 mean 13.1</p>
-<p>🔧 Bash: cat &gt;&gt; <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span>  ---  ## Writer's notes…</p>
+<p>🔧 Bash: cat &gt;&gt; <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span>  ---  ## Writer's notes  **Census…</p>
 <p>✅ 7 lines, 124 chars</p>
 <p>🔧 Bash: git add samples/round5/full-chapter &amp;&amp; git commit -q -m "Round 5: full-chapter rate test…</p>
 <p>✅ 1 lines, 79 chars — e7d95a8 Round 5: full-chapter rate test — ch. 013 rewritten in the fusion voice</p>
 </details>
 
 <div class="assistant-prose">
-<p><span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>The voice survived four thousand words, but only because Rule 3 forced the four marching centres onto the page at the 35% mark before I had written a gate or a joke; drafted front-to-back it would have been lost again, exactly as the Call-Out lost it. Every mechanical row landed in range except mean sentence length (13.1, just under) and openings on a name or pronoun (32%), and the two budgets that nearly failed were the figure-of-speech floor — left alone the spec's restraints compound into a chronicle at 1.0 per thousand, and the four figures I added on purpose are the four most suspect sentences in the chapter — and the downgrade ration, where one of my three sits in a scene the rule bans it from and stays only because ch. 020's argument needs it said. The real cost the spec does not admit is length: the per-scene quotas add rather than trade, and six full entrances plus three physical costs apiece is why this is 4,879 and not 4,300.</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>

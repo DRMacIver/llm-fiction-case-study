@@ -7,47 +7,59 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a387fd8e277e03145">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and <span class="redacted">redacted: private</span>/draft/book-01/scenes/06-the-front-from-the-roof.md. Also read <span class="redacted">redacted: private</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope "scene") the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.<br>
-<br>
-Candidates:<br>
-[<br>
- {<br>
-  "rule_id": "implication-stopped-short",<br>
-  "quote": "The knot behind his breastbone did nothing.",<br>
-  "reason": "Sets up the implication that the knot should have activated or responded given the context of a major magical working, but doesn't state this expectation; neighboring sentences don't clarify the significance of the knot's inactivity."<br>
- },<br>
- {<br>
-  "rule_id": "aphorism-budget",<br>
-  "quote": "A sea-front is not a cloud.",<br>
-  "reason": "Portable general principle about sea-fronts, not grounded in particulars; scene has 3 aphorisms (max 1)"<br>
- },<br>
- {<br>
-  "rule_id": "aphorism-budget",<br>
-  "quote": "There is no better way to say it, and he had stopped looking for one in his first century.",<br>
-  "reason": "Portable aphorism about language despite contextual qualifier; scene has 3 aphorisms (max 1)"<br>
- },<br>
- {<br>
-  "rule_id": "aphorism-budget",<br>
-  "quote": "a working that size takes what you have and gives it back over days",<br>
-  "reason": "General principle about magical workings; scene has 3 aphorisms (max 1)"<br>
- },<br>
- {<br>
-  "rule_id": "long-build-short-drop-budget",<br>
-  "quote": "He ate bread and cheese standing up at the dresser, and went to bed at his usual hour, and lay awake longer than he meant to.",<br>
-  "reason": "Third long-build-short-drop rhythm instance in scene (max 2 allowed)"<br>
- },<br>
- {<br>
-  "rule_id": "missing-qualifier",<br>
-  "quote": "The knot behind his breastbone did nothing.",<br>
-  "reason": "The knot is referenced without explanation; only a location qualifier is given, not a functional one explaining what the knot represents or signifies."<br>
- }<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a387fd8e277e03145">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted</span>/tools/lint/rules.json and <span class="redacted">redacted</span>/draft/book-01/scenes/06-the-front-from-the-roof.md. Also read <span class="redacted">redacted</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope &quot;scene&quot;) the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.</p>
+<p>Candidates:<br />
+[<br />
+{<br />
+&quot;rule_id&quot;: &quot;implication-stopped-short&quot;,<br />
+&quot;quote&quot;: &quot;The knot behind his breastbone did nothing.&quot;,<br />
+&quot;reason&quot;: &quot;Sets up the implication that the knot should have activated or responded given the context of a major magical working, but doesn't state this expectation; neighboring sentences don't clarify the significance of the knot's inactivity.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;A sea-front is not a cloud.&quot;,<br />
+&quot;reason&quot;: &quot;Portable general principle about sea-fronts, not grounded in particulars; scene has 3 aphorisms (max 1)&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;There is no better way to say it, and he had stopped looking for one in his first century.&quot;,<br />
+&quot;reason&quot;: &quot;Portable aphorism about language despite contextual qualifier; scene has 3 aphorisms (max 1)&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;a working that size takes what you have and gives it back over days&quot;,<br />
+&quot;reason&quot;: &quot;General principle about magical workings; scene has 3 aphorisms (max 1)&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;long-build-short-drop-budget&quot;,<br />
+&quot;quote&quot;: &quot;He ate bread and cheese standing up at the dresser, and went to bed at his usual hour, and lay awake longer than he meant to.&quot;,<br />
+&quot;reason&quot;: &quot;Third long-build-short-drop rhythm instance in scene (max 2 allowed)&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;missing-qualifier&quot;,<br />
+&quot;quote&quot;: &quot;The knot behind his breastbone did nothing.&quot;,<br />
+&quot;reason&quot;: &quot;The knot is referenced without explanation; only a location qualifier is given, not a functional one explaining what the knot represents or signifies.&quot;<br />
+}<br />
 ]</p></blockquote>
 
 
@@ -56,17 +68,17 @@ Candidates:<br>
 </div>
 
 <details><summary>12 tool calls</summary>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/scenes/06-the-front-from-the-roof.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/draft/book-01/scenes/06-the-front-from-the-roof.md</p>
 <p>✅ 19 lines, 3139 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json</p>
 <p>✅ 59 lines, 2235 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 -c " import json rs=json.load(open('tools/lint/rules.json…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 -c " import json rs=json.load(open('tools/lint/rules.json')) for r…</p>
 <p>✅ 97 lines, 6698 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 -c " import json rs={r['id']:r for r in json.load(open('t…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 -c " import json rs={r['id']:r for r in json.load(open('tools/lint…</p>
 <p>✅ 145 lines, 6863 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; f=draft/book-01/scenes/06-the-front-from-the-roof.md; wc -w $f; g…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; f=draft/book-01/scenes/06-the-front-from-the-roof.md; wc -w $f; grep -o ",…</p>
 <p>✅ 3 lines, 77 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"verdicts": [{"rule_id": "implication-stopped-short", "quo…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

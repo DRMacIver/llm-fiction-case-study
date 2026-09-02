@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; For…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. [redacted] For each cha…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; For…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-abe43185215851eef">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span> For each chapter in chapters/001 through 021 ONLY (022+ are owned by a running drafter — do not touch them), append the author's-note block for every glossary term whose chapter of first appearance is that chapter, in the exact format in notes/farming.md (a '---' line, then '*Author's note.*' followed by bolded term paragraphs), placed after the prose's final line. Verify each term really does first appear in that chapter (grep earlier chapters; if it appears earlier, move the note to the earlier chapter and correct the glossary). Do not alter any prose. Commit: "Add author's notes for specialist farming terms, chapters 001-021" (same trailer). Return: per chapter, the terms noted.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. [redacted] For each cha…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-abe43185215851eef">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> For each chapter in chapters/001 through 021 ONLY (022+ are owned by a running drafter — do not touch them), append the author's-note block for every glossary term whose chapter of first appearance is that chapter, in the exact format in notes/farming.md (a '---' line, then '<em>Author's note.</em>' followed by bolded term paragraphs), placed after the prose's final line. Verify each term really does first appear in that chapter (grep earlier chapters; if it appears earlier, move the note to the earlier chapter and correct the glossary). Do not alter any prose. Commit: &quot;Add author's notes for specialist farming terms, chapters 001-021&quot; (same trailer). Return: per chapter, the terms noted.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -30,67 +43,71 @@ Repo: <span class="redacted">redacted: private</span>. <span class="redacted">re
 <p>✅ 29 lines, 684 chars</p>
 <p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,glob,os terms={ "sea-front":r"sea-front", "fr…</p>
 <p>✅ 70 lines, 3666 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for p in "fair[a-z]* ring" "listen" "lime" "salt" "fallow" "drove…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; for p in "fair[a-z]* ring" "listen" "lime" "salt" "fallow" "drove" "peat"…</p>
 <p>✅ 14 lines, 2147 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,glob,os,sys files=sor…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,glob,os,sys files=sorted…</p>
 <p>✅ 82 lines, 11298 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,glob,os files=sorted(…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,glob,os files=sorted(glo…</p>
 <p>✅ 267 lines, 28203 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for p in "salt.burn" "straight water" "\bfallow\b" "\bmuck\b" "\b…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; for p in "salt.burn" "straight water" "\bfallow\b" "\bmuck\b" "\bhay\b" "\…</p>
 <p>✅ 68 lines, 4871 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for p in "compost" "revealing" "two.mage|equinoct|spring tide" "p…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; for p in "compost" "revealing" "two.mage|equinoct|spring tide" "pightle" "…</p>
 <p>✅ 54 lines, 4179 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -oniE ".{40}(breath|draught|blowing out|air out of|drawing i…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -oniE ".{40}(breath|draught|blowing out|air out of|drawing in).{40}"…</p>
 <p>✅ 12 lines, 1330 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,glob,os,textwrap g=op…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,glob,os,textwrap g=open…</p>
 <p>✅ 78 lines, 1452 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; tail -c 400 chapters/010-the-quiet-field.md; echo "|END"; awk '{p…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; tail -c 400 chapters/010-the-quiet-field.md; echo "|END"; awk '{print leng…</p>
 <p>✅ 5 lines, 409 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,glob,os g=open("notes…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re,glob,os g=open("notes/…</p>
 <p>✅ 31 lines, 1376 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; uv run --no-project python -c " import glob,os,re for f in sorted…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; uv run --no-project python -c " import glob,os,re for f in sorted(glob.glo…</p>
 <p>✅ 43 lines, 2062 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re p="notes/canon/world/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re p="notes/canon/world/fa…</p>
 <p>✅ 99 lines, 2693 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git add chapters/001*.md chapters/002*.md chapters/003*.md chapte…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git add chapters/001*.md chapters/002*.md chapters/003*.md chapters/004*.m…</p>
 <p>✅ 22 lines, 1169 chars</p>
 </details>
 
 <div class="assistant-prose">
 <p>Committed as 81cd0f4. Chapters 001–019 now carry author's-note blocks; 020 and 021 carry none (see corrections). Prose untouched — the diff is insertions only, except the glossary re-ordering.</p>
 <p>Terms noted per chapter:</p>
-<p>- **001** — Sea-front; Frost list; The months (Weedmonth); The compost cantrip<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- **003** — Salt burn; Muck<br>
-- **004** — The revealings; Manuring series; Chain and links; Fairy rings; Straight water / sluice-law; Cutting a sample (turf sample); Peat<br>
-- **005** — Soil-listening; Quickening assay; Marl; Plot registers<br>
-- **006** — Whips and bare-root; Germination figures; Spring tides and the equinox (two-mage day); A soil face<br>
-- **007** — Causeway; Spring line; Waymarkers; Drove road; Warrens<br>
-- **008** — The fall (of a drain); Limewash; Stubble; Pollard willows; Lifting<br>
-- **009** — Windpumps; Dykes, cuts and drains; Headland; A spit; Withy bed; Green hay catches fire; The factor; Controls; Why the ring shows in barley (cropmark)<br>
-- **010** — Undersowing; Wireworm; Casts and molehills; Stakes, and writing "not reached"<br>
-- **011** — Coppice<br>
-- **012** — Quarter-days; Billhook<br>
-- **013** — The growth-hold; Hedging (sallow/blackthorn); Chestnut and wire; Fallow<br>
-- **014** — Scrapes; Reading a kill; Why a hill breathes<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- **016** — Hatches; A bottom<br>
-- **017** — Staddle stones; Flash; Faggots<br>
-- **018** — A tide mark<br>
-- **019** — A boarded bay<br>
-- **020, 021** — none (all their glossary terms first appear earlier)</p>
+<ul>
+<li><strong>001</strong> — Sea-front; Frost list; The months (Weedmonth); The compost cantrip<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>003</strong> — Salt burn; Muck</li>
+<li><strong>004</strong> — The revealings; Manuring series; Chain and links; Fairy rings; Straight water / sluice-law; Cutting a sample (turf sample); Peat</li>
+<li><strong>005</strong> — Soil-listening; Quickening assay; Marl; Plot registers</li>
+<li><strong>006</strong> — Whips and bare-root; Germination figures; Spring tides and the equinox (two-mage day); A soil face</li>
+<li><strong>007</strong> — Causeway; Spring line; Waymarkers; Drove road; Warrens</li>
+<li><strong>008</strong> — The fall (of a drain); Limewash; Stubble; Pollard willows; Lifting</li>
+<li><strong>009</strong> — Windpumps; Dykes, cuts and drains; Headland; A spit; Withy bed; Green hay catches fire; The factor; Controls; Why the ring shows in barley (cropmark)</li>
+<li><strong>010</strong> — Undersowing; Wireworm; Casts and molehills; Stakes, and writing &quot;not reached&quot;</li>
+<li><strong>011</strong> — Coppice</li>
+<li><strong>012</strong> — Quarter-days; Billhook</li>
+<li><strong>013</strong> — The growth-hold; Hedging (sallow/blackthorn); Chestnut and wire; Fallow</li>
+<li><strong>014</strong> — Scrapes; Reading a kill; Why a hill breathes<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>016</strong> — Hatches; A bottom</li>
+<li><strong>017</strong> — Staddle stones; Flash; Faggots</li>
+<li><strong>018</strong> — A tide mark</li>
+<li><strong>019</strong> — A boarded bay</li>
+<li><strong>020, 021</strong> — none (all their glossary terms first appear earlier)</li>
+</ul>
 <p>First-appearance corrections made (note moved, glossary section corrected):</p>
-<p>- Compost cantrip 002 → **001** ("you teach a spell for compost", ch001)<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Turf sample 005 → **004** (Edwin's letter: "a spade's depth, a foot square, the turf kept whole")<br>
-- Peat 019 → **004** ("a gas pocket in the peat")<br>
-- Drove road 001 → **007** (no occurrence in 001; "the old drove road", ch007)<br>
-- Warren 012 → **007** ("the Twelve Acre warrens")<br>
-- Factor 019 → **009** ("a man from the corn factor")<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Cropmark 011 → **009** ("The barley in the rings?")<br>
-- Benchmark stakes / *not reached* 020 → **010** (dated, lettered oak stakes at the arc edge)<br>
-- Fallow 005 → **013** (no "fallow" as ground state before ch013; earlier hits are Fallowmonth, covered by the months note)</p>
-<p>Glossary status block rewritten: entries for 001–019 are marked published; 022–023 remain outstanding, note text still drafted there. Glossary path: `<span class="redacted">redacted: private</span>/notes/canon/world/farming-glossary.md`</p>
+<ul>
+<li>Compost cantrip 002 → <strong>001</strong> (&quot;you teach a spell for compost&quot;, ch001)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Turf sample 005 → <strong>004</strong> (Edwin's letter: &quot;a spade's depth, a foot square, the turf kept whole&quot;)</li>
+<li>Peat 019 → <strong>004</strong> (&quot;a gas pocket in the peat&quot;)</li>
+<li>Drove road 001 → <strong>007</strong> (no occurrence in 001; &quot;the old drove road&quot;, ch007)</li>
+<li>Warren 012 → <strong>007</strong> (&quot;the Twelve Acre warrens&quot;)</li>
+<li>Factor 019 → <strong>009</strong> (&quot;a man from the corn factor&quot;)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Cropmark 011 → <strong>009</strong> (&quot;The barley in the rings?&quot;)</li>
+<li>Benchmark stakes / <em>not reached</em> 020 → <strong>010</strong> (dated, lettered oak stakes at the arc edge)</li>
+<li>Fallow 005 → <strong>013</strong> (no &quot;fallow&quot; as ground state before ch013; earlier hits are Fallowmonth, covered by the months note)</li>
+</ul>
+<p>Glossary status block rewritten: entries for 001–019 are marked published; 022–023 remain outstanding, note text still drafted there. Glossary path: <span class="redacted">redacted</span>/notes/canon/world/farming-glossary.md</p>
 </div>
 </body></html>

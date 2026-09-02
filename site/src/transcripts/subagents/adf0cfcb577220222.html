@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are an adversarial consistency checker for a fiction project at ⟦…</title><style>
+<html><head><meta charset="utf-8"><title>You are an adversarial consistency checker for a fiction project at [redacted]…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,23 +7,34 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are an adversarial consistency checker for a fiction project at ⟦…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-adf0cfcb577220222">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are an adversarial consistency checker for a fiction project at <span class="redacted">redacted: private</span>. Two new files have been written that rule how magic works in this world:<br>
-<br>
-- notes/canon/world/magic-theory.md (user-visible canon; Working)<br>
-- notes/sealed/magic-origins.md (sealed backstory; author-eyes only)<br>
-<br>
-Your job is to try to BREAK them: find every place where they contradict (a) the sealed answers in notes/sealed/ (read ALL of: silent-soil.md, deeps.md, destiny.md, peri-pre-choosing.md, <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> and notes/premise.md (no great evil; no dark lord; the System never an antagonist; affectionate mockery only).<br>
-<br>
-Also check internal consistency between the two new files, and whether magic-theory.md (the USER-VISIBLE file) leaks any sealed content — anything a reader of magic-theory.md alone could use to infer the silent-soil answer, the Deep answer, the destiny fill-in/fulfilment answer, or Peri's pre-Choosing answer. Note: the project's own rule is that a sealed answer's *shape* may be referred to; its *content* may not.<br>
-<br>
-Report, as your final text, a numbered list of findings. For each: severity (BREAKS / STRAINS / NIT), the exact quote from the new file, the exact quote from the file it conflicts with (with path and section), one sentence on why, and a concrete proposed fix (minimal wording change). Then a separate short list of things you checked and found clean, so the author knows coverage. Do not pad; if a thing is fine say so. Be genuinely adversarial — try hard to refute the new files — but do not invent conflicts that are not in the text.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are an adversarial consistency checker for a fiction project at [redacted]…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-adf0cfcb577220222">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-30</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are an adversarial consistency checker for a fiction project at <span class="redacted">redacted</span>. Two new files have been written that rule how magic works in this world:</p>
+<ul>
+<li>notes/canon/world/magic-theory.md (user-visible canon; Working)</li>
+<li>notes/sealed/magic-origins.md (sealed backstory; author-eyes only)</li>
+</ul>
+<p>Your job is to try to BREAK them: find every place where they contradict (a) the sealed answers in notes/sealed/ (read ALL of: silent-soil.md, deeps.md, destiny.md, peri-pre-choosing.md, <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> and notes/premise.md (no great evil; no dark lord; the System never an antagonist; affectionate mockery only).</p>
+<p>Also check internal consistency between the two new files, and whether magic-theory.md (the USER-VISIBLE file) leaks any sealed content — anything a reader of magic-theory.md alone could use to infer the silent-soil answer, the Deep answer, the destiny fill-in/fulfilment answer, or Peri's pre-Choosing answer. Note: the project's own rule is that a sealed answer's <em>shape</em> may be referred to; its <em>content</em> may not.</p>
+<p>Report, as your final text, a numbered list of findings. For each: severity (BREAKS / STRAINS / NIT), the exact quote from the new file, the exact quote from the file it conflicts with (with path and section), one sentence on why, and a concrete proposed fix (minimal wording change). Then a separate short list of things you checked and found clean, so the author knows coverage. Do not pad; if a thing is fine say so. Be genuinely adversarial — try hard to refute the new files — but do not invent conflicts that are not in the text.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -65,7 +76,7 @@ Report, as your final text, a numbered list of findings. For each: severity (BRE
 <p>✅ 167 lines, 9576 chars</p>
 <p>🔧 Bash: grep -n -i "evil\|dark lord\|antagonist\|mystery\|villain\|System" notes/premise.md notes…</p>
 <p>✅ 21 lines, 1886 chars</p>
-<p>🔧 Bash: sed -n '10,30p;55,75p;255,270p' notes/theme.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: sed -n '10,30p;55,75p;255,270p' notes/theme.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 58 lines, 3108 chars</p>
 <p>🔧 Bash: grep -n -i "ten thousand\|hundred thousand\|dozen\|one in\|%" notes/canon/world/demograph…</p>
 <p>✅ 4 lines, 409 chars</p>
@@ -90,98 +101,118 @@ Report, as your final text, a numbered list of findings. For each: severity (BRE
 </details>
 
 <div class="assistant-prose">
-<p>I read both new files, all six named sealed files plus `magic-constraints.md`, the seven canon files, `theme.md`/`premise.md`, and (via a subagent) all 24 scenes.</p>
-<p>**One process note first:** the brief asked for exact quotes from the sealed files where they conflict. I have not reproduced sealed *content* — the project rule is that reports describe a sealed answer's shape, never its content, and that rule binds regardless of who asked. Sealed-side findings below give file, section, strength, and the shape of the collision, which is enough to act on. Say the word if you want the spoilers.</p>
-<p>---</p>
-<p>## Findings</p>
-<p>### A. Sealed vs sealed (magic-origins.md)</p>
-<p>**1. BREAKS — magic-origins §3 explains the uniqueness of Peri's class.**<br>
-The new file, §3, ends a chain of reasoning with *"That is why the class is unique, why it is archmage-grade with no foundation, and why its ability is a hold on a life."* `peri-pre-choosing.md` §3 rules, binding: *"why the class is unique … is not accounted for here and **must not be accounted for anywhere**"* — and records that the previous candidate explanation was refuted by both adversaries as *"a chosen-one shape in an accountant's coat."* magic-origins supplies a structurally identical account by another route. Its own §6 gate (*"a statement about what the class is, not about why it was offered to her"*) does not hold, because §3's sentence explicitly answers *why it is unique*.<br>
-**Fix:** delete the clause *"That is why the class is unique, why it is archmage-grade with no foundation, and"* from §3, keeping only the mechanism-class statement. Add to §7's must-never list: *any account of why [Agent of Fate] is unique, including one derived from this file.*</p>
-<p>**2. STRAINS — magic-origins reinstates a lost civilisation the Deep critiques cleared out.**<br>
-`m2-deep-theme-critique.md` ("What would fix it", binding) rules *"no civilisation, no lost golden age, no transmitted schedule"* and *"the earliest records genuinely say nothing because there was never much to say."* `deeps.md` Mechanism 11 makes deep history boring because **there is nothing to record**. magic-origins §3–4 makes deep history boring for the opposite reason — there was a great deal, and it is illegible. These are compatible on the page and incompatible as answers; the sealed corpus now has two different explanations for the same silence, and §5's own analysis of option (B) cites the cleared-out-makers point as a reason not to go there.<br>
-**Fix:** in §3, add one line explicitly scoping the earlier critique: *"m2's 'no civilisation' is binding **about the Deeps** — no Deep was made, improved, scheduled or recorded by anyone. This file's builders never touched a hole in the ground and leave no legible record anywhere."* Then add the same to §7.</p>
-<p>**3. STRAINS — magic-origins has no Discrepancies section.**<br>
-Every other sealed file admits its costs (`deeps.md` D1–D4; `destiny.md` Discrepancies). This one admits only §5. At minimum two strains are unlisted: (a) a physical quantity has been falling measurably for two hundred years and §7 forbids anyone — including a 350-year-old practitioner with the world's largest capacity and three centuries of costed workings — from noticing; (b) `history.md` already attributes the ten-thousand-year plateau to the System's *social* effects (skills replace institutions, training wheels homogenise, power doesn't accumulate in tools), and §4 quietly re-attributes it to a physical cause.<br>
-**Fix:** add a Discrepancies section naming both; for (b), rephrase §4 as *"underneath history.md's social account, and never instead of it."*</p>
-<p>**4. NIT — §5 is correctly handled.** The dungeon clause is flagged, not smuggled; (A) is the right default and the reasoning is sound. No action.</p>
-<p>---</p>
-<p>### B. Leaks in the user-visible file</p>
-<p>**5. BREAKS — magic-theory §2 puts sealed vocabulary and a sealed conclusion in canon.**<br>
+<p>I read both new files, all six named sealed files plus <code>magic-constraints.md</code>, the seven canon files, <code>theme.md</code>/<code>premise.md</code>, and (via a subagent) all 24 scenes.</p>
+<p><strong>One process note first:</strong> the brief asked for exact quotes from the sealed files where they conflict. I have not reproduced sealed <em>content</em> — the project rule is that reports describe a sealed answer's shape, never its content, and that rule binds regardless of who asked. Sealed-side findings below give file, section, strength, and the shape of the collision, which is enough to act on. Say the word if you want the spoilers.</p>
+<hr />
+<h2>Findings</h2>
+<h3>A. Sealed vs sealed (magic-origins.md)</h3>
+<p><strong>1. BREAKS — magic-origins §3 explains the uniqueness of Peri's class.</strong><br />
+The new file, §3, ends a chain of reasoning with <em>&quot;That is why the class is unique, why it is archmage-grade with no foundation, and why its ability is a hold on a life.&quot;</em> <code>peri-pre-choosing.md</code> §3 rules, binding: <em>&quot;why the class is unique … is not accounted for here and <strong>must not be accounted for anywhere</strong>&quot;</em> — and records that the previous candidate explanation was refuted by both adversaries as <em>&quot;a chosen-one shape in an accountant's coat.&quot;</em> magic-origins supplies a structurally identical account by another route. Its own §6 gate (<em>&quot;a statement about what the class is, not about why it was offered to her&quot;</em>) does not hold, because §3's sentence explicitly answers <em>why it is unique</em>.<br />
+<strong>Fix:</strong> delete the clause <em>&quot;That is why the class is unique, why it is archmage-grade with no foundation, and&quot;</em> from §3, keeping only the mechanism-class statement. Add to §7's must-never list: <em>any account of why [Agent of Fate] is unique, including one derived from this file.</em></p>
+<p><strong>2. STRAINS — magic-origins reinstates a lost civilisation the Deep critiques cleared out.</strong><br />
+<code>m2-deep-theme-critique.md</code> (&quot;What would fix it&quot;, binding) rules <em>&quot;no civilisation, no lost golden age, no transmitted schedule&quot;</em> and <em>&quot;the earliest records genuinely say nothing because there was never much to say.&quot;</em> <code>deeps.md</code> Mechanism 11 makes deep history boring because <strong>there is nothing to record</strong>. magic-origins §3–4 makes deep history boring for the opposite reason — there was a great deal, and it is illegible. These are compatible on the page and incompatible as answers; the sealed corpus now has two different explanations for the same silence, and §5's own analysis of option (B) cites the cleared-out-makers point as a reason not to go there.<br />
+<strong>Fix:</strong> in §3, add one line explicitly scoping the earlier critique: <em>&quot;m2's 'no civilisation' is binding <strong>about the Deeps</strong> — no Deep was made, improved, scheduled or recorded by anyone. This file's builders never touched a hole in the ground and leave no legible record anywhere.&quot;</em> Then add the same to §7.</p>
+<p><strong>3. STRAINS — magic-origins has no Discrepancies section.</strong><br />
+Every other sealed file admits its costs (<code>deeps.md</code> D1–D4; <code>destiny.md</code> Discrepancies). This one admits only §5. At minimum two strains are unlisted: (a) a physical quantity has been falling measurably for two hundred years and §7 forbids anyone — including a 350-year-old practitioner with the world's largest capacity and three centuries of costed workings — from noticing; (b) <code>history.md</code> already attributes the ten-thousand-year plateau to the System's <em>social</em> effects (skills replace institutions, training wheels homogenise, power doesn't accumulate in tools), and §4 quietly re-attributes it to a physical cause.<br />
+<strong>Fix:</strong> add a Discrepancies section naming both; for (b), rephrase §4 as <em>&quot;underneath history.md's social account, and never instead of it.&quot;</em></p>
+<p><strong>4. NIT — §5 is correctly handled.</strong> The dungeon clause is flagged, not smuggled; (A) is the right default and the reasoning is sound. No action.</p>
+<hr />
+<h3>B. Leaks in the user-visible file</h3>
+<p><strong>5. BREAKS — magic-theory §2 puts sealed vocabulary and a sealed conclusion in canon.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>"Roll-call" appears nowhere on the page and nowhere in canon; it is the sealed file's own term, and the parenthetical states, in a Working canon file, that the sixth revealing's *name* is the error. That is the silent-soil answer's central epistemological move, and the page (scene 18) still has Edwin proud of the spell and its word. A reader of magic-theory.md alone now knows where the mystery's hole is.<br>
-**Fix:** cut the parenthetical to *"(the seventh's six failures)"*. If a second example is wanted, use one not attached to a sealed answer.</p>
-<p>**6. BREAKS — magic-theory §8 points at the wound-cleaning identity.**<br>
+<p>&quot;Roll-call&quot; appears nowhere on the page and nowhere in canon; it is the sealed file's own term, and the parenthetical states, in a Working canon file, that the sixth revealing's <em>name</em> is the error. That is the silent-soil answer's central epistemological move, and the page (scene 18) still has Edwin proud of the spell and its word. A reader of magic-theory.md alone now knows where the mystery's hole is.<br />
+<strong>Fix:</strong> cut the parenthetical to <em>&quot;(the seventh's six failures)&quot;</em>. If a second example is wanted, use one not attached to a sealed answer.</p>
+<p><strong>6. BREAKS — magic-theory §8 points at the wound-cleaning identity.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>That is content, not shape: it tells the reader the wound-cleaning charm is the same working as one of the five, which is one inference from the silent-soil answer. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<p>That is content, not shape: it tells the reader the wound-cleaning charm is the same working as one of the five, which is one inference from the silent-soil answer. <span class="redacted">redacted sentence</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**7. STRAINS — magic-theory §1 and §548 leak the sealed frame's premise.**<br>
-§1: *"the world's **level** of give is a sealed-history matter and has no on-page instrument"*; Open questions: *"**DRMacIver's dungeon clause** — see `notes/sealed/magic-origins.md` §5."* Together these tell a reader of the canon file alone that (a) the world's magic has a historical *level* that varies, and (b) the System's origin has something to do with dungeons. The first is shape-adjacent; the second is a pointer at the live collision.<br>
+<p><strong>7. STRAINS — magic-theory §1 and §548 leak the sealed frame's premise.</strong><br />
+§1: <em>&quot;the world's <strong>level</strong> of give is a sealed-history matter and has no on-page instrument&quot;</em>; Open questions: <em>&quot;<strong>DRMacIver's dungeon clause</strong> — see <code>notes/sealed/magic-origins.md</code> §5.&quot;</em> Together these tell a reader of the canon file alone that (a) the world's magic has a historical <em>level</em> that varies, and (b) the System's origin has something to do with dungeons. The first is shape-adjacent; the second is a pointer at the live collision.<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>---</p>
-<p>### C. magic-theory vs the sealed answers</p>
-<p>**8. BREAKS — §3/§11/§14.2 make <span class="redacted">redacted: mechanic</span> unaskable.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-&gt; §14.2: "No working addresses the dead, stone, or ground that has stopped doing business."</p>
-<p>`silent-soil.md` → "Why magic reads it this way" is binding and explicit that the readings on such ground are *true* and that the error is in a word a character wrote, "because it puts the hole in Edwin's own hand instead of in the world." Filing the ground alongside stone and the dead makes it a category of dead matter — the wrong answer — and it is confirmed against the page below (finding 12).<br>
+<hr />
+<h3>C. magic-theory vs the sealed answers</h3>
+<ol start="8">
+<li>BREAKS — §3/§11/§14.2 make <span class="redacted">redacted</span> unaskable.<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<blockquote>
+<p>§14.2: &quot;No working addresses the dead, stone, or ground that has stopped doing business.&quot;</p>
+</blockquote>
+<p><code>silent-soil.md</code> → &quot;Why magic reads it this way&quot; is binding and explicit that the readings on such ground are <em>true</em> and that the error is in a word a character wrote, &quot;because it puts the hole in Edwin's own hand instead of in the world.&quot; Filing the ground alongside stone and the dead makes it a category of dead matter — the wrong answer — and it is confirmed against the page below (finding 12).<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**9. STRAINS — §7 silently rules the engine's blank-field phase out of existence.**<br>
+<p><strong>9. STRAINS — §7 silently rules the engine's blank-field phase out of existence.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>`destiny.md` §4 (binding) rules a distinct loosening verb while the field is blank, and its own Discrepancies log the three adversary reviews that argue the opposite. magic-theory picks the reviews' side by construction, without saying so, and its hold-shaped mechanism has no room for the blank phase at all.<br>
+<p><code>destiny.md</code> §4 (binding) rules a distinct loosening verb while the field is blank, and its own Discrepancies log the three adversary reviews that argue the opposite. magic-theory picks the reviews' side by construction, without saying so, and its hold-shaped mechanism has no room for the blank phase at all.<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**10. BREAKS — §7's "Two in three hundred and fifty years" contradicts the binding literature.**<br>
+<p><strong>10. BREAKS — §7's &quot;Two in three hundred and fifty years&quot; contradicts the binding literature.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>This number is invented here — it appears nowhere else in the repo. `destiny.md` §7 (with page corroboration at ch. 029 and 002) requires a standing contrast class: ninety-year-old priests routinely casting on the dying and the young, same-day fills, and a literature split into hagiographies and warnings. Two practitioners in three and a half centuries cannot produce a routine practice or a literature.<br>
-**Fix:** strike the number. *"Rare enough that a parish will never see one and common enough to have a literature."*</p>
-<p>---</p>
-<p>### D. magic-theory vs canon</p>
-<p>**11. STRAINS — §10 requires the enchanter to have made the object; magic.md requires only mastery of the trade.**<br>
+<p>This number is invented here — it appears nowhere else in the repo. <code>destiny.md</code> §7 (with page corroboration at ch. 029 and 002) requires a standing contrast class: ninety-year-old priests routinely casting on the dying and the young, same-day fills, and a literature split into hagiographies and warnings. Two practitioners in three and a half centuries cannot produce a routine practice or a literature.<br />
+<strong>Fix:</strong> strike the number. <em>&quot;Rare enough that a parish will never see one and common enough to have a literature.&quot;</em></p>
+<hr />
+<h3>D. magic-theory vs canon</h3>
+<p><strong>11. STRAINS — §10 requires the enchanter to have made the object; magic.md requires only mastery of the trade.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**12. STRAINS — §8's mana account of ordinary repair over-reaches system.md.**<br>
+<p><strong>12. STRAINS — §8's mana account of ordinary repair over-reaches system.md.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**13. STRAINS — §8's healing rationale does not actually explain the caster rule.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> A healer telling their own set bone to knit (verb 3) should work fine under this theory, so the canon rule stops being universal.<br>
-<span class="redacted">redacted sentence: unpublished prose</span> Both reasons, and the parish only knows the fact."*</p>
-<p>**14. NIT — §1 contradicts itself in two adjacent sentences.**<br>
-&gt; "No potion, place, object, or **person restores mana to another**. **Feeding mana to another person is possible**…"<br>
-<span class="redacted">redacted sentence: unpublished prose</span> One person can feed another…"*</p>
-<p>**15. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**16. NIT — §7 makes fate magic a *skill* Peri cannot use.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span> She has not noticed."* (This is also good material.)</p>
-<p>---</p>
-<p>### E. magic-theory vs the page</p>
+<p><strong>13. STRAINS — §8's healing rationale does not actually explain the caster rule.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> A healer telling their own set bone to knit (verb 3) should work fine under this theory, so the canon rule stops being universal.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> Both reasons, and the parish only knows the fact.&quot;*</p>
+<p><strong>14. NIT — §1 contradicts itself in two adjacent sentences.</strong></p>
+<blockquote>
+<p>&quot;No potion, place, object, or <strong>person restores mana to another</strong>. <strong>Feeding mana to another person is possible</strong>…&quot;<br />
+<span class="redacted">redacted sentence: unpublished prose</span> One person can feed another…&quot;*</p>
+</blockquote>
+<ol start="15">
+<li><span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<p><strong>16. NIT — §7 makes fate magic a <em>skill</em> Peri cannot use.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> She has not noticed.&quot;* (This is also good material.)</p>
+<hr />
+<h3>E. magic-theory vs the page</h3>
 <p>These are the subagent's scene findings, condensed; each was verified against the scene text.</p>
-<p>**17. BREAKS — the §5 table lists the parish five wrongly** ("heap, night, walk, store, beast"). Scene 07: *"A charm for what's in store. A blessing for a sick beast. Frost-sense. Water-finding"* plus compost. **Fix:** `heap, store, beast, frost, water`.</p>
-<p>**18. BREAKS — §9's "a blessing … *does* nothing" collides with the <span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: mechanic</span>, which is a hold and one of the five.</p>
-<p>**19. BREAKS — §6 takes the wording off Peri.** §6: *"workings Peri could not build, word, or hold herself."* Scene 02: *"I spent a long time on the wording."* Scene 13: *"I'm getting better at the wording. That's the hard part."* §7 of the same file says the opposite. **Fix:** strike "word,".</p>
-<p>**20. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> You get a new starting place, not permanence."*</p>
-<p>**21. BREAKS — §2 makes the compost cantrip a telling and blames a stiff wrist.** Scene 04: *"the cantrip **asks** it to hurry, and if you ask angrily it hears the anger and not the asking, and you get a heap that has gone hot and sour in one night."* The theory has no channel at all for the caster's state, which the page makes load-bearing. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**22. STRAINS — weather is hold-only in §2/§5; the page tells it too.** Scene 01: *"a warm rain with small drops in it"*; scene 09: *"watched his rain do what it had been told."* **Fix:** verb column → `hold; small tells inside the hold`.</p>
-<p>**23. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**24. STRAINS — habitual free listening.** Scene 17: soil-listening is *"so habitual by now that he did it walking past a garden without deciding to"*, in the same sequence as *"eight castings in an hour … he felt it as a dent."* **Fix:** add to §2 that listening is below the threshold a body notices.</p>
-<p>**25. STRAINS — [<span class="redacted">redacted: mechanic</span>] returning nothing has no slot in §7.** Scene 02: *"Then *who am I to fight*. Nothing at all."* Scene 05: *"It showed her nothing."* **Fix:** *a blank is a true answer, and the one people most often misread as bad wording.*</p>
-<p>**26. NIT — §7's "thirty days at her level"** sits beside `[Terms: until fulfilled.]` and reads as a term on the binding. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**27. NIT — §1's "emptying costs a day"** vs scene 06: *"takes what you have and gives it back over days."*</p>
-<p>**28. NIT — §7 uses "cost" in two senses** three paragraphs apart (the bound man's cost; Peri's mana). Disambiguate.</p>
-<p>**29. <span class="redacted">redacted sentence: unpublished prose</span> Some are presumably from plans, `magic.md` or deleted seed chapters; several are marked in the file as if established. **Fix:** re-source or demote each.</p>
-<p>---</p>
-<p>## Checked and clean</p>
-<p>- **Theme/premise.** magic-origins handles the no-dark-lord constraint explicitly and correctly (*"No catastrophe, no war, no dark lord"*), the System never acts with intent, and §7 forbids it becoming an antagonist. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: Edwin's death/mortality</span> All correctly carried, and the hold-not-tell mechanism class genuinely earns several of them.<br>
-- **The sealed/shape discipline in §7 and §13** — *"What shape, what fills the blank, and what fulfilled tests are sealed"* is a model of how to refer to a sealed answer without leaking it. §13's on-page ruling ("the answer is dull") is clean.<br>
-- **deeps.md** — magic-theory says nothing about dungeons; magic-origins §5(A) leaves every Deep commitment intact, including no maker, no System authorship, nothing magical, no telemetry.<br>
-- **<span class="redacted">redacted: character</span>-grandmother-people.md** — no contact from either file. Correct.<br>
-- **Numbers against demographics.md and magic.md**: one in ten thousand field-scale, one in a hundred thousand for local weather, a few dozen for fronts, a few hundred great healers. All check out.<br>
-- **magic.md's four permitted effects** map cleanly onto the three verbs; the parish-ceiling derivation in §2 is sound and is the best thing in the file.<br>
-- **system.md and healing.md** have already been backfilled with §6/§8 and are mutually consistent — note this means fixing magic-theory now requires editing those two lines too (`system.md` "Abilities vs skills"; `healing.md` ~line 345).<br>
-- **Scene-level clean:** the staff (scene 23 supports every claim), empty-vs-grey (unestablished but uncontradicted), the compost cantrip as unit (uncontradicted), healing at the parish (consistent by absence), stone and the dead (never tested).</p>
-<p>**Priority order if you only fix a few:** 1, 5, 6, 8, 17, 18, 19, 20, 21.</p>
+<p><strong>17. BREAKS — the §5 table lists the parish five wrongly</strong> (&quot;heap, night, walk, store, beast&quot;). Scene 07: <em>&quot;A charm for what's in store. A blessing for a sick beast. Frost-sense. Water-finding&quot;</em> plus compost. <strong>Fix:</strong> <code>heap, store, beast, frost, water</code>.</p>
+<ol start="18">
+<li>BREAKS — §9's &quot;a blessing … <em>does</em> nothing&quot; collides with the <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>, which is a hold and one of the five.</li>
+</ol>
+<p><strong>19. BREAKS — §6 takes the wording off Peri.</strong> §6: <em>&quot;workings Peri could not build, word, or hold herself.&quot;</em> Scene 02: <em>&quot;I spent a long time on the wording.&quot;</em> Scene 13: <em>&quot;I'm getting better at the wording. That's the hard part.&quot;</em> §7 of the same file says the opposite. <strong>Fix:</strong> strike &quot;word,&quot;.</p>
+<ol start="20">
+<li><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> You get a new starting place, not permanence.&quot;*</li>
+</ol>
+<p><strong>21. BREAKS — §2 makes the compost cantrip a telling and blames a stiff wrist.</strong> Scene 04: <em>&quot;the cantrip <strong>asks</strong> it to hurry, and if you ask angrily it hears the anger and not the asking, and you get a heap that has gone hot and sour in one night.&quot;</em> The theory has no channel at all for the caster's state, which the page makes load-bearing. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><strong>22. STRAINS — weather is hold-only in §2/§5; the page tells it too.</strong> Scene 01: <em>&quot;a warm rain with small drops in it&quot;</em>; scene 09: <em>&quot;watched his rain do what it had been told.&quot;</em> <strong>Fix:</strong> verb column → <code>hold; small tells inside the hold</code>.</p>
+<ol start="23">
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<p><strong>24. STRAINS — habitual free listening.</strong> Scene 17: soil-listening is <em>&quot;so habitual by now that he did it walking past a garden without deciding to&quot;</em>, in the same sequence as <em>&quot;eight castings in an hour … he felt it as a dent.&quot;</em> <strong>Fix:</strong> add to §2 that listening is below the threshold a body notices.</p>
+<ol start="25">
+<li>STRAINS — [<span class="redacted">redacted</span>] returning nothing has no slot in §7.** Scene 02: <em>&quot;Then <em>who am I to fight</em>. Nothing at all.&quot;</em> Scene 05: <em>&quot;It showed her nothing.&quot;</em> <strong>Fix:</strong> <em>a blank is a true answer, and the one people most often misread as bad wording.</em></li>
+</ol>
+<p>**26. NIT — §7's &quot;thirty days at her level&quot; sits beside <code>[Terms: until fulfilled.]</code> and reads as a term on the binding. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><strong>27. NIT — §1's &quot;emptying costs a day&quot;</strong> vs scene 06: <em>&quot;takes what you have and gives it back over days.&quot;</em></p>
+<p><strong>28. NIT — §7 uses &quot;cost&quot; in two senses</strong> three paragraphs apart (the bound man's cost; Peri's mana). Disambiguate.</p>
+<ol start="29">
+<li><span class="redacted">redacted sentence: unpublished prose</span> Some are presumably from plans, <code>magic.md</code> or deleted seed chapters; several are marked in the file as if established. <strong>Fix:</strong> re-source or demote each.</li>
+</ol>
+<hr />
+<h2>Checked and clean</h2>
+<ul>
+<li><strong>Theme/premise.</strong> magic-origins handles the no-dark-lord constraint explicitly and correctly (<em>&quot;No catastrophe, no war, no dark lord&quot;</em>), the System never acts with intent, and §7 forbids it becoming an antagonist. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence</span> All correctly carried, and the hold-not-tell mechanism class genuinely earns several of them.</li>
+<li><strong>The sealed/shape discipline in §7 and §13</strong> — <em>&quot;What shape, what fills the blank, and what fulfilled tests are sealed&quot;</em> is a model of how to refer to a sealed answer without leaking it. §13's on-page ruling (&quot;the answer is dull&quot;) is clean.</li>
+<li><strong>deeps.md</strong> — magic-theory says nothing about dungeons; magic-origins §5(A) leaves every Deep commitment intact, including no maker, no System authorship, nothing magical, no telemetry.</li>
+<li><span class="redacted">redacted</span>-grandmother-people.md** — no contact from either file. Correct.</li>
+<li><strong>Numbers against demographics.md and magic.md</strong>: one in ten thousand field-scale, one in a hundred thousand for local weather, a few dozen for fronts, a few hundred great healers. All check out.</li>
+<li><strong>magic.md's four permitted effects</strong> map cleanly onto the three verbs; the parish-ceiling derivation in §2 is sound and is the best thing in the file.</li>
+<li><strong>system.md and healing.md</strong> have already been backfilled with §6/§8 and are mutually consistent — note this means fixing magic-theory now requires editing those two lines too (<code>system.md</code> &quot;Abilities vs skills&quot;; <code>healing.md</code> ~line 345).</li>
+<li><strong>Scene-level clean:</strong> the staff (scene 23 supports every claim), empty-vs-grey (unestablished but uncontradicted), the compost cantrip as unit (uncontradicted), healing at the parish (consistent by absence), stone and the dead (never tested).</li>
+</ul>
+<p>**Priority order if you only fix a few: 1, 5, 6, 8, 17, 18, 19, 20, 21.</p>
 </div>
 </body></html>

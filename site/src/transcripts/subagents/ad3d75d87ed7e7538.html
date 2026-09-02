@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; ⟦re…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. [redacted] [redacted]…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,15 +7,28 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; ⟦re…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-ad3d75d87ed7e7538">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span><br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. [redacted] [redacted]…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-ad3d75d87ed7e7538">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span><br />
 Report ONLY findings within your lens, compactly, each as: quote (short) | problem | suggested fix. Precision matters: invented problems are as bad as misses. Do NOT declare the chapter clean or certify anything — absence of findings is simply an empty list.</p></blockquote>
 
 
@@ -28,47 +41,53 @@ Report ONLY findings within your lens, compactly, each as: quote (short) | probl
 <p>✅ 108 lines, 5971 chars</p>
 <p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 272 lines, 24098 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; python3 -c " import re text = open('013-what-the-rings…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; python3 -c " import re text = open('013-what-the-rings-say.md')…</p>
 <p>✅ 13 lines, 156 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 29 lines, 336 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "like\|as a\|as though\|as if" 013-what-the-ri…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "like\|as a\|as though\|as if" 013-what-the-rings-say.md</p>
 <p>✅ 18 lines, 5830 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p># Voice/Mechanical Review — Chapter 13: "What the Rings Say"</p>
-<p>## House-word census (word count: 4,497)</p>
-<p>- **arithmetic** — 1 instance (line 33: "who had noticed the same arithmetic") — this construction is explicitly RETIRED per llm-tells.md. Flag for removal/rephrase even at low count.<br>
-- **nobody/somebody/anybody** — 12 combined (~27/10k, above the "halve it" target from the 22/10k census baseline): lines 25, 27, 99, 111, 119(×2), 155(×2), 167, 169, 171, 183.<br>
-- **stood/standing** — 11 combined: lines 7, 97, 99, 119, 127, 137, 153, 179, 183, 199, 253. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- **"out loud"** — 1 (line 43: "Edwin called it noise out loud") — minor, but flagged per watch-list.<br>
-- **"the whole of"** — 1 (line 35: "That's the whole of it") — watch-listed construction.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- **half past** — 1 (line 251) — real timekeeping usage per canon, not flagged as overuse, just noting per watch-list instruction to vary clock phrasings if repeated elsewhere in the arc.</p>
-<p>## Em-dash</p>
+<h1>Voice/Mechanical Review — Chapter 13: &quot;What the Rings Say&quot;</h1>
+<h2>House-word census (word count: 4,497)</h2>
+<ul>
+<li><strong>arithmetic</strong> — 1 instance (line 33: &quot;who had noticed the same arithmetic&quot;) — this construction is explicitly RETIRED per llm-tells.md. Flag for removal/rephrase even at low count.</li>
+<li><strong>nobody/somebody/anybody</strong> — 12 combined (~27/10k, above the &quot;halve it&quot; target from the 22/10k census baseline): lines 25, 27, 99, 111, 119(×2), 155(×2), 167, 169, 171, 183.</li>
+<li><strong>stood/standing</strong> — 11 combined: lines 7, 97, 99, 119, 127, 137, 153, 179, 183, 199, 253. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>&quot;out loud&quot;</strong> — 1 (line 43: &quot;Edwin called it noise out loud&quot;) — minor, but flagged per watch-list.</li>
+<li><strong>&quot;the whole of&quot;</strong> — 1 (line 35: &quot;That's the whole of it&quot;) — watch-listed construction.<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>half past</strong> — 1 (line 251) — real timekeeping usage per canon, not flagged as overuse, just noting per watch-list instruction to vary clock phrasings if repeated elsewhere in the arc.</li>
+</ul>
+<h2>Em-dash</h2>
 <p>1 em-dash / 4,497 words (~0.22/1000) — well under budget. No finding.</p>
-<p>## Earth months</p>
+<h2>Earth months</h2>
 <p>None found — all references use compound months (Cornmonth, Weedmonth, Harvestmonth, Frostmonth). No finding.</p>
-<p>## Banned constructions</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> did not either") stacked with the retired arithmetic word | Rewrite to drop the "arithmetic" framing and the mirrored negatives, e.g. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span> Mattie's line alone carrying the reversal without Edwin's setup line mirroring it.<br>
+<h2>Banned constructions</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span> did not either&quot;) stacked with the retired arithmetic word | Rewrite to drop the &quot;arithmetic&quot; framing and the mirrored negatives, e.g. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> Mattie's line alone carrying the reversal without Edwin's setup line mirroring it.<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>## Aphorism census (rule: ≤1 per scene)</p>
-<p>Scene "Barley talk / bands" (lines 1–57): none prominent.</p>
-<p>Scene "Pale field / list" (lines 61–91): <br>
-- Line 85: "he wrote it in his own hand... <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> **Two aphorisms in one scene — over budget.**</p>
-<p>Scene "Harvest talk" (lines 95–121): none flagged as free-floating.</p>
-<p>Scene "Pale field walk / <span class="redacted">redacted: character</span>" (lines 123–171):<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Line 271 (final line): "a thing that tells you nothing" repeated — see Ending section below; functions as aphorism-as-callback.</p>
-<p>Scene "Middle column" (lines 225–247):<br>
+<h2>Aphorism census (rule: ≤1 per scene)</h2>
+<p>Scene &quot;Barley talk / bands&quot; (lines 1–57): none prominent.</p>
+<p>Scene &quot;Pale field / list&quot; (lines 61–91):</p>
+<ul>
+<li>Line 85: &quot;he wrote it in his own hand... <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <strong>Two aphorisms in one scene — over budget.</strong></li>
+</ul>
+<p>Scene &quot;Harvest talk&quot; (lines 95–121): none flagged as free-floating.</p>
+<p>Scene &quot;Pale field walk / <span class="redacted">redacted</span>&quot; (lines 123–171):<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>## Ending</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Per the endings-are-cuts rule, the last two paragraphs should carry near-zero cleverness and the chapter should cut mid-flow on forward-pointing work, not land a callback rhyme. This reads as exactly the "tidy button" / composed-resonance failure mode the rule bans. | Cut the callback phrasing. End flatter and earlier, e.g. stop after "and went to look at a <span class="redacted">redacted: character</span> in the dark anyway" (or similar), without echoing the earlier line or doubling the phrase.</p>
+<ul>
+<li>Line 271 (final line): &quot;a thing that tells you nothing&quot; repeated — see Ending section below; functions as aphorism-as-callback.</li>
+</ul>
+<p>Scene &quot;Middle column&quot; (lines 225–247):<br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<h2>Ending</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Per the endings-are-cuts rule, the last two paragraphs should carry near-zero cleverness and the chapter should cut mid-flow on forward-pointing work, not land a callback rhyme. This reads as exactly the &quot;tidy button&quot; / composed-resonance failure mode the rule bans. | Cut the callback phrasing. End flatter and earlier, e.g. stop after &quot;and went to look at a <span class="redacted">redacted</span> in the dark anyway&quot; (or similar), without echoing the earlier line or doubling the phrase.</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 </body></html>

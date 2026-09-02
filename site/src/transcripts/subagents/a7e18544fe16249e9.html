@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,17 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a7e18544fe16249e9">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 27-. Read it in full.<br>
-LENS: wit. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and extract ONLY the rules with "tier": "semantic" and "lens": "wit". Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a7e18544fe16249e9">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 27-. Read it in full.<br />
+LENS: wit. Read <span class="redacted">redacted</span>/tools/lint/rules.json and extract ONLY the rules with &quot;tier&quot;: &quot;semantic&quot; and &quot;lens&quot;: &quot;wit&quot;. Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
@@ -25,13 +38,13 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>I'll help you lint the scene file for wit-related issues. Let me start by locating the file and reading the rules.</p>
 </div>
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes/ -name "27-*.md" -type f (Find the scene file starting with 27-)</p>
-<p>✅ 1 lines, 91 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/27-the-cellar-at-saltings-corner.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes/ -name "27-*.md" -type f (Find the scene file starting with 27-)</p>
+<p>✅ 1 lines, 91 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/27-the-cellar-at-saltings-corner.md</p>
 <p>🔧 Read tools/lint/rules.json</p>
 <p>✅ 1196 lines, 51733 chars</p>
 
 <div class="assistant-prose">
-<p>I need to read the rest of the rules file to get all rules with tier "semantic" and lens "wit".</p>
+<p>I need to read the rest of the rules file to get all rules with tier &quot;semantic&quot; and lens &quot;wit&quot;.</p>
 </div>
 
 <p>🔧 Read tools/lint/rules.json</p>
@@ -46,29 +59,33 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 
 <div class="assistant-prose">
 <p>Now I'll analyze scene 27 against the wit-lens semantic rules. Let me identify the key wit rules:</p>
-<p>1. **triad-swerve-budget** - max 1 per scene<br>
-2. **long-build-short-drop-budget** - max 2 per scene  <br>
-3. **quiet-the-way-budget** - max 1 per scene<br>
-4. **aphorism-budget** - max 1 per scene<br>
-5. **ornament-wit** - narrator decoration vs event-wit<br>
-6. **jukebox-flourish** - flourishes with no nameable job<br>
-7. **wrong-world-metaphor** - metaphors from wrong world<br>
-8. **joke-rhythm-no-logic** - shape of a joke with no underlying proposition<br>
-9. **weak-comic-beat-flat** - funny observation reported flat<br>
-10. **joke-character-could-not-make** - line reader finds funny but character wouldn't sincerely say</p>
+<ol>
+<li><strong>triad-swerve-budget</strong> - max 1 per scene</li>
+<li><strong>long-build-short-drop-budget</strong> - max 2 per scene</li>
+<li><strong>quiet-the-way-budget</strong> - max 1 per scene</li>
+<li><strong>aphorism-budget</strong> - max 1 per scene</li>
+<li><strong>ornament-wit</strong> - narrator decoration vs event-wit</li>
+<li><strong>jukebox-flourish</strong> - flourishes with no nameable job</li>
+<li><strong>wrong-world-metaphor</strong> - metaphors from wrong world</li>
+<li><strong>joke-rhythm-no-logic</strong> - shape of a joke with no underlying proposition</li>
+<li><strong>weak-comic-beat-flat</strong> - funny observation reported flat</li>
+<li><strong>joke-character-could-not-make</strong> - line reader finds funny but character wouldn't sincerely say</li>
+</ol>
 <p>Let me check each systematically:</p>
-<p>**triad-swerve-budget**: No clear triads with swerves found.</p>
-<p>**long-build-short-drop-budget**: Paragraph 11 has a longer sentence ("Then he went up the stairs at a pace that suggested the mason was going to hear about the fall of his drain before the mason had finished his own supper") but is not followed by a short-drop fragment.</p>
-<p>**quiet-the-way-budget**: "The taproom did not go quiet, the eel men not being a quiet sort, but the landlord's pouring got a good deal more generous." - This is NOT the "quiet the way X is quiet" construction; it's a factual contrast with the reason provided.</p>
-<p>**aphorism-budget**: Two candidate statements:<br>
-- "a favour never gets finished, it just sits between the two of you" (para 14) - But the rule's counter-examples state: "a technical distinction cashed out in particulars, or a statement of cost/mechanism, is not an aphorism." This explains the mechanism of debt/gratitude.<br>
-- Peri's notebook: "The books never say that the reading is the spell: three hundred years of knowing what a yard smells like, and then sixpence of magic to prove it to the people who can't smell it." - Again, this explains Edwin's method through its particulars, not a portable epigram.</p>
-<p>**ornament-wit**: "you did not need three hundred years of practice to know it" (para 8) - This is event-wit (funny because of Edwin's known age and the obvious problem), not narrator decoration.</p>
-<p>**jukebox-flourish**: No detachable similes, personifications, or abstract-concrete conjunctions without clear jobs. The references to three hundred years serve to establish context (<span class="redacted">redacted: event</span>/mastery).</p>
-<p>**wrong-world-metaphor, joke-rhythm-no-logic, weak-comic-beat-flat, joke-character-could-not-make**: No violations found. The scene's wit arises from events and character actions, not from narrator decoration or false characterization.</p>
+<p><strong>triad-swerve-budget</strong>: No clear triads with swerves found.</p>
+<p><strong>long-build-short-drop-budget</strong>: Paragraph 11 has a longer sentence (&quot;Then he went up the stairs at a pace that suggested the mason was going to hear about the fall of his drain before the mason had finished his own supper&quot;) but is not followed by a short-drop fragment.</p>
+<p><strong>quiet-the-way-budget</strong>: &quot;The taproom did not go quiet, the eel men not being a quiet sort, but the landlord's pouring got a good deal more generous.&quot; - This is NOT the &quot;quiet the way X is quiet&quot; construction; it's a factual contrast with the reason provided.</p>
+<p><strong>aphorism-budget</strong>: Two candidate statements:</p>
+<ul>
+<li>&quot;a favour never gets finished, it just sits between the two of you&quot; (para 14) - But the rule's counter-examples state: &quot;a technical distinction cashed out in particulars, or a statement of cost/mechanism, is not an aphorism.&quot; This explains the mechanism of debt/gratitude.</li>
+<li>Peri's notebook: &quot;The books never say that the reading is the spell: three hundred years of knowing what a yard smells like, and then sixpence of magic to prove it to the people who can't smell it.&quot; - Again, this explains Edwin's method through its particulars, not a portable epigram.</li>
+</ul>
+<p><strong>ornament-wit</strong>: &quot;you did not need three hundred years of practice to know it&quot; (para 8) - This is event-wit (funny because of Edwin's known age and the obvious problem), not narrator decoration.</p>
+<p><strong>jukebox-flourish</strong>: No detachable similes, personifications, or abstract-concrete conjunctions without clear jobs. The references to three hundred years serve to establish context (<span class="redacted">redacted</span>/mastery).</p>
+<p><strong>wrong-world-metaphor, joke-rhythm-no-logic, weak-comic-beat-flat, joke-character-could-not-make</strong>: No violations found. The scene's wit arises from events and character actions, not from narrator decoration or false characterization.</p>
 <p>The scene shows strong wit discipline: all humor arises from what happens (the landlord's increased respect, his quick exit, the value calculation) rather than from ornamental phrasing. Teaching and technical explanations are presented clearly without self-annotation.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

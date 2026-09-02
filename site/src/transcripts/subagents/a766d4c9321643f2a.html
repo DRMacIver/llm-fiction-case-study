@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Thi…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. [redacted] This chapter…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,15 +7,28 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Thi…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a766d4c9321643f2a">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span><br>
-This chapter is over the em-dash budget (census: ~3-3.6 per 1000). Bring it under 2/1000 by restructuring — each em-dash becomes a full stop, a comma, a colon, parentheses, or a plain re-ordering, chosen for the sentence; never mechanically swap every dash for the same mark. Keep the dashes that are genuinely doing work (an interruption in speech, a true aside). Do not change content, dialogue intent, the ending, or the author's-note block below '---' (count dashes in the prose only). No other edits. Commit: "Thin em-dashes: 001" with trailer "Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;". Return before/after counts and words.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. [redacted] This chapter…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a766d4c9321643f2a">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span><br />
+This chapter is over the em-dash budget (census: ~3-3.6 per 1000). Bring it under 2/1000 by restructuring — each em-dash becomes a full stop, a comma, a colon, parentheses, or a plain re-ordering, chosen for the sentence; never mechanically swap every dash for the same mark. Keep the dashes that are genuinely doing work (an interruption in speech, a true aside). Do not change content, dialogue intent, the ending, or the author's-note block below '---' (count dashes in the prose only). No other edits. Commit: &quot;Thin em-dashes: 001&quot; with trailer &quot;Co-Authored-By: Claude Fable 5 <a href="mailto:noreply@anthropic.com">noreply@anthropic.com</a>&quot;. Return before/after counts and words.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -31,25 +44,29 @@ This chapter is over the em-dash budget (census: ~3-3.6 per 1000). Bring it unde
 <p>✅ 5 lines, 38 chars</p>
 <p>🔧 Bash: sed -n '1,45p' chapters/001-the-wrong-man.md; echo "=== TAIL ==="; sed -n '160,200p' chap…</p>
 <p>✅ 69 lines, 9387 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,165p' chapters/001-the-wrong-man.md &gt; /tmp/p.txt; wc -w…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1,165p' chapters/001-the-wrong-man.md &gt; /tmp/p.txt; wc -w /tmp/p.t…</p>
 <p>✅ 7 lines, 107 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git status --porcelain chapters/001-the-wrong-man.md; echo "clean…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git status --porcelain chapters/001-the-wrong-man.md; echo "clean-check-do…</p>
 <p>✅ 1 lines, 16 chars — clean-check-done</p>
 </details>
 
 <div class="assistant-prose">
 <p>NO CHANGE NEEDED — the premise of the task does not hold for this chapter, so no edit and no commit were made.</p>
-<p>File: `<span class="redacted">redacted: private</span>/chapters/001-the-wrong-man.md`</p>
-<p>Counts:<br>
-- Whole file: 3,157 words, 10 em-dashes = **3.17 per 1,000**. This is the census figure, and it is what the ~3–3.6 number is measuring.<br>
-- Prose only (lines 1–165, everything above the final `---`): **2,795 words, 4 em-dashes = 1.43 per 1,000** — already under the 2/1,000 budget.<br>
-- The other 6 em-dashes are all in the author's-note block (one per glossary headword: `**Sea-front** —`, `**Frost list** —`, `**The months** —`, `**The compost cantrip** —`, plus one mid-sentence in the sea-front note and one in the compost note). The task explicitly excludes that block from both editing and counting.</p>
-<p>All 4 prose dashes are the kind the instruction says to keep — interruptions in speech, none of them narratorial asides:<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span> *is* the beat)<br>
-- L105 `"you'll understand why—"` (cut off by Peri)<br>
-- L113 `"is more important than—"` (cut off)<br>
-- L149 `"They always do, in the— they always do."` (self-correction mid-line)</p>
+<p>File: <span class="redacted">redacted</span>/chapters/001-the-wrong-man.md`</p>
+<p>Counts:</p>
+<ul>
+<li>Whole file: 3,157 words, 10 em-dashes = <strong>3.17 per 1,000</strong>. This is the census figure, and it is what the ~3–3.6 number is measuring.</li>
+<li>Prose only (lines 1–165, everything above the final <code>---</code>): <strong>2,795 words, 4 em-dashes = 1.43 per 1,000</strong> — already under the 2/1,000 budget.</li>
+<li>The other 6 em-dashes are all in the author's-note block (one per glossary headword: <code>**Sea-front** —</code>, <code>**Frost list** —</code>, <code>**The months** —</code>, `<strong>The compost cantrip</strong> —, plus one mid-sentence in the sea-front note and one in the compost note). The task explicitly excludes that block from both editing and counting.</li>
+</ul>
+<p>All 4 prose dashes are the kind the instruction says to keep — interruptions in speech, none of them narratorial asides:<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <em>is</em> the beat)</p>
+<ul>
+<li>L105 <code>&quot;you'll understand why—&quot;</code> (cut off by Peri)</li>
+<li>L113 <code>&quot;is more important than—&quot;</code> (cut off)</li>
+<li>L149 <code>&quot;They always do, in the— they always do.&quot;</code> (self-correction mid-line)</li>
+</ul>
 <p>Nothing to restructure: converting any of these to a full stop, comma, colon, or parenthesis would destroy the interruption, and the prose is already 28% under budget. Before = after = 4 em-dashes / 2,795 prose words.</p>
-<p>Suggested follow-up for the census tooling: it is counting the author's-note glossary dashes, which inflates every chapter that has one. Chapter 1's excess is entirely that artifact. Worth re-running the census with the `---` block stripped before flagging other chapters for this treatment.</p>
+<p>Suggested follow-up for the census tooling: it is counting the author's-note glossary dashes, which inflates every chapter that has one. Chapter 1's excess is entirely that artifact. Worth re-running the census with the <code>---</code> block stripped before flagging other chapters for this treatment.</p>
 </div>
 </body></html>

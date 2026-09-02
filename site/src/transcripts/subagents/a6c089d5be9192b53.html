@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. You are the verification stage of the chap…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. You are the verification stage of the chapter pipel…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,28 +7,40 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. You are the verification stage of the chap…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a6c089d5be9192b53">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. You are the verification stage of the<br>
-chapter pipeline. Read, in order: notes/voice-exemplars.md plus<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-notes/canon/characters/edwin.md, peri.md, sorrel.md,<br>
-notes/premise.md, .claude/skills/consistency-check/SKILL.md and<br>
-.claude/skills/editing-pass/SKILL.md (apply both), and then the<br>
-target chapter <span class="redacted">redacted: private</span>/samples/model-test/verify-test-A.md in full. Read ONLY these files.<br>
-<br>
-Produce your complete findings list: every register, sense,<br>
-consistency, and hard-rule problem in the target, each with the exact<br>
-quote, the category, and the correct fix. Be thorough AND precise —<br>
-missed real problems and invented problems are both failures. A clean<br>
-chapter yielding "no findings" is a valid result; do not invent nits.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. You are the verification stage of the chapter pipel…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a6c089d5be9192b53">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. You are the verification stage of the<br />
+chapter pipeline. Read, in order: notes/voice-exemplars.md plus<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+notes/canon/characters/edwin.md, peri.md, sorrel.md,<br />
+notes/premise.md, .claude/skills/consistency-check/SKILL.md and<br />
+.claude/skills/editing-pass/SKILL.md (apply both), and then the<br />
+target chapter <span class="redacted">redacted</span>/samples/model-test/verify-test-A.md in full. Read ONLY these files.</p>
+<p>Produce your complete findings list: every register, sense,<br />
+consistency, and hard-rule problem in the target, each with the exact<br />
+quote, the category, and the correct fix. Be thorough AND precise —<br />
+missed real problems and invented problems are both failures. A clean<br />
+chapter yielding &quot;no findings&quot; is a valid result; do not invent nits.<br />
 Return the findings as a numbered list (empty list if none).</p></blockquote>
 
 
@@ -72,16 +84,34 @@ Return the findings as a numbered list (empty list if none).</p></blockquote>
 </details>
 
 <div class="assistant-prose">
-<p>Findings for `<span class="redacted">redacted: private</span>/samples/model-test/verify-test-A.md`:</p>
-<p>1. **Contradiction (canon: character continuity / world facts).** Line 37: `*Goodman Moss missed the ten o'clock entire. First in 9 yrs. <span class="redacted">redacted sentence: unpublished prose</span> 001–002; Sorrel's eleven years, `sorrel.md`). Fix: `First in 11 yrs.` Also "last week" is loose — the four-minute lateness was Day 1, five days before Day 6; weekday structure is an Open question (`timeline.md`), so prefer `Late (4 min) Tuesday last` → simplest fix: `Late (4 min) five days back.`</p>
-<p>2. **Contradiction (System mechanics — the known mana trap).** Line 61: `He had a comfortable store of mana laid by from a quiet fortnight, more than enough to spend six revealings out of, and he was glad of the savings now.` — mana is not a bank accumulated by not spending. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> "Six revealings was not a large spend against his ceiling, and he had cast nothing heavy in a fortnight, so he was full to it."</p>
-<p>3. **Voice — endings are cuts, not cadences (most damaging voice failure).** Line 111: `Outside, the evening settled over the vale like a held breath, and somewhere east of the bridge a field went on quietly forgetting how to be alive.` — a composed closing chord: transplantable simile ("like a held breath" — fails the jukebox test), personification-as-filler, and a flash-forward resonance button. `notes/voices.md` §7 and `llm-tells.md` tell 5: cleverness budget for the last two paragraphs is near zero; end mid-flow on undone work. Fix: cut the sentence entirely and end on the chore, e.g. `"Two weeks," Sorrel agreed, and took the box down to the pump. He went back to plot 14 and the map, and got the letter to Wystow started at the top of a fresh sheet.`</p>
-<p>4. <span class="redacted">redacted sentence: plague/epidemic</span> Bad news has always been the one cargo that builds its own roads.` — the second in particular floats free of its particulars, exactly the tell in `llm-tells.md` §2. Fix: keep the first (stuck to the College's behaviour), cut "Bad news has always been the one cargo that builds its own roads."</p>
-<p>5. **Voice — self-annotated device / theme stated outright.** Line 73: `He had written it because listening could not be taught to everyone, and a census can, which was, he reflected, the whole trick of teaching: turning what you are into something anyone can count.` — the "which was, he reflected, the whole trick of teaching" clause both explains the trick and states the story's thesis about Edwin's pedagogy (`voices.md` §9 "theme unstated"; `llm-tells.md` §3–4). This is also the scene's second aphorism. Fix: stop at `He had written it because listening could not be taught to everyone, and a census can.`</p>
-<p>6. **Sense (Pass 1) — self-contradicting dialogue.** Line 85: `"You've never been frightened," she said. "Professionally, I mean. I've seen it once. Just now."` — the literal reading of sentence one ("never") is contradicted by sentence three ("once"). She means she has never *seen* it before now. Fix: `"I've never seen you frightened," she said. "Professionally, I mean. Until now."`</p>
-<p>7. <span class="redacted">redacted sentence: unpublished prose</span> 007), pushes the total to ~88–90. Minor, but it strains the pinned figure. Fix: `Wystow was the better part of eighty miles further on` → or make it explicit: `Wystow was eighty-odd miles from his own gate.`</p>
-<p>8. **Ambiguity (staging arithmetic).** Line 5: `His letter to the College had gone down with the neighbour's boy at first light. It was, at this moment, at most four miles from the tower` — at 08:20 in late summer that is roughly three hours after first light, i.e. a boy covering under a mile and a half an hour. Readable as intentional (a dawdling boy, a post sack waiting), but a literal reader will do the sum. Fix: either raise the figure (`at most eight miles from the tower`) or name the cause (`still at the bridge post-house at most, waiting on whatever went east`).</p>
-<p>Non-findings deliberately not flagged: em-dash count is 6 in 3,163 words (~1.9/1,000, inside budget, and all four in-list uses are functional); the six revealings, Edwin's authorship of four including the quickening assay, the 180-year-old casting order, the two professional frights, the 08:20 rider, the Day 6 full miss, Sorrel teaching the class with the biscuits unhurried, the nine-and-a-half-chain ring, and the two-lists/no-third-sheet beat all match canon exactly. No Edwin/Peri romance risk: the one Peri thought (line 103, "whether Miss Millbrook had stayed for the biscuits") reads as ordinary teacherly concern.</p>
-<p>Canon-file note (not a chapter fault): `notes/canon/world/timeline.md` line 8 still says "**Month names: the familiar Earth names**," which is superseded by the revised agricultural-compound ruling in `notes/canon/system.md`. The chapter's `Mudmonth` / `Plowmonth` (line 87) follow the current ruling and are correct; the timeline file needs updating.</p>
+<p>Findings for <span class="redacted">redacted</span>/samples/model-test/verify-test-A.md`:</p>
+<ol>
+<li>
+<p><strong>Contradiction (canon: character continuity / world facts).</strong> Line 37: <code>*Goodman Moss missed the ten o'clock entire. First in 9 yrs. <span class="redacted">redacted sentence: unpublished prose</span> 001–002; Sorrel's eleven years, </code>sorrel.md<code>). Fix: </code>First in 11 yrs.<code> Also &quot;last week&quot; is loose — the four-minute lateness was Day 1, five days before Day 6; weekday structure is an Open question (</code>timeline.md<code>), so prefer </code>Late (4 min) Tuesday last<code>→ simplest fix:</code>Late (4 min) five days back.`</p>
+</li>
+<li>
+<p><strong>Contradiction (System mechanics — the known mana trap).</strong> Line 61: <code>He had a comfortable store of mana laid by from a quiet fortnight, more than enough to spend six revealings out of, and he was glad of the savings now.</code> — mana is not a bank accumulated by not spending. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> &quot;Six revealings was not a large spend against his ceiling, and he had cast nothing heavy in a fortnight, so he was full to it.&quot;</p>
+</li>
+<li>
+<p><strong>Voice — endings are cuts, not cadences (most damaging voice failure).</strong> Line 111: <code>Outside, the evening settled over the vale like a held breath, and somewhere east of the bridge a field went on quietly forgetting how to be alive.</code> — a composed closing chord: transplantable simile (&quot;like a held breath&quot; — fails the jukebox test), personification-as-filler, and a flash-forward resonance button. <code>notes/voices.md</code> §7 and <code>llm-tells.md</code> tell 5: cleverness budget for the last two paragraphs is near zero; end mid-flow on undone work. Fix: cut the sentence entirely and end on the chore, e.g. <code>&quot;Two weeks,&quot; Sorrel agreed, and took the box down to the pump. He went back to plot 14 and the map, and got the letter to Wystow started at the top of a fresh sheet.</code></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence</span> Bad news has always been the one cargo that builds its own roads.<code>— the second in particular floats free of its particulars, exactly the tell in</code>llm-tells.md` §2. Fix: keep the first (stuck to the College's behaviour), cut &quot;Bad news has always been the one cargo that builds its own roads.&quot;</p>
+</li>
+<li>
+<p><strong>Voice — self-annotated device / theme stated outright.</strong> Line 73: <code>He had written it because listening could not be taught to everyone, and a census can, which was, he reflected, the whole trick of teaching: turning what you are into something anyone can count.</code> — the &quot;which was, he reflected, the whole trick of teaching&quot; clause both explains the trick and states the story's thesis about Edwin's pedagogy (<code>voices.md</code> §9 &quot;theme unstated&quot;; <code>llm-tells.md</code> §3–4). This is also the scene's second aphorism. Fix: stop at <code>He had written it because listening could not be taught to everyone, and a census can.</code></p>
+</li>
+<li>
+<p><strong>Sense (Pass 1) — self-contradicting dialogue.</strong> Line 85: <code>&quot;You've never been frightened,&quot; she said. &quot;Professionally, I mean. I've seen it once. Just now.&quot;</code> — the literal reading of sentence one (&quot;never&quot;) is contradicted by sentence three (&quot;once&quot;). She means she has never <em>seen</em> it before now. Fix: `&quot;I've never seen you frightened,&quot; she said. &quot;Professionally, I mean. Until now.&quot;</p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> 007), pushes the total to ~88–90. Minor, but it strains the pinned figure. Fix: <code>Wystow was the better part of eighty miles further on</code> → or make it explicit: <code>Wystow was eighty-odd miles from his own gate.</code></p>
+</li>
+<li>
+<p><strong>Ambiguity (staging arithmetic).</strong> Line 5: <code>His letter to the College had gone down with the neighbour's boy at first light. It was, at this moment, at most four miles from the tower</code> — at 08:20 in late summer that is roughly three hours after first light, i.e. a boy covering under a mile and a half an hour. Readable as intentional (a dawdling boy, a post sack waiting), but a literal reader will do the sum. Fix: either raise the figure (<code>at most eight miles from the tower</code>) or name the cause (<code>still at the bridge post-house at most, waiting on whatever went east</code>).</p>
+</li>
+</ol>
+<p>Non-findings deliberately not flagged: em-dash count is 6 in 3,163 words (~1.9/1,000, inside budget, and all four in-list uses are functional); the six revealings, Edwin's authorship of four including the quickening assay, the 180-year-old casting order, the two professional frights, the 08:20 rider, the Day 6 full miss, Sorrel teaching the class with the biscuits unhurried, the nine-and-a-half-chain ring, and the two-lists/no-third-sheet beat all match canon exactly. No Edwin/Peri romance risk: the one Peri thought (line 103, &quot;whether Miss Millbrook had stayed for the biscuits&quot;) reads as ordinary teacherly concern.</p>
+<p>Canon-file note (not a chapter fault): <code>notes/canon/world/timeline.md</code> line 8 still says &quot;<strong>Month names: the familiar Earth names</strong>,&quot; which is superseded by the revised agricultural-compound ruling in <code>notes/canon/system.md</code>. The chapter's <code>Mudmonth</code> / <code>Plowmonth</code> (line 87) follow the current ruling and are correct; the timeline file needs updating.</p>
 </div>
 </body></html>

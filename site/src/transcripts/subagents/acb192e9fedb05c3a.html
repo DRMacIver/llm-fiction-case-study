@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-acb192e9fedb05c3a">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/11-reports.md, read after scenes 01–10 in the same directory (they bind what is on the page). <span class="redacted">redacted sentence: unpublished prose</span> Also chapters/003-the-improbability-engine.md — the groundwork this restages, which the author rates good; his comment on the ch. 002 version of village reporting was "It's not really clear who is reporting on Peri to whom here."<br>
-<br>
-Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-acb192e9fedb05c3a">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/11-reports.md, read after scenes 01–10 in the same directory (they bind what is on the page). <span class="redacted">redacted sentence: unpublished prose</span> Also chapters/003-the-improbability-engine.md — the groundwork this restages, which the author rates good; his comment on the ch. 002 version of village reporting was &quot;It's not really clear who is reporting on Peri to whom here.&quot;</p>
+<p>Report findings only, per the skill's &quot;How to report&quot;: quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or &quot;cut&quot;. Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -48,44 +59,44 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 <p>✅ 15 lines, 1328 chars</p>
 <p>🔧 Bash: sed -n '20,100p' notes/canon/characters/minor.md; echo ====; sed -n '110,175p' notes/cano…</p>
 <p>✅ 83 lines, 4809 chars</p>
-<p>🔧 Bash: sed -n '110,175p' <span class="redacted">redacted: private</span>/notes/canon/world/timeline.md</p>
+<p>🔧 Bash: sed -n '110,175p' <span class="redacted">redacted</span>/notes/canon/world/timeline.md</p>
 <p>✅ 66 lines, 4032 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>## Findings — `draft/book-01/scenes/11-reports.md`</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-— **Part 1, dependents of an edit / fact inside the scene.** Two scenes ago the book made a point of the opposite: the post does not come up the hill, tower business is left at the bottom with the widow Crane (scenes 01, 09), and scene 09 is *about* a cart that broke that understanding. "Everything" now reads as a contradiction of the thing the previous scene spent a paragraph on.<br>
-→ "came up the hill the way news did, secondhand and improved on the way."</p>
-<p>**2.** "who came for the tower's scythe blades on the third morning"<br>
-— **Part 1, reference with no antecedent.** Third morning of what? The scene never counts days and scene 10 dates itself as "the morning after the parcel". The paragraph's own next sentence uses a different reckoning ("the second day of her residence"), so the reader is given two clocks and no key.<br>
-→ "who came up for the tower's scythe blades the morning after the parcel and stayed to tell it."</p>
-<p>**3.** "She's had two mornings of it."<br>
-— **Part 1, check every count.** She has had **one**. She arrived Day 1 and was not at that morning's class (scene 03/04); she attended the ten o'clock once, on Day 2 (scene 07); on Day 3 "Miss Millbrook did not attend" (scene 10). This conversation is the fourth morning. The count is also the joke, so it fails visibly.<br>
-→ "She's had one morning of it, and she never had a trowel in her hand."</p>
-<p>**4.** "with the frost list under her arm, which she had taken back in the night" … "Edwin ate one over the frost list"<br>
-— **Part 1, dependents / who is holding what.** Sorrel arrives holding the frost list and is never shown putting it down; four lines later Edwin is eating over it. Also "in the night" invites the question the scene does not answer — did she come up the hill in the dark, or lift it off his desk after supper?<br>
-→ "with the frost list under her arm, which she had taken back off his desk after supper." And, in the scones paragraph: "Edwin ate one over the ledger" — or have her put the list down on the table when she starts on Anders.</p>
-<p>**5.** "The second report came from Sorrel, on the fourth morning, who had it off the dairy cart."<br>
-— **Part 6, plainest form / Part 1, stranded relative.** "who" attaches to "the fourth morning" by position.<br>
-→ "The second came on the fourth morning, from Sorrel, who had it off the dairy cart."</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-— **Part 6, pluperfect where the simple past is the event.** Ch. 003 — the version the author rates — runs this whole passage in the simple past ("walked out there… took it apart… gave this serious thought… Peri wrote it down"), and it hits harder for it. The reframe into a reported past has pushed a chain of five participles into "had", and the last clause of a good paragraph now ends on the weakest available verb form.<br>
-→ Restore the simple past throughout both paragraphs; the frame sentence ("The first came up with the smith's boy…") already does the reporting work that the pluperfect is trying to do a second time.</p>
-<p>**7.** "The first came up with the smith's boy, who came for the tower's scythe blades… " and "It concerned the well-winch"<br>
-— **Part 6.** Three *came*s inside two sentences ("came up the hill / came up with / came for").<br>
-→ "…who was fetching the tower's scythe blades…" (see finding 2 for the rest of the line).</p>
-<p>**8.** "having already told somebody about it"<br>
-— **Part 1, the flat version is empty.** Restated flat: the Corrys had reported the winch to someone. To whom, and why does it matter? The intended point — that reporting it was, to them, the same as having it dealt with — is not on the page, and the phrase sits as a dangling qualification on the ratchet.<br>
-→ Either "and had told the smith about it in spring, which they took to be the end of their part in it", or cut.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> He noted the charm, and resented it, and ate another scone."<br>
-— **Part 5, redundancy + Part 7, endings are cuts.** The preceding sentence has already made the claim ("what the village kept sending up the hill was a well-mannered young woman doing chores"); the next sentence makes it again in the abstract; the last makes it a third time as a tricolon. In ch. 003 this sat mid-chapter with the ford feud after it. As a scene ending it is now the last thing on the page, and it is the cleverest thing on the page — the two conditions the voice rules put together.<br>
+<h2>Findings — <code>draft/book-01/scenes/11-reports.md</code></h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+— <strong>Part 1, dependents of an edit / fact inside the scene.</strong> Two scenes ago the book made a point of the opposite: the post does not come up the hill, tower business is left at the bottom with the widow Crane (scenes 01, 09), and scene 09 is <em>about</em> a cart that broke that understanding. &quot;Everything&quot; now reads as a contradiction of the thing the previous scene spent a paragraph on.<br />
+→ &quot;came up the hill the way news did, secondhand and improved on the way.&quot;</p>
+<p><strong>2.</strong> &quot;who came for the tower's scythe blades on the third morning&quot;<br />
+— <strong>Part 1, reference with no antecedent.</strong> Third morning of what? The scene never counts days and scene 10 dates itself as &quot;the morning after the parcel&quot;. The paragraph's own next sentence uses a different reckoning (&quot;the second day of her residence&quot;), so the reader is given two clocks and no key.<br />
+→ &quot;who came up for the tower's scythe blades the morning after the parcel and stayed to tell it.&quot;</p>
+<p><strong>3.</strong> &quot;She's had two mornings of it.&quot;<br />
+— <strong>Part 1, check every count.</strong> She has had <strong>one</strong>. She arrived Day 1 and was not at that morning's class (scene 03/04); she attended the ten o'clock once, on Day 2 (scene 07); on Day 3 &quot;Miss Millbrook did not attend&quot; (scene 10). This conversation is the fourth morning. The count is also the joke, so it fails visibly.<br />
+→ &quot;She's had one morning of it, and she never had a trowel in her hand.&quot;</p>
+<p><strong>4.</strong> &quot;with the frost list under her arm, which she had taken back in the night&quot; … &quot;Edwin ate one over the frost list&quot;<br />
+— <strong>Part 1, dependents / who is holding what.</strong> Sorrel arrives holding the frost list and is never shown putting it down; four lines later Edwin is eating over it. Also &quot;in the night&quot; invites the question the scene does not answer — did she come up the hill in the dark, or lift it off his desk after supper?<br />
+→ &quot;with the frost list under her arm, which she had taken back off his desk after supper.&quot; And, in the scones paragraph: &quot;Edwin ate one over the ledger&quot; — or have her put the list down on the table when she starts on Anders.</p>
+<p><strong>5.</strong> &quot;The second report came from Sorrel, on the fourth morning, who had it off the dairy cart.&quot;<br />
+— <strong>Part 6, plainest form / Part 1, stranded relative.</strong> &quot;who&quot; attaches to &quot;the fourth morning&quot; by position.<br />
+→ &quot;The second came on the fourth morning, from Sorrel, who had it off the dairy cart.&quot;</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+— <strong>Part 6, pluperfect where the simple past is the event.</strong> Ch. 003 — the version the author rates — runs this whole passage in the simple past (&quot;walked out there… took it apart… gave this serious thought… Peri wrote it down&quot;), and it hits harder for it. The reframe into a reported past has pushed a chain of five participles into &quot;had&quot;, and the last clause of a good paragraph now ends on the weakest available verb form.<br />
+→ Restore the simple past throughout both paragraphs; the frame sentence (&quot;The first came up with the smith's boy…&quot;) already does the reporting work that the pluperfect is trying to do a second time.</p>
+<p><strong>7.</strong> &quot;The first came up with the smith's boy, who came for the tower's scythe blades… &quot; and &quot;It concerned the well-winch&quot;<br />
+— <strong>Part 6.</strong> Three <em>came</em>s inside two sentences (&quot;came up the hill / came up with / came for&quot;).<br />
+→ &quot;…who was fetching the tower's scythe blades…&quot; (see finding 2 for the rest of the line).</p>
+<p><strong>8.</strong> &quot;having already told somebody about it&quot;<br />
+— <strong>Part 1, the flat version is empty.</strong> Restated flat: the Corrys had reported the winch to someone. To whom, and why does it matter? The intended point — that reporting it was, to them, the same as having it dealt with — is not on the page, and the phrase sits as a dangling qualification on the ratchet.<br />
+→ Either &quot;and had told the smith about it in spring, which they took to be the end of their part in it&quot;, or cut.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> He noted the charm, and resented it, and ate another scone.&quot;<br />
+— <strong>Part 5, redundancy + Part 7, endings are cuts.</strong> The preceding sentence has already made the claim (&quot;what the village kept sending up the hill was a well-mannered young woman doing chores&quot;); the next sentence makes it again in the abstract; the last makes it a third time as a tricolon. In ch. 003 this sat mid-chapter with the ford feud after it. As a scene ending it is now the last thing on the page, and it is the cleverest thing on the page — the two conditions the voice rules put together.<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**10.** "who came for the tower's scythe blades"<br>
-— **Part 3, where would this person actually do this?** Scene 09 established that the hill is enough of a pain that carters have a standing arrangement not to climb it, and this is the corn harvest; blades going *to* the smith now is the wrong direction for the season. A boy walking up for the tower's own grass-scythes is defensible, but the scene is inventing an errand to get a reporter up the hill, and the errand is the sort the author asks after.<br>
-→ Give him a reason that runs the other way and matches the season: "who came up with the tower's scythe blades back off the smith's stone."</p>
-<p>---</p>
-<p>**The device a second round would be about:** the first report is narrated at a level of detail no reporter in the chain could carry — the spread sackcloth, the pawl cleaned, the tooth filed *square*, "in the right order" — while the scene's whole repair over ch. 002 was to name who is telling whom. A smith's boy retailing his master's taproom verdict does not deliver a bench-level account of the work, so the fix names a mouth and then talks past it.</p>
+<p><strong>10.</strong> &quot;who came for the tower's scythe blades&quot;<br />
+— <strong>Part 3, where would this person actually do this?</strong> Scene 09 established that the hill is enough of a pain that carters have a standing arrangement not to climb it, and this is the corn harvest; blades going <em>to</em> the smith now is the wrong direction for the season. A boy walking up for the tower's own grass-scythes is defensible, but the scene is inventing an errand to get a reporter up the hill, and the errand is the sort the author asks after.<br />
+→ Give him a reason that runs the other way and matches the season: &quot;who came up with the tower's scythe blades back off the smith's stone.&quot;</p>
+<hr />
+<p><strong>The device a second round would be about:</strong> the first report is narrated at a level of detail no reporter in the chain could carry — the spread sackcloth, the pawl cleaned, the tooth filed <em>square</em>, &quot;in the right order&quot; — while the scene's whole repair over ch. 002 was to name who is telling whom. A smith's boy retailing his master's taproom verdict does not deliver a bench-level account of the work, so the fix names a mouth and then talks past it.</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 </body></html>

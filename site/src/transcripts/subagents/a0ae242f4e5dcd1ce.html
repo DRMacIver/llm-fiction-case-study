@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Thi…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. [redacted] This chapter…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,15 +7,28 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Thi…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a0ae242f4e5dcd1ce">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span><br>
-This chapter is over the em-dash budget (census: ~3-3.6 per 1000). Bring it under 2/1000 by restructuring — each em-dash becomes a full stop, a comma, a colon, parentheses, or a plain re-ordering, chosen for the sentence; never mechanically swap every dash for the same mark. Keep the dashes that are genuinely doing work (an interruption in speech, a true aside). Do not change content, dialogue intent, the ending, or the author's-note block below '---' (count dashes in the prose only). No other edits. Commit: "Thin em-dashes: 009" with trailer "Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;". Return before/after counts and words.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. [redacted] This chapter…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a0ae242f4e5dcd1ce">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span><br />
+This chapter is over the em-dash budget (census: ~3-3.6 per 1000). Bring it under 2/1000 by restructuring — each em-dash becomes a full stop, a comma, a colon, parentheses, or a plain re-ordering, chosen for the sentence; never mechanically swap every dash for the same mark. Keep the dashes that are genuinely doing work (an interruption in speech, a true aside). Do not change content, dialogue intent, the ending, or the author's-note block below '---' (count dashes in the prose only). No other edits. Commit: &quot;Thin em-dashes: 009&quot; with trailer &quot;Co-Authored-By: Claude Fable 5 <a href="mailto:noreply@anthropic.com">noreply@anthropic.com</a>&quot;. Return before/after counts and words.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -36,22 +49,26 @@ This chapter is over the em-dash budget (census: ~3-3.6 per 1000). Bring it unde
 <p>🔧 Bash: python3 -c " t=open('chapters/009-fenholt.md').read() i=t.index(\"*Author's note.*\") p=t…</p>
 <p>✅ 2 lines, 65 chars</p>
 <p>🔧 Bash: git log --oneline -3 -- chapters/009-fenholt.md</p>
-<p>✅ 3 lines, 181 chars — 0870ba1 Retrofit 009: language census rules + farming corrections / 81cd0f4 Add author's notes for specialist farming terms, chapters 001-021 / <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>✅ 3 lines, 181 chars — 0870ba1 Retrofit 009: language census rules + farming corrections / 81cd0f4 Add author's notes for specialist farming terms, chapters 001-021 / <span class="redacted">redacted sentence</span></p>
 </details>
 
 <div class="assistant-prose">
 <p>No change made — the chapter is already under budget.</p>
-<p><span class="redacted">redacted: private</span>/chapters/009-fenholt.md</p>
-<p>Counts (prose only, i.e. everything above the `---` that precedes the `*Author's note.*` block):<br>
-- Prose words: 3,838<br>
-- Prose em-dashes before: 5 → **1.30 per 1,000 words**<br>
-- Prose em-dashes after: 5 (unchanged) → 1.30 per 1,000<br>
-- No commit made (nothing to commit; working tree untouched).</p>
+<p><span class="redacted">redacted</span>/chapters/009-fenholt.md</p>
+<p>Counts (prose only, i.e. everything above the <code>---</code> that precedes the <code>*Author's note.*</code> block):</p>
+<ul>
+<li>Prose words: 3,838</li>
+<li>Prose em-dashes before: 5 → <strong>1.30 per 1,000 words</strong></li>
+<li>Prose em-dashes after: 5 (unchanged) → 1.30 per 1,000</li>
+<li>No commit made (nothing to commit; working tree untouched).</li>
+</ul>
 <p>Why the census figure differed: whole-file count is 16 em-dashes over 4,519 words = 3.54/1,000, but 11 of those 16 dashes are in the author's-note block, which the task explicitly excludes from the count and forbids editing.</p>
-<p>The 5 remaining prose dashes were assessed and all are doing genuine work:<br>
-1. `"You—" She turned right round.` — speech interruption (explicitly protected).<br>
-2/3. <span class="redacted">redacted sentence: unpublished prose</span><br>
-4/5. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>A prior commit (0870ba1, "Retrofit 009: language census rules") appears to have already thinned this chapter's prose dashes.</p>
+<p>The 5 remaining prose dashes were assessed and all are doing genuine work:</p>
+<ol>
+<li><code>&quot;You—&quot; She turned right round.</code> — speech interruption (explicitly protected).<br />
+2/3. <span class="redacted">redacted sentence: unpublished prose</span><br />
+4/5. <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<p>A prior commit (0870ba1, &quot;Retrofit 009: language census rules&quot;) appears to have already thinned this chapter's prose dashes.</p>
 </div>
 </body></html>

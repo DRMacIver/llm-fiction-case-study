@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/.claude/skills/pre-david-pass/SKILL.md fully…</title><style>
+<html><head><meta charset="utf-8"><title>Read [redacted]/.claude/skills/pre-david-pass/SKILL.md fully, then [redacted]…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,16 +7,28 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/.claude/skills/pre-david-pass/SKILL.md fully…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-adf18201037d2e3c8">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Read <span class="redacted">redacted: private</span>/.claude/skills/pre-david-pass/SKILL.md fully, then <span class="redacted">redacted: private</span>/notes/canon/characters/appearance.md (the approved descriptions). Then read the diff at <span class="redacted">redacted: private</span> and the full scene files it touches under <span class="redacted">redacted: private</span>/draft/book-01/scenes/ (01, 02, 04, 05, 08, 24).<br>
-<br>
-Apply the pre-David pass ONLY to the added/changed sentences and the lines immediately around them (before/after). Scenes 01, 05, 06 are accepted by the author, so the only changes permitted are these description insertions; do not comment on anything else in the scenes. Specific checks: does each sentence make sense literally; is any description a catalogue rather than a noticed thing; does anything contradict canon or the scene's own viewpoint (Edwin is POV throughout — he cannot see his own face, so scene 01's description of him is what Peri's look takes in; is that handled legitimately?); any new worldbuilding or invented fact beyond the appearance file; any clunk, em-dash, or LLM tell. Return a numbered list of findings, each with exact quoted text and a concrete proposed replacement, or "none" per scene. Return raw findings only, no preamble.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Read [redacted]/.claude/skills/pre-david-pass/SKILL.md fully, then [redacted]…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-adf18201037d2e3c8">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-30</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Read <span class="redacted">redacted</span>/.claude/skills/pre-david-pass/SKILL.md fully, then <span class="redacted">redacted</span>/notes/canon/characters/appearance.md (the approved descriptions). Then read the diff at <span class="redacted">redacted: private</span> and the full scene files it touches under <span class="redacted">redacted</span>/draft/book-01/scenes/ (01, 02, 04, 05, 08, 24).</p>
+<p>Apply the pre-David pass ONLY to the added/changed sentences and the lines immediately around them (before/after). Scenes 01, 05, 06 are accepted by the author, so the only changes permitted are these description insertions; do not comment on anything else in the scenes. Specific checks: does each sentence make sense literally; is any description a catalogue rather than a noticed thing; does anything contradict canon or the scene's own viewpoint (Edwin is POV throughout — he cannot see his own face, so scene 01's description of him is what Peri's look takes in; is that handled legitimately?); any new worldbuilding or invented fact beyond the appearance file; any clunk, em-dash, or LLM tell. Return a numbered list of findings, each with exact quoted text and a concrete proposed replacement, or &quot;none&quot; per scene. Return raw findings only, no preamble.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -34,37 +46,81 @@ Apply the pre-David pass ONLY to the added/changed sentences and the lines immed
 <p>🔧 Bash: for f in 04-four-minutes.md 05-in-some-sort-of-order.md; do echo "=== $f ==="; cat -n "$f…</p>
 <p>✅ 134 lines, 13408 chars</p>
 <p>✅ 114 lines, 9945 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes; sed -n '30,60p' 08-what-youre-standing-in.md…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes; sed -n '30,60p' 08-what-youre-standing-in.md; echo "=…</p>
 <p>✅ 45 lines, 4175 chars</p>
 </details>
 
 <div class="assistant-prose">
 <p>Findings, per scene.</p>
-<p>**Scene 01 — `<span class="redacted">redacted: private</span>/draft/book-01/scenes/01-pellings-half-past-twelve-soft.md`**</p>
-<p>1. "and small, so that the sword hung lower on her than a sword should and the pack rode high" — Part 1 (a word doing a job it cannot do). A sword hangs from a belt at the hip; being small does not make it hang lower on her, it makes it long *for* her. The flat restatement doesn't survive. Replace with: "and small, so that the sword was too long for her and the pack rode high".</p>
-<p>2. "a pale, schoolroom sort of face with four days of road on it" — Part 1 (inference that needs the next page) and Part 4 (knowledge state). Edwin learns she was schooled ten lines later, off the accent — "Northern, that accent, and not farm-northern; it had been to good schools." Reading "schoolroom" off her face from the study window pre-empts that beat and cannot be got from a face at all; and this is his first sight of her, before he has any reason to think it. Replace with: "a face that had been indoors all its life and four days on the road."</p>
-<p>3. <span class="redacted">redacted sentence: unpublished prose</span> The frame ("the way she had looked over the bends") is a legitimate device for what she *inspects*; it cannot carry what she *concludes*, and the second half of the list is Edwin narrating his own face, which he cannot see. It is also the appearance file's bullets transcribed in order: robe, hair, hands, face — four items, no reason for any of them. Cut to what the frame can hold and to what her looking is *for* — she is matching him to the Weave's image: "She looked him over on the step the way she had looked over the bends: the robe, the hands, the grey head that somebody in the village cut short for him and cut badly. Whatever she was checking him against, he matched it."</p>
-<p>4. "Whatever she had been checking him against, she put it away and stood her ground." — Part 2 (gesture at meaning) and Part 1 (the count). "Put it away" claims a private mental action the viewpoint cannot see; and "stood her ground" spends the beat that line 33's "She drew herself up. She had rehearsed this on the road, more than once" is there to spend, twelve lines later. Covered by the replacement in (3); otherwise cut the sentence.</p>
-<p>**Scene 02 — `<span class="redacted">redacted: private</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md`**</p>
-<p>5. `"It's very rustic," she said. Her eye went over him as it had gone over the room, the robe the colour of a ploughed field and the hands that went with it, and approved. "For a disguise, I mean. It's good."` — Part 6 (the interruption is not at a natural break) and Part 5 (redundancy). The joke is the two-beat: the flat verdict, then the qualifier that reveals her theory. Thirty words of narration between them kills the timing, the same way "the 'said Edwin' in the middle is weird". It is also the third pass over the robe and hands in two scenes (01's window paragraph, 01's step paragraph, here). Move the look after the joke lands, and cut the robe and hands as already given: `"It's very rustic," she said. "For a disguise, I mean. It's good." Her eye went over him as it had gone over the room, and approved.`</p>
-<p>6. "the robe the colour of a ploughed field" — Part 1 (fact check). Canon and scene 01 both have green-brown; a ploughed field is brown. Cut with (5); if kept anywhere, "green-brown".</p>
-<p>**Scene 04 — `<span class="redacted">redacted: private</span>/draft/book-01/scenes/04-four-minutes.md`**</p>
-<p>7. "who came in from Nether Wold on the dairy cart and was broad and red-faced from it" — Part 1 (the flat restatement is wrong). "From it" attaches both adjectives to the cart: she is not broad from riding a cart. Replace: "who came in from Nether Wold on the dairy cart and was broad, and red-faced from the ride,".</p>
-<p>8. "Dob was standing up, small for eleven, chalk on one thumb, and did not pretend to be looking anywhere else at all." — Part 5 (device). The sentence's whole work is the contrast between the eleven women looking away and the boy who doesn't; two appearance items wedged into the middle of it blunt the only beat in the paragraph, and "chalk on one thumb" arrives with no meaning until scene 13 gives him the wall. Put the size where it costs nothing and drop the chalk here: "Dob, who was small for eleven, was standing up, and did not pretend to be looking anywhere else at all."</p>
-<p>9. `"Turning," said Widow Sepp. She was seventy-odd, which is old for a farmwife, and small and upright with it, and she held her right wrist in against her side, where it had gone stiff.` — Part 2 (the narrator's aside), Part 5 (device), Part 6. Three problems: "which is old for a farmwife" is the author explaining the world's age scale to the reader, which no one in the scene needs; the description stops a fast question-and-answer exchange dead between "Turning" and "Why?"; and the very next paragraph already carries a narrator fact about her ("She had the best nose in the class, and knew it"), so she now gets two consecutive glosses. Cut it from line 21 and put the physical part on her first appearance in the paragraph above, where the class is being looked over: "Widow Sepp, seventy-odd and small and upright with it, her stiff right wrist held in against her side, looked at the heap."</p>
-<p>**Scene 05 — `<span class="redacted">redacted: private</span>/draft/book-01/scenes/05-in-some-sort-of-order.md`**</p>
-<p>10. "and being that still herself, she saw what other people did with their bodies" — Part 1 (inference that does not follow) and Part 5 (asserted, not shown). Standing still does not give anyone the ability to read posture; and the claim is made six lines before the scene *demonstrates* it with "You're sitting square to the desk" / "You sit like a question mark. I gave up on your spine in the second year." Telling the reader in advance is footnoting the joke. Cut the clause.</p>
-<p>11. "brown hair tied back for work, as nobody had seen it otherwise in eleven years" — Part 1 ("as" attaches to nothing) and Part 3 (who is "nobody"?). The flat restatement is "in eleven years nobody has seen her hair down", which is a claim about her private life Edwin has no standing to make, hung off an "as" that isn't doing a comparison or a reason. Replace: "brown hair tied back for work, which was the only way he had seen it in eleven years".</p>
-<p>12. "Sorrel stood where she had stopped. ... She put the frost list down on the side table, slowly." — Part 1 (dependents of an edit). The original had her cross to the side table; the insert plants her three steps inside the door and then has her put the list down on a side table without moving. Either she stays put and holds the list, or the new sentence goes. Simplest: cut "Sorrel stood where she had stopped." and attach the description to the action she was already doing.</p>
-<p>13. "She was tall and plain, quick when she moved and entirely still when she did not, brown hair tied back for work" — Part 2 (catalogue). Four attributes with no reason for any of them, in a paragraph whose job is the tension between the ordinary room and the thing Sorrel has walked in on. After (10)–(12) it should be one clause, carried by the action: "She was tall and plain, and quick, and she did not move; she put the frost list down on the side table, slowly."</p>
-<p>**Scene 08 — `<span class="redacted">redacted: private</span>/draft/book-01/scenes/08-what-youre-standing-in.md`**</p>
-<p>14. "a tall plain woman in a work apron, forearms bare and brown from the heaps, hair tied back, a pencil in the apron pocket and the soil-salts tables under one arm" — Part 2 (catalogue) and Part 5 (redundancy). Five items in one clause, and three of them — tall, plain, hair tied back — were delivered three scenes earlier in 05; a fact already given is not given again. This description's whole point is that it is *Peri's* first sight of her, so it should be the things scene 05 could not give: what a stranger reads off her. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>15. "brown from the heaps" — Part 1 (sense). Turning heaps does not make forearms brown; sun does. Covered by (14).</p>
-<p>16. "a pencil in the apron pocket" — Part 1 (dependents) and Part 5. Scene 05's best small beat is "Her hand went to her pocket for a pencil and came back without one." Stocking the pocket on the page three scenes later takes the point out of it. Cut, per (14).</p>
-<p>**Scene 24 — `<span class="redacted">redacted: private</span>/draft/book-01/scenes/24-which-way-at-the-bridge.md`**</p>
-<p>17. "Mrs Hobbet was there too, seventy-eight, with the bad shoulder she carried high. <span class="redacted">redacted sentence: unpublished prose</span> "At her age" was doing the work of the number; stating the number first and then saying "at her age" tells the same fact twice and flattens the three-beat rhythm the second sentence is built on. Keep one. Best: give the age to the second sentence, where it is already load-bearing — "Mrs Hobbet was there too, with the bad shoulder she carried high. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>---</p>
-<p>Device that a second round of comments would be about: the descriptions are being inserted as *lists of attributes attached to a name* — appearance-file bullets converted to prose and parked wherever the character first appears, rather than things the viewpoint notices because he has a reason to notice them. Every finding above is a symptom of that one construction. To make it work, each insertion should be bound to what is already happening in its sentence (Sorrel's stillness shown by her not moving; Sepp's wrist shown when she uses the trowel; Peri's size shown by the kit not fitting), and no character should be described twice.</p>
-<p>Second device: Edwin's own appearance. Scene 01 currently solves the viewpoint problem by narrating his face through a frame that cannot carry it. The only legitimate versions are what he handles or hears about himself (the badly cut hair he knows is badly cut, the robe, the hands) and what other people *do* in response to looking at him. Anything about his face has to come from a character's mouth or go.</p>
+<p>Scene 01 — <span class="redacted">redacted</span>/draft/book-01/scenes/01-pellings-half-past-twelve-soft.md</p>
+<ol>
+<li>
+<p>&quot;and small, so that the sword hung lower on her than a sword should and the pack rode high&quot; — Part 1 (a word doing a job it cannot do). A sword hangs from a belt at the hip; being small does not make it hang lower on her, it makes it long <em>for</em> her. The flat restatement doesn't survive. Replace with: &quot;and small, so that the sword was too long for her and the pack rode high&quot;.</p>
+</li>
+<li>
+<p>&quot;a pale, schoolroom sort of face with four days of road on it&quot; — Part 1 (inference that needs the next page) and Part 4 (knowledge state). Edwin learns she was schooled ten lines later, off the accent — &quot;Northern, that accent, and not farm-northern; it had been to good schools.&quot; Reading &quot;schoolroom&quot; off her face from the study window pre-empts that beat and cannot be got from a face at all; and this is his first sight of her, before he has any reason to think it. Replace with: &quot;a face that had been indoors all its life and four days on the road.&quot;</p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> The frame (&quot;the way she had looked over the bends&quot;) is a legitimate device for what she <em>inspects</em>; it cannot carry what she <em>concludes</em>, and the second half of the list is Edwin narrating his own face, which he cannot see. It is also the appearance file's bullets transcribed in order: robe, hair, hands, face — four items, no reason for any of them. Cut to what the frame can hold and to what her looking is <em>for</em> — she is matching him to the Weave's image: &quot;She looked him over on the step the way she had looked over the bends: the robe, the hands, the grey head that somebody in the village cut short for him and cut badly. Whatever she was checking him against, he matched it.&quot;</p>
+</li>
+<li>
+<p>&quot;Whatever she had been checking him against, she put it away and stood her ground.&quot; — Part 2 (gesture at meaning) and Part 1 (the count). &quot;Put it away&quot; claims a private mental action the viewpoint cannot see; and &quot;stood her ground&quot; spends the beat that line 33's &quot;She drew herself up. She had rehearsed this on the road, more than once&quot; is there to spend, twelve lines later. Covered by the replacement in (3); otherwise cut the sentence.</p>
+</li>
+</ol>
+<p>Scene 02 — <span class="redacted">redacted</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md`**</p>
+<ol start="5">
+<li>
+<p><code>&quot;It's very rustic,&quot; she said. Her eye went over him as it had gone over the room, the robe the colour of a ploughed field and the hands that went with it, and approved. &quot;For a disguise, I mean. It's good.&quot;</code> — Part 6 (the interruption is not at a natural break) and Part 5 (redundancy). The joke is the two-beat: the flat verdict, then the qualifier that reveals her theory. Thirty words of narration between them kills the timing, the same way &quot;the 'said Edwin' in the middle is weird&quot;. It is also the third pass over the robe and hands in two scenes (01's window paragraph, 01's step paragraph, here). Move the look after the joke lands, and cut the robe and hands as already given: <code>&quot;It's very rustic,&quot; she said. &quot;For a disguise, I mean. It's good.&quot; Her eye went over him as it had gone over the room, and approved.</code></p>
+</li>
+<li>
+<p>&quot;the robe the colour of a ploughed field&quot; — Part 1 (fact check). Canon and scene 01 both have green-brown; a ploughed field is brown. Cut with (5); if kept anywhere, &quot;green-brown&quot;.</p>
+</li>
+</ol>
+<p><strong>Scene 04 — <code><span class="redacted">redacted</span>/draft/book-01/scenes/04-four-minutes.md</code></strong></p>
+<ol start="7">
+<li>
+<p>&quot;who came in from Nether Wold on the dairy cart and was broad and red-faced from it&quot; — Part 1 (the flat restatement is wrong). &quot;From it&quot; attaches both adjectives to the cart: she is not broad from riding a cart. Replace: &quot;who came in from Nether Wold on the dairy cart and was broad, and red-faced from the ride,&quot;.</p>
+</li>
+<li>
+<p>&quot;Dob was standing up, small for eleven, chalk on one thumb, and did not pretend to be looking anywhere else at all.&quot; — Part 5 (device). The sentence's whole work is the contrast between the eleven women looking away and the boy who doesn't; two appearance items wedged into the middle of it blunt the only beat in the paragraph, and &quot;chalk on one thumb&quot; arrives with no meaning until scene 13 gives him the wall. Put the size where it costs nothing and drop the chalk here: &quot;Dob, who was small for eleven, was standing up, and did not pretend to be looking anywhere else at all.&quot;</p>
+</li>
+<li>
+<p><code>&quot;Turning,&quot; said Widow Sepp. She was seventy-odd, which is old for a farmwife, and small and upright with it, and she held her right wrist in against her side, where it had gone stiff.</code> — Part 2 (the narrator's aside), Part 5 (device), Part 6. Three problems: &quot;which is old for a farmwife&quot; is the author explaining the world's age scale to the reader, which no one in the scene needs; the description stops a fast question-and-answer exchange dead between &quot;Turning&quot; and &quot;Why?&quot;; and the very next paragraph already carries a narrator fact about her (&quot;She had the best nose in the class, and knew it&quot;), so she now gets two consecutive glosses. Cut it from line 21 and put the physical part on her first appearance in the paragraph above, where the class is being looked over: &quot;Widow Sepp, seventy-odd and small and upright with it, her stiff right wrist held in against her side, looked at the heap.&quot;</p>
+</li>
+</ol>
+<p><strong>Scene 05 — <code><span class="redacted">redacted</span>/draft/book-01/scenes/05-in-some-sort-of-order.md</code></strong></p>
+<ol start="10">
+<li>
+<p>&quot;and being that still herself, she saw what other people did with their bodies&quot; — Part 1 (inference that does not follow) and Part 5 (asserted, not shown). Standing still does not give anyone the ability to read posture; and the claim is made six lines before the scene <em>demonstrates</em> it with &quot;You're sitting square to the desk&quot; / &quot;You sit like a question mark. I gave up on your spine in the second year.&quot; Telling the reader in advance is footnoting the joke. Cut the clause.</p>
+</li>
+<li>
+<p>&quot;brown hair tied back for work, as nobody had seen it otherwise in eleven years&quot; — Part 1 (&quot;as&quot; attaches to nothing) and Part 3 (who is &quot;nobody&quot;?). The flat restatement is &quot;in eleven years nobody has seen her hair down&quot;, which is a claim about her private life Edwin has no standing to make, hung off an &quot;as&quot; that isn't doing a comparison or a reason. Replace: &quot;brown hair tied back for work, which was the only way he had seen it in eleven years&quot;.</p>
+</li>
+<li>
+<p>&quot;Sorrel stood where she had stopped. ... She put the frost list down on the side table, slowly.&quot; — Part 1 (dependents of an edit). The original had her cross to the side table; the insert plants her three steps inside the door and then has her put the list down on a side table without moving. Either she stays put and holds the list, or the new sentence goes. Simplest: cut &quot;Sorrel stood where she had stopped.&quot; and attach the description to the action she was already doing.</p>
+</li>
+<li>
+<p>&quot;She was tall and plain, quick when she moved and entirely still when she did not, brown hair tied back for work&quot; — Part 2 (catalogue). Four attributes with no reason for any of them, in a paragraph whose job is the tension between the ordinary room and the thing Sorrel has walked in on. After (10)–(12) it should be one clause, carried by the action: &quot;She was tall and plain, and quick, and she did not move; she put the frost list down on the side table, slowly.&quot;</p>
+</li>
+</ol>
+<p>**Scene 08 — `<span class="redacted">redacted</span>/draft/book-01/scenes/08-what-youre-standing-in.md</p>
+<ol start="14">
+<li>
+<p>&quot;a tall plain woman in a work apron, forearms bare and brown from the heaps, hair tied back, a pencil in the apron pocket and the soil-salts tables under one arm&quot; — Part 2 (catalogue) and Part 5 (redundancy). Five items in one clause, and three of them — tall, plain, hair tied back — were delivered three scenes earlier in 05; a fact already given is not given again. This description's whole point is that it is <em>Peri's</em> first sight of her, so it should be the things scene 05 could not give: what a stranger reads off her. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;brown from the heaps&quot; — Part 1 (sense). Turning heaps does not make forearms brown; sun does. Covered by (14).</p>
+</li>
+<li>
+<p>&quot;a pencil in the apron pocket&quot; — Part 1 (dependents) and Part 5. Scene 05's best small beat is &quot;Her hand went to her pocket for a pencil and came back without one.&quot; Stocking the pocket on the page three scenes later takes the point out of it. Cut, per (14).</p>
+</li>
+</ol>
+<p>Scene 24 — <span class="redacted">redacted</span>/draft/book-01/scenes/24-which-way-at-the-bridge.md</p>
+<ol start="17">
+<li>&quot;Mrs Hobbet was there too, seventy-eight, with the bad shoulder she carried high. <span class="redacted">redacted sentence: unpublished prose</span> &quot;At her age&quot; was doing the work of the number; stating the number first and then saying &quot;at her age&quot; tells the same fact twice and flattens the three-beat rhythm the second sentence is built on. Keep one. Best: give the age to the second sentence, where it is already load-bearing — &quot;Mrs Hobbet was there too, with the bad shoulder she carried high. <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<hr />
+<p>Device that a second round of comments would be about: the descriptions are being inserted as <em>lists of attributes attached to a name</em> — appearance-file bullets converted to prose and parked wherever the character first appears, rather than things the viewpoint notices because he has a reason to notice them. Every finding above is a symptom of that one construction. To make it work, each insertion should be bound to what is already happening in its sentence (Sorrel's stillness shown by her not moving; Sepp's wrist shown when she uses the trowel; Peri's size shown by the kit not fitting), and no character should be described twice.</p>
+<p>Second device: Edwin's own appearance. Scene 01 currently solves the viewpoint problem by narrating his face through a frame that cannot carry it. The only legitimate versions are what he handles or hears about himself (the badly cut hair he knows is badly cut, the robe, the hands) and what other people <em>do</em> in response to looking at him. Anything about his face has to come from a character's mouth or go.</p>
 </div>
 </body></html>

@@ -7,71 +7,86 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are doing a facts-only consistency check for the Autoroad project…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-ab4d9ba8a43442809">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are doing a facts-only consistency check for the Autoroad project (a Royal Road serial). Working directory: <span class="redacted">redacted: private</span><br>
-<br>
-Read these two freshly drafted scenes:<br>
-- draft/book-01/scenes/69-under-barrows-barn.md <span class="redacted">unpublished</span> (covers Days 31–35 = 15–19 Harvestmonth)<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (covers Day 35 = 19 Harvestmonth, afternoon)<br>
-<br>
-Then check EVERY checkable fact in them against these canon sources:<br>
-- notes/canon/world/timeline.md (specifically Days 31–35)<br>
-- notes/canon/characters/*.md (<span class="redacted">redacted: character</span>, peri, edwin, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, mattie-ordish, minor.md)<br>
-- notes/canon/world/*.md (fen margin, <span class="redacted">redacted: place</span>, charter house, and any other relevant world files)<br>
-- notes/canon/system.md<br>
-- draft/book-01/BACKFILL-ACT2.md<br>
-- draft/book-01/SCENES.md (rows 69–70 specifically, and the clue ledger)<br>
-- notes/sealed/** — READ ONLY. Never quote or paraphrase sealed content in your report. You may check the scenes against sealed guards but your report must describe shape only (e.g. "consistent with the sealed answer" or "a discrepancy exists" with a description of the discrepancy's nature, never the content of the sealed answer itself). Check specifically these guards: nobody explains the hole; no lode/scouring near a Deep; <span class="redacted">redacted: object</span>-at-water uncommented; air direction stated.<br>
-- scenes 63–68 in draft/book-01/scenes/ for continuity — check specifically: who is hurt, where people sleep, the Puckett brothers, <span class="redacted">redacted: character</span>'s shoulder, <span class="redacted">redacted: character</span>'s board, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>'s cart, the aid letter's 'eight hands', the Fellowship's three on the 25th, <span class="redacted">redacted: character</span>'s read-back and 'Write down that it worked', <span class="redacted">redacted: character</span> fetched from the pony, Edwin's mana floor (13th / fifth 17th / third 19th), the clearing tallies (31/44/blank/9/6/38+11), water in at 10:20, Ceddy Puckett's hand at noon, <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Also specifically verify:<br>
-- Distances: is <span class="redacted">redacted: place</span> forty miles away per canon?<br>
-- Charter house bed count<br>
-- The alehouse<br>
-- The Ordish dairy rooms<br>
-- Whether <span class="redacted">redacted: character</span> being out on the margin (in these scenes) is consistent with his established character/situation<br>
-- Whether <span class="redacted">redacted: character</span>'s flash draining "a fortnight" and a gutter running from the flash to the barn are plausible in-world (check system.md and world files for how flashes/mana drainage work)<br>
-- Whether <span class="redacted">redacted: character</span>'s "<span class="redacted">redacted: event</span>, fourteen in ten" matches the day book's counts established in canon<br>
-<br>
-STRICT CONSTRAINTS: Do NOT read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history. Do not use git log/show on those paths. Do NOT edit any file — this is read-only research.<br>
-<br>
-Report format:<br>
-1. Numbered findings, each with: the quoted line from the scene, the canon source (file + relevant excerpt/fact), and a proposed minimal fix. Only report actual checkable discrepancies or confirmations worth flagging — don't pad with trivial non-issues, but do surface genuine ambiguities.<br>
-2. A "New facts" list: things the two scenes establish that canon does not yet record (candidates for consistency-backfill later).<br>
-<br>
-Keep the sealed-material rule absolute: never reveal sealed content in any form. Return your full findings as your final message text (do not write a report file).</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are doing a facts-only consistency check for the Autoroad project…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-ab4d9ba8a43442809">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are doing a facts-only consistency check for the Autoroad project (a Royal Road serial). Working directory: <span class="redacted">redacted</span></p>
+<p>Read these two freshly drafted scenes:</p>
+<ul>
+<li>draft/book-01/scenes/69-under-barrows-barn.md <span class="unpub-tag">unpublished</span> (covers Days 31–35 = 15–19 Harvestmonth)<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> (covers Day 35 = 19 Harvestmonth, afternoon)</li>
+</ul>
+<p>Then check EVERY checkable fact in them against these canon sources:</p>
+<ul>
+<li>notes/canon/world/timeline.md (specifically Days 31–35)</li>
+<li>notes/canon/characters/*.md (<span class="redacted">redacted</span>, peri, edwin, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, mattie-ordish, minor.md)</li>
+<li>notes/canon/world/*.md (fen margin, <span class="redacted">redacted</span>, charter house, and any other relevant world files)</li>
+<li>notes/canon/system.md</li>
+<li>draft/book-01/BACKFILL-ACT2.md</li>
+<li>draft/book-01/SCENES.md (rows 69–70 specifically, and the clue ledger)</li>
+<li>notes/sealed/ — READ ONLY. Never quote or paraphrase sealed content in your report. You may check the scenes against sealed guards but your report must describe shape only (e.g. &quot;consistent with the sealed answer&quot; or &quot;a discrepancy exists&quot; with a description of the discrepancy's nature, never the content of the sealed answer itself). Check specifically these guards: nobody explains the hole; no lode/scouring near a Deep; <span class="redacted">redacted</span>-at-water uncommented; air direction stated.</li>
+<li>scenes 63–68 in draft/book-01/scenes/ for continuity — check specifically: who is hurt, where people sleep, the Puckett brothers, <span class="redacted">redacted</span>'s shoulder, <span class="redacted">redacted</span>'s board, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>'s cart, the aid letter's 'eight hands', the Fellowship's three on the 25th, <span class="redacted">redacted</span>'s read-back and 'Write down that it worked', <span class="redacted">redacted</span> fetched from the pony, Edwin's mana floor (13th / fifth 17th / third 19th), the clearing tallies (31/44/blank/9/6/38+11), water in at 10:20, Ceddy Puckett's hand at noon, <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p>Also specifically verify:</p>
+<ul>
+<li>Distances: is <span class="redacted">redacted</span> forty miles away per canon?</li>
+<li>Charter house bed count</li>
+<li>The alehouse</li>
+<li>The Ordish dairy rooms</li>
+<li>Whether <span class="redacted">redacted</span> being out on the margin (in these scenes) is consistent with his established character/situation</li>
+<li>Whether <span class="redacted">redacted</span>'s flash draining &quot;a fortnight&quot; and a gutter running from the flash to the barn are plausible in-world (check system.md and world files for how flashes/mana drainage work)</li>
+<li>Whether <span class="redacted">redacted</span>'s &quot;<span class="redacted">redacted</span>, fourteen in ten&quot; matches the day book's counts established in canon</li>
+</ul>
+<p>STRICT CONSTRAINTS: Do NOT read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="unpub-tag">unpublished</span> or their git history. Do not use git log/show on those paths. Do NOT edit any file — this is read-only research.</p>
+<p>Report format:</p>
+<ol>
+<li>Numbered findings, each with: the quoted line from the scene, the canon source (file + relevant excerpt/fact), and a proposed minimal fix. Only report actual checkable discrepancies or confirmations worth flagging — don't pad with trivial non-issues, but do surface genuine ambiguities.</li>
+<li>A &quot;New facts&quot; list: things the two scenes establish that canon does not yet record (candidates for consistency-backfill later).</li>
+</ol>
+<p>Keep the sealed-material rule absolute: never reveal sealed content in any form. Return your full findings as your final message text (do not write a report file).</p></blockquote>
 
 
 <details><summary>40 tool calls</summary>
-<p>🔧 Bash: cat draft/book-01/scenes/69-under-barrows-barn.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cat draft/book-01/scenes/69-under-barrows-barn.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 37 lines, 7316 chars</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
 <p>✅ 35 lines, 6012 chars</p>
 <p>🔧 Bash: sed -n '1,400p' notes/canon/world/timeline.md | grep -n -A5 -B2 "Day 3[1-5]\|31\b\|Harves…</p>
 <p>✅ 175 lines, 10892 chars</p>
-<p>🔧 Bash: grep -n "SCENE 69 <span class="redacted">unpublished</span>\|SCENE 70 <span class="redacted">unpublished</span>\|## 69\|## 70\|69\b.*⟦redacted: c…</p>
+<p>🔧 Bash: grep -n "SCENE 69 <span class="unpub-tag">unpublished</span>\|SCENE 70 <span class="unpub-tag">unpublished</span>\|## 69\|## 70\|69\b.*<span class="redacted">redacted</span>\|…</p>
 <p>✅ 2 lines, 226 chars</p>
-<p>🔧 Bash: grep -n "forty miles\|<span class="redacted">redacted: place</span>" notes/canon/world/*.md notes/canon/characters/*.…</p>
+<p>🔧 Bash: grep -n "forty miles\|<span class="redacted">redacted</span>" notes/canon/world/*.md notes/canon/characters/*.md draf…</p>
 <p>✅ 70 lines, 7316 chars</p>
 <p>🔧 Bash: grep -n -i "charter house\|alehouse\|dairy\|Ordish" notes/canon/world/*.md notes/canon/ch…</p>
 <p>✅ 53 lines, 5553 chars</p>
-<p>🔧 Bash: grep -n -i "<span class="redacted">redacted: character</span>" notes/canon/characters/*.md notes/canon/minor.md 2&gt;/de…</p>
+<p>🔧 Bash: grep -n -i "<span class="redacted">redacted</span>" notes/canon/characters/*.md notes/canon/minor.md 2&gt;/dev/null | he…</p>
 <p>✅ 27 lines, 2940 chars</p>
 <p>🔧 Bash: sed -n '220,260p' notes/canon/characters/minor.md</p>
 <p>✅ 41 lines, 2621 chars</p>
-<p>🔧 Bash: grep -n -i "<span class="redacted">redacted: character</span>" draft/book-01/scenes/6[3-8]-*.md</p>
+<p>🔧 Bash: grep -n -i "<span class="redacted">redacted</span>" draft/book-01/scenes/6[3-8]-*.md</p>
 <p>✅ 13 lines, 5560 chars</p>
 <p>🔧 Bash: ls draft/book-01/scenes/ | sed -n '1,90p' | grep -E "^6[3-8]"</p>
 <p>✅ 6 lines, 172 chars</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span></p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span></p>
 <p>✅ 2 lines, 200 chars</p>
-<p>🔧 Bash: grep -n -i "Puckett\|Ceddy\|shoulder\|<span class="redacted">redacted: character</span>" draft/book-01/scenes/6[3-8]-…</p>
+<p>🔧 Bash: grep -n -i "Puckett\|Ceddy\|shoulder\|<span class="redacted">redacted</span>" draft/book-01/scenes/6[3-8]-*.md | head…</p>
 <p>✅ 8 lines, 5378 chars</p>
 <p>🔧 Bash: grep -n -i "sleep\|slept\|bed\b" draft/book-01/scenes/6[3-8]-*.md</p>
 <p>✅ 14 lines, 10679 chars</p>
@@ -87,12 +102,12 @@ Keep the sealed-material rule absolute: never reveal sealed content in any form.
 <p>✅ 26 lines, 1457 chars</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 3 lines, 300 chars</p>
-<p>🔧 Bash: grep -n -i "flash\b" notes/canon/**/*.md draft/book-01/scenes/*.md 2&gt;/dev/null | grep -v…</p>
+<p>🔧 Bash: grep -n -i "flash\b" notes/canon//*.md draft/book-01/scenes/*.md 2&gt;/dev/null | grep -v "f…</p>
 <p>✅ 4 lines, 1503 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Found timeline.md already has this exact detail confirmed: "19th: the gutter cut from <span class="redacted">redacted: character</span>'s flash at first light..." Let me check that line fully plus the farming-glossary flash definition, and check geography.md for <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Found timeline.md already has this exact detail confirmed: &quot;19th: the gutter cut from <span class="redacted">redacted</span>'s flash at first light...&quot; Let me check that line fully plus the farming-glossary flash definition, and check geography.md for <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 
 <details><summary>10 tool calls</summary>
@@ -100,54 +115,68 @@ Keep the sealed-material rule absolute: never reveal sealed content in any form.
 <p>✅ 40 lines, 2288 chars</p>
 <p>🔧 Bash: ls notes/sealed/</p>
 <p>✅ 15 lines, 317 chars — COHERENCE.md / deeps.md / destiny.md</p>
-<p>🔧 Bash: grep -n -i "barn\|<span class="redacted">redacted: character</span>\|<span class="redacted">redacted: object</span>\|gutter\|flash\|lode\|scour\|…</p>
+<p>🔧 Bash: grep -n -i "barn\|<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>\|gutter\|flash\|lode\|scour\|air direction\|hole…</p>
 <p>✅ 100 lines, 11069 chars</p>
-<p>🔧 Bash: grep -n -i "<span class="redacted">redacted: object</span>\|lode\|scour\|wind\|air\b" draft/book-01/scenes/69-under-b…</p>
+<p>🔧 Bash: grep -n -i "<span class="redacted">redacted</span>\|lode\|scour\|wind\|air\b" draft/book-01/scenes/69-under-barrows-b…</p>
 <p>✅ 2 lines, 1060 chars</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 10 lines, 2591 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p># Facts-only consistency check: scenes 69–70</p>
-<p>## Findings</p>
-<p>**1. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Scene 69 <span class="redacted">unpublished</span>: *"<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Scene 66 <span class="redacted">unpublished</span> (`draft/book-01/scenes/66-the-fen-margin.md <span class="redacted">unpublished</span>`, break night, Day 30/14 Harvestmonth — five days earlier): *"<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> was stationed at the second gate throughout <span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>'s own description).</p>
-<p>There's a defensible reading that "the margin" in scene 69 <span class="redacted">unpublished</span> means specifically out among the wet steadings (<span class="redacted">redacted: character</span>'s barn itself), as distinct from the second gate/dry road where <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> **Proposed fix:** either soften to something like "further onto the margin than he'd ever stood" / "past the second gate, which was as far as he'd ever gone," or cut the claim if it isn't load-bearing.</p>
-<p>**2. <span class="redacted">redacted: character</span>'s flash draining "a fortnight" — possible physics ambiguity, not a hard contradiction**</p>
-<p>Scene 69 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Canon (`notes/canon/world/geography.md`): the same flooding is described as <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Scene 69 <span class="redacted">unpublished</span>'s phrasing ("would not drain for a fortnight") reads as passive/natural drainage taking a fortnight, which is looser than canon's mechanism. Not a contradiction of fact (both give "a fortnight" as the figure), but the causal mechanism is stated differently. **Proposed fix:** a half-line nod to the windpump (or just "wouldn't drain without the windpump for a fortnight") would tighten it — minor, optional.</p>
-<p>**3. <span class="redacted">redacted: character</span>'s summary figures — confirmed against canon, not a discrepancy (noted for completeness)**</p>
-<p>Scene 70 <span class="redacted">unpublished</span>: *"'<span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>This matches exactly: scene 45 <span class="redacted">unpublished</span> gives Weedmonth 4, Haymonth 7, Cornmonth 19 (day-book counts, <span class="redacted">redacted: character</span>'s hand under each date); scene 61 <span class="redacted">unpublished</span> gives "Fourteen in ten days" for Harvestmonth to the 10th. "And then the night" plausibly compresses the Day 29–30 break-night total. This is a clean, precise callback — flagging as a confirmation, not an issue.</p>
-<p>**4. The 38/49 barn figures — confirmed against canon, not a discrepancy**</p>
-<p>Timeline.md's summary line lists "38 from under the <span class="redacted">redacted: character</span> barn" for Days 31–35, but its own detailed Day-35 entry immediately below separates this into "38 out over two hours" (the daylight phase) and "eleven more" (the belly-crawl phase under <span class="redacted">redacted: character</span> and Peri, 13:10–13:40), which the scene renders as <span class="redacted">redacted: character</span>'s closing tally: "Forty-nine... Under one barn. <span class="redacted">redacted sentence: unpublished prose</span> No fix needed; if anything, canon's top summary sentence could later be amended to say "49 (38 + 11) from under the <span class="redacted">redacted: character</span> barn" for clarity, but that's cosmetic.</p>
-<p>**5. Water timing, Ceddy Puckett, <span class="redacted">redacted: character</span>/Peri under the barn — all confirmed exact matches**</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span> Wardens arrive at 16:00." Scene 69 <span class="redacted">unpublished</span>/70 match every element precisely: water in at "twenty past ten," Ceddy's hand "at noon, at the thirty-third," <span class="redacted">redacted: character</span> and Peri under "for half an hour" from "ten past one" to "twenty to two" (13:10–13:40), Wardens arriving "at four in the afternoon" (16:00). No discrepancies.</p>
-<p>**6. Aid-letter "eight hands" and Fellowship's three on the 25th — confirmed**</p>
-<p>Scene 70 <span class="redacted">unpublished</span>: "Your letter said eight. We're six" and the Fellowship's three "on the twenty-fifth." Both match timeline.md's Day 29 ("eight hands, *urgent* struck") and Day 41/Day-35 entries (Fellowship's three arriving the 25th). Consistent.</p>
-<p>**7. <span class="redacted">redacted: place</span> forty miles — confirmed**</p>
-<p>Scene 70 <span class="redacted">unpublished</span>: <span class="redacted">redacted: character</span> references "walked forty miles" / the six having "walked forty miles." Matches `notes/canon/world/geography.md`: "Distances as the Charter counts them: <span class="redacted">redacted: place</span> forty miles."</p>
-<p>**8. Edwin's mana floor progression — confirmed exact match**</p>
-<p>Scene 69 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**9. <span class="redacted">redacted: character</span>/<span class="redacted">redacted: character</span> "read-back" and "Write down that it worked" — consistent with established dynamic**</p>
-<p>Scene 70 <span class="redacted">unpublished</span>'s read-back ("Is everybody it concerns here?" ... <span class="redacted">redacted: character</span> fetched from the pony) and <span class="redacted">redacted: character</span>'s "Write down that it worked" both match the established <span class="redacted">redacted: character</span>/<span class="redacted">redacted: character</span> authority split documented in `notes/canon/characters/minor.md` (the read-back ritual, <span class="redacted">redacted: character</span>'s own book, "Write down that it worked" as her established line). Consistent.</p>
-<p>**10. Sealed guards — no violations found**</p>
-<p>Checked the scenes against the four named guards: no character explains the barn's "dry end" beyond a physical/spatial account (water level, ground fall) — no metaphysical or Deep-adjacent explanation is offered; no "lode" or "scouring" language appears anywhere in either scene; the creatures under the barn are never named "<span class="redacted">redacted: object</span>" and their water-avoidance is described without commentary, so the "<span class="redacted">redacted: object</span>-at-water uncommented" guard isn't engaged either way; no Deep mouth appears on the page in either scene, so the "air direction always stated" guard (which applies when a mouth is on the page) isn't triggered. All consistent with the sealed constraints.</p>
-<p>**11. Edwin's order to Peri and the "not a reason about ground" beat — premise-rule adjacent, flagging for awareness**</p>
-<p>Scene 69 <span class="redacted">unpublished</span>'s beat ("he had wanted her to, badly... not, when he looked at it, a reason about ground") reads as protective/paternal in context, not romantic, but per `notes/premise.md`'s hard rule (Edwin never romantically linked to Peri, zero ambiguity), this is a line worth a second look at the editing-pass stage — not a canon-fact discrepancy, but the phrasing sits close enough to the rail that it's worth flagging rather than silently passing over.</p>
-<p>## New facts (candidates for consistency-backfill)</p>
-<p>- Ceddy Puckett (named, one of the Puckett brothers) injures his hand at the barn at noon on the 33rd kill, is taken off on <span class="redacted">redacted: character</span>'s cart, does not return that day.<br>
-- <span class="redacted">redacted: character</span>'s protocol for going under a low crawl space with <span class="redacted">redacted: object</span> present: lead alone on the belly with a lamp, one person four feet behind with a bill, chosen small, with prior line-discipline experience.<br>
-- <span class="redacted">redacted: character</span> uses a physical lap-board when writing in the field (distinct from the Charter's wall board).<br>
-- Fenholt's Charter house has four beds; the alehouse has two (occupied by the injured Puckett brothers as of Day 35).<br>
-- The Ordish dairy rooms (established generically as "two rooms over the dairy," ch. 009) are specified as sleeping four <span class="redacted">redacted: place</span> hands, with "the mage and the girl" (Edwin and Peri) displaced to the kitchen.<br>
-- The empty <span class="redacted">redacted: character</span> farm is designated to take the remaining three <span class="redacted">redacted: place</span> hands, contingent on <span class="redacted">redacted: character</span>'s consent (he's laid up at the alehouse with his shoulder).<br>
-- <span class="redacted">redacted: place</span>'s roster arrangement: the six hands rostered from the 20th under <span class="redacted">redacted: character</span> and <span class="redacted">redacted: character</span> jointly.<br>
-- Specific gutter engineering: nine inches of water at the barn's far end, cut by Burl and the Puckett brothers under Edwin's guidance.<br>
-- <span class="redacted">redacted: character</span>'s own book entry mechanics: she writes a short note and turns the book for <span class="redacted">redacted: character</span> to read silently, which Edwin (at the far end) cannot read and doesn't need to.<br>
-- Peri's post-barn beat with <span class="redacted">redacted: character</span> (asking about the pony, the forty miles, feeding six people from one cart) — a small new characterization moment for both.</p>
-<p>No other checkable facts in the two scenes conflicted with canon. Files read: `draft/book-01/scenes/69-under-barrows-barn.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<h1>Facts-only consistency check: scenes 69–70</h1>
+<h2>Findings</h2>
+<ol>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<p>Scene 69 <span class="unpub-tag">unpublished</span>: *&quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Scene 66 <span class="unpub-tag">unpublished</span> (draft/book-01/scenes/66-the-fen-margin.md <span class="unpub-tag">unpublished</span>, break night, Day 30/14 Harvestmonth — five days earlier): *&quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> was stationed at the second gate throughout <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>'s own description).</p>
+<p>There's a defensible reading that &quot;the margin&quot; in scene 69 <span class="unpub-tag">unpublished</span> means specifically out among the wet steadings (<span class="redacted">redacted</span>'s barn itself), as distinct from the second gate/dry road where <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <strong>Proposed fix:</strong> either soften to something like &quot;further onto the margin than he'd ever stood&quot; / &quot;past the second gate, which was as far as he'd ever gone,&quot; or cut the claim if it isn't load-bearing.</p>
+<ol start="2">
+<li><span class="redacted">redacted</span>'s flash draining &quot;a fortnight&quot; — possible physics ambiguity, not a hard contradiction</li>
+</ol>
+<p>Scene 69 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Canon (<code>notes/canon/world/geography.md</code>): the same flooding is described as <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Scene 69 <span class="unpub-tag">unpublished</span>'s phrasing (&quot;would not drain for a fortnight&quot;) reads as passive/natural drainage taking a fortnight, which is looser than canon's mechanism. Not a contradiction of fact (both give &quot;a fortnight&quot; as the figure), but the causal mechanism is stated differently. <strong>Proposed fix:</strong> a half-line nod to the windpump (or just &quot;wouldn't drain without the windpump for a fortnight&quot;) would tighten it — minor, optional.</p>
+<ol start="3">
+<li><span class="redacted">redacted</span>'s summary figures — confirmed against canon, not a discrepancy (noted for completeness)</li>
+</ol>
+<p>Scene 70 <span class="unpub-tag">unpublished</span>: *&quot;'<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>This matches exactly: scene 45 <span class="unpub-tag">unpublished</span> gives Weedmonth 4, Haymonth 7, Cornmonth 19 (day-book counts, <span class="redacted">redacted</span>'s hand under each date); scene 61 <span class="unpub-tag">unpublished</span> gives &quot;Fourteen in ten days&quot; for Harvestmonth to the 10th. &quot;And then the night&quot; plausibly compresses the Day 29–30 break-night total. This is a clean, precise callback — flagging as a confirmation, not an issue.</p>
+<p><strong>4. The 38/49 barn figures — confirmed against canon, not a discrepancy</strong></p>
+<p>Timeline.md's summary line lists &quot;38 from under the <span class="redacted">redacted</span> barn&quot; for Days 31–35, but its own detailed Day-35 entry immediately below separates this into &quot;38 out over two hours&quot; (the daylight phase) and &quot;eleven more&quot; (the belly-crawl phase under <span class="redacted">redacted</span> and Peri, 13:10–13:40), which the scene renders as <span class="redacted">redacted</span>'s closing tally: &quot;Forty-nine... Under one barn. <span class="redacted">redacted sentence: unpublished prose</span> No fix needed; if anything, canon's top summary sentence could later be amended to say &quot;49 (38 + 11) from under the <span class="redacted">redacted</span> barn&quot; for clarity, but that's cosmetic.</p>
+<ol start="5">
+<li>Water timing, Ceddy Puckett, <span class="redacted">redacted</span>/Peri under the barn — all confirmed exact matches</li>
+</ol>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> Wardens arrive at 16:00.&quot; Scene 69 <span class="unpub-tag">unpublished</span>/70 match every element precisely: water in at &quot;twenty past ten,&quot; Ceddy's hand &quot;at noon, at the thirty-third,&quot; <span class="redacted">redacted</span> and Peri under &quot;for half an hour&quot; from &quot;ten past one&quot; to &quot;twenty to two&quot; (13:10–13:40), Wardens arriving &quot;at four in the afternoon&quot; (16:00). No discrepancies.</p>
+<p><strong>6. Aid-letter &quot;eight hands&quot; and Fellowship's three on the 25th — confirmed</strong></p>
+<p>Scene 70 <span class="unpub-tag">unpublished</span>: &quot;Your letter said eight. We're six&quot; and the Fellowship's three &quot;on the twenty-fifth.&quot; Both match timeline.md's Day 29 (&quot;eight hands, <em>urgent</em> struck&quot;) and Day 41/Day-35 entries (Fellowship's three arriving the 25th). Consistent.</p>
+<ol start="7">
+<li><span class="redacted">redacted</span> forty miles — confirmed</li>
+</ol>
+<p>Scene 70 <span class="unpub-tag">unpublished</span>: <span class="redacted">redacted</span> references &quot;walked forty miles&quot; / the six having &quot;walked forty miles.&quot; Matches <code>notes/canon/world/geography.md</code>: &quot;Distances as the Charter counts them: <span class="redacted">redacted</span> forty miles.&quot;</p>
+<p><strong>8. Edwin's mana floor progression — confirmed exact match</strong></p>
+<p>Scene 69 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<ol start="9">
+<li><span class="redacted">redacted</span>/<span class="redacted">redacted</span> &quot;read-back&quot; and &quot;Write down that it worked&quot; — consistent with established dynamic</li>
+</ol>
+<p>Scene 70 <span class="unpub-tag">unpublished</span>'s read-back (&quot;Is everybody it concerns here?&quot; ... <span class="redacted">redacted</span> fetched from the pony) and <span class="redacted">redacted</span>'s &quot;Write down that it worked&quot; both match the established <span class="redacted">redacted</span>/<span class="redacted">redacted</span> authority split documented in <code>notes/canon/characters/minor.md</code> (the read-back ritual, <span class="redacted">redacted</span>'s own book, &quot;Write down that it worked&quot; as her established line). Consistent.</p>
+<p><strong>10. Sealed guards — no violations found</strong></p>
+<p>Checked the scenes against the four named guards: no character explains the barn's &quot;dry end&quot; beyond a physical/spatial account (water level, ground fall) — no metaphysical or Deep-adjacent explanation is offered; no &quot;lode&quot; or &quot;scouring&quot; language appears anywhere in either scene; the creatures under the barn are never named &quot;<span class="redacted">redacted</span>&quot; and their water-avoidance is described without commentary, so the &quot;<span class="redacted">redacted</span>-at-water uncommented&quot; guard isn't engaged either way; no Deep mouth appears on the page in either scene, so the &quot;air direction always stated&quot; guard (which applies when a mouth is on the page) isn't triggered. All consistent with the sealed constraints.</p>
+<p><strong>11. Edwin's order to Peri and the &quot;not a reason about ground&quot; beat — premise-rule adjacent, flagging for awareness</strong></p>
+<p>Scene 69 <span class="unpub-tag">unpublished</span>'s beat (&quot;he had wanted her to, badly... not, when he looked at it, a reason about ground&quot;) reads as protective/paternal in context, not romantic, but per <code>notes/premise.md</code>'s hard rule (Edwin never romantically linked to Peri, zero ambiguity), this is a line worth a second look at the editing-pass stage — not a canon-fact discrepancy, but the phrasing sits close enough to the rail that it's worth flagging rather than silently passing over.</p>
+<h2>New facts (candidates for consistency-backfill)</h2>
+<ul>
+<li>Ceddy Puckett (named, one of the Puckett brothers) injures his hand at the barn at noon on the 33rd kill, is taken off on <span class="redacted">redacted</span>'s cart, does not return that day.</li>
+<li><span class="redacted">redacted</span>'s protocol for going under a low crawl space with <span class="redacted">redacted</span> present: lead alone on the belly with a lamp, one person four feet behind with a bill, chosen small, with prior line-discipline experience.</li>
+<li><span class="redacted">redacted</span> uses a physical lap-board when writing in the field (distinct from the Charter's wall board).</li>
+<li>Fenholt's Charter house has four beds; the alehouse has two (occupied by the injured Puckett brothers as of Day 35).</li>
+<li>The Ordish dairy rooms (established generically as &quot;two rooms over the dairy,&quot; ch. 009) are specified as sleeping four <span class="redacted">redacted</span> hands, with &quot;the mage and the girl&quot; (Edwin and Peri) displaced to the kitchen.</li>
+<li>The empty <span class="redacted">redacted</span> farm is designated to take the remaining three <span class="redacted">redacted</span> hands, contingent on <span class="redacted">redacted</span>'s consent (he's laid up at the alehouse with his shoulder).</li>
+<li><span class="redacted">redacted</span>'s roster arrangement: the six hands rostered from the 20th under <span class="redacted">redacted</span> and <span class="redacted">redacted</span> jointly.</li>
+<li>Specific gutter engineering: nine inches of water at the barn's far end, cut by Burl and the Puckett brothers under Edwin's guidance.</li>
+<li><span class="redacted">redacted</span>'s own book entry mechanics: she writes a short note and turns the book for <span class="redacted">redacted</span> to read silently, which Edwin (at the far end) cannot read and doesn't need to.</li>
+<li>Peri's post-barn beat with <span class="redacted">redacted</span> (asking about the pony, the forty miles, feeding six people from one cart) — a small new characterization moment for both.</li>
+</ul>
+<p>No other checkable facts in the two scenes conflicted with canon. Files read: draft/book-01/scenes/69-under-barrows-barn.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 </body></html>

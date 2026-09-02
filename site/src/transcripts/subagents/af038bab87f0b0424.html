@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read ONLY: .claude/skills/editing-pass/SKI…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. Read ONLY: .claude/skills/editing-pass/SKILL.md (Pa…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,15 +7,28 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read ONLY: .claude/skills/editing-pass/SKI…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-af038bab87f0b0424">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. Read ONLY: .claude/skills/editing-pass/SKILL.md (Pass 1 only), then chapters/015-the-break-night.md in full.<br>
-You are a narrow reviewer with ONE lens. HOSTILE-LITERAL SENSE: lines whose surface meaning inverts intent; self-contradicting dialogue; broken logic; staging impossibilities (who can hear/see what from where; objects in two places; time of day); wrong-way comparisons; dialogue answering the wrong question; referents that fail.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. Read ONLY: .claude/skills/editing-pass/SKILL.md (Pa…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-af038bab87f0b0424">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. Read ONLY: .claude/skills/editing-pass/SKILL.md (Pass 1 only), then chapters/015-the-break-night.md in full.<br />
+You are a narrow reviewer with ONE lens. HOSTILE-LITERAL SENSE: lines whose surface meaning inverts intent; self-contradicting dialogue; broken logic; staging impossibilities (who can hear/see what from where; objects in two places; time of day); wrong-way comparisons; dialogue answering the wrong question; referents that fail.<br />
 Report ONLY findings within your lens, compactly, each as: quote (short) | problem | suggested fix. Precision matters: invented problems are as bad as misses. Do NOT declare the chapter clean or certify anything — absence of findings is simply an empty list.</p></blockquote>
 
 
@@ -26,7 +39,13 @@ Report ONLY findings within your lens, compactly, each as: quote (short) | probl
 
 <div class="assistant-prose">
 <p>Pass 1 (sense) findings:</p>
-<p>1. "It took until seven" (line 79) / "At seven he opened his eyes" (line 85) vs. "it takes four hours" (line 75) and Ferrin "stayed there for four hours" (line 55), with the working stated to begin "Half past three" (line 65) | Arithmetic doesn't survive re-derivation: 3:30 + four hours = 7:30, not seven. The chapter asserts the duration is four hours in two separate places, then shows a clock start and end that are only 3.5 hours apart (and less, if the eleven idle minutes at line 57 precede the "half past three" start-write at line 65, which would make it under 3h20m). | Either move the finish to "half past seven," change the stated duration to "three and a half hours" everywhere it's asserted (lines 55, 75), or push the start time earlier (e.g., "three o'clock").</p>
-<p>2. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<ol>
+<li>
+<p>&quot;It took until seven&quot; (line 79) / &quot;At seven he opened his eyes&quot; (line 85) vs. &quot;it takes four hours&quot; (line 75) and Ferrin &quot;stayed there for four hours&quot; (line 55), with the working stated to begin &quot;Half past three&quot; (line 65) | Arithmetic doesn't survive re-derivation: 3:30 + four hours = 7:30, not seven. The chapter asserts the duration is four hours in two separate places, then shows a clock start and end that are only 3.5 hours apart (and less, if the eleven idle minutes at line 57 precede the &quot;half past three&quot; start-write at line 65, which would make it under 3h20m). | Either move the finish to &quot;half past seven,&quot; change the stated duration to &quot;three and a half hours&quot; everywhere it's asserted (lines 55, 75), or push the start time earlier (e.g., &quot;three o'clock&quot;).</p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+</ol>
 </div>
 </body></html>

@@ -7,67 +7,79 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-af28d4d7bf30c396a">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and <span class="redacted">redacted: private</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md. Also read <span class="redacted">redacted: private</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance of that rule, worth a human look), FALSE-POSITIVE (misread, counter-example, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule) into one verdict. Then add to judge_added any clear violations of the semantic rules (scope "scene") the scanners missed. Be strict: the cost of a false CONFIRMED is DRMacIver's time.<br>
-<br>
-Candidates:<br>
-[<br>
- {<br>
-  "rule_id": "missing-qualifier",<br>
-  "quote": "It's called the Pellings.",<br>
-  "reason": "The Pellings is a bare noun phrase without context or qualifier; reader cannot determine its sense (place, organization, task, etc.)"<br>
- },<br>
- {<br>
-  "rule_id": "unanswered-question",<br>
-  "quote": "\"From what?\" / \"That hasn't been revealed yet.\"",<br>
-  "reason": "Edwin's practical question 'From what?' receives a non-answer as the first sentence. The rule requires the first sentence to answer a practical question in usable terms; instead, Peri defers with 'That hasn't been revealed yet' before eventually providing speculation in later sentences."<br>
- },<br>
- {<br>
-  "rule_id": "description-list",<br>
-  "quote": "Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said *beans*. On the wall, in a frame, a sampler with a wheat sheaf on it that a farmwife had worked for him one winter.",<br>
-  "reason": "Description presented as sequential list of room items (bunches, dresser, catalogues, jars, sampler) rather than one noticed thing bound to viewpoint action"<br>
- },<br>
- {<br>
-  "rule_id": "unearned-authority",<br>
-  "quote": "\"Don't ask it *who*. You've done *who*. Ask it *what*. What am I to save the world from.\"",<br>
-  "reason": "Edwin issues direct commands to Peri without established ground for authority; Peri explicitly rejects by interrupting and declining to continue"<br>
- },<br>
- {<br>
-  "rule_id": "canon-scale-contradiction",<br>
-  "quote": "had done for three hundred years",<br>
-  "reason": "Edwin claims three hundred years here, but line 17 says 'three hundred and fifty years' — internally contradictory age reference"<br>
- },<br>
- {<br>
-  "rule_id": "canon-scale-contradiction",<br>
-  "quote": "He had seen it twice in three hundred and fifty years.",<br>
-  "reason": "Claims 350 years, but elsewhere (lines 13, 71) claims 300 years — contradicts other age statements"<br>
- },<br>
- {<br>
-  "rule_id": "contamination-overlap",<br>
-  "quote": "She sat at his kitchen table with her pack still on and looked round the room with open interest, and Edwin, filling the kettle, was aware of what she was seeing.",<br>
-  "reason": "Eight-word run matches deleted chapters/001-the-wrong-man.md; overlap check found 26 total contaminating runs"<br>
- },<br>
- {<br>
-  "rule_id": "contamination-overlap",<br>
-  "quote": "What he read on Peri Millbrook nearly made him scald himself.",<br>
-  "reason": "Matches deleted chapters/001; part of the 26-run contamination detected by overlap_check.py"<br>
- },<br>
- {<br>
-  "rule_id": "contamination-overlap",<br>
-  "quote": "She was wearing fate magic.",<br>
-  "reason": "Matches deleted chapters/001; core revelation sentence contaminated"<br>
- },<br>
- {<br>
-  "rule_id": "contamination-overlap",<br>
-  "quote": "He put her tea in front of her, and his own, and sat down. \"Tell me about this class of yours.\"",<br>
-  "reason": "Matches deleted chapters/001; part of 26-run contamination from overlap_check.py"<br>
- }<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-af28d4d7bf30c396a">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted</span>/tools/lint/rules.json and <span class="redacted">redacted</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md. Also read <span class="redacted">redacted</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance of that rule, worth a human look), FALSE-POSITIVE (misread, counter-example, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule) into one verdict. Then add to judge_added any clear violations of the semantic rules (scope &quot;scene&quot;) the scanners missed. Be strict: the cost of a false CONFIRMED is DRMacIver's time.</p>
+<p>Candidates:<br />
+[<br />
+{<br />
+&quot;rule_id&quot;: &quot;missing-qualifier&quot;,<br />
+&quot;quote&quot;: &quot;It's called the Pellings.&quot;,<br />
+&quot;reason&quot;: &quot;The Pellings is a bare noun phrase without context or qualifier; reader cannot determine its sense (place, organization, task, etc.)&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;unanswered-question&quot;,<br />
+&quot;quote&quot;: &quot;&quot;From what?&quot; / &quot;That hasn't been revealed yet.&quot;&quot;,<br />
+&quot;reason&quot;: &quot;Edwin's practical question 'From what?' receives a non-answer as the first sentence. The rule requires the first sentence to answer a practical question in usable terms; instead, Peri defers with 'That hasn't been revealed yet' before eventually providing speculation in later sentences.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;description-list&quot;,<br />
+&quot;quote&quot;: &quot;Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said <em>beans</em>. On the wall, in a frame, a sampler with a wheat sheaf on it that a farmwife had worked for him one winter.&quot;,<br />
+&quot;reason&quot;: &quot;Description presented as sequential list of room items (bunches, dresser, catalogues, jars, sampler) rather than one noticed thing bound to viewpoint action&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;unearned-authority&quot;,<br />
+&quot;quote&quot;: &quot;&quot;Don't ask it <em>who</em>. You've done <em>who</em>. Ask it <em>what</em>. What am I to save the world from.&quot;&quot;,<br />
+&quot;reason&quot;: &quot;Edwin issues direct commands to Peri without established ground for authority; Peri explicitly rejects by interrupting and declining to continue&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;canon-scale-contradiction&quot;,<br />
+&quot;quote&quot;: &quot;had done for three hundred years&quot;,<br />
+&quot;reason&quot;: &quot;Edwin claims three hundred years here, but line 17 says 'three hundred and fifty years' — internally contradictory age reference&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;canon-scale-contradiction&quot;,<br />
+&quot;quote&quot;: &quot;He had seen it twice in three hundred and fifty years.&quot;,<br />
+&quot;reason&quot;: &quot;Claims 350 years, but elsewhere (lines 13, 71) claims 300 years — contradicts other age statements&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;contamination-overlap&quot;,<br />
+&quot;quote&quot;: &quot;She sat at his kitchen table with her pack still on and looked round the room with open interest, and Edwin, filling the kettle, was aware of what she was seeing.&quot;,<br />
+&quot;reason&quot;: &quot;Eight-word run matches deleted chapters/001-the-wrong-man.md; overlap check found 26 total contaminating runs&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;contamination-overlap&quot;,<br />
+&quot;quote&quot;: &quot;What he read on Peri Millbrook nearly made him scald himself.&quot;,<br />
+&quot;reason&quot;: &quot;Matches deleted chapters/001; part of the 26-run contamination detected by overlap_check.py&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;contamination-overlap&quot;,<br />
+&quot;quote&quot;: &quot;She was wearing fate magic.&quot;,<br />
+&quot;reason&quot;: &quot;Matches deleted chapters/001; core revelation sentence contaminated&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;contamination-overlap&quot;,<br />
+&quot;quote&quot;: &quot;He put her tea in front of her, and his own, and sat down. &quot;Tell me about this class of yours.&quot;&quot;,<br />
+&quot;reason&quot;: &quot;Matches deleted chapters/001; part of 26-run contamination from overlap_check.py&quot;<br />
+}<br />
 ]</p></blockquote>
 
 
@@ -76,9 +88,9 @@ Candidates:<br>
 </div>
 
 <details><summary>14 tool calls</summary>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json</p>
 <p>✅ 66 lines, 2240 chars</p>
-<p>🔧 Bash: cat -n <span class="redacted">redacted: private</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md</p>
+<p>🔧 Bash: cat -n <span class="redacted">redacted</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md</p>
 <p>✅ 93 lines, 8905 chars</p>
 <p>🔧 Bash: python3 -c " import json rs=json.load(open('tools/lint/rules.json')) print([r['id'] for r…</p>
 <p>✅ 120 lines, 8087 chars</p>
@@ -88,7 +100,7 @@ Candidates:<br>
 <p>✅ 1 lines, 31 chars</p>
 <p>🔧 Bash: grep -rn "3.7\|contaminat\|mirror" draft/book-01/VOICE.md | head -30; echo ---; grep -n "…</p>
 <p>✅ 37 lines, 3645 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"verdicts": [{"rule_id": "missing-qualifier", "quote": "It…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

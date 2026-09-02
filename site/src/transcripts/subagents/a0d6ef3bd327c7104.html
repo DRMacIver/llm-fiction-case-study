@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read ONLY: notes/voices.md (incl. the Lang…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. Read ONLY: notes/voices.md (incl. the Language cens…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,24 +7,37 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read ONLY: notes/voices.md (incl. the Lang…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a0d6ef3bd327c7104">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. Read ONLY: notes/voices.md (incl. the Language census section), notes/llm-tells.md, .claude/skills/editing-pass/SKILL.md, then chapters/026-the-trial-fields.md in full. You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span> Dialogue is exempt from the narration-construction bans. Report ONLY findings within your lens, compactly: quote (short) | problem | fix. Invented problems are as bad as misses. Do not certify anything as clean.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. Read ONLY: notes/voices.md (incl. the Language cens…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a0d6ef3bd327c7104">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. Read ONLY: notes/voices.md (incl. the Language census section), notes/llm-tells.md, .claude/skills/editing-pass/SKILL.md, then chapters/026-the-trial-fields.md in full. You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span> Dialogue is exempt from the narration-construction bans. Report ONLY findings within your lens, compactly: quote (short) | problem | fix. Invented problems are as bad as misses. Do not certify anything as clean.</p></blockquote>
 
 
 <details><summary>30 tool calls</summary>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/voices.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/voices.md</p>
 <p>✅ 424 lines, 24733 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/llm-tells.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/llm-tells.md</p>
 <p>✅ 219 lines, 13540 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/.claude/skills/editing-pass/SKILL.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/.claude/skills/editing-pass/SKILL.md</p>
 <p>✅ 130 lines, 9283 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/chapters/026-the-trial-fields.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/chapters/026-the-trial-fields.md</p>
 <p>✅ 189 lines, 21100 chars</p>
 <p>🔧 Bash: python3 - &lt;&lt;'EOF' import re text = open('chapters/026-the-trial-fields.md').read() prose…</p>
 <p>✅ 2 lines, 24 chars — words: 3785 / em dashes: 2</p>
@@ -32,46 +45,46 @@ Repo: <span class="redacted">redacted: private</span>. Read ONLY: notes/voices.m
 <p>✅ 14 lines, 210 chars</p>
 <p>🔧 Bash: grep -n ", which " chapters/026-the-trial-fields.md</p>
 <p>✅ 14 lines, 5023 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> F=chapters/026-the-trial-fields.md echo "-- arithmetic --"; grep -…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> F=chapters/026-the-trial-fields.md echo "-- arithmetic --"; grep -no "arith…</p>
 <p>✅ 29 lines, 406 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> F=chapters/026-the-trial-fields.md sed -n '23p;29p;33p;37p;65p;77p…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> F=chapters/026-the-trial-fields.md sed -n '23p;29p;33p;37p;65p;77p;103p;127…</p>
 <p>✅ 14 lines, 3663 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> F=chapters/026-the-trial-fields.md grep -no "three hundred years\|…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> F=chapters/026-the-trial-fields.md grep -no "three hundred years\|market da…</p>
 <p>✅ 12 lines, 188 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> F=chapters/026-the-trial-fields.md grep -noE "(perhaps|about|under…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> F=chapters/026-the-trial-fields.md grep -noE "(perhaps|about|under|for) (a…</p>
 <p>✅ 13 lines, 423 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> F=chapters/026-the-trial-fields.md sed -n '17p;83p;99p;151p' $F</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> F=chapters/026-the-trial-fields.md sed -n '17p;83p;99p;151p' $F</p>
 <p>✅ 4 lines, 940 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> F=chapters/026-the-trial-fields.md grep -noE "(\b\w{5,}\b)[^.]{3,4…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> F=chapters/026-the-trial-fields.md grep -noE "(\b\w{5,}\b)[^.]{3,40}\1" $F…</p>
 <p>✅ 3 lines, 91 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 - &lt;&lt;'EOF' import re text = open('chapters/026-the-trial-fi…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> python3 - &lt;&lt;'EOF' import re text = open('chapters/026-the-trial-fields.md')…</p>
 <p>✅ 22 lines, 873 chars — <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> F=chapters/026-the-trial-fields.md grep -n "walking out from a mid…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> F=chapters/026-the-trial-fields.md grep -n "walking out from a middle" $F g…</p>
 <p>✅ 4 lines, 2080 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Findings from a register/mechanical pass over `chapters/026-the-trial-fields.md` (prose word count ≈3,785, excluding author's-note block; em dashes in prose = 2, well within budget).</p>
-<p>**1. Doubled-word chiasmus (rule 8) — narration, not dialogue, so not exempt.**<br>
+<p>Findings from a register/mechanical pass over <code>chapters/026-the-trial-fields.md</code> (prose word count ≈3,785, excluding author's-note block; em dashes in prose = 2, well within budget).</p>
+<p><strong>1. Doubled-word chiasmus (rule 8) — narration, not dialogue, so not exempt.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**2. Verdict clause (rule 1), narration.**<br>
-"<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s reaction rather than reporting a physical consequence | Cut to two sentences: "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**3. Verdict clause (rule 1), narration.**<br>
+<p><strong>2. Verdict clause (rule 1), narration.</strong><br />
+&quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s reaction rather than reporting a physical consequence | Cut to two sentences: &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><strong>3. Verdict clause (rule 1), narration.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**4. Verdict-tailed polysyndeton (rule 7).**<br>
+<p><strong>4. Verdict-tailed polysyndeton (rule 7).</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**5. House-word rate — "nobody/somebody/anybody."**<br>
-~10 combined instances in 3,785 words (≈26/10k); target is a halved rate (~11/10k) off the 93k-word census baseline. This single chapter alone runs at more than double target. Worst narration hits: "somebody" (line 23), "nobody had designed" (line 37), "somebody wanted to know" (line 33), "nobody had gone out" (line 143). | Vary at least half of the narration instances to named/concrete subjects ("<span class="redacted">redacted: character</span>," "the college," "no one had thought to," etc.).</p>
-<p>**6. House-word — "the whole of."**<br>
+<p><strong>5. House-word rate — &quot;nobody/somebody/anybody.&quot;</strong><br />
+~10 combined instances in 3,785 words (≈26/10k); target is a halved rate (~11/10k) off the 93k-word census baseline. This single chapter alone runs at more than double target. Worst narration hits: &quot;somebody&quot; (line 23), &quot;nobody had designed&quot; (line 37), &quot;somebody wanted to know&quot; (line 33), &quot;nobody had gone out&quot; (line 143). | Vary at least half of the narration instances to named/concrete subjects (&quot;<span class="redacted">redacted</span>,&quot; &quot;the college,&quot; &quot;no one had thought to,&quot; etc.).</p>
+<p><strong>6. House-word — &quot;the whole of.&quot;</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**7. House-word / motif rate — "market day."**<br>
+<p><strong>7. House-word / motif rate — &quot;market day.&quot;</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**8. Maxim-capped speech (rule 3) — borderline, worth the author's eye.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> It's stopped having weather at all." to keep it factual/diegetic rather than aphoristic, or confirm this one earns the exception.</p>
-<p>**9. Maxim-capped speech (rule 3) — borderline.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> "They'll want it cheaper." (<span class="redacted">redacted: character</span>) | generalizes about "the college" as institution in a portable closing line — close to the type-of-institution maxim shape the census flags elsewhere | Could stay if you want <span class="redacted">redacted: character</span> established as this kind of speaker; otherwise cut to something functional.</p>
-<p>**10. Ending cleverness budget (rule: endings are cuts).**<br>
+<p><strong>8. Maxim-capped speech (rule 3) — borderline, worth the author's eye.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> It's stopped having weather at all.&quot; to keep it factual/diegetic rather than aphoristic, or confirm this one earns the exception.</p>
+<p><strong>9. Maxim-capped speech (rule 3) — borderline.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> &quot;They'll want it cheaper.&quot; (<span class="redacted">redacted</span>) | generalizes about &quot;the college&quot; as institution in a portable closing line — close to the type-of-institution maxim shape the census flags elsewhere | Could stay if you want <span class="redacted">redacted</span> established as this kind of speaker; otherwise cut to something functional.</p>
+<p><strong>10. Ending cleverness budget (rule: endings are cuts).</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**No finding, noted as clean:** the true final paragraph ("Then he wrote *E. <span class="redacted">redacted sentence: unpublished prose</span> Type-of-person clauses, hedged gesture tags, windup dialogue tags, false interior precision, near-idiom coinages, register slips (modern/clinical or fake-archaic outside established dialogue "I'll not"), fragment-closer narration, and Earth month names: none found.</p>
+<p><strong>No finding, noted as clean:</strong> the true final paragraph (&quot;Then he wrote *E. <span class="redacted">redacted sentence: unpublished prose</span> Type-of-person clauses, hedged gesture tags, windup dialogue tags, false interior precision, near-idiom coinages, register slips (modern/clinical or fake-archaic outside established dialogue &quot;I'll not&quot;), fragment-closer narration, and Earth month names: none found.</p>
 </div>
 </body></html>

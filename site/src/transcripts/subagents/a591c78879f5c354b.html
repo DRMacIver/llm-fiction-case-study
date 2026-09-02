@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a worldbuilding archivist for a novel-in-progress at ⟦redacte…</title><style>
+<html><head><meta charset="utf-8"><title>You are a worldbuilding archivist for a novel-in-progress at [redacted]…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,108 +7,126 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a worldbuilding archivist for a novel-in-progress at ⟦redacte…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a591c78879f5c354b">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a worldbuilding archivist for a novel-in-progress at <span class="redacted">redacted: private</span>. Read ONLY the file `chapters/018-holm-deep.md`. Do not read the canon notes — your job is to report what this chapter alone puts on the page, independently.<br>
-<br>
-Produce a report in markdown with exactly these sections:<br>
-<br>
-## Facts<br>
-Everything the chapter asserts or firmly implies about: the world (geography, economy, institutions, history, seasons/calendar), the System (mechanics, skills, classes, levels, notifications), magic, farming practice, characters (biography, capability, relationships, habits, physical detail), and the timeline (dates, elapsed time, day-of-week, ages, durations).<br>
-- One bullet per fact, terse.<br>
-- Tag each `[stated]` (explicit on the page) or `[implied]` (a reader would conclude it, but it isn't said).<br>
-- Give a short quoted phrase as evidence for each.<br>
-- Prefer specific and checkable over atmospheric. Skip pure plot summary — a plot event only counts if it fixes a fact (a date, a capability, a relationship change).<br>
-<br>
-## Questions<br>
-Questions this chapter raises that a coherent set of story notes ought to have an answer to (whether or not the answer belongs on the page). Include:<br>
-- setup/consequence questions ("this is introduced — what does it cost, who else can do it, why hasn't anyone before?"),<br>
-- numbers and scales the chapter gestures at but doesn't fix,<br>
-- character motivation or history the chapter leans on without establishing,<br>
-- anything that looks like it would contradict a plausible neighbouring fact.<br>
-One bullet each, phrased as a question, with a clause saying why it matters.<br>
-<br>
-## Tensions<br>
-Anything inside this chapter that sits oddly with itself — a number, a distance, a timing, a capability used more or less freely than elsewhere in the same chapter. Empty section is fine; say "None noted."<br>
-<br>
-Be thorough but do not pad. Your final message IS the report — no preamble.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a worldbuilding archivist for a novel-in-progress at [redacted]…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a591c78879f5c354b">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-27</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a worldbuilding archivist for a novel-in-progress at <span class="redacted">redacted</span>. Read ONLY the file <code>chapters/018-holm-deep.md</code>. Do not read the canon notes — your job is to report what this chapter alone puts on the page, independently.</p>
+<p>Produce a report in markdown with exactly these sections:</p>
+<h2>Facts</h2>
+<p>Everything the chapter asserts or firmly implies about: the world (geography, economy, institutions, history, seasons/calendar), the System (mechanics, skills, classes, levels, notifications), magic, farming practice, characters (biography, capability, relationships, habits, physical detail), and the timeline (dates, elapsed time, day-of-week, ages, durations).</p>
+<ul>
+<li>One bullet per fact, terse.</li>
+<li>Tag each <code>[stated]</code> (explicit on the page) or <code>[implied]</code> (a reader would conclude it, but it isn't said).</li>
+<li>Give a short quoted phrase as evidence for each.</li>
+<li>Prefer specific and checkable over atmospheric. Skip pure plot summary — a plot event only counts if it fixes a fact (a date, a capability, a relationship change).</li>
+</ul>
+<h2>Questions</h2>
+<p>Questions this chapter raises that a coherent set of story notes ought to have an answer to (whether or not the answer belongs on the page). Include:</p>
+<ul>
+<li>setup/consequence questions (&quot;this is introduced — what does it cost, who else can do it, why hasn't anyone before?&quot;),</li>
+<li>numbers and scales the chapter gestures at but doesn't fix,</li>
+<li>character motivation or history the chapter leans on without establishing,</li>
+<li>anything that looks like it would contradict a plausible neighbouring fact.<br />
+One bullet each, phrased as a question, with a clause saying why it matters.</li>
+</ul>
+<h2>Tensions</h2>
+<p>Anything inside this chapter that sits oddly with itself — a number, a distance, a timing, a capability used more or less freely than elsewhere in the same chapter. Empty section is fine; say &quot;None noted.&quot;</p>
+<p>Be thorough but do not pad. Your final message IS the report — no preamble.</p></blockquote>
 
 
 <p>🔧 Read chapters/018-holm-deep.md</p>
 <p>✅ 250 lines, 21734 chars</p>
 
 <div class="assistant-prose">
-<p>## Facts</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> `[stated]` "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Peri had no guild letter but was added to the roster anyway by <span class="redacted">redacted: character</span>'s decision. <span class="redacted">redacted sentence: unpublished prose</span> with no letter"<br>
-<span class="redacted">redacted sentence: unpublished prose</span> `[stated]` same quote<br>
-- <span class="redacted">redacted: character</span> added Peri's name on "the twentieth." `[stated]` "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Delve party composition: <span class="redacted">redacted: character</span>, two of <span class="redacted">redacted: place</span>, Charter's four, Peri, three more of <span class="redacted">redacted: place</span>, Edwin, <span class="redacted">redacted: character</span> — i.e., <span class="redacted">redacted: character</span> + Charter (5 incl. Peri) + <span class="redacted">redacted: place</span> (5) + <span class="redacted">redacted: character</span> = 12 + Edwin. `[stated]` order given in text<br>
-- Warden <span class="redacted">redacted: character</span> inspects boots/gear before a delve; bans anything that could catch (staff left behind). `[stated]` "The staff stays here."<br>
-- Walk from Charter house to the dungeon mouth takes "a little over two hours" along a peat causeway. `[stated]`<br>
-- Eleven days earlier, Edwin measured "a fan of flattened sedge" at the second cut; it has regrown halfway. `[stated]`<br>
-- Entry into Holm Deep: half past eight. `[stated]`<br>
-- Throat of the dungeon: twenty feet of dressed stone (ancient construction), then natural passage at cart-ramp angle; air moves outward constantly. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- "Same as the fourteenth" — implies an earlier visit/check fourteen days prior with the same air reading. `[implied]`<br>
-- Standing rule in this hill: air-movement calls must be voiced, no penalty for false calls. `[stated]` <span class="redacted">redacted: character</span>'s speech<br>
-- First chamber: size of a tithe barn, cleared in two hours ten minutes; monsters called "<span class="redacted">redacted: object</span>." `[stated]`<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span>," fours, lamps low and to the side (not overhead), no one leaves the line, verbal calls before contact. `[stated]`<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> (Charter) and <span class="redacted">redacted: character</span> (<span class="redacted">redacted: place</span>). `[stated]`<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span>") and has drilled correction "for a fortnight." `[stated/implied]` fortnight explicitly named<br>
-- First chamber kill count: "a hundred and forty-odd." `[stated]`<br>
-- Nine ways on catalogued from first chamber — one more than "the book" records. `[stated]`<br>
-- Descent from first chamber: broken-stone slope with running water, four hundred yards long; Edwin estimates an 80-foot drop, <span class="redacted">redacted: character</span> estimates 70 feet — the two disagree. `[stated]`<br>
-- Second chamber has ankle-deep water and an eighteen-inch-high tide mark, clean and new; <span class="redacted">redacted: character</span> confirms it was dry as of "Weedmonth" (a named month). `[stated]`<br>
-- Second chamber has a submerged hole (drain) three feet across, water flowing into it — identified by Edwin as the sixth way on, "running the wrong way." `[stated]`<br>
-- Edwin can read walls/stone by touch for information (a farming/soil-sense skill applied underground) — explicitly a first-time application. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- <span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span> `[stated]`<br>
-- <span class="redacted">redacted: place</span> has its own dungeon, described as "a well one" (a known-reliable calibration site); Edwin is invited to visit it "in the spring" to test his hill-listening. `[stated]`<br>
-<span class="redacted">redacted sentence: unpublished prose</span> `[stated]`<br>
-- Formal log entry format for a delve: date, time, party count and composition, ways-on count per chamber, kill count, injuries — read/written by the warden (<span class="redacted">redacted: character</span>) in a day book, dated "the twenty-first of Harvestmonth" (a named month). `[stated]`<br>
-- Dungeons "settle" after being walked to bottom: over about a month the surface monster-count returns to baseline and "the date resets," recurring annually; cause is unknown and has been unknown "since before there was a Charter." `[stated]`<br>
-- Second chamber refills partially on the way back up (not fully, not confirmed to be from the drain). `[stated]`<br>
-- Edwin injured: forearm broken (both bones, clean break, no skin broken), scalp tear above left ear, bruised/tender ribs. `[stated]`<br>
-- Injury occurred because the line shifted ten-to-twelve feet and Edwin, catching his footing on loose stone, was left fifteen feet from the line's near end, in the dark behind the lamp glare, beside an uncleared hole (chalked "five"). `[stated]`<br>
-- Edwin made three combat errors in the crisis: raised the lamp (blinding himself), stepped back to a wall <span class="redacted">redacted: character</span> had explicitly forbidden, and cast his one battle spell aimed too high (spell hit at chest height; the threat was at knee height). `[stated]`<br>
-- Edwin then used his forearm to block and it broke; he went down; did not run. `[stated]`<br>
-- Peri broke drill to leave the line unprompted and killed the two creatures threatening Edwin, hand injured (palm opened) on the guard of her sword doing so. `[stated]`<br>
-- <span class="redacted">redacted: character</span> logs Peri's drill violation in the day book, by name, aloud, in Peri's hearing; Peri does not contest it. `[stated]`<br>
-- Edwin criticizes Peri afterward ("You were told... <span class="redacted">redacted sentence: unpublished prose</span> `[stated]`<br>
-- Peri receives a System notification: "Skill unlocked: Swordsmanship — Level 1." `[stated]` — first level in swordsmanship, occurring mid-delve while moving stone (not during combat)<br>
-- Peri states she has "had the sword since spring." `[stated]` — timeline anchor, spring predates this chapter (set in Harvestmonth/autumn)<br>
-- <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> `[stated]`<br>
-- <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> `[implied]`<br>
-<span class="redacted">redacted sentence: unpublished prose</span> `[implied]` (arithmetic from stated times)<br>
-- Exit count confirmed thirteen down, thirteen up — no deaths, no one left behind. `[stated]`<br>
-- <span class="redacted">redacted: character</span> was sent to the dungeon mouth at noon with a cart and two men, on <span class="redacted">redacted: character</span>'s order, unprompted by request. `[stated]` — establishes a named character "<span class="redacted">redacted: character</span>" with authority to dispatch aid<br>
-- Final tally: 406 kills total for <span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span> `[stated]`<br>
-- Three injured total: <span class="redacted">redacted: character</span> (knee, on the cart), Millbrook/Peri (left hand, needs "the bone-setter's needle"), and Moss. `[stated]`<br>
-<span class="redacted">redacted sentence: medicine/disease</span> `[implied]`<br>
-- <span class="redacted">redacted: character</span> states she has "done fifty of them" (splinting forearm breaks), establishing her as an experienced field medic. `[stated]`</p>
-<p>## Questions</p>
-<p>- What exactly happened "on the night of <span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span>") and Peri's earlier line-discipline failure reference — is this documented elsewhere, and does it match this chapter's implications?<br>
-- Why does Edwin's stone-listening ability work on farmland soil but is explicitly untested/unknown underground — what is the actual mechanism, and does canon establish limits on it?<br>
-- What is the source and rule-set of Edwin's single battle spell learned at eighteen — why only one, why never used since, and why did muscle memory retain it after centuries of disuse?<br>
-- Is the discrepancy between Edwin's and <span class="redacted">redacted: character</span>'s depth estimates (80 ft vs 70 ft) meaningful (different measurement methods, one of them wrong) or just texture — does either number get used later for something that needs to be exact?<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Why does a dungeon "settle" after being cleared to bottom — recurring annually, count resets — and is this meant to stay a mystery or does a sealed answer already exist for it?<br>
-- What are "<span class="redacted">redacted: object</span>," and are they a known/documented monster type with established stats, or a Holm-Deep-specific creature?<br>
-- How does the notification timing work — Peri's Swordsmanship level-up notification fires while calmly moving stone well after the fight, not during or immediately after the kills — is this consistent with how the System is established to fire elsewhere?<br>
-- What was actually said between Edwin and Peri "twice on the way up" that "one of them would have denied... anything had [been said]" — this is flagged as significant but left opaque; does it matter later?<br>
-- Who is <span class="redacted">redacted: character</span>, and what is their relationship/authority to <span class="redacted">redacted: character</span> and the Charter house (able to order a cart sent out)?<br>
-- Four prior written warnings to Peri about leaving the line "in her own hand" — what were the specific incidents, and where/when were they logged?<br>
-- <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Is 406 kills for one delve (with a listed 140-odd + 11 + battle count) consistent with the individual chamber tallies given, or does it require unlisted additional kills elsewhere (e.g., in the second chamber both ways)?</p>
-<p>## Tensions</p>
-<p>- The stated first-chamber kill count ("a hundred and forty-odd") plus the bottom chamber's eleven, plus the small numbers dispatched in the second chamber (twice) do not obviously sum to the final logged total of 406 — the chapter never itemizes enough to reconcile the total, leaving a fairly large unaccounted remainder (roughly 250+) implicitly attributed to the second chamber, which is described only in terms of a short "twenty minutes" fight and the two creatures at the end, not a count anywhere near that scale.<br>
-- Edwin and <span class="redacted">redacted: character</span> give different depth estimates for the same descent (80 ft vs 70 ft) without resolution or acknowledgment of the discrepancy by either character.</p>
+<h2>Facts</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <code>[stated]</code> &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Peri had no guild letter but was added to the roster anyway by <span class="redacted">redacted</span>'s decision. <span class="redacted">redacted sentence: unpublished prose</span> with no letter&quot;<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <code>[stated]</code> same quote</li>
+<li><span class="redacted">redacted</span> added Peri's name on &quot;the twentieth.&quot; <code>[stated]</code> &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Delve party composition: <span class="redacted">redacted</span>, two of <span class="redacted">redacted</span>, Charter's four, Peri, three more of <span class="redacted">redacted</span>, Edwin, <span class="redacted">redacted</span> — i.e., <span class="redacted">redacted</span> + Charter (5 incl. Peri) + <span class="redacted">redacted</span> (5) + <span class="redacted">redacted</span> = 12 + Edwin. <code>[stated]</code> order given in text</li>
+<li>Warden <span class="redacted">redacted</span> inspects boots/gear before a delve; bans anything that could catch (staff left behind). <code>[stated]</code> &quot;The staff stays here.&quot;</li>
+<li>Walk from Charter house to the dungeon mouth takes &quot;a little over two hours&quot; along a peat causeway. <code>[stated]</code></li>
+<li>Eleven days earlier, Edwin measured &quot;a fan of flattened sedge&quot; at the second cut; it has regrown halfway. <code>[stated]</code></li>
+<li>Entry into Holm Deep: half past eight. <code>[stated]</code></li>
+<li>Throat of the dungeon: twenty feet of dressed stone (ancient construction), then natural passage at cart-ramp angle; air moves outward constantly. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>&quot;Same as the fourteenth&quot; — implies an earlier visit/check fourteen days prior with the same air reading. <code>[implied]</code></li>
+<li>Standing rule in this hill: air-movement calls must be voiced, no penalty for false calls. <code>[stated]</code> <span class="redacted">redacted</span>'s speech</li>
+<li>First chamber: size of a tithe barn, cleared in two hours ten minutes; monsters called &quot;<span class="redacted">redacted</span>.&quot; <code>[stated]</code><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>,&quot; fours, lamps low and to the side (not overhead), no one leaves the line, verbal calls before contact. <code>[stated]</code><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> (Charter) and <span class="redacted">redacted</span> (<span class="redacted">redacted</span>). <code>[stated]</code><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>&quot;) and has drilled correction &quot;for a fortnight.&quot; <code>[stated/implied]</code> fortnight explicitly named</li>
+<li>First chamber kill count: &quot;a hundred and forty-odd.&quot; <code>[stated]</code></li>
+<li>Nine ways on catalogued from first chamber — one more than &quot;the book&quot; records. <code>[stated]</code></li>
+<li>Descent from first chamber: broken-stone slope with running water, four hundred yards long; Edwin estimates an 80-foot drop, <span class="redacted">redacted</span> estimates 70 feet — the two disagree. <code>[stated]</code></li>
+<li>Second chamber has ankle-deep water and an eighteen-inch-high tide mark, clean and new; <span class="redacted">redacted</span> confirms it was dry as of &quot;Weedmonth&quot; (a named month). <code>[stated]</code></li>
+<li>Second chamber has a submerged hole (drain) three feet across, water flowing into it — identified by Edwin as the sixth way on, &quot;running the wrong way.&quot; <code>[stated]</code></li>
+<li>Edwin can read walls/stone by touch for information (a farming/soil-sense skill applied underground) — explicitly a first-time application. <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <code>[stated]</code></li>
+<li><span class="redacted">redacted</span> has its own dungeon, described as &quot;a well one&quot; (a known-reliable calibration site); Edwin is invited to visit it &quot;in the spring&quot; to test his hill-listening. <code>[stated]</code><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <code>[stated]</code></li>
+<li>Formal log entry format for a delve: date, time, party count and composition, ways-on count per chamber, kill count, injuries — read/written by the warden (<span class="redacted">redacted</span>) in a day book, dated &quot;the twenty-first of Harvestmonth&quot; (a named month). <code>[stated]</code></li>
+<li>Dungeons &quot;settle&quot; after being walked to bottom: over about a month the surface monster-count returns to baseline and &quot;the date resets,&quot; recurring annually; cause is unknown and has been unknown &quot;since before there was a Charter.&quot; <code>[stated]</code></li>
+<li>Second chamber refills partially on the way back up (not fully, not confirmed to be from the drain). <code>[stated]</code></li>
+<li>Edwin injured: forearm broken (both bones, clean break, no skin broken), scalp tear above left ear, bruised/tender ribs. <code>[stated]</code></li>
+<li>Injury occurred because the line shifted ten-to-twelve feet and Edwin, catching his footing on loose stone, was left fifteen feet from the line's near end, in the dark behind the lamp glare, beside an uncleared hole (chalked &quot;five&quot;). <code>[stated]</code></li>
+<li>Edwin made three combat errors in the crisis: raised the lamp (blinding himself), stepped back to a wall <span class="redacted">redacted</span> had explicitly forbidden, and cast his one battle spell aimed too high (spell hit at chest height; the threat was at knee height). <code>[stated]</code></li>
+<li>Edwin then used his forearm to block and it broke; he went down; did not run. <code>[stated]</code></li>
+<li>Peri broke drill to leave the line unprompted and killed the two creatures threatening Edwin, hand injured (palm opened) on the guard of her sword doing so. <code>[stated]</code></li>
+<li><span class="redacted">redacted</span> logs Peri's drill violation in the day book, by name, aloud, in Peri's hearing; Peri does not contest it. <code>[stated]</code></li>
+<li>Edwin criticizes Peri afterward (&quot;You were told... <span class="redacted">redacted sentence: unpublished prose</span> <code>[stated]</code></li>
+<li>Peri receives a System notification: &quot;Skill unlocked: Swordsmanship — Level 1.&quot; <code>[stated]</code> — first level in swordsmanship, occurring mid-delve while moving stone (not during combat)</li>
+<li>Peri states she has &quot;had the sword since spring.&quot; <code>[stated]</code> — timeline anchor, spring predates this chapter (set in Harvestmonth/autumn)</li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <code>[stated]</code></li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <code>[implied]</code><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <code>[implied]</code> (arithmetic from stated times)</li>
+<li>Exit count confirmed thirteen down, thirteen up — no deaths, no one left behind. <code>[stated]</code></li>
+<li><span class="redacted">redacted</span> was sent to the dungeon mouth at noon with a cart and two men, on <span class="redacted">redacted</span>'s order, unprompted by request. <code>[stated]</code> — establishes a named character &quot;<span class="redacted">redacted</span>&quot; with authority to dispatch aid</li>
+<li>Final tally: 406 kills total for <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <code>[stated]</code></li>
+<li>Three injured total: <span class="redacted">redacted</span> (knee, on the cart), Millbrook/Peri (left hand, needs &quot;the bone-setter's needle&quot;), and Moss. <code>[stated]</code><br />
+<span class="redacted">redacted sentence</span> <code>[implied]</code></li>
+<li><span class="redacted">redacted</span> states she has &quot;done fifty of them&quot; (splinting forearm breaks), establishing her as an experienced field medic. <code>[stated]</code></li>
+</ul>
+<h2>Questions</h2>
+<ul>
+<li>What exactly happened &quot;on the night of <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>&quot;) and Peri's earlier line-discipline failure reference — is this documented elsewhere, and does it match this chapter's implications?</li>
+<li>Why does Edwin's stone-listening ability work on farmland soil but is explicitly untested/unknown underground — what is the actual mechanism, and does canon establish limits on it?</li>
+<li>What is the source and rule-set of Edwin's single battle spell learned at eighteen — why only one, why never used since, and why did muscle memory retain it after centuries of disuse?</li>
+<li>Is the discrepancy between Edwin's and <span class="redacted">redacted</span>'s depth estimates (80 ft vs 70 ft) meaningful (different measurement methods, one of them wrong) or just texture — does either number get used later for something that needs to be exact?<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Why does a dungeon &quot;settle&quot; after being cleared to bottom — recurring annually, count resets — and is this meant to stay a mystery or does a sealed answer already exist for it?</li>
+<li>What are &quot;<span class="redacted">redacted</span>,&quot; and are they a known/documented monster type with established stats, or a Holm-Deep-specific creature?</li>
+<li>How does the notification timing work — Peri's Swordsmanship level-up notification fires while calmly moving stone well after the fight, not during or immediately after the kills — is this consistent with how the System is established to fire elsewhere?</li>
+<li>What was actually said between Edwin and Peri &quot;twice on the way up&quot; that &quot;one of them would have denied... anything had [been said]&quot; — this is flagged as significant but left opaque; does it matter later?</li>
+<li>Who is <span class="redacted">redacted</span>, and what is their relationship/authority to <span class="redacted">redacted</span> and the Charter house (able to order a cart sent out)?</li>
+<li>Four prior written warnings to Peri about leaving the line &quot;in her own hand&quot; — what were the specific incidents, and where/when were they logged?</li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Is 406 kills for one delve (with a listed 140-odd + 11 + battle count) consistent with the individual chamber tallies given, or does it require unlisted additional kills elsewhere (e.g., in the second chamber both ways)?</li>
+</ul>
+<h2>Tensions</h2>
+<ul>
+<li>The stated first-chamber kill count (&quot;a hundred and forty-odd&quot;) plus the bottom chamber's eleven, plus the small numbers dispatched in the second chamber (twice) do not obviously sum to the final logged total of 406 — the chapter never itemizes enough to reconcile the total, leaving a fairly large unaccounted remainder (roughly 250+) implicitly attributed to the second chamber, which is described only in terms of a short &quot;twenty minutes&quot; fight and the two creatures at the end, not a count anywhere near that scale.</li>
+<li>Edwin and <span class="redacted">redacted</span> give different depth estimates for the same descent (80 ft vs 70 ft) without resolution or acknowledgment of the discrepancy by either character.</li>
+</ul>
 </div>
 </body></html>

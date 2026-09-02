@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,22 +7,35 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a289e52f2e4dd2222">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 14-. Read it in full.<br>
-LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id "sense".<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a289e52f2e4dd2222">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 14-. Read it in full.<br />
+LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id &quot;sense&quot;.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -name "14-*.md" -type f (Find the scene file starting with 14-)</p>
-<p>✅ 1 lines, 75 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/14-three-letters.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes -name "14-*.md" -type f (Find the scene file starting with 14-)</p>
+<p>✅ 1 lines, 75 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/14-three-letters.md</p>
 <p>🔧 Read draft/book-01/scenes/14-three-letters.md</p>
 <p>✅ 52 lines, 6162 chars</p>
 
@@ -35,16 +48,16 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 
 <div class="assistant-prose">
 <p>I've read the file (14-three-letters.md) in full and performed a careful sense-lens review. Let me work through the key factual claims systematically:</p>
-<p>**Setup and timeline**: The widow is away; boy delivers letters at 4:10 PM with established procedure (seals = quality). The three letters arrive together. ✓</p>
-<p>**Wyslow college letter structure**: Four pages, four hands wrote it. Hand 1 (registry clerk) - opening; Hand 2 - substance; Hand 3 - squeezed in and struck out line; Hand 4 - closing. Four signatures at bottom. ✓</p>
-<p>**Numbers**: Six standard revealings listed: Blight, Salt, Exhaustion, Poison, Waterlogging, Sourness. Edwin wrote four of them. ✓ (Counts consistently)</p>
-<p>**The struck-out line**: Hand 3 wrote "*the standard revealings return no findings*" then "struck it out, once, thinly." Edwin observes "Any of the four could have blacked it out with a second stroke. None had." This is coherent—the line remains readable despite being struck, suggesting deliberate partial obscuring. ✓</p>
-<p>**Manuring series duration**: "run without a break for sixty years" and now suspended. ✓</p>
-<p>**Distance and travel time**: Fenholt is "Forty miles" away, "Two days' walking." This equals 20 miles/day, a reasonable pace for walking. ✓</p>
-<p>**Farmer's timeline**: Grandmother received blessing "forty years back"; rings appeared "this spring"; rings are "getting bigger" (ongoing). ✓</p>
-<p>**All factual claims survive flat restatement, numbers add up, no contradictions exist between neighboring sentences, and no sentence requires re-reading to parse.** The mechanics of the letter (four hands, struck-out line kept readable) are coherent and internally consistent.</p>
+<p><strong>Setup and timeline</strong>: The widow is away; boy delivers letters at 4:10 PM with established procedure (seals = quality). The three letters arrive together. ✓</p>
+<p><strong>Wyslow college letter structure</strong>: Four pages, four hands wrote it. Hand 1 (registry clerk) - opening; Hand 2 - substance; Hand 3 - squeezed in and struck out line; Hand 4 - closing. Four signatures at bottom. ✓</p>
+<p><strong>Numbers</strong>: Six standard revealings listed: Blight, Salt, Exhaustion, Poison, Waterlogging, Sourness. Edwin wrote four of them. ✓ (Counts consistently)</p>
+<p><strong>The struck-out line</strong>: Hand 3 wrote &quot;<em>the standard revealings return no findings</em>&quot; then &quot;struck it out, once, thinly.&quot; Edwin observes &quot;Any of the four could have blacked it out with a second stroke. None had.&quot; This is coherent—the line remains readable despite being struck, suggesting deliberate partial obscuring. ✓</p>
+<p><strong>Manuring series duration</strong>: &quot;run without a break for sixty years&quot; and now suspended. ✓</p>
+<p><strong>Distance and travel time</strong>: Fenholt is &quot;Forty miles&quot; away, &quot;Two days' walking.&quot; This equals 20 miles/day, a reasonable pace for walking. ✓</p>
+<p><strong>Farmer's timeline</strong>: Grandmother received blessing &quot;forty years back&quot;; rings appeared &quot;this spring&quot;; rings are &quot;getting bigger&quot; (ongoing). ✓</p>
+<p><strong>All factual claims survive flat restatement, numbers add up, no contradictions exist between neighboring sentences, and no sentence requires re-reading to parse.</strong> The mechanics of the letter (four hands, struck-out line kept readable) are coherent and internally consistent.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

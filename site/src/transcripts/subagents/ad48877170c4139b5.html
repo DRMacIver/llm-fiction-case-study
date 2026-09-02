@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Als…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. [redacted] Also confirm…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,65 +7,82 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Als…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-ad48877170c4139b5">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span> Also confirm each chapter still ends with its author's-note block where one existed (grep "Author's note"). Return a compact table and flag any chapter still over budget or missing its note.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. [redacted] Also confirm…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-ad48877170c4139b5">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> Also confirm each chapter still ends with its author's-note block where one existed (grep &quot;Author's note&quot;). Return a compact table and flag any chapter still over budget or missing its note.</p></blockquote>
 
 
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/chapters/ | sort</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/chapters/ | sort</p>
 <p>✅ 28 lines, 638 chars — 001-the-wrong-man.md / 002-the-ten-o-clock.md / 003-the-improbability-engine.md</p>
 
 <div class="assistant-prose">
 <p>Task says only chapters/001 through 021, so I'll scope to those (020 is the untracked draft, 021 also present).</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; python3 &lt;&lt; 'EOF' import re, glob  files = sorted(f for…</p>
-<p>✅ 48 lines, 11815 chars — {'file': '001-the-wrong-man.md', 'words': 3233, 'verdict(which was/took/took to mean)': 0, 'type-of-person': 0, 'the not-': 0, 'timing-<span class="redacted">redacted: character</span>(minute/seconds/inches)': 0, 'W:arithmetic': 0, 'W:honest': … / {'file': '002-the-ten-o-clock.md', 'words': 3588, 'verdict(which was/took/took to mean)': 0, 'type-of-person': 0, 'the not-': 0, 'timing-<span class="redacted">redacted: character</span>(minute/seconds/inches)': 0, 'W:arithmetic': 0, 'W:honest'… / {'file': '003-the-improbability-engine.md', 'words': 3306, 'verdict(which was/took/took to mean)': 0, 'type-of-person': 0, 'the not-': 0, 'timing-<span class="redacted">redacted: character</span>(minute/seconds/inches)': 0, 'W:arithmetic': 0, '…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; python3 &lt;&lt; 'EOF' import re, glob  files = sorted(f for f in glo…</p>
+<p>✅ 48 lines, 11815 chars — {'file': '001-the-wrong-man.md', 'words': 3233, 'verdict(which was/took/took to mean)': 0, 'type-of-person': 0, 'the not-': 0, 'timing-<span class="redacted">redacted</span>(minute/seconds/inches)': 0, 'W:arithmetic': 0, 'W:honest': … / {'file': '002-the-ten-o-clock.md', 'words': 3588, 'verdict(which was/took/took to mean)': 0, 'type-of-person': 0, 'the not-': 0, 'timing-<span class="redacted">redacted</span>(minute/seconds/inches)': 0, 'W:arithmetic': 0, 'W:honest'… / {'file': '003-the-improbability-engine.md', 'words': 3306, 'verdict(which was/took/took to mean)': 0, 'type-of-person': 0, 'the not-': 0, 'timing-<span class="redacted">redacted</span>(minute/seconds/inches)': 0, 'W:arithmetic': 0, '…</p>
 
 <div class="assistant-prose">
 <p>Mechanical census, chapters 001–021 (grep/python only).</p>
-<p>**Flags:**<br>
-- Ch. 020 and 021 are **missing "Author's note"** — every prior chapter (001–019) has one.<br>
-- Ch. 018 em-dash rate 0.47/1k is fine (budget is a ceiling ~2/1000); no chapter exceeds the ~2/1000 em-dash budget except 004 (3.56/1k), 001 (3.09), 002 (3.07), 009 (3.46), 005 (2.99) — these five are **over the ~2/1000 em-dash budget**.<br>
-- "timing-<span class="redacted">redacted: character</span>" pattern hit once, in ch. 018.<br>
-- "verdict clause" (`, which was` / `, which took` / `took to mean`) hits: ch. 009, 011, 017 (1 each), total 3.<br>
-- `type-of-person`, `the not-`, `arithmetic`, `honestly`, `wants doing` — **zero hits anywhere**, all clean.<br>
-- `honest` — 1 hit total (ch. 005).<br>
-- Earth month names appear in ch. 003 (October), 007 (August), 010 (August) — 3 chapters, 3 total hits.</p>
+<p><strong>Flags:</strong></p>
+<ul>
+<li>Ch. 020 and 021 are <strong>missing &quot;Author's note&quot;</strong> — every prior chapter (001–019) has one.</li>
+<li>Ch. 018 em-dash rate 0.47/1k is fine (budget is a ceiling ~2/1000); no chapter exceeds the ~2/1000 em-dash budget except 004 (3.56/1k), 001 (3.09), 002 (3.07), 009 (3.46), 005 (2.99) — these five are <strong>over the ~2/1000 em-dash budget</strong>.</li>
+<li>&quot;timing-<span class="redacted">redacted</span>&quot; pattern hit once, in ch. 018.</li>
+<li>&quot;verdict clause&quot; (<code>, which was</code> / <code>, which took</code> / <code>took to mean</code>) hits: ch. 009, 011, 017 (1 each), total 3.</li>
+<li><code>type-of-person</code>, <code>the not-</code>, <code>arithmetic</code>, <code>honestly</code>, <code>wants doing</code> — <strong>zero hits anywhere</strong>, all clean.</li>
+<li><code>honest</code> — 1 hit total (ch. 005).</li>
+<li>Earth month names appear in ch. 003 (October), 007 (August), 010 (August) — 3 chapters, 3 total hits.</li>
+</ul>
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> |<br>
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-|002|3588|6|3|0|0|0|2|4|0|0|1|1|1|0|0|3.07|Y|<br>
-|003|3306|1|3|1|0|0|3|1|0|0|1|2|2|3|1|1.21|Y|<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-|005|3346|1|1|0|0|0|4|1|0|0|0|2|0|0|3|2.99|Y|<br>
-|006|3422|2|1|0|0|2|4|2|0|0|0|1|1|0|0|2.34|Y|<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-|008|3362|0|1|0|0|1|4|5|1|0|1|2|0|0|0|1.49|Y|<br>
-|009|4619|6|4|1|1|0|2|4|0|0|5|0|1|0|0|3.46|Y|<br>
-|010|4722|6|3|4|1|0|1|6|0|0|2|2|2|0|1|0.85|Y|<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-|015|4102|5|3|0|1|0|1|6|0|0|0|2|2|0|1|1.95|Y|<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-|018|4242|7|2|2|0|0|8|5|1|2|0|0|1|0|0|0.47|Y|<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
+<p><span class="redacted">redacted sentence: unpublished prose</span> |<br />
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+|002|3588|6|3|0|0|0|2|4|0|0|1|1|1|0|0|3.07|Y|<br />
+|003|3306|1|3|1|0|0|3|1|0|0|1|2|2|3|1|1.21|Y|<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+|005|3346|1|1|0|0|0|4|1|0|0|0|2|0|0|3|2.99|Y|<br />
+|006|3422|2|1|0|0|2|4|2|0|0|0|1|1|0|0|2.34|Y|<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+|008|3362|0|1|0|0|1|4|5|1|0|1|2|0|0|0|1.49|Y|<br />
+|009|4619|6|4|1|1|0|2|4|0|0|5|0|1|0|0|3.46|Y|<br />
+|010|4722|6|3|4|1|0|1|6|0|0|2|2|2|0|1|0.85|Y|<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+|015|4102|5|3|0|1|0|1|6|0|0|0|2|2|0|1|1.95|Y|<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+|018|4242|7|2|2|0|0|8|5|1|2|0|0|1|0|0|0.47|Y|<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Totals (001–021):** words 81,869; nobody 77; somebody 50; anybody 29; no one 9; a person 7; stood 65; standing 84; out loud 6; the whole of 2; ordinary 12; properly 19; exactly 11; filed 3; market day 9; wants doing 0; arithmetic 0; honest 1; honestly 0; verdict clauses 3; type-of-person 0; the not- 0; timing-<span class="redacted">redacted: character</span> 1; Earth-month hits 3 (in ch. 003, 007, 010); em-dashes total 131 → overall 1.60/1000 words.</p>
-<p>**Summary of issues:**<br>
-1. **Ch. 020, 021 missing "Author's note" block** — only two chapters in the whole run without one.<br>
-2. **Em-dash budget (~2/1000) exceeded** in ch. 001 (3.09), 002 (3.07), 004 (3.56), 005 (2.99), 009 (3.46) — 5 of 21 chapters.<br>
-3. Earth month names present in ch. 003, 007, 010 (worth a canon/flavor check — story world using "October"/"August").<br>
-4. Everything else (arithmetic, honestly, type-of-person, the-not-, wants-doing) is at zero — clean.</p>
+<p><strong>Totals (001–021):</strong> words 81,869; nobody 77; somebody 50; anybody 29; no one 9; a person 7; stood 65; standing 84; out loud 6; the whole of 2; ordinary 12; properly 19; exactly 11; filed 3; market day 9; wants doing 0; arithmetic 0; honest 1; honestly 0; verdict clauses 3; type-of-person 0; the not- 0; timing-<span class="redacted">redacted</span> 1; Earth-month hits 3 (in ch. 003, 007, 010); em-dashes total 131 → overall 1.60/1000 words.</p>
+<p><strong>Summary of issues:</strong></p>
+<ol>
+<li><strong>Ch. 020, 021 missing &quot;Author's note&quot; block</strong> — only two chapters in the whole run without one.</li>
+<li><strong>Em-dash budget (~2/1000) exceeded</strong> in ch. 001 (3.09), 002 (3.07), 004 (3.56), 005 (2.99), 009 (3.46) — 5 of 21 chapters.</li>
+<li>Earth month names present in ch. 003, 007, 010 (worth a canon/flavor check — story world using &quot;October&quot;/&quot;August&quot;).</li>
+<li>Everything else (arithmetic, honestly, type-of-person, the-not-, wants-doing) is at zero — clean.</li>
+</ol>
 </div>
 </body></html>

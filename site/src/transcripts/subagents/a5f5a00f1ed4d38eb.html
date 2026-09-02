@@ -7,606 +7,618 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are synthesizing a full run of the language-police pipeline over…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a5f5a00f1ed4d38eb">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are synthesizing a full run of the language-police pipeline over chapters 1-10 (scenes + author's notes). Input: per-file judged findings (below). Write a markdown report to <span class="redacted">redacted: private</span>/tools/lint/run-ch01-10.md and return it as your final text. Structure: (1) CONFIRMED findings grouped by file — quote, rule, one-line reason, and for budget overspends the keeper — this section is a work-list an editor will fix, so be precise and complete; (2) BORDERLINE findings, briefly, grouped by file; (3) per-rule confirm/FP counts — flag any rule with 3+ FPs and draft the counter_example it needs; (4) constructions confirmed 2+ times across files with a draft Python regex, as proposals only; (5) a 5-line executive summary at the TOP: total confirmed / borderline / FP, the worst file, the healthiest, and whether the notes or the scenes carry more faults. Do not commit.<br>
-<br>
-Data:<br>
-[<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/01-pellings-half-past-twelve-soft.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "announce-before-deliver",<br>
-     "quote": "A girl. Eighteen, or near it, and small, so that the sword was too long for her and the pack rode high; dark hair that had come down on one side somewhere on the hill; a face that had been indoors all its life until lately.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "The rule fires when the following sentence re-delivers the named thing ('A knock. Someone was knocking.'); here the fragment is the delivery and the next clause elaborates, so there is no drumroll-then-restatement."<br>
-    },<br>
-    {<br>
-     "rule_id": "long-build-short-drop-budget",<br>
-     "quote": "He looked up. Whoever it was had not stopped.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Third instance of the build/drop engine in the scene's first fifteen lines puts it over the max of 2, and this is the weakest of the three — plain functional narration with no punch, so it is the cuttable excess.",<br>
-     "keeper_note": "Keep 'This one did not slow. Second bend, and he could see the sword.' — the most particular and least portable drop; also keep 'A girl.' as the scene's turn. Fix this one by folding 'He looked up' into the preceding paragraph or the following one."<br>
-    },<br>
-    {<br>
-     "rule_id": "long-build-short-drop-budget",<br>
-     "quote": "This one did not slow. Second bend, and he could see the sword.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Within the budget of 2 once the excess instance is removed; this is the strongest, most concrete instance and the one to keep."<br>
-    },<br>
-    {<br>
-     "rule_id": "long-build-short-drop-budget",<br>
-     "quote": "A girl.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Within budget once the excess is removed; it lands on the scene's actual turn, which the rule's counter-example licenses."<br>
-    },<br>
-    {<br>
-     "rule_id": "description-list",<br>
-     "quote": "Eighteen, or near it, and small, so that the sword was too long for her and the pack rode high; dark hair that had come down on one side somewhere on the hill; a face that had been indoors all its life until lately.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Semicoloned catalogue of age, size, proportions, hair and face on entrance — the rule's own example; the draft-three rule wants one noticed thing bound to what Edwin is doing."<br>
-    }<br>
-   ],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 5<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/01-pellings-half-past-twelve-soft.md",<br>
-  "judged": {<br>
-   "verdicts": [],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 0<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "maxim-capped-speech",<br>
-     "quote": "It's practically how you know.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Fully portable — lifts out of the scene intact — and the rule says the one maxim belongs to whoever actually talks that way, usually Edwin, not Peri capping her turn on a general law.",<br>
-     "keeper_note": "Survivor for the scene's maxim slot is Edwin's 'What you have found, Miss Millbrook, is a farmer' — it names the addressee and the scene's specific claim and does not travel. Cut or defunctionalise this one (end on the montage detail or a question instead)."<br>
-    },<br>
-    {<br>
-     "rule_id": "maxim-capped-speech",<br>
-     "quote": "What you have found, Miss Millbrook, is a farmer.",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "It is a definitive turn-cap, but it names Peri and answers her exact assembled-evidence claim, so it barely travels; as the least portable of the three it is the natural keeper.",<br>
-     "keeper_note": "KEEPER."<br>
-    },<br>
-    {<br>
-     "rule_id": "maxim-capped-speech",<br>
-     "quote": "*Saving the world* doesn't describe anything I've done.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "First-person report about his own history, following 'I have helped some parishes, one at a time' — a fact about Edwin, not a portable maxim."<br>
-    },<br>
-    {<br>
-     "rule_id": "reflexive-echo",<br>
-     "quote": "A farmer,",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "This exact line is the rule's own counter_example, and it is a real speech act — Peri testing the word she cannot make fit her theory."<br>
-    },<br>
-    {<br>
-     "rule_id": "character-too-quick",<br>
-     "quote": "He grows up to be the dark lord. Dark lords are always pale. Everyone starts as a child, and nobody knows until - that's how it goes. And the man in the robe is some sort of cultist. I don't know the order yet.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "The rule targets Peri arriving early at conclusions the story needs; here she is sincere and wrong from the foundations up, which is exactly the specified behaviour, and Edwin immediately supplies the plain reading."<br>
-    },<br>
-    {<br>
-     "rule_id": "character-too-quick",<br>
-     "quote": "And every master in every book says what you just said, before he takes the hero on.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Not an uptake — it is unfalsifiable template-fitting that turns his denial into more evidence, i.e. her being wrong faster, not smarter."<br>
-    },<br>
-    {<br>
-     "rule_id": "description-list",<br>
-     "quote": "Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said *beans*. On the wall, in a frame, a sampler with a wheat sheaf on it that a farmwife had worked for him one winter.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Five noticed things in five fragments on first look at the room; the rule is one noticed thing bound to the action, never a list, and the jars alone (which pay off at line 39) carry it."<br>
-    },<br>
-    {<br>
-     "rule_id": "unearned-authority",<br>
-     "quote": "You get another question tomorrow. Don't ask it *who*. You've done *who*. Ask it *what*.",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "She came up the hill asking to be taught and he is proposing an experiment inside an argument, but the bare imperatives are the abrupt telling-Peri-what-to-do register the rule was written from; a 'Try asking it what' would settle it."<br>
-    },<br>
-    {<br>
-     "rule_id": "likeability-drift",<br>
-     "quote": "She looked at him with real patience, as at a man who had not done the reading.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Affectionate narrator wit about Peri's misplaced condescension, which is the joke of the scene, not a line that makes her read as a brat — 'real patience' keeps her sympathetic."<br>
-    },<br>
-    {<br>
-     "rule_id": "tech-level-anachronism",<br>
-     "quote": "A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said *beans*.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Reagents is alchemical vocabulary, entirely at home in a pre-industrial world with a magic-practitioner class; it is not an industrial artefact like the biscuit tin the rule was written from."<br>
-    }<br>
-   ],<br>
-   "judge_added": [<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "It had gone wrong at the root. Pulling at the conclusion did nothing; you went down to the foundations and took them apart, and it was slow.",<br>
-     "reason": "Generalised second-person narrator epigram, fully portable and attached to no particular of this kitchen; with Peri's 'It's practically how you know' already in the scene this puts it over the one-per-scene budget."<br>
-    }<br>
-   ]<br>
-  },<br>
-  "n_candidates": 10<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md",<br>
-  "judged": {<br>
-   "verdicts": [],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 0<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/03-until-fulfilled.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "triad-swerve-budget",<br>
-     "quote": "There's a frost list in the seed drawers that's thirty years of my handwriting. Marsh Barton and Upper Wold have a quarrel about a ford, and I am the only living person both sides will still sit in a room with. A sea-front is sitting off the coast that I was going to spend today walking inland, so that four hundred sheep could be sheared dry.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Three separate sentences of concrete parish obligation, escalating from record to duty to today's job — no confessional swerve, and it is the scene's only triad, so within the max-1 budget."<br>
-    },<br>
-    {<br>
-     "rule_id": "missing-connective",<br>
-     "quote": "There was a sea-front off the coast that had been waiting since breakfast, and eleven farmwives in the class garden who had been waiting since a quarter to, and he did not move towards either.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "This is the exact junction recorded as the rule's own worked example from an author comment on this scene; the connective from 'he stood at the window' to the waiting work needs stating (an 'Instead'-shaped step is missing)."<br>
-    },<br>
-    {<br>
-     "rule_id": "motive-off-page",<br>
-     "quote": "He picked up both cups, hers not finished, and put them by the sink.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Clearing cups is ordinary kitchen business with its motive visible in 'hers not finished' — the rule targets deliberate odd acts that read as withheld, not domestic tidying used as a beat."<br>
-    }<br>
-   ],<br>
-   "judge_added": [<br>
-    {<br>
-     "rule_id": "negative-parallelism-split",<br>
-     "quote": "Not because you're right. Because you're better at it.",<br>
-     "reason": "Two-sentence negative parallelism — denial of a reason immediately followed by the affirming reason — the banned construction in its split form; the contraction in the following line kept the regex from catching it."<br>
-    }<br>
-   ]<br>
-  },<br>
-  "n_candidates": 3<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/03-until-fulfilled.md",<br>
-  "judged": {<br>
-   "verdicts": [],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 0<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/04-four-minutes.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "obliqueness-unpaid",<br>
-     "quote": "\"You're the one that's calm this morning,\" said Edwin, and went and sat on the end of the bench next to Widow Sepp.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "The reader has everything needed (the knot, four minutes late, his own 'you do not cast it angry / calm hands' rule two paragraphs up) and Mrs Tansy visibly gets it - she puts the trowel down and rolls her sleeves."<br>
-    },<br>
-    {<br>
-     "rule_id": "triad-swerve-budget",<br>
-     "quote": "Widow Sepp, seventy-odd and small and upright with it... Dob, who was small for eleven, was standing up, and did not pretend to be looking anywhere else at all.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Not the listed construction (a three-item list inside one clause) but three separate sentences of blocking; even counted as a swerve triad it is the scene's single permitted instance, so it is inside the max-1 budget."<br>
-    },<br>
-    {<br>
-     "rule_id": "line-without-want",<br>
-     "quote": "\"You're the one that's calm this morning,\"",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Paraphrases cleanly as an instruction - 'you cast it, because I am not fit to' - and she obeys it in the next line."<br>
-    },<br>
-    {<br>
-     "rule_id": "description-list",<br>
-     "quote": "Widow Sepp, seventy-odd and small and upright with it, her stiff right wrist held in against her side, looked at the heap. Mrs Tansy, who came in from Nether Wold on the dairy cart and was broad, and red-faced from the ride...",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "Each portrait is bound to what Edwin is doing (reading the room for who is looking at him), but Widow Sepp stacks four attributes - age, size, bearing, wrist - which is the catalogue the rule bans; Mrs Tansy's and Dob's are single noticed things and are fine."<br>
-    },<br>
-    {<br>
-     "rule_id": "system-terminology",<br>
-     "quote": "The course had reached the compost cantrip, which is the spell people come to the course for and the one he teaches third",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "The rule names this exact substitution ('course' where the correct term is the class), and the same paragraph and scene use 'class garden', 'the best nose in the class', 'the class's own barrows'."<br>
-    },<br>
-    {<br>
-     "rule_id": "system-terminology",<br>
-     "quote": "One more thing, which I say to every course the week it gets the cantrip, and will say again",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Same wrong noun in Edwin's mouth; should be 'every class'."<br>
-    }<br>
-   ],<br>
-   "judge_added": [<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "It does not do anything the heap wasn't going to do by itself in a season. If the heap's wrong it makes a wrong heap faster.",<br>
-<span class="redacted">redacted sentence: unpublished prose</span> and a woman who has not' narration) - 'If the heap's wrong it makes a wrong heap faster' is the most liftable and should go."<br>
-    },<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-     "reason": "Second excess general maxim in the same teaching stretch; the clause after the comma is the portable half and can be cut without losing the instruction."<br>
-    }<br>
-   ]<br>
-  },<br>
-  "n_candidates": 6<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/04-four-minutes.md",<br>
-  "judged": {<br>
-   "verdicts": [],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 0<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/05-in-some-sort-of-order.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "missing-qualifier",<br>
-     "quote": "when the thing moved",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "\"the thing\" is a plausible colloquialism for the Weave-vision between two people who have just discussed it, but the scene never says the Weave moved, so a reader can stall on which thing; an adjective or 'the Weave' would settle it."<br>
-    },<br>
-    {<br>
-     "rule_id": "missing-qualifier",<br>
-     "quote": "the nineteenth",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "A date, shared between two people who both know the pending decision, and paid off inside the scene by \"Marsh Barton, 19th, dry\" — the withholding is Sorrel's shorthand, not a bare noun wanting an adjective."<br>
-    },<br>
-    {<br>
-     "rule_id": "mirror-retort",<br>
-     "quote": "\"You're sitting square to the desk.\"\n\n\"I always sit square to the desk.\"",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Not a frame reused with the ending swapped for wit — it's a flat denial that necessarily repeats the accused fact, and Sorrel's next line answers in an entirely different construction (\"You sit like a question mark\")."<br>
-    },<br>
-    {<br>
-     "rule_id": "maxim-capped-speech",<br>
-     "quote": "\"I've had kings negotiate with me with less clarity about their own position.\"",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "Only one true maxim ends a turn here (\"ignorant in some sort of order\"); the kings line is a comparative boast that needs 'me' and 'her' to mean anything and does not survive lifting out, so the dialogue budget is arguably met.",<br>
-     "keeper_note": "If the editor counts both, the survivor is \"If we're going to be ignorant, we can at least be ignorant in some sort of order\" — it is the scene's title and its instruction; cut or deflate the kings line."<br>
-    },<br>
-    {<br>
-     "rule_id": "description-list",<br>
-     "quote": "Sorrel was tall and plain, and quick, and for once not moving.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Four attributes catalogued on entrance where the rule allows one noticed thing; only \"for once not moving\" is what Edwin actually registers, and the height/plainness/quickness are inventory in front of it."<br>
-    },<br>
-    {<br>
-     "rule_id": "motive-off-page",<br>
-     "quote": "Her hand went to her pocket for a pencil and came back without one.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "The motive is on the page in the sentence itself — she went for a pencil to write the box down, and there wasn't one; nothing is withheld."<br>
-    }<br>
-   ],<br>
-   "judge_added": [<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "If we're going to be ignorant, we can at least be ignorant in some sort of order.",<br>
-     "reason": "Two portable epigrams in one scene against a combined narration-and-dialogue budget of one: this line and the closing \"hay that is cut wet is lost and roots that are watered late are only late\". Keeper is the hay/roots clause — it is the stated reason for the ledger entry and cutting it would cut a reason; this one is the excess (and is fully portable), though it is also the scene title, so the author may prefer to trade the other way."<br>
-    },<br>
-    {<br>
-     "rule_id": "quantity-of-it",<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-     "reason": "The retired \"the whole of it\" construction twice inside a single sentence — the exact recurring phrase DRMacIver has ruled against, and the doubling makes it a rhetorical echo on top of the house-word problem."<br>
-    }<br>
-   ]<br>
-  },<br>
-  "n_candidates": 6<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/05-in-some-sort-of-order.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "cute-cryptic-closer",<br>
-     "quote": "and it still costs somebody a letter.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "The note's final clause needs decoding — nothing on the page says who writes the letter, to whom, or why the choice generates one; it lands on a wink, not a fact."<br>
-    },<br>
-    {<br>
-     "rule_id": "implication-stopped-short",<br>
-     "quote": "there is only one answer, and it still costs somebody a letter.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "The sentence sets up the answer (help the man whose crop is at risk) and declines to state it, then insinuates a consequence instead of saying it."<br>
-    },<br>
-    {<br>
-     "rule_id": "cause-left-out",<br>
-     "quote": "it still costs somebody a letter",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "Same defect as the two above rather than a separate one, but it does invite an unanswered 'why?' — fixing the closer fixes all three, so don't bill it as an extra edit."<br>
-    }<br>
-   ],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 3<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/06-the-front-from-the-roof.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "implication-stopped-short",<br>
-     "quote": "The knot behind his breastbone did nothing.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Established running refrain (scenes 03, 04, 10, 15): the binding's silence is a stated fact the reader already has the meaning of, not an unstated insinuation."<br>
-    },<br>
-    {<br>
-     "rule_id": "missing-qualifier",<br>
-     "quote": "The knot behind his breastbone did nothing.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "'The knot' is a definite reference to a motif introduced in scene 03/04 with its sense given there; no qualifier is missing at this occurrence."<br>
-    },<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "A sea-front is not a cloud.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "A technical distinction cashed out immediately in particulars in the very next sentence — the rule's own counter-example shape, not a portable epigram."<br>
-    },<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "There is no better way to say it, and he had stopped looking for one in his first century.",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "Narrator commenting on its own phrasing edges toward epigram, but it is pinned to Edwin's own century and to the specific phrase 'took hold of it'; if any line in the scene is the one aphorism, this is it.",<br>
-     "keeper_note": "Keeper if the budget is judged exceeded — most particular of the three, tied to this character's age and this exact phrase."<br>
-    },<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "a working that size takes what you have and gives it back over days",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Mechanical statement of how magic costs work, delivered as the price of this working, not a wisdom line."<br>
-    },<br>
-    {<br>
-     "rule_id": "long-build-short-drop-budget",<br>
-     "quote": "He ate bread and cheese standing up at the dresser, and went to bed at his usual hour, and lay awake longer than he meant to.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "This is a polysyndeton triad, not a long build followed by a short punchy fragment; no drop sentence follows it."<br>
-    }<br>
-   ],<br>
-   "judge_added": [<br>
-    {<br>
-     "rule_id": "causal-which-budget",<br>
-     "quote": "which was a feeling he had had after every large working for three hundred years",<br>
-     "reason": "Four ', which' clauses in 638 words (6.3/1000) against a 3/1000 budget — about two allowed; this is the flabbiest and the first that should go."<br>
-    }<br>
-   ]<br>
-  },<br>
-  "n_candidates": 6<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/06-the-front-from-the-roof.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "implication-stopped-short",<br>
-     "quote": "If you have never heard one, the population graphs say you should go soon.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "The point — curlew numbers are collapsing and you may not get another chance — is set up and then left for the reader to complete; nothing adjacent states it.",<br>
-     "keeper_note": "Merged with the duplicate report of the same quote/rule."<br>
-    },<br>
-    {<br>
-     "rule_id": "cause-left-out",<br>
-     "quote": "the population graphs say you should go soon",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "Real defect but the same one already caught as implication-stopped-short; the missing content is the decline fact itself, not a cause behind a stated fact — fixing it once fixes both."<br>
-    },<br>
-    {<br>
-     "rule_id": "cute-cryptic-closer",<br>
-     "quote": "If you have never heard one, the population graphs say you should go soon.",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Final line of the note lands on a wry sidelong gesture at graphs rather than on the fact (curlews are in steep decline), which is exactly the snap-ending-that-needs-decoding shape."<br>
-    }<br>
-   ],<br>
-   "judge_added": [<br>
-    {<br>
-     "rule_id": "implication-stopped-short",<br>
-     "quote": "which you learn the first time you trust a bright green patch of it with your boot",<br>
-     "reason": "Declines to say what happens — the moss gives and the boot goes in over the ankle — leaving the reader to supply the whole content of 'learn'."<br>
-    }<br>
-   ]<br>
-  },<br>
-  "n_candidates": 4<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/07-can-you-actually-fight.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "aphorism-budget",<br>
-     "quote": "Most kings had not. Neither had any young man who had ever climbed the hill wanting battle magic.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Not a portable epigram — it is an elliptical continuation of 'listened to the answer all the way to its end', stuck to Edwin's own hill visitors, and it is the scene's only aphorism-shaped move, so within the 1/scene budget."<br>
-    },<br>
-    {<br>
-     "rule_id": "nominalised-absence",<br>
-     "quote": "the leaving alone was the lesson",<br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "A not-doing made the grammatical subject of a clause — exactly the recast case the rule names; 'he was teaching them to leave it alone' fixes it."<br>
-    },<br>
-    {<br>
-     "rule_id": "generalising-clause-budget",<br>
-     "quote": "Most kings had not.",<br>
-     "verdict": "CONFIRMED",<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-     "keeper_note": "Keep 'Neither had any young man who had ever climbed the hill wanting battle magic.' — most particular, points straight at Peri; cut 'Most kings had not.' (which also dangles its ellipsis) and the class-will-stand clause."<br>
-    },<br>
-    {<br>
-     "rule_id": "likeability-drift",<br>
-     "quote": "\"Can you actually fight?\" she asked, over the heap, in the same tone.",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "The bluntness is the scene's hinge and buys Edwin's shed confession, but 'in the same tone' plus the farmwives' flinch tips it toward rudeness-for-its-own-sake; softening the tag, not the question, would settle it."<br>
-    }<br>
-   ],<br>
-   "judge_added": [<br>
-    {<br>
-     "rule_id": "generalising-clause-budget",<br>
-     "quote": "a class will stand and look at a heap for as long as you let it",<br>
-     "reason": "A second narrator generalisation outward to people-in-general in the same short scene; scanners missed it because it is mid-sentence rather than a closing clause."<br>
-    }<br>
-   ]<br>
-  },<br>
-  "n_candidates": 4<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/07-can-you-actually-fight.md",<br>
-  "judged": {<br>
-   "verdicts": [],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 0<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/08-what-youre-standing-in.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "mirror-retort",<br>
-     "quote": "\"A great many people were taught it,\" said Widow Sepp, unmoved.",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "It does reuse Edwin's frame with the verb swapped, which is the letter of the rule, but here the echo is the speech act — a deliberate one-word correction of his deflection, with the sting landing on the separate \"By you.\" rather than on the swap; defensible either way."<br>
-    },<br>
-    {<br>
-     "rule_id": "description-list",<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Sorrel's first close look catalogues four items (apron, forearms, hair, tables) in one sentence; the rule allows one noticed thing — the forearms are the live one, the hair and apron are inventory."<br>
-    }<br>
-   ],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 2<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/08-what-youre-standing-in.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "jukebox-flourish",<br>
-     "quote": "the same weather doing the same arithmetic",<br>
-     "reason": "The figure has a nameable job (same wet-summer cause, same death rates) and restates flat as a real claim, so it is not an ornamental flourish; but 'arithmetic' is a retired house-word and the personification is mildly portable.",<br>
-     "verdict": "BORDERLINE",<br>
-     "keeper_note": "If touched, the fix is the word 'arithmetic' (census-retired), not the sentence's logic."<br>
-    }<br>
-   ],<br>
-   "judge_added": [<br>
-    {<br>
-     "rule_id": "shape-filled-fact-unchecked",<br>
-     "quote": "The last true famine in England came two centuries before the last one next door, and the difference was in the fields.",<br>
-     "reason": "The interval is wrong: England's last true famine is normally dated 1623 and Scotland's ill years are the 1690s, roughly seventy years apart, not two centuries; the sentence fills the rhetorical shape without checking the arithmetic."<br>
-    }<br>
-   ]<br>
-  },<br>
-  "n_candidates": 1<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/09-the-cart-up-the-hill.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "triad-swerve-budget",<br>
-     "quote": "young, red about the ears, off his route and aware of it",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "The rule budgets one swerve-triad per scene and this is the only one; the swerve is also grounded in the observable detail (red ears) rather than invented interiority."<br>
-    },<br>
-    {<br>
-     "rule_id": "cause-left-out",<br>
-     "quote": "which was not written yet and would not wait past the frosts",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "The cause is on the page in the same and next sentence — it is the autumn letter to the college, and the frosts are the season's end in a farming book; nothing here invites an unanswered 'why?'."<br>
-    }<br>
-   ],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 2<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/09-the-cart-up-the-hill.md",<br>
-  "judged": {<br>
-   "verdicts": [],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 0<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/scenes/10-more-work-than-the-day-needed.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "implication-stopped-short",<br>
-     "quote": "He turned the box round once, read the direction again, and turned it back.",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "It is an action beat, not an insinuating line, and its meaning is already cashed out on the page (the day given more work than it needed, the direction facing the wall two sentences earlier)."<br>
-    },<br>
-    {<br>
-     "rule_id": "near-idiom-general",<br>
-     "quote": "the hail Sorrel had broken herself",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Established canon and world-idiom: weather-workers break hail fronts, and Sorrel breaking last Haymonth's front alone is recorded in notes/canon/characters/sorrel.md and magic.md."<br>
-    },<br>
-    {<br>
-     "rule_id": "missing-qualifier",<br>
-     "quote": "the tail of his own Pellings rain",<br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "The Pellings and Edwin's 12:30 rain for their shearing are established on the page in earlier scenes; 'his own' is itself the qualifier that makes the sense clear."<br>
-    },<br>
-    {<br>
-     "rule_id": "wants-gerund-budget",<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-     "verdict": "CONFIRMED",<br>
-     "reason": "Narration's own voice using 'wanted doing' for a task it is describing — the rule licenses this only in the mouth of a character who would say it."<br>
-    },<br>
-    {<br>
-     "rule_id": "system-terminology",<br>
-     "quote": "a feud",<br>
-     "verdict": "BORDERLINE",<br>
-     "reason": "'a feud' as a bare item of workload is the shape the author objected to ('the feud is not his'), but here it is a list of duties rather than a claim of ownership, and scene 12 names his role correctly two scenes later.",<br>
-     "keeper_note": "If changed, 'a feud to arbitrate' fixes it without touching the rhythm."<br>
-    }<br>
-   ],<br>
-   "judge_added": []<br>
-  },<br>
-  "n_candidates": 5<br>
- },<br>
- {<br>
-  "path": "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/10-more-work-than-the-day-needed.md",<br>
-  "judged": {<br>
-   "verdicts": [<br>
-    {<br>
-     "rule_id": "cute-cryptic-closer",<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-     "verdict": "FALSE-POSITIVE",<br>
-     "reason": "Not the note's closing line (the Hail paragraph follows), and it isn't cryptic: it plainly restates the already-stated point that the record beats the theory, conceding it against the writer's own thermometer anecdote."<br>
-    }<br>
-   ],<br>
-   "judge_added": [<br>
-    {<br>
-     "rule_id": "cute-cryptic-closer",<br>
-     "quote": "and after a storm like that a slater's list is exactly as long as the road.",<br>
-     "reason": "The note's actual closing line is a compressed figurative flourish that needs a beat of decoding (every house on the road wants re-slating) rather than landing on a fact."<br>
-    }<br>
-   ]<br>
-  },<br>
-  "n_candidates": 1<br>
- }<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are synthesizing a full run of the language-police pipeline over…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a5f5a00f1ed4d38eb">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are synthesizing a full run of the language-police pipeline over chapters 1-10 (scenes + author's notes). Input: per-file judged findings (below). Write a markdown report to <span class="redacted">redacted</span>/tools/lint/run-ch01-10.md and return it as your final text. Structure: (1) CONFIRMED findings grouped by file — quote, rule, one-line reason, and for budget overspends the keeper — this section is a work-list an editor will fix, so be precise and complete; (2) BORDERLINE findings, briefly, grouped by file; (3) per-rule confirm/FP counts — flag any rule with 3+ FPs and draft the counter_example it needs; (4) constructions confirmed 2+ times across files with a draft Python regex, as proposals only; (5) a 5-line executive summary at the TOP: total confirmed / borderline / FP, the worst file, the healthiest, and whether the notes or the scenes carry more faults. Do not commit.</p>
+<p>Data:<br />
+[<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/01-pellings-half-past-twelve-soft.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;announce-before-deliver&quot;,<br />
+&quot;quote&quot;: &quot;A girl. Eighteen, or near it, and small, so that the sword was too long for her and the pack rode high; dark hair that had come down on one side somewhere on the hill; a face that had been indoors all its life until lately.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;The rule fires when the following sentence re-delivers the named thing ('A knock. Someone was knocking.'); here the fragment is the delivery and the next clause elaborates, so there is no drumroll-then-restatement.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;long-build-short-drop-budget&quot;,<br />
+&quot;quote&quot;: &quot;He looked up. Whoever it was had not stopped.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Third instance of the build/drop engine in the scene's first fifteen lines puts it over the max of 2, and this is the weakest of the three — plain functional narration with no punch, so it is the cuttable excess.&quot;,<br />
+&quot;keeper_note&quot;: &quot;Keep 'This one did not slow. Second bend, and he could see the sword.' — the most particular and least portable drop; also keep 'A girl.' as the scene's turn. Fix this one by folding 'He looked up' into the preceding paragraph or the following one.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;long-build-short-drop-budget&quot;,<br />
+&quot;quote&quot;: &quot;This one did not slow. Second bend, and he could see the sword.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Within the budget of 2 once the excess instance is removed; this is the strongest, most concrete instance and the one to keep.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;long-build-short-drop-budget&quot;,<br />
+&quot;quote&quot;: &quot;A girl.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Within budget once the excess is removed; it lands on the scene's actual turn, which the rule's counter-example licenses.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;description-list&quot;,<br />
+&quot;quote&quot;: &quot;Eighteen, or near it, and small, so that the sword was too long for her and the pack rode high; dark hair that had come down on one side somewhere on the hill; a face that had been indoors all its life until lately.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Semicoloned catalogue of age, size, proportions, hair and face on entrance — the rule's own example; the draft-three rule wants one noticed thing bound to what Edwin is doing.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 5<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/01-pellings-half-past-twelve-soft.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 0<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;It's practically how you know.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Fully portable — lifts out of the scene intact — and the rule says the one maxim belongs to whoever actually talks that way, usually Edwin, not Peri capping her turn on a general law.&quot;,<br />
+&quot;keeper_note&quot;: &quot;Survivor for the scene's maxim slot is Edwin's 'What you have found, Miss Millbrook, is a farmer' — it names the addressee and the scene's specific claim and does not travel. Cut or defunctionalise this one (end on the montage detail or a question instead).&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;What you have found, Miss Millbrook, is a farmer.&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;It is a definitive turn-cap, but it names Peri and answers her exact assembled-evidence claim, so it barely travels; as the least portable of the three it is the natural keeper.&quot;,<br />
+&quot;keeper_note&quot;: &quot;KEEPER.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;<em>Saving the world</em> doesn't describe anything I've done.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;First-person report about his own history, following 'I have helped some parishes, one at a time' — a fact about Edwin, not a portable maxim.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;reflexive-echo&quot;,<br />
+&quot;quote&quot;: &quot;A farmer,&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;This exact line is the rule's own counter_example, and it is a real speech act — Peri testing the word she cannot make fit her theory.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;character-too-quick&quot;,<br />
+&quot;quote&quot;: &quot;He grows up to be the dark lord. Dark lords are always pale. Everyone starts as a child, and nobody knows until - that's how it goes. And the man in the robe is some sort of cultist. I don't know the order yet.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;The rule targets Peri arriving early at conclusions the story needs; here she is sincere and wrong from the foundations up, which is exactly the specified behaviour, and Edwin immediately supplies the plain reading.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;character-too-quick&quot;,<br />
+&quot;quote&quot;: &quot;And every master in every book says what you just said, before he takes the hero on.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Not an uptake — it is unfalsifiable template-fitting that turns his denial into more evidence, i.e. her being wrong faster, not smarter.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;description-list&quot;,<br />
+&quot;quote&quot;: &quot;Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said <em>beans</em>. On the wall, in a frame, a sampler with a wheat sheaf on it that a farmwife had worked for him one winter.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Five noticed things in five fragments on first look at the room; the rule is one noticed thing bound to the action, never a list, and the jars alone (which pay off at line 39) carry it.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;unearned-authority&quot;,<br />
+&quot;quote&quot;: &quot;You get another question tomorrow. Don't ask it <em>who</em>. You've done <em>who</em>. Ask it <em>what</em>.&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;She came up the hill asking to be taught and he is proposing an experiment inside an argument, but the bare imperatives are the abrupt telling-Peri-what-to-do register the rule was written from; a 'Try asking it what' would settle it.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;likeability-drift&quot;,<br />
+&quot;quote&quot;: &quot;She looked at him with real patience, as at a man who had not done the reading.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Affectionate narrator wit about Peri's misplaced condescension, which is the joke of the scene, not a line that makes her read as a brat — 'real patience' keeps her sympathetic.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;tech-level-anachronism&quot;,<br />
+&quot;quote&quot;: &quot;A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said <em>beans</em>.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Reagents is alchemical vocabulary, entirely at home in a pre-industrial world with a magic-practitioner class; it is not an industrial artefact like the biscuit tin the rule was written from.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;It had gone wrong at the root. Pulling at the conclusion did nothing; you went down to the foundations and took them apart, and it was slow.&quot;,<br />
+&quot;reason&quot;: &quot;Generalised second-person narrator epigram, fully portable and attached to no particular of this kitchen; with Peri's 'It's practically how you know' already in the scene this puts it over the one-per-scene budget.&quot;<br />
+}<br />
+]<br />
+},<br />
+&quot;n_candidates&quot;: 10<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 0<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/03-until-fulfilled.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;triad-swerve-budget&quot;,<br />
+&quot;quote&quot;: &quot;There's a frost list in the seed drawers that's thirty years of my handwriting. Marsh Barton and Upper Wold have a quarrel about a ford, and I am the only living person both sides will still sit in a room with. A sea-front is sitting off the coast that I was going to spend today walking inland, so that four hundred sheep could be sheared dry.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Three separate sentences of concrete parish obligation, escalating from record to duty to today's job — no confessional swerve, and it is the scene's only triad, so within the max-1 budget.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;missing-connective&quot;,<br />
+&quot;quote&quot;: &quot;There was a sea-front off the coast that had been waiting since breakfast, and eleven farmwives in the class garden who had been waiting since a quarter to, and he did not move towards either.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;This is the exact junction recorded as the rule's own worked example from an author comment on this scene; the connective from 'he stood at the window' to the waiting work needs stating (an 'Instead'-shaped step is missing).&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;motive-off-page&quot;,<br />
+&quot;quote&quot;: &quot;He picked up both cups, hers not finished, and put them by the sink.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Clearing cups is ordinary kitchen business with its motive visible in 'hers not finished' — the rule targets deliberate odd acts that read as withheld, not domestic tidying used as a beat.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;negative-parallelism-split&quot;,<br />
+&quot;quote&quot;: &quot;Not because you're right. Because you're better at it.&quot;,<br />
+&quot;reason&quot;: &quot;Two-sentence negative parallelism — denial of a reason immediately followed by the affirming reason — the banned construction in its split form; the contraction in the following line kept the regex from catching it.&quot;<br />
+}<br />
+]<br />
+},<br />
+&quot;n_candidates&quot;: 3<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/03-until-fulfilled.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 0<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/04-four-minutes.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;obliqueness-unpaid&quot;,<br />
+&quot;quote&quot;: &quot;&quot;You're the one that's calm this morning,&quot; said Edwin, and went and sat on the end of the bench next to Widow Sepp.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;The reader has everything needed (the knot, four minutes late, his own 'you do not cast it angry / calm hands' rule two paragraphs up) and Mrs Tansy visibly gets it - she puts the trowel down and rolls her sleeves.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;triad-swerve-budget&quot;,<br />
+&quot;quote&quot;: &quot;Widow Sepp, seventy-odd and small and upright with it... Dob, who was small for eleven, was standing up, and did not pretend to be looking anywhere else at all.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Not the listed construction (a three-item list inside one clause) but three separate sentences of blocking; even counted as a swerve triad it is the scene's single permitted instance, so it is inside the max-1 budget.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;line-without-want&quot;,<br />
+&quot;quote&quot;: &quot;&quot;You're the one that's calm this morning,&quot;&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Paraphrases cleanly as an instruction - 'you cast it, because I am not fit to' - and she obeys it in the next line.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;description-list&quot;,<br />
+&quot;quote&quot;: &quot;Widow Sepp, seventy-odd and small and upright with it, her stiff right wrist held in against her side, looked at the heap. Mrs Tansy, who came in from Nether Wold on the dairy cart and was broad, and red-faced from the ride...&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;Each portrait is bound to what Edwin is doing (reading the room for who is looking at him), but Widow Sepp stacks four attributes - age, size, bearing, wrist - which is the catalogue the rule bans; Mrs Tansy's and Dob's are single noticed things and are fine.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;system-terminology&quot;,<br />
+&quot;quote&quot;: &quot;The course had reached the compost cantrip, which is the spell people come to the course for and the one he teaches third&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;The rule names this exact substitution ('course' where the correct term is the class), and the same paragraph and scene use 'class garden', 'the best nose in the class', 'the class's own barrows'.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;system-terminology&quot;,<br />
+&quot;quote&quot;: &quot;One more thing, which I say to every course the week it gets the cantrip, and will say again&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Same wrong noun in Edwin's mouth; should be 'every class'.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;It does not do anything the heap wasn't going to do by itself in a season. If the heap's wrong it makes a wrong heap faster.&quot;,<br />
+<span class="redacted">redacted sentence: unpublished prose</span> and a woman who has not' narration) - 'If the heap's wrong it makes a wrong heap faster' is the most liftable and should go.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;reason&quot;: &quot;Second excess general maxim in the same teaching stretch; the clause after the comma is the portable half and can be cut without losing the instruction.&quot;<br />
+}<br />
+]<br />
+},<br />
+&quot;n_candidates&quot;: 6<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/04-four-minutes.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 0<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/05-in-some-sort-of-order.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;missing-qualifier&quot;,<br />
+&quot;quote&quot;: &quot;when the thing moved&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;&quot;the thing&quot; is a plausible colloquialism for the Weave-vision between two people who have just discussed it, but the scene never says the Weave moved, so a reader can stall on which thing; an adjective or 'the Weave' would settle it.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;missing-qualifier&quot;,<br />
+&quot;quote&quot;: &quot;the nineteenth&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;A date, shared between two people who both know the pending decision, and paid off inside the scene by &quot;Marsh Barton, 19th, dry&quot; — the withholding is Sorrel's shorthand, not a bare noun wanting an adjective.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;mirror-retort&quot;,<br />
+&quot;quote&quot;: &quot;&quot;You're sitting square to the desk.&quot;\n\n&quot;I always sit square to the desk.&quot;&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Not a frame reused with the ending swapped for wit — it's a flat denial that necessarily repeats the accused fact, and Sorrel's next line answers in an entirely different construction (&quot;You sit like a question mark&quot;).&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;&quot;I've had kings negotiate with me with less clarity about their own position.&quot;&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;Only one true maxim ends a turn here (&quot;ignorant in some sort of order&quot;); the kings line is a comparative boast that needs 'me' and 'her' to mean anything and does not survive lifting out, so the dialogue budget is arguably met.&quot;,<br />
+&quot;keeper_note&quot;: &quot;If the editor counts both, the survivor is &quot;If we're going to be ignorant, we can at least be ignorant in some sort of order&quot; — it is the scene's title and its instruction; cut or deflate the kings line.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;description-list&quot;,<br />
+&quot;quote&quot;: &quot;Sorrel was tall and plain, and quick, and for once not moving.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Four attributes catalogued on entrance where the rule allows one noticed thing; only &quot;for once not moving&quot; is what Edwin actually registers, and the height/plainness/quickness are inventory in front of it.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;motive-off-page&quot;,<br />
+&quot;quote&quot;: &quot;Her hand went to her pocket for a pencil and came back without one.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;The motive is on the page in the sentence itself — she went for a pencil to write the box down, and there wasn't one; nothing is withheld.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;If we're going to be ignorant, we can at least be ignorant in some sort of order.&quot;,<br />
+&quot;reason&quot;: &quot;Two portable epigrams in one scene against a combined narration-and-dialogue budget of one: this line and the closing &quot;hay that is cut wet is lost and roots that are watered late are only late&quot;. Keeper is the hay/roots clause — it is the stated reason for the ledger entry and cutting it would cut a reason; this one is the excess (and is fully portable), though it is also the scene title, so the author may prefer to trade the other way.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;quantity-of-it&quot;,<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;reason&quot;: &quot;The retired &quot;the whole of it&quot; construction twice inside a single sentence — the exact recurring phrase DRMacIver has ruled against, and the doubling makes it a rhetorical echo on top of the house-word problem.&quot;<br />
+}<br />
+]<br />
+},<br />
+&quot;n_candidates&quot;: 6<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/05-in-some-sort-of-order.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;cute-cryptic-closer&quot;,<br />
+&quot;quote&quot;: &quot;and it still costs somebody a letter.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;The note's final clause needs decoding — nothing on the page says who writes the letter, to whom, or why the choice generates one; it lands on a wink, not a fact.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;implication-stopped-short&quot;,<br />
+&quot;quote&quot;: &quot;there is only one answer, and it still costs somebody a letter.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;The sentence sets up the answer (help the man whose crop is at risk) and declines to state it, then insinuates a consequence instead of saying it.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;cause-left-out&quot;,<br />
+&quot;quote&quot;: &quot;it still costs somebody a letter&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;Same defect as the two above rather than a separate one, but it does invite an unanswered 'why?' — fixing the closer fixes all three, so don't bill it as an extra edit.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 3<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/06-the-front-from-the-roof.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;implication-stopped-short&quot;,<br />
+&quot;quote&quot;: &quot;The knot behind his breastbone did nothing.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Established running refrain (scenes 03, 04, 10, 15): the binding's silence is a stated fact the reader already has the meaning of, not an unstated insinuation.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;missing-qualifier&quot;,<br />
+&quot;quote&quot;: &quot;The knot behind his breastbone did nothing.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;'The knot' is a definite reference to a motif introduced in scene 03/04 with its sense given there; no qualifier is missing at this occurrence.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;A sea-front is not a cloud.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;A technical distinction cashed out immediately in particulars in the very next sentence — the rule's own counter-example shape, not a portable epigram.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;There is no better way to say it, and he had stopped looking for one in his first century.&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;Narrator commenting on its own phrasing edges toward epigram, but it is pinned to Edwin's own century and to the specific phrase 'took hold of it'; if any line in the scene is the one aphorism, this is it.&quot;,<br />
+&quot;keeper_note&quot;: &quot;Keeper if the budget is judged exceeded — most particular of the three, tied to this character's age and this exact phrase.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;a working that size takes what you have and gives it back over days&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Mechanical statement of how magic costs work, delivered as the price of this working, not a wisdom line.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;long-build-short-drop-budget&quot;,<br />
+&quot;quote&quot;: &quot;He ate bread and cheese standing up at the dresser, and went to bed at his usual hour, and lay awake longer than he meant to.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;This is a polysyndeton triad, not a long build followed by a short punchy fragment; no drop sentence follows it.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;causal-which-budget&quot;,<br />
+&quot;quote&quot;: &quot;which was a feeling he had had after every large working for three hundred years&quot;,<br />
+&quot;reason&quot;: &quot;Four ', which' clauses in 638 words (6.3/1000) against a 3/1000 budget — about two allowed; this is the flabbiest and the first that should go.&quot;<br />
+}<br />
+]<br />
+},<br />
+&quot;n_candidates&quot;: 6<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/06-the-front-from-the-roof.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;implication-stopped-short&quot;,<br />
+&quot;quote&quot;: &quot;If you have never heard one, the population graphs say you should go soon.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;The point — curlew numbers are collapsing and you may not get another chance — is set up and then left for the reader to complete; nothing adjacent states it.&quot;,<br />
+&quot;keeper_note&quot;: &quot;Merged with the duplicate report of the same quote/rule.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;cause-left-out&quot;,<br />
+&quot;quote&quot;: &quot;the population graphs say you should go soon&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;Real defect but the same one already caught as implication-stopped-short; the missing content is the decline fact itself, not a cause behind a stated fact — fixing it once fixes both.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;cute-cryptic-closer&quot;,<br />
+&quot;quote&quot;: &quot;If you have never heard one, the population graphs say you should go soon.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Final line of the note lands on a wry sidelong gesture at graphs rather than on the fact (curlews are in steep decline), which is exactly the snap-ending-that-needs-decoding shape.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;implication-stopped-short&quot;,<br />
+&quot;quote&quot;: &quot;which you learn the first time you trust a bright green patch of it with your boot&quot;,<br />
+&quot;reason&quot;: &quot;Declines to say what happens — the moss gives and the boot goes in over the ankle — leaving the reader to supply the whole content of 'learn'.&quot;<br />
+}<br />
+]<br />
+},<br />
+&quot;n_candidates&quot;: 4<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/07-can-you-actually-fight.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;aphorism-budget&quot;,<br />
+&quot;quote&quot;: &quot;Most kings had not. Neither had any young man who had ever climbed the hill wanting battle magic.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Not a portable epigram — it is an elliptical continuation of 'listened to the answer all the way to its end', stuck to Edwin's own hill visitors, and it is the scene's only aphorism-shaped move, so within the 1/scene budget.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;nominalised-absence&quot;,<br />
+&quot;quote&quot;: &quot;the leaving alone was the lesson&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;A not-doing made the grammatical subject of a clause — exactly the recast case the rule names; 'he was teaching them to leave it alone' fixes it.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;generalising-clause-budget&quot;,<br />
+&quot;quote&quot;: &quot;Most kings had not.&quot;,<br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;keeper_note&quot;: &quot;Keep 'Neither had any young man who had ever climbed the hill wanting battle magic.' — most particular, points straight at Peri; cut 'Most kings had not.' (which also dangles its ellipsis) and the class-will-stand clause.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;likeability-drift&quot;,<br />
+&quot;quote&quot;: &quot;&quot;Can you actually fight?&quot; she asked, over the heap, in the same tone.&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;The bluntness is the scene's hinge and buys Edwin's shed confession, but 'in the same tone' plus the farmwives' flinch tips it toward rudeness-for-its-own-sake; softening the tag, not the question, would settle it.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;generalising-clause-budget&quot;,<br />
+&quot;quote&quot;: &quot;a class will stand and look at a heap for as long as you let it&quot;,<br />
+&quot;reason&quot;: &quot;A second narrator generalisation outward to people-in-general in the same short scene; scanners missed it because it is mid-sentence rather than a closing clause.&quot;<br />
+}<br />
+]<br />
+},<br />
+&quot;n_candidates&quot;: 4<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/07-can-you-actually-fight.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 0<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/08-what-youre-standing-in.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;mirror-retort&quot;,<br />
+&quot;quote&quot;: &quot;&quot;A great many people were taught it,&quot; said Widow Sepp, unmoved.&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;It does reuse Edwin's frame with the verb swapped, which is the letter of the rule, but here the echo is the speech act — a deliberate one-word correction of his deflection, with the sting landing on the separate &quot;By you.&quot; rather than on the swap; defensible either way.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;description-list&quot;,<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Sorrel's first close look catalogues four items (apron, forearms, hair, tables) in one sentence; the rule allows one noticed thing — the forearms are the live one, the hair and apron are inventory.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 2<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/08-what-youre-standing-in.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;jukebox-flourish&quot;,<br />
+&quot;quote&quot;: &quot;the same weather doing the same arithmetic&quot;,<br />
+&quot;reason&quot;: &quot;The figure has a nameable job (same wet-summer cause, same death rates) and restates flat as a real claim, so it is not an ornamental flourish; but 'arithmetic' is a retired house-word and the personification is mildly portable.&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;keeper_note&quot;: &quot;If touched, the fix is the word 'arithmetic' (census-retired), not the sentence's logic.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;shape-filled-fact-unchecked&quot;,<br />
+&quot;quote&quot;: &quot;The last true famine in England came two centuries before the last one next door, and the difference was in the fields.&quot;,<br />
+&quot;reason&quot;: &quot;The interval is wrong: England's last true famine is normally dated 1623 and Scotland's ill years are the 1690s, roughly seventy years apart, not two centuries; the sentence fills the rhetorical shape without checking the arithmetic.&quot;<br />
+}<br />
+]<br />
+},<br />
+&quot;n_candidates&quot;: 1<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/09-the-cart-up-the-hill.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;triad-swerve-budget&quot;,<br />
+&quot;quote&quot;: &quot;young, red about the ears, off his route and aware of it&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;The rule budgets one swerve-triad per scene and this is the only one; the swerve is also grounded in the observable detail (red ears) rather than invented interiority.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;cause-left-out&quot;,<br />
+&quot;quote&quot;: &quot;which was not written yet and would not wait past the frosts&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;The cause is on the page in the same and next sentence — it is the autumn letter to the college, and the frosts are the season's end in a farming book; nothing here invites an unanswered 'why?'.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 2<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/09-the-cart-up-the-hill.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 0<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/scenes/10-more-work-than-the-day-needed.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;implication-stopped-short&quot;,<br />
+&quot;quote&quot;: &quot;He turned the box round once, read the direction again, and turned it back.&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;It is an action beat, not an insinuating line, and its meaning is already cashed out on the page (the day given more work than it needed, the direction facing the wall two sentences earlier).&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;near-idiom-general&quot;,<br />
+&quot;quote&quot;: &quot;the hail Sorrel had broken herself&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Established canon and world-idiom: weather-workers break hail fronts, and Sorrel breaking last Haymonth's front alone is recorded in notes/canon/characters/sorrel.md and magic.md.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;missing-qualifier&quot;,<br />
+&quot;quote&quot;: &quot;the tail of his own Pellings rain&quot;,<br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;The Pellings and Edwin's 12:30 rain for their shearing are established on the page in earlier scenes; 'his own' is itself the qualifier that makes the sense clear.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;wants-gerund-budget&quot;,<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;verdict&quot;: &quot;CONFIRMED&quot;,<br />
+&quot;reason&quot;: &quot;Narration's own voice using 'wanted doing' for a task it is describing — the rule licenses this only in the mouth of a character who would say it.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;system-terminology&quot;,<br />
+&quot;quote&quot;: &quot;a feud&quot;,<br />
+&quot;verdict&quot;: &quot;BORDERLINE&quot;,<br />
+&quot;reason&quot;: &quot;'a feud' as a bare item of workload is the shape the author objected to ('the feud is not his'), but here it is a list of duties rather than a claim of ownership, and scene 12 names his role correctly two scenes later.&quot;,<br />
+&quot;keeper_note&quot;: &quot;If changed, 'a feud to arbitrate' fixes it without touching the rhythm.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: []<br />
+},<br />
+&quot;n_candidates&quot;: 5<br />
+},<br />
+{<br />
+&quot;path&quot;: &quot;<span class="redacted">redacted</span>/draft/book-01/author-notes/10-more-work-than-the-day-needed.md&quot;,<br />
+&quot;judged&quot;: {<br />
+&quot;verdicts&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;cute-cryptic-closer&quot;,<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;verdict&quot;: &quot;FALSE-POSITIVE&quot;,<br />
+&quot;reason&quot;: &quot;Not the note's closing line (the Hail paragraph follows), and it isn't cryptic: it plainly restates the already-stated point that the record beats the theory, conceding it against the writer's own thermometer anecdote.&quot;<br />
+}<br />
+],<br />
+&quot;judge_added&quot;: [<br />
+{<br />
+&quot;rule_id&quot;: &quot;cute-cryptic-closer&quot;,<br />
+&quot;quote&quot;: &quot;and after a storm like that a slater's list is exactly as long as the road.&quot;,<br />
+&quot;reason&quot;: &quot;The note's actual closing line is a compressed figurative flourish that needs a beat of decoding (every house on the road wants re-slating) rather than landing on a fact.&quot;<br />
+}<br />
+]<br />
+},<br />
+&quot;n_candidates&quot;: 1<br />
+}<br />
 ]</p></blockquote>
 
 
@@ -614,227 +626,416 @@ Data:<br>
 <p>✅ 1 lines, 156 chars</p>
 
 <div class="assistant-prose">
-<p># Language-police run: chapters 1–10 (scenes + author's notes)</p>
+<h1>Language-police run: chapters 1–10 (scenes + author's notes)</h1>
 <p>Run date 2026-08-30. 20 files (10 scenes, 10 author's notes), 58 candidates judged.</p>
-<p>## Executive summary</p>
-<p>1. **27 confirmed** (16 from scanners, 11 added by the judge), **13 borderline**, **30 false positives** — a 47% scanner precision, and the judge found nearly as many faults as the scanners did.<br>
-2. **Worst file: `scenes/04-four-minutes.md`** — 4 confirmed (two `system-terminology` misuses of "course" for "class", two excess aphorisms), plus a borderline description-list.<br>
-3. Close behind: `scenes/02` and `scenes/05` (3 each), and `author-notes/06` (3, all the same closing sentence).<br>
-4. **Healthiest: `scenes/09-the-cart-up-the-hill.md`** — 2 candidates, both false positives — along with six author's-note files that produced no candidates at all (01, 02, 03, 04, 07, 09).<br>
-5. **The scenes carry more faults**: 20 of 27 confirmed are in scenes; the notes' 7 are concentrated in three files and are almost entirely one defect (the cryptic closing line that gestures at a fact instead of stating it).</p>
-<p>---</p>
-<p>## 1. CONFIRMED — the work-list</p>
-<p>### `draft/book-01/scenes/01-pellings-half-past-twelve-soft.md`</p>
-<p>1. **long-build-short-drop-budget** — "He looked up. Whoever it was had not stopped."<br>
-   Third build/drop in the first fifteen lines, over the max of 2, and the weakest — plain functional narration with no punch.<br>
-   *Keeper:* "This one did not slow. Second bend, and he could see the sword." (most particular, least portable) and "A girl." (the scene's turn). Fix by folding "He looked up" into the preceding or following paragraph.<br>
-2. **description-list** — "Eighteen, or near it, and small, so that the sword was too long for her and the pack rode high; dark hair that had come down on one side somewhere on the hill; a face that had been indoors all its life until lately."<br>
-   Semicoloned catalogue of age, size, proportions, hair, face on entrance; draft-three wants one noticed thing bound to what Edwin is doing.</p>
-<p>### `draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md`</p>
-<p>3. **maxim-capped-speech** — "It's practically how you know."<br>
-   Fully portable, and the scene's one maxim belongs to whoever actually talks that way (Edwin), not Peri capping her turn on a general law.<br>
-   *Keeper:* "What you have found, Miss Millbrook, is a farmer." Cut or defunctionalise this one — end on the montage detail or a question.<br>
-4. **description-list** — "Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars… which said *beans*. On the wall, in a frame, a sampler with a wheat sheaf…"<br>
-   Five noticed things in five fragments on first look at the room. The jars alone (paid off at line 39) carry it.<br>
-5. **aphorism-budget** *(judge-added)* — "It had gone wrong at the root. Pulling at the conclusion did nothing; you went down to the foundations and took them apart, and it was slow."<br>
-   Generalised second-person epigram, attached to no particular of this kitchen; with "It's practically how you know" already present, over the one-per-scene budget.</p>
-<p>### `draft/book-01/scenes/03-until-fulfilled.md`</p>
-<p>6. **missing-connective** — "There was a sea-front off the coast that had been waiting since breakfast, and eleven farmwives in the class garden who had been waiting since a quarter to, and he did not move towards either."<br>
-   The rule's own worked example, from an author comment on this scene: the step from "he stood at the window" to the waiting work needs stating (an "Instead"-shaped connective).<br>
-7. **negative-parallelism-split** *(judge-added)* — "Not because you're right. Because you're better at it."<br>
-   Banned construction in its split form (denial of a reason, then the affirming reason); the contraction in the next line kept the regex from catching it.</p>
-<p>### `draft/book-01/scenes/04-four-minutes.md`</p>
-<p>8. **system-terminology** — "The course had reached the compost cantrip, which is the spell people come to the course for and the one he teaches third"<br>
-   Correct term is *class* — the same paragraph uses "class garden", "the best nose in the class", "the class's own barrows".<br>
-9. **system-terminology** — "One more thing, which I say to every course the week it gets the cantrip, and will say again"<br>
-   Same wrong noun in Edwin's mouth; should be "every class".<br>
-10. **aphorism-budget** *(judge-added)* — "It does not do anything the heap wasn't going to do by itself in a season. If the heap's wrong it makes a wrong heap faster."<br>
-    Three portable general statements against a budget of one. "If the heap's wrong it makes a wrong heap faster" is the most liftable; cut it.<br>
-11. <span class="redacted">redacted sentence: unpublished prose</span><br>
-    Second excess maxim in the same teaching stretch; the clause after the comma is the portable half and goes without losing the instruction.<br>
-    *Keeper for the scene's one slot:* the "a woman who has spent two weeks… and a woman who has not" narration.</p>
-<p>### `draft/book-01/scenes/05-in-some-sort-of-order.md`</p>
-<p>12. **description-list** — "Sorrel was tall and plain, and quick, and for once not moving."<br>
-    Four attributes on entrance; only "for once not moving" is what Edwin registers — the rest is inventory in front of it.<br>
-13. **aphorism-budget** *(judge-added)* — "If we're going to be ignorant, we can at least be ignorant in some sort of order."<br>
-    Two portable epigrams against a budget of one.<br>
-    *Keeper:* "hay that is cut wet is lost and roots that are watered late are only late" — it is the stated reason for the ledger entry, and cutting it would cut a reason. Note this line is also the scene title, so the author may prefer to trade the other way.<br>
-14. <span class="redacted">redacted sentence: unpublished prose</span><br>
-    Retired construction twice in one sentence; the doubling adds a rhetorical echo on top of the house-word problem.</p>
-<p>### `draft/book-01/author-notes/05-in-some-sort-of-order.md`</p>
-<p>15. **cute-cryptic-closer** / **implication-stopped-short** — "there is only one answer, and it still costs somebody a letter."<br>
-    Two rules, one edit. The sentence sets up the answer (help the man whose crop is at risk) and declines to state it, then insinuates a consequence; nothing on the page says who writes the letter, to whom, or why the choice generates one. State the answer and the consequence plainly.<br>
-    *(The `cause-left-out` hit on the same clause is the same defect — do not bill it as a third edit.)*</p>
-<p>### `draft/book-01/scenes/06-the-front-from-the-roof.md`</p>
-<p>16. **causal-which-budget** *(judge-added)* — "which was a feeling he had had after every large working for three hundred years"<br>
-    Four ", which" clauses in 638 words (6.3/1000) against a 3/1000 budget (~2 allowed); this is the flabbiest and the first to go.</p>
-<p>### `draft/book-01/author-notes/06-the-front-from-the-roof.md`</p>
-<p>17. **implication-stopped-short** / **cute-cryptic-closer** — "If you have never heard one, the population graphs say you should go soon."<br>
-    Two rules, one edit (and the `cause-left-out` borderline is the same defect again). The note's final line gestures sidelong at graphs instead of stating the fact: curlew numbers are in steep decline. Say it.<br>
-18. **implication-stopped-short** *(judge-added)* — "which you learn the first time you trust a bright green patch of it with your boot"<br>
-    Declines to say what happens — the moss gives and the boot goes in over the ankle — leaving the reader to supply the whole content of "learn".</p>
-<p>### `draft/book-01/scenes/07-can-you-actually-fight.md`</p>
-<p>19. **nominalised-absence** — "the leaving alone was the lesson"<br>
-    A not-doing made the grammatical subject. Fix: "he was teaching them to leave it alone."<br>
-20. **generalising-clause-budget** — "Most kings had not."<br>
-    Three outward generalisations in ~700 words against one per 3,500.<br>
-    *Keeper:* "Neither had any young man who had ever climbed the hill wanting battle magic." — most particular, points straight at Peri. Cut "Most kings had not." (which also dangles its ellipsis).<br>
-21. **generalising-clause-budget** *(judge-added)* — "a class will stand and look at a heap for as long as you let it"<br>
-    The third instance; missed by scanners because it is mid-sentence rather than a closing clause. Cut with #20.</p>
-<p>### `draft/book-01/scenes/08-what-youre-standing-in.md`</p>
-<p>22. <span class="redacted">redacted sentence: unpublished prose</span><br>
-    Four items on Sorrel's first close look; the forearms are the live one, hair and apron are inventory.</p>
-<p>### `draft/book-01/author-notes/08-what-youre-standing-in.md`</p>
-<p>23. **shape-filled-fact-unchecked** *(judge-added)* — "The last true famine in England came two centuries before the last one next door, and the difference was in the fields."<br>
-    The interval is wrong: England's last true famine is normally dated 1623, Scotland's ill years are the 1690s — roughly seventy years, not two centuries. The rhetorical shape got filled without checking the arithmetic. **Factual correction required before publication.**</p>
-<p>### `draft/book-01/scenes/10-more-work-than-the-day-needed.md`</p>
-<p>24. <span class="redacted">redacted sentence: unpublished prose</span><br>
-    Narration's own voice; the construction is licensed only in the mouth of a character who would say it.</p>
-<p>### `draft/book-01/author-notes/10-more-work-than-the-day-needed.md`</p>
-<p>25. **cute-cryptic-closer** *(judge-added)* — "and after a storm like that a slater's list is exactly as long as the road."<br>
-    The note's actual closing line (the scanner mis-identified an earlier sentence). A compressed figurative flourish needing a beat of decoding — every house on the road wants re-slating. Land on the fact.</p>
-<p>---</p>
-<p>## 2. BORDERLINE</p>
-<p>- **scenes/02** — `maxim-capped-speech`: "What you have found, Miss Millbrook, is a farmer." (definitive turn-cap, but names Peri and answers her exact claim; **marked KEEPER**). `unearned-authority`: "You get another question tomorrow. Don't ask it *who*… Ask it *what*." (bare imperatives in the abrupt telling-Peri-what-to-do register; "Try asking it what" would settle it).<br>
-- **scenes/04** — `description-list`: Widow Sepp stacks four attributes (age, size, bearing, wrist); Mrs Tansy's and Dob's single noticed things are fine.<br>
-- **scenes/05** — `missing-qualifier`: "when the thing moved" (the scene never says the Weave moved; a reader can stall). `maxim-capped-speech`: "I've had kings negotiate with me with less clarity about their own position." (comparative boast, doesn't survive lifting; if counted, cut or deflate it and keep the "some sort of order" line).<br>
-- **author-notes/05** — `cause-left-out` on "it still costs somebody a letter": same defect as the confirmed pair above; one fix covers all three.<br>
-- **scenes/06** — `aphorism-budget`: "There is no better way to say it, and he had stopped looking for one in his first century." (**keeper** if the budget is judged exceeded — pinned to this character's age and this exact phrase).<br>
-- **scenes/07** — `likeability-drift`: "'Can you actually fight?' she asked, over the heap, in the same tone." (the bluntness is the hinge; "in the same tone" plus the farmwives' flinch tips it — soften the tag, not the question).<br>
-- **scenes/08** — `mirror-retort`: "'A great many people were taught it,' said Widow Sepp, unmoved." (reuses Edwin's frame with the verb swapped, but the echo *is* the speech act and the sting lands on "By you.").<br>
-- **author-notes/06** — `cause-left-out` on "the population graphs say you should go soon": same defect as the confirmed closer.<br>
-- **author-notes/08** — `jukebox-flourish`: "the same weather doing the same arithmetic" (the figure does real work; the fixable part is "arithmetic", a census-retired house-word).<br>
-- **scenes/10** — `system-terminology`: "a feud" as a bare item of workload; "a feud to arbitrate" fixes it without touching the rhythm.</p>
-<p>---</p>
-<p>## 3. Per-rule confirm / false-positive counts</p>
-<p>| Rule | Confirmed | Borderline | FP |<br>
-|---|---|---|---|<br>
-| description-list | 4 | 1 | 0 |<br>
-| aphorism-budget | 4 | 1 | **3** |<br>
-| implication-stopped-short | 3 | 0 | 2 |<br>
-| cute-cryptic-closer | 3 | 0 | 1 |<br>
-| system-terminology | 2 | 1 | 0 |<br>
-| generalising-clause-budget | 2 | 0 | 0 |<br>
-| maxim-capped-speech | 1 | 2 | 1 |<br>
-| long-build-short-drop-budget | 1 | 0 | **3** |<br>
-| missing-connective | 1 | 0 | 0 |<br>
-| negative-parallelism-split | 1 | 0 | 0 |<br>
-| quantity-of-it | 1 | 0 | 0 |<br>
-| causal-which-budget | 1 | 0 | 0 |<br>
-| nominalised-absence | 1 | 0 | 0 |<br>
-| wants-gerund-budget | 1 | 0 | 0 |<br>
-| shape-filled-fact-unchecked | 1 | 0 | 0 |<br>
-| missing-qualifier | 0 | 1 | **3** |<br>
-| triad-swerve-budget | 0 | 0 | **3** |<br>
-| cause-left-out | 0 | 2 | 1 |<br>
-| motive-off-page | 0 | 0 | 2 |<br>
-| character-too-quick | 0 | 0 | 2 |<br>
-| mirror-retort | 0 | 1 | 1 |<br>
-| likeability-drift | 0 | 1 | 1 |<br>
-| jukebox-flourish | 0 | 1 | 0 |<br>
-| unearned-authority | 0 | 1 | 0 |<br>
-| obliqueness-unpaid | 0 | 0 | 1 |<br>
-| line-without-want | 0 | 0 | 1 |<br>
-| tech-level-anachronism | 0 | 0 | 1 |<br>
-| near-idiom-general | 0 | 0 | 1 |<br>
-| reflexive-echo | 0 | 0 | 1 |<br>
-| announce-before-deliver | 0 | 0 | 1 |</p>
-<p>### Rules with 3+ FPs — counter-examples to add</p>
-<p>**`triad-swerve-budget` (0 confirmed, 3 FPs).** Scanners flag any three of anything. Two failure shapes: three separate *sentences* mistaken for a three-item clause, and a legitimate single instance flagged despite the budget being 1.</p>
-<p>```<br>
-counter_example: |<br>
-  "young, red about the ears, off his route and aware of it"<br>
-  NOT a violation. This is one swerve-triad, and the budget is one per<br>
-  scene — a lone instance is never reportable. The swerve item is also<br>
-  grounded in the observable detail immediately before it (red ears)<br>
-  rather than invented interiority. Only report when a scene contains<br>
-  a SECOND three-item-in-one-clause list whose third item swerves to<br>
-  interiority. Three consecutive sentences of blocking or of concrete<br>
-  obligation ("There's a frost list… Marsh Barton and Upper Wold…<br>
-  A sea-front is sitting off the coast…") are not this construction<br>
-  at all, however many of them there are.<br>
-```</p>
-<p>**`missing-qualifier` (0 confirmed, 3 FPs).** Fires on definite references whose sense is established elsewhere in the book.</p>
-<p>```<br>
-counter_example: |<br>
-  "The knot behind his breastbone did nothing." / "the tail of his own<br>
-  Pellings rain" / "the nineteenth"<br>
-  NOT violations. A bare definite noun is fine when (a) it names a<br>
-  running motif whose sense was given in an earlier scene, (b) it<br>
-  carries its own qualifier ("his own"), or (c) it is shorthand both<br>
-  speakers demonstrably share and the scene pays off later ("Marsh<br>
-  Barton, 19th, dry"). Report only when nothing in the file or the<br>
-  established motif set tells the reader which thing is meant.<br>
-```</p>
-<p>**`long-build-short-drop-budget` (1 confirmed, 3 FPs).** The scanner reports every instance rather than the overspend, and miscounts polysyndeton as a build.</p>
-<p>```<br>
-counter_example: |<br>
-  "He ate bread and cheese standing up at the dresser, and went to bed<br>
-  at his usual hour, and lay awake longer than he meant to."<br>
-  NOT a violation: a polysyndeton triad with no short drop sentence<br>
-  after it. Also not violations: "This one did not slow. Second bend,<br>
-  and he could see the sword." and "A girl." — both inside a budget of<br>
-  two, and a drop that lands on the scene's actual turn is licensed.<br>
-  Report only the surplus instances beyond two per scene, and name the<br>
-  weakest as <span class="redacted">redacted: place</span>, not the strongest.<br>
-```</p>
-<p>**`aphorism-budget` (4 confirmed, 3 FPs).** The confirms all came from the judge; the scanner's own hits were mechanical statements.</p>
-<p>```<br>
-counter_example: |<br>
-  "A sea-front is not a cloud." / "a working that size takes what you<br>
-  have and gives it back over days"<br>
-  NOT violations. A general-sounding sentence is not an aphorism when<br>
-  it is a technical distinction cashed out in particulars in the next<br>
-  sentence, or a statement of what a working costs. The test is<br>
-  portability: could this line be printed on its own and still mean<br>
-  something? Mechanism, price, and elliptical continuations of a<br>
-  specific sentence ("Most kings had not.") fail that test.<br>
-  Conversely, DO look mid-sentence and mid-paragraph, not only at<br>
-  paragraph-final position — the real overspends in this run were all<br>
-  clauses buried inside teaching narration.<br>
-```</p>
-<p>---</p>
-<p>## 4. Constructions confirmed 2+ times — draft regexes (proposals only)</p>
+<h2>Executive summary</h2>
+<ol>
+<li><strong>27 confirmed</strong> (16 from scanners, 11 added by the judge), <strong>13 borderline</strong>, <strong>30 false positives</strong> — a 47% scanner precision, and the judge found nearly as many faults as the scanners did.</li>
+<li><strong>Worst file: <code>scenes/04-four-minutes.md</code></strong> — 4 confirmed (two <code>system-terminology</code> misuses of &quot;course&quot; for &quot;class&quot;, two excess aphorisms), plus a borderline description-list.</li>
+<li>Close behind: <code>scenes/02</code> and <code>scenes/05</code> (3 each), and <code>author-notes/06</code> (3, all the same closing sentence).</li>
+<li><strong>Healthiest: <code>scenes/09-the-cart-up-the-hill.md</code></strong> — 2 candidates, both false positives — along with six author's-note files that produced no candidates at all (01, 02, 03, 04, 07, 09).</li>
+<li><strong>The scenes carry more faults</strong>: 20 of 27 confirmed are in scenes; the notes' 7 are concentrated in three files and are almost entirely one defect (the cryptic closing line that gestures at a fact instead of stating it).</li>
+</ol>
+<hr />
+<h2>1. CONFIRMED — the work-list</h2>
+<h3><code>draft/book-01/scenes/01-pellings-half-past-twelve-soft.md</code></h3>
+<ol>
+<li><strong>long-build-short-drop-budget</strong> — &quot;He looked up. Whoever it was had not stopped.&quot;<br />
+Third build/drop in the first fifteen lines, over the max of 2, and the weakest — plain functional narration with no punch.<br />
+<em>Keeper:</em> &quot;This one did not slow. Second bend, and he could see the sword.&quot; (most particular, least portable) and &quot;A girl.&quot; (the scene's turn). Fix by folding &quot;He looked up&quot; into the preceding or following paragraph.</li>
+<li><strong>description-list</strong> — &quot;Eighteen, or near it, and small, so that the sword was too long for her and the pack rode high; dark hair that had come down on one side somewhere on the hill; a face that had been indoors all its life until lately.&quot;<br />
+Semicoloned catalogue of age, size, proportions, hair, face on entrance; draft-three wants one noticed thing bound to what Edwin is doing.</li>
+</ol>
+<h3><code>draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md</code></h3>
+<ol start="3">
+<li><strong>maxim-capped-speech</strong> — &quot;It's practically how you know.&quot;<br />
+Fully portable, and the scene's one maxim belongs to whoever actually talks that way (Edwin), not Peri capping her turn on a general law.<br />
+<em>Keeper:</em> &quot;What you have found, Miss Millbrook, is a farmer.&quot; Cut or defunctionalise this one — end on the montage detail or a question.</li>
+<li><strong>description-list</strong> — &quot;Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars… which said <em>beans</em>. On the wall, in a frame, a sampler with a wheat sheaf…&quot;<br />
+Five noticed things in five fragments on first look at the room. The jars alone (paid off at line 39) carry it.</li>
+<li><strong>aphorism-budget</strong> <em>(judge-added)</em> — &quot;It had gone wrong at the root. Pulling at the conclusion did nothing; you went down to the foundations and took them apart, and it was slow.&quot;<br />
+Generalised second-person epigram, attached to no particular of this kitchen; with &quot;It's practically how you know&quot; already present, over the one-per-scene budget.</li>
+</ol>
+<h3><code>draft/book-01/scenes/03-until-fulfilled.md</code></h3>
+<ol start="6">
+<li><strong>missing-connective</strong> — &quot;There was a sea-front off the coast that had been waiting since breakfast, and eleven farmwives in the class garden who had been waiting since a quarter to, and he did not move towards either.&quot;<br />
+The rule's own worked example, from an author comment on this scene: the step from &quot;he stood at the window&quot; to the waiting work needs stating (an &quot;Instead&quot;-shaped connective).</li>
+<li><strong>negative-parallelism-split</strong> <em>(judge-added)</em> — &quot;Not because you're right. Because you're better at it.&quot;<br />
+Banned construction in its split form (denial of a reason, then the affirming reason); the contraction in the next line kept the regex from catching it.</li>
+</ol>
+<h3><code>draft/book-01/scenes/04-four-minutes.md</code></h3>
+<ol start="8">
+<li><strong>system-terminology</strong> — &quot;The course had reached the compost cantrip, which is the spell people come to the course for and the one he teaches third&quot;<br />
+Correct term is <em>class</em> — the same paragraph uses &quot;class garden&quot;, &quot;the best nose in the class&quot;, &quot;the class's own barrows&quot;.</li>
+<li><strong>system-terminology</strong> — &quot;One more thing, which I say to every course the week it gets the cantrip, and will say again&quot;<br />
+Same wrong noun in Edwin's mouth; should be &quot;every class&quot;.</li>
+<li><strong>aphorism-budget</strong> <em>(judge-added)</em> — &quot;It does not do anything the heap wasn't going to do by itself in a season. If the heap's wrong it makes a wrong heap faster.&quot;<br />
+Three portable general statements against a budget of one. &quot;If the heap's wrong it makes a wrong heap faster&quot; is the most liftable; cut it.</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span><br />
+Second excess maxim in the same teaching stretch; the clause after the comma is the portable half and goes without losing the instruction.<br />
+<em>Keeper for the scene's one slot:</em> the &quot;a woman who has spent two weeks… and a woman who has not&quot; narration.</li>
+</ol>
+<h3><code>draft/book-01/scenes/05-in-some-sort-of-order.md</code></h3>
+<ol start="12">
+<li><strong>description-list</strong> — &quot;Sorrel was tall and plain, and quick, and for once not moving.&quot;<br />
+Four attributes on entrance; only &quot;for once not moving&quot; is what Edwin registers — the rest is inventory in front of it.</li>
+<li><strong>aphorism-budget</strong> <em>(judge-added)</em> — &quot;If we're going to be ignorant, we can at least be ignorant in some sort of order.&quot;<br />
+Two portable epigrams against a budget of one.<br />
+<em>Keeper:</em> &quot;hay that is cut wet is lost and roots that are watered late are only late&quot; — it is the stated reason for the ledger entry, and cutting it would cut a reason. Note this line is also the scene title, so the author may prefer to trade the other way.</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span><br />
+Retired construction twice in one sentence; the doubling adds a rhetorical echo on top of the house-word problem.</li>
+</ol>
+<h3><code>draft/book-01/author-notes/05-in-some-sort-of-order.md</code></h3>
+<ol start="15">
+<li><strong>cute-cryptic-closer</strong> / <strong>implication-stopped-short</strong> — &quot;there is only one answer, and it still costs somebody a letter.&quot;<br />
+Two rules, one edit. The sentence sets up the answer (help the man whose crop is at risk) and declines to state it, then insinuates a consequence; nothing on the page says who writes the letter, to whom, or why the choice generates one. State the answer and the consequence plainly.<br />
+<em>(The <code>cause-left-out</code> hit on the same clause is the same defect — do not bill it as a third edit.)</em></li>
+</ol>
+<h3><code>draft/book-01/scenes/06-the-front-from-the-roof.md</code></h3>
+<ol start="16">
+<li><strong>causal-which-budget</strong> <em>(judge-added)</em> — &quot;which was a feeling he had had after every large working for three hundred years&quot;<br />
+Four &quot;, which&quot; clauses in 638 words (6.3/1000) against a 3/1000 budget (~2 allowed); this is the flabbiest and the first to go.</li>
+</ol>
+<h3><code>draft/book-01/author-notes/06-the-front-from-the-roof.md</code></h3>
+<ol start="17">
+<li><strong>implication-stopped-short</strong> / <strong>cute-cryptic-closer</strong> — &quot;If you have never heard one, the population graphs say you should go soon.&quot;<br />
+Two rules, one edit (and the <code>cause-left-out</code> borderline is the same defect again). The note's final line gestures sidelong at graphs instead of stating the fact: curlew numbers are in steep decline. Say it.</li>
+<li><strong>implication-stopped-short</strong> <em>(judge-added)</em> — &quot;which you learn the first time you trust a bright green patch of it with your boot&quot;<br />
+Declines to say what happens — the moss gives and the boot goes in over the ankle — leaving the reader to supply the whole content of &quot;learn&quot;.</li>
+</ol>
+<h3><code>draft/book-01/scenes/07-can-you-actually-fight.md</code></h3>
+<ol start="19">
+<li><strong>nominalised-absence</strong> — &quot;the leaving alone was the lesson&quot;<br />
+A not-doing made the grammatical subject. Fix: &quot;he was teaching them to leave it alone.&quot;</li>
+<li><strong>generalising-clause-budget</strong> — &quot;Most kings had not.&quot;<br />
+Three outward generalisations in ~700 words against one per 3,500.<br />
+<em>Keeper:</em> &quot;Neither had any young man who had ever climbed the hill wanting battle magic.&quot; — most particular, points straight at Peri. Cut &quot;Most kings had not.&quot; (which also dangles its ellipsis).</li>
+<li><strong>generalising-clause-budget</strong> <em>(judge-added)</em> — &quot;a class will stand and look at a heap for as long as you let it&quot;<br />
+The third instance; missed by scanners because it is mid-sentence rather than a closing clause. Cut with #20.</li>
+</ol>
+<h3><code>draft/book-01/scenes/08-what-youre-standing-in.md</code></h3>
+<ol start="22">
+<li><span class="redacted">redacted sentence: unpublished prose</span><br />
+Four items on Sorrel's first close look; the forearms are the live one, hair and apron are inventory.</li>
+</ol>
+<h3><code>draft/book-01/author-notes/08-what-youre-standing-in.md</code></h3>
+<ol start="23">
+<li><strong>shape-filled-fact-unchecked</strong> <em>(judge-added)</em> — &quot;The last true famine in England came two centuries before the last one next door, and the difference was in the fields.&quot;<br />
+The interval is wrong: England's last true famine is normally dated 1623, Scotland's ill years are the 1690s — roughly seventy years, not two centuries. The rhetorical shape got filled without checking the arithmetic. <strong>Factual correction required before publication.</strong></li>
+</ol>
+<h3><code>draft/book-01/scenes/10-more-work-than-the-day-needed.md</code></h3>
+<ol start="24">
+<li><span class="redacted">redacted sentence: unpublished prose</span><br />
+Narration's own voice; the construction is licensed only in the mouth of a character who would say it.</li>
+</ol>
+<h3><code>draft/book-01/author-notes/10-more-work-than-the-day-needed.md</code></h3>
+<ol start="25">
+<li><strong>cute-cryptic-closer</strong> <em>(judge-added)</em> — &quot;and after a storm like that a slater's list is exactly as long as the road.&quot;<br />
+The note's actual closing line (the scanner mis-identified an earlier sentence). A compressed figurative flourish needing a beat of decoding — every house on the road wants re-slating. Land on the fact.</li>
+</ol>
+<hr />
+<h2>2. BORDERLINE</h2>
+<ul>
+<li><strong>scenes/02</strong> — <code>maxim-capped-speech</code>: &quot;What you have found, Miss Millbrook, is a farmer.&quot; (definitive turn-cap, but names Peri and answers her exact claim; <strong>marked KEEPER</strong>). <code>unearned-authority</code>: &quot;You get another question tomorrow. Don't ask it <em>who</em>… Ask it <em>what</em>.&quot; (bare imperatives in the abrupt telling-Peri-what-to-do register; &quot;Try asking it what&quot; would settle it).</li>
+<li><strong>scenes/04</strong> — <code>description-list</code>: Widow Sepp stacks four attributes (age, size, bearing, wrist); Mrs Tansy's and Dob's single noticed things are fine.</li>
+<li><strong>scenes/05</strong> — <code>missing-qualifier</code>: &quot;when the thing moved&quot; (the scene never says the Weave moved; a reader can stall). <code>maxim-capped-speech</code>: &quot;I've had kings negotiate with me with less clarity about their own position.&quot; (comparative boast, doesn't survive lifting; if counted, cut or deflate it and keep the &quot;some sort of order&quot; line).</li>
+<li><strong>author-notes/05</strong> — <code>cause-left-out</code> on &quot;it still costs somebody a letter&quot;: same defect as the confirmed pair above; one fix covers all three.</li>
+<li><strong>scenes/06</strong> — <code>aphorism-budget</code>: &quot;There is no better way to say it, and he had stopped looking for one in his first century.&quot; (<strong>keeper</strong> if the budget is judged exceeded — pinned to this character's age and this exact phrase).</li>
+<li><strong>scenes/07</strong> — <code>likeability-drift</code>: &quot;'Can you actually fight?' she asked, over the heap, in the same tone.&quot; (the bluntness is the hinge; &quot;in the same tone&quot; plus the farmwives' flinch tips it — soften the tag, not the question).</li>
+<li><strong>scenes/08</strong> — <code>mirror-retort</code>: &quot;'A great many people were taught it,' said Widow Sepp, unmoved.&quot; (reuses Edwin's frame with the verb swapped, but the echo <em>is</em> the speech act and the sting lands on &quot;By you.&quot;).</li>
+<li><strong>author-notes/06</strong> — <code>cause-left-out</code> on &quot;the population graphs say you should go soon&quot;: same defect as the confirmed closer.</li>
+<li><strong>author-notes/08</strong> — <code>jukebox-flourish</code>: &quot;the same weather doing the same arithmetic&quot; (the figure does real work; the fixable part is &quot;arithmetic&quot;, a census-retired house-word).</li>
+<li><strong>scenes/10</strong> — <code>system-terminology</code>: &quot;a feud&quot; as a bare item of workload; &quot;a feud to arbitrate&quot; fixes it without touching the rhythm.</li>
+</ul>
+<hr />
+<h2>3. Per-rule confirm / false-positive counts</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Confirmed</th>
+<th>Borderline</th>
+<th>FP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>description-list</td>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>aphorism-budget</td>
+<td>4</td>
+<td>1</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>implication-stopped-short</td>
+<td>3</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>cute-cryptic-closer</td>
+<td>3</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>system-terminology</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>generalising-clause-budget</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>maxim-capped-speech</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>long-build-short-drop-budget</td>
+<td>1</td>
+<td>0</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>missing-connective</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>negative-parallelism-split</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>quantity-of-it</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>causal-which-budget</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>nominalised-absence</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>wants-gerund-budget</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>shape-filled-fact-unchecked</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>missing-qualifier</td>
+<td>0</td>
+<td>1</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>triad-swerve-budget</td>
+<td>0</td>
+<td>0</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>cause-left-out</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>motive-off-page</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>character-too-quick</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>mirror-retort</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>likeability-drift</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>jukebox-flourish</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>unearned-authority</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>obliqueness-unpaid</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>line-without-want</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>tech-level-anachronism</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>near-idiom-general</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>reflexive-echo</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>announce-before-deliver</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Rules with 3+ FPs — counter-examples to add</h3>
+<p><strong><code>triad-swerve-budget</code> (0 confirmed, 3 FPs).</strong> Scanners flag any three of anything. Two failure shapes: three separate <em>sentences</em> mistaken for a three-item clause, and a legitimate single instance flagged despite the budget being 1.</p>
+<pre><code>counter_example: |
+  &quot;young, red about the ears, off his route and aware of it&quot;
+  NOT a violation. This is one swerve-triad, and the budget is one per
+  scene — a lone instance is never reportable. The swerve item is also
+  grounded in the observable detail immediately before it (red ears)
+  rather than invented interiority. Only report when a scene contains
+  a SECOND three-item-in-one-clause list whose third item swerves to
+  interiority. Three consecutive sentences of blocking or of concrete
+  obligation (&quot;There's a frost list… Marsh Barton and Upper Wold…
+  A sea-front is sitting off the coast…&quot;) are not this construction
+  at all, however many of them there are.
+</code></pre>
+<p><strong><code>missing-qualifier</code> (0 confirmed, 3 FPs).</strong> Fires on definite references whose sense is established elsewhere in the book.</p>
+<pre><code>counter_example: |
+  &quot;The knot behind his breastbone did nothing.&quot; / &quot;the tail of his own
+  Pellings rain&quot; / &quot;the nineteenth&quot;
+  NOT violations. A bare definite noun is fine when (a) it names a
+  running motif whose sense was given in an earlier scene, (b) it
+  carries its own qualifier (&quot;his own&quot;), or (c) it is shorthand both
+  speakers demonstrably share and the scene pays off later (&quot;Marsh
+  Barton, 19th, dry&quot;). Report only when nothing in the file or the
+  established motif set tells the reader which thing is meant.
+</code></pre>
+<p><strong><code>long-build-short-drop-budget</code> (1 confirmed, 3 FPs).</strong> The scanner reports every instance rather than the overspend, and miscounts polysyndeton as a build.</p>
+<pre><code>counter_example: |
+  &quot;He ate bread and cheese standing up at the dresser, and went to bed
+  at his usual hour, and lay awake longer than he meant to.&quot;
+  NOT a violation: a polysyndeton triad with no short drop sentence
+  after it. Also not violations: &quot;This one did not slow. Second bend,
+  and he could see the sword.&quot; and &quot;A girl.&quot; — both inside a budget of
+  two, and a drop that lands on the scene's actual turn is licensed.
+  Report only the surplus instances beyond two per scene, and name the
+  weakest as <span class="redacted">redacted</span>, not the strongest.
+</code></pre>
+<p><strong><code>aphorism-budget</code> (4 confirmed, 3 FPs).</strong> The confirms all came from the judge; the scanner's own hits were mechanical statements.</p>
+<pre><code>counter_example: |
+  &quot;A sea-front is not a cloud.&quot; / &quot;a working that size takes what you
+  have and gives it back over days&quot;
+  NOT violations. A general-sounding sentence is not an aphorism when
+  it is a technical distinction cashed out in particulars in the next
+  sentence, or a statement of what a working costs. The test is
+  portability: could this line be printed on its own and still mean
+  something? Mechanism, price, and elliptical continuations of a
+  specific sentence (&quot;Most kings had not.&quot;) fail that test.
+  Conversely, DO look mid-sentence and mid-paragraph, not only at
+  paragraph-final position — the real overspends in this run were all
+  clauses buried inside teaching narration.
+</code></pre>
+<hr />
+<h2>4. Constructions confirmed 2+ times — draft regexes (proposals only)</h2>
 <p>Offered as scanner seeds, not as rules; every one of these needs judge adjudication because the underlying rules are budgets or context-dependent.</p>
-<p>```python<br>
-# description-list (4 confirms) — 3+ appositive/attributive items in one<br>
-# sentence on a character's or room's first appearance.<br>
-DESCRIPTION_LIST = re.compile(<br>
-    r"(?:[a-z][^.;!?]{4,60}(?:,|;)\s+){3,}(?:and\s+)?[a-z][^.;!?]{4,60}[.;]"<br>
-)<br>
-# Gate: only run over sentences within N words of a character's first<br>
-# named appearance, or of a POV entry into a new location.</p>
-<p># system-terminology: "course" where the class is meant (2 confirms).<br>
-COURSE_FOR_CLASS = re.compile(r"\b(?:the|every|a|his|each)\s+course\b", re.I)<br>
-# Near-zero FP risk in this book: watercourse and "course of" are the<br>
-# only legitimate uses, both excluded by the determiner set.</p>
-<p># generalising-clause-budget (2 confirms) — outward generalisation to<br>
-# people-in-general, wherever it sits in the sentence.<br>
-GENERALISING = re.compile(<br>
-    r"\b(?:most|every|any|all|no)\s+\w+s?\b[^.]{0,40}\b(?:had not|will|"<br>
-    r"do not|does not|always|never)\b"<br>
-    r"|\ba\s+\w+\s+will\s+\w+[^.]{0,60}\bfor as long as\b"<br>
-)<br>
-# Budget rule: report only instances beyond one per 3,500 words.</p>
-<p># cute-cryptic-closer (3 confirms) — final sentence of an author's note<br>
-# that is figurative rather than factual. Not regexable on its own;<br>
-# proposal is a positional extractor plus a judge prompt.<br>
-def note_closer(text: str) -&gt; str:<br>
-    return [s for s in re.split(r"(?&lt;=[.!?])\s+", text.strip()) if s][-1]<br>
-# Then ask the judge: does this sentence state a fact, or gesture at<br>
-# one? Two of three confirms in this run were the note's LAST sentence,<br>
-# and the one scanner FP came from picking the wrong sentence — so<br>
-# anchoring positionally is the main win available here.</p>
-<p># implication-stopped-short (3 confirms) — a verb of learning/telling<br>
-# whose content is withheld.<br>
-IMPLICATION_WITHHELD = re.compile(<br>
-    r"\b(?:you\s+learn|which\s+you\s+learn|say(?:s)?\s+you\s+should|"<br>
-    r"there\s+is\s+only\s+one\s+answer)\b"<br>
-)<br>
-# Very low recall; treat as a hint generator for the judge rather than<br>
-# a scanner in its own right.<br>
-```</p>
-<p>---</p>
-<p>Written to `<span class="redacted">redacted: private</span>/tools/lint/run-ch01-10.md`. Not committed.</p>
+<pre><code class="language-python"># description-list (4 confirms) — 3+ appositive/attributive items in one
+# sentence on a character's or room's first appearance.
+DESCRIPTION_LIST = re.compile(
+    r&quot;(?:[a-z][^.;!?]{4,60}(?:,|;)\s+){3,}(?:and\s+)?[a-z][^.;!?]{4,60}[.;]&quot;
+)
+# Gate: only run over sentences within N words of a character's first
+# named appearance, or of a POV entry into a new location.
+​
+# system-terminology: &quot;course&quot; where the class is meant (2 confirms).
+COURSE_FOR_CLASS = re.compile(r&quot;\b(?:the|every|a|his|each)\s+course\b&quot;, re.I)
+# Near-zero FP risk in this book: watercourse and &quot;course of&quot; are the
+# only legitimate uses, both excluded by the determiner set.
+​
+# generalising-clause-budget (2 confirms) — outward generalisation to
+# people-in-general, wherever it sits in the sentence.
+GENERALISING = re.compile(
+    r&quot;\b(?:most|every|any|all|no)\s+\w+s?\b[^.]{0,40}\b(?:had not|will|&quot;
+    r&quot;do not|does not|always|never)\b&quot;
+    r&quot;|\ba\s+\w+\s+will\s+\w+[^.]{0,60}\bfor as long as\b&quot;
+)
+# Budget rule: report only instances beyond one per 3,500 words.
+​
+# cute-cryptic-closer (3 confirms) — final sentence of an author's note
+# that is figurative rather than factual. Not regexable on its own;
+# proposal is a positional extractor plus a judge prompt.
+def note_closer(text: str) -&gt; str:
+    return [s for s in re.split(r&quot;(?&lt;=[.!?])\s+&quot;, text.strip()) if s][-1]
+# Then ask the judge: does this sentence state a fact, or gesture at
+# one? Two of three confirms in this run were the note's LAST sentence,
+# and the one scanner FP came from picking the wrong sentence — so
+# anchoring positionally is the main win available here.
+​
+# implication-stopped-short (3 confirms) — a verb of learning/telling
+# whose content is withheld.
+IMPLICATION_WITHHELD = re.compile(
+    r&quot;\b(?:you\s+learn|which\s+you\s+learn|say(?:s)?\s+you\s+should|&quot;
+    r&quot;there\s+is\s+only\s+one\s+answer)\b&quot;
+)
+# Very low recall; treat as a hint generator for the judge rather than
+# a scanner in its own right.
+</code></pre>
+<hr />
+<p>Written to <span class="redacted">redacted</span>/tools/lint/run-ch01-10.md. Not committed.</p>
 </div>
 </body></html>

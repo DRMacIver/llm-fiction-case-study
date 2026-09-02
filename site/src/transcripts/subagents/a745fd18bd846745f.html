@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Working dir: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt; (a novel project). Purely mechanical…</title><style>
+<html><head><meta charset="utf-8"><title>Working dir: [redacted] (a novel project). Purely mechanical extracti…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,117 +7,126 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Working dir: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt; (a novel project). Purely mechanical…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a745fd18bd846745f">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Working dir: <span class="redacted">redacted: private</span> (a novel project). Purely mechanical extraction task, no writing.<br>
-<br>
-Read chapters/011 through chapters/021 (*.md in chapters/). Extract EVERY spoken line by <span class="redacted">redacted: character</span>, the Charter's clerk — he is a minor character so there are few, and I want all of them. Many lines are unattributed within an exchange — work out the speaker from alternation and context, and mark any you are less than certain about with (uncertain).<br>
-<br>
-Also, separately, list every sentence of NARRATION anywhere in chapters/011-021 that describes <span class="redacted">redacted: character</span> — his job, his hands, his cough, what he refuses to do, how he is regarded, what he writes.<br>
-<br>
-Format spoken lines as:<br>
-[chapter file] one sentence of surrounding narration or the line he is answering<br>
-"THE VERBATIM LINE, exactly as in the file."<br>
-<br>
-Do NOT paraphrase or alter a single word. Your final message must be the two lists and nothing else — no preamble, no summary.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Working dir: [redacted] (a novel project). Purely mechanical extracti…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a745fd18bd846745f">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Working dir: <span class="redacted">redacted</span> (a novel project). Purely mechanical extraction task, no writing.</p>
+<p>Read chapters/011 through chapters/021 (*.md in chapters/). Extract EVERY spoken line by <span class="redacted">redacted</span>, the Charter's clerk — he is a minor character so there are few, and I want all of them. Many lines are unattributed within an exchange — work out the speaker from alternation and context, and mark any you are less than certain about with (uncertain).</p>
+<p>Also, separately, list every sentence of NARRATION anywhere in chapters/011-021 that describes <span class="redacted">redacted</span> — his job, his hands, his cough, what he refuses to do, how he is regarded, what he writes.</p>
+<p>Format spoken lines as:<br />
+[chapter file] one sentence of surrounding narration or the line he is answering<br />
+&quot;THE VERBATIM LINE, exactly as in the file.&quot;</p>
+<p>Do NOT paraphrase or alter a single word. Your final message must be the two lists and nothing else — no preamble, no summary.</p></blockquote>
 
 
 <details><summary>12 tool calls</summary>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/chapters/ | awk -F- '{print $1}' | sort -n | sed -n '1,50p'; echo…</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/chapters/ | awk -F- '{print $1}' | sort -n | sed -n '1,50p'; echo "---"; ls…</p>
 <p>✅ 65 lines, 860 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "<span class="redacted">redacted: character</span>" 011-measured-ground.md…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "<span class="redacted">redacted</span>" 011-measured-ground.md 012-the-charter-boa…</p>
 <p>✅ 46 lines, 16141 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '100,175p' 012-the-charter-board.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; sed -n '100,175p' 012-the-charter-board.md</p>
 <p>✅ 75 lines, 5874 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '1,20p' 015-the-break-night.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; sed -n '1,20p' 015-the-break-night.md</p>
 <p>✅ 19 lines, 1371 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '60,140p' 019-a-question-of-rosters.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; sed -n '60,140p' 019-a-question-of-rosters.md</p>
 <p>✅ 79 lines, 9676 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '1,20p' 019-a-question-of-rosters.md; echo ---1…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; sed -n '1,20p' 019-a-question-of-rosters.md; echo ---140---; se…</p>
 <p>✅ 62 lines, 6901 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Now check chapters 017 (91-115), 018 (near 235), and 021 (60-75) for full dialogue context, plus scan whole chapters 011, 013, 016, 020 for any missed <span class="redacted">redacted: character</span> dialogue.</p>
+<p>Now check chapters 017 (91-115), 018 (near 235), and 021 (60-75) for full dialogue context, plus scan whole chapters 011, 013, 016, 020 for any missed <span class="redacted">redacted</span> dialogue.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '90,120p' 017-clearing-work.md; echo ---185---;…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; sed -n '90,120p' 017-clearing-work.md; echo ---185---; sed -n '…</p>
 <p>✅ 103 lines, 9261 chars</p>
 
 <div class="assistant-prose">
-<p>Now let me check chapters 011, 013, 016, 020 fully for any narration about <span class="redacted">redacted: character</span> and any dialogue not caught.</p>
+<p>Now let me check chapters 011, 013, 016, 020 fully for any narration about <span class="redacted">redacted</span> and any dialogue not caught.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "clerk" 011-measured-ground.md 012-the-charter…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "clerk" 011-measured-ground.md 012-the-charter-board.md…</p>
 <p>✅ 16 lines, 5909 chars</p>
 
 <div class="assistant-prose">
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>," she was saying. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Go on. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>,&quot; she was saying. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Go on. <span class="redacted">redacted sentence: unpublished prose</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-"Sir. Miss. The Charter house is — "</p>
-<p>[chapters/012-the-charter-board.md] The clerk put his pen down.<br>
-"The rings," he said. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;Sir. Miss. The Charter house is — &quot;</p>
+<p>[chapters/012-the-charter-board.md] The clerk put his pen down.<br />
+&quot;The rings,&quot; he said. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-"That's clerk's work," said <span class="redacted">redacted: character</span>, "and it's not Charter work. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/012-the-charter-board.md] "No," said Edwin. "You're not. <span class="redacted">redacted sentence: unpublished prose</span><br>
-"We've no man for it." (uncertain)</p>
-<p>[chapters/012-the-charter-board.md] "How long does it take?" asked Edwin.<br>
-"That's not — " (uncertain; cut off by <span class="redacted">redacted: character</span>'s "An hour")</p>
-<p>[chapters/012-the-charter-board.md] <span class="redacted">redacted: character</span> read the protocol and said, "Item four's good... <span class="redacted">redacted: character</span>, put it in the book."<br>
-"On whose authority?" (uncertain)</p>
-<p>[chapters/014-the-overdue-delve.md] <span class="redacted">redacted: character</span> said that Guildmaster <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>, "and has."</p>
-<p>[chapters/015-the-break-night.md] "<span class="redacted">redacted: character</span>, get the guildmaster," <span class="redacted">redacted: character</span> said.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> went. He went at a run.")</p>
-<p>[chapters/017-clearing-work.md] Warden <span class="redacted">redacted: character</span> read the leakage counts and said, "Nineteen and fourteen. In ten days."<br>
-"That's what we wrote," said <span class="redacted">redacted: character</span>.</p>
-<p>[chapters/019-a-question-of-rosters.md] <span class="redacted">redacted: character</span>'s finding about the water route was read to him for entry into the day book.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>, when it was read to him. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/019-a-question-of-rosters.md] Edwin had written the account of <span class="redacted">redacted: event</span> for the Charter's book, ending with the day rate.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.</p>
-<p>[chapters/019-a-question-of-rosters.md] "It will," said Edwin.<br>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;That's clerk's work,&quot; said <span class="redacted">redacted</span>, &quot;and it's not Charter work. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/012-the-charter-board.md] &quot;No,&quot; said Edwin. &quot;You're not. <span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;We've no man for it.&quot; (uncertain)</p>
+<p>[chapters/012-the-charter-board.md] &quot;How long does it take?&quot; asked Edwin.<br />
+&quot;That's not — &quot; (uncertain; cut off by <span class="redacted">redacted</span>'s &quot;An hour&quot;)</p>
+<p>[chapters/012-the-charter-board.md] <span class="redacted">redacted</span> read the protocol and said, &quot;Item four's good... <span class="redacted">redacted</span>, put it in the book.&quot;<br />
+&quot;On whose authority?&quot; (uncertain)</p>
+<p>[chapters/014-the-overdue-delve.md] <span class="redacted">redacted</span> said that Guildmaster <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>, &quot;and has.&quot;</p>
+<p>[chapters/015-the-break-night.md] &quot;<span class="redacted">redacted</span>, get the guildmaster,&quot; <span class="redacted">redacted</span> said.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> went. He went at a run.&quot;)</p>
+<p>[chapters/017-clearing-work.md] Warden <span class="redacted">redacted</span> read the leakage counts and said, &quot;Nineteen and fourteen. In ten days.&quot;<br />
+&quot;That's what we wrote,&quot; said <span class="redacted">redacted</span>.</p>
+<p>[chapters/019-a-question-of-rosters.md] <span class="redacted">redacted</span>'s finding about the water route was read to him for entry into the day book.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>, when it was read to him. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/019-a-question-of-rosters.md] Edwin had written the account of <span class="redacted">redacted</span> for the Charter's book, ending with the day rate.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.</p>
+<p>[chapters/019-a-question-of-rosters.md] &quot;It will,&quot; said Edwin.<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/021-leaving-fenholt.md] <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>. "I wrote it down."</p>
-<p>---</p>
-<p>NARRATION describing <span class="redacted">redacted: character</span> (chapters/011–021):</p>
+<p>[chapters/021-leaving-fenholt.md] <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>. &quot;I wrote it down.&quot;</p>
+<hr />
+<p>NARRATION describing <span class="redacted">redacted</span> (chapters/011–021):</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/012-the-charter-board.md] "The clerk had seen them."</p>
+<p>[chapters/012-the-charter-board.md] &quot;The clerk had seen them.&quot;</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/012-the-charter-board.md] "The clerk put his pen down."</p>
-<p>[chapters/012-the-charter-board.md] "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> he could not compel <span class="redacted">redacted: character</span> to sharpen a pen."</p>
-<p>[chapters/015-the-break-night.md] "<span class="redacted">redacted: character</span> went. He went at a run. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> at one of them writing names."</p>
-<p>[chapters/015-the-break-night.md] "<span class="redacted">redacted: character</span> at the table with the names."</p>
-<p>[chapters/016-the-fen-margin.md] "It was ... the thing <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> was copying names."</p>
-<p>[chapters/017-clearing-work.md] "Numbers, in the day book, in <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/017-clearing-work.md] "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>."</p>
-<p>[chapters/018-holm-deep.md] "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/018-holm-deep.md] "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s order and unasked for. He had the staff. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/019-a-question-of-rosters.md] "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> writing."</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/020-the-field-in-autumn.md] "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Nobody has ever tidied that drawer."</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span> and had sat in <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/021-leaving-fenholt.md] "Under the dues, in <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/021-leaving-fenholt.md] "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/012-the-charter-board.md] &quot;The clerk put his pen down.&quot;</p>
+<p>[chapters/012-the-charter-board.md] &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> he could not compel <span class="redacted">redacted</span> to sharpen a pen.&quot;</p>
+<p>[chapters/015-the-break-night.md] &quot;<span class="redacted">redacted</span> went. He went at a run. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> at one of them writing names.&quot;</p>
+<p>[chapters/015-the-break-night.md] &quot;<span class="redacted">redacted</span> at the table with the names.&quot;</p>
+<p>[chapters/016-the-fen-margin.md] &quot;It was ... the thing <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> was copying names.&quot;</p>
+<p>[chapters/017-clearing-work.md] &quot;Numbers, in the day book, in <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/017-clearing-work.md] &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.&quot;</p>
+<p>[chapters/018-holm-deep.md] &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/018-holm-deep.md] &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s order and unasked for. He had the staff. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/019-a-question-of-rosters.md] &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> writing.&quot;</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/020-the-field-in-autumn.md] &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Nobody has ever tidied that drawer.&quot;</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> and had sat in <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/021-leaving-fenholt.md] &quot;Under the dues, in <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/021-leaving-fenholt.md] &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 </body></html>

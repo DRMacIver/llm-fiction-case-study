@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-acffb93b721336205">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="wit", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-acffb93b721336205">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;wit&quot;, and scope includes &quot;scene&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <p>🔧 Read tools/lint/rules.json</p>
@@ -38,18 +51,20 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 
 <div class="assistant-prose">
 <p>I've systematically reviewed scene 02 against all 10 wit-based semantic rules:</p>
-<p>1. **triad-swerve-budget** — No triads where the third item confesses or swerves.<br>
-2. **long-build-short-drop-budget** — No pattern of long ornate sentences followed by short fragments used repeatedly as the paragraph engine.<br>
-3. **quiet-the-way-budget** — No "quiet the way X is quiet" construction.<br>
-4. **aphorism-budget** — No portable narrator aphorisms. "A pool grows by being emptied" is Edwin explaining a specific principle of this world's magic system, rooted in particulars. "What you have found, Miss Millbrook, is a farmer" is specific to this character and scene.<br>
-5. **ornament-wit** — The wit arises from events: Peri's disbelief about compost magic (hence the war-horse/milk-cart comparison); her fantasy-book interpretations of reality; Edwin's dry corrections. None of it is narrator decoration.<br>
-6. **jukebox-flourish** — The ship's hawser simile and war-horse/milk-cart comparison both do specific work: conveying weight, bulk, and character perspective. Not transplantable.<br>
-7. **wrong-world-metaphor** — A ship's hawser exists in a world with boats. No anachronisms.<br>
-8. **joke-rhythm-no-logic** — Lines like "What you have found, Miss Millbrook, is a farmer" restate flat as a coherent claim (she's found a practical farmer, not a legendary archmage). No compression without proposition.<br>
-9. **weak-comic-beat-flat** — Funny observations are delivered with narrative energy, not flattened.<br>
-10. **joke-character-could-not-make** — All dialogue reads as sincere to character. Peri genuinely believes fantasy tropes apply; Edwin is genuinely dry and corrective.</p>
+<ol>
+<li><strong>triad-swerve-budget</strong> — No triads where the third item confesses or swerves.</li>
+<li><strong>long-build-short-drop-budget</strong> — No pattern of long ornate sentences followed by short fragments used repeatedly as the paragraph engine.</li>
+<li><strong>quiet-the-way-budget</strong> — No &quot;quiet the way X is quiet&quot; construction.</li>
+<li><strong>aphorism-budget</strong> — No portable narrator aphorisms. &quot;A pool grows by being emptied&quot; is Edwin explaining a specific principle of this world's magic system, rooted in particulars. &quot;What you have found, Miss Millbrook, is a farmer&quot; is specific to this character and scene.</li>
+<li><strong>ornament-wit</strong> — The wit arises from events: Peri's disbelief about compost magic (hence the war-horse/milk-cart comparison); her fantasy-book interpretations of reality; Edwin's dry corrections. None of it is narrator decoration.</li>
+<li><strong>jukebox-flourish</strong> — The ship's hawser simile and war-horse/milk-cart comparison both do specific work: conveying weight, bulk, and character perspective. Not transplantable.</li>
+<li><strong>wrong-world-metaphor</strong> — A ship's hawser exists in a world with boats. No anachronisms.</li>
+<li><strong>joke-rhythm-no-logic</strong> — Lines like &quot;What you have found, Miss Millbrook, is a farmer&quot; restate flat as a coherent claim (she's found a practical farmer, not a legendary archmage). No compression without proposition.</li>
+<li><strong>weak-comic-beat-flat</strong> — Funny observations are delivered with narrative energy, not flattened.</li>
+<li><strong>joke-character-could-not-make</strong> — All dialogue reads as sincere to character. Peri genuinely believes fantasy tropes apply; Edwin is genuinely dry and corrective.</li>
+</ol>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

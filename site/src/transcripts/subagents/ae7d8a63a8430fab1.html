@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,25 +7,38 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ae7d8a63a8430fab1">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 20-. Read it in full.<br>
-LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id "sense".<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ae7d8a63a8430fab1">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 20-. Read it in full.<br />
+LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id &quot;sense&quot;.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
-<p>I'll help you find and lint the target file. Let me start by locating the file that starts with "20-" in the draft/book-01/scenes/ directory.</p>
+<p>I'll help you find and lint the target file. Let me start by locating the file that starts with &quot;20-&quot; in the draft/book-01/scenes/ directory.</p>
 </div>
 
-<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | grep "^-" | grep "^.*20-"</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted</span>/draft/book-01/scenes/ | grep "^-" | grep "^.*20-"</p>
 <p>✅ 1 lines, 70 chars</p>
 <p>🔧 Read draft/book-01/scenes/20-one-more-week.md</p>
 <p>✅ 44 lines, 3797 chars</p>
@@ -34,24 +47,26 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>Now I'll carefully read through this scene for sense-based issues, checking factual claims, logical coherence, and physical consistency.</p>
 </div>
 
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/scenes/20-one-more-week.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/draft/book-01/scenes/20-one-more-week.md</p>
 <p>✅ 43 lines, 3673 chars</p>
 
 <div class="assistant-prose">
 <p>Working through the scene systematically with the sense lens:</p>
-<p>**Opening setup** — coherent. The oilskin was in a cupboard for 40 years, is now on the bench, and Edwin is actively working it soft.</p>
-<p>**Peri's arrival and the class** — coherent. She waited for Edwin to come down (he didn't), came up herself. The compost heap steaming indicates the process is working. Timeline is clear.</p>
-<p>**Provisioning advice** — coherent. Peri asked about 18 miles/day; Edwin recommends 12 for first week. His list of items (boots, stockings, lack of waterproof because good ones are 40 years old and she's 18) all make internal sense.</p>
-<p>**Registers and soil discussion** — coherent. He extracted the order quickly but needs a week to read contextual details across five years. The soil contradiction (six divinations say healthy, his hands say lifeless, thus no name for it) is internally consistent.</p>
-<p>**Ford explanation** — coherent. Marsh Barton and Upper Wold depend on his presence at the ford each winter; a replacement convener would break the tradition.</p>
-<p>**SPATIAL CONTRADICTION:**</p>
-<p>The oilskin's position creates a factual incoherence:<br>
-- Line 3 (opening): "the oilskin was across the far end of the long bench in the study, **under the registers**"<br>
-- Line 33 (mid-conversation): "He folded the oilskin along its new soft lines and **laid it on the registers**"<br>
-- Line 43 (after Peri leaves): "he moved the registers **off the oilskin**"</p>
-<p>The oilskin moves from being spatially *beneath* the registers to being on *top* of them. The neighboring sentences (Peri writing, then Edwin's monologue, then Peri closing the notebook) provide no explanation or motivation for this repositioning. A reader tracking the physical setup is left confused about what actually happened.</p>
+<p><strong>Opening setup</strong> — coherent. The oilskin was in a cupboard for 40 years, is now on the bench, and Edwin is actively working it soft.</p>
+<p><strong>Peri's arrival and the class</strong> — coherent. She waited for Edwin to come down (he didn't), came up herself. The compost heap steaming indicates the process is working. Timeline is clear.</p>
+<p><strong>Provisioning advice</strong> — coherent. Peri asked about 18 miles/day; Edwin recommends 12 for first week. His list of items (boots, stockings, lack of waterproof because good ones are 40 years old and she's 18) all make internal sense.</p>
+<p><strong>Registers and soil discussion</strong> — coherent. He extracted the order quickly but needs a week to read contextual details across five years. The soil contradiction (six divinations say healthy, his hands say lifeless, thus no name for it) is internally consistent.</p>
+<p><strong>Ford explanation</strong> — coherent. Marsh Barton and Upper Wold depend on his presence at the ford each winter; a replacement convener would break the tradition.</p>
+<p><strong>SPATIAL CONTRADICTION:</strong></p>
+<p>The oilskin's position creates a factual incoherence:</p>
+<ul>
+<li>Line 3 (opening): &quot;the oilskin was across the far end of the long bench in the study, <strong>under the registers</strong>&quot;</li>
+<li>Line 33 (mid-conversation): &quot;He folded the oilskin along its new soft lines and <strong>laid it on the registers</strong>&quot;</li>
+<li>Line 43 (after Peri leaves): &quot;he moved the registers <strong>off the oilskin</strong>&quot;</li>
+</ul>
+<p>The oilskin moves from being spatially <em>beneath</em> the registers to being on <em>top</em> of them. The neighboring sentences (Peri writing, then Edwin's monologue, then Peri closing the notebook) provide no explanation or motivation for this repositioning. A reader tracking the physical setup is left confused about what actually happened.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": [{"rule_id": "sense", "quote": "He folded the…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

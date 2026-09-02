@@ -7,20 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the copy-editor for the third draft of Book 1 of the novel at…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-abe03c5ab8edfd815">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the copy-editor for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your material: draft/book-01/scenes/03-until-fulfilled.md, read as a continuation of scenes 01 and 02 in the same directory (read those too; they have been through eight rounds with the author and are the calibration for what he accepts).<br>
-<br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Also chapters/001-the-wrong-man.md, the groundwork chapter this scene restages — the author liked its Edwin/Peri dialogue.<br>
-<br>
-Report FINDINGS ONLY, line by line: quote, what is wrong, proposed replacement where obvious. <span class="redacted">redacted sentence: unpublished prose</span> Say in two lines whether the argument reads as a conversation or as two people saying things at each other. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the copy-editor for the third draft of Book 1 of the novel at…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-abe03c5ab8edfd815">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the copy-editor for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your material: draft/book-01/scenes/03-until-fulfilled.md, read as a continuation of scenes 01 and 02 in the same directory (read those too; they have been through eight rounds with the author and are the calibration for what he accepts).</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Also chapters/001-the-wrong-man.md, the groundwork chapter this scene restages — the author liked its Edwin/Peri dialogue.</p>
+<p>Report FINDINGS ONLY, line by line: quote, what is wrong, proposed replacement where obvious. <span class="redacted">redacted sentence: unpublished prose</span> Say in two lines whether the argument reads as a conversation or as two people saying things at each other. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -64,82 +74,94 @@ Report FINDINGS ONLY, line by line: quote, what is wrong, proposed replacement w
 <p>✅ 237 lines, 16349 chars</p>
 <p>🔧 Bash: cat chapters/001-the-wrong-man.md</p>
 <p>✅ 171 lines, 16422 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes; f=03-until-fulfilled.md; python3 - &lt;&lt;'EOF' i…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes; f=03-until-fulfilled.md; python3 - &lt;&lt;'EOF' import re…</p>
 <p>✅ 10 lines, 138 chars — words 907 / emdash 4 / , which  1</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes; grep -n "—" 03-until-fulfilled.md; echo ---;…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes; grep -n "—" 03-until-fulfilled.md; echo ---; grep -n…</p>
 <p>✅ 10 lines, 2315 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes; cat -n 03-until-fulfilled.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes; cat -n 03-until-fulfilled.md</p>
 <p>✅ 49 lines, 5105 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>## Report — `draft/book-01/scenes/03-until-fulfilled.md` (907 words)</p>
-<p>Read against scenes 01–02, `chapters/001-the-wrong-man.md`, and the binding notes. Findings only; nothing edited.</p>
-<p>---</p>
-<p>### A. Constructions in the wrong mouth</p>
-<p>**1. L5 — "You argue well. That's the trouble. I'd lose. Not because you're right. Because you're better at it."**<br>
-Three faults on one speech, at Peri's hardest moment. (a) *Not because X. Because Y* is negative parallelism, banned as a construction and banned inside quotation marks by dialogue rule 3. <span class="redacted">redacted sentence: unpublished prose</span> (c) It is a characterisation regression from the reference dialogue: ch. 001 has *"You argue really well. That's the problem. <span class="redacted">redacted sentence: unpublished prose</span> The rewrite makes her a cool tactician appraising an opponent. `reader-notes-rewrite.md` §2 is explicitly about not sanding this off.<br>
-Proposed: *"I want you to know I was listening. You argue well. That's the trouble. <span class="redacted">redacted sentence: unpublished prose</span> And the world's more important than an argument."*</p>
-<p>**2. L31 — "Not to the world. To me, and to the ten parishes out that window."**<br>
-Edwin's emotional peak. Negative parallelism again, and balanced halves — `edwin.md` 4 names balanced halves at a peak as a **defect**. It is also his *second* contrastive pair in the scene (L35, "You did not try asking. You announced."), and rule 13 allows one, which should be L35's, the better line.<br>
-Proposed: drop the antithesis. *"Do you understand what you've done? Not to the world. To the ten parishes out that window."* still has it; better is *"Do you understand what you've done to the ten parishes out that window?"* and let the speech run.</p>
-<p>**3. <span class="redacted">redacted sentence: unpublished prose</span><br>
-The most portable sentence in the speech is its last sentence. <span class="redacted">redacted sentence: unpublished prose</span> It is also a triad-with-swerve: three parish facts, then the fourth item turns. Note the *word*→*line* substitution is a genuine fix to the author's ch. 001 objection; the defect is placement, not wording. Proposed: move it up — put the boots-and-pending sentence before the sea-front, and end on the sheep, which is a fact with no shape on it.</p>
-<p>**4. L25 "Undo it." and L41 "Get off my hill."**<br>
-Both bare imperatives, both Edwin's, both at hinges. <span class="redacted">redacted sentence: unpublished prose</span> I flag this as a **rule collision rather than a demand**: both lines are on the page in ch. 001, which is the dialogue the author liked. If either goes, "Undo it." is the cheaper one — his declarative form would be *"That knot doesn't stay."* — and "Get off my hill" should stay whatever the file says.</p>
-<p>**5. Peri has no tally anywhere in the scene.**<br>
+<h2>Report — <code>draft/book-01/scenes/03-until-fulfilled.md</code> (907 words)</h2>
+<p>Read against scenes 01–02, <code>chapters/001-the-wrong-man.md</code>, and the binding notes. Findings only; nothing edited.</p>
+<hr />
+<h3>A. Constructions in the wrong mouth</h3>
+<p><strong>1. L5 — &quot;You argue well. That's the trouble. I'd lose. Not because you're right. Because you're better at it.&quot;</strong><br />
+Three faults on one speech, at Peri's hardest moment. (a) <em>Not because X. Because Y</em> is negative parallelism, banned as a construction and banned inside quotation marks by dialogue rule 3. <span class="redacted">redacted sentence: unpublished prose</span> (c) It is a characterisation regression from the reference dialogue: ch. 001 has *&quot;You argue really well. That's the problem. <span class="redacted">redacted sentence: unpublished prose</span> The rewrite makes her a cool tactician appraising an opponent. <code>reader-notes-rewrite.md</code> §2 is explicitly about not sanding this off.<br />
+Proposed: <em>&quot;I want you to know I was listening. You argue well. That's the trouble. <span class="redacted">redacted sentence: unpublished prose</span> And the world's more important than an argument.&quot;</em></p>
+<p><strong>2. L31 — &quot;Not to the world. To me, and to the ten parishes out that window.&quot;</strong><br />
+Edwin's emotional peak. Negative parallelism again, and balanced halves — <code>edwin.md</code> 4 names balanced halves at a peak as a <strong>defect</strong>. It is also his <em>second</em> contrastive pair in the scene (L35, &quot;You did not try asking. You announced.&quot;), and rule 13 allows one, which should be L35's, the better line.<br />
+Proposed: drop the antithesis. <em>&quot;Do you understand what you've done? Not to the world. To the ten parishes out that window.&quot;</em> still has it; better is <em>&quot;Do you understand what you've done to the ten parishes out that window?&quot;</em> and let the speech run.</p>
+<ol start="3">
+<li><span class="redacted">redacted sentence: unpublished prose</span><br />
+The most portable sentence in the speech is its last sentence. <span class="redacted">redacted sentence: unpublished prose</span> It is also a triad-with-swerve: three parish facts, then the fourth item turns. Note the <em>word</em>→<em>line</em> substitution is a genuine fix to the author's ch. 001 objection; the defect is placement, not wording. Proposed: move it up — put the boots-and-pending sentence before the sea-front, and end on the sheep, which is a fact with no shape on it.</li>
+</ol>
+<p><strong>4. L25 &quot;Undo it.&quot; and L41 &quot;Get off my hill.&quot;</strong><br />
+Both bare imperatives, both Edwin's, both at hinges. <span class="redacted">redacted sentence: unpublished prose</span> I flag this as a <strong>rule collision rather than a demand</strong>: both lines are on the page in ch. 001, which is the dialogue the author liked. If either goes, &quot;Undo it.&quot; is the cheaper one — his declarative form would be <em>&quot;That knot doesn't stay.&quot;</em> — and &quot;Get off my hill&quot; should stay whatever the file says.</p>
+<p><strong>5. Peri has no tally anywhere in the scene.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span> She is refused from L41 onward and there is not one. <span class="redacted">redacted sentence: unpublished prose</span> This is the largest character-voice hole in the scene.</p>
-<p>**6. L37 — Peri over the "and" cap.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> 001, so inheritance is not a defence. Proposed: *"And then whatever's coming would have come. You'd have been here doing weather. Everyone would die, and it would be my fault for being bad at arguing."*<br>
+<p><strong>6. L37 — Peri over the &quot;and&quot; cap.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> 001, so inheritance is not a defence. Proposed: <em>&quot;And then whatever's coming would have come. You'd have been here doing weather. Everyone would die, and it would be my fault for being bad at arguing.&quot;</em><br />
 (L33 sits exactly at two — at the cap, not over.)</p>
-<p>**7. <span class="redacted">redacted sentence: unpublished prose</span> Rule 6a satisfied. But there is none at L5, her highest-pressure line, where she is instead perfectly fluent and epigrammatic — see finding 1.</p>
-<p>---</p>
-<p>### B. Physical beats at the peak (named rule, `edwin.md` 11)</p>
-<p>**8. L31–L37 runs four turns with no qualifying beat between them.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> L33's "Whiter, and her chin up, and not moving an inch" is a state, not a chain of acts. L35 ("You did not try asking. You announced.") is **entirely bare and untagged**. L37 opens on "That got a flicker of her own indignation" — an evaluative clause, which the rule excludes by name. So the emotional centre of the scene has one posture note and one emotion gloss holding it up. Recommend giving L35 hands: he is standing over the table with two cups on it; twenty-one words on what he does with one of them, then the neutral line.</p>
-<p>**9. Related continuity slip: Peri's cup vanishes.** She has it in both hands at the end of scene 02; at L23 she is "sitting very straight with both hands flat on the table" with no beat putting it down. This is the exact class of slip the author flagged in ch. 001 ("cold cup of tea").</p>
-<p>---</p>
-<p>### C. Retired forms, verdict clauses, self-annotation</p>
-<p>**10. L3 — "the way they do when a person is reading something that is not in the room."**<br>
-The "in the way/manner of a person who" family, retired outright (`voices.md` pattern 2). <span class="redacted">redacted sentence: unpublished prose</span> Cut the clause.</p>
-<p>**11. <span class="redacted">redacted sentence: unpublished prose</span><br>
-Windup relative clause on a narration beat (budget one per 3,500 words — and L47 spends the other), fake-archaic register ("he who"), and it is the narrator underlining the irony for the reader. Proposed: *"He had watched her do it, and taken it for a girl finding her nerve."*</p>
-<p>**12. L3 — "looking for the moment he should have seen."** You miss a *sign*, not a moment; ch. <span class="redacted">redacted sentence: unpublished prose</span> Near-idiom (pattern 5).</p>
-<p>**13. L27 — the pamphlet sentence.** Sixty words, and it does four things at once. "She said it as if reading it off a page, **and she was**" is a device stated and then confirmed — self-annotation. "for people who had not expected to be holding any" is a type-of-person clause. "and she had plainly read the pamphlet, and could recite…" is polysyndeton ending on a verdict. **Tense slip:** "the church printed" reads as though it has stopped; "prints" is meant. "currently sitting" is a memo-register word (pattern 11). The *content* is a good answer to the author's ch. 001 note ("What rulebook?") and should survive; the sentence should not.<br>
-Proposed: *"The church prints its restrictions on fate magic in a pamphlet, for people who did not expect to be holding any. She had read it. She could recite the part about bindings to the man one was sitting in."* — and see finding 19 on whether that last clause survives the aphorism budget.</p>
-<p>**14. L39 — "He put the kettle back on the hob, which did not need doing."**<br>
-Evaluative trailing "which", zero budget. Proposed: let the act carry it — *"He put the kettle back on the hob. It had water in it already."*</p>
-<p>**15. <span class="redacted">redacted sentence: unpublished prose</span><br>
-Narrator inferring motive, and it explains the joke ch. <span class="redacted">redacted sentence: unpublished prose</span> Cut from "and she must have judged".</p>
-<p>**16. L13 — "and neither of those was any use, because there was no moment at which the thing was coming and had not yet arrived."**<br>
-Three-item "and" chain ending on a verdict (pattern 7), and the *because* clause is the joke's rhythm without the joke's logic: flat-restated it means "there was no warning", which the sentence spends nineteen words arriving at sideways. ch. 001's "the working was not aimed at him until it had already happened" is the same idea and parses on first read. Proposed: *"He was three hundred and fifty years old and held more mana than anyone living. Neither was any use. The working was not aimed at him until it had already happened."*</p>
-<p>**17. L29 — "because he had a rule about frightened decisions."**<br>
-This is the repair of a line the author objected to in ch. 001, and it is better, but the compression still makes the reader supply the missing word. Proposed: *"because he made no decisions while he was frightened."*</p>
-<p>**18. <span class="redacted">redacted sentence: unpublished prose</span><br>
-"Like that" points at nothing the sentence has named. This is the banned family from the 2026-08-29 entry — a sentence shaped like weight with a hand-wave inside. Cut.</p>
-<p>---</p>
-<p>### D. Aphorism budget and figures</p>
-<p>**19. Three narrator aphorisms; budget is one.**<br>
-(a) L27 "could recite the part about bindings to a man in whose chest one was currently sitting"; (b) L39 "Not a pain. A fact."; (c) L47 "who had heard *reassuring* and nothing on either side of it". Keep (a) — it is stuck to its particulars and pays off the pamphlet. (b) is also negative parallelism, a fragment closer, and the narrator stating the theme, at the scene's emotional centre where the irony is supposed to step back; recommend cutting both sentences and ending the paragraph on "The knot behind his breastbone sat there and did nothing." ("did nothing" of the knot is inside its rate here, and it is news.) (c) — see finding 21.</p>
-<p>**20. L13 — "It was a hand closing."**<br>
-The scene's only figure, and it is not grown from the scene's material: the material is rope — slack cabling, loops, a hawser. A hand closing is imported. It fails the jukebox test ("what is it doing for *this* moment that the rope doesn't"). Recommend cutting; "What it felt like afterwards was a knot" follows the rope image directly.</p>
-<p>---</p>
-<p>### E. The last two lines</p>
-<p>**21. L47 — "said Peri, who had heard *reassuring* and nothing on either side of it, and went out."**<br>
-This correctly fixes the author's continuity complaint (in ch. 001 "reassuring" was the last word she could have stopped listening at), but the replacement is a coinage, not an idiom — "heard X and nothing on either side of it" is not English, and the reader has to reconstruct "caught the word, missed the sentence". Near-idiom, the most damaging category per instance. It is also a second windup tag. **Strongest recommendation in the scene: cut the clause entirely.** "You're welcome" answering "least reassuring" is already the whole joke; the clause footnotes it (`llm-tells.md` 4).</p>
-<p>**22. L49 — "She did not look back once."**<br>
-A composed closing cadence: three beats, "once" doing rhetorical emphasis, a poised image of a departing figure. Endings are cuts — the last two lines get a near-zero cleverness budget and should point at undone work. ch. 001 followed this beat with the ten o'clock class and the unwalked sea-front, which is the forward pull. Recommend ending on the work he now cannot do: the class in the garden, or the front still sitting off the coast.</p>
-<p>---</p>
-<p>### F. Mechanical</p>
-<p>- **Em dashes:** 3 in prose (excluding the title), 3.3/1,000 against a ~2/1,000 budget. Two are Peri's mandated false starts and must not be cut; the third is L7's interruption of Edwin. The two rules are in tension here and I would leave it, but it is over budget and should be recorded.<br>
-- **Polysyndeton is the scene's default engine:** and-chains at L13, L23, L29, L33, L37, L43, L49 — seven, in 907 words. L43 in particular ("She stood, and staggered very slightly, and caught the table, and pretended she had not") was participial in ch. 001 and is worse as a chain. Break two or three of them.<br>
-- **"half past twelve"** appears in scenes 01 and 03; a named watch-word (vary the clock phrasings) — worth one variation.<br>
-- **Alternation:** after L21 the scene alternates 100%, with no double turn, no unanswered line, no one asking twice. `dialogue-voices.md` §4 asks for the alternation to break at least twice per scene.<br>
-- **Sightline, minor:** L31 "the ten parishes out that window" — the study window (scene 01) looks down the road; this is the kitchen. Worth confirming which window sees the parishes.<br>
-- Clean: no Earth months, no banned lexicon (ghost/echo/whisper/hum), no "honest", no "the whole of", no chiasmus, no false precision on interior beats except the arguable "twice" at L3, no unlocated narration, no motive left off-page.</p>
-<p>---</p>
-<p>### Does the argument read as a conversation?</p>
-<p>It reads as a conversation, and that is the scene's real strength: every turn takes up a word or a claim from the turn before it (*Pending* → *It'll fill in*; *I did try asking* → *You announced* → *I announced and then I listened*; *least reassuring* → *You're welcome*), and no one answers a question that wasn't asked.</p>
+<ol start="7">
+<li><span class="redacted">redacted sentence: unpublished prose</span> Rule 6a satisfied. But there is none at L5, her highest-pressure line, where she is instead perfectly fluent and epigrammatic — see finding 1.</li>
+</ol>
+<hr />
+<h3>B. Physical beats at the peak (named rule, <code>edwin.md</code> 11)</h3>
+<p><strong>8. L31–L37 runs four turns with no qualifying beat between them.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> L33's &quot;Whiter, and her chin up, and not moving an inch&quot; is a state, not a chain of acts. L35 (&quot;You did not try asking. You announced.&quot;) is <strong>entirely bare and untagged</strong>. L37 opens on &quot;That got a flicker of her own indignation&quot; — an evaluative clause, which the rule excludes by name. So the emotional centre of the scene has one posture note and one emotion gloss holding it up. Recommend giving L35 hands: he is standing over the table with two cups on it; twenty-one words on what he does with one of them, then the neutral line.</p>
+<p><strong>9. Related continuity slip: Peri's cup vanishes.</strong> She has it in both hands at the end of scene 02; at L23 she is &quot;sitting very straight with both hands flat on the table&quot; with no beat putting it down. This is the exact class of slip the author flagged in ch. 001 (&quot;cold cup of tea&quot;).</p>
+<hr />
+<h3>C. Retired forms, verdict clauses, self-annotation</h3>
+<p><strong>10. L3 — &quot;the way they do when a person is reading something that is not in the room.&quot;</strong><br />
+The &quot;in the way/manner of a person who&quot; family, retired outright (<code>voices.md</code> pattern 2). <span class="redacted">redacted sentence: unpublished prose</span> Cut the clause.</p>
+<ol start="11">
+<li><span class="redacted">redacted sentence: unpublished prose</span><br />
+Windup relative clause on a narration beat (budget one per 3,500 words — and L47 spends the other), fake-archaic register (&quot;he who&quot;), and it is the narrator underlining the irony for the reader. Proposed: <em>&quot;He had watched her do it, and taken it for a girl finding her nerve.&quot;</em></li>
+</ol>
+<p><strong>12. L3 — &quot;looking for the moment he should have seen.&quot;</strong> You miss a <em>sign</em>, not a moment; ch. <span class="redacted">redacted sentence: unpublished prose</span> Near-idiom (pattern 5).</p>
+<p><strong>13. L27 — the pamphlet sentence.</strong> Sixty words, and it does four things at once. &quot;She said it as if reading it off a page, <strong>and she was</strong>&quot; is a device stated and then confirmed — self-annotation. &quot;for people who had not expected to be holding any&quot; is a type-of-person clause. &quot;and she had plainly read the pamphlet, and could recite…&quot; is polysyndeton ending on a verdict. <strong>Tense slip:</strong> &quot;the church printed&quot; reads as though it has stopped; &quot;prints&quot; is meant. &quot;currently sitting&quot; is a memo-register word (pattern 11). The <em>content</em> is a good answer to the author's ch. 001 note (&quot;What rulebook?&quot;) and should survive; the sentence should not.<br />
+Proposed: <em>&quot;The church prints its restrictions on fate magic in a pamphlet, for people who did not expect to be holding any. She had read it. She could recite the part about bindings to the man one was sitting in.&quot;</em> — and see finding 19 on whether that last clause survives the aphorism budget.</p>
+<p><strong>14. L39 — &quot;He put the kettle back on the hob, which did not need doing.&quot;</strong><br />
+Evaluative trailing &quot;which&quot;, zero budget. Proposed: let the act carry it — <em>&quot;He put the kettle back on the hob. It had water in it already.&quot;</em></p>
+<ol start="15">
+<li><span class="redacted">redacted sentence: unpublished prose</span><br />
+Narrator inferring motive, and it explains the joke ch. <span class="redacted">redacted sentence: unpublished prose</span> Cut from &quot;and she must have judged&quot;.</li>
+</ol>
+<p><strong>16. L13 — &quot;and neither of those was any use, because there was no moment at which the thing was coming and had not yet arrived.&quot;</strong><br />
+Three-item &quot;and&quot; chain ending on a verdict (pattern 7), and the <em>because</em> clause is the joke's rhythm without the joke's logic: flat-restated it means &quot;there was no warning&quot;, which the sentence spends nineteen words arriving at sideways. ch. 001's &quot;the working was not aimed at him until it had already happened&quot; is the same idea and parses on first read. Proposed: <em>&quot;He was three hundred and fifty years old and held more mana than anyone living. Neither was any use. The working was not aimed at him until it had already happened.&quot;</em></p>
+<p><strong>17. L29 — &quot;because he had a rule about frightened decisions.&quot;</strong><br />
+This is the repair of a line the author objected to in ch. 001, and it is better, but the compression still makes the reader supply the missing word. Proposed: <em>&quot;because he made no decisions while he was frightened.&quot;</em></p>
+<ol start="18">
+<li><span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;Like that&quot; points at nothing the sentence has named. This is the banned family from the 2026-08-29 entry — a sentence shaped like weight with a hand-wave inside. Cut.</li>
+</ol>
+<hr />
+<h3>D. Aphorism budget and figures</h3>
+<p><strong>19. Three narrator aphorisms; budget is one.</strong><br />
+(a) L27 &quot;could recite the part about bindings to a man in whose chest one was currently sitting&quot;; (b) L39 &quot;Not a pain. A fact.&quot;; (c) L47 &quot;who had heard <em>reassuring</em> and nothing on either side of it&quot;. Keep (a) — it is stuck to its particulars and pays off the pamphlet. (b) is also negative parallelism, a fragment closer, and the narrator stating the theme, at the scene's emotional centre where the irony is supposed to step back; recommend cutting both sentences and ending the paragraph on &quot;The knot behind his breastbone sat there and did nothing.&quot; (&quot;did nothing&quot; of the knot is inside its rate here, and it is news.) (c) — see finding 21.</p>
+<p><strong>20. L13 — &quot;It was a hand closing.&quot;</strong><br />
+The scene's only figure, and it is not grown from the scene's material: the material is rope — slack cabling, loops, a hawser. A hand closing is imported. It fails the jukebox test (&quot;what is it doing for <em>this</em> moment that the rope doesn't&quot;). Recommend cutting; &quot;What it felt like afterwards was a knot&quot; follows the rope image directly.</p>
+<hr />
+<h3>E. The last two lines</h3>
+<p><strong>21. L47 — &quot;said Peri, who had heard <em>reassuring</em> and nothing on either side of it, and went out.&quot;</strong><br />
+This correctly fixes the author's continuity complaint (in ch. 001 &quot;reassuring&quot; was the last word she could have stopped listening at), but the replacement is a coinage, not an idiom — &quot;heard X and nothing on either side of it&quot; is not English, and the reader has to reconstruct &quot;caught the word, missed the sentence&quot;. Near-idiom, the most damaging category per instance. It is also a second windup tag. <strong>Strongest recommendation in the scene: cut the clause entirely.</strong> &quot;You're welcome&quot; answering &quot;least reassuring&quot; is already the whole joke; the clause footnotes it (<code>llm-tells.md</code> 4).</p>
+<p><strong>22. L49 — &quot;She did not look back once.&quot;</strong><br />
+A composed closing cadence: three beats, &quot;once&quot; doing rhetorical emphasis, a poised image of a departing figure. Endings are cuts — the last two lines get a near-zero cleverness budget and should point at undone work. ch. 001 followed this beat with the ten o'clock class and the unwalked sea-front, which is the forward pull. Recommend ending on the work he now cannot do: the class in the garden, or the front still sitting off the coast.</p>
+<hr />
+<h3>F. Mechanical</h3>
+<ul>
+<li><strong>Em dashes:</strong> 3 in prose (excluding the title), 3.3/1,000 against a ~2/1,000 budget. Two are Peri's mandated false starts and must not be cut; the third is L7's interruption of Edwin. The two rules are in tension here and I would leave it, but it is over budget and should be recorded.</li>
+<li><strong>Polysyndeton is the scene's default engine:</strong> and-chains at L13, L23, L29, L33, L37, L43, L49 — seven, in 907 words. L43 in particular (&quot;She stood, and staggered very slightly, and caught the table, and pretended she had not&quot;) was participial in ch. 001 and is worse as a chain. Break two or three of them.</li>
+<li><strong>&quot;half past twelve&quot;</strong> appears in scenes 01 and 03; a named watch-word (vary the clock phrasings) — worth one variation.</li>
+<li><strong>Alternation:</strong> after L21 the scene alternates 100%, with no double turn, no unanswered line, no one asking twice. <code>dialogue-voices.md</code> §4 asks for the alternation to break at least twice per scene.</li>
+<li><strong>Sightline, minor:</strong> L31 &quot;the ten parishes out that window&quot; — the study window (scene 01) looks down the road; this is the kitchen. Worth confirming which window sees the parishes.</li>
+<li>Clean: no Earth months, no banned lexicon (ghost/echo/whisper/hum), no &quot;honest&quot;, no &quot;the whole of&quot;, no chiasmus, no false precision on interior beats except the arguable &quot;twice&quot; at L3, no unlocated narration, no motive left off-page.</li>
+</ul>
+<hr />
+<h3>Does the argument read as a conversation?</h3>
+<p>It reads as a conversation, and that is the scene's real strength: every turn takes up a word or a claim from the turn before it (<em>Pending</em> → <em>It'll fill in</em>; <em>I did try asking</em> → <em>You announced</em> → <em>I announced and then I listened</em>; <em>least reassuring</em> → <em>You're welcome</em>), and no one answers a question that wasn't asked.</p>
 <p>What keeps it from being fully lived-in is that both parties receive every line perfectly and reply at its best reading, in unbroken alternation, with the two longest speeches (L31, L37) landing as prepared set-pieces rather than as things said badly under pressure — which is exactly where Peri's missing tally and Edwin's portable closer are doing the damage.</p>
 </div>
 </body></html>

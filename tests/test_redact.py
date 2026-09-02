@@ -47,11 +47,11 @@ def test_word_boundary_does_not_match_substring(spoilers):
     assert counts.redacted_chars == 0
 
 
-def test_term_is_redacted_with_category_marker(spoilers):
+def test_term_is_redacted_with_generic_marker(spoilers):
     counts = redact.RedactionCounts()
     out = redact.redact_text("Halla walked to the field.", spoilers, counts)
     assert "Halla" not in out
-    assert "⟦redacted: character⟧" in out
+    assert "⟦redacted⟧" in out
     assert counts.by_category["character"] == 1
 
 
@@ -59,21 +59,21 @@ def test_variant_matches_too(spoilers):
     counts = redact.RedactionCounts()
     out = redact.redact_text("Halla's pack was heavy.", spoilers, counts)
     assert "Halla's" not in out
-    assert "⟦redacted: character⟧" in out
+    assert "⟦redacted⟧" in out
 
 
 def test_case_insensitive(spoilers):
     counts = redact.RedactionCounts()
     out = redact.redact_text("HALLA arrived.", spoilers, counts)
     assert "HALLA" not in out
-    assert "⟦redacted: character⟧" in out
+    assert "⟦redacted⟧" in out
 
 
 def test_multiword_term_matches(spoilers):
     counts = redact.RedactionCounts()
     out = redact.redact_text("They went to the Bittle at dawn.", spoilers, counts)
     assert "Bittle" not in out
-    assert "⟦redacted: place⟧" in out
+    assert "⟦redacted⟧" in out
 
 
 def test_sentence_level_topic_redaction(spoilers):
@@ -81,7 +81,7 @@ def test_sentence_level_topic_redaction(spoilers):
     text = "The weather was fine. Edwin dies at the end of the book. Peri walked home."
     out = redact.redact_text(text, spoilers, counts)
     assert "dies" not in out
-    assert "⟦redacted sentence: Edwin's death⟧" in out
+    assert "⟦redacted sentence⟧" in out
     assert "The weather was fine." in out
     assert "Peri walked home." in out
 
@@ -224,7 +224,7 @@ def test_topic_marker_not_corrupted_by_later_term_pass(tmp_path):
 
     counts = redact.RedactionCounts()
     out = redact.redact_text("Edwin's death is near.", spoilers, counts)
-    assert out == "⟦redacted sentence: Edwin's death/mortality⟧"
+    assert out == "⟦redacted sentence⟧"
     assert out.count(redact.CHAR_MARK) == 1  # single, non-nested marker
 
 
@@ -233,3 +233,109 @@ def test_toolu_id_redacted_as_private(spoilers):
     out = redact.redact_text("tool call toolu_01CSjJ5NdHPt86TgeEc8H1hH returned.", spoilers, counts)
     assert "toolu_" not in out
     assert "redacted: private" in out
+
+
+# ---------------------------------------------------------------------------
+# "leaked-private-path": a term that looks like an absolute path must still
+# match even when literal two-character "\n" escape sequences (surviving an
+# inner layer of JSON-escaping in embedded subagent output) sit right next
+# to it instead of a real newline -- the boundary check must not depend on
+# what character precedes the path.
+
+
+@pytest.fixture()
+def path_spoilers(tmp_path):
+    data = {
+        "terms": [
+            {
+                "term": "/Users/drmaciver/Projects/autoroad",
+                "variants": [],
+                "category": "private",
+                "scope": "n/a",
+                "why": "test",
+            }
+        ],
+        "topics": [],
+        "topic_regexes": [],
+        "unpublished_path_rules": {"path_prefixes": [], "scene_number_threshold": 40},
+    }
+    p = tmp_path / "spoilers.json"
+    p.write_text(json.dumps(data))
+    return redact.Spoilers.load(p)
+
+
+def test_repo_path_term_matches_after_real_newline(path_spoilers):
+    counts = redact.RedactionCounts()
+    text = "No change needed.\n\n/Users/drmaciver/Projects/autoroad/chapters/009-fenholt.md\n\nDone."
+    out = redact.redact_text(text, path_spoilers, counts)
+    assert "/Users/drmaciver" not in out
+    assert "⟦redacted⟧/chapters/009-fenholt.md" in out
+
+
+def test_repo_path_term_matches_after_literal_backslash_n(path_spoilers):
+    # Regression: text[i] == "n" (a word char) immediately before the "/"
+    # used to defeat the (?<!\w) left-boundary check and let the path leak
+    # through unredacted.
+    counts = redact.RedactionCounts()
+    text = "No change needed.\\n\\n/Users/drmaciver/Projects/autoroad/chapters/009-fenholt.md\\n\\nDone."
+    out = redact.redact_text(text, path_spoilers, counts)
+    assert "/Users/drmaciver" not in out
+    assert "⟦redacted⟧/chapters/009-fenholt.md" in out
+
+
+# ---------------------------------------------------------------------------
+# redaction shouldn't leave a markdown emphasis/code delimiter unpaired.
+
+
+def test_bold_marker_left_unbalanced_by_sentence_redaction_is_stripped(spoilers):
+    counts = redact.RedactionCounts()
+    # "ch." reads as a sentence end to the naive splitter, so the closing
+    # "**" ends up inside the *next* "sentence" -- which then gets redacted
+    # as a topic sentence, leaving a stray opening "**" behind.
+    text = "**ch. Edwin dies here** Names the spell and explains what it rests on."
+    out = redact.redact_text(text, spoilers, counts)
+    assert out == "ch. ⟦redacted sentence⟧"
+    assert "**" not in out
+
+
+def test_lone_backtick_left_unbalanced_by_redaction_is_stripped(spoilers):
+    counts = redact.RedactionCounts()
+    text = "`Halla, 9 wks/2 ch 90); return run"
+    out = redact.redact_text(text, spoilers, counts)
+    assert "`" not in out
+
+
+def test_balanced_bold_outside_redaction_is_left_alone(spoilers):
+    counts = redact.RedactionCounts()
+    out = redact.redact_text("This is **bold** and unrelated.", spoilers, counts)
+    assert "**bold**" in out
+
+
+def test_balanced_code_span_outside_redaction_is_left_alone(spoilers):
+    counts = redact.RedactionCounts()
+    out = redact.redact_text("Run `ls -la` please.", spoilers, counts)
+    assert "`ls -la`" in out
+
+
+def test_fenced_code_block_backticks_are_left_alone(spoilers):
+    counts = redact.RedactionCounts()
+    out = redact.redact_text("```python\nprint(1)\n```", spoilers, counts)
+    assert out.count("```") == 2
+
+
+# ---------------------------------------------------------------------------
+# new block kinds introduced for harness-injected content still get redacted
+
+
+def test_system_note_summary_field_is_redacted(spoilers):
+    counts = redact.RedactionCounts()
+    block = {"kind": "system_note", "event": "task_notification", "summary": "About Halla's plan"}
+    out = redact.redact_block(block, spoilers, counts)
+    assert "Halla" not in out["summary"]
+
+
+def test_command_output_field_is_redacted(spoilers):
+    counts = redact.RedactionCounts()
+    block = {"kind": "command", "name": "/compact", "output": "mentions Halla"}
+    out = redact.redact_block(block, spoilers, counts)
+    assert "Halla" not in out["output"]

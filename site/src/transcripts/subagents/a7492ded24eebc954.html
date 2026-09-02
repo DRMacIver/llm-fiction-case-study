@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are working in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Task: compile a machine-reada…</title><style>
+<html><head><meta charset="utf-8"><title>You are working in [redacted]. Task: compile a machine-readable catal…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,50 +7,68 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are working in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Task: compile a machine-reada…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a7492ded24eebc954">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are working in <span class="redacted">redacted: private</span>. Task: compile a machine-readable catalogue of every language/prose failure mode this project polices, for a new automated lint pipeline.<br>
-<br>
-Sources to read (all of them, fully):<br>
-- notes/llm-tells.md<br>
-- notes/voices.md (especially banned constructions and the round-three binding rules)<br>
-- notes/author.md (author's-note persona: banned constructions block, budgets)<br>
-- draft/book-01/VOICE.md<br>
-- notes/voice-exemplars.md (just for context on what GOOD looks like; don't turn exemplars into rules)<br>
-- <span class="redacted">redacted: private</span> (feedback files)<br>
-- comments/**/*.json — these hold DRMacIver's actual review comments; mine RESOLVED and unresolved comments for recurring language complaints (e.g. "LLMism", "overly cute cryptic ending", "does this sentence make sense", "weird"). Quote the comment text as the source.<br>
-<br>
-Write TWO files:<br>
-<br>
-1. tools/lint/rules.json — an array of rule objects:<br>
-   {<br>
-     "id": "kebab-case-id",<br>
-     "name": "short name",<br>
-     "tier": "regex" | "metric" | "semantic",<br>
-     "scope": ["scene", "note", "plan"],   // where it applies<br>
-     "pattern": "...python regex, only for tier regex...",<br>
-     "flags": "i" (optional),<br>
-     "metric": {...only for tier metric, e.g. {"kind":"per-1000-words","token":"—","max":2}...},<br>
-     "severity": "error" | "warn",<br>
-     "description": "what the failure mode is",<br>
-     "why": "why it's banned, one line",<br>
-     "source": "file/comment it was ruled in",<br>
-     "examples": ["bad example", ...],<br>
-     "counter_examples": ["allowed usage that must NOT be flagged", ...]<br>
-   }<br>
-   - tier=regex: only things a regex can catch with low false-positive rate ("worth saying plainly", "is the plain record", "the X is the gamble" → pattern for "is the gamble", "not because .* but because", "It wasn't X. It was Y." shapes if reliably matchable, "the kind of X that Y" if ruled, sentence-initial "And yet", etc. — derive from the sources, don't invent).<br>
-   - tier=metric: countable budgets (em-dash per 1000 words ~2 for scenes; author's note length ≤~300 words; note em-dash only in heading; narrator aphorism ≤1/scene is semantic not metric).<br>
-   - tier=semantic: everything needing judgement (event-wit vs ornament-wit, endings-as-cadences, rule-of-three ornament, false profundity, "shape filled fact unchecked" sense errors, cute-cryptic closers, winking, non-witnessable anecdotes, fabricated specificity...). For these, description+examples must be rich enough that a haiku model given ONLY this rule text and a chapter can hunt for it.<br>
-   Be exhaustive: I expect 30–60 rules. Every rule must trace to a real source in this repo — cite it. Do NOT invent rules that were never ruled.<br>
-<br>
-2. tools/lint/rules-notes.md — brief notes: anything ambiguous you found, conflicts between sources, complaints in comments that you could NOT turn into a rule (list them verbatim with file), and which semantic rules you think are most/least suited to haiku-level detection.<br>
-<br>
-Do not read anything under notes/sealed/. Do not modify any other files. Report back: rule count by tier, the 5 highest-confidence regex rules, and open ambiguities.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted]. Task: compile a machine-readable catal…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a7492ded24eebc954">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted</span>. Task: compile a machine-readable catalogue of every language/prose failure mode this project polices, for a new automated lint pipeline.</p>
+<p>Sources to read (all of them, fully):</p>
+<ul>
+<li>notes/llm-tells.md</li>
+<li>notes/voices.md (especially banned constructions and the round-three binding rules)</li>
+<li>notes/author.md (author's-note persona: banned constructions block, budgets)</li>
+<li>draft/book-01/VOICE.md</li>
+<li>notes/voice-exemplars.md (just for context on what GOOD looks like; don't turn exemplars into rules)</li>
+<li><span class="redacted">redacted: private</span> (feedback files)</li>
+<li>comments//*.json — these hold DRMacIver's actual review comments; mine RESOLVED and unresolved comments for recurring language complaints (e.g. &quot;LLMism&quot;, &quot;overly cute cryptic ending&quot;, &quot;does this sentence make sense&quot;, &quot;weird&quot;). Quote the comment text as the source.</li>
+</ul>
+<p>Write TWO files:</p>
+<ol>
+<li>
+<p>tools/lint/rules.json — an array of rule objects:<br />
+{<br />
+&quot;id&quot;: &quot;kebab-case-id&quot;,<br />
+&quot;name&quot;: &quot;short name&quot;,<br />
+&quot;tier&quot;: &quot;regex&quot; | &quot;metric&quot; | &quot;semantic&quot;,<br />
+&quot;scope&quot;: [&quot;scene&quot;, &quot;note&quot;, &quot;plan&quot;],   // where it applies<br />
+&quot;pattern&quot;: &quot;...python regex, only for tier regex...&quot;,<br />
+&quot;flags&quot;: &quot;i&quot; (optional),<br />
+&quot;metric&quot;: {...only for tier metric, e.g. {&quot;kind&quot;:&quot;per-1000-words&quot;,&quot;token&quot;:&quot;—&quot;,&quot;max&quot;:2}...},<br />
+&quot;severity&quot;: &quot;error&quot; | &quot;warn&quot;,<br />
+&quot;description&quot;: &quot;what the failure mode is&quot;,<br />
+&quot;why&quot;: &quot;why it's banned, one line&quot;,<br />
+&quot;source&quot;: &quot;file/comment it was ruled in&quot;,<br />
+&quot;examples&quot;: [&quot;bad example&quot;, ...],<br />
+&quot;counter_examples&quot;: [&quot;allowed usage that must NOT be flagged&quot;, ...]<br />
+}</p>
+<ul>
+<li>tier=regex: only things a regex can catch with low false-positive rate (&quot;worth saying plainly&quot;, &quot;is the plain record&quot;, &quot;the X is the gamble&quot; → pattern for &quot;is the gamble&quot;, &quot;not because .* but because&quot;, &quot;It wasn't X. It was Y.&quot; shapes if reliably matchable, &quot;the kind of X that Y&quot; if ruled, sentence-initial &quot;And yet&quot;, etc. — derive from the sources, don't invent).</li>
+<li>tier=metric: countable budgets (em-dash per 1000 words ~2 for scenes; author's note length ≤~300 words; note em-dash only in heading; narrator aphorism ≤1/scene is semantic not metric).</li>
+<li>tier=semantic: everything needing judgement (event-wit vs ornament-wit, endings-as-cadences, rule-of-three ornament, false profundity, &quot;shape filled fact unchecked&quot; sense errors, cute-cryptic closers, winking, non-witnessable anecdotes, fabricated specificity...). For these, description+examples must be rich enough that a haiku model given ONLY this rule text and a chapter can hunt for it.<br />
+Be exhaustive: I expect 30–60 rules. Every rule must trace to a real source in this repo — cite it. Do NOT invent rules that were never ruled.</li>
+</ul>
+</li>
+<li>
+<p>tools/lint/rules-notes.md — brief notes: anything ambiguous you found, conflicts between sources, complaints in comments that you could NOT turn into a rule (list them verbatim with file), and which semantic rules you think are most/least suited to haiku-level detection.</p>
+</li>
+</ol>
+<p>Do not read anything under notes/sealed/. Do not modify any other files. Report back: rule count by tier, the 5 highest-confidence regex rules, and open ambiguities.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -79,9 +97,9 @@ Do not read anything under notes/sealed/. Do not modify any other files. Report 
 <details><summary>10 tool calls</summary>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; for f in feedback-*.md; do echo "=== $f"; cat "$f"; done</p>
 <p>✅ 211 lines, 12556 chars</p>
-<p>🔧 Bash: python3 -c " import json,glob for f in sorted(glob.glob('comments/**/*.json',recursive=Tr…</p>
+<p>🔧 Bash: python3 -c " import json,glob for f in sorted(glob.glob('comments//*.json',recursive=True…</p>
 <p>✅ 2 lines, 687 chars</p>
-<p>🔧 Bash: python3 -c " import json,glob out=[] for f in sorted(glob.glob('comments/**/*.json',recur…</p>
+<p>🔧 Bash: python3 -c " import json,glob out=[] for f in sorted(glob.glob('comments//*.json',recursi…</p>
 <p>✅ 2 lines, 132 chars</p>
 <p>🔧 Bash: sed -n '2,290p' <span class="redacted">redacted: private</span></p>
 <p>✅ 289 lines, 22965 chars</p>
@@ -94,33 +112,39 @@ Do not read anything under notes/sealed/. Do not modify any other files. Report 
 </div>
 
 <details><summary>6 tool calls</summary>
-<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span>/tools/lint &amp;&amp; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'PYEOF' import jso…</p>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted</span>/tools/lint &amp;&amp; cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'PYEOF' import json …</p>
 <p>✅ 2 lines, 56 chars</p>
 <p>🔧 Bash: python3 -c " import json,collections d=json.load(open('tools/lint/rules.json')) print(len…</p>
 <p>✅ 4 lines, 62 chars</p>
-<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span>/tools/lint/rules-notes.md &lt;&lt;'EOF' # rules.json — compilation no…</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted</span>/tools/lint/rules-notes.md &lt;&lt;'EOF' # rules.json — compilation notes  <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 91 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Done. Both files written and committed (`8ff5c01`).</p>
-<p>**Files**<br>
-- `<span class="redacted">redacted: private</span>/tools/lint/rules.json` — 102 rules, all with `id/name/tier/scope/severity/description/why/source/examples/counter_examples`; every regex compiles.<br>
-- `<span class="redacted">redacted: private</span>/tools/lint/rules-notes.md`</p>
-<p>**Count by tier:** regex 31, metric 23, semantic 48. That overshoots your 30–60 estimate, but every rule traces to a real ruling or comment — the census sections of `voices.md` alone supply 13 named patterns, `llm-tells.md` 17, and the dialogue rules 13.</p>
-<p>**Five highest-confidence regex rules**<br>
-1. `banned-note-openers` — "worth saying plainly" / "is the plain record" / "is the gamble"; each explicitly marked "LLMism"/"Weird phrasing" in comments. Zero false positives.<br>
-2. `item-tic` — `Item: `; ruled outright as an LLM verbal tic (scene 12).<br>
-3. `negative-parallelism` — `not X, but Y`; the most-cited construction, banned including inside quotes.<br>
-4. `gesture-at-meaning` — "the whole shape of it" / "no words for it" / "doing some of what a X can do"; banned as a named family.<br>
-5. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Open ambiguities** (detailed in rules-notes.md)<br>
-- `delve` is diegetic here (a scheduled delve), so only `delve into` is matched.<br>
-- The **"endings are cuts" scope conflict**: llm-tells.md and voices.md rule 7 read as scene rules; VOICE.md §2 and the 2026-08-31 amendment override them to chapter-only, because applying it per scene "produced people trading fragments". I encoded the override — a lint that regresses to the old reading would damage the draft.<br>
-- Author's-note 300-word cap is my threshold, not a ruling (marked `status: "Working"`).<br>
-- The brief's "sentence-initial *And yet*" and "note em-dash only in heading" have no ruling anywhere in the repo; I did not invent them.<br>
-- `honest` and `arithmetic` are retired-with-exceptions, so they fire on licensed uses too (warn-level).<br>
-- Simile budget is the weakest metric: voices.md *rejects* the "the way a/you/the X" simile as a finding while voice-exemplars.md caps at ~2/chapter.<br>
-- 15 comments could not become rules (plot/world logic, taste verdicts) — listed verbatim with files. The largest un-ruleable cluster is the bare "Weird phrasing" comment.</p>
+<p>Done. Both files written and committed (<code>8ff5c01</code>).</p>
+<p><strong>Files</strong></p>
+<ul>
+<li><span class="redacted">redacted</span>/tools/lint/rules.json<code>— 102 rules, all with</code>id/name/tier/scope/severity/description/why/source/examples/counter_examples`; every regex compiles.</li>
+<li><code><span class="redacted">redacted</span>/tools/lint/rules-notes.md</code></li>
+</ul>
+<p><strong>Count by tier:</strong> regex 31, metric 23, semantic 48. That overshoots your 30–60 estimate, but every rule traces to a real ruling or comment — the census sections of <code>voices.md</code> alone supply 13 named patterns, <code>llm-tells.md</code> 17, and the dialogue rules 13.</p>
+<p><strong>Five highest-confidence regex rules</strong></p>
+<ol>
+<li><code>banned-note-openers</code> — &quot;worth saying plainly&quot; / &quot;is the plain record&quot; / &quot;is the gamble&quot;; each explicitly marked &quot;LLMism&quot;/&quot;Weird phrasing&quot; in comments. Zero false positives.</li>
+<li><code>item-tic</code> — <code>Item: </code>; ruled outright as an LLM verbal tic (scene 12).</li>
+<li><code>negative-parallelism</code> — <code>not X, but Y</code>; the most-cited construction, banned including inside quotes.</li>
+<li>`gesture-at-meaning — &quot;the whole shape of it&quot; / &quot;no words for it&quot; / &quot;doing some of what a X can do&quot;; banned as a named family.</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<p><strong>Open ambiguities</strong> (detailed in rules-notes.md)</p>
+<ul>
+<li><code>delve</code> is diegetic here (a scheduled delve), so only <code>delve into</code> is matched.</li>
+<li>The <strong>&quot;endings are cuts&quot; scope conflict</strong>: llm-tells.md and voices.md rule 7 read as scene rules; VOICE.md §2 and the 2026-08-31 amendment override them to chapter-only, because applying it per scene &quot;produced people trading fragments&quot;. I encoded the override — a lint that regresses to the old reading would damage the draft.</li>
+<li>Author's-note 300-word cap is my threshold, not a ruling (marked <code>status: &quot;Working&quot;</code>).</li>
+<li>The brief's &quot;sentence-initial <em>And yet</em>&quot; and &quot;note em-dash only in heading&quot; have no ruling anywhere in the repo; I did not invent them.</li>
+<li><code>honest</code> and <code>arithmetic</code> are retired-with-exceptions, so they fire on licensed uses too (warn-level).</li>
+<li>Simile budget is the weakest metric: voices.md <em>rejects</em> the &quot;the way a/you/the X&quot; simile as a finding while voice-exemplars.md caps at ~2/chapter.</li>
+<li>15 comments could not become rules (plot/world logic, taste verdicts) — listed verbatim with files. The largest un-ruleable cluster is the bare &quot;Weird phrasing&quot; comment.</li>
+</ul>
 </div>
 </body></html>

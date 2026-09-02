@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Work in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/draft/book-01/scenes/. STRICT: only read…</title><style>
+<html><head><meta charset="utf-8"><title>Work in [redacted]/draft/book-01/scenes/. STRICT: only read files in…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,33 +7,45 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Work in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/draft/book-01/scenes/. STRICT: only read…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-ae17e36d792d09eef">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Work in <span class="redacted">redacted: private</span>/draft/book-01/scenes/. STRICT: only read files in that directory (scenes 01-89 .md). Do not read chapters/, rewrite/, rejected-act2/, summaries/, plans/, <span class="redacted">unpublished</span> or any git history.<br>
-<br>
-Write a Python script (in the scratchpad, <span class="redacted">redacted: private</span>) that computes, per scene file, and report the results as a compact table plus lists:<br>
-<br>
-1. The FIRST sentence of the scene body (skip a leading "# " title line). Report it verbatim for scenes 41-89. Then classify: does it match the template NAME/pronoun + past verb + prepositional time phrase (e.g. "Edwin came up the lane at first light, ...")? Flag runs of 3+ consecutive scenes matching.<br>
-2. The LAST sentence of each scene, verbatim, for scenes 67-89. Also flag any scene whose last sentence contains write/wrote/writing/slate/list/note/letter.<br>
-3. Count of the word "because" per scene, for all scenes 01-89; give per-scene counts for 41-89 and the mean for 01-24 vs 25-40 vs 41-76 vs 77-89.<br>
-4. Em dash count per scene (should be ~0 in body text).<br>
-5. Word count per scene for 77-89.<br>
-6. <span class="redacted">redacted sentence: unpublished prose</span> It was Y." negative-parallelism patterns: regex for `\bnot\b[^.;]{1,60}\bbut\b` and `[Ww]asn't\b[^.]{1,60}\.\s+(It|He|She|They)\s+was\b`. List matches with scene number for 41-89.<br>
-7. Anaphora: within a scene, 3+ consecutive sentences starting with the same word. List for 77-89.<br>
-8. Sentence-length stats (mean, stdev) per scene for 77-89 and, for comparison, scenes 01,02,05,06,13,19,31,40,62,66,71,74.<br>
-9. Counted templates: sentences containing a digit-or-spelled number followed by a plural noun, count per scene, for 77-89.<br>
-10. Dialogue share: fraction of lines that are dialogue (start with a quote mark or contain a quoted string), per scene 77 <span class="redacted">unpublished</span>-89.<br>
-<br>
-Report the actual numbers and verbatim strings — do not summarize away the evidence. Do not edit any scene file.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Work in [redacted]/draft/book-01/scenes/. STRICT: only read files in…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-ae17e36d792d09eef">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Work in <span class="redacted">redacted</span>/draft/book-01/scenes/. STRICT: only read files in that directory (scenes 01-89 .md). Do not read chapters/, rewrite/, rejected-act2/, summaries/, plans/, <span class="unpub-tag">unpublished</span> or any git history.</p>
+<p>Write a Python script (in the scratchpad, <span class="redacted">redacted: private</span>) that computes, per scene file, and report the results as a compact table plus lists:</p>
+<ol>
+<li>The FIRST sentence of the scene body (skip a leading &quot;# &quot; title line). Report it verbatim for scenes 41-89. Then classify: does it match the template NAME/pronoun + past verb + prepositional time phrase (e.g. &quot;Edwin came up the lane at first light, ...&quot;)? Flag runs of 3+ consecutive scenes matching.</li>
+<li>The LAST sentence of each scene, verbatim, for scenes 67-89. Also flag any scene whose last sentence contains write/wrote/writing/slate/list/note/letter.</li>
+<li>Count of the word &quot;because&quot; per scene, for all scenes 01-89; give per-scene counts for 41-89 and the mean for 01-24 vs 25-40 vs 41-76 vs 77-89.</li>
+<li>Em dash count per scene (should be ~0 in body text).</li>
+<li>Word count per scene for 77-89.</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span> It was Y.&quot; negative-parallelism patterns: regex for <code>\bnot\b[^.;]{1,60}\bbut\b</code> and <code>[Ww]asn't\b[^.]{1,60}\.\s+(It|He|She|They)\s+was\b</code>. List matches with scene number for 41-89.</li>
+<li>Anaphora: within a scene, 3+ consecutive sentences starting with the same word. List for 77-89.</li>
+<li>Sentence-length stats (mean, stdev) per scene for 77-89 and, for comparison, scenes 01,02,05,06,13,19,31,40,62,66,71,74.</li>
+<li>Counted templates: sentences containing a digit-or-spelled number followed by a plural noun, count per scene, for 77-89.</li>
+<li>Dialogue share: fraction of lines that are dialogue (start with a quote mark or contain a quoted string), per scene 77 <span class="unpub-tag">unpublished</span>-89.</li>
+</ol>
+<p>Report the actual numbers and verbatim strings — do not summarize away the evidence. Do not edit any scene file.</p></blockquote>
 
 
 <details><summary>8 tool calls</summary>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | head -100</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/draft/book-01/scenes/ | head -100</p>
 <p>✅ 89 lines, 2330 chars</p>
 <p>🔧 Write <span class="redacted">redacted: private</span></p>
 <p>✅ 1 lines, 213 chars</p>
@@ -44,17 +56,17 @@ Report the actual numbers and verbatim strings — do not summarize away the evi
 </details>
 
 <div class="assistant-prose">
-<p>The script ran successfully. Full report saved at `<span class="redacted">redacted: private</span>`, script at `<span class="redacted">redacted: private</span>`. No scene files were edited.</p>
+<p>The script ran successfully. Full report saved at <span class="redacted">redacted: private</span><code>, script at </code><span class="redacted">redacted: private</span>. No scene files were edited.</p>
 <p>Key findings:</p>
-<p>**1. First-sentence template (Name/pronoun + past verb + prep. time phrase), scenes 41-89:** 26 of 49 opening sentences match. Consecutive runs of 3+: scenes **44-46**, **59-61**, **74-76**, and **86-89** (a 4-scene run). That's four separate runs, all clustered in the second half of the range — the pattern becomes denser as the sequence progresses, especially the run covering the entire final stretch 86-89.</p>
-<p>**2. Last sentences, 67-89:** flagged for write/wrote/slate/list/note/letter: scenes **69, 77, 84, 86, 87, 88, 89** — 7 of 23, all clustered from 77 onward except 69. Scene 86 <span class="redacted">unpublished</span> ends baldly on `"Write that."` — the shortest/starkest of the flagged endings.</p>
-<p>**3. "Because" counts:** means rise sharply and then plateau: 01-24 = 2.375, 25-40 = 4.25, 41-76 = 6.28, 77-89 = 6.23. Roughly a 2.6x jump from the first quarter to the back half, with no further increase in the last 13 scenes — density is already saturated by scene 41 <span class="redacted">unpublished</span>.</p>
-<p>**4. Em dashes:** zero in every scene, 01-89. Clean.</p>
-<p>**5. Word counts, 77-89:** range 663 (scene 83 <span class="redacted">unpublished</span>) to 1546 (scene 80 <span class="redacted">unpublished</span>); most cluster 1000-1250.</p>
-<p>**6. Negative-parallelism (not X but Y / wasn't X. It was Y):** 6 hits across 41-89, in scenes 57, 63, 68, 75, 77, 79 — e.g. scene 57 <span class="redacted">unpublished</span> `"wasn't stopped. It was"`, scene 68 <span class="redacted">unpublished</span> `'not deep, but'`. Sparse but present in the back half specifically.</p>
-<p>**7. Anaphora (3+ consecutive same-opening-word sentences), 77-89:** 8 runs found — scenes 77 ("He"), 80 ("It"), 82 ("The"), 84 ("I"), 85 ("It", 5-sentence run), 86 ("It's"), 87 (two separate runs: "He" and "She"), 88 ("The"). Present in nearly every scene 77 <span class="redacted">unpublished</span>-89 except 78, 79, 81, 83, 89.</p>
-<p>**8. Sentence-length stats:** 77-89 means range 12.79-28.36 (stdev often exceeding mean, indicating long-tail sentence mixing). Comparison scenes (spread across the book) show similar wide variance (9.25-26.52), so 77-89 isn't obviously more extreme than earlier scenes — high variance appears to be a consistent stylistic feature throughout.</p>
-<p>**9. Counted templates (number+plural noun), 77-89:** counts climb steeply toward the end — 77-81 average ~10, but 82 (21), 86 (24), 87 (19), 88 (25) spike hard; 89 drops back to 7.</p>
-<p>**10. Dialogue share, 77-89:** ranges 0.267 (scene 82 <span class="redacted">unpublished</span>, driven by long dictated-document/list content) to 0.783 (scene 81 <span class="redacted">unpublished</span>); most scenes are 0.5-0.75.</p>
+<p><strong>1. First-sentence template (Name/pronoun + past verb + prep. time phrase), scenes 41-89:</strong> 26 of 49 opening sentences match. Consecutive runs of 3+: scenes <strong>44-46</strong>, <strong>59-61</strong>, <strong>74-76</strong>, and <strong>86-89</strong> (a 4-scene run). That's four separate runs, all clustered in the second half of the range — the pattern becomes denser as the sequence progresses, especially the run covering the entire final stretch 86-89.</p>
+<p><strong>2. Last sentences, 67-89:</strong> flagged for write/wrote/slate/list/note/letter: scenes <strong>69, 77, 84, 86, 87, 88, 89</strong> — 7 of 23, all clustered from 77 onward except 69. Scene 86 <span class="unpub-tag">unpublished</span> ends baldly on <code>&quot;Write that.&quot;</code> — the shortest/starkest of the flagged endings.</p>
+<p><strong>3. &quot;Because&quot; counts:</strong> means rise sharply and then plateau: 01-24 = 2.375, 25-40 = 4.25, 41-76 = 6.28, 77-89 = 6.23. Roughly a 2.6x jump from the first quarter to the back half, with no further increase in the last 13 scenes — density is already saturated by scene 41 <span class="unpub-tag">unpublished</span>.</p>
+<p><strong>4. Em dashes:</strong> zero in every scene, 01-89. Clean.</p>
+<p><strong>5. Word counts, 77-89:</strong> range 663 (scene 83 <span class="unpub-tag">unpublished</span>) to 1546 (scene 80 <span class="unpub-tag">unpublished</span>); most cluster 1000-1250.</p>
+<p><strong>6. Negative-parallelism (not X but Y / wasn't X. It was Y):</strong> 6 hits across 41-89, in scenes 57, 63, 68, 75, 77, 79 — e.g. scene 57 <span class="unpub-tag">unpublished</span> <code>&quot;wasn't stopped. It was&quot;</code>, scene 68 <span class="unpub-tag">unpublished</span> <code>'not deep, but'</code>. Sparse but present in the back half specifically.</p>
+<p><strong>7. Anaphora (3+ consecutive same-opening-word sentences), 77-89:</strong> 8 runs found — scenes 77 (&quot;He&quot;), 80 (&quot;It&quot;), 82 (&quot;The&quot;), 84 (&quot;I&quot;), 85 (&quot;It&quot;, 5-sentence run), 86 (&quot;It's&quot;), 87 (two separate runs: &quot;He&quot; and &quot;She&quot;), 88 (&quot;The&quot;). Present in nearly every scene 77 <span class="unpub-tag">unpublished</span>-89 except 78, 79, 81, 83, 89.</p>
+<p><strong>8. Sentence-length stats:</strong> 77-89 means range 12.79-28.36 (stdev often exceeding mean, indicating long-tail sentence mixing). Comparison scenes (spread across the book) show similar wide variance (9.25-26.52), so 77-89 isn't obviously more extreme than earlier scenes — high variance appears to be a consistent stylistic feature throughout.</p>
+<p><strong>9. Counted templates (number+plural noun), 77-89:</strong> counts climb steeply toward the end — 77-81 average ~10, but 82 (21), 86 (24), 87 (19), 88 (25) spike hard; 89 drops back to 7.</p>
+<p><strong>10. Dialogue share, 77-89:</strong> ranges 0.267 (scene 82 <span class="unpub-tag">unpublished</span>, driven by long dictated-document/list content) to 0.783 (scene 81 <span class="unpub-tag">unpublished</span>); most scenes are 0.5-0.75.</p>
 </div>
 </body></html>

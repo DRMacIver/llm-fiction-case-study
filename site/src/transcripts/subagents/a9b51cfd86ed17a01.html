@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a9b51cfd86ed17a01">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/08-what-youre-standing-in.md, read after scenes 01–07 in the same directory (they bind what is on the page). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a9b51cfd86ed17a01">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/08-what-youre-standing-in.md, read after scenes 01–07 in the same directory (they bind what is on the page). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Report findings only, per the skill's &quot;How to report&quot;: quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or &quot;cut&quot;. Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -59,32 +70,32 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 </details>
 
 <div class="assistant-prose">
-<p>## Findings — `draft/book-01/scenes/08-what-youre-standing-in.md`</p>
-<p>**1.** *"It was Widow Sepp who said it, at the biscuit tin."*<br>
-**Part 1 — a pronoun or reference has no clear antecedent.** The scene opens on a cleft whose *it* points at nothing; the reader is told a thing was said before anything has been said, and the previous scene ends on Edwin, not on any "it". (The groundwork's "who put it together" was queried for a different reason — she already knew — so this is not a line to rescue by re-wording.)<br>
-**Replacement:** "Widow Sepp waited for the biscuit tin. She had been watching Peri sideways all morning, and she spoke to the garden at large, the way she said most things."</p>
-<p>**2.** *"at the biscuit tin"* / *"the eleven women with trowels in their laps"*<br>
-**Part 1 — check the clock.** The tin goes round on the half hour (ch. 002; `minor.md`, Dob's "biscuit tin at half past"), i.e. 10:30. Scene 07 puts Peri's questions *after* "the first half hour", with the compost cantrip last and "Can you actually fight?" over the compost bed — so this exchange sits at the end of a class that Sorrel then says has run to ten past eleven. The tin cannot be where the class ends up. The trowels in laps compound it: the class has just finished casting.<br>
-**Replacement:** move the beat off the tin — "Widow Sepp waited until the trowels were down" — or, if the tin is wanted, have it come round late for once and say so in the same clause ("The tin went round late, the class having overrun").</p>
-<p>**3.** *"and he watched her do the sum the long way, out loud, in the wrong order, which was, he was learning, how she did sums."*<br>
-**Part 2 — the gesture at meaning, and the unwanted explanation**; also **Part 1 — check every inference.** It announces the speech that immediately follows (she then does the sum out loud, in the wrong order), it footnotes the working the dialogue performs, and it repeats "sums" from "a girl doing sums she had not been set" three paragraphs up. "He was learning" claims a pattern off one prior instance — scene 02's "You'd need — you taught the teachers" — on Day 2 of knowing her.<br>
-**Replacement:** cut the whole clause. "She looked at the heap, and at the eleven women with trowels in their laps, and at him."</p>
-<p>**4.** *"You've made it run to ten past."*<br>
-**Part 1 — a pronoun or reference has no clear antecedent.** Sorrel's first words in the scene, and *you* can be Edwin (who has been talking), Peri (who caused it), or the class. In ch. 002 the line came after a turn already addressed to Peri and inherited its address; here it arrives cold. She cannot use Peri's name — she does not have it until two beats later.<br>
-**Replacement:** "Between you you've made it run to ten past."</p>
-<p>**5.** *"Sorrel's face gave nothing away. <span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1 — the flat version is empty.** The second sentence restates the first and adds only the eleven years; "it" and "that" both circle the same blank.<br>
-**Replacement:** cut the first sentence. "Eleven years, and Edwin still could not read her when she did that."</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1 — check the dependents of every edit; check every fact.** Sorrel arrives holding "the soil-salts tables" and announces "Widow Sepp, I've your salts figures done" — and the figures are never handed over. The class disperses, and the scene's last action is Sorrel carrying the figures back indoors, which reads as the errand she came up for failing to happen.<br>
-**Replacement:** either give Sepp her sheet on the way out (one clause at "The class dispersed" — "The class dispersed, Widow Sepp with her sheet"), or end on the object she actually still has: "and went to put the tables away."</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 6 — the plainest, most direct form.** One sentence changes grammatical subject across an "and" and then buries the new speaker behind two adverbial clauses.<br>
-**Replacement:** "The class dispersed. Peri gathered herself up from the bench. At the gate, when the last of the farmwives was out of earshot, Sorrel said, low, …"</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1 — count the occurrences.** The same count is stated twice four paragraphs apart, the second time as if new. If **3** is cut as recommended, the first instance goes with it; otherwise reduce the second to "The farmwives looked at things that were not Edwin".</p>
-<p>---</p>
-<p>**The device a second round would be about:** the fourth measurement lands as three consecutive uninterrupted speeches — Sepp's famine story, Edwin's famine paragraph, Peri's supply-lines realisation — which is the same shape as the note already on record against ch. 001's list ("the core joke of this interaction … would flow better as a conversation"), moved to a new scene rather than fixed.</p>
-<p>**What it would take:** break Peri's realisation across Edwin's answer so the sum is built in the exchange — she gets "Teaching one village doesn't stop a famine somewhere else" out, he answers it with the flattest available fact, and only then does "You taught the teachers" arrive as the thing she wins off his answer instead of the thing she recites at him.</p>
+<h2>Findings — <code>draft/book-01/scenes/08-what-youre-standing-in.md</code></h2>
+<p><strong>1.</strong> <em>&quot;It was Widow Sepp who said it, at the biscuit tin.&quot;</em><br />
+<strong>Part 1 — a pronoun or reference has no clear antecedent.</strong> The scene opens on a cleft whose <em>it</em> points at nothing; the reader is told a thing was said before anything has been said, and the previous scene ends on Edwin, not on any &quot;it&quot;. (The groundwork's &quot;who put it together&quot; was queried for a different reason — she already knew — so this is not a line to rescue by re-wording.)<br />
+<strong>Replacement:</strong> &quot;Widow Sepp waited for the biscuit tin. She had been watching Peri sideways all morning, and she spoke to the garden at large, the way she said most things.&quot;</p>
+<p><strong>2.</strong> <em>&quot;at the biscuit tin&quot;</em> / <em>&quot;the eleven women with trowels in their laps&quot;</em><br />
+<strong>Part 1 — check the clock.</strong> The tin goes round on the half hour (ch. 002; <code>minor.md</code>, Dob's &quot;biscuit tin at half past&quot;), i.e. 10:30. Scene 07 puts Peri's questions <em>after</em> &quot;the first half hour&quot;, with the compost cantrip last and &quot;Can you actually fight?&quot; over the compost bed — so this exchange sits at the end of a class that Sorrel then says has run to ten past eleven. The tin cannot be where the class ends up. The trowels in laps compound it: the class has just finished casting.<br />
+<strong>Replacement:</strong> move the beat off the tin — &quot;Widow Sepp waited until the trowels were down&quot; — or, if the tin is wanted, have it come round late for once and say so in the same clause (&quot;The tin went round late, the class having overrun&quot;).</p>
+<p><strong>3.</strong> <em>&quot;and he watched her do the sum the long way, out loud, in the wrong order, which was, he was learning, how she did sums.&quot;</em><br />
+<strong>Part 2 — the gesture at meaning, and the unwanted explanation</strong>; also <strong>Part 1 — check every inference.</strong> It announces the speech that immediately follows (she then does the sum out loud, in the wrong order), it footnotes the working the dialogue performs, and it repeats &quot;sums&quot; from &quot;a girl doing sums she had not been set&quot; three paragraphs up. &quot;He was learning&quot; claims a pattern off one prior instance — scene 02's &quot;You'd need — you taught the teachers&quot; — on Day 2 of knowing her.<br />
+<strong>Replacement:</strong> cut the whole clause. &quot;She looked at the heap, and at the eleven women with trowels in their laps, and at him.&quot;</p>
+<p><strong>4.</strong> <em>&quot;You've made it run to ten past.&quot;</em><br />
+<strong>Part 1 — a pronoun or reference has no clear antecedent.</strong> Sorrel's first words in the scene, and <em>you</em> can be Edwin (who has been talking), Peri (who caused it), or the class. In ch. 002 the line came after a turn already addressed to Peri and inherited its address; here it arrives cold. She cannot use Peri's name — she does not have it until two beats later.<br />
+<strong>Replacement:</strong> &quot;Between you you've made it run to ten past.&quot;</p>
+<p><strong>5.</strong> *&quot;Sorrel's face gave nothing away. <span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1 — the flat version is empty.</strong> The second sentence restates the first and adds only the eleven years; &quot;it&quot; and &quot;that&quot; both circle the same blank.<br />
+<strong>Replacement:</strong> cut the first sentence. &quot;Eleven years, and Edwin still could not read her when she did that.&quot;</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1 — check the dependents of every edit; check every fact.</strong> Sorrel arrives holding &quot;the soil-salts tables&quot; and announces &quot;Widow Sepp, I've your salts figures done&quot; — and the figures are never handed over. The class disperses, and the scene's last action is Sorrel carrying the figures back indoors, which reads as the errand she came up for failing to happen.<br />
+<strong>Replacement:</strong> either give Sepp her sheet on the way out (one clause at &quot;The class dispersed&quot; — &quot;The class dispersed, Widow Sepp with her sheet&quot;), or end on the object she actually still has: &quot;and went to put the tables away.&quot;</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 6 — the plainest, most direct form.</strong> One sentence changes grammatical subject across an &quot;and&quot; and then buries the new speaker behind two adverbial clauses.<br />
+<strong>Replacement:</strong> &quot;The class dispersed. Peri gathered herself up from the bench. At the gate, when the last of the farmwives was out of earshot, Sorrel said, low, …&quot;</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1 — count the occurrences.</strong> The same count is stated twice four paragraphs apart, the second time as if new. If <strong>3</strong> is cut as recommended, the first instance goes with it; otherwise reduce the second to &quot;The farmwives looked at things that were not Edwin&quot;.</p>
+<hr />
+<p><strong>The device a second round would be about:</strong> the fourth measurement lands as three consecutive uninterrupted speeches — Sepp's famine story, Edwin's famine paragraph, Peri's supply-lines realisation — which is the same shape as the note already on record against ch. 001's list (&quot;the core joke of this interaction … would flow better as a conversation&quot;), moved to a new scene rather than fixed.</p>
+<p><strong>What it would take:</strong> break Peri's realisation across Edwin's answer so the sum is built in the exchange — she gets &quot;Teaching one village doesn't stop a famine somewhere else&quot; out, he answers it with the flattest available fact, and only then does &quot;You taught the teachers&quot; arrive as the thing she wins off his answer instead of the thing she recites at him.</p>
 </div>
 </body></html>

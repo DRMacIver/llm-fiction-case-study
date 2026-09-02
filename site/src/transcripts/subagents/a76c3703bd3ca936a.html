@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are the voice editor for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;, closin…</title><style>
+<html><head><meta charset="utf-8"><title>You are the voice editor for the novel at [redacted], closing round 3…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,51 +7,64 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the voice editor for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;, closin…</h1><div class="subagent-header"><a href="../10c1dd77-c31a-4be9-a7b6-23651a4792b4.html#agent-a76c3703bd3ca936a">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the voice editor for the novel at <span class="redacted">redacted: private</span>, closing round 3 of dialogue voice refinement.<br>
-<br>
-MANDATORY READING (the FILES, not just these names):<br>
-- <span class="redacted">redacted: private</span>/notes/voice-exemplars.md and the exemplar prose it names<br>
-- <span class="redacted">redacted: private</span>/notes/voices.md, <span class="redacted">redacted: private</span>/notes/llm-tells.md, <span class="redacted">redacted: private</span>/notes/premise.md<br>
-- <span class="redacted">redacted: private</span>/notes/dialogue-voices.md  (the working dialogue reference produced by rounds 1-2)<br>
-- <span class="redacted">redacted: private</span>/notes/canon/characters/*.md  (each has a binding "Voice — binding" section; these are now rules you must obey)<br>
-- <span class="redacted">redacted: private</span>/samples/dialogue/*.md  (round-2 exemplars; each carries a "Known defects — do not imitate these" list. Read the defects.)<br>
-Sample real dialogue from <span class="redacted">redacted: private</span>/chapters/*.md.<br>
-Do NOT read <span class="redacted">redacted: private</span>/notes/sealed/.<br>
-<br>
-ROUNDS 1-2 RESULT, so you do not repeat them. Uptake and caring are largely fixed; use the mechanisms in dialogue-voices.md §4 and §5. What is NOT fixed and is what round 3 exists to attack:<br>
- - THE TEST WAS BROKEN. Round-2 blind files ran 81-96% strict speaker alternation, so a judge recovered whole scenes by counting from one anchor. Attribution scores of 47/48 were measuring alternation, not voice. Round 3 is judged on SHUFFLED lines with adjacency destroyed. Assume nothing about a line except its own grammar.<br>
- - SHORT MODE is the biggest hole. Every round-2 scene had a stretch where both speakers went short and the voices vanished entirely — seventeen of thirty-five lines in one case. The character files describe long speeches; most real dialogue is not long speeches. Short mode is now written into each character file and has never been drafted against.<br>
- <span class="redacted">redacted sentence: unpublished prose</span><br>
- - MATTIE is unfixed and measured: ~64 number-bearing tokens per 1000 words against <span class="redacted">redacted: character</span>'s 58. She and <span class="redacted">redacted: character</span> are not separated by number density.<br>
- - SORREL, <span class="redacted">redacted: character</span> and FERRIN are untested after two rounds. Sorrel shares Edwin's balanced sentence and her only separator is who she is addressing, which is the highest-risk claim in canon. Mattie and Ferrin both own the three-fragment report; that collision is flagged, unresolved, and must NOT be resolved casually.<br>
- - EDWIN AT AN EMOTIONAL PEAK gets written cleverer. Two rounds of description failed to stop it, so the rule is now mechanical: at a peak, no word opens two clauses, no two consecutive clauses are the same length, and his last sentence must not be the most quotable thing he says.<br>
- - THE NARRATION WENT INERT to buy the differentiation. Two of five round-2 scenes had no Voice D in them at all — no narratorial opinion, no event-wit, nothing noticed that a character would not notice. A scene that passes every ban by attempting nothing has proved nothing. Your narration must be alive AND obedient. This is the failure mode most likely to get worse in this round; do not let it.<br>
- - PHYSICAL WANT is staged but never voiced: nobody is ever tired, hungry, or cross about it out loud.<br>
-<br>
-Read every scene and critique in <span class="redacted">redacted: private</span> and <span class="redacted">redacted: private</span><br>
-<br>
-Round 3 results (SHUFFLED attribution — adjacency destroyed, so these numbers are real in a way rounds 1-2 were not):<br>
-  peri-mattie: shuffled 54/62, SHORT MODE 31/38, distinctness 6/10, emotion 8/10, caring 8/10, uptake 9/10, narration-alive 6/10, voiceFit 7/10, llm-tells 8, verdict revise<br>
-  edwin-sorrel: shuffled 28/32, SHORT MODE 6/9, distinctness 5/10, emotion 6/10, caring 6/10, uptake 7/10, narration-alive 7/10, voiceFit 7/10, llm-tells 6, verdict revise<br>
-  mattie-ferrin: shuffled 28/32, SHORT MODE 11/14, distinctness 5/10, emotion 8/10, caring 8/10, uptake 9/10, narration-alive 5/10, voiceFit 7/10, llm-tells 8, verdict revise<br>
-  edwin-<span class="redacted">redacted: character</span>-short: shuffled 19/20, SHORT MODE 6/7, distinctness 7/10, emotion 7/10, caring 7/10, uptake 9/10, narration-alive 7/10, voiceFit 6/10, llm-tells 6, verdict revise<br>
-  peri-<span class="redacted">redacted: character</span>: shuffled 32/35, SHORT MODE 10/12, distinctness 6/10, emotion 8/10, caring 8/10, uptake 8/10, narration-alive 7/10, voiceFit 6/10, llm-tells 17, verdict revise<br>
-<br>
-DO THIS:<br>
-1. Revise the "## Voice — binding (Claude) (Working)" sections in <span class="redacted">redacted: private</span>/notes/canon/characters/ against what round 3 actually proved under a fair test. Where round 3 disproved a rule, DELETE it and note that it was disproved. Rules must be obeyable and countable, never adjectives. Pay particular attention to Peri, Mattie, Sorrel, <span class="redacted">redacted: character</span> and Ferrin, who were unfixed or untested. Preserve all pre-existing canon sections.<br>
-2. Update <span class="redacted">redacted: private</span>/notes/dialogue-voices.md: add a SHORT MODE section (the hole this round targeted) giving each character's short-mode tells; correct the contrast table using shuffled scores rather than the inflated round-2 ones; add a note that alternating two-handers cannot be used to test voice, and how to test properly.<br>
-3. If the Mattie/Ferrin three-fragment-report collision now has evidence, present the evidence and a RECOMMENDATION in dialogue-voices.md, clearly marked as awaiting the author's ruling. Do not rule on it yourself.<br>
-4. Add or replace round-3 exemplars in <span class="redacted">redacted: private</span>/samples/dialogue/ ONLY where round 3 beat round 2 on shuffled attribution. Copy verbatim, never cleaned up, each with its "Known defects — do not imitate these" list. Keep the README accurate.<br>
-5. Commit your work to git with a clear message.<br>
-<br>
-Be brutally honest in your return. If the voices are still not distinct, say which and give the author a specific recommendation for what a round 4 should do differently — or say plainly if you think further rounds have stopped paying and the remaining work is authorial judgement rather than iteration.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the voice editor for the novel at [redacted], closing round 3…</h1><div class="subagent-header"><a href="../10c1dd77-c31a-4be9-a7b6-23651a4792b4.html#agent-a76c3703bd3ca936a">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-27</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the voice editor for the novel at <span class="redacted">redacted</span>, closing round 3 of dialogue voice refinement.</p>
+<p>MANDATORY READING (the FILES, not just these names):</p>
+<ul>
+<li><span class="redacted">redacted</span>/notes/voice-exemplars.md and the exemplar prose it names</li>
+<li><span class="redacted">redacted</span>/notes/voices.md, <span class="redacted">redacted</span>/notes/llm-tells.md, <span class="redacted">redacted</span>/notes/premise.md</li>
+<li><span class="redacted">redacted</span>/notes/dialogue-voices.md  (the working dialogue reference produced by rounds 1-2)</li>
+<li><span class="redacted">redacted</span>/notes/canon/characters/*.md  (each has a binding &quot;Voice — binding&quot; section; these are now rules you must obey)</li>
+<li><span class="redacted">redacted</span>/samples/dialogue/<em>.md  (round-2 exemplars; each carries a &quot;Known defects — do not imitate these&quot; list. Read the defects.)<br />
+Sample real dialogue from <span class="redacted">redacted</span>/chapters/</em>.md.<br />
+Do NOT read <span class="redacted">redacted</span>/notes/sealed/.</li>
+</ul>
+<p>ROUNDS 1-2 RESULT, so you do not repeat them. Uptake and caring are largely fixed; use the mechanisms in dialogue-voices.md §4 and §5. What is NOT fixed and is what round 3 exists to attack:</p>
+<ul>
+<li>THE TEST WAS BROKEN. Round-2 blind files ran 81-96% strict speaker alternation, so a judge recovered whole scenes by counting from one anchor. Attribution scores of 47/48 were measuring alternation, not voice. Round 3 is judged on SHUFFLED lines with adjacency destroyed. Assume nothing about a line except its own grammar.</li>
+<li>SHORT MODE is the biggest hole. Every round-2 scene had a stretch where both speakers went short and the voices vanished entirely — seventeen of thirty-five lines in one case. The character files describe long speeches; most real dialogue is not long speeches. Short mode is now written into each character file and has never been drafted against.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>MATTIE is unfixed and measured: ~64 number-bearing tokens per 1000 words against <span class="redacted">redacted</span>'s 58. She and <span class="redacted">redacted</span> are not separated by number density.</li>
+<li>SORREL, <span class="redacted">redacted</span> and FERRIN are untested after two rounds. Sorrel shares Edwin's balanced sentence and her only separator is who she is addressing, which is the highest-risk claim in canon. Mattie and Ferrin both own the three-fragment report; that collision is flagged, unresolved, and must NOT be resolved casually.</li>
+<li>EDWIN AT AN EMOTIONAL PEAK gets written cleverer. Two rounds of description failed to stop it, so the rule is now mechanical: at a peak, no word opens two clauses, no two consecutive clauses are the same length, and his last sentence must not be the most quotable thing he says.</li>
+<li>THE NARRATION WENT INERT to buy the differentiation. Two of five round-2 scenes had no Voice D in them at all — no narratorial opinion, no event-wit, nothing noticed that a character would not notice. A scene that passes every ban by attempting nothing has proved nothing. Your narration must be alive AND obedient. This is the failure mode most likely to get worse in this round; do not let it.</li>
+<li>PHYSICAL WANT is staged but never voiced: nobody is ever tired, hungry, or cross about it out loud.</li>
+</ul>
+<p>Read every scene and critique in <span class="redacted">redacted: private</span> and <span class="redacted">redacted: private</span></p>
+<p>Round 3 results (SHUFFLED attribution — adjacency destroyed, so these numbers are real in a way rounds 1-2 were not):<br />
+peri-mattie: shuffled 54/62, SHORT MODE 31/38, distinctness 6/10, emotion 8/10, caring 8/10, uptake 9/10, narration-alive 6/10, voiceFit 7/10, llm-tells 8, verdict revise<br />
+edwin-sorrel: shuffled 28/32, SHORT MODE 6/9, distinctness 5/10, emotion 6/10, caring 6/10, uptake 7/10, narration-alive 7/10, voiceFit 7/10, llm-tells 6, verdict revise<br />
+mattie-ferrin: shuffled 28/32, SHORT MODE 11/14, distinctness 5/10, emotion 8/10, caring 8/10, uptake 9/10, narration-alive 5/10, voiceFit 7/10, llm-tells 8, verdict revise<br />
+edwin-<span class="redacted">redacted</span>-short: shuffled 19/20, SHORT MODE 6/7, distinctness 7/10, emotion 7/10, caring 7/10, uptake 9/10, narration-alive 7/10, voiceFit 6/10, llm-tells 6, verdict revise<br />
+peri-<span class="redacted">redacted</span>: shuffled 32/35, SHORT MODE 10/12, distinctness 6/10, emotion 8/10, caring 8/10, uptake 8/10, narration-alive 7/10, voiceFit 6/10, llm-tells 17, verdict revise</p>
+<p>DO THIS:</p>
+<ol>
+<li>Revise the &quot;## Voice — binding (Claude) (Working)&quot; sections in <span class="redacted">redacted</span>/notes/canon/characters/ against what round 3 actually proved under a fair test. Where round 3 disproved a rule, DELETE it and note that it was disproved. Rules must be obeyable and countable, never adjectives. Pay particular attention to Peri, Mattie, Sorrel, <span class="redacted">redacted</span> and Ferrin, who were unfixed or untested. Preserve all pre-existing canon sections.</li>
+<li>Update <span class="redacted">redacted</span>/notes/dialogue-voices.md: add a SHORT MODE section (the hole this round targeted) giving each character's short-mode tells; correct the contrast table using shuffled scores rather than the inflated round-2 ones; add a note that alternating two-handers cannot be used to test voice, and how to test properly.</li>
+<li>If the Mattie/Ferrin three-fragment-report collision now has evidence, present the evidence and a RECOMMENDATION in dialogue-voices.md, clearly marked as awaiting the author's ruling. Do not rule on it yourself.</li>
+<li>Add or replace round-3 exemplars in <span class="redacted">redacted</span>/samples/dialogue/ ONLY where round 3 beat round 2 on shuffled attribution. Copy verbatim, never cleaned up, each with its &quot;Known defects — do not imitate these&quot; list. Keep the README accurate.</li>
+<li>Commit your work to git with a clear message.</li>
+</ol>
+<p>Be brutally honest in your return. If the voices are still not distinct, say which and give the author a specific recommendation for what a round 4 should do differently — or say plainly if you think further rounds have stopped paying and the remaining work is authorial judgement rather than iteration.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -59,33 +72,33 @@ Be brutally honest in your return. If the voices are still not distinct, say whi
 </div>
 
 <details><summary>66 tool calls</summary>
-<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span>/notes/ <span class="redacted">redacted: private</span>/notes/canon/characters/ ⟦redacted:… (List key directories)</p>
-<p>✅ 82 lines, 5095 chars — <span class="redacted">redacted: private</span>/chapters/: / total 1288 / drwxr-xr-x@ 33 drmaciver  staff   1056 26 Aug 19:38 .</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted</span>/notes/ <span class="redacted">redacted</span>/notes/canon/characters/ <span class="redacted">redacted</span>/samples/dialogue/… (List key directories)</p>
+<p>✅ 82 lines, 5095 chars — <span class="redacted">redacted</span>/chapters/: / total 1288 / drwxr-xr-x@ 33 drmaciver  staff   1056 26 Aug 19:38 .</p>
 <p>🔧 Bash: ls -la <span class="redacted">redacted: private</span> <span class="redacted">redacted: private</span> (List scratchpad dialogue dirs)</p>
 <p>✅ 33 lines, 2206 chars — <span class="redacted">redacted: private</span> / total 80 / drwxr-xr-x@  7 drmaciver  wheel    224 27 Aug 13:20 .</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/voice-exemplars.md (Read voice exemplars)</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/voice-exemplars.md (Read voice exemplars)</p>
 <p>✅ 52 lines, 2770 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/premise.md (Read premise)</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/premise.md (Read premise)</p>
 <p>✅ 184 lines, 10833 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/voices.md (Read voices.md)</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/voices.md (Read voices.md)</p>
 <p>✅ 44 lines, 2191 chars</p>
 <p>🔧 Read <span class="redacted">redacted: private</span></p>
 <p>✅ 516 lines, 32277 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/dialogue-voices.md (Read dialogue-voices.md)</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/dialogue-voices.md (Read dialogue-voices.md)</p>
 <p>✅ 417 lines, 22554 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; for f in edwin.md peri.md ⟦redacted: cha… (List section headers of character files)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; for f in edwin.md peri.md <span class="redacted">redacted</span>.md mattie-or… (List section headers of character files)</p>
 <p>✅ 41 lines, 1178 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '376,569p' edwin.md (Read Edwin voice binding)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '376,569p' edwin.md (Read Edwin voice binding)</p>
 <p>✅ 194 lines, 11997 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '312,481p' peri.md (Read Peri voice binding)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '312,481p' peri.md (Read Peri voice binding)</p>
 <p>✅ 170 lines, 10424 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '193,391p' <span class="redacted">redacted: character</span>.… (Read <span class="redacted">redacted: character</span> voice binding)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '193,391p' <span class="redacted">redacted</span>.md (Read <span class="redacted">redacted</span> voice binding)</p>
 <p>✅ 199 lines, 12443 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '118,273p' mattie-ordish.md (Read Mattie voice binding)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '118,273p' mattie-ordish.md (Read Mattie voice binding)</p>
 <p>✅ 156 lines, 9030 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '165,280p' sorrel.md (Read Sorrel voice binding)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '165,280p' sorrel.md (Read Sorrel voice binding)</p>
 <p>✅ 116 lines, 6641 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; echo "=== <span class="redacted">redacted: character</span> ===" &amp;&amp;… (Read <span class="redacted">redacted: character</span> and Ferrin voice bindings)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; echo "=== <span class="redacted">redacted</span> ===" &amp;&amp; sed -n '49,149p' <span class="redacted">redacted</span>… (Read <span class="redacted">redacted</span> and Ferrin voice bindings)</p>
 <p>✅ 220 lines, 11885 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat peri-mattie.md (Read peri-mattie scene)</p>
 <p>✅ 180 lines, 5396 chars</p>
@@ -93,9 +106,9 @@ Be brutally honest in your return. If the voices are still not distinct, say whi
 <p>✅ 165 lines, 9223 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat mattie-ferrin.md &amp;&amp; echo "#### SHUFFLED ####" &amp;&amp; cat mattie… (Read mattie-ferrin scene and shuffle)</p>
 <p>✅ 246 lines, 8808 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat edwin-<span class="redacted">redacted: character</span>-short.md &amp;&amp; echo "#### SHUFFLED… (Read edwin-<span class="redacted">redacted: character</span>-short scene)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat edwin-<span class="redacted">redacted</span>-short.md &amp;&amp; echo "#### SHUFFLED ####" &amp;&amp; c… (Read edwin-<span class="redacted">redacted</span>-short scene)</p>
 <p>✅ 166 lines, 7496 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat peri-<span class="redacted">redacted: character</span>.md (Read peri-<span class="redacted">redacted: character</span> scene)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat peri-<span class="redacted">redacted</span>.md (Read peri-<span class="redacted">redacted</span> scene)</p>
 <p>✅ 107 lines, 6096 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat peri-mattie-critique.md (Read peri-mattie critique)</p>
 <p>✅ 521 lines, 27473 chars</p>
@@ -103,27 +116,27 @@ Be brutally honest in your return. If the voices are still not distinct, say whi
 <p>✅ 407 lines, 23397 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat mattie-ferrin-critique.md (Read mattie-ferrin critique)</p>
 <p>✅ 530 lines, 29170 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat edwin-<span class="redacted">redacted: character</span>-short-critique.md (Read edwin-<span class="redacted">redacted: character</span>-short critique)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat edwin-<span class="redacted">redacted</span>-short-critique.md (Read edwin-<span class="redacted">redacted</span>-short critique)</p>
 <p>✅ 47 lines, 2236 chars</p>
 <p>🔧 Read <span class="redacted">redacted: private</span></p>
 <p>✅ 673 lines, 39044 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat peri-<span class="redacted">redacted: character</span>-critique.md (Read peri-<span class="redacted">redacted: character</span> critique)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat peri-<span class="redacted">redacted</span>-critique.md (Read peri-<span class="redacted">redacted</span> critique)</p>
 <p>✅ 425 lines, 23889 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat round1-findings.md (Read round1 findings)</p>
 <p>✅ 357 lines, 19722 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/dialogue &amp;&amp; cat README.md &amp;&amp; echo "=======" &amp;&amp; for f in ed… (Read dialogue samples README and defect lists)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/dialogue &amp;&amp; cat README.md &amp;&amp; echo "=======" &amp;&amp; for f in edwin-<span class="redacted">redacted</span>… (Read dialogue samples README and defect lists)</p>
 <p>✅ 40 lines, 2198 chars</p>
 <p>🔧 Read <span class="redacted">redacted: private</span></p>
 <p>✅ 799 lines, 45468 chars</p>
 <p>🔧 Bash: sed -n '1,120p' notes/llm-tells.md (Read llm-tells first part)</p>
 <p>✅ 120 lines, 7432 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '1,80p' 019-a-question-of-rosters.md (Sample chapter 019 dialogue)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; sed -n '1,80p' 019-a-question-of-rosters.md (Sample chapter 019 dialogue)</p>
 <p>✅ 79 lines, 8086 chars</p>
-<p>🔧 Bash: grep -rn "Write both" chapters/ notes/canon/ | head -20; echo "---025 ⟦redacted: characte… (Check Write both across canon)</p>
+<p>🔧 Bash: grep -rn "Write both" chapters/ notes/canon/ | head -20; echo "---025 <span class="redacted">redacted</span> both---"… (Check Write both across canon)</p>
 <p>✅ 8 lines, 1629 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; cat judge-attributions.txt | head -60 (Check judge attributions file)</p>
 <p>✅ 60 lines, 2669 chars</p>
-<p>🔧 Bash: sed -n '1,60p' <span class="redacted">redacted: private</span>/notes/author.md (Read author persona notes)</p>
+<p>🔧 Bash: sed -n '1,60p' <span class="redacted">redacted</span>/notes/author.md (Read author persona notes)</p>
 <p>✅ 60 lines, 3201 chars</p>
 </details>
 
@@ -141,21 +154,21 @@ Be brutally honest in your return. If the voices are still not distinct, say whi
 <details><summary>22 tool calls</summary>
 <p>🔧 Edit notes/canon/characters/peri.md</p>
 <p>✅ 5 lines, 423 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '349,360p' peri.md | cat -A | sed… (Inspect exact bytes around Peri rule 1)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '349,360p' peri.md | cat -A | sed -n '1,12… (Inspect exact bytes around Peri rule 1)</p>
 <p>✅ 2 lines, 58 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '348,356p' peri.md (Show exact lines around Peri rule 1)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '348,356p' peri.md (Show exact lines around Peri rule 1)</p>
 <p>✅ 9 lines, 571 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '356,368p' peri.md (Show following lines)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '356,368p' peri.md (Show following lines)</p>
 <p>✅ 13 lines, 882 chars</p>
 <p>🔧 Edit notes/canon/characters/peri.md</p>
 <p>✅ 1 lines, 171 chars</p>
 <p>🔧 Edit notes/canon/characters/peri.md</p>
 <p>✅ 2 lines, 153 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" peri.md | sed -n '425,470p' (Show Peri rules 6a-6c with line numbers)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" peri.md | sed -n '425,470p' (Show Peri rules 6a-6c with line numbers)</p>
 <p>✅ 46 lines, 3145 chars</p>
 <p>🔧 Edit notes/canon/characters/peri.md</p>
 <p>✅ 1 lines, 171 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" peri.md | sed -n '478,530p' (Show Peri 6c through 9)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" peri.md | sed -n '478,530p' (Show Peri 6c through 9)</p>
 <p>✅ 53 lines, 3381 chars</p>
 <p>🔧 Edit notes/canon/characters/peri.md</p>
 <p>✅ 1 lines, 171 chars</p>
@@ -172,11 +185,11 @@ Be brutally honest in your return. If the voices are still not distinct, say whi
 <p>✅ 1 lines, 171 chars</p>
 <p>🔧 Edit notes/canon/characters/mattie-ordish.md</p>
 <p>✅ 1 lines, 180 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" mattie-ordish.md | sed -n '21… (Show Mattie rule 2 and 7 area)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" mattie-ordish.md | sed -n '210,240p' (Show Mattie rule 2 and 7 area)</p>
 <p>✅ 31 lines, 1940 chars</p>
 <p>🔧 Edit notes/canon/characters/mattie-ordish.md</p>
 <p>✅ 1 lines, 180 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" mattie-ordish.md | sed -n '25… (Show Mattie rules 6-10)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" mattie-ordish.md | sed -n '255,330p' (Show Mattie rules 6-10)</p>
 <p>✅ 75 lines, 4442 chars</p>
 <p>🔧 Edit notes/canon/characters/mattie-ordish.md</p>
 <p>✅ 1 lines, 180 chars</p>
@@ -186,15 +199,15 @@ Be brutally honest in your return. If the voices are still not distinct, say whi
 <p>✅ 1 lines, 180 chars</p>
 <p>🔧 Edit notes/canon/characters/sorrel.md</p>
 <p>✅ 6 lines, 388 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" sorrel.md | sed -n '179,200p' (Show Sorrel intro exactly)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" sorrel.md | sed -n '179,200p' (Show Sorrel intro exactly)</p>
 <p>✅ 22 lines, 1315 chars</p>
 <p>🔧 Edit notes/canon/characters/sorrel.md</p>
 <p>✅ 1 lines, 173 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" sorrel.md | sed -n '245,300p' (Show Sorrel rules 6-8)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" sorrel.md | sed -n '245,300p' (Show Sorrel rules 6-8)</p>
 <p>✅ 56 lines, 3396 chars</p>
 <p>🔧 Edit notes/canon/characters/sorrel.md</p>
 <p>✅ 1 lines, 173 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" sorrel.md | sed -n '330,365p' (Show Sorrel round-2 tail)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" sorrel.md | sed -n '330,365p' (Show Sorrel round-2 tail)</p>
 <p>✅ 36 lines, 2328 chars</p>
 <p>🔧 Edit notes/canon/characters/sorrel.md</p>
 <p>✅ 1 lines, 173 chars</p>
@@ -202,19 +215,19 @@ Be brutally honest in your return. If the voices are still not distinct, say whi
 <p>✅ 1 lines, 173 chars</p>
 <p>🔧 Edit notes/canon/characters/edwin.md</p>
 <p>✅ 4 lines, 250 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" edwin.md | sed -n '405,418p' (Show Edwin round2 block end)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" edwin.md | sed -n '405,418p' (Show Edwin round2 block end)</p>
 <p>✅ 14 lines, 953 chars</p>
 <p>🔧 Edit notes/canon/characters/edwin.md</p>
 <p>✅ 1 lines, 172 chars</p>
 <p>🔧 Edit notes/canon/characters/edwin.md</p>
 <p>✅ 1 lines, 172 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" edwin.md | sed -n '470,500p' (Show Edwin rule 4 area)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" edwin.md | sed -n '470,500p' (Show Edwin rule 4 area)</p>
 <p>✅ 31 lines, 2084 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" edwin.md | sed -n '500,520p' (Show rest of Edwin rule 4)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" edwin.md | sed -n '500,520p' (Show rest of Edwin rule 4)</p>
 <p>✅ 21 lines, 1360 chars</p>
 <p>🔧 Edit notes/canon/characters/edwin.md</p>
 <p>✅ 1 lines, 172 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" edwin.md | sed -n '538,575p' (Show Edwin rule 6c)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" edwin.md | sed -n '538,575p' (Show Edwin rule 6c)</p>
 <p>✅ 38 lines, 2566 chars</p>
 <p>🔧 Edit notes/canon/characters/edwin.md</p>
 <p>✅ 1 lines, 172 chars</p>
@@ -225,52 +238,52 @@ Be brutally honest in your return. If the voices are still not distinct, say whi
 </div>
 
 <details><summary>30 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" edwin.md | sed -n '618,640p' (Show Edwin rule 10 end)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" edwin.md | sed -n '618,640p' (Show Edwin rule 10 end)</p>
 <p>✅ 23 lines, 1447 chars</p>
 <p>🔧 Edit notes/canon/characters/edwin.md</p>
 <p>✅ 1 lines, 172 chars</p>
-<p>🔧 Edit notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>🔧 Edit notes/canon/characters/<span class="redacted">redacted</span>.md</p>
 <p>✅ 1 lines, 172 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" <span class="redacted">redacted: character</span>.md | se… (Show <span class="redacted">redacted: character</span> rule 9-10)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" <span class="redacted">redacted</span>.md | sed -n '385,420p' (Show <span class="redacted">redacted</span> rule 9-10)</p>
 <p>✅ 36 lines, 2322 chars</p>
-<p>🔧 Edit notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>🔧 Edit notes/canon/characters/<span class="redacted">redacted</span>.md</p>
 <p>✅ 1 lines, 172 chars</p>
-<p>🔧 Edit notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>🔧 Edit notes/canon/characters/<span class="redacted">redacted</span>.md</p>
 <p>✅ 1 lines, 172 chars</p>
-<p>🔧 Edit notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>🔧 Edit notes/canon/characters/<span class="redacted">redacted</span>.md</p>
 <p>✅ 1 lines, 174 chars</p>
 <p>🔧 Edit notes/canon/characters/ferrin.md</p>
 <p>✅ 1 lines, 173 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "" ferrin.md | sed -n '160,190p' (Show Ferrin tail)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "" ferrin.md | sed -n '160,190p' (Show Ferrin tail)</p>
 <p>✅ 31 lines, 1753 chars</p>
 <p>🔧 Edit notes/canon/characters/ferrin.md</p>
 <p>✅ 1 lines, 173 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; echo "== edwin-<span class="redacted">redacted: character</span>-short =="; grep -n "^---$\… (Find structural markers in r3 scenes)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; echo "== edwin-<span class="redacted">redacted</span>-short =="; grep -n "^---$\|^\*Setting… (Find structural markers in r3 scenes)</p>
 <p>✅ 11 lines, 1342 chars</p>
-<p>🔧 Bash: set -e SRC=<span class="redacted">redacted: private</span> DST=<span class="redacted">redacted: private</span>/samples/dialogue sed -n '8p' $S… (Extract scene bodies and settings)</p>
+<p>🔧 Bash: set -e SRC=<span class="redacted">redacted: private</span> DST=<span class="redacted">redacted</span>/samples/dialogue sed -n '8p' $S… (Extract scene bodies and settings)</p>
 <p>✅ 12 lines, 939 chars</p>
 <p>🔧 Write /tmp/eh-header.md</p>
 <p>✅ 1 lines, 113 chars</p>
-<p>🔧 Bash: set -e DST=<span class="redacted">redacted: private</span>/samples/dialogue { cat /tmp/eh-header.md; cat /tmp/eh-sett… (Assemble edwin-<span class="redacted">redacted: character</span>-short exemplar)</p>
+<p>🔧 Bash: set -e DST=<span class="redacted">redacted</span>/samples/dialogue { cat /tmp/eh-header.md; cat /tmp/eh-setting.txt;… (Assemble edwin-<span class="redacted">redacted</span>-short exemplar)</p>
 <p>✅ 6 lines, 561 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/dialogue &amp;&amp; diff &lt;(sed -n '/^The dark ground ran ninety ya… (Verify body copied verbatim)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/dialogue &amp;&amp; diff &lt;(sed -n '/^The dark ground ran ninety yards/,$p'… (Verify body copied verbatim)</p>
 <p>✅ 1 lines, 16 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Now the Peri/<span class="redacted">redacted: character</span> exemplar.</p>
+<p>Now the Peri/<span class="redacted">redacted</span> exemplar.</p>
 </div>
 
 <details><summary>10 tool calls</summary>
 <p>🔧 Write /tmp/pd-header.md</p>
 <p>✅ 1 lines, 113 chars</p>
-<p>🔧 Bash: set -e DST=<span class="redacted">redacted: private</span>/samples/dialogue SRC=<span class="redacted">redacted: private</span> { cat /tmp/pd-… (Assemble peri-<span class="redacted">redacted: character</span> exemplar)</p>
+<p>🔧 Bash: set -e DST=<span class="redacted">redacted</span>/samples/dialogue SRC=<span class="redacted">redacted: private</span> { cat /tmp/pd-… (Assemble peri-<span class="redacted">redacted</span> exemplar)</p>
 <p>✅ 1 lines, 16 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/dialogue &amp;&amp; grep -n "Setting" peri-<span class="redacted">redacted: character</span>.m… (Check setting line formatting)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/dialogue &amp;&amp; grep -n "Setting" peri-<span class="redacted">redacted</span>.md | head -3; echo "-… (Check setting line formatting)</p>
 <p>✅ 9 lines, 1468 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/dialogue &amp;&amp; python3 - &lt;&lt;'PYEOF' p = 'peri-⟦redacted: chara… (Fix setting line formatting)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/dialogue &amp;&amp; python3 - &lt;&lt;'PYEOF' p = 'peri-<span class="redacted">redacted</span>.md' lines = op… (Fix setting line formatting)</p>
 <p>✅ 10 lines, 254 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/dialogue &amp;&amp; python3 - &lt;&lt;'PYEOF' p='peri-⟦redacted: charact… (Tidy blank lines and re-verify)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/dialogue &amp;&amp; python3 - &lt;&lt;'PYEOF' p='peri-<span class="redacted">redacted</span>.md' s=open(p).re… (Tidy blank lines and re-verify)</p>
 <p>✅ 10 lines, 205 chars</p>
 </details>
 
@@ -285,7 +298,7 @@ Be brutally honest in your return. If the voices are still not distinct, say whi
 <p>✅ 1 lines, 165 chars</p>
 <p>🔧 Edit notes/voices.md</p>
 <p>✅ 1 lines, 156 chars</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.md notes/canon/characters/… (Verify structure of edited files)</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.md notes/canon/characters/… (Verify structure of edited files)</p>
 <p>✅ 62 lines, 2676 chars</p>
 <p>🔧 Bash: python3 - &lt;&lt;'PYEOF' p='notes/dialogue-voices.md' s=open(p).read() s=s.replace("## 7. The… (Fix wrapped headings)</p>
 <p>✅ 9 lines, 412 chars</p>
@@ -296,17 +309,17 @@ Be brutally honest in your return. If the voices are still not distinct, say whi
 <p>🔧 Bash: sed -n '492,530p' notes/dialogue-voices.md &amp;&amp; echo "......" &amp;&amp; tail -20 notes/dialogue-vo… (Spot check section 7 and file tail)</p>
 <p>✅ 60 lines, 3231 chars</p>
 <p>🔧 Bash: git status --short (Check git status)</p>
-<p>✅ 15 lines, 465 chars —  M book-1.epub /  M notes/canon/characters/<span class="redacted">redacted: character</span>.md /  M notes/canon/characters/edwin.md</p>
-<p>🔧 Bash: git add notes/canon/characters/<span class="redacted">redacted: character</span>⟦redacted sentence: unpublished prose… (Stage round-3 files)</p>
-<p>✅ 15 lines, 465 chars —  M book-1.epub / M  notes/canon/characters/<span class="redacted">redacted: character</span>.md / M  notes/canon/characters/edwin.md</p>
+<p>✅ 15 lines, 465 chars —  M book-1.epub /  M notes/canon/characters/<span class="redacted">redacted</span>.md /  M notes/canon/characters/edwin.md</p>
+<p>🔧 Bash: git add notes/canon/characters/<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>… (Stage round-3 files)</p>
+<p>✅ 15 lines, 465 chars —  M book-1.epub / M  notes/canon/characters/<span class="redacted">redacted</span>.md / M  notes/canon/characters/edwin.md</p>
 <p>🔧 Bash: git commit -F - &lt;&lt;'MSGEOF' Dialogue voices: round 3 closed, on a test that actually measu… (Commit round-3 voice work)</p>
-<p>✅ 4 lines, 253 chars — [main 09df726] Dialogue voices: round 3 closed, on a test that actually measures voice /  13 files changed, 1769 insertions(+), 361 deletions(-) /  create mode 100644 samples/dialogue/edwin-<span class="redacted">redacted: character</span>-short.md</p>
+<p>✅ 4 lines, 253 chars — [main 09df726] Dialogue voices: round 3 closed, on a test that actually measures voice /  13 files changed, 1769 insertions(+), 361 deletions(-) /  create mode 100644 samples/dialogue/edwin-<span class="redacted">redacted</span>-short.md</p>
 </details>
 
 <div class="assistant-prose">
 <p>Committed. Here is my honest reading of where round 3 leaves the book.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"filesModified": ["<span class="redacted">redacted</span>/notes/dialogue-voices.md", "…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

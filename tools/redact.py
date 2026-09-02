@@ -3,9 +3,9 @@
 Reads build/parsed/*.json (and build/parsed/subagents/*.json), applies
 case-insensitive whole-word matching against tools/spoilers.json's terms
 (and their variants), replacing each match with a category-only marker
-``⟦redacted: <category>⟦``. Topic regexes (hard, structural spoilers such
+``⟦redacted⟧`` (no category or reason shown: the reason itself would be a spoiler). Topic regexes (hard, structural spoilers such
 as Edwin's death or the plague) redact the whole sentence containing the
-match instead, as ``⟦redacted sentence: <topic>⟦``.
+match instead, as ``⟦redacted sentence⟧``. Only "private" and "unpublished prose" are labelled.
 
 Scene numbers above 40 mentioned as "scene 57" / "ch 57" / in filenames are
 left visible but get an ``⟦unpublished⟦`` tag appended, as do paths under
@@ -92,12 +92,26 @@ def _word_pattern(term: str) -> re.Pattern:
     terms still match across incidental whitespace differences, and uses
     word boundaries at both ends (falling back to lookaround for terms
     that start/end with a non-word character, e.g. "[Wayfaring]").
+
+    A term that looks like an absolute filesystem path (starts with "/")
+    gets no left-boundary check at all: it's already a long, distinctive
+    literal, so a boundary there buys no protection against false
+    positives, but it does cause false *negatives* -- text that survived
+    an inner layer of JSON-escaping can carry a literal two-character
+    "\\n" (backslash then the letter n) immediately before the path
+    instead of a real newline, and the trailing "n" is a word character
+    that `(?<!\\w)` then wrongly treats as "mid-word", so the path slips
+    through unredacted right next to other, correctly-redacted copies of
+    the same literal path a few characters later in the same text.
     """
     escaped = re.escape(term.strip())
     escaped = escaped.replace(r"\ ", r"\s+")
     starts_word = term[0:1].isalnum()
     ends_word = term[-1:].isalnum() if term else False
-    prefix = r"\b" if starts_word else r"(?<!\w)"
+    if term.startswith("/"):
+        prefix = ""
+    else:
+        prefix = r"\b" if starts_word else r"(?<!\w)"
     suffix = r"\b" if ends_word else r"(?!\w)"
     return re.compile(prefix + escaped + suffix, re.IGNORECASE)
 
@@ -249,7 +263,7 @@ def _redact_terms(text: str, spoilers: Spoilers, counts: RedactionCounts) -> str
             def repl(m: re.Match, rule=rule) -> str:
                 counts.add_category(rule.category)
                 counts.redacted_chars += len(m.group(0))
-                return f"{CHAR_MARK}redacted: {rule.category}{CHAR_MARK_CLOSE}"
+                return f"{CHAR_MARK}redacted{CHAR_MARK_CLOSE}"
 
             text = pattern.sub(repl, text)
     return text
@@ -342,12 +356,47 @@ def _redact_topic_sentences(text: str, spoilers: Spoilers, counts: RedactionCoun
         if matched_topic and sentence.strip():
             counts.add_category(f"topic:{matched_topic}")
             counts.redacted_chars += len(sentence)
-            out.append(f"{CHAR_MARK}redacted sentence: {matched_topic}{CHAR_MARK_CLOSE}")
+            out.append(f"{CHAR_MARK}redacted sentence{CHAR_MARK_CLOSE}")
         else:
             out.append(sentence)
         last_end = end
     out.append(text[last_end:])
     return "".join(out)
+
+
+_BOLD_TOKEN_RE = re.compile(r"\*\*")
+_BACKTICK_RUN_RE = re.compile(r"`+")
+
+
+def _drop_last_match(text: str, matches: list[re.Match]) -> str:
+    last = matches[-1]
+    return text[: last.start()] + text[last.end() :]
+
+
+def _strip_unbalanced_markdown_tokens(text: str) -> str:
+    """A `**bold**` or `` `code` `` span can lose one of its two delimiters
+    when the matching half fell inside a sentence/term that got swapped for
+    a ``⟦redacted...⟧`` marker by one of the passes above, leaving a single
+    stray ``**`` or backtick that renders as literal punctuation instead of
+    real emphasis/code formatting. Deterministic best-effort cleanup, run
+    outside already-inserted markers: if ``**`` appears an odd number of
+    times, or a lone backtick (never a ```` ``` ````-style fence) does, the
+    last stray one is dropped so the page never shows unmatched markdown
+    syntax. Only ever removes punctuation, never redacted content."""
+
+    def _drop_bold(s: str) -> str:
+        matches = list(_BOLD_TOKEN_RE.finditer(s))
+        return _drop_last_match(s, matches) if len(matches) % 2 else s
+
+    def _drop_backtick(s: str) -> str:
+        # Only lone backticks are inline-code delimiters; runs of 3+ are a
+        # fenced-code-block marker and are left alone entirely.
+        matches = [m for m in _BACKTICK_RUN_RE.finditer(s) if len(m.group(0)) == 1]
+        return _drop_last_match(s, matches) if len(matches) % 2 else s
+
+    text = _apply_outside_markers(text, _drop_bold)
+    text = _apply_outside_markers(text, _drop_backtick)
+    return text
 
 
 def redact_text(
@@ -373,6 +422,7 @@ def redact_text(
     text = _apply_outside_markers(
         text, lambda t: _redact_unpublished_prose_sentences(t, prose_index, counts)
     )
+    text = _strip_unbalanced_markdown_tokens(text)
     return text
 
 
@@ -382,7 +432,8 @@ TEXT_BLOCK_FIELDS = {
     "tool_use": ["command", "description", "prompt", "file", "url", "query", "input",
                  "workflow_name", "workflow_description"],
     "tool_result": ["error"],
-    "command": ["name"],
+    "command": ["name", "output"],
+    "system_note": ["summary"],
 }
 
 

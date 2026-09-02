@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are checking the revised Book 1 rewrite plans for the novel at ⟦r…</title><style>
+<html><head><meta charset="utf-8"><title>You are checking the revised Book 1 rewrite plans for the novel at [redacted]…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,28 +7,39 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are checking the revised Book 1 rewrite plans for the novel at ⟦r…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a63b02b79c30fda7f">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are checking the revised Book 1 rewrite plans for the novel at <span class="redacted">redacted: private</span> before drafting starts.<br>
-<br>
-**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
-- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
-- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
-- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
-<br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
-<br>
-**Fix what is mechanical** (a day count, a name, a contradiction with one obvious resolution) directly, logging each in the owning file's Revisions. **Report what is a judgement call** in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md`. Append your verdict to `PLAN-CHECK.md`. Commit.<br>
-<br>
-Your final message: fixed count, flagged count, and whether anything blocks drafting.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are checking the revised Book 1 rewrite plans for the novel at [redacted]…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a63b02b79c30fda7f">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are checking the revised Book 1 rewrite plans for the novel at <span class="redacted">redacted</span> before drafting starts.</p>
+<p><strong>Standing rules for every agent in this run</strong> (from <code>CLAUDE.md</code>; read it first and obey it):</p>
+<ul>
+<li>Never state the content of anything in <code>notes/sealed/</code> outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe <em>shape</em> (counts, which constraints are satisfied, what conflicts) and never content. <code>plans/</code> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).</li>
+<li>`notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Every file you write, you write to disk immediately — a later failure must lose nothing.</li>
+<li>When you finish, <code>git add</code> the files you touched and commit with a short message. Do not commit <code>comments/</code> or anything outside the project.</li>
+</ul>
+<p><span class="redacted">redacted sentence</span> <span class="redacted">redacted sentence</span></p>
+<p><strong>Fix what is mechanical</strong> (a day count, a name, a contradiction with one obvious resolution) directly, logging each in the owning file's Revisions. <strong>Report what is a judgement call</strong> in <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md<code>. Append your verdict to </code>PLAN-CHECK.md. Commit.</p>
+<p>Your final message: fixed count, flagged count, and whether anything blocks drafting.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -36,95 +47,95 @@ Your final message: fixed count, flagged count, and whether anything blocks draf
 </div>
 
 <details><summary>90 tool calls</summary>
-<p>🔧 Bash: ls &amp;&amp; echo "---" &amp;&amp; ls plans/book-01 <span class="redacted">unpublished</span> plans/book-02 <span class="redacted">unpublished</span> rewrite/bo…</p>
+<p>🔧 Bash: ls &amp;&amp; echo "---" &amp;&amp; ls plans/book-01 <span class="unpub-tag">unpublished</span> plans/book-02 <span class="unpub-tag">unpublished</span> rewrite/bo…</p>
 <p>🔧 Bash: cat .claude/skills/consistency-check/SKILL.md</p>
 <p>✅ 92 lines, 4832 chars</p>
 <p>✅ 114 lines, 1769 chars</p>
-<p>🔧 Bash: wc -l plans/book-01/overview.md <span class="redacted">unpublished</span> plans/book-01/arc-0*.md <span class="redacted">unpublished</span> plans…</p>
-<p>✅ 44 lines, 1673 chars —      575 plans/book-01/overview.md <span class="redacted">unpublished</span> / <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> /      529 plans/book-01/arc-01.md <span class="redacted">unpublished</span></p>
-<p>🔧 Bash: cat plans/book-01/PLAN-CHECK.md <span class="redacted">unpublished</span> &amp;&amp; echo "=====FLAGS" &amp;&amp; cat rewrite/book-01…</p>
+<p>🔧 Bash: wc -l plans/book-01/overview.md <span class="unpub-tag">unpublished</span> plans/book-01/arc-0*.md <span class="unpub-tag">unpublished</span> plans…</p>
+<p>✅ 44 lines, 1673 chars —      575 plans/book-01/overview.md <span class="unpub-tag">unpublished</span> / <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> /      529 plans/book-01/arc-01.md <span class="unpub-tag">unpublished</span></p>
+<p>🔧 Bash: cat plans/book-01/PLAN-CHECK.md <span class="unpub-tag">unpublished</span> &amp;&amp; echo "=====FLAGS" &amp;&amp; cat rewrite/book-01…</p>
 <p>✅ 401 lines, 29777 chars</p>
-<p>🔧 Bash: sed -n '1,80p' plans/book-01/overview.md <span class="redacted">unpublished</span></p>
-<p>🔧 Bash: grep -n "level" plans/book-01/overview.md <span class="redacted">unpublished</span> | head -60</p>
+<p>🔧 Bash: sed -n '1,80p' plans/book-01/overview.md <span class="unpub-tag">unpublished</span></p>
+<p>🔧 Bash: grep -n "level" plans/book-01/overview.md <span class="unpub-tag">unpublished</span> | head -60</p>
 <p>✅ 80 lines, 4464 chars</p>
 <p>✅ 22 lines, 1557 chars</p>
-<p>🔧 Bash: sed -n '285,340p' plans/book-01/overview.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: sed -n '285,340p' plans/book-01/overview.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 55 lines, 3598 chars</p>
-<p>🔧 Bash: grep -n -i "level\|26\b\|27\b" plans/book-02/overview.md <span class="redacted">unpublished</span> | head -40</p>
+<p>🔧 Bash: grep -n -i "level\|26\b\|27\b" plans/book-02/overview.md <span class="unpub-tag">unpublished</span> | head -40</p>
 <p>✅ 6 lines, 389 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "\b2[0-9]\b.*[Aa]gent of Fate\|\[Agent of Fate\] *2[0-9]\…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "\b2[0-9]\b.*[Aa]gent of Fate\|\[Agent of Fate\] *2[0-9]\|level 2[…</p>
 <p>✅ 5 lines, 505 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "level" plans/book-01/arc-02.md <span class="redacted">unpublished</span> | head -…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "level" plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span> | head -40; echo…</p>
 <p>✅ 23 lines, 1641 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "level\|\bE6\b\|\bB4\b" plans/book-01/arc-03.md ⟦unpub…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "level\|\bE6\b\|\bB4\b" plans/book-01/arc-03.md <span class="unpub-tag">unpublished</span> |…</p>
 <p>✅ 55 lines, 4053 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1258,1290p' plans/book-01/arc-03.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1258,1290p' plans/book-01/arc-03.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 33 lines, 2195 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "rundle" -A40 notes/canon/characters/minor.md | head -…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "rundle" -A40 notes/canon/characters/minor.md | head -70</p>
 <p>✅ 48 lines, 2839 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "trial\|extension\|tenan\|shilling\|acre" notes/canon/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "trial\|extension\|tenan\|shilling\|acre" notes/canon/world/ins…</p>
 <p>✅ 29 lines, 2248 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '200,230p;540,560p;700,740p' notes/canon/world/institution…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '200,230p;540,560p;700,740p' notes/canon/world/institutions.md; ech…</p>
 <p>✅ 95 lines, 5734 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> | head -30</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> | head -30</p>
 <p>✅ 13 lines, 1350 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '5,25p;85,100p;255,270p;395,410p' notes/canon/world/silent…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '5,25p;85,100p;255,270p;395,410p' notes/canon/world/silent-soil.md</p>
 <p>✅ 69 lines, 3848 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "rundle" plans/book-01/arc-03.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "rundle" plans/book-01/arc-03.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 8 lines, 611 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '583,595p;670,685p;828,866p' plans/book-01/arc-03.md ⟦unpu…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '583,595p;670,685p;828,866p' plans/book-01/arc-03.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 67 lines, 4595 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "wystow" notes/canon/world/timeline.md | head -40</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "wystow" notes/canon/world/timeline.md | head -40</p>
 <p>✅ 29 lines, 2053 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "day \|Days \|Cornmonth\|Fallowmonth\|Saltmonth" plans…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "day \|Days \|Cornmonth\|Fallowmonth\|Saltmonth" plans/book-01/…</p>
 <p>✅ 17 lines, 1303 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 52 lines, 3110 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls rewrite/book-01/arc-01/scenes/ | wc -l; ls rewrite/book-01/arc…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; ls rewrite/book-01/arc-01/scenes/ | wc -l; ls rewrite/book-01/arc-01/; gre…</p>
 <p>✅ 25 lines, 1269 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "Days\? [0-9]\|Calendar\|Start:\|Stop:" plans/book-01/arc…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "Days\? [0-9]\|Calendar\|Start:\|Stop:" plans/book-01/arc-03.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 55 lines, 3559 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1086,1180p' plans/book-01/arc-02.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1086,1180p' plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 95 lines, 5151 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1180,1260p' plans/book-01/arc-02.md; <span class="redacted">unpublished</span> echo =…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1180,1260p' plans/book-01/arc-02.md; <span class="unpub-tag">unpublished</span> echo ==; grep -…</p>
 <p>✅ 82 lines, 4776 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '/^## 10/,/^## 11\|^---$/p' plans/book-01/arc-02.md ⟦unpub…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '/^## 10/,/^## 11\|^---$/p' plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span> |…</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "^## \|^### " plans/book-01/arc-02.md <span class="redacted">unpublished</span> | tai…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "^## \|^### " plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span> | tail -20; ec…</p>
 <p>✅ 18 lines, 1132 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "engine" plans/book-01/arc-02.md <span class="redacted">unpublished</span> | sed -n '…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "engine" plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span> | sed -n '1,40p'</p>
 <p>✅ 21 lines, 1637 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1470,1540p' plans/book-01/arc-02.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1470,1540p' plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 70 lines, 5501 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1350,1420p' plans/book-01/arc-03.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1350,1420p' plans/book-01/arc-03.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 70 lines, 4505 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "9[456]\b" plans/book-01/overview.md <span class="redacted">unpublished</span> plans/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "9[456]\b" plans/book-01/overview.md <span class="unpub-tag">unpublished</span> plans/book-01/a…</p>
 <p>✅ 12 lines, 1144 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "<span class="redacted">redacted: character</span>\|<span class="redacted">redacted: character</span>" notes/can…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rn "<span class="redacted">redacted</span>\|<span class="redacted">redacted</span>" notes/canon/ | grep -i "seventy\|eighty\…</p>
 <p>✅ 7 lines, 712 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '203,216p' notes/canon/world/magic.md; echo ==; sed -n '37…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '203,216p' notes/canon/world/magic.md; echo ==; sed -n '370,400p' n…</p>
 <p>✅ 16 lines, 955 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
 <p>✅ 32 lines, 2093 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> plans/book-01/a…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> plans/book-01/arc-02.md…</p>
 <p>✅ 4 lines, 168 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "Steward of Seasons" plans/book-01 <span class="redacted">unpublished</span> rewrite…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rn "Steward of Seasons" plans/book-01 <span class="unpub-tag">unpublished</span> rewrite/book-01…</p>
 <p>✅ 2 lines, 37 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,60p' notes/reader-notes-book-1.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1,60p' notes/reader-notes-book-1.md</p>
 <p>✅ 60 lines, 3446 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '60,110p' notes/reader-notes-book-1.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '60,110p' notes/reader-notes-book-1.md</p>
 <p>✅ 51 lines, 2821 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '/^\*\*F2 —/,/^\*\*F3 —/p' plans/book-01/arc-03.md ⟦unpubl…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '/^\*\*F2 —/,/^\*\*F3 —/p' plans/book-01/arc-03.md <span class="unpub-tag">unpublished</span> |…</p>
 <p>✅ 31 lines, 2024 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' import re,io p='plans/book-01/arc-02.md ⟦unpubl…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' import re,io p='plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span>';…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1541,1546p' plans/book-01/arc-02.md; <span class="redacted">unpublished</span> echo =…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1541,1546p' plans/book-01/arc-02.md; <span class="unpub-tag">unpublished</span> echo ==; sed -n…</p>
 <p>✅ 8 lines, 329 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' p='plans/book-01/arc-02.md <span class="redacted">unpublished</span>'; s=op…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' p='plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span>'; s=open(p).rea…</p>
 <p>✅ 5 lines, 222 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' p='notes/canon/world/magic.md'; s=open(p).read(…</p>
-<p>✅ 5 lines, 412 chars — Exit code 1 /   File "&lt;stdin&gt;", line 4 /     s=s.replace(a, a+"\n    (<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' p='notes/canon/world/magic.md'; s=open(p).read(…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' p='notes/canon/world/magic.md'; s=open(p).read() a='…</p>
+<p>✅ 5 lines, 412 chars — Exit code 1 /   File "&lt;stdin&gt;", line 4 /     s=s.replace(a, a+"\n    (<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' p='notes/canon/world/magic.md'; s=open(p).read() a='…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
 </details>
 
@@ -132,22 +143,26 @@ Your final message: fixed count, flagged count, and whether anything blocks draf
 <p>Now the flags and the verdict.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt;&gt; rewrite/book-01/FLAGS.md &lt;&lt;'EOF'  ⟦redacted sentence: unpu…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt;&gt; rewrite/book-01/FLAGS.md &lt;&lt;'EOF'  <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt;&gt; plans/book-01/PLAN-CHECK.md <span class="redacted">unpublished</span> &lt;&lt;'EOF'  ---  ⟦r…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt;&gt; plans/book-01/PLAN-CHECK.md <span class="unpub-tag">unpublished</span> &lt;&lt;'EOF'  ---  <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 84 chars</p>
 
 <div class="assistant-prose">
-<p>**3 fixed, 3 flagged. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
-<p>Fixed (mechanical, each logged in the owning file):<br>
-- `<span class="redacted">redacted: private</span>/plans/book-01/arc-02.md` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>'s summons, which scene 47 <span class="redacted">unpublished</span> is written under the pull of. Corrected to **Days 48–50**.<br>
-- `<span class="redacted">redacted: private</span>/plans/book-01/overview.md` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> Corrected.<br>
-- `<span class="redacted">redacted: private</span>/notes/canon/world/magic.md` — "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Age struck, fact kept.</p>
-<p>Flagged in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md`:<br>
-- **Amos Rundle's "two years"** does not survive the calendar. Canon has <span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span> Two repairs offered, one needing no canon change. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Verdict appended to `plans/book-01/PLAN-CHECK.md`; <span class="redacted">unpublished</span> committed as 88a2bff.</p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>3 fixed, 3 flagged. <span class="redacted">redacted sentence</span></p>
+<p>Fixed (mechanical, each logged in the owning file):</p>
+<ul>
+<li><span class="redacted">redacted</span>/plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>'s summons, which scene 47 <span class="unpub-tag">unpublished</span> is written under the pull of. Corrected to <strong>Days 48–50</strong>.</li>
+<li><span class="redacted">redacted</span>/plans/book-01/overview.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> Corrected.</li>
+<li><span class="redacted">redacted</span>/notes/canon/world/magic.md — &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Age struck, fact kept.</li>
+</ul>
+<p>Flagged in <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md:</p>
+<ul>
+<li><strong>Amos Rundle's &quot;two years&quot;</strong> does not survive the calendar. Canon has <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Two repairs offered, one needing no canon change. <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence</span><br />
+<span class="redacted">redacted sentence</span></li>
+</ul>
+<p><span class="redacted">redacted sentence</span> Verdict appended to <code>plans/book-01/PLAN-CHECK.md</code>; <span class="unpub-tag">unpublished</span> committed as 88a2bff.</p>
+<p><span class="redacted">redacted sentence</span></p>
 </div>
 </body></html>

@@ -7,27 +7,39 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ac488696bc5d486ff">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and <span class="redacted">redacted: private</span>/draft/book-01/scenes/08-what-youre-standing-in.md. Also read <span class="redacted">redacted: private</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope "scene") the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.<br>
-<br>
-Candidates:<br>
-[<br>
- {<br>
-  "rule_id": "mirror-retort",<br>
-  "quote": "\"A great many people were taught it,\" said Widow Sepp, unmoved.",<br>
-  "reason": "Reuses Edwin's sentence frame from line 7 ('A great many people made it') with the verb swapped from 'made' to 'were taught'—building a reply by reusing the previous line's sentence frame with the ending swapped rather than stating her own construction."<br>
- },<br>
- {<br>
-  "rule_id": "description-list",<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-  "reason": "Description catalogues four characteristics (apron, forearms, hair style, tables) rather than one noticed thing at first close look; violates rule requiring descriptions bound to viewpoint action, never a list."<br>
- }<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ac488696bc5d486ff">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted</span>/tools/lint/rules.json and <span class="redacted">redacted</span>/draft/book-01/scenes/08-what-youre-standing-in.md. Also read <span class="redacted">redacted</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope &quot;scene&quot;) the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.</p>
+<p>Candidates:<br />
+[<br />
+{<br />
+&quot;rule_id&quot;: &quot;mirror-retort&quot;,<br />
+&quot;quote&quot;: &quot;&quot;A great many people were taught it,&quot; said Widow Sepp, unmoved.&quot;,<br />
+&quot;reason&quot;: &quot;Reuses Edwin's sentence frame from line 7 ('A great many people made it') with the verb swapped from 'made' to 'were taught'—building a reply by reusing the previous line's sentence frame with the ending swapped rather than stating her own construction.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;description-list&quot;,<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;reason&quot;: &quot;Description catalogues four characteristics (apron, forearms, hair style, tables) rather than one noticed thing at first close look; violates rule requiring descriptions bound to viewpoint action, never a list.&quot;<br />
+}<br />
 ]</p></blockquote>
 
 
@@ -36,7 +48,7 @@ Candidates:<br>
 </div>
 
 <details><summary>10 tool calls</summary>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json</p>
 <p>✅ 59 lines, 2235 chars</p>
 <p>🔧 Read draft/book-01/scenes/08-what-youre-standing-in.md</p>
 <p>✅ 56 lines, 3313 chars</p>
@@ -44,7 +56,7 @@ Candidates:<br>
 <p>✅ 39 lines, 3821 chars</p>
 <p>🔧 Bash: python3 -c " import json rs=json.load(open('tools/lint/rules.json')) for r in rs:   if r[…</p>
 <p>✅ 4 lines, 1997 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"verdicts": [{"rule_id": "mirror-retort", "quote": "\"A gr…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

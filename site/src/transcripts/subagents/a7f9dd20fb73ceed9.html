@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,198 +7,305 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a7f9dd20fb73ceed9">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/author-notes/ whose name starts with the two-digit number 01-. Read it in full.<br>
-LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id "sense".<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a7f9dd20fb73ceed9">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/author-notes/ whose name starts with the two-digit number 01-. Read it in full.<br />
+LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id &quot;sense&quot;.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/author-notes/ -name "01-*" -type f (Find the author-notes file starting with 01-)</p>
-<p>✅ 1 lines, 98 chars — <span class="redacted">redacted: private</span>/draft/book-01/author-notes/01-pellings-half-past-twelve-soft.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/author-notes/ -name "01-*" -type f (Find the author-notes file starting with 01-)</p>
+<p>✅ 1 lines, 98 chars — <span class="redacted">redacted</span>/draft/book-01/author-notes/01-pellings-half-past-twelve-soft.md</p>
 <p>🔧 Read draft/book-01/author-notes/01-pellings-half-past-twelve-soft.md</p>
 <p>✅ 4 lines, 878 chars</p>
 
 <div class="assistant-prose">
-<p>That's the complete file. Now let me apply the "sense" lens carefully. I need to:</p>
-<p>1. Restate each factual claim flatly<br>
-2. Check for incoherence, contradictions, parsing difficulties<br>
-3. Check context carefully before flagging<br>
-4. Flag generously</p>
+<p>That's the complete file. Now let me apply the &quot;sense&quot; lens carefully. I need to:</p>
+<ol>
+<li>Restate each factual claim flatly</li>
+<li>Check for incoherence, contradictions, parsing difficulties</li>
+<li>Check context carefully before flagging</li>
+<li>Flag generously</li>
+</ol>
 <p>Let me analyze this paragraph by paragraph:</p>
-<p>**Paragraph 1 ("Sea-front"):**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Claim: "the air goes up, cools, and lets go" (water precipitates)<br>
-- Claim: "What comes down the far side is warmer and drier than what went in"<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Claim: "why a rainfall map of an island is mostly a map of which way the weather comes in"</p>
+<p><strong>Paragraph 1 (&quot;Sea-front&quot;):</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Claim: &quot;the air goes up, cools, and lets go&quot; (water precipitates)</li>
+<li>Claim: &quot;What comes down the far side is warmer and drier than what went in&quot;<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Claim: &quot;why a rainfall map of an island is mostly a map of which way the weather comes in&quot;</li>
+</ul>
 <p>Checking logic: This describes orographic precipitation - as moist air rises over high ground, cools, and loses water. The remaining air descending is indeed warmer and drier (föhn effect). This is meteorologically sound.</p>
-<p>**Paragraph 2 ("Shearing"):**<br>
-- Claim: "A damp fleece cannot be stored; it heats and rots in the stack"<br>
-- Claim: "the clip is the year's money" (shearing yield is economically important)<br>
-- Claim: "a sheep that has just lost its coat has lost its weather with it"<br>
-- Claim: "a cold rain on fresh-shorn sheep kills, in summer, in dozens"<br>
-- Claim: "Dry for the cutting, then warm for the rain" (timing requirement)<br>
-- Claim: "Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep"</p>
+<p><strong>Paragraph 2 (&quot;Shearing&quot;):</strong></p>
+<ul>
+<li>Claim: &quot;A damp fleece cannot be stored; it heats and rots in the stack&quot;</li>
+<li>Claim: &quot;the clip is the year's money&quot; (shearing yield is economically important)</li>
+<li>Claim: &quot;a sheep that has just lost its coat has lost its weather with it&quot;</li>
+<li>Claim: &quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot;</li>
+<li>Claim: &quot;Dry for the cutting, then warm for the rain&quot; (timing requirement)</li>
+<li>Claim: &quot;Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep&quot;</li>
+</ul>
 <p>Let me check for issues:</p>
-<p>1. The phrase "a cold rain on fresh-shorn sheep kills, in summer, in dozens" - is this claiming the killing happens in summer, or that this is a hypothetical example? Reading the full context: "And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens." The "in summer" placement is a bit ambiguous. Does it mean:<br>
-   - The cold rain kills fresh-shorn sheep in summer (the season), in the dozens (quantity)<br>
-   - OR: The cold rain kills fresh-shorn sheep, in dozens, in summer (at a time measured as "in summer")?</p>
-<p>Actually, reading more carefully: "a cold rain on fresh-shorn sheep kills, in summer, in dozens" - the construction seems to be "kills, in summer, in dozens" where both "in summer" and "in dozens" are modifiers. This makes sense: fresh-shorn sheep in summer when it's cold and rainy will die in groups of dozens. This is coherent.</p>
-<p>2. Let me check the logic of the last sentence: "Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep." <br>
-   - The "exact pair of days" refers to "Dry for the cutting, then warm for the rain"<br>
-   - This is saying shepherds have been timing shearing to: (1) dry weather for cutting, (2) warm weather for the post-cutting rain<br>
-   - This is coherent and makes sense.</p>
+<ol>
+<li>The phrase &quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot; - is this claiming the killing happens in summer, or that this is a hypothetical example? Reading the full context: &quot;And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens.&quot; The &quot;in summer&quot; placement is a bit ambiguous. Does it mean:
+<ul>
+<li>The cold rain kills fresh-shorn sheep in summer (the season), in the dozens (quantity)</li>
+<li>OR: The cold rain kills fresh-shorn sheep, in dozens, in summer (at a time measured as &quot;in summer&quot;)?</li>
+</ul>
+</li>
+</ol>
+<p>Actually, reading more carefully: &quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot; - the construction seems to be &quot;kills, in summer, in dozens&quot; where both &quot;in summer&quot; and &quot;in dozens&quot; are modifiers. This makes sense: fresh-shorn sheep in summer when it's cold and rainy will die in groups of dozens. This is coherent.</p>
+<ol start="2">
+<li>Let me check the logic of the last sentence: &quot;Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep.&quot;
+<ul>
+<li>The &quot;exact pair of days&quot; refers to &quot;Dry for the cutting, then warm for the rain&quot;</li>
+<li>This is saying shepherds have been timing shearing to: (1) dry weather for cutting, (2) warm weather for the post-cutting rain</li>
+<li>This is coherent and makes sense.</li>
+</ul>
+</li>
+</ol>
 <p>Wait, let me re-read the shearing paragraph more carefully for the logic:</p>
-<p>"A damp fleece cannot be stored; it heats and rots in the stack, and the clip is the year's money."</p>
+<p>&quot;A damp fleece cannot be stored; it heats and rots in the stack, and the clip is the year's money.&quot;</p>
 <p>This says: damp fleece cannot be stored (because it heats and rots), AND the clip (the shearing/wool) is the year's money. The logic here is: you can't store it wet, AND it's economically crucial. So you need dry conditions for shearing.</p>
-<p>"And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens."</p>
+<p>&quot;And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens.&quot;</p>
 <p>This says: fresh-shorn sheep lose their weather protection (the fleece) and are vulnerable. A cold rain after shearing kills them in dozens. So you also need warm conditions after shearing.</p>
-<p>"Dry for the cutting, then warm for the rain."</p>
+<p>&quot;Dry for the cutting, then warm for the rain.&quot;</p>
 <p>This summarizes: first need dry for the shearing, then need warm for the post-shearing rain.</p>
-<p>"Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep."</p>
+<p>&quot;Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep.&quot;</p>
 <p>This says shepherds have been timing this for millennia.</p>
 <p>All of this is coherent and makes meteorological and agricultural sense.</p>
 <p>Let me look very carefully for any sentence whose meaning doesn't survive flat restatement, or any parsing issues:</p>
 <p>Paragraph 1: All sentences are clear and parseable.</p>
-<p>Paragraph 2: <br>
-- "And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens."</p>
-<p>Let me parse this very carefully:<br>
-- Main clause: "a sheep that has just lost its coat has lost its weather with it"<br>
-- Second clause: "a cold rain on fresh-shorn sheep kills, in summer, in dozens"</p>
-<p>Wait, these are two separate statements joined by a colon. Let me check if they're logically connected:<br>
-- First statement: A sheep loses its weather protection when shorn<br>
-- Second statement: Cold rain kills fresh-shorn sheep in dozens</p>
+<p>Paragraph 2:</p>
+<ul>
+<li>&quot;And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens.&quot;</li>
+</ul>
+<p>Let me parse this very carefully:</p>
+<ul>
+<li>Main clause: &quot;a sheep that has just lost its coat has lost its weather with it&quot;</li>
+<li>Second clause: &quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot;</li>
+</ul>
+<p>Wait, these are two separate statements joined by a colon. Let me check if they're logically connected:</p>
+<ul>
+<li>First statement: A sheep loses its weather protection when shorn</li>
+<li>Second statement: Cold rain kills fresh-shorn sheep in dozens</li>
+</ul>
 <p>These are connected by the colon, suggesting the second is an explanation/consequence of the first. That's coherent.</p>
-<p>But let me check the phrase "in summer, in dozens" again. Could this be parsed as:<br>
-- "kills in summer" (temporal) "in dozens" (quantity)<br>
-- OR: "kills, in summer, in dozens" (two modifiers)</p>
-<p>Reading the full context: "a cold rain on fresh-shorn sheep kills, in summer, in dozens."</p>
-<p>Hmm, actually I'm now noticing this might be ambiguous. Let me re-read: is it saying:<br>
-A) Cold rain kills fresh-shorn sheep; this happens in summer; it happens in dozens.<br>
+<p>But let me check the phrase &quot;in summer, in dozens&quot; again. Could this be parsed as:</p>
+<ul>
+<li>&quot;kills in summer&quot; (temporal) &quot;in dozens&quot; (quantity)</li>
+<li>OR: &quot;kills, in summer, in dozens&quot; (two modifiers)</li>
+</ul>
+<p>Reading the full context: &quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens.&quot;</p>
+<p>Hmm, actually I'm now noticing this might be ambiguous. Let me re-read: is it saying:<br />
+A) Cold rain kills fresh-shorn sheep; this happens in summer; it happens in dozens.<br />
 B) Cold rain kills fresh-shorn sheep (and this only happens) in summer in dozens.</p>
-<p>The context of the paragraph is about shearing timing - it's about when to shear. The author mentions "Dry for the cutting, then warm for the rain" - this is about the conditions needed for shearing. So the point about fresh-shorn sheep being killed by cold rain is about why you need warm weather after shearing.</p>
-<p>Actually, wait. Let me re-read the whole thing more carefully. Is "in summer" actually indicating that this killing happens in summer (as opposed to other seasons), or is it modifying "in dozens"?</p>
-<p>"a cold rain on fresh-shorn sheep kills, in summer, in dozens"</p>
-<p>Actually, I wonder if there's a missing comma or if the punctuation is causing issues. Let me consider:<br>
-- "a cold rain on fresh-shorn sheep kills in summer in dozens" (no commas)<br>
-- "a cold rain on fresh-shorn sheep kills, in summer, in dozens" (commas as given)</p>
-<p>The commas suggest "in summer" is an aside. So the main clause is "a cold rain on fresh-shorn sheep kills" and "in summer, in dozens" are modifiers.</p>
-<p>But wait - does the paragraph make sense if we say this killing can happen "in summer"? Let's check: the paragraph is talking about shearing timing. It says you need:<br>
-1. Dry for the cutting<br>
-2. Warm for the rain after</p>
-<p>The implication is that you're timing shearing to AVOID cold rain on fresh sheep. But then saying "a cold rain kills in summer, in dozens" seems to be saying it happens in summer.</p>
-<p>Hmm, let me re-read the context. The prior sentence is: "And a sheep that has just lost its coat has lost its weather with it" - this is explaining why timing matters. Then the colon introduces what this means: "a cold rain on fresh-shorn sheep kills, in summer, in dozens."</p>
+<p>The context of the paragraph is about shearing timing - it's about when to shear. The author mentions &quot;Dry for the cutting, then warm for the rain&quot; - this is about the conditions needed for shearing. So the point about fresh-shorn sheep being killed by cold rain is about why you need warm weather after shearing.</p>
+<p>Actually, wait. Let me re-read the whole thing more carefully. Is &quot;in summer&quot; actually indicating that this killing happens in summer (as opposed to other seasons), or is it modifying &quot;in dozens&quot;?</p>
+<p>&quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot;</p>
+<p>Actually, I wonder if there's a missing comma or if the punctuation is causing issues. Let me consider:</p>
+<ul>
+<li>&quot;a cold rain on fresh-shorn sheep kills in summer in dozens&quot; (no commas)</li>
+<li>&quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot; (commas as given)</li>
+</ul>
+<p>The commas suggest &quot;in summer&quot; is an aside. So the main clause is &quot;a cold rain on fresh-shorn sheep kills&quot; and &quot;in summer, in dozens&quot; are modifiers.</p>
+<p>But wait - does the paragraph make sense if we say this killing can happen &quot;in summer&quot;? Let's check: the paragraph is talking about shearing timing. It says you need:</p>
+<ol>
+<li>Dry for the cutting</li>
+<li>Warm for the rain after</li>
+</ol>
+<p>The implication is that you're timing shearing to AVOID cold rain on fresh sheep. But then saying &quot;a cold rain kills in summer, in dozens&quot; seems to be saying it happens in summer.</p>
+<p>Hmm, let me re-read the context. The prior sentence is: &quot;And a sheep that has just lost its coat has lost its weather with it&quot; - this is explaining why timing matters. Then the colon introduces what this means: &quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens.&quot;</p>
 <p>I think what's happening here is the author is saying: when a cold rain hits fresh-shorn sheep in summer, it kills them in dozens. This establishes the danger that justifies the careful timing.</p>
-<p>Actually, I think I might be overanalyzing. Let me just check: is the factual claim coherent?<br>
-- Claim: Cold rain on fresh-shorn sheep in summer can kill them in large numbers.<br>
-- This is factually accurate (hyperthermia in sheep post-shearing is a real concern, though cold rain would cause hypothermia, not hyperthermia... wait).</p>
-<p>Actually, let me think about this more carefully. Fresh-shorn sheep are vulnerable to:<br>
-1. Hypothermia (getting too cold)<br>
-2. Being wet and cold</p>
-<p>So "a cold rain on fresh-shorn sheep kills, in summer, in dozens" - even in summer, cold rain + fresh sheep = deadly. That makes sense.</p>
+<p>Actually, I think I might be overanalyzing. Let me just check: is the factual claim coherent?</p>
+<ul>
+<li>Claim: Cold rain on fresh-shorn sheep in summer can kill them in large numbers.</li>
+<li>This is factually accurate (hyperthermia in sheep post-shearing is a real concern, though cold rain would cause hypothermia, not hyperthermia... wait).</li>
+</ul>
+<p>Actually, let me think about this more carefully. Fresh-shorn sheep are vulnerable to:</p>
+<ol>
+<li>Hypothermia (getting too cold)</li>
+<li>Being wet and cold</li>
+</ol>
+<p>So &quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot; - even in summer, cold rain + fresh sheep = deadly. That makes sense.</p>
 <p>Let me now look for parsing difficulties. Is there any sentence where the meaning doesn't survive flat restatement?</p>
-<p>Actually, I want to re-examine this sentence one more time: "a cold rain on fresh-shorn sheep kills, in summer, in dozens."</p>
-<p>When I restate it flatly: "In summer, a cold rain kills fresh-shorn sheep in dozens (large groups)."</p>
-<p>Or: "Cold rain hitting fresh-shorn sheep in summer kills them in dozens."</p>
+<p>Actually, I want to re-examine this sentence one more time: &quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens.&quot;</p>
+<p>When I restate it flatly: &quot;In summer, a cold rain kills fresh-shorn sheep in dozens (large groups).&quot;</p>
+<p>Or: &quot;Cold rain hitting fresh-shorn sheep in summer kills them in dozens.&quot;</p>
 <p>Yes, that's coherent.</p>
-<p>But wait - I should check: is the author saying:<br>
-A) This killing specifically happens in summer<br>
+<p>But wait - I should check: is the author saying:<br />
+A) This killing specifically happens in summer<br />
 B) Cold rain kills them any time, but in summer it kills them in dozens</p>
-<p>Reading the context: "And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens."</p>
+<p>Reading the context: &quot;And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens.&quot;</p>
 <p>I think the colon here is introducing a consequence or example. The claim is: a sheep without its fleece is vulnerable. Example: a cold rain kills them in summer in dozens.</p>
 <p>So the claim is: in summer, when it's warm, a sudden cold rain is especially dangerous to fresh sheep because they've lost their insulation.</p>
-<p>Actually, that's a bit odd because the paragraph is also saying "then warm for the rain" - suggesting you want WARM weather after shearing, not cold. So the logic is:<br>
-- You need warm weather after shearing<br>
-- Because if it's cold and rainy, the sheep die in dozens</p>
-<p>So the mention of "in summer, in dozens" is describing what happens if you FAIL to get warm weather - if it's cold and rainy (even in summer, when you'd expect it to be warm), the fresh sheep die in large numbers.</p>
+<p>Actually, that's a bit odd because the paragraph is also saying &quot;then warm for the rain&quot; - suggesting you want WARM weather after shearing, not cold. So the logic is:</p>
+<ul>
+<li>You need warm weather after shearing</li>
+<li>Because if it's cold and rainy, the sheep die in dozens</li>
+</ul>
+<p>So the mention of &quot;in summer, in dozens&quot; is describing what happens if you FAIL to get warm weather - if it's cold and rainy (even in summer, when you'd expect it to be warm), the fresh sheep die in large numbers.</p>
 <p>This is coherent.</p>
 <p>Let me look for any other issues:</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> This is coherent - rain systems have a finite amount of water, they lose it through precipitation.</p>
 <p>Let me check for number issues or timespans that don't add up. I don't see any specific numbers that need to add up here.</p>
 <p>Let me check for any contradiction with surrounding sentences:</p>
-<p>Paragraph 1:<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- "What comes down the far side is warmer and drier than what went in" (remaining air is warmer/drier)<br>
-- These are consistent: most water is spent on first high ground, remaining system is drier.</p>
-<p>Paragraph 2:<br>
-- "A damp fleece cannot be stored; it heats and rots in the stack"<br>
-- "the clip is the year's money" (wool is economically important)<br>
-- These are consistent: you can't store it wet AND it's valuable, so you need dry conditions.</p>
-<p>- "a cold rain on fresh-shorn sheep kills, in summer, in dozens"<br>
-- "Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep" (shepherds time shearing carefully)<br>
-- These are consistent: the danger of cold rain explains why the timing is crucial.</p>
+<p>Paragraph 1:<br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>&quot;What comes down the far side is warmer and drier than what went in&quot; (remaining air is warmer/drier)</li>
+<li>These are consistent: most water is spent on first high ground, remaining system is drier.</li>
+</ul>
+<p>Paragraph 2:</p>
+<ul>
+<li>
+<p>&quot;A damp fleece cannot be stored; it heats and rots in the stack&quot;</p>
+</li>
+<li>
+<p>&quot;the clip is the year's money&quot; (wool is economically important)</p>
+</li>
+<li>
+<p>These are consistent: you can't store it wet AND it's valuable, so you need dry conditions.</p>
+</li>
+<li>
+<p>&quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot;</p>
+</li>
+<li>
+<p>&quot;Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep&quot; (shepherds time shearing carefully)</p>
+</li>
+<li>
+<p>These are consistent: the danger of cold rain explains why the timing is crucial.</p>
+</li>
+</ul>
 <p>I'm not finding any clear violations of the sense lens. Let me be very careful and re-read the most complex sentence:</p>
-<p>"And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens."</p>
-<p>Parsing:<br>
-- "a sheep that has just lost its coat has lost its weather with it" = a freshly shorn sheep has lost its weather protection<br>
-- "a cold rain on fresh-shorn sheep kills, in summer, in dozens" = cold rain on fresh sheep kills many of them, in summer</p>
+<p>&quot;And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens.&quot;</p>
+<p>Parsing:</p>
+<ul>
+<li>&quot;a sheep that has just lost its coat has lost its weather with it&quot; = a freshly shorn sheep has lost its weather protection</li>
+<li>&quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot; = cold rain on fresh sheep kills many of them, in summer</li>
+</ul>
 <p>The colon connects these: losing weather protection means cold rain is deadly.</p>
-<p>Actually, wait. Let me reconsider the phrase "in summer" one more time. Is it possible this is a non-standard construction?</p>
-<p>"a cold rain on fresh-shorn sheep kills, in summer, in dozens"</p>
-<p>Could this possibly mean: "a cold rain on fresh-shorn sheep, in summer, kills in dozens"? Like, the fresh sheep in summer get killed?</p>
-<p>Let me consider the author's intent. The file is about two farming concepts: sea-front winds and shearing. For shearing, the author is explaining why timing matters:<br>
-1. Need dry for shearing (so fleece doesn't rot)<br>
-2. Need warm for after-shearing (so sheep don't die from cold)</p>
-<p>The sentence about "a cold rain on fresh-shorn sheep kills, in summer, in dozens" is explaining why you need the warm weather. Even in summer (when you might expect warm), if it turns cold and rainy, the fresh sheep die in dozens.</p>
+<p>Actually, wait. Let me reconsider the phrase &quot;in summer&quot; one more time. Is it possible this is a non-standard construction?</p>
+<p>&quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot;</p>
+<p>Could this possibly mean: &quot;a cold rain on fresh-shorn sheep, in summer, kills in dozens&quot;? Like, the fresh sheep in summer get killed?</p>
+<p>Let me consider the author's intent. The file is about two farming concepts: sea-front winds and shearing. For shearing, the author is explaining why timing matters:</p>
+<ol>
+<li>Need dry for shearing (so fleece doesn't rot)</li>
+<li>Need warm for after-shearing (so sheep don't die from cold)</li>
+</ol>
+<p>The sentence about &quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot; is explaining why you need the warm weather. Even in summer (when you might expect warm), if it turns cold and rainy, the fresh sheep die in dozens.</p>
 <p>This makes sense and is coherent.</p>
-<p>Actually, I just want to triple-check one more thing. The phrase "in summer, in dozens" - could "in summer" be a typo or mistake? Should it be "in minutes" or "in waves" or something else?</p>
-<p>Let me check: "a cold rain on fresh-shorn sheep kills, in summer, in dozens."</p>
-<p>No, I think "in summer" makes sense. It's emphasizing that even in the warm season, this is a danger. And "in dozens" means large numbers.</p>
+<p>Actually, I just want to triple-check one more thing. The phrase &quot;in summer, in dozens&quot; - could &quot;in summer&quot; be a typo or mistake? Should it be &quot;in minutes&quot; or &quot;in waves&quot; or something else?</p>
+<p>Let me check: &quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens.&quot;</p>
+<p>No, I think &quot;in summer&quot; makes sense. It's emphasizing that even in the warm season, this is a danger. And &quot;in dozens&quot; means large numbers.</p>
 <p>Let me also check: is there any sentence where the grammar is so convoluted that careful re-reading is required?</p>
 <p>Paragraph 1: All sentences are clear.</p>
-<p>Paragraph 2: The longest sentence is "A damp fleece cannot be stored; it heats and rots in the stack, and the clip is the year's money."<br>
-- This is a compound sentence with clear structure: A cannot be stored; reasons; and consequence.<br>
-- Clear and parseable on first read.</p>
-<p>I'm not finding any issues that meet the "sense" lens criteria. Let me do one final check by re-reading the entire text with fresh eyes:</p>
-<p>---</p>
+<p>Paragraph 2: The longest sentence is &quot;A damp fleece cannot be stored; it heats and rots in the stack, and the clip is the year's money.&quot;</p>
+<ul>
+<li>This is a compound sentence with clear structure: A cannot be stored; reasons; and consequence.</li>
+<li>Clear and parseable on first read.</li>
+</ul>
+<p>I'm not finding any issues that meet the &quot;sense&quot; lens criteria. Let me do one final check by re-reading the entire text with fresh eyes:</p>
+<hr />
 <p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>[Checking: All factual claims are coherent, meteorologically sound, logically connected.]</p>
-<p>**Shearing** - two facts rule a shearing week. A damp fleece cannot be stored; it heats and rots in the stack, and the clip is the year's money. And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens. Dry for the cutting, then warm for the rain. Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep.</p>
-<p>[Checking: All claims are coherent and logically connected. The mention of "in summer" makes sense in context - even in the warm season, a sudden cold rain is deadly.]</p>
-<p>---</p>
+<p><strong>Shearing</strong> - two facts rule a shearing week. A damp fleece cannot be stored; it heats and rots in the stack, and the clip is the year's money. And a sheep that has just lost its coat has lost its weather with it: a cold rain on fresh-shorn sheep kills, in summer, in dozens. Dry for the cutting, then warm for the rain. Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep.</p>
+<p>[Checking: All claims are coherent and logically connected. The mention of &quot;in summer&quot; makes sense in context - even in the warm season, a sudden cold rain is deadly.]</p>
+<hr />
 <p>I'm not finding any violations that meet the criteria. However, let me consider if there are any borderline cases I should report generously:</p>
-<p>1. "What comes down the far side is warmer and drier than what went in" - this is clear and meteorologically sound.</p>
-<p>2. "a cold rain on fresh-shorn sheep kills, in summer, in dozens" - the most complex construction. But I've verified it's coherent.</p>
-<p>3. <span class="redacted">redacted sentence: unpublished prose</span> Both clear.</p>
+<ol>
+<li>
+<p>&quot;What comes down the far side is warmer and drier than what went in&quot; - this is clear and meteorologically sound.</p>
+</li>
+<li>
+<p>&quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot; - the most complex construction. But I've verified it's coherent.</p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Both clear.</p>
+</li>
+</ol>
 <p>I don't see any clear violations. Let me be very strict and check one more time for any sentence where the meaning might not survive flat restatement:</p>
-<p>1. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>2. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>3. "the air goes up, cools, and lets go" - restatement: "The air rises, cools, and precipitates." Clear.</p>
-<p>4. "What comes down the far side is warmer and drier than what went in" - restatement: "The air descending on the leeward side is warmer and drier than the air that went in on the windward side." Clear.</p>
-<p>5. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>6. "a rainfall map of an island is mostly a map of which way the weather comes in" - restatement: "A map showing rainfall patterns on an island primarily shows which direction weather systems approach from." Clear.</p>
-<p>7. "A damp fleece cannot be stored; it heats and rots in the stack" - restatement: "Wet wool cannot be stored because it generates heat and decays in piles." Clear.</p>
-<p>8. "the clip is the year's money" - restatement: "The shearing yield is the farmer's annual income." Clear.</p>
-<p>9. "a sheep that has just lost its coat has lost its weather with it" - restatement: "A freshly shorn sheep has lost its weather protection." Clear, though "weather with it" is poetic but understandable.</p>
-<p>10. "a cold rain on fresh-shorn sheep kills, in summer, in dozens" - restatement: "Cold rain kills freshly shorn sheep in large numbers, even in summer." Clear.</p>
-<p>11. "Dry for the cutting, then warm for the rain" - restatement: "You need dry weather for shearing, then warm weather for the subsequent rain." Clear.</p>
-<p>12. "Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep" - restatement: "Shepherds have been watching the weather to time that specific pair of conditions (dry then warm) since shepherd-keeping began." Clear.</p>
+<ol>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;the air goes up, cools, and lets go&quot; - restatement: &quot;The air rises, cools, and precipitates.&quot; Clear.</p>
+</li>
+<li>
+<p>&quot;What comes down the far side is warmer and drier than what went in&quot; - restatement: &quot;The air descending on the leeward side is warmer and drier than the air that went in on the windward side.&quot; Clear.</p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;a rainfall map of an island is mostly a map of which way the weather comes in&quot; - restatement: &quot;A map showing rainfall patterns on an island primarily shows which direction weather systems approach from.&quot; Clear.</p>
+</li>
+<li>
+<p>&quot;A damp fleece cannot be stored; it heats and rots in the stack&quot; - restatement: &quot;Wet wool cannot be stored because it generates heat and decays in piles.&quot; Clear.</p>
+</li>
+<li>
+<p>&quot;the clip is the year's money&quot; - restatement: &quot;The shearing yield is the farmer's annual income.&quot; Clear.</p>
+</li>
+<li>
+<p>&quot;a sheep that has just lost its coat has lost its weather with it&quot; - restatement: &quot;A freshly shorn sheep has lost its weather protection.&quot; Clear, though &quot;weather with it&quot; is poetic but understandable.</p>
+</li>
+<li>
+<p>&quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot; - restatement: &quot;Cold rain kills freshly shorn sheep in large numbers, even in summer.&quot; Clear.</p>
+</li>
+<li>
+<p>&quot;Dry for the cutting, then warm for the rain&quot; - restatement: &quot;You need dry weather for shearing, then warm weather for the subsequent rain.&quot; Clear.</p>
+</li>
+<li>
+<p>&quot;Shepherds have been reading the sky for that exact pair of days for as long as there have been sheep&quot; - restatement: &quot;Shepherds have been watching the weather to time that specific pair of conditions (dry then warm) since shepherd-keeping began.&quot; Clear.</p>
+</li>
+</ol>
 <p>I don't see any violations. The text is well-written, coherent, and doesn't require re-reading to parse.</p>
 <p>Let me check one more time if there are any contradictions or incoherence:</p>
-<p>- The sea-front section is about orographic precipitation and föhn effects. All coherent.<br>
-- The shearing section is about timing wool-shearing to weather conditions. Two requirements: (1) dry for shearing, (2) warm after shearing to avoid sheep death. This is all coherent and well-explained.</p>
+<ul>
+<li>The sea-front section is about orographic precipitation and föhn effects. All coherent.</li>
+<li>The shearing section is about timing wool-shearing to weather conditions. Two requirements: (1) dry for shearing, (2) warm after shearing to avoid sheep death. This is all coherent and well-explained.</li>
+</ul>
 <p>No contradictions within or between sections.</p>
 <p>I'm not finding any violations of the sense lens. This is a well-written author's note with clear, coherent prose.</p>
-<p>Wait, let me reconsider one more time: "in summer, in dozens" - could this construction be parsed in a way that doesn't make sense?</p>
-<p>"a cold rain on fresh-shorn sheep kills, in summer, in dozens"</p>
-<p>Possible parsings:<br>
-1. "A cold rain, in summer, kills fresh-shorn sheep in dozens" ✓ (makes sense)<br>
-2. "A cold rain kills fresh-shorn sheep in summer, in dozens" ✓ (makes sense)<br>
-3. "A cold rain kills fresh-shorn sheep, in summer, in dozens" ✓ (makes sense - with commas suggesting "in summer" and "in dozens" are both modifiers)</p>
+<p>Wait, let me reconsider one more time: &quot;in summer, in dozens&quot; - could this construction be parsed in a way that doesn't make sense?</p>
+<p>&quot;a cold rain on fresh-shorn sheep kills, in summer, in dozens&quot;</p>
+<p>Possible parsings:</p>
+<ol>
+<li>&quot;A cold rain, in summer, kills fresh-shorn sheep in dozens&quot; ✓ (makes sense)</li>
+<li>&quot;A cold rain kills fresh-shorn sheep in summer, in dozens&quot; ✓ (makes sense)</li>
+<li>&quot;A cold rain kills fresh-shorn sheep, in summer, in dozens&quot; ✓ (makes sense - with commas suggesting &quot;in summer&quot; and &quot;in dozens&quot; are both modifiers)</li>
+</ol>
 <p>All three parsings make coherent sense. The commas in the original suggest parsing 3, which is clear and coherent.</p>
 <p>I really don't see any violations. Let me output an empty findings list.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

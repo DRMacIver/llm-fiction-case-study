@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,51 +7,63 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a3e473b779f9a3fdf">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the judge in a prose-lint pipeline for <span class="redacted">redacted: private</span>.<br>
-Target file: the .md file in draft/book-01/scenes/ whose name starts with 13-. Read it in full. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br>
-Candidates from haiku hunters (be sceptical; they over-report by design):<br>
-[<br>
- {<br>
-  "rule_id": "implication-stopped-short",<br>
-  "quote": "That's the third thing I've asked you for.",<br>
-  "reason": "The line implies Peri has made three specific requests but never enumerates them; reader cannot identify all three from the scene itself."<br>
- },<br>
- {<br>
-  "rule_id": "sense",<br>
-  "quote": "Widow Sepp says you haven't slept a night out of the tower since the coast floods, and she couldn't remember when the coast floods were, and she remembers everything.",<br>
-  "reason": "Claims that Widow Sepp \"couldn't remember when the coast floods were\" contradicts the claim that \"she remembers everything\"—these two statements are mutually incompatible without an implicit exception."<br>
- },<br>
- {<br>
-  "rule_id": "maxim-capped-speech",<br>
-  "quote": "A stupid question gets a true answer too, and it's still cost you the day.",<br>
-  "reason": "Second maxim in one scene (budget: 1 per scene). First maxim: 'Small things going wrong at the edges' ends Peri's earlier turn. Both are portable lines that would survive lifted out of context."<br>
- },<br>
- {<br>
-  "rule_id": "cryptic-dialogue",<br>
-  "quote": "You've had three hundred years of asking things questions.",<br>
-  "reason": "Grammatically unclear phrase. Meaning of 'asking things questions' is not apparent to a reader. Violates rule: 'Nobody answers a question with a word the reader has to decode.' / 'Every exchange must be understandable to a reader.'"<br>
- },<br>
- {<br>
-  "rule_id": "nominalised-absence",<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-  "reason": "Silence (abstract nominalization) made the grammatical subject with verb 'went on'; rule forbids this pattern (e.g., 'the stillness'). Should be recast with person as subject, e.g. 'He waited' or 'Neither spoke.'"<br>
- },<br>
- {<br>
-  "rule_id": "contamination-overlap",<br>
-  "quote": "Scene 13: 15 overlapping 8+ word runs with chapters/003-the-improbability-engine.md, including the entire opening dialogue section from 'the widow crane's cottage' through the exchange about the Weave answers",<br>
-  "reason": "Prose contaminated by deleted draft in context; &gt;=5 runs triggers redraft requirement per rule"<br>
- }<br>
-]<br>
-For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.<br>
-<br>
-Judge hints: phrases like "you learn", "says you should", "there is only one answer" often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; "wants [gerund]" retired; "nought" retired, write "zero"); "'ll not" in non-first person is a judgement call, not a ban; "[amount] of it" and "I'll say it" are warning signs needing judgement.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a3e473b779f9a3fdf">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the judge in a prose-lint pipeline for <span class="redacted">redacted</span>.<br />
+Target file: the .md file in draft/book-01/scenes/ whose name starts with 13-. Read it in full. Read <span class="redacted">redacted</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br />
+Candidates from haiku hunters (be sceptical; they over-report by design):<br />
+[<br />
+{<br />
+&quot;rule_id&quot;: &quot;implication-stopped-short&quot;,<br />
+&quot;quote&quot;: &quot;That's the third thing I've asked you for.&quot;,<br />
+&quot;reason&quot;: &quot;The line implies Peri has made three specific requests but never enumerates them; reader cannot identify all three from the scene itself.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;sense&quot;,<br />
+&quot;quote&quot;: &quot;Widow Sepp says you haven't slept a night out of the tower since the coast floods, and she couldn't remember when the coast floods were, and she remembers everything.&quot;,<br />
+&quot;reason&quot;: &quot;Claims that Widow Sepp &quot;couldn't remember when the coast floods were&quot; contradicts the claim that &quot;she remembers everything&quot;—these two statements are mutually incompatible without an implicit exception.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;maxim-capped-speech&quot;,<br />
+&quot;quote&quot;: &quot;A stupid question gets a true answer too, and it's still cost you the day.&quot;,<br />
+&quot;reason&quot;: &quot;Second maxim in one scene (budget: 1 per scene). First maxim: 'Small things going wrong at the edges' ends Peri's earlier turn. Both are portable lines that would survive lifted out of context.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;cryptic-dialogue&quot;,<br />
+&quot;quote&quot;: &quot;You've had three hundred years of asking things questions.&quot;,<br />
+&quot;reason&quot;: &quot;Grammatically unclear phrase. Meaning of 'asking things questions' is not apparent to a reader. Violates rule: 'Nobody answers a question with a word the reader has to decode.' / 'Every exchange must be understandable to a reader.'&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;nominalised-absence&quot;,<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;reason&quot;: &quot;Silence (abstract nominalization) made the grammatical subject with verb 'went on'; rule forbids this pattern (e.g., 'the stillness'). Should be recast with person as subject, e.g. 'He waited' or 'Neither spoke.'&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;contamination-overlap&quot;,<br />
+&quot;quote&quot;: &quot;Scene 13: 15 overlapping 8+ word runs with chapters/003-the-improbability-engine.md, including the entire opening dialogue section from 'the widow crane's cottage' through the exchange about the Weave answers&quot;,<br />
+&quot;reason&quot;: &quot;Prose contaminated by deleted draft in context; &gt;=5 runs triggers redraft requirement per rule&quot;<br />
+}<br />
+]<br />
+For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.</p>
+<p>Judge hints: phrases like &quot;you learn&quot;, &quot;says you should&quot;, &quot;there is only one answer&quot; often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; &quot;wants [gerund]&quot; retired; &quot;nought&quot; retired, write &quot;zero&quot;); &quot;'ll not&quot; in non-first person is a judgement call, not a ban; &quot;[amount] of it&quot; and &quot;I'll say it&quot; are warning signs needing judgement.<br />
 You may add violations the hunters missed as judge_added {rule_id, quote, reason}. Never rewrite the text.</p></blockquote>
 
 
@@ -60,17 +72,17 @@ You may add violations the hunters missed as judge_added {rule_id, quote, reason
 </div>
 
 <details><summary>12 tool calls</summary>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | head -40</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/draft/book-01/scenes/ | head -40</p>
 <p>✅ 40 lines, 1021 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json</p>
 <p>✅ 54 lines, 2247 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/scenes/13-when-did-you-last-leave.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/draft/book-01/scenes/13-when-did-you-last-leave.md</p>
 <p>✅ 65 lines, 5558 chars</p>
 <p>🔧 Bash: python3 -c " import json rs=json.load(open('tools/lint/rules.json')) for r in rs:     if…</p>
 <p>✅ 138 lines, 7918 chars</p>
 <p>🔧 Bash: python3 tools/overlap_check.py draft/book-01/scenes/13-when-did-you-last-leave.md 2&gt;&amp;1 |…</p>
 <p>✅ 17 lines, 7547 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"verdicts": [{"rule_id": "contamination-overlap", "quote":…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

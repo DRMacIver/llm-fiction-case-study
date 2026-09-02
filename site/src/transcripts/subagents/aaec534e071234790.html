@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; You…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. [redacted] You are a na…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; You…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-aaec534e071234790">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span> You are a narrow reviewer with ONE lens. FARMING: extract every farming/soil/weather/drainage/engineering claim and assess against real science (name the mechanism; flag doubtful ones); list every specialist term with whether it is already in the glossary; for terms NOT in the glossary, draft the author’s-note paragraph; flag any magic that solves a non-problem or exceeds its real mechanism (<span class="redacted">redacted: mechanic</span> as built in 026/030 especially). Report ONLY findings within your lens, compactly: quote (short) | problem | fix. Invented problems are as bad as misses. Do not certify anything as clean.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. [redacted] You are a na…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-aaec534e071234790">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> You are a narrow reviewer with ONE lens. FARMING: extract every farming/soil/weather/drainage/engineering claim and assess against real science (name the mechanism; flag doubtful ones); list every specialist term with whether it is already in the glossary; for terms NOT in the glossary, draft the author’s-note paragraph; flag any magic that solves a non-problem or exceeds its real mechanism (<span class="redacted">redacted</span> as built in 026/030 especially). Report ONLY findings within your lens, compactly: quote (short) | problem | fix. Invented problems are as bad as misses. Do not certify anything as clean.</p></blockquote>
 
 
 <details><summary>14 tool calls</summary>
@@ -26,38 +39,48 @@ Repo: <span class="redacted">redacted: private</span>. <span class="redacted">re
 <p>🔧 Read notes/canon/world/magic.md</p>
 <p>✅ 158 lines, 9554 chars</p>
 <p>✅ 1190 lines, 66494 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/chapters/025-the-famous-dropout.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/chapters/025-the-famous-dropout.md</p>
 <p>✅ 229 lines, 19235 chars</p>
-<p>🔧 Bash: grep -n -i "box" <span class="redacted">redacted: private</span>/notes/canon/world/farming-glossary.md | head -30</p>
+<p>🔧 Bash: grep -n -i "box" <span class="redacted">redacted</span>/notes/canon/world/farming-glossary.md | head -30</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: grep -n -i "box" <span class="redacted">redacted: private</span>/chapters/024*.md 2&gt;/dev/null; ls <span class="redacted">redacted: private</span>…</p>
+<p>🔧 Bash: grep -n -i "box" <span class="redacted">redacted</span>/chapters/024*.md 2&gt;/dev/null; ls <span class="redacted">redacted</span>/chapters/ | tail…</p>
 <p>✅ 11 lines, 435 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>FARMING lens — chapter 025 ("The Famous Dropout")</p>
-<p>**Claims checked (real-world science/practice)**</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> No fix needed.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- "Sixty years of the manuring series" / "eight plots" | consistent with the already-established Rothamsted-style long-run trial (glossary, ch. 004) | no fix needed.<br>
-- Six standard revealings, compost cantrip on syllabus, field office/plot register, chain-and-links references | all already-established terms, used consistently with existing canon, no re-explanation given (correct — see below) | no fix needed.<br>
-- No new magic is deployed or described solving anything in this chapter — it's institutional/human, not a working. Nothing here triggers "unmotivated magic" or "mechanism violation." (The task flagged <span class="redacted">redacted: mechanic</span> for chs. 026/030 — not present in 025; nothing to assess here.)</p>
-<p>**Terms vs. glossary**</p>
-<p>- "chain and links," "manuring series," "field office," "plot register," "the six revealings," "compost cantrip" — all already in the glossary (chs. 004, 005, 002) and correctly *not* re-explained here. Good.<br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> 022–024; ch. 024 uses "a box" only loosely, not as the technical packing procedure). → **unexplained term**, first appearance here.</p>
-<p>Real basis for the note (to verify before publishing, but this is the accurate mechanism): a soil sample for lab/archival use is packed to preserve its physical state on the journey — kept from drying, kept from being crushed or mixed, sealed and labelled so field, date and depth travel with it. This maps directly onto the "turf sample" note already in the glossary (ch. 004, "Cutting a sample") but is a distinct, narrower term (the box/packing standard rather than <span class="redacted">redacted: place</span> itself) and needs its own entry rather than folding silently into that one.</p>
+<p>FARMING lens — chapter 025 (&quot;The Famous Dropout&quot;)</p>
+<p><strong>Claims checked (real-world science/practice)</strong></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> No fix needed.<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>&quot;Sixty years of the manuring series&quot; / &quot;eight plots&quot; | consistent with the already-established Rothamsted-style long-run trial (glossary, ch. 004) | no fix needed.</li>
+<li>Six standard revealings, compost cantrip on syllabus, field office/plot register, chain-and-links references | all already-established terms, used consistently with existing canon, no re-explanation given (correct — see below) | no fix needed.</li>
+<li>No new magic is deployed or described solving anything in this chapter — it's institutional/human, not a working. Nothing here triggers &quot;unmotivated magic&quot; or &quot;mechanism violation.&quot; (The task flagged <span class="redacted">redacted</span> for chs. 026/030 — not present in 025; nothing to assess here.)</li>
+</ul>
+<p><strong>Terms vs. glossary</strong></p>
+<ul>
+<li>&quot;chain and links,&quot; &quot;manuring series,&quot; &quot;field office,&quot; &quot;plot register,&quot; &quot;the six revealings,&quot; &quot;compost cantrip&quot; — all already in the glossary (chs. 004, 005, 002) and correctly <em>not</em> re-explained here. Good.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> 022–024; ch. 024 uses &quot;a box&quot; only loosely, not as the technical packing procedure). → <strong>unexplained term</strong>, first appearance here.</li>
+</ul>
+<p>Real basis for the note (to verify before publishing, but this is the accurate mechanism): a soil sample for lab/archival use is packed to preserve its physical state on the journey — kept from drying, kept from being crushed or mixed, sealed and labelled so field, date and depth travel with it. This maps directly onto the &quot;turf sample&quot; note already in the glossary (ch. 004, &quot;Cutting a sample&quot;) but is a distinct, narrower term (the box/packing standard rather than <span class="redacted">redacted</span> itself) and needs its own entry rather than folding silently into that one.</p>
 <p>Draft author's-note paragraph:</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Draft glossary entry (for `notes/canon/world/farming-glossary.md`, Chapter 025):</p>
-<p>&gt; ### Boxing (a soil sample)<br>
-&gt; - **Real basis:** sample integrity in transit — real soil labs require samples kept undisturbed, at field moisture, sealed and fully labelled (location, date, depth), because drying, compaction or mixing corrupts the reading before it reaches the bench.<br>
-&gt; - **World's modification:** none.<br>
-&gt; - **Note:** [as drafted above]</p>
-<p>**Findings summary**<br>
-- unexplained term: "boxing" a soil sample (ch. 025) — needs the author's note above appended at the chapter's foot (below <span class="redacted">redacted: place</span>) and the glossary entry added.<br>
-- No unreal claims found.<br>
-- No unmotivated magic or mechanism violations found (no magic is exercised on-page in this chapter).<br>
-- No re-explained terms (existing glossary terms are used correctly without restating their notes).</p>
+<p>Draft glossary entry (for <code>notes/canon/world/farming-glossary.md</code>, Chapter 025):</p>
+<blockquote>
+<h3>Boxing (a soil sample)</h3>
+<ul>
+<li><strong>Real basis:</strong> sample integrity in transit — real soil labs require samples kept undisturbed, at field moisture, sealed and fully labelled (location, date, depth), because drying, compaction or mixing corrupts the reading before it reaches the bench.</li>
+<li><strong>World's modification:</strong> none.</li>
+<li><strong>Note:</strong> [as drafted above]</li>
+</ul>
+</blockquote>
+<p><strong>Findings summary</strong></p>
+<ul>
+<li>unexplained term: &quot;boxing&quot; a soil sample (ch. 025) — needs the author's note above appended at the chapter's foot (below <span class="redacted">redacted</span>) and the glossary entry added.</li>
+<li>No unreal claims found.</li>
+<li>No unmotivated magic or mechanism violations found (no magic is exercised on-page in this chapter).</li>
+<li>No re-explained terms (existing glossary terms are used correctly without restating their notes).</li>
+</ul>
 </div>
 </body></html>

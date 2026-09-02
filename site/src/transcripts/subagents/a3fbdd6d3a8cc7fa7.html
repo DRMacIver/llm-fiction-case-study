@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,17 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a3fbdd6d3a8cc7fa7">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 23-. Read it in full.<br>
-LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id "sense".<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a3fbdd6d3a8cc7fa7">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 23-. Read it in full.<br />
+LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id &quot;sense&quot;.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
@@ -25,8 +38,8 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>I'll help you lint the scene file for sense issues. Let me first find and read the target file.</p>
 </div>
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -name "23-*.md" -type f</p>
-<p>✅ 1 lines, 76 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/23-the-good-staff.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes -name "23-*.md" -type f</p>
+<p>✅ 1 lines, 76 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/23-the-good-staff.md</p>
 <p>🔧 Read draft/book-01/scenes/23-the-good-staff.md</p>
 <p>✅ 66 lines, 8345 chars</p>
 
@@ -39,32 +52,44 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 
 <div class="assistant-prose">
 <p>I'll work through this scene systematically, checking each factual claim and logical sequence against flat restatement and neighboring context.</p>
-<p>**Checking timeline and numbers:**<br>
-- Line 3: He returned "at eleven" (context suggests 11 PM given he's coming from the Drovers)<br>
-- Line 63: "First light's in six hours" → 5 AM, reasonable for late August<br>
-- "two weeks" and "fortnight" (line 34, 57) both = 14 days ✓<br>
-- Trip described as "two days down a made road" (line 41)<br>
-- "eighty miles" (line 15): at 4 mph × 20 hours/day = 80 miles one-way ✓<br>
-- "hadn't been anywhere in forty years" (line 33) aligns with bedroll "spent the forty years rolled" (line 9) ✓</p>
-<p>**Checking logical sequences:**</p>
-<p>Line 9 packing: Samples, book, maps, registers → "went in first and low, where the weight would sit on his hips"<br>
-- This explains packing principle stated/taught to Peri ✓</p>
-<p>Lines 13-15 robes: He packs two, removes one (reasoning: can wash at destination), puts it back (reasoning: appearance matters), then Sorrel confirms "Two" ✓</p>
-<p>Lines 19-29 trowels: Broad one "lifted a turf whole...clean"; narrow one "read a cut face." Sorrel says narrow one "tears a turf"<br>
-- Flat restatement: narrow trowel used for cutting/examining cuts through turf; broad one extracts whole samples<br>
-- Logic: for evidence collection (undamaged samples), use broad one ✓</p>
-<p>Lines 47-51 exposition: Ground "sound by every measure" but "empty under his hands"; "getting bigger by the month"; Edwin had hands in soil sample and "missed the class for the first time in eleven years"<br>
-- Establishes: unknown underground phenomenon, dangerous to investigate without staff ✓</p>
-<p>Line 39 age reference: "every working in three hundred years" (staff history) + "second century" (line 6: <span class="redacted">redacted: event</span> reference) + "hasn't been anywhere forty years" = consistent for 200+ year old character ✓</p>
-<p>**Checking parse-ability:**</p>
-<p>Line 9: "which he had told Peri Millbrook that afternoon, at the end of a list that had boots and bread and twine in it"<br>
-- Antecedent slightly implicit (the weight-distribution principle) but recoverable from context. Archaic but parsable.</p>
-<p>Line 15: "I've told that parish by supper, and her with it" <br>
-- Colloquial phrasing ("her with it" = "her included in that"); archaic but meaning is clear.</p>
+<p><strong>Checking timeline and numbers:</strong></p>
+<ul>
+<li>Line 3: He returned &quot;at eleven&quot; (context suggests 11 PM given he's coming from the Drovers)</li>
+<li>Line 63: &quot;First light's in six hours&quot; → 5 AM, reasonable for late August</li>
+<li>&quot;two weeks&quot; and &quot;fortnight&quot; (line 34, 57) both = 14 days ✓</li>
+<li>Trip described as &quot;two days down a made road&quot; (line 41)</li>
+<li>&quot;eighty miles&quot; (line 15): at 4 mph × 20 hours/day = 80 miles one-way ✓</li>
+<li>&quot;hadn't been anywhere in forty years&quot; (line 33) aligns with bedroll &quot;spent the forty years rolled&quot; (line 9) ✓</li>
+</ul>
+<p><strong>Checking logical sequences:</strong></p>
+<p>Line 9 packing: Samples, book, maps, registers → &quot;went in first and low, where the weight would sit on his hips&quot;</p>
+<ul>
+<li>This explains packing principle stated/taught to Peri ✓</li>
+</ul>
+<p>Lines 13-15 robes: He packs two, removes one (reasoning: can wash at destination), puts it back (reasoning: appearance matters), then Sorrel confirms &quot;Two&quot; ✓</p>
+<p>Lines 19-29 trowels: Broad one &quot;lifted a turf whole...clean&quot;; narrow one &quot;read a cut face.&quot; Sorrel says narrow one &quot;tears a turf&quot;</p>
+<ul>
+<li>Flat restatement: narrow trowel used for cutting/examining cuts through turf; broad one extracts whole samples</li>
+<li>Logic: for evidence collection (undamaged samples), use broad one ✓</li>
+</ul>
+<p>Lines 47-51 exposition: Ground &quot;sound by every measure&quot; but &quot;empty under his hands&quot;; &quot;getting bigger by the month&quot;; Edwin had hands in soil sample and &quot;missed the class for the first time in eleven years&quot;</p>
+<ul>
+<li>Establishes: unknown underground phenomenon, dangerous to investigate without staff ✓</li>
+</ul>
+<p>Line 39 age reference: &quot;every working in three hundred years&quot; (staff history) + &quot;second century&quot; (line 6: <span class="redacted">redacted</span> reference) + &quot;hasn't been anywhere forty years&quot; = consistent for 200+ year old character ✓</p>
+<p><strong>Checking parse-ability:</strong></p>
+<p>Line 9: &quot;which he had told Peri Millbrook that afternoon, at the end of a list that had boots and bread and twine in it&quot;</p>
+<ul>
+<li>Antecedent slightly implicit (the weight-distribution principle) but recoverable from context. Archaic but parsable.</li>
+</ul>
+<p>Line 15: &quot;I've told that parish by supper, and her with it&quot;</p>
+<ul>
+<li>Colloquial phrasing (&quot;her with it&quot; = &quot;her included in that&quot;); archaic but meaning is clear.</li>
+</ul>
 <p>Line 41-42: Complex conditional about what carrying the staff would signal—all elements are recoverable.</p>
 <p>All numerical claims, timeline sequences, and logical transitions check out or are consistent with the established character and context.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

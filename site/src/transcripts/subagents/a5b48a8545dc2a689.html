@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a5b48a8545dc2a689">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="closers", and scope includes "note". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/author-notes/03-until-fulfilled.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a5b48a8545dc2a689">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;closers&quot;, and scope includes &quot;note&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/author-notes/03-until-fulfilled.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -32,30 +45,32 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 
 <p>🔧 Bash: jq '.[] | select(.tier == "semantic" and .lens == "closers" and (.scope | contains(["note…</p>
 <p>✅ 20 lines, 332 chars</p>
-<p>🔧 Bash: jq '.[] | select(.id == "implication-stopped-short" or .id == "cute-cryptic-closer")' ⟦re…</p>
+<p>🔧 Bash: jq '.[] | select(.id == "implication-stopped-short" or .id == "cute-cryptic-closer")' <span class="redacted">redacted</span>…</p>
 <p>✅ 45 lines, 2174 chars</p>
 
 <div class="assistant-prose">
 <p>Now let me carefully examine the author notes for violations of these two rules. Let me read the full file again to make sure I have everything:</p>
 </div>
 
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/author-notes/03-until-fulfilled.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/draft/book-01/author-notes/03-until-fulfilled.md</p>
 <p>✅ 1 lines, 624 chars</p>
 
 <div class="assistant-prose">
 <p>Let me analyze this text carefully against the two semantic/closers rules for notes:</p>
-<p>**Rule 1: implication-stopped-short** - "A sentence sets up a clear implication and then declines to state it"</p>
-<p>Reading each sentence:<br>
-- Sentence 1: "rivers move their gravel about, so a crossing is maintained or it quietly stops being one" - explicitly states the implication<br>
-- Sentence 2: "and the question of who maintains it is one of the oldest arguments on paper" - complete thought<br>
-- Sentence 3: "English court rolls spend centuries on it: this parish presents that parish over the ruin of a ford both of them use, and each is certain the duty lies across the water" - explicit, not stopped short<br>
-- Sentence 4: "Parliament ruled on who repairs bridges in 1531, and the rolls after 1531 look remarkably like the rolls before" - explicitly states outcome (no change)<br>
-- Sentence 5 (closing): "As far as I can find out, nothing has ever settled such a quarrel except a person both sides trust, and those have always been in shorter supply than gravel" - explicitly states the implication (trustworthy people are rare)</p>
-<p>**Rule 2: cute-cryptic-closer** - "A closing line must land on a fact"</p>
+<p><strong>Rule 1: implication-stopped-short</strong> - &quot;A sentence sets up a clear implication and then declines to state it&quot;</p>
+<p>Reading each sentence:</p>
+<ul>
+<li>Sentence 1: &quot;rivers move their gravel about, so a crossing is maintained or it quietly stops being one&quot; - explicitly states the implication</li>
+<li>Sentence 2: &quot;and the question of who maintains it is one of the oldest arguments on paper&quot; - complete thought</li>
+<li>Sentence 3: &quot;English court rolls spend centuries on it: this parish presents that parish over the ruin of a ford both of them use, and each is certain the duty lies across the water&quot; - explicit, not stopped short</li>
+<li>Sentence 4: &quot;Parliament ruled on who repairs bridges in 1531, and the rolls after 1531 look remarkably like the rolls before&quot; - explicitly states outcome (no change)</li>
+<li>Sentence 5 (closing): &quot;As far as I can find out, nothing has ever settled such a quarrel except a person both sides trust, and those have always been in shorter supply than gravel&quot; - explicitly states the implication (trustworthy people are rare)</li>
+</ul>
+<p><strong>Rule 2: cute-cryptic-closer</strong> - &quot;A closing line must land on a fact&quot;</p>
 <p>The closing line explicitly lands on a clear fact: people worthy of trust are in shorter supply than gravel as a maintenance resource.</p>
 <p>Neither rule is violated in this file. The prose is clear and explicit, with no implications left hanging and no cryptic or overly cute closing.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

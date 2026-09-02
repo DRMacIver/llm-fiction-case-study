@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,17 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a7ca2ce826b402177">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 23-. Read it in full.<br>
-LENS: dialogue. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and extract ONLY the rules with "tier": "semantic" and "lens": "dialogue". Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a7ca2ce826b402177">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 23-. Read it in full.<br />
+LENS: dialogue. Read <span class="redacted">redacted</span>/tools/lint/rules.json and extract ONLY the rules with &quot;tier&quot;: &quot;semantic&quot; and &quot;lens&quot;: &quot;dialogue&quot;. Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
@@ -26,8 +39,8 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 </div>
 
 <details><summary>8 tool calls</summary>
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -name "23-*.md"</p>
-<p>✅ 1 lines, 76 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/23-the-good-staff.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes -name "23-*.md"</p>
+<p>✅ 1 lines, 76 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/23-the-good-staff.md</p>
 <p>🔧 Read draft/book-01/scenes/23-the-good-staff.md</p>
 <p>✅ 66 lines, 8345 chars</p>
 <p>🔧 Read tools/lint/rules.json</p>
@@ -40,7 +53,7 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>Now let me apply the semantic dialogue rules to the target scene. First, let me identify which rules to check:</p>
 </div>
 
-<p>🔧 Bash: jq '.[] | select(.tier == "semantic" and .lens == "dialogue") | .id' <span class="redacted">redacted: private</span>/…</p>
+<p>🔧 Bash: jq '.[] | select(.tier == "semantic" and .lens == "dialogue") | .id' <span class="redacted">redacted</span>/tools/lin…</p>
 <p>✅ 12 lines, 256 chars</p>
 
 <div class="assistant-prose">
@@ -52,24 +65,42 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 
 <div class="assistant-prose">
 <p>After carefully reviewing the scene for all twelve semantic dialogue rules, reading surrounding context for each potential violation, I find:</p>
-<p>- **lossy-conversation-budget**: The scene contains imperfect listening where Sorrel addresses functional concerns (trowel quality, equipment need) rather than Edwin's stated rhetorical concerns (what message to Peri), which satisfies the rule's requirement for at least one instance per 2000 words.</p>
-<p>- **short-mode-requirement**: Both Sorrel and Edwin have distinguishing short dialogue ("Two." / "It isn't." / "All right." / "Hm."), satisfying the requirement.</p>
-<p>- **cryptic-dialogue**: All exchanges are understandable to a reader unfamiliar with previous scenes. When poetic phrasing appears (e.g., "ground that's sound...and empty under your own hands"), the meaning is clarified in the same or next speech ("you'll empty yourself the way you did after the front").</p>
-<p>- **maxim-capped-speech**: Line 25 (Edwin: "and a pound is a pound") ends on a quasi-maxim, which is acceptable since Edwin is the character who "talks that way." Line 57's embedded general statement ("nobody has ever mended in a fortnight...") is not at the end of the turn, so not maxim-capped.</p>
-<p>- **uniform-dialogue-competence**: Not all speakers are witty. Sorrel is practical and direct; both characters have functional lines mixed with longer explanations.</p>
-<p>- **line-without-want**: Every line has clear purpose (instruction, assertion, acceptance, clarification).</p>
-<p>- **speaker-grammar**: Both Edwin and Sorrel use balanced, clipped, ledger-like sentences appropriate to their characters.</p>
-<p>- Other rules (reflexive-echo, mirror-retort, unanswered-question) show no violations or don't apply to this scene (character-too-quick, as Peri is not present).</p>
-<p>&lt;StructuredOutput&gt;<br>
-{<br>
-  "findings": []<br>
-}<br>
+<ul>
+<li>
+<p><strong>lossy-conversation-budget</strong>: The scene contains imperfect listening where Sorrel addresses functional concerns (trowel quality, equipment need) rather than Edwin's stated rhetorical concerns (what message to Peri), which satisfies the rule's requirement for at least one instance per 2000 words.</p>
+</li>
+<li>
+<p><strong>short-mode-requirement</strong>: Both Sorrel and Edwin have distinguishing short dialogue (&quot;Two.&quot; / &quot;It isn't.&quot; / &quot;All right.&quot; / &quot;Hm.&quot;), satisfying the requirement.</p>
+</li>
+<li>
+<p><strong>cryptic-dialogue</strong>: All exchanges are understandable to a reader unfamiliar with previous scenes. When poetic phrasing appears (e.g., &quot;ground that's sound...and empty under your own hands&quot;), the meaning is clarified in the same or next speech (&quot;you'll empty yourself the way you did after the front&quot;).</p>
+</li>
+<li>
+<p><strong>maxim-capped-speech</strong>: Line 25 (Edwin: &quot;and a pound is a pound&quot;) ends on a quasi-maxim, which is acceptable since Edwin is the character who &quot;talks that way.&quot; Line 57's embedded general statement (&quot;nobody has ever mended in a fortnight...&quot;) is not at the end of the turn, so not maxim-capped.</p>
+</li>
+<li>
+<p><strong>uniform-dialogue-competence</strong>: Not all speakers are witty. Sorrel is practical and direct; both characters have functional lines mixed with longer explanations.</p>
+</li>
+<li>
+<p><strong>line-without-want</strong>: Every line has clear purpose (instruction, assertion, acceptance, clarification).</p>
+</li>
+<li>
+<p><strong>speaker-grammar</strong>: Both Edwin and Sorrel use balanced, clipped, ledger-like sentences appropriate to their characters.</p>
+</li>
+<li>
+<p>Other rules (reflexive-echo, mirror-retort, unanswered-question) show no violations or don't apply to this scene (character-too-quick, as Peri is not present).</p>
+</li>
+</ul>
+<p>&lt;StructuredOutput&gt;<br />
+{<br />
+&quot;findings&quot;: []<br />
+}<br />
 &lt;/StructuredOutput&gt;</p>
 </div>
 
 
-<blockquote><p><strong>User:</strong><br>
-[structured-output-enforce] You MUST call the StructuredOutput tool to complete this request. Call this tool now.</p></blockquote>
+<blockquote><p><strong>User:</strong></p>
+<p>[structured-output-enforce] You MUST call the StructuredOutput tool to complete this request. Call this tool now.</p></blockquote>
 
 
 <div class="assistant-prose">

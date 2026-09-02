@@ -7,42 +7,54 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a653bb8dbe403bd09">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and <span class="redacted">redacted: private</span>/draft/book-01/scenes/10-more-work-than-the-day-needed.md. Also read <span class="redacted">redacted: private</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope "scene") the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.<br>
-<br>
-Candidates:<br>
-[<br>
- {<br>
-  "rule_id": "implication-stopped-short",<br>
-  "quote": "He turned the box round once, read the direction again, and turned it back.",<br>
-  "reason": "The sentence sets up an implication (uncertainty or reluctance about the parcel and its destination through the action of checking then rechecking) but does not explicitly state it; the preceding context of deliberate avoidance does not fully cash out why he checks and rechecks."<br>
- },<br>
- {<br>
-  "rule_id": "near-idiom-general",<br>
-  "quote": "the hail Sorrel had broken herself",<br>
-  "reason": "Phrasing is unclear; 'broken herself' in relation to 'hail' doesn't clearly convey whether Sorrel was injured during the hail or caused damage."<br>
- },<br>
- {<br>
-  "rule_id": "missing-qualifier",<br>
-  "quote": "the tail of his own Pellings rain",<br>
-  "reason": "'Pellings' is unexplained; without context, the reader cannot determine what 'Pellings rain' refers to or what 'his own' means."<br>
- },<br>
- {<br>
-  "rule_id": "wants-gerund-budget",<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-  "reason": "Narration using 'wanted doing' construction for a task being described; rule specifies never as narration's own voice for tasks the narrator is describing."<br>
- },<br>
- {<br>
-  "rule_id": "system-terminology",<br>
-  "quote": "a feud",<br>
-  "reason": "Unclear referent; 'feud' may be wrong noun for what Edwin is managing"<br>
- }<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a653bb8dbe403bd09">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted</span>/tools/lint/rules.json and <span class="redacted">redacted</span>/draft/book-01/scenes/10-more-work-than-the-day-needed.md. Also read <span class="redacted">redacted</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope &quot;scene&quot;) the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.</p>
+<p>Candidates:<br />
+[<br />
+{<br />
+&quot;rule_id&quot;: &quot;implication-stopped-short&quot;,<br />
+&quot;quote&quot;: &quot;He turned the box round once, read the direction again, and turned it back.&quot;,<br />
+&quot;reason&quot;: &quot;The sentence sets up an implication (uncertainty or reluctance about the parcel and its destination through the action of checking then rechecking) but does not explicitly state it; the preceding context of deliberate avoidance does not fully cash out why he checks and rechecks.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;near-idiom-general&quot;,<br />
+&quot;quote&quot;: &quot;the hail Sorrel had broken herself&quot;,<br />
+&quot;reason&quot;: &quot;Phrasing is unclear; 'broken herself' in relation to 'hail' doesn't clearly convey whether Sorrel was injured during the hail or caused damage.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;missing-qualifier&quot;,<br />
+&quot;quote&quot;: &quot;the tail of his own Pellings rain&quot;,<br />
+&quot;reason&quot;: &quot;'Pellings' is unexplained; without context, the reader cannot determine what 'Pellings rain' refers to or what 'his own' means.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;wants-gerund-budget&quot;,<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;reason&quot;: &quot;Narration using 'wanted doing' construction for a task being described; rule specifies never as narration's own voice for tasks the narrator is describing.&quot;<br />
+},<br />
+{<br />
+&quot;rule_id&quot;: &quot;system-terminology&quot;,<br />
+&quot;quote&quot;: &quot;a feud&quot;,<br />
+&quot;reason&quot;: &quot;Unclear referent; 'feud' may be wrong noun for what Edwin is managing&quot;<br />
+}<br />
 ]</p></blockquote>
 
 
@@ -51,21 +63,21 @@ Candidates:<br>
 </div>
 
 <details><summary>16 tool calls</summary>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json; echo "=====SCENE====="; cat "⟦redacted: pr…</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json; echo "=====SCENE====="; cat "<span class="redacted">redacted</span>/draft/book-…</p>
 <p>✅ 59 lines, 2235 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat "draft/book-01/scenes/10-more-work-than-the-day-needed.md"; e…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat "draft/book-01/scenes/10-more-work-than-the-day-needed.md"; echo "====…</p>
 <p>✅ 123 lines, 24141 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 -c " import json;d=json.load(open('tools/lint/rules.json'…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 -c " import json;d=json.load(open('tools/lint/rules.json')) for r…</p>
 <p>✅ 251 lines, 11873 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "feud" notes/canon/ plans/ <span class="redacted">unpublished</span> draft/book-01/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rn "feud" notes/canon/ plans/ <span class="unpub-tag">unpublished</span> draft/book-01/ --include…</p>
 <p>✅ 7 lines, 1515 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rni "feud" notes plans draft | head -30; echo ---; grep -rn…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rni "feud" notes plans draft | head -30; echo ---; grep -rni "pellin…</p>
 <p>✅ 75 lines, 11804 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rni "hail" notes/canon | head -20</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rni "hail" notes/canon | head -20</p>
 <p>✅ 9 lines, 925 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git grep -n "Sorrel had broken herself" $(git rev-list -n1 HEAD~3…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git grep -n "Sorrel had broken herself" $(git rev-list -n1 HEAD~3) -- chap…</p>
 <p>✅ 1 lines, 762 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"verdicts": [{"rule_id": "implication-stopped-short", "quo…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

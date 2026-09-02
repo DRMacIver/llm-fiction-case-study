@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-abe448966628545ac">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="wit", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/10-more-work-than-the-day-needed.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-abe448966628545ac">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;wit&quot;, and scope includes &quot;scene&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/scenes/10-more-work-than-the-day-needed.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -31,11 +44,11 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 </div>
 
 <details><summary>6 tool calls</summary>
-<p>🔧 Bash: grep -n '"tier": "semantic"' <span class="redacted">redacted: private</span>/tools/lint/rules.json | head -20</p>
+<p>🔧 Bash: grep -n '"tier": "semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json | head -20</p>
 <p>✅ 20 lines, 535 chars</p>
-<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json') as f…</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
 <p>✅ 11 lines, 295 chars — Semantic wit-lens rules with 'scene' in scope: /   - triad-swerve-budget /   - long-build-short-drop-budget</p>
-<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json') as f…</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
 <p>✅ 47 lines, 5209 chars — ============================================================ / Rule ID: ornament-wit / Name: Ornament-wit instead of event-wit</p>
 </details>
 
@@ -43,7 +56,7 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>Now I'll analyze the scene against all 10 semantic wit-lens rules. Let me read each rule's full definition and carefully search the scene text.</p>
 </div>
 
-<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json') as f…</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
 <p>✅ 29 lines, 1720 chars — triad-swerve-budget: Triad with a third-item swerve /   Description: A list of three where the third item confesses or swerves ('frequently, with fascination, and never ... / </p>
 
 <div class="assistant-prose">
@@ -55,18 +68,40 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 
 <div class="assistant-prose">
 <p>After careful analysis of the scene against all 10 semantic wit-lens rules, I have found no violations. Here's my systematic check:</p>
-<p>1. **triad-swerve-budget**: "ten parishes, a frost list, and a feud" is a list of three, but the third item is consistent, not swerving or confessing.</p>
-<p>2. **long-build-short-drop-budget**: The pattern appears at most once or twice, well within the max of 2 per scene.</p>
-<p>3. **quiet-the-way-budget**: The construction "quiet the way X is quiet" does not appear.</p>
-<p>4. **aphorism-budget**: "there is no work in a settled high; it happened most years about now, and most years he was glad of it" is one aphorism, tied to Edwin's experience. Within max of 1 per scene.</p>
-<p>5. **ornament-wit**: All witty moments are event-sourced (Sorrel's raised eyebrow, the absence, Edwin's avoidance) rather than narrator decoration.</p>
-<p>6. **jukebox-flourish**: "had a list as long as the road" is functional—it explains why the roof repair must be delayed—not purely ornamental or transplantable.</p>
-<p>7. **wrong-world-metaphor**: No metaphors from misplaced institutions or economics.</p>
-<p>8. **joke-rhythm-no-logic**: All lines have clear propositions when restated plainly.</p>
-<p>9. **weak-comic-beat-flat**: No comic beats reported in flat analytical register.</p>
-<p>10. **joke-character-could-not-make**: Minimal dialogue; no violations.</p>
+<ol>
+<li>
+<p><strong>triad-swerve-budget</strong>: &quot;ten parishes, a frost list, and a feud&quot; is a list of three, but the third item is consistent, not swerving or confessing.</p>
+</li>
+<li>
+<p><strong>long-build-short-drop-budget</strong>: The pattern appears at most once or twice, well within the max of 2 per scene.</p>
+</li>
+<li>
+<p><strong>quiet-the-way-budget</strong>: The construction &quot;quiet the way X is quiet&quot; does not appear.</p>
+</li>
+<li>
+<p><strong>aphorism-budget</strong>: &quot;there is no work in a settled high; it happened most years about now, and most years he was glad of it&quot; is one aphorism, tied to Edwin's experience. Within max of 1 per scene.</p>
+</li>
+<li>
+<p><strong>ornament-wit</strong>: All witty moments are event-sourced (Sorrel's raised eyebrow, the absence, Edwin's avoidance) rather than narrator decoration.</p>
+</li>
+<li>
+<p><strong>jukebox-flourish</strong>: &quot;had a list as long as the road&quot; is functional—it explains why the roof repair must be delayed—not purely ornamental or transplantable.</p>
+</li>
+<li>
+<p><strong>wrong-world-metaphor</strong>: No metaphors from misplaced institutions or economics.</p>
+</li>
+<li>
+<p><strong>joke-rhythm-no-logic</strong>: All lines have clear propositions when restated plainly.</p>
+</li>
+<li>
+<p><strong>weak-comic-beat-flat</strong>: No comic beats reported in flat analytical register.</p>
+</li>
+<li>
+<p><strong>joke-character-could-not-make</strong>: Minimal dialogue; no violations.</p>
+</li>
+</ol>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

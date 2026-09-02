@@ -7,72 +7,84 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are preparing a voice-differentiation brief for a fiction project…</h1><div class="subagent-header"><a href="../10c1dd77-c31a-4be9-a7b6-23651a4792b4.html#agent-a99a218e023faaa26">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are preparing a voice-differentiation brief for a fiction project at <span class="redacted">redacted: private</span>.<br>
-<br>
-Read <span class="redacted">redacted: private</span>/CLAUDE.md, <span class="redacted">redacted: private</span>/notes/voices.md, <span class="redacted">redacted: private</span>/notes/llm-tells.md, <span class="redacted">redacted: private</span>/notes/canon/characters/*.md, and sample dialogue widely across <span class="redacted">redacted: private</span>/chapters/*.md.<br>
-<br>
-The author has identified a specific problem, already measured. In dialogue words per 1000, <span class="redacted">redacted: character</span> <span class="redacted">redacted: character</span> vs Edwin Moss:<br>
-  mean words per line 26.4 vs 17.8; "because" 6.0 vs 4.7; polysyndetic " and " 65.8 vs 41.6; book/write/written 11.3 vs 12.8; numbers 39.2 vs 32.6.<br>
-<span class="redacted">redacted: character</span> is out-Edwining Edwin on every marker of his own voice. Four shared constructions do the blending:<br>
- (1) the self-justifying imperative — short command plus a "because" clause aimed at an adversarial future reader;<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>;<br>
- (3) numbers as the payload of the line — both open on a bare figure and unpack it;<br>
- (4) closed utterances — every line is a complete pre-defended ruling, nobody takes up anybody's word, so scenes read as adjacent monologues. THIS is the root cause of the abruptness the author dislikes. The problem is not clipped sentences; it is no uptake.<br>
-<br>
-Proposed separation axes (evaluate them against the text, do not just repeat them):<br>
- - Edwin records, <span class="redacted">redacted: character</span> witnesses: his conscience is the checkable document, hers is the thing said out loud in front of people (ch. 029, her grandmother's-people speech, is the seed and the rest of the book contradicts it).<br>
- - Authority by measurement (Edwin, distrusts unexplained received rules) vs authority by transmission (<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
- - <span class="redacted">redacted: character</span> counts people, days, miles, stitches; Edwin measures rates, figures, yards per day. She never quotes an assay figure; he never rosters.<br>
- - Give the subordinate clause to Edwin and the full stop to <span class="redacted">redacted: character</span>. Her three best lines are uninflected: "It's a hand. That's all." / "West." / "It could be me."<br>
-<br>
-Write <span class="redacted">redacted: private</span> containing:<br>
- 1. A per-character voice fingerprint for Edwin, <span class="redacted">redacted: character</span>, Peri, Mattie Ordish (and briefly Sorrel, <span class="redacted">redacted: character</span>, Ferrin): characteristic sentence shape, what they reach for as warrant, what kind of number they use, what they do at an emotional peak, what they NEVER say.<br>
- 2. The four blending constructions above with 2 real quoted examples each, cited chapter:line.<br>
- 3. A contrast table: for each pair of major characters, the single audible difference a reader could use to tell them apart with the dialogue tags removed.<br>
- 4. A short list of what is currently MISSING from all of them: where do they show personality, care about something, or have an emotion that is not competence-flavoured. Be specific and unsparing.<br>
- 5. The uptake problem: concrete techniques for real conversational uptake that suit this book and would not violate Voice D.<br>
-<br>
-Be concrete and quote the book constantly. Return only the path.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are preparing a voice-differentiation brief for a fiction project…</h1><div class="subagent-header"><a href="../10c1dd77-c31a-4be9-a7b6-23651a4792b4.html#agent-a99a218e023faaa26">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-27</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are preparing a voice-differentiation brief for a fiction project at <span class="redacted">redacted</span>.</p>
+<p>Read <span class="redacted">redacted</span>/CLAUDE.md, <span class="redacted">redacted</span>/notes/voices.md, <span class="redacted">redacted</span>/notes/llm-tells.md, <span class="redacted">redacted</span>/notes/canon/characters/<em>.md, and sample dialogue widely across <span class="redacted">redacted</span>/chapters/</em>.md.</p>
+<p>The author has identified a specific problem, already measured. In dialogue words per 1000, <span class="redacted">redacted</span> <span class="redacted">redacted</span> vs Edwin Moss:<br />
+mean words per line 26.4 vs 17.8; &quot;because&quot; 6.0 vs 4.7; polysyndetic &quot; and &quot; 65.8 vs 41.6; book/write/written 11.3 vs 12.8; numbers 39.2 vs 32.6.<br />
+<span class="redacted">redacted</span> is out-Edwining Edwin on every marker of his own voice. Four shared constructions do the blending:<br />
+(1) the self-justifying imperative — short command plus a &quot;because&quot; clause aimed at an adversarial future reader;<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>;<br />
+(3) numbers as the payload of the line — both open on a bare figure and unpack it;<br />
+(4) closed utterances — every line is a complete pre-defended ruling, nobody takes up anybody's word, so scenes read as adjacent monologues. THIS is the root cause of the abruptness the author dislikes. The problem is not clipped sentences; it is no uptake.</p>
+<p>Proposed separation axes (evaluate them against the text, do not just repeat them):</p>
+<ul>
+<li>Edwin records, <span class="redacted">redacted</span> witnesses: his conscience is the checkable document, hers is the thing said out loud in front of people (ch. 029, her grandmother's-people speech, is the seed and the rest of the book contradicts it).</li>
+<li>Authority by measurement (Edwin, distrusts unexplained received rules) vs authority by transmission (<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted</span> counts people, days, miles, stitches; Edwin measures rates, figures, yards per day. She never quotes an assay figure; he never rosters.</li>
+<li>Give the subordinate clause to Edwin and the full stop to <span class="redacted">redacted</span>. Her three best lines are uninflected: &quot;It's a hand. That's all.&quot; / &quot;West.&quot; / &quot;It could be me.&quot;</li>
+</ul>
+<p>Write <span class="redacted">redacted: private</span> containing:</p>
+<ol>
+<li>A per-character voice fingerprint for Edwin, <span class="redacted">redacted</span>, Peri, Mattie Ordish (and briefly Sorrel, <span class="redacted">redacted</span>, Ferrin): characteristic sentence shape, what they reach for as warrant, what kind of number they use, what they do at an emotional peak, what they NEVER say.</li>
+<li>The four blending constructions above with 2 real quoted examples each, cited chapter:line.</li>
+<li>A contrast table: for each pair of major characters, the single audible difference a reader could use to tell them apart with the dialogue tags removed.</li>
+<li>A short list of what is currently MISSING from all of them: where do they show personality, care about something, or have an emotion that is not competence-flavoured. Be specific and unsparing.</li>
+<li>The uptake problem: concrete techniques for real conversational uptake that suit this book and would not violate Voice D.</li>
+</ol>
+<p>Be concrete and quote the book constantly. Return only the path.</p></blockquote>
 
 
 <details><summary>16 tool calls</summary>
-<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span> cd <span class="redacted">redacted: private</span> ls chapters | head -50 wc -l notes/vo…</p>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span> cd <span class="redacted">redacted</span> ls chapters | head -50 wc -l notes/vo…</p>
 <p>🔧 Read notes/voices.md</p>
 <p>🔧 Read notes/llm-tells.md</p>
 <p>✅ 34 lines, 784 chars</p>
 <p>✅ 220 lines, 14313 chars</p>
 <p>✅ 509 lines, 31773 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> ls notes/canon/characters/ echo --- for f in notes/canon/character…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> ls notes/canon/characters/ echo --- for f in notes/canon/characters/*.md; d…</p>
 <p>✅ 49 lines, 2225 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for f in edwin <span class="redacted">redacted: character</span> peri mattie-ordish sorrel ⟦re…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> for f in edwin <span class="redacted">redacted</span> peri mattie-ordish sorrel <span class="redacted">redacted</span> ferrin; do e…</p>
 <p>✅ 38 lines, 1809 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for f in edwin <span class="redacted">redacted: character</span> peri mattie-ordish sorrel; do…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> for f in edwin <span class="redacted">redacted</span> peri mattie-ordish sorrel; do echo "=== $f (full…</p>
 <p>✅ 110 lines, 5389 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for f in edwin <span class="redacted">redacted: character</span> peri mattie-ordish sorrel; do…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> for f in edwin <span class="redacted">redacted</span> peri mattie-ordish sorrel; do echo "=== $f ===" g…</p>
 <p>✅ 10 lines, 422 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '376,420p' notes/canon/characters/edwin.md echo "=== ⟦redac…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> sed -n '376,420p' notes/canon/characters/edwin.md echo "=== <span class="redacted">redacted</span> ==="…</p>
 <p>✅ 183 lines, 10116 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Good, I have character voice notes. Now let's pull actual dialogue lines from chapters, especially <span class="redacted">redacted: character</span>-heavy ones (012, 019, 029) and Edwin-heavy ones.</p>
+<p>Good, I have character voice notes. Now let's pull actual dialogue lines from chapters, especially <span class="redacted">redacted</span>-heavy ones (012, 019, 029) and Edwin-heavy ones.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== ch 012 <span class="redacted">redacted: character</span> lines ===" grep -n "⟦redact…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== ch 012 <span class="redacted">redacted</span> lines ===" grep -n "<span class="redacted">redacted</span>" chapters/012-th…</p>
 <p>✅ 27 lines, 6232 chars</p>
 
 <div class="assistant-prose">
 <p>Good material. Let me check ch 029 (grandmother's-people speech) and Edwin's ledger lines, plus a couple more for Peri/Mattie contrast.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== ch029 <span class="redacted">redacted: character</span> ===" grep -n "⟦redacted: cha…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== ch029 <span class="redacted">redacted</span> ===" grep -n "<span class="redacted">redacted</span>\|grandmother" chapters/…</p>
 <p>✅ 27 lines, 5803 chars</p>
 
 <div class="assistant-prose">
@@ -81,6 +93,6 @@ Be concrete and quote the book constantly. Return only the path.</p></blockquote
 
 <p>🔧 Write <span class="redacted">redacted: private</span></p>
 <p>✅ 1 lines, 220 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"path": "<span class="redacted">redacted: private</span>"})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

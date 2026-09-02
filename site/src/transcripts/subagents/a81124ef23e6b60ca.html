@@ -7,45 +7,56 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>This is for a canon-consistency audit of a fantasy novel draft (autor…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a81124ef23e6b60ca">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-This is for a canon-consistency audit of a fantasy novel draft (autoroad project). Read these canon files in full:<br>
-<span class="redacted">redacted: private</span>/notes/canon/world/timeline.md<br>
-<span class="redacted">redacted: private</span>/notes/canon/world/dungeons.md<br>
-<span class="redacted">redacted: private</span>/notes/canon/world/farm-teaching.md<br>
-<span class="redacted">redacted: private</span>/notes/canon/world/magic-explained.md<br>
-<span class="redacted">redacted: private</span>/notes/canon/characters/<span class="redacted">redacted: character</span>.md<br>
-<span class="redacted">redacted: private</span>/notes/canon/characters/mattie-ordish.md<br>
-<span class="redacted">redacted: private</span>/notes/canon/characters/minor.md<br>
-<span class="redacted">redacted: private</span>/notes/canon/characters/peri.md<br>
-<span class="redacted">redacted: private</span>/notes/canon/characters/edwin.md<br>
-<span class="redacted">redacted: private</span>/notes/canon/deferred-questions.md <span class="redacted">unpublished</span><br>
-<span class="redacted">redacted: private</span>/draft/book-01/SCENES.md<br>
-<br>
-Also read <span class="redacted">redacted: private</span>/notes/canon/system.md sections on [Seal of the Loom] cooldown convention (search "Seal of the Loom", "cooldown", "midnight") if not already covered above (you likely won't need to re-read all 1184 lines; use grep/offset reads to find the Seal of the Loom cooldown rules, healing rules, and farm-magic rulings referenced there).<br>
-<br>
-I need a terse, dense digest for cross-referencing against six new draft scenes (63-68) about a flooding/dungeon/fen sequence around Day 29-30 (13-14 Harvestmonth). Extract and quote:<br>
-<br>
-1. The exact Seal of the Loom cooldown convention/arithmetic rule (inclusive counting, midnight clearing) — when exactly does it become available again, and any rule about it "not being used."<br>
-2. Timeline entries for Day 29 (13 Harvestmonth) and Day 30 (14 Harvestmonth) specifically — what canon says happens on those days.<br>
-3. Any rule about <span class="redacted">redacted: object</span> (creatures) and water, and whether anyone is supposed to comment cleverly on it (the task brief says "a <span class="redacted">redacted: object</span> refuses water in front of witnesses and nobody clever comments" is a binding rule — find any related canon).<br>
-4. Any rule about the "engine" (improbability engine) never acting "at a mouth" — find related canon in magic-explained.md or system.md.<br>
-5. <span class="redacted">redacted: mechanic</span>: what is it, how is it cast, who has taught it, any canon on Peri performing it on a Fenholt beast "after <span class="redacted">redacted: event</span>."<br>
-6. Healing rules generally — is there a healing skill/ability in this world, and any canon on why its absence in an injury scene would be "unremarked."<br>
-7. Any canon facts about: nine steadings (a list), roster numbers, leakage counts, <span class="redacted">redacted: character</span>, Mattie Ordish, minor characters (especially an alehouse keeper and a character named Sennet), Edwin's known statements on a causeway.<br>
-8. Anything from SCENES.md's "act-two binding list at its foot" — quote it in full, it's explicitly the binding constraint list for these scenes.<br>
-9. deferred-questions.md — list every entry, terse, so I can check whether scenes 63-68 might resolve any of them.<br>
-<br>
-Be exhaustive on quotes for items 1, 3, 4, 8 especially — these are exact binding rules. Keep it dense; another agent will use this to check consistency, not read prose.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>This is for a canon-consistency audit of a fantasy novel draft (autor…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a81124ef23e6b60ca">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-30</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>This is for a canon-consistency audit of a fantasy novel draft (autoroad project). Read these canon files in full:<br />
+<span class="redacted">redacted</span>/notes/canon/world/timeline.md<br />
+<span class="redacted">redacted</span>/notes/canon/world/dungeons.md<br />
+<span class="redacted">redacted</span>/notes/canon/world/farm-teaching.md<br />
+<span class="redacted">redacted</span>/notes/canon/world/magic-explained.md<br />
+<span class="redacted">redacted</span>/notes/canon/characters/<span class="redacted">redacted</span>.md<br />
+<span class="redacted">redacted</span>/notes/canon/characters/mattie-ordish.md<br />
+<span class="redacted">redacted</span>/notes/canon/characters/minor.md<br />
+<span class="redacted">redacted</span>/notes/canon/characters/peri.md<br />
+<span class="redacted">redacted</span>/notes/canon/characters/edwin.md<br />
+<span class="redacted">redacted</span>/notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span><br />
+<span class="redacted">redacted</span>/draft/book-01/SCENES.md</p>
+<p>Also read <span class="redacted">redacted</span>/notes/canon/system.md sections on [Seal of the Loom] cooldown convention (search &quot;Seal of the Loom&quot;, &quot;cooldown&quot;, &quot;midnight&quot;) if not already covered above (you likely won't need to re-read all 1184 lines; use grep/offset reads to find the Seal of the Loom cooldown rules, healing rules, and farm-magic rulings referenced there).</p>
+<p>I need a terse, dense digest for cross-referencing against six new draft scenes (63-68) about a flooding/dungeon/fen sequence around Day 29-30 (13-14 Harvestmonth). Extract and quote:</p>
+<ol>
+<li>The exact Seal of the Loom cooldown convention/arithmetic rule (inclusive counting, midnight clearing) — when exactly does it become available again, and any rule about it &quot;not being used.&quot;</li>
+<li>Timeline entries for Day 29 (13 Harvestmonth) and Day 30 (14 Harvestmonth) specifically — what canon says happens on those days.</li>
+<li>Any rule about <span class="redacted">redacted</span> (creatures) and water, and whether anyone is supposed to comment cleverly on it (the task brief says &quot;a <span class="redacted">redacted</span> refuses water in front of witnesses and nobody clever comments&quot; is a binding rule — find any related canon).</li>
+<li>Any rule about the &quot;engine&quot; (improbability engine) never acting &quot;at a mouth&quot; — find related canon in magic-explained.md or system.md.</li>
+<li><span class="redacted">redacted</span>: what is it, how is it cast, who has taught it, any canon on Peri performing it on a Fenholt beast &quot;after <span class="redacted">redacted</span>.&quot;</li>
+<li>Healing rules generally — is there a healing skill/ability in this world, and any canon on why its absence in an injury scene would be &quot;unremarked.&quot;</li>
+<li>Any canon facts about: nine steadings (a list), roster numbers, leakage counts, <span class="redacted">redacted</span>, Mattie Ordish, minor characters (especially an alehouse keeper and a character named Sennet), Edwin's known statements on a causeway.</li>
+<li>Anything from SCENES.md's &quot;act-two binding list at its foot&quot; — quote it in full, it's explicitly the binding constraint list for these scenes.</li>
+<li>deferred-questions.md — list every entry, terse, so I can check whether scenes 63-68 might resolve any of them.</li>
+</ol>
+<p>Be exhaustive on quotes for items 1, 3, 4, 8 especially — these are exact binding rules. Keep it dense; another agent will use this to check consistency, not read prose.</p></blockquote>
 
 
 <details><summary>50 tool calls</summary>
-<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.md notes/canon/characters/mat…</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.md notes/canon/characters/mattie-…</p>
 <p>✅ 12 lines, 470 chars —      865 notes/canon/world/timeline.md /      807 notes/canon/world/dungeons.md /      278 notes/canon/world/farm-teaching.md</p>
 <p>🔧 Bash: cat notes/canon/world/timeline.md</p>
 <p>✅ 41 lines, 2220 chars</p>
@@ -55,7 +66,7 @@ Be exhaustive on quotes for items 1, 3, 4, 8 especially — these are exact bind
 <p>✅ 278 lines, 17498 chars</p>
 <p>🔧 Bash: cat notes/canon/world/magic-explained.md</p>
 <p>✅ 301 lines, 16987 chars</p>
-<p>🔧 Bash: cat notes/canon/deferred-questions.md <span class="redacted">unpublished</span> draft/book-01/SCENES.md</p>
+<p>🔧 Bash: cat notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> draft/book-01/SCENES.md</p>
 <p>✅ 38 lines, 2127 chars</p>
 <p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
 <p>✅ 41 lines, 2220 chars</p>
@@ -67,7 +78,7 @@ Be exhaustive on quotes for items 1, 3, 4, 8 especially — these are exact bind
 <p>✅ 866 lines, 56291 chars</p>
 <p>🔧 Read notes/canon/world/dungeons.md</p>
 <p>✅ 808 lines, 49227 chars</p>
-<p>🔧 Read notes/canon/deferred-questions.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span></p>
 <p>🔧 Read draft/book-01/SCENES.md</p>
 <p>✅ 152 lines, 16105 chars</p>
 <p>✅ 216 lines, 18937 chars</p>
@@ -83,7 +94,7 @@ Be exhaustive on quotes for items 1, 3, 4, 8 especially — these are exact bind
 <p>✅ 80 lines, 5434 chars</p>
 <p>🔧 Read notes/canon/characters/minor.md</p>
 <p>✅ 160 lines, 10711 chars</p>
-<p>🔧 Bash: grep -n "nine steadings\|nine head\|steadings off" -r notes/canon/ ; echo ---; grep -n "⟦…</p>
+<p>🔧 Bash: grep -n "nine steadings\|nine head\|steadings off" -r notes/canon/ ; echo ---; grep -n "<span class="redacted">redacted</span>…</p>
 <p>✅ 8 lines, 561 chars</p>
 <p>🔧 Bash: grep -n "causeway" notes/canon/characters/edwin.md</p>
 <p>✅ 1 lines, 31 chars</p>
@@ -98,91 +109,114 @@ Be exhaustive on quotes for items 1, 3, 4, 8 especially — these are exact bind
 </details>
 
 <div class="assistant-prose">
-<p># Canon Digest for Scenes 63–68 (Day 29–30 flooding/dungeon/fen sequence)</p>
-<p>## 1. [Seal of the Loom] cooldown — exact rule (system.md ~L674-745)<br>
-- 30-day cooldown, **inclusive of day used, clears at a midnight**. Cast morning of Day 1 (15 Cornmonth) = day 1 of thirty. "Thirty days at midnight ... <span class="redacted">redacted sentence: unpublished prose</span><br>
-- **Returns at midnight beginning 14 Harvestmonth = Day 30** — i.e., it clears exactly at the midnight that starts the night your scenes cover (the night of 13/14 Harvestmonth, <span class="redacted">redacted: event</span> night).<br>
-- Midnight is **local/bearer's midnight**, not simultaneous continent-wide.<br>
-- **Unused**: Established explicitly — the Seal comes back at midnight and Peri does NOT use it. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: object</span> with a sword instead. SCENES.md binding (scene 66 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>## 2. Timeline: Day 29 (13 Harvestmonth) and Day 30 (14 Harvestmonth) — exact (timeline.md)<br>
-**Day 29 (13 Harvestmonth):** <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> fetches <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Day 30 (14 Harvestmonth) — <span class="redacted">redacted: event</span> night proper:** <span class="redacted">redacted: object</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: object</span>, then <span class="redacted">redacted: object</span> up the near bank of <span class="redacted">redacted: place</span> on the village side; <span class="redacted">redacted: character</span>'s hook, Peri's thrust into <span class="redacted">redacted: place</span>; <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s arm, <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: object</span><span class="redacted">redacted sentence: unpublished prose</span> It might be four" (ch.016). Same date in vale: Sorrel's frost on orchard tops (ch.020).</p>
-<p>## 3. <span class="redacted">redacted: object</span> and water<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- SCENES.md's Act-two binding list explicitly lists as owed: "the <span class="redacted">redacted: object</span> refusing water" alongside other sealed-Deep furniture (slate, candle, `[Holm Deep.]`, lamps gone yellow, air direction always stated) with the instruction "**nobody explains anything about the hole**." I found no separate line stating "nobody clever comments" verbatim, but it follows directly from the file's governing rule under Break mechanics/Open questions: canon stays agnostic about the Deep's nature, no character theorizes about mechanism, and (dungeons.md "Open questions") no evidence/connections may be added beyond the sealed clue rules — i.e., no character is to offer a clever causal theory about why a <span class="redacted">redacted: object</span> refuses water. Treat "no clever comment" as an inference from the sealed-material discipline, not a separately quoted rule.</p>
-<p>## 4. The improbability engine never acts "at a mouth"<br>
-Exact SCENES.md binding (quoted in full, from the top-of-file binding list, applies to whole Book):<br>
-<span class="redacted">redacted sentence: unpublished prose</span> The three letters and the parcel are real and mundane and are never logged or narrated as the engine."</p>
-<p>Act-two-specific binding (SCENES.md L115-117):<br>
-&gt; "The engine: one small move this act (38, the oak already cut), on Edwin's chore and time only; Edwin names it aloud once (54); **never near a mouth, a site, a letter's contents or a reading.**"</p>
-<p>Sealed-file cross-references (content not quoted, per project rule — never state sealed content) confirm this rule is load-bearing: `notes/sealed/destiny.md` L1189 "Nothing at a mouth is ever the engine's, and no findable cause"; `notes/sealed/deeps.md` and `COHERENCE.md` repeatedly state "no soil finding is ever made at a mouth" and "<span class="redacted">redacted: character</span>'s competence at a mouth is her trade's, never her [people's/anything else's]." **Do not attribute anything at Holm Deep's mouth, or any coincidence in scenes 63-68 at the mouth, to the improbability engine or to any hidden cause — it must read as pure competence/luck-of-the-work.**</p>
-<p>## 5. <span class="redacted">redacted: mechanic</span><br>
-- **What/how** (farm-teaching.md): one of the parish five. Cast on a beast going down (e.g., the draught beast lost in Plowmonth). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Costliest of the five in mana ("a few a night... <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- **Peri performing it on a Fenholt beast "after <span class="redacted">redacted: event</span>":** confirmed binding, SCENES.md L84-86: "the <span class="redacted">redacted: mechanic</span> on a Fenholt beast after <span class="redacted">redacted: event</span> (scene 66 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> So scene 66 <span class="redacted">unpublished</span> references it, scene 68 <span class="redacted">unpublished</span> (Day 30) is the actual casting on a torn ewe.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
-<p>## 6. Healing rules / no-healer-present being unremarked<br>
-- **No healing skill/ability exists at the parish/village level.** Healing is a church mystery (temple orders, oathbound); nothing below rung 3 (bone-setters/midwives/barber-surgeons — themselves oathbound with only a sliver of the mystery) exists in the countryside. Parish priests (Ferrin) have **no healing at all** — only blessings that "cost nothing, do nothing" mechanically.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s back, <span class="redacted">redacted: character</span>'s arm not usable before Frostmonth).<br>
-- SCENES.md Act-two binding (explicit, quote): **"Healing's absence unremarked: nine hurt, a bone-setter forty miles off, eight weeks in a <span class="redacted">redacted: event</span>. Nobody proposes a first-aid course; nobody says '<span class="redacted">redacted: theme</span>.'"** This is the governing instruction for scenes 63-68: any injuries (<span class="redacted">redacted: character</span>'s back, <span class="redacted">redacted: character</span>'s arm, etc., in Day 30's casualty list) get field first aid only (splinting, stopping bleeding) — no magical healing, and characters must not comment on the absence, propose a course, or invoke child-mortality rhetoric.<br>
-<span class="redacted">redacted sentence: unpublished prose</span> This is precisely the shape scenes 63-68 should dramatize without remark.</p>
-<p>## 7. Facts: nine steadings, roster, leakage, <span class="redacted">redacted: character</span>, Mattie, minor characters, Edwin/causeway<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s, the two Hobbs, the <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> "The Ordish place is not, quite" one of the nine. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span> (13th/14th), delve (21st), Fallowmonth 11 (posted 30th, six inside withy bed). Series is monotone rising to break, falling after delve — don't compare 14 to 19 as same-kind figure.<br>
-- **Roster numbers, break night:** none dead, nine hurt (two badly: <span class="redacted">redacted: character</span>'s arm, <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> 68 <span class="redacted">redacted: object</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- **<span class="redacted">redacted: character</span> <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Walks in Day 29 at 14:20 with the warning. Her bell rings at 18:00 Day 29. Her professional judgement/craft governs all mouth-reading — do not source her competence to her (sealed, undisclosed) people/background. <span class="redacted">redacted: character</span>'s hook used against <span class="redacted">redacted: object</span> on Day 30; her rule "Stranger, further, and more of them. That's the sequence."<br>
-- **Mattie Ordish:** her family's only surviving farm-magic teaching was the (sick-ewe) blessing, inherited from her grandmother via a teacher Edwin sent into the fens forty years back. Field-growth-rate protagonist for the silent-soil thread (kept separate/agnostic from the Deep thread per deferred-questions — "field/Deep corner-watch adjacency... ruled no, permanently," do not let scenes 63-68 connect them).<br>
-- **Minor characters:**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-  <span class="redacted">redacted sentence: unpublished prose</span><br>
-  - Other named hands on <span class="redacted">redacted: event</span> night: <span class="redacted">redacted: character</span> (arm opened to bone, not usable before Frostmonth), <span class="redacted">redacted: character</span> (counts, second gate, finished <span class="redacted">redacted: object</span> in <span class="redacted">redacted: place</span> by feel, disputed Peri's cut line), <span class="redacted">redacted: character</span> (in the line beside Peri), <span class="redacted">redacted: character</span> (put on her back by <span class="redacted">redacted: object</span>, bone-setter fetched), Ceddy Puckett, Coule, the sluice-keeper (braced door with furniture, killed a <span class="redacted">redacted: object</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- **Edwin's causeway statements:** No canon entry found under "causeway" specifically tied to Edwin's dialogue in edwin.md. Geography: Holm Deep reached via the Charter's **peat causeway**, "five miles and some NE," under two hours' walk; a "causeway fan ~200 yd back" from the mouth is the vent-fan evidence (dungeons.md). <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>## 8. SCENES.md act-two binding list (quoted in full, from the foot of the Act Two header)<br>
-&gt; **Binding on the stretch, in addition to the list above:**<br>
-&gt; - The destiny is printed (`[Destiny: show Peri Millbrook how to save the world.]`); nobody says "pending"; the one-binding clause is not remarked on again.<br>
-<span class="redacted">redacted sentence: unpublished prose</span> Ferrin is a man in a robe; she suspects him, is wrong, and the page lets her be wrong without mocking her. Nothing confirms either reading.<br>
-&gt; - Healing's absence unremarked: nine hurt, a bone-setter forty miles off, eight weeks in a <span class="redacted">redacted: event</span>. Nobody proposes a first-aid course; nobody says "<span class="redacted">redacted: theme</span>".<br>
-&gt; - Peri's farm magic: the compost cantrip at Fenholt (scene 41 <span class="redacted">unpublished</span>), a level box mid-chore; the <span class="redacted">redacted: mechanic</span> on a Fenholt beast after <span class="redacted">redacted: event</span> (scene 66 <span class="redacted">unpublished</span>). <span class="redacted">redacted sentence: unpublished prose</span><br>
-&gt; - Peri's class: about 5 on arrival. On-page boxes this act: 6 (scene 55 <span class="redacted">unpublished</span>), 8 on <span class="redacted">redacted: event</span>'s exit box (7 during clearing, said in passing), 9 (scene 85 <span class="redacted">unpublished</span>). Each names what it did (the Seal's cooldown a day shorter). None a milestone; nobody congratulates.<br>
-&gt; - More fate magic: the Weave used most days, wording argued; on-page answers at scenes 28, 40 (the robed man), 56 (the middle of the field), 61; the daily fifty-guess drill in background, [Fate Magic] staying at 2 this act; at least one small correct call in her own mode (Sennet's "no", 37; <span class="redacted">redacted: object</span> came out of the water, 65/80). The Seal returns at midnight of Day 30 and she does not use it (65). <span class="redacted">redacted sentence: unpublished prose</span><br>
-&gt; - <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: object</span> refusing water; air direction always stated; nobody explains anything about the hole.<br>
-&gt; - <span class="redacted">redacted: mechanic</span> sealed: canon agnostic; every clue into `plans/book-01/clue-ledger.md` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-&gt; - The engine: one small move this act (38, the oak already cut), on Edwin's chore and time only; Edwin names it aloud once (54); never near a mouth, a site, a letter's contents or a reading.<br>
-&gt; - Edwin's biography: the shed at nineteen, second year; he taught teachers in "half the kingdom"; the walking stopped ~200 years ago. Never "six counties" as his reach; never a lifespan as a guarantee; never his class name; no god, holiday, realm, king, sea or great river named.<br>
-&gt; - <span class="redacted">redacted: character</span> drills Edwin's speed: the conversation only, in this act (79); no outcome; no level. Edwin's fear = he stops; a fight will not let him.<br>
-&gt; - Nobody says "one spell, one shed" again (used at scene 07; the callback is spent).</p>
-<p>Also relevant scene table entries for the target range:<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: object</span> at the water's edge.<br>
-- **67 (Day 30) "the count, with the doors open"** — information policy as a moral position; nine hurt, none dead.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>## 9. deferred-questions.md — full list (terse), for checking whether 63-68 might resolve any<br>
-**In force now (standing constraints):**<br>
-- Peri's pre-Choosing life — 5-pointer budget, sealed answer exists, do not exceed.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span>, dressed stone) — sealed answer written; canon stays agnostic on page.<br>
-- Silent soil, whole cluster — permanently agnostic; sealed.<br>
-- Four sites' four different founding years — don't date casually.<br>
-- Field/Deep corner-watch adjacency — ruled **no, permanently**; do not "discover" it.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Holidays/festivals — none nameable yet.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Realm/capital/king/sea/great rivers — unnamed.<br>
-- Any god — unnamed.<br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
-<p><span class="redacted">redacted sentence: Edwin's death/mortality</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: mechanic</span> were ever revised (ruled: once); Concord noticing Peri; what Concord wanted from Edwin 40 yrs ago; lenses/microscope; Edwin's home region; Peri's home county name; assorted proper nouns; <span class="redacted">redacted: character</span> learning of the field/binding; how long before <span class="redacted">redacted: character</span> is believed; whether north-line shortfall is a finding (ruled elsewhere as yes); Edwin's Wystow-digging prose echo; Frostmonth tide-mark measurement (unblocked, sealed).</p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> None of scenes 63-68 should resolve any deferred/sealed question — they should observe the binding constraints listed in item 8 above.</p>
-<p>---<br>
-**Files read:** `<span class="redacted">redacted: private</span>/notes/canon/world/timeline.md`, `dungeons.md`, `farm-teaching.md`, `magic-explained.md`, `geography.md`, `healing.md`; `<span class="redacted">redacted: private</span>/notes/canon/characters/minor.md`, `peri.md` (partial), `edwin.md` (grepped), `mattie-ordish.md` (grepped); `<span class="redacted">redacted: private</span>/notes/canon/system.md` (Seal/timekeeping sections); `<span class="redacted">redacted: private</span>/notes/canon/deferred-questions.md`; <span class="redacted">unpublished</span> `<span class="redacted">redacted: private</span>/draft/book-01/SCENES.md`. Sealed files (`notes/sealed/deeps.md`, `destiny.md`, `COHERENCE.md`) were only grepped for the existence/topic of relevant rules, never for content, per project policy — do not ask me to disclose their contents.</p>
+<h1>Canon Digest for Scenes 63–68 (Day 29–30 flooding/dungeon/fen sequence)</h1>
+<h2>1. [Seal of the Loom] cooldown — exact rule (system.md ~L674-745)</h2>
+<ul>
+<li>30-day cooldown, <strong>inclusive of day used, clears at a midnight</strong>. Cast morning of Day 1 (15 Cornmonth) = day 1 of thirty. &quot;Thirty days at midnight ... <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>Returns at midnight beginning 14 Harvestmonth = Day 30</strong> — i.e., it clears exactly at the midnight that starts the night your scenes cover (the night of 13/14 Harvestmonth, <span class="redacted">redacted</span> night).</li>
+<li>Midnight is <strong>local/bearer's midnight</strong>, not simultaneous continent-wide.</li>
+<li><strong>Unused</strong>: Established explicitly — the Seal comes back at midnight and Peri does NOT use it. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> with a sword instead. SCENES.md binding (scene 66 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>2. Timeline: Day 29 (13 Harvestmonth) and Day 30 (14 Harvestmonth) — exact (timeline.md)</h2>
+<p><strong>Day 29 (13 Harvestmonth):</strong> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> fetches <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Day 30 (14 Harvestmonth) — <span class="redacted">redacted</span> night proper: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>, then <span class="redacted">redacted</span> up the near bank of <span class="redacted">redacted</span> on the village side; <span class="redacted">redacted</span>'s hook, Peri's thrust into <span class="redacted">redacted</span>; <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s arm, <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> It might be four&quot; (ch.016). Same date in vale: Sorrel's frost on orchard tops (ch.020).</p>
+<h2>3. <span class="redacted">redacted</span> and water</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>SCENES.md's Act-two binding list explicitly lists as owed: &quot;the <span class="redacted">redacted</span> refusing water&quot; alongside other sealed-Deep furniture (slate, candle, <code>[Holm Deep.]</code>, lamps gone yellow, air direction always stated) with the instruction &quot;<strong>nobody explains anything about the hole</strong>.&quot; I found no separate line stating &quot;nobody clever comments&quot; verbatim, but it follows directly from the file's governing rule under Break mechanics/Open questions: canon stays agnostic about the Deep's nature, no character theorizes about mechanism, and (dungeons.md &quot;Open questions&quot;) no evidence/connections may be added beyond the sealed clue rules — i.e., no character is to offer a clever causal theory about why a <span class="redacted">redacted</span> refuses water. Treat &quot;no clever comment&quot; as an inference from the sealed-material discipline, not a separately quoted rule.</li>
+</ul>
+<h2>4. The improbability engine never acts &quot;at a mouth&quot;</h2>
+<p>Exact SCENES.md binding (quoted in full, from the top-of-file binding list, applies to whole Book):<br />
+<span class="redacted">redacted sentence: unpublished prose</span> The three letters and the parcel are real and mundane and are never logged or narrated as the engine.&quot;</p>
+<p>Act-two-specific binding (SCENES.md L115-117):</p>
+<blockquote>
+<p>&quot;The engine: one small move this act (38, the oak already cut), on Edwin's chore and time only; Edwin names it aloud once (54); <strong>never near a mouth, a site, a letter's contents or a reading.</strong>&quot;</p>
+</blockquote>
+<p>Sealed-file cross-references (content not quoted, per project rule — never state sealed content) confirm this rule is load-bearing: <code>notes/sealed/destiny.md</code> L1189 &quot;Nothing at a mouth is ever the engine's, and no findable cause&quot;; <code>notes/sealed/deeps.md</code> and <code>COHERENCE.md</code> repeatedly state &quot;no soil finding is ever made at a mouth&quot; and &quot;<span class="redacted">redacted</span>'s competence at a mouth is her trade's, never her [people's/anything else's].&quot; <strong>Do not attribute anything at Holm Deep's mouth, or any coincidence in scenes 63-68 at the mouth, to the improbability engine or to any hidden cause — it must read as pure competence/luck-of-the-work.</strong></p>
+<h2>5. <span class="redacted">redacted</span></h2>
+<ul>
+<li><strong>What/how</strong> (farm-teaching.md): one of the parish five. Cast on a beast going down (e.g., the draught beast lost in Plowmonth). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Costliest of the five in mana (&quot;a few a night... <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Peri performing it on a Fenholt beast &quot;after <span class="redacted">redacted</span>&quot;: confirmed binding, SCENES.md L84-86: &quot;the <span class="redacted">redacted</span> on a Fenholt beast after <span class="redacted">redacted</span> (scene 66 <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> So scene 66 <span class="unpub-tag">unpublished</span> references it, scene 68 <span class="unpub-tag">unpublished</span> (Day 30) is the actual casting on a torn ewe.<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence</span></li>
+</ul>
+<h2>6. Healing rules / no-healer-present being unremarked</h2>
+<ul>
+<li><strong>No healing skill/ability exists at the parish/village level.</strong> Healing is a church mystery (temple orders, oathbound); nothing below rung 3 (bone-setters/midwives/barber-surgeons — themselves oathbound with only a sliver of the mystery) exists in the countryside. Parish priests (Ferrin) have <strong>no healing at all</strong> — only blessings that &quot;cost nothing, do nothing&quot; mechanically.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s back, <span class="redacted">redacted</span>'s arm not usable before Frostmonth).</li>
+<li>SCENES.md Act-two binding (explicit, quote): &quot;Healing's absence unremarked: nine hurt, a bone-setter forty miles off, eight weeks in a <span class="redacted">redacted</span>. Nobody proposes a first-aid course; nobody says '<span class="redacted">redacted</span>.'&quot; This is the governing instruction for scenes 63-68: any injuries (<span class="redacted">redacted</span>'s back, <span class="redacted">redacted</span>'s arm, etc., in Day 30's casualty list) get field first aid only (splinting, stopping bleeding) — no magical healing, and characters must not comment on the absence, propose a course, or invoke child-mortality rhetoric.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> This is precisely the shape scenes 63-68 should dramatize without remark.</li>
+</ul>
+<h2>7. Facts: nine steadings, roster, leakage, <span class="redacted">redacted</span>, Mattie, minor characters, Edwin/causeway</h2>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s, the two Hobbs, the <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> &quot;The Ordish place is not, quite&quot; one of the nine. <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> (13th/14th), delve (21st), Fallowmonth 11 (posted 30th, six inside withy bed). Series is monotone rising to break, falling after delve — don't compare 14 to 19 as same-kind figure.</p>
+<ul>
+<li><strong>Roster numbers, break night:</strong> none dead, nine hurt (two badly: <span class="redacted">redacted</span>'s arm, <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> 68 <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Walks in Day 29 at 14:20 with the warning. Her bell rings at 18:00 Day 29. Her professional judgement/craft governs all mouth-reading — do not source her competence to her (sealed, undisclosed) people/background. <span class="redacted">redacted</span>'s hook used against <span class="redacted">redacted</span> on Day 30; her rule &quot;Stranger, further, and more of them. That's the sequence.&quot;</li>
+<li><strong>Mattie Ordish:</strong> her family's only surviving farm-magic teaching was the (sick-ewe) blessing, inherited from her grandmother via a teacher Edwin sent into the fens forty years back. Field-growth-rate protagonist for the silent-soil thread (kept separate/agnostic from the Deep thread per deferred-questions — &quot;field/Deep corner-watch adjacency... ruled no, permanently,&quot; do not let scenes 63-68 connect them).</li>
+<li><strong>Minor characters:</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span>
+<ul>
+<li>Other named hands on <span class="redacted">redacted</span> night: <span class="redacted">redacted</span> (arm opened to bone, not usable before Frostmonth), <span class="redacted">redacted</span> (counts, second gate, finished <span class="redacted">redacted</span> in <span class="redacted">redacted</span> by feel, disputed Peri's cut line), <span class="redacted">redacted</span> (in the line beside Peri), <span class="redacted">redacted</span> (put on her back by <span class="redacted">redacted</span>, bone-setter fetched), Ceddy Puckett, Coule, the sluice-keeper (braced door with furniture, killed a <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+</li>
+<li><strong>Edwin's causeway statements:</strong> No canon entry found under &quot;causeway&quot; specifically tied to Edwin's dialogue in edwin.md. Geography: Holm Deep reached via the Charter's <strong>peat causeway</strong>, &quot;five miles and some NE,&quot; under two hours' walk; a &quot;causeway fan ~200 yd back&quot; from the mouth is the vent-fan evidence (dungeons.md). <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>8. SCENES.md act-two binding list (quoted in full, from the foot of the Act Two header)</h2>
+<blockquote>
+<p><strong>Binding on the stretch, in addition to the list above:</strong></p>
+<ul>
+<li>The destiny is printed (<code>[Destiny: show Peri Millbrook how to save the world.]</code>); nobody says &quot;pending&quot;; the one-binding clause is not remarked on again.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> Ferrin is a man in a robe; she suspects him, is wrong, and the page lets her be wrong without mocking her. Nothing confirms either reading.</li>
+<li>Healing's absence unremarked: nine hurt, a bone-setter forty miles off, eight weeks in a <span class="redacted">redacted</span>. Nobody proposes a first-aid course; nobody says &quot;<span class="redacted">redacted</span>&quot;.</li>
+<li>Peri's farm magic: the compost cantrip at Fenholt (scene 41 <span class="unpub-tag">unpublished</span>), a level box mid-chore; the <span class="redacted">redacted</span> on a Fenholt beast after <span class="redacted">redacted</span> (scene 66 <span class="unpub-tag">unpublished</span>). <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Peri's class: about 5 on arrival. On-page boxes this act: 6 (scene 55 <span class="unpub-tag">unpublished</span>), 8 on <span class="redacted">redacted</span>'s exit box (7 during clearing, said in passing), 9 (scene 85 <span class="unpub-tag">unpublished</span>). Each names what it did (the Seal's cooldown a day shorter). None a milestone; nobody congratulates.</li>
+<li>More fate magic: the Weave used most days, wording argued; on-page answers at scenes 28, 40 (the robed man), 56 (the middle of the field), 61; the daily fifty-guess drill in background, [Fate Magic] staying at 2 this act; at least one small correct call in her own mode (Sennet's &quot;no&quot;, 37; <span class="redacted">redacted</span> came out of the water, 65/80). The Seal returns at midnight of Day 30 and she does not use it (65). <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> refusing water; air direction always stated; nobody explains anything about the hole.</li>
+<li><span class="redacted">redacted</span> sealed: canon agnostic; every clue into <code>plans/book-01/clue-ledger.md</code> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>The engine: one small move this act (38, the oak already cut), on Edwin's chore and time only; Edwin names it aloud once (54); never near a mouth, a site, a letter's contents or a reading.</li>
+<li>Edwin's biography: the shed at nineteen, second year; he taught teachers in &quot;half the kingdom&quot;; the walking stopped ~200 years ago. Never &quot;six counties&quot; as his reach; never a lifespan as a guarantee; never his class name; no god, holiday, realm, king, sea or great river named.</li>
+<li><span class="redacted">redacted</span> drills Edwin's speed: the conversation only, in this act (79); no outcome; no level. Edwin's fear = he stops; a fight will not let him.</li>
+<li>Nobody says &quot;one spell, one shed&quot; again (used at scene 07; the callback is spent).</li>
+</ul>
+</blockquote>
+<p>Also relevant scene table entries for the target range:<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> at the water's edge.</p>
+<ul>
+<li><strong>67 (Day 30) &quot;the count, with the doors open&quot;</strong> — information policy as a moral position; nine hurt, none dead.<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<h2>9. deferred-questions.md — full list (terse), for checking whether 63-68 might resolve any</h2>
+<p><strong>In force now (standing constraints):</strong></p>
+<ul>
+<li>Peri's pre-Choosing life — 5-pointer budget, sealed answer exists, do not exceed.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>, dressed stone) — sealed answer written; canon stays agnostic on page.</li>
+<li>Silent soil, whole cluster — permanently agnostic; sealed.</li>
+<li>Four sites' four different founding years — don't date casually.</li>
+<li>Field/Deep corner-watch adjacency — ruled <strong>no, permanently</strong>; do not &quot;discover&quot; it.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Holidays/festivals — none nameable yet.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Realm/capital/king/sea/great rivers — unnamed.</li>
+<li>Any god — unnamed.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><span class="redacted">redacted sentence</span></p>
+<p><span class="redacted">redacted sentence</span></p>
+<p><span class="redacted">redacted sentence</span></p>
+<p><span class="redacted">redacted sentence</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> were ever revised (ruled: once); Concord noticing Peri; what Concord wanted from Edwin 40 yrs ago; lenses/microscope; Edwin's home region; Peri's home county name; assorted proper nouns; <span class="redacted">redacted</span> learning of the field/binding; how long before <span class="redacted">redacted</span> is believed; whether north-line shortfall is a finding (ruled elsewhere as yes); Edwin's Wystow-digging prose echo; Frostmonth tide-mark measurement (unblocked, sealed).</p>
+<p><span class="redacted">redacted sentence</span> None of scenes 63-68 should resolve any deferred/sealed question — they should observe the binding constraints listed in item 8 above.</p>
+<hr />
+<p><strong>Files read:</strong> <span class="redacted">redacted</span>/notes/canon/world/timeline.md<code>, </code>dungeons.md<code>, </code>farm-teaching.md<code>, </code>magic-explained.md<code>, </code>geography.md<code>, </code>healing.md<code>; </code><span class="redacted">redacted</span>/notes/canon/characters/minor.md<code>, </code>peri.md<code>(partial),</code>edwin.md<code>(grepped),</code>mattie-ordish.md<code>(grepped);</code><span class="redacted">redacted</span>/notes/canon/system.md<code>(Seal/timekeeping sections);</code><span class="redacted">redacted</span>/notes/canon/deferred-questions.md; <span class="unpub-tag">unpublished</span> <span class="redacted">redacted</span>/draft/book-01/SCENES.md<code>. Sealed files (</code>notes/sealed/deeps.md<code>, </code>destiny.md<code>, </code>COHERENCE.md) were only grepped for the existence/topic of relevant rules, never for content, per project policy — do not ask me to disclose their contents.</p>
 </div>
 </body></html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a367fab0aaf688f85">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="narration", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/05-in-some-sort-of-order.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a367fab0aaf688f85">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;narration&quot;, and scope includes &quot;scene&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/scenes/05-in-some-sort-of-order.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -40,29 +53,31 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 
 <div class="assistant-prose">
 <p>Now let me systematically check this scene against the selected semantic/narration/scene rules. Let me identify the relevant rules first by filtering the complete rules list:</p>
-<p>Selected rules (tier="semantic", lens="narration", scope includes "scene"):<br>
-- generalising-clause-budget<br>
-- windup-tag-budget  <br>
-- wants-gerund-budget<br>
-- prose-not-at-rest<br>
-- unlocated-narration<br>
-- motive-off-page<br>
-- viewpoint-overreach<br>
-- nominalised-absence<br>
-- description-list<br>
-- rest-register-misplaced<br>
-- unearned-authority<br>
-- likeability-drift</p>
+<p>Selected rules (tier=&quot;semantic&quot;, lens=&quot;narration&quot;, scope includes &quot;scene&quot;):</p>
+<ul>
+<li>generalising-clause-budget</li>
+<li>windup-tag-budget</li>
+<li>wants-gerund-budget</li>
+<li>prose-not-at-rest</li>
+<li>unlocated-narration</li>
+<li>motive-off-page</li>
+<li>viewpoint-overreach</li>
+<li>nominalised-absence</li>
+<li>description-list</li>
+<li>rest-register-misplaced</li>
+<li>unearned-authority</li>
+<li>likeability-drift</li>
+</ul>
 <p>Now scanning the scene carefully:</p>
-<p>**Line 5 candidate (description-list):**<br>
-"Sorrel was tall and plain, and quick, and for once not moving."</p>
-<p>Reading context: Edwin is described at the ledger with his plans, the sea-front status is given with reasons, the room state is noted. Then Sorrel is listed: tall (appearance), plain (coloring), quick (manner), not moving (state). This catalogues four separate attributes in sequence rather than presenting one noticed thing. The rule states "Never a list" — this violates description-list.</p>
-<p>**Line 33 candidate (motive-off-page):**<br>
-"She read it twice more. Her hand went to her pocket for a pencil and came back without one."</p>
-<p>Reading context: Previous sentence: "She read it twice more." Next sentence: "'Can it be got off?'" </p>
-<p>The hand-to-pocket action is a deliberate, slightly odd act. Why reach for a pencil then come back without one? Neither the sentence before nor after supplies the cause or motive. The neighboring sentences don't clarify why she decided against writing at that moment. This is an unexplained deliberate act. (The motive is paid later when she decides to write it down tonight, but the rule requires it "at the time" unless paid inside two chapters.)</p>
+<p><strong>Line 5 candidate (description-list):</strong><br />
+&quot;Sorrel was tall and plain, and quick, and for once not moving.&quot;</p>
+<p>Reading context: Edwin is described at the ledger with his plans, the sea-front status is given with reasons, the room state is noted. Then Sorrel is listed: tall (appearance), plain (coloring), quick (manner), not moving (state). This catalogues four separate attributes in sequence rather than presenting one noticed thing. The rule states &quot;Never a list&quot; — this violates description-list.</p>
+<p><strong>Line 33 candidate (motive-off-page):</strong><br />
+&quot;She read it twice more. Her hand went to her pocket for a pencil and came back without one.&quot;</p>
+<p>Reading context: Previous sentence: &quot;She read it twice more.&quot; Next sentence: &quot;'Can it be got off?'&quot;</p>
+<p>The hand-to-pocket action is a deliberate, slightly odd act. Why reach for a pencil then come back without one? Neither the sentence before nor after supplies the cause or motive. The neighboring sentences don't clarify why she decided against writing at that moment. This is an unexplained deliberate act. (The motive is paid later when she decides to write it down tonight, but the rule requires it &quot;at the time&quot; unless paid inside two chapters.)</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": [{"rule_id": "description-list", "quote": "Sor…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

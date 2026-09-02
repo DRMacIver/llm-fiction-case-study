@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are working on the novel project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read `CL…</title><style>
+<html><head><meta charset="utf-8"><title>You are working on the novel project at [redacted]. Read `CLAUDE.md`…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,43 +7,53 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are working on the novel project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read `CL…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a1381d96784e18899">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-<br>
-You are working on the novel project at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it.<br>
-<br>
-Source material for this pass:<br>
-- `notes/audit/chapters/*.md` — a per-chapter archivist report for all 31 chapters (facts with [stated]/[implied] tags and quoted evidence, back-references, questions, tensions). These were written by agents who had NOT read canon, so they are an independent record of what is on the page. They are reports, not gospel: where a report's claim is load-bearing, verify it against the actual chapter in `chapters/` before acting on it.<br>
-- `notes/canon/**` — the canon files. `notes/canon/README.md` defines the claim levels (Established / Working / Open question) and the citation conventions. Follow them exactly.<br>
-<br>
-Hard rules:<br>
-- **Never resolve a canon Open question casually.** If the chapters imply an answer, record that they do and flag it for DRMacIver; do not close it yourself.<br>
-- **Never delete or weaken canon to fit a draft.** If a chapter and canon contradict, flag the conflict with both citations; do not silently pick a side.<br>
-- Do not edit anything under `chapters/` or `plans/`. <span class="redacted">unpublished</span> Canon files only, and only the ones you own (below).<br>
-- Mark new entries you introduce yourself as **(Claude, Working, 2026-08-27)**. Facts that are genuinely on-page get **Established** with a chapter citation in the existing "ch. NNN" style.<br>
-- `notes/sealed/` holds sealed answers. You MAY read them to check clues cohere. You must NEVER put sealed content into canon files, your report, or any user-facing text — describe only its shape (constraint satisfied / discrepancy exists / confidence).<br>
-<br>
-Your job, in your domain:<br>
-1. **Completeness** — every fact in the chapter reports that belongs in your domain should be present in your canon files, at the right claim level with the right citation. Add what is missing. Existing entries whose citation or claim level is now wrong get corrected.<br>
-2. **Consistency** — find contradictions: chapter-vs-canon, chapter-vs-chapter, and canon-vs-canon. Do the arithmetic on numbers, dates, distances, ages, durations, money and counts.<br>
-3. **Answers to questions** — go through the Questions sections of the reports in your domain. For each: is it already answered in canon? Then note where. Is it answerable by combining what is on the page? Then answer it and add it as Working canon. Is it a genuine hole? Then it goes on the open list.<br>
-4. **Load-bearing mysteries** — per CLAUDE.md, any mystery the story is accumulating evidence for must have a written answer. If you find one whose answer is not written down anywhere, say so prominently (naming the mystery, not inventing the answer).<br>
-<br>
-Write your findings report to `notes/audit/DOMAIN.md` (replace DOMAIN with your domain slug given below), with sections: `## Canon edits made` (file, what, why), `## Contradictions` (each with both citations and a recommendation, ranked by how load-bearing), `## Questions answered` (question → answer → where it now lives), `## Open questions for DRMacIver` (genuine holes and anything needing an author decision), `## Load-bearing mysteries without written answers`.<br>
-<br>
-Your final message should be a compact summary: counts per section, and the three most serious contradictions in one line each. The full detail belongs in the file.<br>
-<br>
-<br>
-Your domain slug: **world** (write to `notes/audit/world.md`).<br>
-Files you own and may edit: notes/canon/world/geography.md, continent.md, institutions.md, demographics.md, development.md, green-revolution.md, history.md, farm-teaching.md, farming-glossary.md, silent-soil.md<br>
-Do not edit canon files owned by the other domains (system-and-magic, characters, world, timeline) — if you find a problem in their territory, report it instead.<br>
-<br>
-Your domain brief: Geography and distances, institutions (guilds, charters, fellowships, colleges, wardens) and who pays whom, economy and prices and wages, demographics, history, the green revolution, farming practice and the glossary. Pay particular attention to: distances and travel times being mutually consistent; institutional structures and payment arrangements; prices and wages across chapters; and the farming glossary being complete and correctly marked for which terms have had their author's note published (the chapter reports list author's notes and specialist terms per chapter — reconcile the glossary against that list).</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working on the novel project at [redacted]. Read `CLAUDE.md`…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a1381d96784e18899">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-27</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working on the novel project at <span class="redacted">redacted</span>. Read <code>CLAUDE.md</code> first and obey it.</p>
+<p>Source material for this pass:</p>
+<ul>
+<li><code>notes/audit/chapters/*.md</code> — a per-chapter archivist report for all 31 chapters (facts with [stated]/[implied] tags and quoted evidence, back-references, questions, tensions). These were written by agents who had NOT read canon, so they are an independent record of what is on the page. They are reports, not gospel: where a report's claim is load-bearing, verify it against the actual chapter in <code>chapters/</code> before acting on it.</li>
+<li><code>notes/canon/**</code> — the canon files. <code>notes/canon/README.md</code> defines the claim levels (Established / Working / Open question) and the citation conventions. Follow them exactly.</li>
+</ul>
+<p>Hard rules:</p>
+<ul>
+<li><strong>Never resolve a canon Open question casually.</strong> If the chapters imply an answer, record that they do and flag it for DRMacIver; do not close it yourself.</li>
+<li>**Never delete or weaken canon to fit a draft. If a chapter and canon contradict, flag the conflict with both citations; do not silently pick a side.</li>
+<li>Do not edit anything under <code>chapters/</code> or <code>plans/</code>. <span class="unpub-tag">unpublished</span> Canon files only, and only the ones you own (below).</li>
+<li>Mark new entries you introduce yourself as <strong>(Claude, Working, 2026-08-27)</strong>. Facts that are genuinely on-page get <strong>Established</strong> with a chapter citation in the existing &quot;ch. NNN&quot; style.</li>
+<li><code>notes/sealed/</code> holds sealed answers. You MAY read them to check clues cohere. You must NEVER put sealed content into canon files, your report, or any user-facing text — describe only its shape (constraint satisfied / discrepancy exists / confidence).</li>
+</ul>
+<p>Your job, in your domain:</p>
+<ol>
+<li><strong>Completeness</strong> — every fact in the chapter reports that belongs in your domain should be present in your canon files, at the right claim level with the right citation. Add what is missing. Existing entries whose citation or claim level is now wrong get corrected.</li>
+<li><strong>Consistency</strong> — find contradictions: chapter-vs-canon, chapter-vs-chapter, and canon-vs-canon. Do the arithmetic on numbers, dates, distances, ages, durations, money and counts.</li>
+<li><strong>Answers to questions</strong> — go through the Questions sections of the reports in your domain. For each: is it already answered in canon? Then note where. Is it answerable by combining what is on the page? Then answer it and add it as Working canon. Is it a genuine hole? Then it goes on the open list.</li>
+<li><strong>Load-bearing mysteries</strong> — per CLAUDE.md, any mystery the story is accumulating evidence for must have a written answer. If you find one whose answer is not written down anywhere, say so prominently (naming the mystery, not inventing the answer).</li>
+</ol>
+<p>Write your findings report to <code>notes/audit/DOMAIN.md</code> (replace DOMAIN with your domain slug given below), with sections: <code>## Canon edits made</code> (file, what, why), <code>## Contradictions</code> (each with both citations and a recommendation, ranked by how load-bearing), <code>## Questions answered</code> (question → answer → where it now lives), <code>## Open questions for DRMacIver</code> (genuine holes and anything needing an author decision), <code>## Load-bearing mysteries without written answers</code>.</p>
+<p>Your final message should be a compact summary: counts per section, and the three most serious contradictions in one line each. The full detail belongs in the file.</p>
+<p>Your domain slug: <strong>world</strong> (write to <code>notes/audit/world.md</code>).<br />
+Files you own and may edit: notes/canon/world/geography.md, continent.md, institutions.md, demographics.md, development.md, green-revolution.md, history.md, farm-teaching.md, farming-glossary.md, silent-soil.md<br />
+Do not edit canon files owned by the other domains (system-and-magic, characters, world, timeline) — if you find a problem in their territory, report it instead.</p>
+<p>Your domain brief: Geography and distances, institutions (guilds, charters, fellowships, colleges, wardens) and who pays whom, economy and prices and wages, demographics, history, the green revolution, farming practice and the glossary. Pay particular attention to: distances and travel times being mutually consistent; institutional structures and payment arrangements; prices and wages across chapters; and the farming glossary being complete and correctly marked for which terms have had their author's note published (the chapter reports list author's notes and specialist terms per chapter — reconcile the glossary against that list).</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -74,7 +84,7 @@ Your domain brief: Geography and distances, institutions (guilds, charters, fell
 <p>✅ 4 lines, 138 chars</p>
 <p>🔧 Bash: cat notes/canon/world/development.md; echo ===; cat notes/canon/world/silent-soil.md | he…</p>
 <p>✅ 183 lines, 10040 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/audit/chapters &amp;&amp; for f in *.md; do echo "=== $f"; awk '/^##…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/audit/chapters &amp;&amp; for f in *.md; do echo "=== $f"; awk '/^## *(Questi…</p>
 <p>✅ 1 lines, 121 chars</p>
 <p>🔧 Bash: sed -n '1,420p' /tmp/claude-501/-Users-drmaciver-Projects-autoroad/3ef92e14-71be-4557-a7d…</p>
 <p>✅ 16 lines, 2027 chars</p>
@@ -82,33 +92,33 @@ Your domain brief: Geography and distances, institutions (guilds, charters, fell
 <p>✅ 294 lines, 61177 chars</p>
 <p>🔧 Read <span class="redacted">redacted: private</span></p>
 <p>✅ 127 lines, 29147 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/audit/chapters &amp;&amp; grep -H '^## ' 022*.md 023*.md 025*.md 030…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/audit/chapters &amp;&amp; grep -H '^## ' 022*.md 023*.md 025*.md 030*.md</p>
 <p>✅ 20 lines, 847 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/audit/chapters &amp;&amp; S=/tmp/claude-501/-Users-drmaciver-Project…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/audit/chapters &amp;&amp; S=/tmp/claude-501/-Users-drmaciver-Projects-autoroa…</p>
 <p>✅ 1 lines, 114 chars</p>
 <p>🔧 Read <span class="redacted">redacted: private</span></p>
 <p>✅ 220 lines, 45272 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "mages" 027*.md 030*.md | head -30</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "mages" 027*.md 030*.md | head -30</p>
 <p>✅ 4 lines, 1700 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -nE "shilling|pence|sixpence|penny|pound|threepen…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -nE "shilling|pence|sixpence|penny|pound|threepence|guinea…</p>
 <p>✅ 29 lines, 10818 chars</p>
 <p>🔧 Bash: grep -rn "four thousand parishes\|four hundred parish" notes/canon/ | head; echo ---; gre…</p>
 <p>✅ 17 lines, 1276 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/audit/chapters &amp;&amp; for f in *.md; do echo "=== $f"; awk '/^##…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/audit/chapters &amp;&amp; for f in *.md; do echo "=== $f"; awk '/^## Author/,…</p>
 <p>✅ 1 lines, 125 chars</p>
 <p>🔧 Read <span class="redacted">redacted: private</span></p>
 <p>✅ 241 lines, 27030 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/canon/world/farming-glossary.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/canon/world/farming-glossary.md</p>
 <p>✅ 296 lines, 15880 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; for t in "pan" "crumb" "ley" "freeboard" "scoop wheel"…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; for t in "pan" "crumb" "ley" "freeboard" "scoop wheel" "eel-gle…</p>
 <p>✅ 39 lines, 3051 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '/^---/,$p' 010-the-quiet-field.md | tail -25</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; sed -n '/^---/,$p' 010-the-quiet-field.md | tail -25</p>
 <p>✅ 25 lines, 3290 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "seven chains\|6ch\|six chains\|yard a day\|th…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "seven chains\|6ch\|six chains\|yard a day\|thirty days…</p>
 <p>✅ 9 lines, 3100 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "twenty-six\|twenty-seven\|the eighth" 023*.md…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "twenty-six\|twenty-seven\|the eighth" 023*.md | head;…</p>
 <p>✅ 12 lines, 5318 chars</p>
-<p>🔧 Bash: grep -n "<span class="redacted">redacted: place</span>\|Marsh" notes/canon/world/continent.md</p>
+<p>🔧 Bash: grep -n "<span class="redacted">redacted</span>\|Marsh" notes/canon/world/continent.md</p>
 <p>✅ 5 lines, 360 chars</p>
 <p>🔧 Bash: sed -n '295,330p' notes/canon/world/continent.md</p>
 <p>✅ 36 lines, 2201 chars</p>
@@ -118,11 +128,11 @@ Your domain brief: Geography and distances, institutions (guilds, charters, fell
 <p>✅ 119 lines, 6411 chars</p>
 <p>🔧 Bash: wc -l notes/sealed/silent-soil.md; grep -n "^#\|^##" notes/sealed/silent-soil.md | head -…</p>
 <p>✅ 41 lines, 1711 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; for f in *.md; do n=$(grep -c "Author's note" $f); ech…</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "the quarter\b\|a quarter of\|quarters" *.md |…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; for f in *.md; do n=$(grep -c "Author's note" $f); echo "$f $n"…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "the quarter\b\|a quarter of\|quarters" *.md | grep -iv…</p>
 <p>✅ 31 lines, 778 chars — 001-the-wrong-man.md 1 / 002-the-ten-o-clock.md 1 / 003-the-improbability-engine.md 1</p>
 <p>✅ 3 lines, 1179 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "<span class="redacted">redacted: character</span>" *.md | head -12</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "<span class="redacted">redacted</span>" *.md | head -12</p>
 <p>✅ 12 lines, 4476 chars</p>
 </details>
 
@@ -130,7 +140,7 @@ Your domain brief: Geography and distances, institutions (guilds, charters, fell
 <p>Now making the canon edits. First, geography.</p>
 </div>
 
-<p>🔧 Bash: python3 - &lt;&lt;'EOF' import re p='notes/canon/world/geography.md' s=open(p).read() ⟦redacted…</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import re p='notes/canon/world/geography.md' s=open(p).read() <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
 
 <div class="assistant-prose">
@@ -147,13 +157,13 @@ Your domain brief: Geography and distances, institutions (guilds, charters, fell
 <details><summary>14 tool calls</summary>
 <p>🔧 Bash: python3 - &lt;&lt;'EOF' p='notes/canon/world/farming-glossary.md' s=open(p).read()  # 1. Soil s…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "eight days\|six or seven\|post-bag" 014*.md 0…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "eight days\|six or seven\|post-bag" 014*.md 028*.md 01…</p>
 <p>✅ 2 lines, 525 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n "<span class="redacted">redacted: place</span>\|Wystow" 014*.md | grep -i…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; grep -n "<span class="redacted">redacted</span>\|Wystow" 014*.md | grep -i "day\|four\|six\…</p>
 <p>✅ 1 lines, 328 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '79,95p' 028-letters-from-the-vale.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/chapters &amp;&amp; sed -n '79,95p' 028-letters-from-the-vale.md</p>
 <p>✅ 17 lines, 2077 chars</p>
-<p>🔧 Bash: python3 - &lt;&lt;'EOF' p='notes/canon/world/institutions.md' s=open(p).read() ⟦redacted senten…</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' p='notes/canon/world/institutions.md' s=open(p).read() <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
 <p>🔧 Bash: cat &gt; notes/audit/world.md &lt;&lt;'EOF' # Audit — world domain (geography, institutions, econo…</p>
 <p>✅ 1 lines, 29 chars</p>
@@ -162,12 +172,14 @@ Your domain brief: Geography and distances, institutions (guilds, charters, fell
 </details>
 
 <div class="assistant-prose">
-<p>Report: `<span class="redacted">redacted: private</span>/notes/audit/world.md` (committed as cb80362).</p>
-<p>**Counts** — Canon edits made: 8 (geography.md 2, institutions.md 4, farming-glossary.md 2, the last covering 11 newly registered terms). Contradictions: 5, plus 3 spurious ones originating in the chapter reports. Questions answered: 14. Open questions for DRMacIver: 7. Load-bearing mysteries without written answers: 1.</p>
-<p>**Three most serious contradictions**</p>
-<p>1. Fenholt→Wystow is eight days by post-bag (ch. 028) and three by rider (ch. 014) over the same sixty miles — resolved by naming the conveyance, not by picking a side; recorded as new Working canon in institutions.md, which also settles ch. 014's unresolved "six or seven — one-way or round trip?" as round trip, the only reading that makes <span class="redacted">redacted: character</span>'s own sum work.<br>
-2. The made road Fenholt→<span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span>'s country, and the drove is given on-page as the short way) but it is the largest line/road ratio in canon and should not be allowed to grow.<br>
-3. geography.md still called the pale field "suspected second site, unexamined", eighteen chapters after it became <span class="redacted">redacted: character</span>'s field, staked, protocolled and Site B of <span class="redacted">redacted: event</span>'s four — the only outright wrong statement I found in my files; corrected with citations.</p>
-<p>Worth the author's eye beyond the contradictions: **ch. 020's chain arithmetic is correct and the audit report's is wrong** (the report converted links to yards 1:1; a chain is 22 yards and 100 links, so 6ch18 + 30 yards = 7ch54 exactly as written) — flagged prominently so no later pass "fixes" a right chapter. And the one live mystery-without-an-answer in my domain is **<span class="redacted">redacted: character</span>'s grandmother's people** (ch. 029): the story has begun spending it on the page in a scene the arc is built around, and canon holds only the single on-page fact plus a rule saying to design it later.</p>
+<p>Report: <span class="redacted">redacted</span>/notes/audit/world.md (committed as cb80362).</p>
+<p><strong>Counts</strong> — Canon edits made: 8 (geography.md 2, institutions.md 4, farming-glossary.md 2, the last covering 11 newly registered terms). Contradictions: 5, plus 3 spurious ones originating in the chapter reports. Questions answered: 14. Open questions for DRMacIver: 7. Load-bearing mysteries without written answers: 1.</p>
+<p><strong>Three most serious contradictions</strong></p>
+<ol>
+<li>Fenholt→Wystow is eight days by post-bag (ch. 028) and three by rider (ch. 014) over the same sixty miles — resolved by naming the conveyance, not by picking a side; recorded as new Working canon in institutions.md, which also settles ch. 014's unresolved &quot;six or seven — one-way or round trip?&quot; as round trip, the only reading that makes <span class="redacted">redacted</span>'s own sum work.</li>
+<li>The made road Fenholt→<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s country, and the drove is given on-page as the short way) but it is the largest line/road ratio in canon and should not be allowed to grow.</li>
+<li>geography.md still called the pale field &quot;suspected second site, unexamined&quot;, eighteen chapters after it became <span class="redacted">redacted</span>'s field, staked, protocolled and Site B of <span class="redacted">redacted</span>'s four — the only outright wrong statement I found in my files; corrected with citations.</li>
+</ol>
+<p>Worth the author's eye beyond the contradictions: <strong>ch. 020's chain arithmetic is correct and the audit report's is wrong</strong> (the report converted links to yards 1:1; a chain is 22 yards and 100 links, so 6ch18 + 30 yards = 7ch54 exactly as written) — flagged prominently so no later pass &quot;fixes&quot; a right chapter. And the one live mystery-without-an-answer in my domain is <span class="redacted">redacted</span>'s grandmother's people (ch. 029): the story has begun spending it on the page in a scene the arc is built around, and canon holds only the single on-page fact plus a rule saying to design it later.</p>
 </div>
 </body></html>

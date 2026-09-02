@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a47ebcf364c6ed7b6">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="closers", and scope includes "note". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/author-notes/04-four-minutes.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a47ebcf364c6ed7b6">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;closers&quot;, and scope includes &quot;note&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/author-notes/04-four-minutes.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <details><summary>6 tool calls</summary>
@@ -37,27 +50,31 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>Now I'll carefully analyze the author notes file for violations of these two rules:</p>
 </div>
 
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/author-notes/04-four-minutes.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/draft/book-01/author-notes/04-four-minutes.md</p>
 <p>✅ 1 lines, 834 chars</p>
 
 <div class="assistant-prose">
 <p>I'll analyze this author note systematically against the two matching rules.</p>
-<p>**Rules to check:**<br>
-1. **implication-stopped-short** (id: implication-stopped-short): A sentence that sets up an implication but declines to state it, leaving the reader to complete it. Also insinuating rather than saying.<br>
-2. **cute-cryptic-closer** (id: cute-cryptic-closer): A snap ending that needs decoding; a closing line must land on a fact.</p>
-<p>**Analysis of the text:**</p>
+<p><strong>Rules to check:</strong></p>
+<ol>
+<li><strong>implication-stopped-short</strong> (id: implication-stopped-short): A sentence that sets up an implication but declines to state it, leaving the reader to complete it. Also insinuating rather than saying.</li>
+<li><strong>cute-cryptic-closer</strong> (id: cute-cryptic-closer): A snap ending that needs decoding; a closing line must land on a fact.</li>
+</ol>
+<p><strong>Analysis of the text:</strong></p>
 <p>The author note on compost is a straightforward technical explanation. Let me examine each sentence:</p>
-<p>- "a heap is alive" - direct statement<br>
-- "Bacteria and fungi eat it, and what they want is green stuff and brown stuff..." - explicitly states what is wanted<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- "Turning it puts the air back..." - factual description<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- "Widow Sepp's nose is a real instrument" - direct characterization<br>
-- "A heap 'sits' when it settles dense, the air in it is used up, and the work stalls..." - clear definitions<br>
-- Closing: "a working heap smells of earth, a sat one smells sour" - lands squarely on facts, not cryptic</p>
+<ul>
+<li>&quot;a heap is alive&quot; - direct statement</li>
+<li>&quot;Bacteria and fungi eat it, and what they want is green stuff and brown stuff...&quot; - explicitly states what is wanted<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>&quot;Turning it puts the air back...&quot; - factual description<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>&quot;Widow Sepp's nose is a real instrument&quot; - direct characterization</li>
+<li>&quot;A heap 'sits' when it settles dense, the air in it is used up, and the work stalls...&quot; - clear definitions</li>
+<li>Closing: &quot;a working heap smells of earth, a sat one smells sour&quot; - lands squarely on facts, not cryptic</li>
+</ul>
 <p>The text is written in literal, factual language throughout. No sentence sets up an implication and then declines to state it. The closing line is not cute or cryptic—it's a direct factual contrast between two states. All implications are completed on the page.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

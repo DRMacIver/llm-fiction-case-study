@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦red…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. [redacted][redacted].md…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦red…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a2d202cd54e35f0b0">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span>.md in full. You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span> Dialogue is exempt from the narration-construction bans. Report ONLY findings within your lens, compactly: quote (short) | problem | fix. Invented problems are as bad as misses. Do not certify anything as clean; absence of findings is an empty list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. [redacted][redacted].md…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a2d202cd54e35f0b0">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.md in full. You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span> Dialogue is exempt from the narration-construction bans. Report ONLY findings within your lens, compactly: quote (short) | problem | fix. Invented problems are as bad as misses. Do not certify anything as clean; absence of findings is an empty list.</p></blockquote>
 
 
 <details><summary>14 tool calls</summary>
@@ -24,35 +37,41 @@ Repo: <span class="redacted">redacted: private</span>. <span class="redacted">re
 <p>🔧 Read .claude/skills/editing-pass/SKILL.md</p>
 <p>✅ 171 lines, 11197 chars</p>
 <p>✅ 108 lines, 6056 chars</p>
-<p>🔧 Bash: cat -n <span class="redacted">redacted: private</span>/chapters/023-the-<span class="redacted">redacted: place</span>.md</p>
+<p>🔧 Bash: cat -n <span class="redacted">redacted</span>/chapters/023-the-<span class="redacted">redacted</span>.md</p>
 <p>✅ 207 lines, 20178 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> F=chapters/023-the-<span class="redacted">redacted: place</span>.md echo "=== word count ==="…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> F=chapters/023-the-<span class="redacted">redacted</span>.md echo "=== word count ===" wc -w "$F" echo…</p>
 <p>✅ 42 lines, 679 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> F=chapters/023-the-<span class="redacted">redacted: place</span>.md echo "=== self-annotation…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> F=chapters/023-the-<span class="redacted">redacted</span>.md echo "=== self-annotation candidates ==="…</p>
 <p>✅ 9 lines, 235 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> F=chapters/023-the-<span class="redacted">redacted: place</span>.md grep -noE "as if [a-z]+|in…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> F=chapters/023-the-<span class="redacted">redacted</span>.md grep -noE "as if [a-z]+|in the way that [a…</p>
 <p>✅ 1 lines, 58 chars</p>
 </details>
 
 <div class="assistant-prose">
 <p>Findings (register &amp; mechanical lens only):</p>
-<p>**House-word / census**</p>
-<p>- "nobody/somebody/anybody/a person/no one" — 11 hits in 3,651 words (~30/10k), above the halved target rate the census set. | fix: cut or replace several with named actors ("<span class="redacted">redacted: character</span> said nothing" already does this well elsewhere — extend that model to more instances, e.g. l.143 "nobody's cut a drain through" → "no gang's cut a drain through").<br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-- "the whole of" (l.133) — single instance, within tolerance, flagging only because it's the watch-word; not fingerprint-rate here.</p>
-<p>**Narrator generalizations (candidate aphorisms, per "list every candidate")**</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s particulars — candidate free-floating aphorism. | fix: anchor it to <span class="redacted">redacted: character</span> specifically, or cut the generalizing clause and let the dinner-hut scene that follows demonstrate the reason.<br>
-- L.121 "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> | fix: cut to the concrete beat — "<span class="redacted">redacted: character</span> considered it and said nothing, which was his way of agreeing" — drop the "men of his sort" frame.</p>
-<p>**Self-annotation candidate**</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> | fix: let the scene demonstrate the effect (<span class="redacted">redacted: character</span>'s reaction) and cut the second "because" clause, or fold it into dialogue.</p>
-<p>**Clean on this lens**</p>
-<p>- Em dashes: 0 (well under ~2/1000 budget).<br>
-- No Earth month names (compound-month canon used throughout: Harvestmonth, Weedmonth, Cornmonth, Haymonth).<br>
-- No "honest [noun]," "arithmetic," "half past," "out loud," "ordinary" hits.<br>
-- No ghost/echo/whisper/hum lexicon.<br>
-- No banned "not X, but Y" negative-parallelism construction in narration (the "not that... not that..." run at l.105 and the negatives at l.161/179/69 are all either dialogue-exempt or anaphoric listing, not the banned shape).<br>
-- Triad-with-swerve: none detected in narration.<br>
-- Appraisal-formula/abstract-concrete simile: only one simile found ("built like a gatepost," l.49) — plain physical comparison, not the abstract/concrete jukebox move; no finding.<br>
-- Ending: decorated-vs-flat check passes. <span class="redacted">redacted sentence: unpublished prose</span> Compliant with "endings are cuts."</p>
+<p><strong>House-word / census</strong></p>
+<ul>
+<li>&quot;nobody/somebody/anybody/a person/no one&quot; — 11 hits in 3,651 words (~30/10k), above the halved target rate the census set. | fix: cut or replace several with named actors (&quot;<span class="redacted">redacted</span> said nothing&quot; already does this well elsewhere — extend that model to more instances, e.g. l.143 &quot;nobody's cut a drain through&quot; → &quot;no gang's cut a drain through&quot;).<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>&quot;the whole of&quot; (l.133) — single instance, within tolerance, flagging only because it's the watch-word; not fingerprint-rate here.</li>
+</ul>
+<p><strong>Narrator generalizations (candidate aphorisms, per &quot;list every candidate&quot;)</strong></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>'s particulars — candidate free-floating aphorism. | fix: anchor it to <span class="redacted">redacted</span> specifically, or cut the generalizing clause and let the dinner-hut scene that follows demonstrate the reason.</p>
+<ul>
+<li>L.121 &quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> | fix: cut to the concrete beat — &quot;<span class="redacted">redacted</span> considered it and said nothing, which was his way of agreeing&quot; — drop the &quot;men of his sort&quot; frame.</li>
+</ul>
+<p><strong>Self-annotation candidate</strong></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> | fix: let the scene demonstrate the effect (<span class="redacted">redacted</span>'s reaction) and cut the second &quot;because&quot; clause, or fold it into dialogue.</p>
+<p><strong>Clean on this lens</strong></p>
+<ul>
+<li>Em dashes: 0 (well under ~2/1000 budget).</li>
+<li>No Earth month names (compound-month canon used throughout: Harvestmonth, Weedmonth, Cornmonth, Haymonth).</li>
+<li>No &quot;honest [noun],&quot; &quot;arithmetic,&quot; &quot;half past,&quot; &quot;out loud,&quot; &quot;ordinary&quot; hits.</li>
+<li>No ghost/echo/whisper/hum lexicon.</li>
+<li>No banned &quot;not X, but Y&quot; negative-parallelism construction in narration (the &quot;not that... not that...&quot; run at l.105 and the negatives at l.161/179/69 are all either dialogue-exempt or anaphoric listing, not the banned shape).</li>
+<li>Triad-with-swerve: none detected in narration.</li>
+<li>Appraisal-formula/abstract-concrete simile: only one simile found (&quot;built like a gatepost,&quot; l.49) — plain physical comparison, not the abstract/concrete jukebox move; no finding.</li>
+<li>Ending: decorated-vs-flat check passes. <span class="redacted">redacted sentence: unpublished prose</span> Compliant with &quot;endings are cuts.&quot;</li>
+</ul>
 </div>
 </body></html>

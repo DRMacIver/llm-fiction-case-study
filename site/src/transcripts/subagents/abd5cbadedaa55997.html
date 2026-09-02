@@ -7,20 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are doing a dialogue revoicing pass on three chapters of a novel.…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-abd5cbadedaa55997">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are doing a dialogue revoicing pass on three chapters of a novel. Work only in your worktree. Do NOT commit and do not run git commands other than `git diff`.<br>
-<br>
-Read first, in this order: notes/voices.md (the round-three banned constructions under "Revision (round three)" and the whole "Dialogue rules (round four)" section, which is the spec), notes/llm-tells.md, and the "How they talk" sections of notes/canon/characters/edwin.md, peri.md, <span class="redacted">redacted: character</span>.md, mattie-ordish.md, sorrel.md, minor.md. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Task: go through every exchange of dialogue in each chapter and edit the chapter files directly so the dialogue obeys the ten rules and each speaker's "How they talk" entry. Concretely: (1) every practical question gets a reply whose first sentence answers it in usable terms; (2) no clever or oblique line is left dangling before a scene break, stage direction, or topic change unless the listener visibly gets it or calls it; (3) no reflexive echoes (repeating the previous line as beat-filler) or mirror retorts (reusing the previous line's frame with the ending swapped); (4) no speaker other than Edwin or Sorrel produces the ledger register: definitional "That's X" sentences, balanced antitheses, verdict tails (", which is…"), short drop after a long build; Mattie is short and concrete and never generalises; <span class="redacted">redacted: character</span> runs long, piles up numbers and citations, repeats herself when insistent; Peri asks, says things in the wrong order and corrects, is literal; (5) narration bans apply inside quotation marks; (6) exchanges end on work, not on the wittiest line. Leave narration alone except where a dialogue change forces a one-clause adjustment. Do not add facts not already in the chapter or canon; do not add em dashes, "not X but Y", or triads with a swerve. Do not touch the author's-note block after the final `---`. Do not change lines that already pass: a plain functional line is fine, and real-person repetition (disbelief, bicker, tense correction) stays.<br>
-<br>
-When done, run `git diff --stat` and return: (a) per chapter, a numbered list of every change as old → new with the rule it serves in a few words; (b) the lines you considered and deliberately left, with why; (c) the worktree path.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are doing a dialogue revoicing pass on three chapters of a novel.…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-abd5cbadedaa55997">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-25</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are doing a dialogue revoicing pass on three chapters of a novel. Work only in your worktree. Do NOT commit and do not run git commands other than <code>git diff</code>.</p>
+<p>Read first, in this order: notes/voices.md (the round-three banned constructions under &quot;Revision (round three)&quot; and the whole &quot;Dialogue rules (round four)&quot; section, which is the spec), notes/llm-tells.md, and the &quot;How they talk&quot; sections of notes/canon/characters/edwin.md, peri.md, <span class="redacted">redacted</span>.md, mattie-ordish.md, sorrel.md, minor.md. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Task: go through every exchange of dialogue in each chapter and edit the chapter files directly so the dialogue obeys the ten rules and each speaker's &quot;How they talk&quot; entry. Concretely: (1) every practical question gets a reply whose first sentence answers it in usable terms; (2) no clever or oblique line is left dangling before a scene break, stage direction, or topic change unless the listener visibly gets it or calls it; (3) no reflexive echoes (repeating the previous line as beat-filler) or mirror retorts (reusing the previous line's frame with the ending swapped); (4) no speaker other than Edwin or Sorrel produces the ledger register: definitional &quot;That's X&quot; sentences, balanced antitheses, verdict tails (&quot;, which is…&quot;), short drop after a long build; Mattie is short and concrete and never generalises; <span class="redacted">redacted</span> runs long, piles up numbers and citations, repeats herself when insistent; Peri asks, says things in the wrong order and corrects, is literal; (5) narration bans apply inside quotation marks; (6) exchanges end on work, not on the wittiest line. Leave narration alone except where a dialogue change forces a one-clause adjustment. Do not add facts not already in the chapter or canon; do not add em dashes, &quot;not X but Y&quot;, or triads with a swerve. Do not touch the author's-note block after the final <code>---</code>. Do not change lines that already pass: a plain functional line is fine, and real-person repetition (disbelief, bicker, tense correction) stays.</p>
+<p>When done, run <code>git diff --stat</code> and return: (a) per chapter, a numbered list of every change as old → new with the rule it serves in a few words; (b) the lines you considered and deliberately left, with why; (c) the worktree path.</p></blockquote>
 
 
 <details><summary>10 tool calls</summary>
@@ -28,11 +38,11 @@ When done, run `git diff --stat` and return: (a) per chapter, a numbered list of
 <p>✅ 509 lines, 31773 chars</p>
 <p>🔧 Read notes/llm-tells.md</p>
 <p>✅ 220 lines, 14313 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.md note…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.md notes/canon/characters/m…</p>
 <p>✅ 96 lines, 5333 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n "How they talk" notes/canon/characters/minor.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> &amp;&amp; grep -n "How they talk" notes/canon/characters/minor.md</p>
 <p>✅ 1 lines, 71 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '1,260p' notes/canon/characters/minor.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> &amp;&amp; sed -n '1,260p' notes/canon/characters/minor.md</p>
 <p>✅ 260 lines, 15365 chars</p>
 </details>
 
@@ -55,14 +65,14 @@ When done, run `git diff --stat` and return: (a) per chapter, a numbered list of
 <p>Right, I need to use the worktree path.</p>
 </div>
 
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/.claude/worktrees/agent-abd5cbadedaa55997/chapters/ | grep -E '009…</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/.claude/worktrees/agent-abd5cbadedaa55997/chapters/ | grep -E '009|013|021'</p>
 <p>✅ 3 lines, 63 chars</p>
 
 <div class="assistant-prose">
 <p>Good — the worktree is the same relative structure. I'll re-read and re-apply using the correct absolute path.</p>
 </div>
 
-<p>🔧 Bash: WT=<span class="redacted">redacted: private</span>/.claude/worktrees/agent-abd5cbadedaa55997 diff <span class="redacted">redacted: private</span>…</p>
+<p>🔧 Bash: WT=<span class="redacted">redacted</span>/.claude/worktrees/agent-abd5cbadedaa55997 diff <span class="redacted">redacted</span>/chapters/009-fenh…</p>
 <p>✅ 1 lines, 4 chars</p>
 <p>🔧 Read .claude/worktrees/agent-abd5cbadedaa55997/chapters/009-fenholt.md</p>
 <p>✅ 1 lines, 22 chars</p>
@@ -108,9 +118,9 @@ When done, run `git diff --stat` and return: (a) per chapter, a numbered list of
 <details><summary>6 tool calls</summary>
 <p>🔧 Read .claude/worktrees/agent-abd5cbadedaa55997/chapters/021-leaving-fenholt.md</p>
 <p>✅ 190 lines, 16528 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/.claude/worktrees/agent-abd5cbadedaa55997/chapters grep -n "not ju…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/.claude/worktrees/agent-abd5cbadedaa55997/chapters grep -n "not just\|but r…</p>
 <p>✅ 33 lines, 10520 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/.claude/worktrees/agent-abd5cbadedaa55997/chapters sed -n '1,30p'…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/.claude/worktrees/agent-abd5cbadedaa55997/chapters sed -n '1,30p' 021-leavi…</p>
 <p>✅ 29 lines, 2428 chars</p>
 </details>
 
@@ -138,42 +148,45 @@ When done, run `git diff --stat` and return: (a) per chapter, a numbered list of
 
 <div class="assistant-prose">
 <p>All fixes landed correctly. Final report below.</p>
-<p>## Summary</p>
-<p>Worktree: `<span class="redacted">redacted: private</span>/.claude/worktrees/agent-abd5cbadedaa55997`</p>
-<p>`git diff --stat`:<br>
-```<br>
-chapters/009-fenholt.md            |  6 ++++--<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-chapters/021-leaving-fenholt.md    |  8 ++++----<br>
-3 files changed, 15 insertions(+), 13 deletions(-)<br>
-```</p>
-<p>### (a) Changes made</p>
-<p>**Chapter 9 (chapters/009-fenholt.md)**<br>
-1. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> The second one's what he'd bet on." / "If I get both off everyone we ask, I can average them." — Peri was answering with a balanced ledger antithesis, banned for anyone but Edwin/Sorrel; rewrote as her literal, concrete reasoning.<br>
-2. <span class="redacted">redacted sentence: unpublished prose</span><br>
-3. <span class="redacted">redacted sentence: unpublished prose</span> Nobody else has said what it's actually like standing in there." — Peri was given a definitional "That's X" verdict sentence, reserved for Edwin/Sorrel; rewrote as a first-person, literal statement.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-4. <span class="redacted">redacted sentence: unpublished prose</span> / Edwin agreed, verbatim) → Peri now says "So the good-looking barley isn't actually healthy... It just stopped in a good week," Edwin's reply restated rather than exact-repeated. Fixed a verbatim mirror-echo and Peri using Edwin's cause-clause ledger frame.<br>
-5. <span class="redacted">redacted sentence: unpublished prose</span><br>
-6. "That's what fifty miles means." → "Fifty miles off." — Mattie given a definitional interpretive sentence; cut to a plain fact fragment, which is her register.<br>
-7. "It's my field... <span class="redacted">redacted sentence: unpublished prose</span> and it's other people's business too, apparently" — Mattie was given a balanced antithesis, banned for her; replaced with a resigned, concrete line.<br>
-8. <span class="redacted">redacted sentence: unpublished prose</span><br>
-9. "cows are fools" → "She's had a fright at something, that's all" — Mattie generalizing about a class of animal (banned "never generalises"); made concrete to this cow.</p>
-<p>**Chapter 21 (chapters/021-leaving-fenholt.md)**<br>
-10. <span class="redacted">redacted sentence: unpublished prose</span> You're wrong that going will." → "A letter won't do it. You've got that much right. But going for an afternoon won't do it either." — <span class="redacted">redacted: character</span> given the explicit "You're right that X. You're wrong that Y." balanced antithesis, banned for her; broken into her piling-up register.<br>
-11. <span class="redacted">redacted sentence: unpublished prose</span> I always read it out to them. Every one." — replaced a wry epigram-trading line (not <span class="redacted">redacted: character</span>'s register — she doesn't fence with Edwin) with her repeats-when-insistent habit.<br>
-12. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> given a "That's X" ledger closer; rewritten as a plain imperative pivot.<br>
-13. <span class="redacted">redacted sentence: unpublished prose</span> It's Y." negative parallelism, explicitly banned; restructured without the paired negation.</p>
-<p>### (b) Lines considered and left</p>
-<p>- Ch. 9: "Are you all right?" / "I have levelled a skill" — doesn't literally answer yes/no but functions as Edwin's actual answer (why he stopped); consistent with his teaching-cadence habit, left.<br>
-- Ch. 9: "You've no name for it" / "I have no name for it" — a subject-swapped echo, but it's confirmation not disagreement-by-mirror, and reads as a real person restating back; left per rule 5.<br>
-- Ch. <span class="redacted">redacted sentence: unpublished prose</span> I wrote it down," <span class="redacted">redacted: character</span>'s and Sennet's lines, Burl's "Not since I noticed") — kept verbatim; these are established canon and real-person echo/confirmation, not reflexive filler.<br>
-- Ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Ch. 13/21: "The road,"/"The road." and "The seventeenth,"/"The seventeenth, then." and similar confirmation echoes — natural agreement repetition, not reflexive beat-filler; left per rule 5.<br>
-- Ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Ch. 21: woman with shawl's "That's not the a no" — generic minor character, ordinary colloquial phrase, not scoped to a "how they talk" entry; left.</p>
+<h2>Summary</h2>
+<p>Worktree: <span class="redacted">redacted</span>/.claude/worktrees/agent-abd5cbadedaa55997`</p>
+<p>`git diff --stat:</p>
+<pre><code>chapters/009-fenholt.md            |  6 ++++--
+<span class="redacted">redacted sentence: unpublished prose</span>
+chapters/021-leaving-fenholt.md    |  8 ++++----
+3 files changed, 15 insertions(+), 13 deletions(-)
+</code></pre>
+<h3>(a) Changes made</h3>
+<p><strong>Chapter 9 (chapters/009-fenholt.md)</strong></p>
+<ol>
+<li><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> The second one's what he'd bet on.&quot; / &quot;If I get both off everyone we ask, I can average them.&quot; — Peri was answering with a balanced ledger antithesis, banned for anyone but Edwin/Sorrel; rewrote as her literal, concrete reasoning.</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><span class="redacted">redacted sentence: unpublished prose</span> Nobody else has said what it's actually like standing in there.&quot; — Peri was given a definitional &quot;That's X&quot; verdict sentence, reserved for Edwin/Sorrel; rewrote as a first-person, literal statement.</li>
+</ol>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+4. <span class="redacted">redacted sentence: unpublished prose</span> / Edwin agreed, verbatim) → Peri now says &quot;So the good-looking barley isn't actually healthy... It just stopped in a good week,&quot; Edwin's reply restated rather than exact-repeated. Fixed a verbatim mirror-echo and Peri using Edwin's cause-clause ledger frame.<br />
+5. <span class="redacted">redacted sentence: unpublished prose</span><br />
+6. &quot;That's what fifty miles means.&quot; → &quot;Fifty miles off.&quot; — Mattie given a definitional interpretive sentence; cut to a plain fact fragment, which is her register.<br />
+7. &quot;It's my field... <span class="redacted">redacted sentence: unpublished prose</span> and it's other people's business too, apparently&quot; — Mattie was given a balanced antithesis, banned for her; replaced with a resigned, concrete line.<br />
+8. <span class="redacted">redacted sentence: unpublished prose</span><br />
+9. &quot;cows are fools&quot; → &quot;She's had a fright at something, that's all&quot; — Mattie generalizing about a class of animal (banned &quot;never generalises&quot;); made concrete to this cow.</p>
+<p><strong>Chapter 21 (chapters/021-leaving-fenholt.md)</strong><br />
+10. <span class="redacted">redacted sentence: unpublished prose</span> You're wrong that going will.&quot; → &quot;A letter won't do it. You've got that much right. But going for an afternoon won't do it either.&quot; — <span class="redacted">redacted</span> given the explicit &quot;You're right that X. You're wrong that Y.&quot; balanced antithesis, banned for her; broken into her piling-up register.<br />
+11. <span class="redacted">redacted sentence: unpublished prose</span> I always read it out to them. Every one.&quot; — replaced a wry epigram-trading line (not <span class="redacted">redacted</span>'s register — she doesn't fence with Edwin) with her repeats-when-insistent habit.<br />
+12. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> given a &quot;That's X&quot; ledger closer; rewritten as a plain imperative pivot.<br />
+13. <span class="redacted">redacted sentence: unpublished prose</span> It's Y.&quot; negative parallelism, explicitly banned; restructured without the paired negation.</p>
+<h3>(b) Lines considered and left</h3>
+<ul>
+<li>Ch. 9: &quot;Are you all right?&quot; / &quot;I have levelled a skill&quot; — doesn't literally answer yes/no but functions as Edwin's actual answer (why he stopped); consistent with his teaching-cadence habit, left.</li>
+<li>Ch. 9: &quot;You've no name for it&quot; / &quot;I have no name for it&quot; — a subject-swapped echo, but it's confirmation not disagreement-by-mirror, and reads as a real person restating back; left per rule 5.</li>
+<li>Ch. <span class="redacted">redacted sentence: unpublished prose</span> I wrote it down,&quot; <span class="redacted">redacted</span>'s and Sennet's lines, Burl's &quot;Not since I noticed&quot;) — kept verbatim; these are established canon and real-person echo/confirmation, not reflexive filler.</li>
+<li>Ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Ch. 13/21: &quot;The road,&quot;/&quot;The road.&quot; and &quot;The seventeenth,&quot;/&quot;The seventeenth, then.&quot; and similar confirmation echoes — natural agreement repetition, not reflexive beat-filler; left per rule 5.</li>
+<li>Ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Ch. 21: woman with shawl's &quot;That's not the a no&quot; — generic minor character, ordinary colloquial phrase, not scoped to a &quot;how they talk&quot; entry; left.</li>
+</ul>
 </div>
 </body></html>

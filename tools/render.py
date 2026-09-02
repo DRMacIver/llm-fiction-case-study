@@ -19,10 +19,15 @@ consumes):
   - Agent tool_use blocks link to the subagent's standalone HTML page when
     resolvable, with an anchor the subagent page links back to
   - ⟦redacted...⟧ markers -> <span class="redacted">...</span>
-  - all transcript text is HTML-escaped; session pages embed this as raw
-    HTML inside markdown (mdBook/pulldown-cmark passes raw HTML through
-    untouched), and subagent pages embed it directly in a standalone
-    <!doctype html> file, so nothing here needs markdown-escaping any more.
+  - user prompts, assistant prose and thinking blocks are markdown (from the
+    original transcript) and are rendered to HTML with markdown-it-py
+    (see render_markdown()); raw HTML in the source is escaped rather than
+    passed through, since this text is untrusted. Session pages embed the
+    resulting HTML as raw HTML inside markdown (mdBook/pulldown-cmark
+    passes raw HTML through untouched), and subagent pages embed it
+    directly in a standalone <!doctype html> file.
+  - tool-use summary lines (commands, paths) are NOT markdown and are just
+    HTML-escaped via esc_inline(), same as before.
 """
 from __future__ import annotations
 
@@ -31,6 +36,8 @@ import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
+
+from markdown_it import MarkdownIt
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 REDACTED_DIR = REPO_ROOT / "build" / "redacted"
@@ -45,29 +52,108 @@ MAX_TURNS_PER_PART = 400
 TOOL_GROUP_THRESHOLD = 5
 
 _REDACT_MARKER_RE = re.compile(r"⟦([^⟧]*)⟧")
+_ADJACENT_SPAN_RE = re.compile(r"</span>(<span class=\"(?:redacted|unpub-tag)\")")
+
+
+def _marker_span(inner: str) -> str:
+    """Render one ⟦...⟧ marker as HTML. The bare "unpublished" tag (see
+    tools/redact.py's `_mark_unpublished_paths`/`_mark_scene_numbers`) is
+    not hiding anything -- the scene number or path it's attached to stays
+    fully visible right next to it -- so it gets its own light "flag" style
+    distinct from the grey pill used for markers that really do stand in
+    for hidden spoiler text, rather than reusing the "redacted" class and
+    reading as if this were hidden content too."""
+    if inner == "unpublished":
+        return '<span class="unpub-tag">unpublished</span>'
+    return f'<span class="redacted">{inner}</span>'
+
+
+def _join_adjacent_spans(html_text: str) -> str:
+    """Two marker spans that landed back-to-back in the source (no prose
+    between them) render with no visual gap, which reads as one glued-
+    together label rather than two distinct ones. Insert a thin space."""
+    return _ADJACENT_SPAN_RE.sub(r"</span> \1", html_text)
 
 
 def esc(text: str) -> str:
     """HTML-escape text and turn the ⟦...⟧ redaction markers this project
-    uses into <span class="redacted"> spans."""
+    uses into <span class="redacted"> (or <span class="unpub-tag">) spans."""
     if text is None:
         return ""
     escaped = html.escape(text, quote=False)
+    escaped = _REDACT_MARKER_RE.sub(lambda m: _marker_span(m.group(1)), escaped)
+    return _join_adjacent_spans(escaped)
 
-    def repl(m: re.Match) -> str:
-        inner = m.group(1)
-        return f'<span class="redacted">{inner}</span>'
 
-    return _REDACT_MARKER_RE.sub(repl, escaped)
+_MD = MarkdownIt("commonmark", {"html": False, "breaks": True}).enable("table")
+
+_TABLE_RE = re.compile(r"<table>.*?</table>", re.DOTALL)
+
+
+def render_markdown(text: str | None) -> str:
+    """Render markdown prose (user prompts, assistant text, thinking) to
+    HTML. Raw HTML in the source is escaped, not executed (html=False), so
+    this is safe on untrusted transcript text. The ⟦...⟧ redaction markers
+    are left alone by the markdown renderer (they contain no markdown
+    syntax characters) and turned into <span class="redacted"> spans as a
+    post-processing step on the rendered HTML, so marker text that happens
+    to include markdown-ish characters is rendered as part of normal prose
+    first and only then wrapped. Tables are wrapped in a scrollable div so
+    wide tables don't cause horizontal page scroll."""
+    if not text:
+        return ""
+    rendered = _MD.render(text)
+    rendered = _REDACT_MARKER_RE.sub(lambda m: _marker_span(m.group(1)), rendered)
+    rendered = _join_adjacent_spans(rendered)
+    rendered = _TABLE_RE.sub(lambda m: f'<div class="table-wrap">{m.group(0)}</div>', rendered)
+    # mdBook/pulldown-cmark treats a run of raw HTML lines as ending at the
+    # first blank line (e.g. inside a multi-paragraph fenced code block, or
+    # a "loose" list whose items are separated by blank lines), which would
+    # otherwise split our wrapper <div>/<blockquote> from the rest of its
+    # own content and have the remainder get parsed as markdown instead of
+    # passed through as HTML. Neutralize internal blank lines with an
+    # invisible zero-width space so no line here is ever truly blank.
+    rendered = rendered.strip("\n")
+    lines = rendered.split("\n")
+    lines = [ln if ln.strip() else "​" for ln in lines]
+    return "\n".join(lines)
 
 
 def esc_inline(text: str) -> str:
-    """Like esc() but named separately for short inline strings (tool
-    summary lines, titles): escape + redaction spans."""
+    """Like esc() but named separately for short inline strings embedded in
+    a block-level raw-HTML context (tool summary lines, page notes): escape
+    + redaction spans. Not for titles/headings/nav-link text -- see
+    esc_title()."""
     if text is None:
         return ""
     escaped = html.escape(text, quote=False)
-    return _REDACT_MARKER_RE.sub(lambda m: f'<span class="redacted">{m.group(1)}</span>', escaped)
+    escaped = _REDACT_MARKER_RE.sub(lambda m: _marker_span(m.group(1)), escaped)
+    return _join_adjacent_spans(escaped)
+
+
+def esc_title(text: str | None) -> str:
+    """Plain-text-safe form for titles/headings/nav-link labels.
+
+    Titles end up embedded in several contexts that, unlike a blockquote's
+    body, can't safely hold real HTML: a standalone subagent page's
+    <title>, which HTML5 defines as "escapable raw text" -- character
+    references are decoded but tags are never parsed, so a literal <span>
+    would show up as raw, unparsed angle-bracket text in the browser tab --
+    and an mdBook page heading / SUMMARY.md nav link, both of which are
+    inline markdown spans that HTML-escape whatever text they're given (so
+    a marker already turned into a real <span> by esc_inline() gets
+    escaped *again*, showing the tag syntax itself as visible text). So a
+    title never gets a real <span> pill: each ⟦...⟧ marker becomes plain
+    bracketed text instead, and the whole string is HTML-escaped exactly
+    once."""
+    if text is None:
+        return ""
+
+    def repl(m: re.Match) -> str:
+        return "[unpublished]" if m.group(1) == "unpublished" else "[redacted]"
+
+    plain = _REDACT_MARKER_RE.sub(repl, text)
+    return html.escape(plain, quote=False)
 
 
 def md_link_text(text: str) -> str:
@@ -78,12 +164,28 @@ def md_link_text(text: str) -> str:
 
 
 def truncate(text: str | None, n: int = 100) -> str:
+    """Character-truncate to `n` chars, but never cut inside a ⟦...⟧
+    redaction marker: a cut that lands between a marker's ⟦ and ⟧ leaves a
+    fragment like "⟦unpublished" with no closing ⟧, which downstream
+    marker-to-span conversion (esc()/esc_inline()/render_markdown(), all of
+    which require the closing ⟧ to recognise a marker) can't turn into a
+    span -- so the raw bracket text leaks into the page instead. Extend the
+    cut through the marker's closing ⟧ when there is one nearby; otherwise
+    back up to end the truncation before the marker started."""
     if not text:
         return ""
     text = text.replace("\n", " ").strip()
-    if len(text) > n:
-        return text[: n - 1].rstrip() + "…"
-    return text
+    if len(text) <= n:
+        return text
+    cut = n - 1
+    prefix = text[:cut]
+    if prefix.count("⟦") > prefix.count("⟧"):
+        close = text.find("⟧", cut)
+        if close != -1:
+            return text[: close + 1] + "…"
+        open_ = prefix.rfind("⟦")
+        return text[:open_].rstrip() + "…"
+    return text[:cut].rstrip() + "…"
 
 
 @dataclass
@@ -134,6 +236,9 @@ def tool_use_summary(block: dict) -> str:
                 inp = {}
         skill = (inp or {}).get("skill", "") if isinstance(inp, dict) else ""
         return f"Skill: {skill}"
+    inp = block.get("input")
+    if inp:
+        return f"{tool} ({truncate(inp, 60)})"
     return tool
 
 
@@ -172,21 +277,51 @@ def render_block_group(blocks: list[dict], subagent_ids: set[str]) -> str:
     return "\n".join(f"<p>{ln}</p>" for ln in lines) + "\n"
 
 
+def system_note_text(block: dict) -> str:
+    """Raw (un-escaped) one-line label for a harness-generated `system_note`
+    block -- never rendered as anything the human said (see the module note
+    in tools/parse_transcripts.py on harness-injected real-input lines).
+    Only the short, human-legible label survives; the notification's own
+    huge <result>/<diagnostics>/<usage> payload is dropped upstream in the
+    parser and never reaches here."""
+    event = block.get("event")
+    if event == "task_notification":
+        summary = block.get("summary")
+        if summary:
+            return f"⚙ background task finished — {truncate(summary, 160)}"
+        return "⚙ background task finished"
+    if event == "compaction_summary":
+        return "⚙ context compacted (the harness summarized earlier conversation for its own use)"
+    if event == "command_output":
+        return f"⚙ {truncate(block.get('summary', ''), 160)}"
+    return "⚙ system event"
+
+
 def render_turn(turn: dict, subagent_ids: set[str], user_label: str = "User") -> str:
     role = turn.get("role")
     out = []
     blocks = turn.get("blocks", [])
     i = 0
+    if role == "system":
+        # Harness-generated events (background task completions, the
+        # /compact auto-summary, ...): a small non-attributed marker line,
+        # never a blockquote and never labelled as the human speaking.
+        for b in blocks:
+            if b.get("kind") == "system_note":
+                out.append(f'<p class="system-note">{esc_inline(system_note_text(b))}</p>\n')
+        return "\n".join(out)
     if role == "user":
         # user turns are usually a single text/command block.
         for b in blocks:
             if b["kind"] == "text":
-                quoted = esc(b["text"]).replace("\n", "<br>\n")
+                rendered = render_markdown(b["text"])
                 out.append(
-                    f'<blockquote><p><strong>{user_label}:</strong><br>\n{quoted}</p></blockquote>\n'
+                    f'<blockquote><p><strong>{user_label}:</strong></p>\n{rendered}</blockquote>\n'
                 )
             elif b["kind"] == "command":
                 out.append(f"<p><strong>{user_label}:</strong> ran <code>{esc_inline(b.get('name', ''))}</code></p>\n")
+                if b.get("output"):
+                    out.append(f'<p class="system-note">⚙ {esc_inline(truncate(b["output"], 200))}</p>\n')
         return "\n".join(out)
 
     # assistant turn: walk blocks, grouping consecutive tool_use/tool_result
@@ -194,16 +329,13 @@ def render_turn(turn: dict, subagent_ids: set[str], user_label: str = "User") ->
         b = blocks[i]
         kind = b["kind"]
         if kind == "text":
-            paragraphs = "\n".join(
-                f"<p>{p.replace(chr(10), '<br>' + chr(10))}</p>"
-                for p in esc(b["text"]).split("\n\n")
-                if p.strip()
-            )
-            out.append(f'<div class="assistant-prose">\n{paragraphs}\n</div>\n')
+            rendered = render_markdown(b["text"])
+            out.append(f'<div class="assistant-prose">\n{rendered}\n</div>\n')
             i += 1
         elif kind == "thinking":
+            rendered = render_markdown(b["text"])
             out.append(
-                f"<details><summary>thinking</summary>\n<div>{esc(b['text']).replace(chr(10), '<br>' + chr(10))}</div>\n</details>\n"
+                f"<details><summary>thinking</summary>\n<div>{rendered}</div>\n</details>\n"
             )
             i += 1
         elif kind in ("tool_use", "tool_result"):
@@ -219,7 +351,12 @@ def render_turn(turn: dict, subagent_ids: set[str], user_label: str = "User") ->
 
 def render_transcript_body(doc: dict, subagent_ids: set[str], user_label: str = "User") -> str:
     parts = []
+    last_date = None
     for turn in doc.get("turns", []):
+        date = format_date(turn.get("timestamp"))
+        if date != "?" and date != last_date:
+            parts.append(f'<p class="date-marker">{date}</p>')
+            last_date = date
         rendered = render_turn(turn, subagent_ids, user_label)
         if rendered.strip():
             parts.append(rendered)
@@ -291,12 +428,23 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
 </style>"""
 
 
@@ -328,10 +476,16 @@ def render_subagent_pages(
             f" &middot; subagent transcript, not indexed</div>"
         )
         note_html = page_note_html(note) if rc.part_no == 1 else ""
+        # rc.heading (built from `title`, in main()) is already plain-text-
+        # escaped via esc_title() -- no real HTML tags in it, just entities
+        # -- and safe to embed directly in *both* <title> (HTML5 "escapable
+        # raw text": entities decode, but tags never parse, so a real
+        # <span> would show up as literal unparsed markup in the browser
+        # tab) and <h1>. Do not run it through html.escape() again here.
         page = (
             "<!doctype html>\n<html><head><meta charset=\"utf-8\">"
-            f"<title>{html.escape(rc.heading)}</title>{SUBAGENT_STYLE}</head><body>"
-            f"<h1>{html.escape(rc.heading)}</h1>{header}{note_html}{nav_html}{rc.body}{nav_html}"
+            f"<title>{rc.heading}</title>{SUBAGENT_STYLE}</head><body>"
+            f"<h1>{rc.heading}</h1>{header}{note_html}{nav_html}{rc.body}{nav_html}"
             "</body></html>\n"
         )
         dest = SUBAGENTS_OUT_DIR / f"{fname}.html"
@@ -405,9 +559,9 @@ def main() -> None:
         doc = json.loads(src.read_text())
         raw_prompt = sess_meta.get("first_user_prompt", sid) or sid
         fallback_title = truncate(raw_prompt, 70) or sid
-        fallback_title = esc_inline(fallback_title)
+        fallback_title = esc_title(fallback_title)
         title_entry = titles.get(sid, {})
-        display_title = esc_inline(title_entry.get("title", "")) if title_entry.get("title") else ""
+        display_title = esc_title(title_entry.get("title", "")) if title_entry.get("title") else ""
         stem = TRANSCRIPTS_DIR / sid
         written = render_session(
             doc, display_title or fallback_title, subagent_ids, stem, note=page_notes.get(sid)
@@ -420,7 +574,7 @@ def main() -> None:
                 "date": format_date(sess_meta.get("start")),
                 "title": display_title,
                 "nav_title": display_title or fallback_title,
-                "first_prompt": esc_inline(truncate(raw_prompt, 120)),
+                "first_prompt": esc_title(truncate(raw_prompt, 120)),
                 "user_turns": sess_meta.get("user_turns", 0),
                 "tool_uses": sum(tool_counts.values()),
                 "subagent_count": subagent_count_by_session.get(sid, 0),
@@ -441,7 +595,7 @@ def main() -> None:
                         break
             if first_prompt:
                 break
-        title = esc_inline(truncate(first_prompt, 70) or agent_id)
+        title = esc_title(truncate(first_prompt, 70) or agent_id)
         render_subagent_pages(
             d, title, agent_id, parent_session_id, subagent_ids, note=page_notes.get(agent_id)
         )

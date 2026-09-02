@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a0431feb4af19cb05">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/07-can-you-actually-fight.md — REBUILT since a previous pass found that scene 04 made Day 1 the class's first cantrip cast, so no revision day of five spells can follow; it now runs on a second heap, dry-casting, and the charms he names and refuses to show out of order. Read it after scenes 01–06 and before 08 in the same directory (they bind what is on the page, especially scene 04's heap, its rule that it be left alone, and dry-casting as "hands and the words and no mana"). <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a0431feb4af19cb05">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/07-can-you-actually-fight.md — REBUILT since a previous pass found that scene 04 made Day 1 the class's first cantrip cast, so no revision day of five spells can follow; it now runs on a second heap, dry-casting, and the charms he names and refuses to show out of order. Read it after scenes 01–06 and before 08 in the same directory (they bind what is on the page, especially scene 04's heap, its rule that it be left alone, and dry-casting as &quot;hands and the words and no mana&quot;). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Report findings only, per the skill's &quot;How to report&quot;: quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or &quot;cut&quot;. Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -55,44 +66,44 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 <p>✅ 991 lines, 64117 chars</p>
 <p>🔧 Read notes/canon/characters/peri.md</p>
 <p>✅ 332 lines, 20854 chars</p>
-<p>🔧 Bash: grep -n -i -A 30 "Tansy\|Widow Sepp\|Sepp" <span class="redacted">redacted: private</span>/notes/canon/characters/min…</p>
+<p>🔧 Bash: grep -n -i -A 30 "Tansy\|Widow Sepp\|Sepp" <span class="redacted">redacted</span>/notes/canon/characters/minor.md | h…</p>
 <p>✅ 69 lines, 4493 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>## Findings</p>
-<p>**1.** *"built the week before from the same barrows and a day behind the first"*<br>
-**Part 1 — check every count and every fact inside the scene.** Scene 04 says the first heap was "built a fortnight ago from the class's own barrows". A heap built "the week before" is seven days behind a fortnight-old heap, not "a day behind the first". Replacement: *"built from the same barrows the day after the first"* — and drop "the week before".</p>
-<p>**2.** *"the second heap, at the far end of the garden"*<br>
-**Part 1 — check every fact inside the scene.** Scene 04 put the *first* heap "at the end of the garden". Both heaps cannot be the end of the garden without a reader stopping. Replacement: give the second a different place — *"the second heap, along the north wall"* — or move heap one in scene 04 (not this scene's fix).</p>
-<p>**3.** *"'What are the other four?' … 'You said five spells.'"*<br>
-**Part 1 — a pronoun or reference has no clear antecedent; check who was in the room when a thing was said.** Edwin never says "five spells" anywhere in scenes 01–06. Scene 02 gives Peri "a spell for compost" from the village and nothing else; the number *five* first reaches the page in scene **08** ("Because of five spells and a great many people who can cast them"), which is later the same morning. She is quoting a line that has not been said, and she was not in the class garden on Day 1 to hear it. Replacement: source it from where she actually got it — *"The village says you teach five. I've had the compost one all morning."* — or plant the count in scene 04's opening lesson.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1 — check who was in the room.** The class is twelve: eleven farmwives **and Dob** (scene 04; minor.md). Dob is the one keeping REMARKABLE THINGS on his father's cart-shed wall and was the one who said "Four" — he is precisely the person who would send it down the hill, and the sentence writes him out. He is absent from the whole scene and back in scene 08. Replacement: *"in front of eleven farmwives and a boy who keeps a list"*, and give him one presence-beat in the garden.</p>
-<p>**5.** *"with the sword left behind"*<br>
-**Part 1 — check the dependents of every edit / Part 5 — a beat spent early.** Canon has the sword worn at the hip through Day 7 (chs. 006, 007, 009) and leaves it standing against the dairy wall, unprompted, at the field walk (ch. 010) as a first. Leaving it at the inn on Day 2 both contradicts the established habit and spends ch. 010's beat for nothing. Replacement: cut "with the sword left behind"; the limp is enough — *"coming up the three long bends with the limp improved"*.</p>
-<p>**6.** *"Everything that happened to that apple since last winter is in the apple"*<br>
-**Part 1 — a pronoun or reference has no clear antecedent.** There is no apple. He is standing over a compost heap and has introduced no fruit. Replacement: *"Everything that happened to an apple since last winter is still in the apple"*.</p>
-<p>**7.** *"three farmwives cast and one heap began, very slightly, to steam"*<br>
-**Part 1 — a word is doing a job it cannot do.** "One heap" implies one of several heaps was affected; only one heap is being cast on, and the other is under an explicit leave-alone order. Replacement: *"three farmwives cast and the heap began, very slightly, to steam."*</p>
-<p>**8.** *"He straightened up from Widow Sepp's elbow."*<br>
-**Part 1 — a word doing a job it cannot do / check the dependents.** Eight lines earlier the scene used *elbow* in the teaching idiom — "one at a time, with him at their elbow" — so the literal joint now reads as the idiom misfiring. It is also the third body part he has been at on the same student (wrist, thumb, elbow). Replacement: *"He straightened up from Widow Sepp's hands."*</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> Most kings had not."*<br>
-**Part 5 — redundancy; a fact already delivered is not delivered again in a different mouth.** The blessing's limit is delivered three times in eleven lines: Mrs Tansy ("It holds the door, and you do the rest"), Edwin's correction ("The blessing merely kept the door shut"), then the narration summarising the same limit a third time as a thing every farmwife can recite. Replacement: cut the summary clauses and keep only the new information — *"She asked why a blessing could not simply make the beast well, and listened to the answer all the way to its end. Most kings had not."*</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span> Replacement: cut, and let "Next." follow the date directly.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 2 — the gesture at meaning.** Say it flat and the qualification is empty: eleven women each made room differently. It claims a distinction it does not supply. Replacement: cut *"each in her own way"* — or supply one: *"The farmwives made room without looking at her, and Mrs Tansy moved the biscuit tin."*</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 1 — a word doing a job it cannot do / Part 4 — knowledge states.** Peri has not invested anything; she bound him, and what she said on leaving was that she would be near when the destiny filled in so they could start at once. "Investment" is the narrator reaching for a wry noun and mis-stating her position, and Edwin has no grounds for it. Replacement: *"She had come, he supposed, to be near when it filled in."*</p>
-<p>**13.** *"Then I wet myself and ran, and I never went back."*<br>
-**Part 1 — reference has no clear antecedent.** After "ran", *went back* reads first as the road, then as Wystow; canon needs Wystow (the shed is the dropping out, four terms short). Replacement: *"Then I wet myself and ran, and I never went back to Wystow."*</p>
-<p>**14.** *"as he said every time the flock came up"*<br>
-**Part 1 — check every count; Part 3 — would this person do this here.** Mrs Tansy has been coming to the ten o'clock **three weeks** at Day 2 (minor.md). "Every time" writes a years-old ritual into a three-week acquaintance in this class. It is survivable via their prior Nether Wold history, but the sentence as written points at the class. Replacement: *"said Edwin, as he had said it to her before"*.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-**Part 2 — the gesture at meaning; Part 7 — endings are cuts.** The last line tells the reader something is significant and supplies nothing: what she did not say is unstated, and the narrator then rates it. It is also a cadence closing a scene that should end mid-flow on work. Replacement: cut both clauses and end on the next piece of work — *"'Right,' he said. 'Widow Sepp. Dry first.'"* — or on Peri's next question going unanswered.</p>
-<p>---</p>
-<p>**The device a second round would be about:** Peri in this scene is four bare interrogatives and nothing else — no agenda of her own, no tally, no false start, no want she is being refused. That is exactly the "job description, not a voice" failure `peri.md` rules against, and it makes the scene a fact-delivery mechanism with a girl operating the lever; "Can you actually fight?" then lands as the scene's engine turning over for the first time three-quarters of the way in.</p>
-<p>**What it would take:** give her one thing she wants from this morning that Edwin will not give her — the order of the course broken, a spell shown out of turn — and let her ask for it twice and be refused, so the questions come off a want instead of a list; then the fight question is the third ask and the refusal she finally gets an answer to. Edwin also owes the scene one framing correction that then answers (rule 6a, required, currently absent from all six of his replies).</p>
+<h2>Findings</h2>
+<p><strong>1.</strong> <em>&quot;built the week before from the same barrows and a day behind the first&quot;</em><br />
+<strong>Part 1 — check every count and every fact inside the scene.</strong> Scene 04 says the first heap was &quot;built a fortnight ago from the class's own barrows&quot;. A heap built &quot;the week before&quot; is seven days behind a fortnight-old heap, not &quot;a day behind the first&quot;. Replacement: <em>&quot;built from the same barrows the day after the first&quot;</em> — and drop &quot;the week before&quot;.</p>
+<p><strong>2.</strong> <em>&quot;the second heap, at the far end of the garden&quot;</em><br />
+<strong>Part 1 — check every fact inside the scene.</strong> Scene 04 put the <em>first</em> heap &quot;at the end of the garden&quot;. Both heaps cannot be the end of the garden without a reader stopping. Replacement: give the second a different place — <em>&quot;the second heap, along the north wall&quot;</em> — or move heap one in scene 04 (not this scene's fix).</p>
+<p><strong>3.</strong> <em>&quot;'What are the other four?' … 'You said five spells.'&quot;</em><br />
+<strong>Part 1 — a pronoun or reference has no clear antecedent; check who was in the room when a thing was said.</strong> Edwin never says &quot;five spells&quot; anywhere in scenes 01–06. Scene 02 gives Peri &quot;a spell for compost&quot; from the village and nothing else; the number <em>five</em> first reaches the page in scene <strong>08</strong> (&quot;Because of five spells and a great many people who can cast them&quot;), which is later the same morning. She is quoting a line that has not been said, and she was not in the class garden on Day 1 to hear it. Replacement: source it from where she actually got it — <em>&quot;The village says you teach five. I've had the compost one all morning.&quot;</em> — or plant the count in scene 04's opening lesson.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1 — check who was in the room.</strong> The class is twelve: eleven farmwives <strong>and Dob</strong> (scene 04; minor.md). Dob is the one keeping REMARKABLE THINGS on his father's cart-shed wall and was the one who said &quot;Four&quot; — he is precisely the person who would send it down the hill, and the sentence writes him out. He is absent from the whole scene and back in scene 08. Replacement: <em>&quot;in front of eleven farmwives and a boy who keeps a list&quot;</em>, and give him one presence-beat in the garden.</p>
+<p><strong>5.</strong> <em>&quot;with the sword left behind&quot;</em><br />
+<strong>Part 1 — check the dependents of every edit / Part 5 — a beat spent early.</strong> Canon has the sword worn at the hip through Day 7 (chs. 006, 007, 009) and leaves it standing against the dairy wall, unprompted, at the field walk (ch. 010) as a first. Leaving it at the inn on Day 2 both contradicts the established habit and spends ch. 010's beat for nothing. Replacement: cut &quot;with the sword left behind&quot;; the limp is enough — <em>&quot;coming up the three long bends with the limp improved&quot;</em>.</p>
+<p><strong>6.</strong> <em>&quot;Everything that happened to that apple since last winter is in the apple&quot;</em><br />
+<strong>Part 1 — a pronoun or reference has no clear antecedent.</strong> There is no apple. He is standing over a compost heap and has introduced no fruit. Replacement: <em>&quot;Everything that happened to an apple since last winter is still in the apple&quot;</em>.</p>
+<p><strong>7.</strong> <em>&quot;three farmwives cast and one heap began, very slightly, to steam&quot;</em><br />
+<strong>Part 1 — a word is doing a job it cannot do.</strong> &quot;One heap&quot; implies one of several heaps was affected; only one heap is being cast on, and the other is under an explicit leave-alone order. Replacement: <em>&quot;three farmwives cast and the heap began, very slightly, to steam.&quot;</em></p>
+<p><strong>8.</strong> <em>&quot;He straightened up from Widow Sepp's elbow.&quot;</em><br />
+<strong>Part 1 — a word doing a job it cannot do / check the dependents.</strong> Eight lines earlier the scene used <em>elbow</em> in the teaching idiom — &quot;one at a time, with him at their elbow&quot; — so the literal joint now reads as the idiom misfiring. It is also the third body part he has been at on the same student (wrist, thumb, elbow). Replacement: <em>&quot;He straightened up from Widow Sepp's hands.&quot;</em></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Most kings had not.&quot;*<br />
+<strong>Part 5 — redundancy; a fact already delivered is not delivered again in a different mouth.</strong> The blessing's limit is delivered three times in eleven lines: Mrs Tansy (&quot;It holds the door, and you do the rest&quot;), Edwin's correction (&quot;The blessing merely kept the door shut&quot;), then the narration summarising the same limit a third time as a thing every farmwife can recite. Replacement: cut the summary clauses and keep only the new information — <em>&quot;She asked why a blessing could not simply make the beast well, and listened to the answer all the way to its end. Most kings had not.&quot;</em></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span> Replacement: cut, and let &quot;Next.&quot; follow the date directly.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 2 — the gesture at meaning.</strong> Say it flat and the qualification is empty: eleven women each made room differently. It claims a distinction it does not supply. Replacement: cut <em>&quot;each in her own way&quot;</em> — or supply one: <em>&quot;The farmwives made room without looking at her, and Mrs Tansy moved the biscuit tin.&quot;</em></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 1 — a word doing a job it cannot do / Part 4 — knowledge states.</strong> Peri has not invested anything; she bound him, and what she said on leaving was that she would be near when the destiny filled in so they could start at once. &quot;Investment&quot; is the narrator reaching for a wry noun and mis-stating her position, and Edwin has no grounds for it. Replacement: <em>&quot;She had come, he supposed, to be near when it filled in.&quot;</em></p>
+<p><strong>13.</strong> <em>&quot;Then I wet myself and ran, and I never went back.&quot;</em><br />
+<strong>Part 1 — reference has no clear antecedent.</strong> After &quot;ran&quot;, <em>went back</em> reads first as the road, then as Wystow; canon needs Wystow (the shed is the dropping out, four terms short). Replacement: <em>&quot;Then I wet myself and ran, and I never went back to Wystow.&quot;</em></p>
+<p><strong>14.</strong> <em>&quot;as he said every time the flock came up&quot;</em><br />
+<strong>Part 1 — check every count; Part 3 — would this person do this here.</strong> Mrs Tansy has been coming to the ten o'clock <strong>three weeks</strong> at Day 2 (minor.md). &quot;Every time&quot; writes a years-old ritual into a three-week acquaintance in this class. It is survivable via their prior Nether Wold history, but the sentence as written points at the class. Replacement: <em>&quot;said Edwin, as he had said it to her before&quot;</em>.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+<strong>Part 2 — the gesture at meaning; Part 7 — endings are cuts.</strong> The last line tells the reader something is significant and supplies nothing: what she did not say is unstated, and the narrator then rates it. It is also a cadence closing a scene that should end mid-flow on work. Replacement: cut both clauses and end on the next piece of work — <em>&quot;'Right,' he said. 'Widow Sepp. Dry first.'&quot;</em> — or on Peri's next question going unanswered.</p>
+<hr />
+<p><strong>The device a second round would be about:</strong> Peri in this scene is four bare interrogatives and nothing else — no agenda of her own, no tally, no false start, no want she is being refused. That is exactly the &quot;job description, not a voice&quot; failure <code>peri.md</code> rules against, and it makes the scene a fact-delivery mechanism with a girl operating the lever; &quot;Can you actually fight?&quot; then lands as the scene's engine turning over for the first time three-quarters of the way in.</p>
+<p><strong>What it would take:</strong> give her one thing she wants from this morning that Edwin will not give her — the order of the course broken, a spell shown out of turn — and let her ask for it twice and be refused, so the questions come off a want instead of a list; then the fight question is the third ask and the refusal she finally gets an answer to. Edwin also owes the scene one framing correction that then answers (rule 6a, required, currently absent from all six of his replies).</p>
 </div>
 </body></html>

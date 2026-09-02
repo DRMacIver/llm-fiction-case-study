@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read these IN FULL before doing anything:…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. Read these IN FULL before doing anything: CLAUDE.md…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,83 +7,95 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read these IN FULL before doing anything:…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-ae22ce7de1e5ef623">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. Read these IN FULL before doing anything:<br>
-CLAUDE.md, .claude/skills/story-management/SKILL.md, notes/concept.md,<br>
-notes/premise.md, notes/theme.md, <span class="redacted">unpublished</span> notes/voices.md (skim rules),<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-notes/canon/deferred-beats.md, every file in notes/canon/characters/ and<br>
-notes/canon/world/. The two seed chapters were deleted; canon entries<br>
-citing them are Working design decisions, still binding. There are NO<br>
-accepted chapters yet — this plan starts the story from scratch (the<br>
-seed-chapter events — Peri's arrival, the binding, the departure — are<br>
-design material the plan may reuse, restage, or improve, but the<br>
-premise/concept facts themselves are fixed).<br>
-<br>
-You are planning BOOK 1 of this story. Author's structural rules<br>
-(binding): a book has 2-4 arcs; an arc is 30-50k words with a related<br>
-starting and stopping point (e.g. a visit to one town can be an arc);<br>
-arcs break into chapters of 3-5k words (hard cap 8k, rarely<br>
-approached); one chapter published per day; chapter endings are cuts,<br>
-not cadences.<br>
-<br>
-Write these files (create directories as needed):<br>
-<br>
-1. <span class="redacted">redacted: private</span>/plans/book-01/overview.md <span class="redacted">unpublished</span> — what book 1 is about: its<br>
-   question/throughline, how it serves the two theme anchors WITHOUT<br>
-   promising a final boss, one-paragraph shape per arc, and the state<br>
-   of world/characters at book's end. Book 1 must cover the story's<br>
-   true beginning: Peri finding and binding Edwin, and the first<br>
-   stretch of the road. Remember premise calibrations: competence porn,<br>
-   not cozy, affectionate mockery only, System asymmetry, party must<br>
-   eventually grow (book 1 should plant at least the first new<br>
-   combat-capable party member; romance threads at most seeded —<br>
-   chemistry discovered, never slot-filled). The silent-soil mystery<br>
-   (canon: green-revolution/dungeons/deferred material, plus the<br>
-   design record of the seed chapters in canon) is the natural<br>
-   book-scale throughline — dread allowed, dark-lord resolution<br>
-   forbidden.<br>
-<br>
-2. <span class="redacted">redacted: private</span>/plans/book-01/arc-NN.md <span class="redacted">unpublished</span> for EACH arc (arc-01.md, ...) —<br>
-   start and stop points; a detailed chapter-by-chapter beat plan<br>
-   (global chapter numbers starting at 001, slug, one solid paragraph<br>
-   of what happens per chapter, what the ending cut lands on, target<br>
-   word count); which canon files each chapter touches; which canon<br>
-   Open questions the arc NEEDS decided before drafting (list them<br>
-   explicitly — the plan must NOT resolve them itself; where possible<br>
-   route around them); which deferred beats (notes/canon/<br>
-   deferred-beats.md) it spends; a "Revisions" heading at the bottom<br>
-   (empty, with a note that revisions get logged there).<br>
-<br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
-plan is approved — make its chapter plan the most detailed. It should<br>
-be 8-12 chapters. Its start/stop should be a genuinely related pair<br>
-(the shape of a place or an errand), not just "the first 40k words".<br>
-<br>
-Mark any new inventions (place names, characters, plot devices) as<br>
-(Claude, Working) proposals inline. Plans are prose-free zones: beat<br>
-descriptions, not sample prose.<br>
-<br>
-Return a short report: arc list with titles, chapter counts, and the<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. Read these IN FULL before doing anything: CLAUDE.md…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-ae22ce7de1e5ef623">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. Read these IN FULL before doing anything:<br />
+CLAUDE.md, .claude/skills/story-management/SKILL.md, notes/concept.md,<br />
+notes/premise.md, notes/theme.md, <span class="unpub-tag">unpublished</span> notes/voices.md (skim rules),<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+notes/canon/deferred-beats.md, every file in notes/canon/characters/ and<br />
+notes/canon/world/. The two seed chapters were deleted; canon entries<br />
+citing them are Working design decisions, still binding. There are NO<br />
+accepted chapters yet — this plan starts the story from scratch (the<br />
+seed-chapter events — Peri's arrival, the binding, the departure — are<br />
+design material the plan may reuse, restage, or improve, but the<br />
+premise/concept facts themselves are fixed).</p>
+<p>You are planning BOOK 1 of this story. Author's structural rules<br />
+(binding): a book has 2-4 arcs; an arc is 30-50k words with a related<br />
+starting and stopping point (e.g. a visit to one town can be an arc);<br />
+arcs break into chapters of 3-5k words (hard cap 8k, rarely<br />
+approached); one chapter published per day; chapter endings are cuts,<br />
+not cadences.</p>
+<p>Write these files (create directories as needed):</p>
+<ol>
+<li>
+<p><span class="redacted">redacted</span>/plans/book-01/overview.md <span class="unpub-tag">unpublished</span> — what book 1 is about: its<br />
+question/throughline, how it serves the two theme anchors WITHOUT<br />
+promising a final boss, one-paragraph shape per arc, and the state<br />
+of world/characters at book's end. Book 1 must cover the story's<br />
+true beginning: Peri finding and binding Edwin, and the first<br />
+stretch of the road. Remember premise calibrations: competence porn,<br />
+not cozy, affectionate mockery only, System asymmetry, party must<br />
+eventually grow (book 1 should plant at least the first new<br />
+combat-capable party member; romance threads at most seeded —<br />
+chemistry discovered, never slot-filled). The silent-soil mystery<br />
+(canon: green-revolution/dungeons/deferred material, plus the<br />
+design record of the seed chapters in canon) is the natural<br />
+book-scale throughline — dread allowed, dark-lord resolution<br />
+forbidden.</p>
+</li>
+<li>
+<p><span class="redacted">redacted</span>/plans/book-01/arc-NN.md <span class="unpub-tag">unpublished</span> for EACH arc (arc-01.md, ...) —<br />
+start and stop points; a detailed chapter-by-chapter beat plan<br />
+(global chapter numbers starting at 001, slug, one solid paragraph<br />
+of what happens per chapter, what the ending cut lands on, target<br />
+word count); which canon files each chapter touches; which canon<br />
+Open questions the arc NEEDS decided before drafting (list them<br />
+explicitly — the plan must NOT resolve them itself; where possible<br />
+route around them); which deferred beats (notes/canon/<br />
+deferred-beats.md) it spends; a &quot;Revisions&quot; heading at the bottom<br />
+(empty, with a note that revisions get logged there).</p>
+</li>
+</ol>
+<p><span class="redacted">redacted sentence</span><br />
+plan is approved — make its chapter plan the most detailed. It should<br />
+be 8-12 chapters. Its start/stop should be a genuinely related pair<br />
+(the shape of a place or an errand), not just &quot;the first 40k words&quot;.</p>
+<p>Mark any new inventions (place names, characters, plot devices) as<br />
+(Claude, Working) proposals inline. Plans are prose-free zones: beat<br />
+descriptions, not sample prose.</p>
+<p>Return a short report: arc list with titles, chapter counts, and the<br />
 three biggest planning risks you see.</p></blockquote>
 
 
 <details><summary>42 tool calls</summary>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/notes/canon/characters/ <span class="redacted">redacted: private</span>/notes/canon/world/ ⟦re… (List canon and skills directories)</p>
-<p>✅ 21 lines, 376 chars — <span class="redacted">redacted: private</span>/.claude/skills/: / consistency-backfill / consistency-check</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/notes/canon/characters/ <span class="redacted">redacted</span>/notes/canon/world/ <span class="redacted">redacted</span>/.claude/sk… (List canon and skills directories)</p>
+<p>✅ 21 lines, 376 chars — <span class="redacted">redacted</span>/.claude/skills/: / consistency-backfill / consistency-check</p>
 <p>🔧 Read .claude/skills/story-management/SKILL.md</p>
 <p>✅ 89 lines, 4812 chars</p>
 <p>🔧 Read notes/concept.md</p>
 <p>✅ 75 lines, 4494 chars</p>
 <p>🔧 Read notes/premise.md</p>
 <p>✅ 185 lines, 11466 chars</p>
-<p>🔧 Read notes/theme.md <span class="redacted">unpublished</span></p>
+<p>🔧 Read notes/theme.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 151 lines, 8662 chars</p>
 <p>🔧 Read notes/canon/README.md</p>
 <p>✅ 29 lines, 1378 chars</p>
@@ -115,7 +127,7 @@ three biggest planning risks you see.</p></blockquote>
 <p>✅ 53 lines, 2410 chars</p>
 <p>🔧 Read notes/maybe-later.md</p>
 <p>✅ 29 lines, 1715 chars</p>
-<p>🔧 Bash: sed -n 1,400p <span class="redacted">redacted: private</span>/notes/voices.md (Read voices.md)</p>
+<p>🔧 Bash: sed -n 1,400p <span class="redacted">redacted</span>/notes/voices.md (Read voices.md)</p>
 <p>✅ 181 lines, 10376 chars</p>
 </details>
 
@@ -124,31 +136,37 @@ three biggest planning risks you see.</p></blockquote>
 </div>
 
 <details><summary>10 tool calls</summary>
-<p>🔧 Write plans/book-01/overview.md <span class="redacted">unpublished</span></p>
+<p>🔧 Write plans/book-01/overview.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 1 lines, 156 chars</p>
-<p>🔧 Write plans/book-01/arc-01.md <span class="redacted">unpublished</span></p>
+<p>🔧 Write plans/book-01/arc-01.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 1 lines, 154 chars</p>
-<p>🔧 Write plans/book-01/arc-02.md <span class="redacted">unpublished</span></p>
+<p>🔧 Write plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 1 lines, 154 chars</p>
-<p>🔧 Write plans/book-01/arc-03.md <span class="redacted">unpublished</span></p>
+<p>🔧 Write plans/book-01/arc-03.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 1 lines, 154 chars</p>
-<p>🔧 Bash: git add plans/book-01 <span class="redacted">unpublished</span> &amp;&amp; git commit -m "Plan book 1: overview and three arc… (Commit book 1 plans)</p>
+<p>🔧 Bash: git add plans/book-01 <span class="unpub-tag">unpublished</span> &amp;&amp; git commit -m "Plan book 1: overview and three arc… (Commit book 1 plans)</p>
 <p>✅ 6 lines, 270 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Files written and committed (4d2a860):<br>
-- <span class="redacted">redacted: private</span>/plans/book-01/overview.md <span class="redacted">unpublished</span><br>
-- <span class="redacted">redacted: private</span>/plans/book-01/arc-01.md <span class="redacted">unpublished</span><br>
-- <span class="redacted">redacted: private</span>/plans/book-01/arc-02.md <span class="redacted">unpublished</span><br>
-- <span class="redacted">redacted: private</span>/plans/book-01/arc-03.md <span class="redacted">unpublished</span></p>
-<p>Arc list:<br>
-1. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> 001–010 (10 chapters, ~40k). <span class="redacted">redacted sentence: unpublished prose</span> Spends the [Wayfaring] deferred beat (ch. 009).<br>
-2. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> 011–021 (11 chapters, ~44k). One-village arc: ring-field investigation braided with the overdue Holm Deep dungeon delve and partial break (Claude, Working); <span class="redacted">redacted: character</span> <span class="redacted">redacted: character</span> (Claude, Working) joins as first combat-capable party member.<br>
-3. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> 022–031 (10 chapters, ~40k). Marsh estate → Wystow; three-plus sites mapped, <span class="redacted">redacted: mechanic</span> written, monitoring clearing-house built; book ends mid-road toward a fourth site.</p>
-<p>Three biggest planning risks:<br>
-1. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> 012–017. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
-2. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> If <span class="redacted">redacted: event</span> reads as a detour rather than the same world's same maintenance logic, the book sags in the middle; the plan braids them deliberately, but drafting has to keep them one story.<br>
-3. <span class="redacted">redacted: character</span> is a triple-load invention: first party growth, first possible romance chemistry, and the guild-world's on-page representative — all under a hard no-slot-filling rule. If her own arc (Charter accounts, assessor role) isn't genuinely load-bearing in drafts, she'll read as a slot, and her undecided religious background (needed before she voices it) is a contradiction trap.</p>
+<p>Files written and committed (4d2a860):</p>
+<ul>
+<li><span class="redacted">redacted</span>/plans/book-01/overview.md <span class="unpub-tag">unpublished</span></li>
+<li><span class="redacted">redacted</span>/plans/book-01/arc-01.md <span class="unpub-tag">unpublished</span></li>
+<li><span class="redacted">redacted</span>/plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span></li>
+<li><span class="redacted">redacted</span>/plans/book-01/arc-03.md <span class="unpub-tag">unpublished</span></li>
+</ul>
+<p>Arc list:</p>
+<ol>
+<li><span class="redacted">redacted sentence</span> 001–010 (10 chapters, ~40k). <span class="redacted">redacted sentence: unpublished prose</span> Spends the [Wayfaring] deferred beat (ch. 009).</li>
+<li><span class="redacted">redacted sentence</span> 011–021 (11 chapters, ~44k). One-village arc: ring-field investigation braided with the overdue Holm Deep dungeon delve and partial break (Claude, Working); <span class="redacted">redacted</span> <span class="redacted">redacted</span> (Claude, Working) joins as first combat-capable party member.</li>
+<li><span class="redacted">redacted sentence</span> 022–031 (10 chapters, ~40k). Marsh estate → Wystow; three-plus sites mapped, <span class="redacted">redacted</span> written, monitoring clearing-house built; book ends mid-road toward a fourth site.</li>
+</ol>
+<p>Three biggest planning risks:</p>
+<ol>
+<li><span class="redacted">redacted sentence</span> 012–017. <span class="redacted">redacted sentence</span></li>
+<li><span class="redacted">redacted sentence</span> If <span class="redacted">redacted</span> reads as a detour rather than the same world's same maintenance logic, the book sags in the middle; the plan braids them deliberately, but drafting has to keep them one story.</li>
+<li><span class="redacted">redacted</span> is a triple-load invention: first party growth, first possible romance chemistry, and the guild-world's on-page representative — all under a hard no-slot-filling rule. If her own arc (Charter accounts, assessor role) isn't genuinely load-bearing in drafts, she'll read as a slot, and her undecided religious background (needed before she voices it) is a contradiction trap.</li>
+</ol>
 </div>
 </body></html>

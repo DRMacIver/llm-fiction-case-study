@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,22 +7,35 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a531cf7883a31ad57">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 12-. Read it in full.<br>
-LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id "sense".<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a531cf7883a31ad57">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 12-. Read it in full.<br />
+LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id &quot;sense&quot;.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -name "12-*.md"</p>
-<p>✅ 1 lines, 78 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/12-thats-a-yes-then.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes -name "12-*.md"</p>
+<p>✅ 1 lines, 78 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/12-thats-a-yes-then.md</p>
 <p>🔧 Read draft/book-01/scenes/12-thats-a-yes-then.md</p>
 <p>✅ 38 lines, 3988 chars</p>
 
@@ -36,20 +49,22 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <div class="assistant-prose">
 <p>Let me work through this text carefully, checking each factual claim for coherence and consistency.</p>
 <p>Reading paragraph by paragraph:</p>
-<p>**Feud section (para 1-3):** The feud is into fourth generation, neither side wanted settlement for "at least two of those," Edwin has given rulings "every summer's end since the feud was young." This is internally coherent—a feud that's 4 generations old (100+ years) with Edwin arbitrating for much of that lifespan.</p>
-<p>**Corry winch section (para 5-7):** The pronoun reference works when fully read: "she" in "she had never been taught an order; she had worked it out" refers to someone other than Goody Corry (the person who did the work), clarified by "'She talked to it,' offered Goody Corry" which shows Goody Corry explaining what "she" did. Neighbors license this reading. ✓</p>
-<p>**Audit section (para 8-12):** Items listed are individually ordinary. Edwin notes these small things "all leaning the same way" despite being normal variations.</p>
-<p>**Critical sentence (end of para 12):**</p>
-<p>"But three centuries of his work had been the reading of this sort of evidence, the slow sort, the sort that only says anything in aggregate, and the small things were all leaning the same way."</p>
-<p>Restated flatly: "For three hundred years, his work has involved reading subtle aggregate patterns."</p>
-<p>This claim doesn't add up. Context establishes:<br>
-- Edwin as a living, physically active human in a village<br>
-- The feud he arbitrates is into its fourth generation (~100–120 years)<br>
-- He's been arbitrating it "since the feud was young" (~100 years at most)</p>
+<p><strong>Feud section (para 1-3):</strong> The feud is into fourth generation, neither side wanted settlement for &quot;at least two of those,&quot; Edwin has given rulings &quot;every summer's end since the feud was young.&quot; This is internally coherent—a feud that's 4 generations old (100+ years) with Edwin arbitrating for much of that lifespan.</p>
+<p><strong>Corry winch section (para 5-7):</strong> The pronoun reference works when fully read: &quot;she&quot; in &quot;she had never been taught an order; she had worked it out&quot; refers to someone other than Goody Corry (the person who did the work), clarified by &quot;'She talked to it,' offered Goody Corry&quot; which shows Goody Corry explaining what &quot;she&quot; did. Neighbors license this reading. ✓</p>
+<p><strong>Audit section (para 8-12):</strong> Items listed are individually ordinary. Edwin notes these small things &quot;all leaning the same way&quot; despite being normal variations.</p>
+<p><strong>Critical sentence (end of para 12):</strong></p>
+<p>&quot;But three centuries of his work had been the reading of this sort of evidence, the slow sort, the sort that only says anything in aggregate, and the small things were all leaning the same way.&quot;</p>
+<p>Restated flatly: &quot;For three hundred years, his work has involved reading subtle aggregate patterns.&quot;</p>
+<p>This claim doesn't add up. Context establishes:</p>
+<ul>
+<li>Edwin as a living, physically active human in a village</li>
+<li>The feud he arbitrates is into its fourth generation (~100–120 years)</li>
+<li>He's been arbitrating it &quot;since the feud was young&quot; (~100 years at most)</li>
+</ul>
 <p>A three-century work history for a mortal human contradicts this timeframe. A careful reader would have to re-read this to understand whether Edwin is magical/long-lived (not established in this scene), whether there's an error, or whether it's intentional misdirection—but within the scene itself, the timespan does not add up.</p>
 <p>The neighboring sentences don't establish or license this claim.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": [{"rule_id": "sense", "quote": "three centurie…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

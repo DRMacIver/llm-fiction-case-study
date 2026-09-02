@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</title><style>
+<html><head><meta charset="utf-8"><title>[redacted]  **Standing rules for every agent in this run** (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,40 +7,51 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a003ef935ac975350">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
-<br>
-**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
-- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
-- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
-- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
-<br>
-Read `.claude/skills/editing-pass/SKILL.md`. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">unpublished</span> Cite the line and the canon file for every finding.<br>
-<br>
-Your material: scenes 01–06 in `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">unpublished</span> Report findings only, each with the line quoted; do not write "clean". Write `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/lens-leads-canon.md`. Do not edit prose. Do not commit.<br>
-<br>
-Your final message: finding count and the worst one.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>[redacted]  **Standing rules for every agent in this run** (…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a003ef935ac975350">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p><span class="redacted">redacted sentence</span></p>
+<p><strong>Standing rules for every agent in this run</strong> (from <code>CLAUDE.md</code>; read it first and obey it):</p>
+<ul>
+<li>Never state the content of anything in <code>notes/sealed/</code> outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe <em>shape</em> (counts, which constraints are satisfied, what conflicts) and never content. <code>plans/</code> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).</li>
+<li>`notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Every file you write, you write to disk immediately — a later failure must lose nothing.</li>
+<li>When you finish, <code>git add</code> the files you touched and commit with a short message. Do not commit <code>comments/</code> or anything outside the project.</li>
+</ul>
+<p>Read <code>.claude/skills/editing-pass/SKILL.md</code>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> Cite the line and the canon file for every finding.</p>
+<p>Your material: scenes 01–06 in <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> Report findings only, each with the line quoted; do not write &quot;clean&quot;. Write <span class="redacted">redacted</span>/rewrite/book-01/arc-02/lens-leads-canon.md. Do not edit prose. Do not commit.</p>
+<p>Your final message: finding count and the worst one.</p></blockquote>
 
 
 <details><summary>26 tool calls</summary>
-<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span></p>
 <p>✅ 50 lines, 2208 chars</p>
-<p>🔧 Bash: cat notes/canon/deferred-questions.md <span class="redacted">unpublished</span> | head -60</p>
+<p>🔧 Bash: cat notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> | head -60</p>
 <p>✅ 60 lines, 5071 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 644 lines, 26263 chars</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> | head -50</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> | head -50</p>
 <p>✅ 50 lines, 3090 chars</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> | grep -n "01-\|02-\|03-\|04-\|05-\|0…</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> | grep -n "01-\|02-\|03-\|04-\|05-\|0…</p>
 <p>✅ 12 lines, 867 chars</p>
 <p>🔧 Bash: sed -n '1,200p' notes/canon/world/timeline.md</p>
 <p>✅ 200 lines, 12105 chars</p>
@@ -71,6 +82,6 @@ Your final message: finding count and the worst one.</p></blockquote>
 <div class="assistant-prose">
 <p>2 findings, 1 worst.</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span> It's an unforced arithmetic error inside the one scene built around Edwin's fanatical date-auditing.</p>
-<p>File written: `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/lens-leads-canon.md`. Not committed (per instructions).</p>
+<p>File written: <span class="redacted">redacted</span>/rewrite/book-01/arc-02/lens-leads-canon.md. Not committed (per instructions).</p>
 </div>
 </body></html>

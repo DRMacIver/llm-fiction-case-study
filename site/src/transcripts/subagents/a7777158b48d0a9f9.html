@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are preparing a binding checklist for a from-scratch rewrite at ⟦…</title><style>
+<html><head><meta charset="utf-8"><title>You are preparing a binding checklist for a from-scratch rewrite at [redacted]…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,26 +7,33 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are preparing a binding checklist for a from-scratch rewrite at ⟦…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a7777158b48d0a9f9">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are preparing a binding checklist for a from-scratch rewrite at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it.<br>
-<br>
-<span class="redacted">redacted sentence: unpublished prose</span> §§2–4 are its checklist. The file says the rewrite "must honour section 1 absolutely".<br>
-<br>
-Nobody has checked whether canon currently states those things clearly enough that a drafter could not repeat the errors. That is your job.<br>
-<br>
-For each item in §1 and each item in §§2–4: find the canon that now governs it; check that canon says it unambiguously; and where canon is vague, silent, or still contradicted elsewhere, **fix the canon** so the error is not repeatable. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Note that a large canon consolidation ran today (`notes/decisions/*.md`) and two fabricated quotations were struck, so some items may already be handled — check rather than assume, and say which were already done.<br>
-<br>
-Write `notes/decisions/reader-notes-reconciliation.md`: a table of every item → the canon that governs it → verified / fixed / still open, and a short list of what a drafter must be *told* rather than left to infer. You may edit `notes/canon/**` where an item needs it. Do not edit `chapters/` or `notes/reader-notes-book-1.md` itself — it is a dated record.<br>
-<br>
-Your final message: counts verified / fixed / still open, and the item most likely to be repeated if nothing changes.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are preparing a binding checklist for a from-scratch rewrite at [redacted]…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a7777158b48d0a9f9">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are preparing a binding checklist for a from-scratch rewrite at <span class="redacted">redacted</span>. Read <code>CLAUDE.md</code> first and obey it.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> §§2–4 are its checklist. The file says the rewrite &quot;must honour section 1 absolutely&quot;.</p>
+<p>Nobody has checked whether canon currently states those things clearly enough that a drafter could not repeat the errors. That is your job.</p>
+<p>For each item in §1 and each item in §§2–4: find the canon that now governs it; check that canon says it unambiguously; and where canon is vague, silent, or still contradicted elsewhere, <strong>fix the canon</strong> so the error is not repeatable. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Note that a large canon consolidation ran today (<code>notes/decisions/*.md</code>) and two fabricated quotations were struck, so some items may already be handled — check rather than assume, and say which were already done.</p>
+<p>Write <code>notes/decisions/reader-notes-reconciliation.md</code>: a table of every item → the canon that governs it → verified / fixed / still open, and a short list of what a drafter must be <em>told</em> rather than left to infer. You may edit <code>notes/canon/</code> where an item needs it. Do not edit <code>chapters/</code> or <code>notes/reader-notes-book-1.md</code> itself — it is a dated record.</p>
+<p>Your final message: counts verified / fixed / still open, and the item most likely to be repeated if nothing changes.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -42,33 +49,33 @@ Your final message: counts verified / fixed / still open, and the item most like
 <p>✅ 106 lines, 6874 chars</p>
 <p>🔧 Bash: sed -n '1,35p' notes/canon/system.md; echo "=== 316-345 ==="; sed -n '316,345p' notes/can…</p>
 <p>✅ 103 lines, 5793 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== institutions.md headings ==="; grep -n '^#' notes/canon/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== institutions.md headings ==="; grep -n '^#' notes/canon/world/ins…</p>
 <p>✅ 59 lines, 3989 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '485,545p' notes/canon/world/institutions.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '485,545p' notes/canon/world/institutions.md</p>
 <p>✅ 61 lines, 3600 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== MAGIC: emptying ==="; grep -n -i 'empt\|pool grows\|nobo…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== MAGIC: emptying ==="; grep -n -i 'empt\|pool grows\|nobody writes…</p>
 <p>✅ 27 lines, 1632 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== PERI: apology / weave question ==="; grep -n -i 'apolog\…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== PERI: apology / weave question ==="; grep -n -i 'apolog\|sorry ab…</p>
 <p>✅ 49 lines, 3483 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== theme 505-550 ==="; sed -n '505,552p' notes/theme.md ⟦un…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== theme 505-550 ==="; sed -n '505,552p' notes/theme.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 84 lines, 5966 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== llm-tells 172-end ==="; sed -n '172,300p' notes/llm-tell…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== llm-tells 172-end ==="; sed -n '172,300p' notes/llm-tells.md echo…</p>
 <p>✅ 148 lines, 9203 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== significance/oral ==="; grep -rn -i 'ignorance of signif…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== significance/oral ==="; grep -rn -i 'ignorance of significance\|o…</p>
 <p>✅ 29 lines, 2041 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== voices 290-380 ==="; sed -n '290,380p' notes/voices.md e…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== voices 290-380 ==="; sed -n '290,380p' notes/voices.md echo "===…</p>
 <p>✅ 94 lines, 5628 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== census items ==="; grep -n '^\*\*[0-9]' notes/voices.md…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== census items ==="; grep -n '^\*\*[0-9]' notes/voices.md echo "===…</p>
 <p>✅ 20 lines, 1525 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '45,80p' notes/canon/world/magic.md; echo ---; sed -n '260…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '45,80p' notes/canon/world/magic.md; echo ---; sed -n '260,300p' no…</p>
 <p>✅ 128 lines, 7371 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== magic mana ==="; grep -n -i 'mana pool\|pool grow\|pool…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> echo "=== magic mana ==="; grep -n -i 'mana pool\|pool grow\|pool is\|regen…</p>
 <p>✅ 83 lines, 4626 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn -i 'mana pool\|emptying\|pool grows' notes/canon/ notes/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -rn -i 'mana pool\|emptying\|pool grows' notes/canon/ notes/theme.md…</p>
 <p>✅ 27 lines, 1549 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '278,295p' notes/canon/system.md; echo ---; sed -n '455,47…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '278,295p' notes/canon/system.md; echo ---; sed -n '455,470p' notes…</p>
 <p>✅ 35 lines, 2042 chars</p>
-<p>🔧 Bash: python3 - &lt;&lt;'PY' import io p='notes/canon/system.md' s=open(p).read() ⟦redacted sentence:…</p>
+<p>🔧 Bash: python3 - &lt;&lt;'PY' import io p='notes/canon/system.md' s=open(p).read() <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 4 lines, 100 chars — Exit code 1 / Traceback (most recent call last): /   File "&lt;stdin&gt;", line 23, in &lt;module&gt;</p>
 <p>🔧 Bash: python3 - &lt;&lt;'PY' p='notes/canon/system.md' s=open(p).read() anchor='''by never earning."\…</p>
 <p>✅ 2 lines, 4 chars — 1 / ok</p>
@@ -78,7 +85,7 @@ Your final message: counts verified / fixed / still open, and the item most like
 <p>Now the literacy drafting rule.</p>
 </div>
 
-<p>🔧 Bash: python3 - &lt;&lt;'PY' p='notes/canon/world/institutions.md' s=open(p).read() ⟦redacted sentenc…</p>
+<p>🔧 Bash: python3 - &lt;&lt;'PY' p='notes/canon/world/institutions.md' s=open(p).read() <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
 <p>🔧 Bash: python3 - &lt;&lt;'PY' p='notes/canon/world/magic.md' s=open(p).read() a='\n## Working\n' asser…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
@@ -88,17 +95,17 @@ Your final message: counts verified / fixed / still open, and the item most like
 </div>
 
 <details><summary>12 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '993,1045p' notes/canon/characters/peri.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '993,1045p' notes/canon/characters/peri.md</p>
 <p>✅ 53 lines, 2594 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/characters/peri.md' s=open(p).rea…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='notes/canon/characters/peri.md' s=open(p).read() <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt;&gt; notes/llm-tells.md &lt;&lt;'EOF'  ## Four more habits from the B…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt;&gt; notes/llm-tells.md &lt;&lt;'EOF'  ## Four more habits from the Book 1 mar…</p>
 <p>✅ 1 lines, 2 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '201,242p' plans/book-01/book-revision.md; <span class="redacted">unpublished</span> e…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '201,242p' plans/book-01/book-revision.md; <span class="unpub-tag">unpublished</span> echo "===…</p>
 <p>✅ 64 lines, 3580 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '735,775p' notes/canon/system.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '735,775p' notes/canon/system.md</p>
 <p>✅ 41 lines, 2828 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/system.md' s=open(p).read() ⟦reda…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' p='notes/canon/system.md' s=open(p).read() <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
 </details>
 
@@ -106,17 +113,19 @@ Your final message: counts verified / fixed / still open, and the item most like
 <p>Now the reconciliation document.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; notes/decisions/reader-notes-reconciliation.md &lt;&lt;'EOF' # Re…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; notes/decisions/reader-notes-reconciliation.md &lt;&lt;'EOF' # Reader-note…</p>
 <p>✅ 1 lines, 78 chars</p>
 
 <div class="assistant-prose">
-<p>**20 items — 12 verified, 8 fixed, 0 still open.** Written up at `<span class="redacted">redacted: private</span>/notes/decisions/reader-notes-reconciliation.md` (committed 7d82c82).</p>
-<p>Already handled by the 2026-08-27 consolidation: all of §1 except one aspect (the three System rules are now numbered at the head of `notes/canon/system.md`; the Wystow ruling is in `notes/canon/world/institutions.md`), all of §3, the sugar entry, the joke-logic tell, and the author's-note placement rule.</p>
-<p>Eight fixes:<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- `notes/canon/world/magic.md` — new section answering *"What rulebook?"*: the church's short lay pamphlet of restrictions on fate magic, guarded so it can never hand a character an answer. Cross-referenced from `notes/canon/characters/peri.md`, where it tightens the never-apologises ruling.<br>
-- `notes/llm-tells.md` — four §4 habits that had no entry anywhere (announce-before-deliver, weak comic beat stated flat, unlocated narration, motive left off-page) plus a continuity-read assignment for the editing pass.</p>
-<p>Most likely to be repeated if nothing changes: **item 5 — unlocated narration and the world that conveniently doesn't know things.** The §1 errors are now guarded by numbered rules a drafter meets in the first thirty lines of `system.md`. The literacy consequence is a reflex to suppress rather than a fact to check, it fires on ordinary atmospheric sentences rather than on mechanics, and reaching for lost knowledge and village hearsay is the default move of the register this voice imitates — two of the nineteen comments are already instances of it.</p>
+<p><strong>20 items — 12 verified, 8 fixed, 0 still open.</strong> Written up at <span class="redacted">redacted</span>/notes/decisions/reader-notes-reconciliation.md` (committed 7d82c82).</p>
+<p>Already handled by the 2026-08-27 consolidation: all of §1 except one aspect (the three System rules are now numbered at the head of <code>notes/canon/system.md</code>; the Wystow ruling is in `notes/canon/world/institutions.md), all of §3, the sugar entry, the joke-logic tell, and the author's-note placement rule.</p>
+<p>Eight fixes:<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li><code>notes/canon/world/magic.md</code> — new section answering <em>&quot;What rulebook?&quot;</em>: the church's short lay pamphlet of restrictions on fate magic, guarded so it can never hand a character an answer. Cross-referenced from <code>notes/canon/characters/peri.md</code>, where it tightens the never-apologises ruling.</li>
+<li><code>notes/llm-tells.md</code> — four §4 habits that had no entry anywhere (announce-before-deliver, weak comic beat stated flat, unlocated narration, motive left off-page) plus a continuity-read assignment for the editing pass.</li>
+</ul>
+<p>Most likely to be repeated if nothing changes: <strong>item 5 — unlocated narration and the world that conveniently doesn't know things.</strong> The §1 errors are now guarded by numbered rules a drafter meets in the first thirty lines of <code>system.md</code>. The literacy consequence is a reflex to suppress rather than a fact to check, it fires on ordinary atmospheric sentences rather than on mechanics, and reaching for lost knowledge and village hearsay is the default move of the register this voice imitates — two of the nineteen comments are already instances of it.</p>
 </div>
 </body></html>

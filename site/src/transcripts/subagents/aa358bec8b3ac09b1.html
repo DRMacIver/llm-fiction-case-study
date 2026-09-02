@@ -7,30 +7,44 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are producing the final collation and report for the Book 1 rewri…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-aa358bec8b3ac09b1">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are producing the final collation and report for the Book 1 rewrite of the novel at <span class="redacted">redacted: private</span>.<br>
-<br>
-**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
-- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
-- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
-- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
-<br>
-1. **Collate.** Write a short Python script in `scripts/collate_book.py` that copies every `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-0*/chapters/NNN-slug.md` into `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span>/rewrite/book-01/chapters/INDEX.md` (number, title, arc, word count). Run it.<br>
-2. **Census.** Run `samples/round5/full-chapter/census.py` over `<span class="redacted">redacted: private</span>/rewrite/book-01/chapters/` (docstring first; struck rows not scored) and `scripts/check_citations.py` over the repo (note its documented blind spot). Save outputs under `<span class="redacted">redacted: private</span>/rewrite/book-01/census/`.<br>
-3. **Report.** Write `<span class="redacted">redacted: private</span>/rewrite/book-01/BOOK-REPORT.md` for DRMacIver, who has read none of this and will read the book from this report: the chapter list with titles and word counts by arc; totals against the plan (~104k, ~52 chapters); the three gate numbers per arc and for the whole; the per-1,000-word distribution summary; the cold reads from each arc's GATE.md and from BOOK-READ.md, quoted; every plan deviation logged in the arc plans' Revisions since 2026-08-29; every entry in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` and `FLAGS-structural.md`; the shape-only clue report; canon changes made during the run (grep git log since 2026-08-29 for `notes/canon`); and what this run teaches — append that last part to `.claude/skills/write-arc/SKILL.md`'s experiment log as a dated entry too. **No sealed content anywhere in it.** Read it back once for that before saving.<br>
-4. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
-Commit everything.<br>
-<br>
-Your final message: total words, chapter count, the three whole-book gate numbers, the count of structural flags, and the path of the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are producing the final collation and report for the Book 1 rewri…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-aa358bec8b3ac09b1">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are producing the final collation and report for the Book 1 rewrite of the novel at <span class="redacted">redacted</span>.</p>
+<p><strong>Standing rules for every agent in this run</strong> (from <code>CLAUDE.md</code>; read it first and obey it):</p>
+<ul>
+<li>Never state the content of anything in <code>notes/sealed/</code> outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe <em>shape</em> (counts, which constraints are satisfied, what conflicts) and never content. <code>plans/</code> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).</li>
+<li>`notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Every file you write, you write to disk immediately — a later failure must lose nothing.</li>
+<li>When you finish, <code>git add</code> the files you touched and commit with a short message. Do not commit <code>comments/</code> or anything outside the project.</li>
+</ul>
+<ol>
+<li><strong>Collate.</strong> Write a short Python script in <code>scripts/collate_book.py</code> that copies every <span class="redacted">redacted</span>/rewrite/book-01/arc-0*/chapters/NNN-slug.md<code>into</code><span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>/rewrite/book-01/chapters/INDEX.md` (number, title, arc, word count). Run it.</li>
+<li><strong>Census.</strong> Run <code>samples/round5/full-chapter/census.py</code> over <code><span class="redacted">redacted</span>/rewrite/book-01/chapters/</code> (docstring first; struck rows not scored) and <code>scripts/check_citations.py</code> over the repo (note its documented blind spot). Save outputs under <code><span class="redacted">redacted</span>/rewrite/book-01/census/</code>.</li>
+<li><strong>Report.</strong> Write <code><span class="redacted">redacted</span>/rewrite/book-01/BOOK-REPORT.md</code> for DRMacIver, who has read none of this and will read the book from this report: the chapter list with titles and word counts by arc; totals against the plan (~104k, ~52 chapters); the three gate numbers per arc and for the whole; the per-1,000-word distribution summary; the cold reads from each arc's GATE.md and from BOOK-READ.md, quoted; every plan deviation logged in the arc plans' Revisions since 2026-08-29; every entry in <code><span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md</code> and <code>FLAGS-structural.md</code>; the shape-only clue report; canon changes made during the run (grep git log since 2026-08-29 for <code>notes/canon</code>); and what this run teaches — append that last part to `.claude/skills/write-arc/SKILL.md's experiment log as a dated entry too. <strong>No sealed content anywhere in it.</strong> Read it back once for that before saving.</li>
+<li><span class="redacted">redacted sentence</span><br />
+Commit everything.</li>
+</ol>
+<p>Your final message: total words, chapter count, the three whole-book gate numbers, the count of structural flags, and the path of the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -54,47 +68,47 @@ Your final message: total words, chapter count, the three whole-book gate number
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 35 lines, 1467 chars — <span class="redacted">redacted sentence: unpublished prose</span> / words: 2793 / mean sentence: 16.6</p>
 <p>✅ 404 lines, 20780 chars</p>
-<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span>/rewrite/book-01/chapters <span class="redacted">redacted: private</span>/rewrite/book-01…</p>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted</span>/rewrite/book-01/chapters <span class="redacted">redacted</span>/rewrite/book-01/census &amp;&amp; cat &gt; <span class="redacted">redacted</span>…</p>
 <p>✅ 4 lines, 206 chars</p>
 <p>🔧 Bash: head -12 rewrite/book-01/chapters/INDEX.md &amp;&amp; grep -c "Author's note\|Writer's notes" rew…</p>
 <p>✅ 22 lines, 1240 chars</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 1 lines, 847 chars</p>
 <p>🔧 Bash: python3 - &lt;&lt;'EOF' import re,pathlib p=pathlib.Path('scripts/collate_book.py'); t=p.read_t…</p>
-<p>✅ 4 lines, 206 chars — OK: 54 chapters, 116,634 body words -&gt; <span class="redacted">redacted: private</span>/rewrite/book-01/chapters /   arc-01: 001-016 (16 ch, 34,838 w) /   arc-02: 017-036 (20 ch, 42,255 w)</p>
+<p>✅ 4 lines, 206 chars — OK: 54 chapters, 116,634 body words -&gt; <span class="redacted">redacted</span>/rewrite/book-01/chapters /   arc-01: 001-016 (16 ch, 34,838 w) /   arc-02: 017-036 (20 ch, 42,255 w)</p>
 <p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'EOF' import re, subprocess, sys, pathlib CH = pathlib.Path('…</p>
 <p>✅ 24 lines, 2320 chars</p>
 <p>🔧 Bash: head -30 rewrite/book-01/census/check-citations.txt; echo ...; grep -c "says ch" rewrite/…</p>
 <p>✅ 36 lines, 1064 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for a in 02 03; do echo "######## ARC $a"; grep -n "PASS\|FAIL\|^…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; for a in 02 03; do echo "######## ARC $a"; grep -n "PASS\|FAIL\|^| Measure…</p>
 <p>✅ 23 lines, 1014 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 -c " import re rows=[l for l in open('rewrite/book-01/cha…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 -c " import re rows=[l for l in open('rewrite/book-01/chapters/IND…</p>
 <p>✅ 4 lines, 111 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 -c " import re t=open('rewrite/book-01/census/census-chap…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 -c " import re t=open('rewrite/book-01/census/census-chapters.txt'…</p>
 <p>✅ 14 lines, 629 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat rewrite/book-01/BOOK-READ.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat rewrite/book-01/BOOK-READ.md</p>
 <p>✅ 239 lines, 13555 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '12,92p' rewrite/book-01/arc-02/GATE.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '12,92p' rewrite/book-01/arc-02/GATE.md</p>
 <p>✅ 80 lines, 5068 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 86 lines, 5251 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "^- \*\*\|^## \|^### " rewrite/book-01/FLAGS.md | wc -l;…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "^- \*\*\|^## \|^### " rewrite/book-01/FLAGS.md | wc -l; grep -n "…</p>
 <p>✅ 3 lines, 28 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' import re t=open('rewrite/book-01/FLAGS.md').re…</p>
-<p>✅ 7 lines, 1799 chars — 102 / <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Details and the cheap … / <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> See `CROSSCHECK.md`…</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' import re,collections t=open('rewrite/book-01/F…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' import re t=open('rewrite/book-01/FLAGS.md').read() part…</p>
+<p>✅ 7 lines, 1799 chars — 102 / <span class="redacted">redacted sentence</span> Details and the cheap … / <span class="redacted">redacted sentence</span> See `CROSSCHECK.md`…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' import re,collections t=open('rewrite/book-01/FLAGS.md')…</p>
 <p>✅ 42 lines, 1319 chars — 71 ?? / 7 Claude, sealed cross-check / <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' import re t=open('rewrite/book-01/FLAGS.md').re…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' import re t=open('rewrite/book-01/FLAGS.md').read() part…</p>
 <p>✅ 5 lines, 1274 chars — <span class="redacted">redacted sentence: unpublished prose</span> 006, *… / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' import re t=open('rewrite/book-01/FLAGS.md').re…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' import re t=open('rewrite/book-01/FLAGS.md').read() part…</p>
 <p>✅ 8 lines, 1459 chars</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>🔧 Bash: <span class="redacted">redacted sentence</span></p>
 <p>✅ 297 lines, 16917 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; head -80 rewrite/book-01/CLUES-REPORT.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; head -80 rewrite/book-01/CLUES-REPORT.md</p>
 <p>✅ 80 lines, 4272 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> plans/book-01/a…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> plans/book-01/arc-02.md…</p>
 <p>✅ 316 lines, 20464 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; awk '/^## Revisions/,0' plans/book-01/arc-01.md <span class="redacted">unpublished</span> | s…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; awk '/^## Revisions/,0' plans/book-01/arc-01.md <span class="unpub-tag">unpublished</span> | sed -n '80…</p>
 <p>✅ 77 lines, 5295 chars</p>
 </details>
 
@@ -103,73 +117,73 @@ Your final message: total words, chapter count, the three whole-book gate number
 </div>
 
 <details><summary>40 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git log --since=2026-08-29 --oneline --name-only -- notes/canon |…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git log --since=2026-08-29 --oneline --name-only -- notes/canon | grep '^n…</p>
 <p>✅ 1 lines, 15 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "experiment log\|Experiment log" -i .claude/skills/write-…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "experiment log\|Experiment log" -i .claude/skills/write-arc/SKILL…</p>
 <p>✅ 44 lines, 2803 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git log --since=2026-08-28 --format='%ad %h %s' --date=short | he…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git log --since=2026-08-28 --format='%ad %h %s' --date=short | head -30; e…</p>
 <p>✅ 31 lines, 2406 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git log --since=2026-08-28 --name-only --format='%h' -- notes/can…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git log --since=2026-08-28 --name-only --format='%h' -- notes/canon | grep…</p>
 <p>✅ 27 lines, 973 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git log --since=2026-08-28 --format='%h|%s' --name-only -- notes/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git log --since=2026-08-28 --format='%h|%s' --name-only -- notes/canon | a…</p>
 <p>✅ 80 lines, 3249 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git log --since=2026-08-28 --format='%ad %h %s' --date=format:'%Y…</p>
-<p>✅ 16 lines, 1665 chars — <span class="redacted">redacted sentence: unpublished prose</span> / 2026-08-29 10:50 748df25 Plans: pre-draft revision pass on Book 1 — cross-check repairs, clue budgets, level curve, engines / <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> can sew (stitches warrant)</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git log --since=2026-08-28 --format='%ad %h %s' --date=format:'%Y-%m-%d %H…</p>
+<p>✅ 16 lines, 1665 chars — <span class="redacted">redacted sentence: unpublished prose</span> / 2026-08-29 10:50 748df25 Plans: pre-draft revision pass on Book 1 — cross-check repairs, clue budgets, level curve, engines / <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> can sew (stitches warrant)</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence</span></p>
 <p>✅ 86 lines, 5055 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; rewrite/book-01/census/SUMMARY.md &lt;&lt;'EOF' # Book 1 (rewrite…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; rewrite/book-01/census/SUMMARY.md &lt;&lt;'EOF' # Book 1 (rewrite) — censu…</p>
 <p>✅ 1 lines, 2 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' import re,json SC='<span class="redacted">redacted: private</span>' rows=[l…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' import re,json SC='<span class="redacted">redacted: private</span>' rows=[l for l i…</p>
 <p>✅ 1 lines, 6 chars — ok 102</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; SC=<span class="redacted">redacted: private</span> cat &gt; $SC/head.md &lt;&lt;'EOF' # Book 1 — the r…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; SC=<span class="redacted">redacted: private</span> cat &gt; $SC/head.md &lt;&lt;'EOF' # Book 1 — the rewrite, …</p>
 <p>✅ 1 lines, 2 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; SC=<span class="redacted">redacted: private</span> cat &gt; $SC/mid2.md &lt;&lt;'MDEOF'  ---  ## 4. Th…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; SC=<span class="redacted">redacted: private</span> cat &gt; $SC/mid2.md &lt;&lt;'MDEOF'  ---  ## 4. The cold r…</p>
 <p>✅ 1 lines, 2 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; SC=<span class="redacted">redacted: private</span> cat &gt; $SC/mid3.md &lt;&lt;'MDEOF'  ---  ## 6. St…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; SC=<span class="redacted">redacted: private</span> cat &gt; $SC/mid3.md &lt;&lt;'MDEOF'  ---  ## 6. Structural…</p>
 <p>✅ 1 lines, 2 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '80,200p' rewrite/book-01/CLUES-REPORT.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '80,200p' rewrite/book-01/CLUES-REPORT.md</p>
 <p>✅ 121 lines, 6819 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; SC=<span class="redacted">redacted: private</span> cat &gt; $SC/mid4.md &lt;&lt;'MDEOF'  ---  ## 8. Cl…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; SC=<span class="redacted">redacted: private</span> cat &gt; $SC/mid4.md &lt;&lt;'MDEOF'  ---  ## 8. Clues and …</p>
 <p>✅ 1 lines, 39 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "sealed" rewrite/book-01/BOOK-REPORT.md | sed -n '1,60p'</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "sealed" rewrite/book-01/BOOK-REPORT.md | sed -n '1,60p'</p>
 <p>✅ 17 lines, 2449 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '585,600p;676,692p' rewrite/book-01/BOOK-REPORT.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '585,600p;676,692p' rewrite/book-01/BOOK-REPORT.md</p>
 <p>✅ 33 lines, 4938 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' import re SC='<span class="redacted">redacted: private</span>' t=open('rewr…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' import re SC='<span class="redacted">redacted: private</span>' t=open('rewrite/book…</p>
 <p>✅ 2 lines, 483 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; SC=<span class="redacted">redacted: private</span> head -c 4000 $SC/mid3.md | tail -c 400; py…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; SC=<span class="redacted">redacted: private</span> head -c 4000 $SC/mid3.md | tail -c 400; python3 - …</p>
 <p>✅ 8 lines, 443 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '/^| # | Source | Finding | Owner |/,/^$/p' rewrite/book-0…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '/^| # | Source | Finding | Owner |/,/^$/p' rewrite/book-01/BOOK-RE…</p>
 <p>✅ 41 lines, 7472 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; SC=<span class="redacted">redacted: private</span> python3 - &lt;&lt;'EOF' import re SC='/private/t…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; SC=<span class="redacted">redacted: private</span> python3 - &lt;&lt;'EOF' import re SC='/private/tmp/claud…</p>
 <p>✅ 2 lines, 594 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Now the skill experiment log entry and `plans/NEXT.md`. <span class="redacted">unpublished</span></p>
+<p>Now the skill experiment log entry and <code>plans/NEXT.md</code>. <span class="unpub-tag">unpublished</span></p>
 </div>
 
 <details><summary>14 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt;&gt; .claude/skills/write-arc/SKILL.md &lt;&lt;'EOF' - 2026-08-29, **…</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; wc -l plans/NEXT.md; <span class="redacted">unpublished</span> sed -n '1,90p' plans/NEXT.md ⟦…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt;&gt; .claude/skills/write-arc/SKILL.md &lt;&lt;'EOF' - 2026-08-29, the whole o…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; wc -l plans/NEXT.md; <span class="unpub-tag">unpublished</span> sed -n '1,90p' plans/NEXT.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 4 lines, 154 chars</p>
 <p>✅ 91 lines, 5198 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '90,92p' plans/NEXT.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '90,92p' plans/NEXT.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 3 lines, 185 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' import re p='plans/NEXT.md <span class="redacted">unpublished</span>'; t=ope…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'PY' import re p='plans/NEXT.md <span class="unpub-tag">unpublished</span>'; t=open(p).read…</p>
 <p>✅ 9 lines, 323 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -nE "the answer is|turns out to be|is actually|really is|exp…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -nE "the answer is|turns out to be|is actually|really is|explanation…</p>
 <p>✅ 1 lines, 113 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> .claude/skills/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> .claude/skills/write-arc…</p>
 <p>✅ 62 lines, 3288 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git commit -q -m "$(cat &lt;&lt;'EOF' Book 1 collated: 54 chapters, cen…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; git commit -q -m "$(cat &lt;&lt;'EOF' Book 1 collated: 54 chapters, census, book…</p>
 <p>✅ 1 lines, 74 chars — a7c3f1d Book 1 collated: 54 chapters, census, book report, NEXT reoriented</p>
 </details>
 
 <div class="assistant-prose">
-<p>**116,634 words of prose body; 54 chapters (001–054, contiguous, no gaps or duplicates).**</p>
-<p>Whole-book gate: date/clock-stamped scene openings **1.4% (2/141)** against a 20% bar; self-announced durations **0% (0/141)** against a 5% bar; chapters over 3,000 words **0 of 54 (0%)** against a 1-in-5 bar. All three pass, two at the floor.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> `FLAGS.md` carries 102 unresolved entries.</p>
-<p>Report: `<span class="redacted">redacted: private</span>/rewrite/book-01/BOOK-REPORT.md`</p>
+<p><strong>116,634 words of prose body; 54 chapters (001–054, contiguous, no gaps or duplicates).</strong></p>
+<p>Whole-book gate: date/clock-stamped scene openings <strong>1.4% (2/141)</strong> against a 20% bar; self-announced durations <strong>0% (0/141)</strong> against a 5% bar; chapters over 3,000 words <strong>0 of 54 (0%)</strong> against a 1-in-5 bar. All three pass, two at the floor.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <code>FLAGS.md</code> carries 102 unresolved entries.</p>
+<p>Report: <span class="redacted">redacted</span>/rewrite/book-01/BOOK-REPORT.md</p>
 </div>
 </body></html>

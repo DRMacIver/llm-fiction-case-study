@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a worldbuilding archivist for a novel-in-progress at ⟦redacte…</title><style>
+<html><head><meta charset="utf-8"><title>You are a worldbuilding archivist for a novel-in-progress at [redacted]…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,106 +7,134 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a worldbuilding archivist for a novel-in-progress at ⟦redacte…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ac3c603481b252591">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a worldbuilding archivist for a novel-in-progress at <span class="redacted">redacted: private</span>. Read ONLY the file `chapters/003-the-improbability-engine.md`. Do not read the canon notes — your job is to report what this chapter alone puts on the page, independently.<br>
-<br>
-Produce a report in markdown with exactly these sections:<br>
-<br>
-## Facts<br>
-Everything the chapter asserts or firmly implies about: the world (geography, economy, institutions, history, seasons/calendar), the System (mechanics, skills, classes, levels, notifications), magic, farming practice, characters (biography, capability, relationships, habits, physical detail), and the timeline (dates, elapsed time, day-of-week, ages, durations).<br>
-- One bullet per fact, terse.<br>
-- Tag each `[stated]` (explicit on the page) or `[implied]` (a reader would conclude it, but it isn't said).<br>
-- Give a short quoted phrase as evidence for each.<br>
-- Prefer specific and checkable over atmospheric. Skip pure plot summary — a plot event only counts if it fixes a fact (a date, a capability, a relationship change).<br>
-<br>
-## Questions<br>
-Questions this chapter raises that a coherent set of story notes ought to have an answer to (whether or not the answer belongs on the page). Include:<br>
-- setup/consequence questions ("this is introduced — what does it cost, who else can do it, why hasn't anyone before?"),<br>
-- numbers and scales the chapter gestures at but doesn't fix,<br>
-- character motivation or history the chapter leans on without establishing,<br>
-- anything that looks like it would contradict a plausible neighbouring fact.<br>
-One bullet each, phrased as a question, with a clause saying why it matters.<br>
-<br>
-## Tensions<br>
-Anything inside this chapter that sits oddly with itself — a number, a distance, a timing, a capability used more or less freely than elsewhere in the same chapter. Empty section is fine; say "None noted."<br>
-<br>
-Be thorough but do not pad. Your final message IS the report — no preamble.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a worldbuilding archivist for a novel-in-progress at [redacted]…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ac3c603481b252591">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-27</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a worldbuilding archivist for a novel-in-progress at <span class="redacted">redacted</span>. Read ONLY the file <code>chapters/003-the-improbability-engine.md</code>. Do not read the canon notes — your job is to report what this chapter alone puts on the page, independently.</p>
+<p>Produce a report in markdown with exactly these sections:</p>
+<h2>Facts</h2>
+<p>Everything the chapter asserts or firmly implies about: the world (geography, economy, institutions, history, seasons/calendar), the System (mechanics, skills, classes, levels, notifications), magic, farming practice, characters (biography, capability, relationships, habits, physical detail), and the timeline (dates, elapsed time, day-of-week, ages, durations).</p>
+<ul>
+<li>One bullet per fact, terse.</li>
+<li>Tag each <code>[stated]</code> (explicit on the page) or <code>[implied]</code> (a reader would conclude it, but it isn't said).</li>
+<li>Give a short quoted phrase as evidence for each.</li>
+<li>Prefer specific and checkable over atmospheric. Skip pure plot summary — a plot event only counts if it fixes a fact (a date, a capability, a relationship change).</li>
+</ul>
+<h2>Questions</h2>
+<p>Questions this chapter raises that a coherent set of story notes ought to have an answer to (whether or not the answer belongs on the page). Include:</p>
+<ul>
+<li>setup/consequence questions (&quot;this is introduced — what does it cost, who else can do it, why hasn't anyone before?&quot;),</li>
+<li>numbers and scales the chapter gestures at but doesn't fix,</li>
+<li>character motivation or history the chapter leans on without establishing,</li>
+<li>anything that looks like it would contradict a plausible neighbouring fact.<br />
+One bullet each, phrased as a question, with a clause saying why it matters.</li>
+</ul>
+<h2>Tensions</h2>
+<p>Anything inside this chapter that sits oddly with itself — a number, a distance, a timing, a capability used more or less freely than elsewhere in the same chapter. Empty section is fine; say &quot;None noted.&quot;</p>
+<p>Be thorough but do not pad. Your final message IS the report — no preamble.</p></blockquote>
 
 
 <p>🔧 Read chapters/003-the-improbability-engine.md</p>
 <p>✅ 156 lines, 18222 chars</p>
 
 <div class="assistant-prose">
-<p>## Facts</p>
-<p>**World / geography / institutions**<br>
-- The vale has ten parishes, and a "frost list" is checked parish by parish. `[stated]` — "there were ten parishes, a frost list, and a feud"<br>
-- Marsh Barton and Upper Wold are neighboring parishes with a shared ford used on market day. `[stated]` — "which parish's carts had precedence at the shared ford on market day"<br>
-- The Marsh Barton/Upper Wold ford feud is four generations old. `[stated]` — "It was into its fourth generation"<br>
-- Edwin has personally ruled the ford dispute every summer's end "since the feud was young" — implying he predates it or arrived very early in it. `[implied]`<br>
-- There's an agricultural college with its own seal, and a Wystow registry clerk who handles official correspondence/parcels. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- There's an "old dungeon out east" that is rumored to be "due its clearing" — a known dungeon feature in this world. `[stated]` — "the old dungeon out east that's due its clearing"<br>
-- Coast floods are a known past event in local memory. `[stated]` — "since the coast floods"<br>
-- A four-year-old whale incident is remembered locally as a notable omen-candidate. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Month names include Fallowmonth, Haymonth, Weedmonth — a named-month calendar. `[stated]` — "smelled of a wood in Fallowmonth," "last Haymonth's hail"<br>
-- Marsh Barton has a slater with a long waiting list, servicing multiple villages' roofs. `[stated]` — "The slater at Marsh Barton had a list as long as the road"<br>
-- Smith's replacement parts now come from the coast rather than the crossroads — a recent supply-line change. `[stated]` — "the smith's parts come from the coast now instead of the crossroads, which she says is new"</p>
-<p>**The System / Weave**<br>
-- Peri has a "Weave" she can consult with one question per day. `[stated]` — "One question a day"<br>
-- The Weave gives true answers to the literal question asked, not the intended meaning. `[stated]` — "The answers are always true... Needed isn't the same as important."<br>
-- Peri has had "the class" for about a month (implying a class/System feature tied to her). `[stated]` — "The first month I had the class"<br>
-- Edwin has a "destiny" that is currently blank/unfilled, created by some binding action of Peri's. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Edwin refers to a "quest" binding as a real mechanical thing with terms to be read later, like a contract. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Magic**<br>
-- No named magic system is shown directly performing action on-page in this chapter; Edwin's "reading of weather" is treated as expert mundane/quasi-magical skill via long experience, not stated as a spell. `[implied]`</p>
-<p>**Farming practice**<br>
-- Salt burn: sea-salt gale damage to leaves, distinguished from deeper soil-salt damage; the cure is fresh water rain/drainage. `[stated]` (author's note)<br>
-- Composting/muck: fresh manure must rot before use; correct practice is separating rotted (garden-ready) from fresh (to season). `[stated]` (author's note, reinforced in text)<br>
-- Edwin keeps soil-salt tables by parish in parts per thousand. <span class="redacted">redacted sentence: unpublished prose</span> in parts per thousand"<br>
-- A neglected well-winch pawl/tooth needs cleaning, filing square, and greasing, done in a specific correct order. `[stated]`</p>
-<p>**Characters**<br>
-- Edwin Moss is at least three hundred years old (self-reported). `[stated]` — "You've had three hundred years of asking things questions"<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Edwin has not slept a night outside the tower since the coast floods, per Widow Sepp. `[stated]` — "you haven't slept a night out of the tower since the coast floods"<br>
-- Edwin's travel/activity radius has been shrinking for a long time, per Peri's mapping. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Edwin keeps a weather ledger covering forty years of Fallowmonth frost pages, a unique unduplicated document. `[stated]` — "forty years of weather schedules in one book that existed nowhere else"<br>
-- Sorrel is Edwin's assistant/secretary figure who drafts correspondence and manages post. `[stated]` — "which he read, approved, and then copied out in his own hand"<br>
-- Sorrel broke slates during "last Haymonth's hail." `[stated]` — "the hail Sorrel had broken"<br>
-- Peri Millbrook arrived at least four days before this chapter's end (her residence's "second day" featured the winch repair; by the wall scene she says "I've been here four days"). `[stated]`<br>
-- Peri fixed the Corry well-winch unaided and refused payment. `[stated]` — "took it apart... refused payment"<br>
-- Peri's manor-mechanical work is unusually fine — filed the tooth "finer than it needed to be," extra hour for no functional gain, suggesting a perfectionist/caretaking habit not just competence. `[implied/stated]` — "no more taken off it than the job wanted... An extra hour on it, at least, for no gain the winch would ever notice"<br>
-- Peri keeps a notebook logging omens/signs and her Weave interactions. `[stated]`<br>
-- Peri talks to objects/machines while working them, non-magically. `[stated]` — "She talked to it... Not spells. Just talked."<br>
-- Peri has new boots still breaking in. `[stated]` — "the new boots breaking in at last"<br>
-- Peri deduces Edwin's shrinking travel radius from local report and a self-made map. `[stated]`<br>
-- Widow Sepp runs a compost/heap operation timed and monitored (six days, wood-smell descriptor) — implies she's one of Edwin's students/clients. `[implied]`<br>
-- Edwin teaches a regular class: "eleven farmwives and one boy" attended this session. `[stated]`<br>
-- The widow Crane's post-forwarding arrangement: letters sit in her cottage window unless urgent, in which case an illiterate neighbor boy runs them up, judging urgency by wax seals. `[stated]`<br>
-- The neighbor boy is paid in a biscuit per errand run, "the established rate." `[stated]`<br>
-<span class="redacted">redacted sentence: unpublished prose</span> `[stated]`<br>
-- At chapter's end, a third piece of correspondence arrives from the same Wystow clerk/agricultural college, marked "by the fastest kindness available," prompting Edwin to finally take it. `[stated]`</p>
-<p>**Timeline**<br>
-- Chapter spans roughly three days: "the morning after the parcel" (day 1, roof leak, market split), day 2 implied (Corry visit, Peri's report), and "the next morning" (day 3, widow Crane away, letter arrives). `[stated/implied]`<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Peri has been in residence four days by the wall scene. `[stated]`</p>
-<p>## Questions</p>
-<p>- What exactly is "the binding" / the quest mechanic, and what are its terms once "the destiny fills in"? The chapter treats it as load-bearing but undefined — what happens if Edwin refuses it outright?<br>
-- Why did Peri's Weave-driven quest specifically target Edwin, a 300-year-old settled local instructor, rather than a more mobile adventurer figure? What made him the "right man" mechanically?<br>
-- What is the actual scope/nature of "six counties" as a unit of geography/administration, and how does it map to "the vale" and its ten parishes?<br>
-- Why has Edwin's travel radius been shrinking for so long, and what caused him to stop sleeping outside the tower since the coast floods — is this trauma, obligation, age, or something structural to his power/class?<br>
-- What was the coast floods event, and when did it occur relative to "the whale" (four years ago) and other referenced local incidents?<br>
-- What does "having until fulfilled" mean mechanically for how long the quest/binding can remain open — is there a time limit, and what triggers its resolution?<br>
-- Peri's Weave gives literal, narrow answers to exact wording — what are the boundaries/costs of asking (is one question per day a hard rule, is there risk in bad wording, can a day's question be "wasted")?<br>
-- Why does the smith's supply chain shifting from crossroads to coast matter — is this the seed of a real economic disruption thread, or just background texture Peri is over-reading?<br>
-- What is in the parcel and the arriving letter — the chapter ends on Edwin taking the letter, but never states contents, so what does the "agricultural college" want, and how does it connect to "the eastern trial fields" parcel?<br>
-- Is the dungeon "out east" real, and does its "clearing being due" have any actual timeline pressure, or is it purely rumor mill noise?<br>
-- How old is Peri, and what is her background/class that gives her a sword and a Weave-quest presumably aimed at monster-slaying, given she's shown doing entirely domestic/agricultural labor instead?</p>
-<p>## Tensions</p>
-<p>- None noted.</p>
+<h2>Facts</h2>
+<p><strong>World / geography / institutions</strong></p>
+<ul>
+<li>The vale has ten parishes, and a &quot;frost list&quot; is checked parish by parish. <code>[stated]</code> — &quot;there were ten parishes, a frost list, and a feud&quot;</li>
+<li>Marsh Barton and Upper Wold are neighboring parishes with a shared ford used on market day. <code>[stated]</code> — &quot;which parish's carts had precedence at the shared ford on market day&quot;</li>
+<li>The Marsh Barton/Upper Wold ford feud is four generations old. <code>[stated]</code> — &quot;It was into its fourth generation&quot;</li>
+<li>Edwin has personally ruled the ford dispute every summer's end &quot;since the feud was young&quot; — implying he predates it or arrived very early in it. <code>[implied]</code></li>
+<li>There's an agricultural college with its own seal, and a Wystow registry clerk who handles official correspondence/parcels. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>There's an &quot;old dungeon out east&quot; that is rumored to be &quot;due its clearing&quot; — a known dungeon feature in this world. <code>[stated]</code> — &quot;the old dungeon out east that's due its clearing&quot;</li>
+<li>Coast floods are a known past event in local memory. <code>[stated]</code> — &quot;since the coast floods&quot;</li>
+<li>A four-year-old whale incident is remembered locally as a notable omen-candidate. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Month names include Fallowmonth, Haymonth, Weedmonth — a named-month calendar. <code>[stated]</code> — &quot;smelled of a wood in Fallowmonth,&quot; &quot;last Haymonth's hail&quot;</li>
+<li>Marsh Barton has a slater with a long waiting list, servicing multiple villages' roofs. <code>[stated]</code> — &quot;The slater at Marsh Barton had a list as long as the road&quot;</li>
+<li>Smith's replacement parts now come from the coast rather than the crossroads — a recent supply-line change. <code>[stated]</code> — &quot;the smith's parts come from the coast now instead of the crossroads, which she says is new&quot;</li>
+</ul>
+<p><strong>The System / Weave</strong></p>
+<ul>
+<li>Peri has a &quot;Weave&quot; she can consult with one question per day. <code>[stated]</code> — &quot;One question a day&quot;</li>
+<li>The Weave gives true answers to the literal question asked, not the intended meaning. <code>[stated]</code> — &quot;The answers are always true... Needed isn't the same as important.&quot;</li>
+<li>Peri has had &quot;the class&quot; for about a month (implying a class/System feature tied to her). <code>[stated]</code> — &quot;The first month I had the class&quot;</li>
+<li>Edwin has a &quot;destiny&quot; that is currently blank/unfilled, created by some binding action of Peri's. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Edwin refers to a &quot;quest&quot; binding as a real mechanical thing with terms to be read later, like a contract. <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Magic</strong></p>
+<ul>
+<li>No named magic system is shown directly performing action on-page in this chapter; Edwin's &quot;reading of weather&quot; is treated as expert mundane/quasi-magical skill via long experience, not stated as a spell. <code>[implied]</code></li>
+</ul>
+<p><strong>Farming practice</strong></p>
+<ul>
+<li>Salt burn: sea-salt gale damage to leaves, distinguished from deeper soil-salt damage; the cure is fresh water rain/drainage. <code>[stated]</code> (author's note)</li>
+<li>Composting/muck: fresh manure must rot before use; correct practice is separating rotted (garden-ready) from fresh (to season). <code>[stated]</code> (author's note, reinforced in text)</li>
+<li>Edwin keeps soil-salt tables by parish in parts per thousand. <span class="redacted">redacted sentence: unpublished prose</span> in parts per thousand&quot;</li>
+<li>A neglected well-winch pawl/tooth needs cleaning, filing square, and greasing, done in a specific correct order. <code>[stated]</code></li>
+</ul>
+<p><strong>Characters</strong></p>
+<ul>
+<li>Edwin Moss is at least three hundred years old (self-reported). <code>[stated]</code> — &quot;You've had three hundred years of asking things questions&quot;<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Edwin has not slept a night outside the tower since the coast floods, per Widow Sepp. <code>[stated]</code> — &quot;you haven't slept a night out of the tower since the coast floods&quot;</li>
+<li>Edwin's travel/activity radius has been shrinking for a long time, per Peri's mapping. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Edwin keeps a weather ledger covering forty years of Fallowmonth frost pages, a unique unduplicated document. <code>[stated]</code> — &quot;forty years of weather schedules in one book that existed nowhere else&quot;</li>
+<li>Sorrel is Edwin's assistant/secretary figure who drafts correspondence and manages post. <code>[stated]</code> — &quot;which he read, approved, and then copied out in his own hand&quot;</li>
+<li>Sorrel broke slates during &quot;last Haymonth's hail.&quot; <code>[stated]</code> — &quot;the hail Sorrel had broken&quot;</li>
+<li>Peri Millbrook arrived at least four days before this chapter's end (her residence's &quot;second day&quot; featured the winch repair; by the wall scene she says &quot;I've been here four days&quot;). <code>[stated]</code></li>
+<li>Peri fixed the Corry well-winch unaided and refused payment. <code>[stated]</code> — &quot;took it apart... refused payment&quot;</li>
+<li>Peri's manor-mechanical work is unusually fine — filed the tooth &quot;finer than it needed to be,&quot; extra hour for no functional gain, suggesting a perfectionist/caretaking habit not just competence. <code>[implied/stated]</code> — &quot;no more taken off it than the job wanted... An extra hour on it, at least, for no gain the winch would ever notice&quot;</li>
+<li>Peri keeps a notebook logging omens/signs and her Weave interactions. <code>[stated]</code></li>
+<li>Peri talks to objects/machines while working them, non-magically. <code>[stated]</code> — &quot;She talked to it... Not spells. Just talked.&quot;</li>
+<li>Peri has new boots still breaking in. <code>[stated]</code> — &quot;the new boots breaking in at last&quot;</li>
+<li>Peri deduces Edwin's shrinking travel radius from local report and a self-made map. <code>[stated]</code></li>
+<li>Widow Sepp runs a compost/heap operation timed and monitored (six days, wood-smell descriptor) — implies she's one of Edwin's students/clients. <code>[implied]</code></li>
+<li>Edwin teaches a regular class: &quot;eleven farmwives and one boy&quot; attended this session. <code>[stated]</code></li>
+<li>The widow Crane's post-forwarding arrangement: letters sit in her cottage window unless urgent, in which case an illiterate neighbor boy runs them up, judging urgency by wax seals. <code>[stated]</code></li>
+<li>The neighbor boy is paid in a biscuit per errand run, &quot;the established rate.&quot; <code>[stated]</code><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <code>[stated]</code></li>
+<li>At chapter's end, a third piece of correspondence arrives from the same Wystow clerk/agricultural college, marked &quot;by the fastest kindness available,&quot; prompting Edwin to finally take it. <code>[stated]</code></li>
+</ul>
+<p><strong>Timeline</strong></p>
+<ul>
+<li>Chapter spans roughly three days: &quot;the morning after the parcel&quot; (day 1, roof leak, market split), day 2 implied (Corry visit, Peri's report), and &quot;the next morning&quot; (day 3, widow Crane away, letter arrives). <code>[stated/implied]</code><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Peri has been in residence four days by the wall scene. <code>[stated]</code></li>
+</ul>
+<h2>Questions</h2>
+<ul>
+<li>What exactly is &quot;the binding&quot; / the quest mechanic, and what are its terms once &quot;the destiny fills in&quot;? The chapter treats it as load-bearing but undefined — what happens if Edwin refuses it outright?</li>
+<li>Why did Peri's Weave-driven quest specifically target Edwin, a 300-year-old settled local instructor, rather than a more mobile adventurer figure? What made him the &quot;right man&quot; mechanically?</li>
+<li>What is the actual scope/nature of &quot;six counties&quot; as a unit of geography/administration, and how does it map to &quot;the vale&quot; and its ten parishes?</li>
+<li>Why has Edwin's travel radius been shrinking for so long, and what caused him to stop sleeping outside the tower since the coast floods — is this trauma, obligation, age, or something structural to his power/class?</li>
+<li>What was the coast floods event, and when did it occur relative to &quot;the whale&quot; (four years ago) and other referenced local incidents?</li>
+<li>What does &quot;having until fulfilled&quot; mean mechanically for how long the quest/binding can remain open — is there a time limit, and what triggers its resolution?</li>
+<li>Peri's Weave gives literal, narrow answers to exact wording — what are the boundaries/costs of asking (is one question per day a hard rule, is there risk in bad wording, can a day's question be &quot;wasted&quot;)?</li>
+<li>Why does the smith's supply chain shifting from crossroads to coast matter — is this the seed of a real economic disruption thread, or just background texture Peri is over-reading?</li>
+<li>What is in the parcel and the arriving letter — the chapter ends on Edwin taking the letter, but never states contents, so what does the &quot;agricultural college&quot; want, and how does it connect to &quot;the eastern trial fields&quot; parcel?</li>
+<li>Is the dungeon &quot;out east&quot; real, and does its &quot;clearing being due&quot; have any actual timeline pressure, or is it purely rumor mill noise?</li>
+<li>How old is Peri, and what is her background/class that gives her a sword and a Weave-quest presumably aimed at monster-slaying, given she's shown doing entirely domestic/agricultural labor instead?</li>
+</ul>
+<h2>Tensions</h2>
+<ul>
+<li>None noted.</li>
+</ul>
 </div>
 </body></html>

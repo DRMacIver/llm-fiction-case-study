@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,26 +7,39 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a305ecf85e92766eb">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/author-notes/ whose name starts with the two-digit number 29-. Read it in full.<br>
-LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id "sense".<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a305ecf85e92766eb">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/author-notes/ whose name starts with the two-digit number 29-. Read it in full.<br />
+LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id &quot;sense&quot;.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
-<p>I'll help you lint the author notes file. Let me start by finding the file that starts with "29-" in the draft/book-01/author-notes/ directory.</p>
+<p>I'll help you lint the author notes file. Let me start by finding the file that starts with &quot;29-&quot; in the draft/book-01/author-notes/ directory.</p>
 </div>
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/author-notes -name "29-*.md" -type f (Find the .md file starting with 29- in author-notes)</p>
-<p>✅ 1 lines, 91 chars — <span class="redacted">redacted: private</span>/draft/book-01/author-notes/29-birds-go-around-a-field.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/author-notes -name "29-*.md" -type f (Find the .md file starting with 29- in author-notes)</p>
+<p>✅ 1 lines, 91 chars — <span class="redacted">redacted</span>/draft/book-01/author-notes/29-birds-go-around-a-field.md</p>
 <p>🔧 Read draft/book-01/author-notes/29-birds-go-around-a-field.md</p>
 <p>✅ 4 lines, 1202 chars</p>
 
@@ -34,29 +47,61 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>Now let me carefully read through this file for sense issues.</p>
 </div>
 
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/author-notes/29-birds-go-around-a-field.md (Display file content for analysis)</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/draft/book-01/author-notes/29-birds-go-around-a-field.md (Display file content for analysis)</p>
 <p>✅ 3 lines, 1193 chars</p>
 
 <div class="assistant-prose">
 <p>Let me carefully analyze each claim in this file for sense issues.</p>
-<p>**First section (Starlings):**</p>
-<p>1. "in autumn and winter starlings gather at dusk... in flocks that can run to hundreds of thousands, and wheel over it for half an hour before dropping in"<br>
-   - Claim: Flocks wheel for ~30 minutes before landing. Coherent and reasonable timespan.</p>
-<p>2. "each bird is tracking only a handful of near neighbours, something like seven of them, and copying their turns"<br>
-   - Claim: Each bird tracks ~7 neighbors and copies their moves. Flat restatement survives; coherent mechanism.</p>
-<p>3. **"The tightest and most spectacular turns are usually a falcon: a peregrine puts the flock through everything it can do."**<br>
-   - Problem: "The tightest and most spectacular turns are usually a falcon" — grammatically, turns cannot *be* a falcon. This should read something like "are usually caused by a falcon" or "usually involve a falcon." The construction is unclear and requires re-reading to parse intent. The colon provides clarification but doesn't fix the grammatical issue of the first clause.</p>
-<p>4. "there are fewer places to do it every decade, because Britain has lost the great majority of its breeding starlings since the 1970s"<br>
-   - Claim: Fewer roosts with each decade due to population decline since 1970s. Coherent causal chain.</p>
-<p>**Second section (Reading a sward):**</p>
-<p>1. "a field a few shades off its neighbours is telling you something... a different grass mix, a different drainage, where the muck went last, where the stock lay"<br>
-   - Claim: Color variation indicates grass mix, drainage, manure spread location, or livestock rest areas. Coherent.</p>
-<p>2. "A grazed sward is short because it is grazed"<br>
-   - Tautological but parses clearly; no sense error (meaning survives restatement).</p>
-<p>3. "Colour is the first thing to notice in a field and about the last thing to draw a conclusion from"<br>
-   - Coherent and consistent with earlier point about color being unreliable as sole indicator.</p>
+<p><strong>First section (Starlings):</strong></p>
+<ol>
+<li>
+<p>&quot;in autumn and winter starlings gather at dusk... in flocks that can run to hundreds of thousands, and wheel over it for half an hour before dropping in&quot;</p>
+<ul>
+<li>Claim: Flocks wheel for ~30 minutes before landing. Coherent and reasonable timespan.</li>
+</ul>
+</li>
+<li>
+<p>&quot;each bird is tracking only a handful of near neighbours, something like seven of them, and copying their turns&quot;</p>
+<ul>
+<li>Claim: Each bird tracks ~7 neighbors and copies their moves. Flat restatement survives; coherent mechanism.</li>
+</ul>
+</li>
+<li>
+<p><strong>&quot;The tightest and most spectacular turns are usually a falcon: a peregrine puts the flock through everything it can do.&quot;</strong></p>
+<ul>
+<li>Problem: &quot;The tightest and most spectacular turns are usually a falcon&quot; — grammatically, turns cannot <em>be</em> a falcon. This should read something like &quot;are usually caused by a falcon&quot; or &quot;usually involve a falcon.&quot; The construction is unclear and requires re-reading to parse intent. The colon provides clarification but doesn't fix the grammatical issue of the first clause.</li>
+</ul>
+</li>
+<li>
+<p>&quot;there are fewer places to do it every decade, because Britain has lost the great majority of its breeding starlings since the 1970s&quot;</p>
+<ul>
+<li>Claim: Fewer roosts with each decade due to population decline since 1970s. Coherent causal chain.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Second section (Reading a sward):</strong></p>
+<ol>
+<li>
+<p>&quot;a field a few shades off its neighbours is telling you something... a different grass mix, a different drainage, where the muck went last, where the stock lay&quot;</p>
+<ul>
+<li>Claim: Color variation indicates grass mix, drainage, manure spread location, or livestock rest areas. Coherent.</li>
+</ul>
+</li>
+<li>
+<p>&quot;A grazed sward is short because it is grazed&quot;</p>
+<ul>
+<li>Tautological but parses clearly; no sense error (meaning survives restatement).</li>
+</ul>
+</li>
+<li>
+<p>&quot;Colour is the first thing to notice in a field and about the last thing to draw a conclusion from&quot;</p>
+<ul>
+<li>Coherent and consistent with earlier point about color being unreliable as sole indicator.</li>
+</ul>
+</li>
+</ol>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": [{"rule_id": "sense", "quote": "The tightest a…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

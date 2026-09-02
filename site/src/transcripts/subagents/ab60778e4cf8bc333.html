@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ab60778e4cf8bc333">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="world", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/07-can-you-actually-fight.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ab60778e4cf8bc333">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;world&quot;, and scope includes &quot;scene&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/scenes/07-can-you-actually-fight.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -27,17 +40,17 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>✅ 1216 lines, 49319 chars</p>
 
 <div class="assistant-prose">
-<p>Let me continue reading the rules file to find all rules with tier="semantic" and lens="world":</p>
+<p>Let me continue reading the rules file to find all rules with tier=&quot;semantic&quot; and lens=&quot;world&quot;:</p>
 </div>
 
 <details><summary>8 tool calls</summary>
-<p>🔧 Bash: grep -n "\"lens\":" <span class="redacted">redacted: private</span>/tools/lint/rules.json | head -30</p>
+<p>🔧 Bash: grep -n "\"lens\":" <span class="redacted">redacted</span>/tools/lint/rules.json | head -30</p>
 <p>✅ 30 lines, 718 chars</p>
-<p>🔧 Bash: grep -B 20 '"lens".*"world"' <span class="redacted">redacted: private</span>/tools/lint/rules.json | grep -E '"id"|"l…</p>
+<p>🔧 Bash: grep -B 20 '"lens".*"world"' <span class="redacted">redacted</span>/tools/lint/rules.json | grep -E '"id"|"lens"' | h…</p>
 <p>✅ 11 lines, 273 chars</p>
-<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json') as f…</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
 <p>✅ 22 lines, 1835 chars — ID: worldbuilding-to-save-a-line / Name: Worldbuilding invented to save a line / Description: A queried line is kept by inventing canon, an image, or a rephrasing to justify it, when the query was about the line existing at all. Invent only for a line worth it, and only something …</p>
-<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json') as f…</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
 <p>✅ 44 lines, 3965 chars — ============================================================ / ID: worldbuilding-to-save-a-line / Name: Worldbuilding invented to save a line</p>
 </details>
 
@@ -45,39 +58,61 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>Now let me extract the precise rules I need to check and analyze the scene:</p>
 </div>
 
-<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json') as f…</p>
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('<span class="redacted">redacted</span>/tools/lint/rules.json') as f:     rul…</p>
 <p>✅ 6 lines, 313 chars — Selected rules to check: / - worldbuilding-to-save-a-line: Worldbuilding invented to save a line / - tech-level-anachronism: Anachronism against the tech level</p>
 
 <div class="assistant-prose">
 <p>Now let me carefully examine the scene for violations of these 5 rules:</p>
 </div>
 
-<p>🔧 Bash: cat &gt; /tmp/hunt.py &lt;&lt; 'EOF' # Read the scene and analyze for violations with open('⟦redac…</p>
+<p>🔧 Bash: cat &gt; /tmp/hunt.py &lt;&lt; 'EOF' # Read the scene and analyze for violations with open('<span class="redacted">redacted</span>…</p>
 <p>✅ 24 lines, 3766 chars</p>
 
 <div class="assistant-prose">
 <p>Let me carefully analyze the scene against each of the 5 selected rules. I'll check the neighboring context for each potential violation as instructed:</p>
-<p>**Rule 1: worldbuilding-to-save-a-line** — Looking for invented canon to justify a queried line.<br>
-- The charm description (lines 23-25) is woven naturally into dialogue as explanation, not invented to save a line.<br>
-- No invented worldbuilding detected.</p>
-<p>**Rule 2: tech-level-anachronism** — Looking for pre-industrial anachronisms.<br>
-- Line 7: "Mrs Tansy moved the biscuit crock"<br>
-  - Checking context: The rule warns about "biscuit tin" (19th century). A crock is pottery (pre-industrial). "Biscuit crock" appears to use the pre-industrial alternative correctly.<br>
-  - Not a violation.</p>
-<p>**Rule 3: canon-scale-contradiction** — Looking for numbers contradicting canon (age-markers only).<br>
-- Lines 15-17: Peri says "The village says you teach five" / Edwin responds "There are four, and they come in an order, and compost comes first"<br>
-  - Checking full context: Line 17 continues "A charm for what's in store. A blessing for a sick beast. Frost-sense. Water-finding." This lists four items after mentioning compost comes first, totaling five. The neighboring sentences clarify that "four" means the four after compost, resolving the apparent contradiction.<br>
-  - Per instructions, neighboring context supplies the clarification, so do not flag.</p>
-<p>**Rule 4: system-terminology** — Looking for wrong nouns for established things.<br>
-- Line 43: "Magic missile" in Edwin's description of a spell he cast<br>
-  - Checking context: Previous sentence: "I cast the one battle spell I'd got as far as." Next sentence: "I missed, and hit a shed."<br>
-  - The neighboring sentences don't clarify whether "magic missile" is the established term for this world's magic system. However, Edwin is describing something from his distant past, and without canonical evidence that this is the wrong terminology for the world, I cannot definitively flag it as a violation.</p>
-<p>**Rule 5: italics-misplaced** — Looking for emphasis italics in wrong places.<br>
-- Line 5: "*get off my hill*" <br>
-  - Checking context: Full sentence: "There were two, now that *get off my hill* had been tried." The italics emphasize the specific phrase/command he tried. This is an appropriate emphasis point within the sentence.<br>
-  - Not a violation.</p>
+<p><strong>Rule 1: worldbuilding-to-save-a-line</strong> — Looking for invented canon to justify a queried line.</p>
+<ul>
+<li>The charm description (lines 23-25) is woven naturally into dialogue as explanation, not invented to save a line.</li>
+<li>No invented worldbuilding detected.</li>
+</ul>
+<p><strong>Rule 2: tech-level-anachronism</strong> — Looking for pre-industrial anachronisms.</p>
+<ul>
+<li>Line 7: &quot;Mrs Tansy moved the biscuit crock&quot;
+<ul>
+<li>Checking context: The rule warns about &quot;biscuit tin&quot; (19th century). A crock is pottery (pre-industrial). &quot;Biscuit crock&quot; appears to use the pre-industrial alternative correctly.</li>
+<li>Not a violation.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Rule 3: canon-scale-contradiction</strong> — Looking for numbers contradicting canon (age-markers only).</p>
+<ul>
+<li>Lines 15-17: Peri says &quot;The village says you teach five&quot; / Edwin responds &quot;There are four, and they come in an order, and compost comes first&quot;
+<ul>
+<li>Checking full context: Line 17 continues &quot;A charm for what's in store. A blessing for a sick beast. Frost-sense. Water-finding.&quot; This lists four items after mentioning compost comes first, totaling five. The neighboring sentences clarify that &quot;four&quot; means the four after compost, resolving the apparent contradiction.</li>
+<li>Per instructions, neighboring context supplies the clarification, so do not flag.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Rule 4: system-terminology</strong> — Looking for wrong nouns for established things.</p>
+<ul>
+<li>Line 43: &quot;Magic missile&quot; in Edwin's description of a spell he cast
+<ul>
+<li>Checking context: Previous sentence: &quot;I cast the one battle spell I'd got as far as.&quot; Next sentence: &quot;I missed, and hit a shed.&quot;</li>
+<li>The neighboring sentences don't clarify whether &quot;magic missile&quot; is the established term for this world's magic system. However, Edwin is describing something from his distant past, and without canonical evidence that this is the wrong terminology for the world, I cannot definitively flag it as a violation.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Rule 5: italics-misplaced</strong> — Looking for emphasis italics in wrong places.</p>
+<ul>
+<li>Line 5: &quot;<em>get off my hill</em>&quot;
+<ul>
+<li>Checking context: Full sentence: &quot;There were two, now that <em>get off my hill</em> had been tried.&quot; The italics emphasize the specific phrase/command he tried. This is an appropriate emphasis point within the sentence.</li>
+<li>Not a violation.</li>
+</ul>
+</li>
+</ul>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

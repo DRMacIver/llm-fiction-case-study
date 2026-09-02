@@ -7,22 +7,31 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Run the pre-David editing pass on two newly drafted scenes of a novel…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-ae917de9f275af0f3">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Run the pre-David editing pass on two newly drafted scenes of a novel in <span class="redacted">redacted: private</span>. First read the whole of .claude/skills/pre-david-pass/SKILL.md and follow it exactly (Parts 1–7; findings only, each with quote, the Part/bullet it fails, one sentence why, and a concrete replacement or 'cut'; never write 'clean'; do NOT edit any file — report only; a finding that cuts a reason, answer, explanation or qualification is presumptively wrong unless the thing is nonsense or does not fit, and the finding must say which).<br>
-<br>
-Read draft/book-01/VOICE.md in full. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (13 Harvestmonth afternoon). Read for context the exemplars named in VOICE.md §1 (scenes 01, 06, 05, 02, 13, 19), scenes 07 and 26 (Edwin's shed account and the causeway lecture, which 62 must not simply repeat), and the preceding scenes 55–61 in draft/book-01/scenes/. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.md ('Voice — binding': piles that run out, anchors, the doubled insistence once per scene, no definitional 'That's X').<br>
-<br>
-STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history; do not search for them.<br>
-<br>
-Pay particular attention to: whether Edwin's account in 62 is plain at the peak (rule 4) or built with anaphora ('A man who ... A man who ... A man who') and balanced halves; whether 'the pool is a cistern' is the scene's one figure and earns it; whether the narrator's closing paragraph in 62 ('It was the second of Edwin's three reasons for what happened eleven days later ... He would not have said what the third was') is a flash-forward/withheld-promise button of the kind VOICE §2 forbids — rule on it and propose a replacement ending (the scene may end on Peri's answer or on his); whether Peri's not writing anything under his words is legible and not cryptic; in 63 whether <span class="redacted">redacted: character</span>'s speech explains anything about the hole (she may not) and whether her roster is a list in her voice; whether Edwin's mist account is plain and mechanism-first; the ending of 63 (<span class="redacted">redacted: character</span>'s line about Ferrin — a button or an answer?); sentences that do not restate flat; counts and clocks; viewpoint; gesture-at-meaning; em dashes; dialect.<br>
-<br>
-Finish with two lines per scene: is there any device a second round of comments would be about, and what would it take to make it work or remove it.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Run the pre-David editing pass on two newly drafted scenes of a novel…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-ae917de9f275af0f3">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Run the pre-David editing pass on two newly drafted scenes of a novel in <span class="redacted">redacted</span>. First read the whole of .claude/skills/pre-david-pass/SKILL.md and follow it exactly (Parts 1–7; findings only, each with quote, the Part/bullet it fails, one sentence why, and a concrete replacement or 'cut'; never write 'clean'; do NOT edit any file — report only; a finding that cuts a reason, answer, explanation or qualification is presumptively wrong unless the thing is nonsense or does not fit, and the finding must say which).</p>
+<p>Read draft/book-01/VOICE.md in full. <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> (13 Harvestmonth afternoon). Read for context the exemplars named in VOICE.md §1 (scenes 01, 06, 05, 02, 13, 19), scenes 07 and 26 (Edwin's shed account and the causeway lecture, which 62 must not simply repeat), and the preceding scenes 55–61 in draft/book-01/scenes/. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.md ('Voice — binding': piles that run out, anchors, the doubled insistence once per scene, no definitional 'That's X').</p>
+<p>STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="unpub-tag">unpublished</span> or their git history; do not search for them.</p>
+<p>Pay particular attention to: whether Edwin's account in 62 is plain at the peak (rule 4) or built with anaphora ('A man who ... A man who ... A man who') and balanced halves; whether 'the pool is a cistern' is the scene's one figure and earns it; whether the narrator's closing paragraph in 62 ('It was the second of Edwin's three reasons for what happened eleven days later ... He would not have said what the third was') is a flash-forward/withheld-promise button of the kind VOICE §2 forbids — rule on it and propose a replacement ending (the scene may end on Peri's answer or on his); whether Peri's not writing anything under his words is legible and not cryptic; in 63 whether <span class="redacted">redacted</span>'s speech explains anything about the hole (she may not) and whether her roster is a list in her voice; whether Edwin's mist account is plain and mechanism-first; the ending of 63 (<span class="redacted">redacted</span>'s line about Ferrin — a button or an answer?); sentences that do not restate flat; counts and clocks; viewpoint; gesture-at-meaning; em dashes; dialect.</p>
+<p>Finish with two lines per scene: is there any device a second round of comments would be about, and what would it take to make it work or remove it.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -34,7 +43,7 @@ Finish with two lines per scene: is there any device a second round of comments 
 <p>🔧 Read draft/book-01/VOICE.md</p>
 <p>✅ 257 lines, 16258 chars</p>
 <p>✅ 426 lines, 27364 chars</p>
-<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span>…</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 74 lines, 11061 chars</p>
 </details>
 
@@ -43,93 +52,164 @@ Finish with two lines per scene: is there any device a second round of comments 
 </div>
 
 <details><summary>38 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; ls | sed -n '1,80p' &amp;&amp; echo ==== &amp;&amp; cat 01…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; ls | sed -n '1,80p' &amp;&amp; echo ==== &amp;&amp; cat 01-*.md 06-…</p>
 <p>✅ 65 lines, 1691 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; cat 01-*.md 06-*.md 05-*.md 02-*.md 13-*.m…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; cat 01-*.md 06-*.md 05-*.md 02-*.md 13-*.md 19-*.md</p>
 <p>✅ 312 lines, 28304 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; cat 07-*.md 26-*.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; cat 07-*.md 26-*.md</p>
 <p>✅ 98 lines, 11512 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; cat 55-*.md 56-*.md 57-*.md 58-*.md 59-*.m…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; cat 55-*.md 56-*.md 57-*.md 58-*.md 59-*.md 60-*.md…</p>
 <p>✅ 24 lines, 2175 chars</p>
 <p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
 <p>✅ 24 lines, 2175 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; wc -w 5[5-9]-*.md 6[0-1]-*.md &amp;&amp; sed -n '1…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; wc -w 5[5-9]-*.md 6[0-1]-*.md &amp;&amp; sed -n '1,200p' 55…</p>
 <p>✅ 98 lines, 14339 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; cat 57-*.md 58-*.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; cat 57-*.md 58-*.md</p>
 <p>✅ 82 lines, 12806 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; cat 59-*.md 60-*.md 61-*.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; cat 59-*.md 60-*.md 61-*.md</p>
 <p>✅ 117 lines, 18886 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '1,400p' <span class="redacted">redacted: character</span>.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '1,400p' <span class="redacted">redacted</span>.md</p>
 <p>✅ 400 lines, 24691 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '400,520p' <span class="redacted">redacted: character</span>.…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '400,520p' <span class="redacted">redacted</span>.md; echo ====EDWIN;…</p>
 <p>✅ 123 lines, 7846 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; awk '/## How they talk/,0' edwin.md | se…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; awk '/## How they talk/,0' edwin.md | sed -n '1,1…</p>
 <p>✅ 160 lines, 9928 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; awk '/## How they talk/,0' peri.md | sed…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; awk '/## How they talk/,0' peri.md | sed -n '1,12…</p>
 <p>✅ 122 lines, 7178 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "Peri direction\|hidden-master"…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; grep -n "Peri direction\|hidden-master" peri.md |…</p>
 <p>✅ 3 lines, 210 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '80,110p' peri.md; echo ====; sed…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '80,110p' peri.md; echo ====; sed -n '863,…</p>
 <p>✅ 33 lines, 2107 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '863,950p' peri.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; sed -n '863,950p' peri.md</p>
 <p>✅ 87 lines, 4712 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; grep -n "—" 62-*.md 63-*.md; echo "--ferri…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; grep -n "—" 62-*.md 63-*.md; echo "--ferrin--"; gre…</p>
 <p>✅ 57 lines, 22781 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; sed -n '33,50p' 25-walking-point.md; echo…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; sed -n '33,50p' 25-walking-point.md; echo ====; gre…</p>
 <p>✅ 20 lines, 1973 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; grep -rn "Saltings" *.md | head; grep -n "…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; grep -rn "Saltings" *.md | head; grep -n "cistern\|…</p>
 <p>✅ 15 lines, 7026 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; sed -n '1,40p' 27-the-cellar-at-saltings-c…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; sed -n '1,40p' 27-the-cellar-at-saltings-corner.md</p>
 <p>✅ 35 lines, 6463 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>## Scene 62 <span class="redacted">unpublished</span> — "What I am in a fight"</p>
-<p>**Part 1**</p>
-<p>1. <span class="redacted">redacted sentence: unpublished prose</span> Nothing in scene 27 is about fighting or about what he is; the cellar is about a drain, a price, and a student. The reader cannot reconstruct what he saw there that predicted this question. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>2. "'I've written that you said it twice, and where.'" — Part 1, check every count. He has given her the plain account once in this scene; the only other occasion is the shed story at the ten o'clock class (scene 07), which was the shed and not this account, and the reader has to guess that is the second. Say the two places, in her voice: "I've written that you said it twice. The heap, and here."</p>
-<p>3. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>4. "The pool is a cistern, and a cistern is no use to a man who needs a bucket now." — Part 1, the figure does not survive flat restatement: a cistern is *exactly* where a man who needs a bucket now gets one. The mechanism he means is that his workings are slow, not that his reserve is inaccessible, and the figure says the opposite of the fact. Part 5 also applies: replace the metaphor, do not repair it. Replacement, plain and mechanism-first: "The pool's large. Large isn't quick. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>5. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>6. "I'm not saying it as the file. I'm asking you straight." — Part 1 / VOICE §2 "People say what they mean": "as the file" is a callback word carrying the meaning on its own. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>7. "the hill wants fourteen" and "wants a still day to set it in" — VOICE, dialect ruled off 2026-08-31: "wants a [noun]" for *needs* is specifically retired. Replacements: "the hill needs fourteen"; "and it needs a still day to set it in".</p>
-<p>**Part 2**</p>
-<p>8. "It was the second of Edwin's three reasons for what happened eleven days later, and he did not know it yet, and would not have called it a reason if he had. The first was the count. He would not have said what the third was, then or afterwards, to anybody." — **Ruled: cut.** This is the resolving button VOICE §2 names by name, in its two worst forms at once: a flash-forward the viewpoint cannot have (the narration steps outside Edwin to date an event eleven days off) and a withheld promise ("he would not have said what the third was") whose only content is *something meaningful is here*, which is Part 2's core failure. It also breaks Part 1's inference rule: the sentence does not parse as meaning anything until a later scene supplies it. The scene's business is done at Peri's answer. Proposed ending — end on hers, then one plain forward-pointing beat with no shape on it:</p>
-<p>&gt; "I know. I'll write it again." She started walking. "I've written that you said it twice. The heap, and here."<br>
-&gt;<br>
-&gt; He came after her. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>9. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Part 4 / Part 5**</p>
-<p>10. <span class="redacted">redacted sentence: unpublished prose</span> Ordering her how to write it, and demanding inspection, is exactly the unearned authority over Peri flagged in VOICE §5a. It also blunts her answer, which is better if she is refusing an ask rather than defying an order. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>11. "A man who can read air at a mouth ... A man who can kneel ... <span class="redacted">redacted sentence: unpublished prose</span> Threefold anaphora on "A man who" plus the balanced "it's not modesty, and it's not a cover" is the most-flagged defect in the file, and this is a peak. Recast unbalanced, ending on the fact:</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span> does that with a candle. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Frightened, and slow, with a stick."</p>
-<p>12. "Fourteen. She said the hill wants fourteen, and they've six, and they've written for eight, and the rider's two days off and the answer's a week off, and the hill's got twenty-two days by the guildmaster's reckoning and fewer by hers." — Part 5, and `peri.md` round-1/round-3 finding: this is the pile-strung-on-"and", which is <span class="redacted">redacted: character</span>'s construction and the measured way Peri's voice fails (she out-Hallaed <span class="redacted">redacted: character</span>). Her own shape is the false start and the tally, and shorter turns. Recast as her figures with breaks in them: "Fourteen. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> You wrote for eight. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>13. The shed, and the pool — Part 5, redundancy. Peri has had the shed story on the page (scene 07, "One spell, one shed") and the pool's whole mechanism on the causeway (scene 26). Do not cut them: the account is the scene. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>14. <span class="redacted">redacted sentence: unpublished prose</span> It is, however, the third time the ruled-line-with-nothing-under-it appears (scene 55 <span class="redacted">unpublished</span>; canon has it twice more in her history), and a repeat is Part 5's definition of a device rather than a line. Keep it here — this is the one place it is the point — and do not use it again in the remaining scenes.</p>
-<p>15. "and she had a better way, which was to write him down and wait." — Part 2, the narrator supplying the epigram after the event has already landed ("weird and unnecessary line"). <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>---</p>
-<p>## Scene 63 <span class="redacted">unpublished</span> — "On your face at the chain"</p>
-<p>**Part 1**</p>
-<p>1. <span class="redacted">redacted sentence: unpublished prose</span> The letter goes with <span class="redacted">redacted: place</span>'s rider on the 12th; this is the afternoon of the 13th; the letter cannot yet have been read, so there are no eight on any road, and she cannot know a date of arrival. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>2. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>; "twenty past six in the evening by his status", scene 30). <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>3. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>4. "She had walked five miles from the mouth without stopping" — Part 1, viewpoint: he was at the pump; the not-stopping is not available to him. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>5. "the small ones first because there's most of them and they're at the top" — Part 1 / `<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> She does have the attestation. Replacement: "the small ones first. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>6. "What I can do is refuse it." — Part 1, a word doing a job it cannot do; "refuse" as a term of art for a weather working reads as a coinage and the sentence needs the reader to wait for the next one to parse it. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>7. <span class="redacted">redacted sentence: unpublished prose</span> Also "I'd not promise" is the dialect construction VOICE flags. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>8. "at the whole of Fenholt in the flat afternoon light with nothing happening in it" — Part 1's "Nothing happened" bullet (say what kind of nothing) and Part 2's banned "the whole of it" family. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>9. "He's stood at that gate six hours for you once." — Part 1, justification and knowledge state. Ferrin did stand at the gate from five to eleven (scene 35), so the count is right; but he stood it for Mattie's field, not for Edwin, and <span class="redacted">redacted: character</span> was not in the parish that day. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span> had it off Burl." Keep the line — it is an answer with a warrant, not a button, and it is the right ending for the scene.</p>
-<p>**Part 5 / voice**</p>
-<p>10. "Then that's the roster" and "Then that's yours ... and it's the only thing tonight that is" — `<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Replacements: "Then here's the roster." / "Then that's yours, and I'll roster the rest."</p>
-<p>11. "and whatever comes down that causeway comes to the lamps and not to <span class="redacted">redacted: character</span>'s barn." — same rule: her pile runs out, it does not close on a purposive verdict. The roster before it is otherwise correctly hers (named ground, counts, no rate). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>12. "That's what I know." — `<span class="redacted">redacted: character</span>.md` rule 1 as revised: she does not round off; the reason stays in but the summary goes. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>13. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>14. <span class="redacted">redacted sentence: unpublished prose</span> Keep it in 63, where <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Four hours."</p>
-<p>15. Edwin's mist account is otherwise plain and mechanism-first — the observed sky, then "the ground's warm and the air's cooling, and that's all mist is", then the cost, the failure at the salt marsh, and the hour he will not promise past. Keep all of it, including the lambing that his wrong quarter cost: that is the reason the qualification exists and must not be trimmed with it.</p>
-<p>---</p>
-<p>**62 — the device a second round would be about:** the closing flash-forward paragraph ("the second of Edwin's three reasons ... the third"). It cannot be made to work at scene scale, because its whole content is a withheld promise; remove it and end on Peri's line, as above.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> Replace with the plain rate ("large isn't quick"), not with a better metaphor.</p>
-<p>**63 — the device a second round would be about:** the know/think split in <span class="redacted">redacted: character</span>'s long speech, which is the best thing in the scene and is one sentence away from becoming an explanation of the hole. Keep the split, and hold every clause after "What I think is" to something she walked, paced or counted; the "they're at the top" clause is the one that crosses the line.</p>
-<p>**63 — what it would take:** anchor each inference to the sign she has on the page (twelve days blowing, the fan of flattened sedge pointing south-west, the floor sign on the tenth), and the speech is a warden reasoning from her own record rather than the book explaining its monster.</p>
+<h2>Scene 62 <span class="unpub-tag">unpublished</span> — &quot;What I am in a fight&quot;</h2>
+<p><strong>Part 1</strong></p>
+<ol>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Nothing in scene 27 is about fighting or about what he is; the cellar is about a drain, a price, and a student. The reader cannot reconstruct what he saw there that predicted this question. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;'I've written that you said it twice, and where.'&quot; — Part 1, check every count. He has given her the plain account once in this scene; the only other occasion is the shed story at the ten o'clock class (scene 07), which was the shed and not this account, and the reader has to guess that is the second. Say the two places, in her voice: &quot;I've written that you said it twice. The heap, and here.&quot;</p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;The pool is a cistern, and a cistern is no use to a man who needs a bucket now.&quot; — Part 1, the figure does not survive flat restatement: a cistern is <em>exactly</em> where a man who needs a bucket now gets one. The mechanism he means is that his workings are slow, not that his reserve is inaccessible, and the figure says the opposite of the fact. Part 5 also applies: replace the metaphor, do not repair it. Replacement, plain and mechanism-first: &quot;The pool's large. Large isn't quick. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;I'm not saying it as the file. I'm asking you straight.&quot; — Part 1 / VOICE §2 &quot;People say what they mean&quot;: &quot;as the file&quot; is a callback word carrying the meaning on its own. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;the hill wants fourteen&quot; and &quot;wants a still day to set it in&quot; — VOICE, dialect ruled off 2026-08-31: &quot;wants a [noun]&quot; for <em>needs</em> is specifically retired. Replacements: &quot;the hill needs fourteen&quot;; &quot;and it needs a still day to set it in&quot;.</p>
+</li>
+</ol>
+<p><strong>Part 2</strong></p>
+<ol start="8">
+<li>&quot;It was the second of Edwin's three reasons for what happened eleven days later, and he did not know it yet, and would not have called it a reason if he had. The first was the count. He would not have said what the third was, then or afterwards, to anybody.&quot; — <strong>Ruled: cut.</strong> This is the resolving button VOICE §2 names by name, in its two worst forms at once: a flash-forward the viewpoint cannot have (the narration steps outside Edwin to date an event eleven days off) and a withheld promise (&quot;he would not have said what the third was&quot;) whose only content is <em>something meaningful is here</em>, which is Part 2's core failure. It also breaks Part 1's inference rule: the sentence does not parse as meaning anything until a later scene supplies it. The scene's business is done at Peri's answer. Proposed ending — end on hers, then one plain forward-pointing beat with no shape on it:</li>
+</ol>
+<blockquote>
+<p>&quot;I know. I'll write it again.&quot; She started walking. &quot;I've written that you said it twice. The heap, and here.&quot;</p>
+<p>He came after her. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</blockquote>
+<ol start="9">
+<li><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<p><strong>Part 4 / Part 5</strong></p>
+<ol start="10">
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Ordering her how to write it, and demanding inspection, is exactly the unearned authority over Peri flagged in VOICE §5a. It also blunts her answer, which is better if she is refusing an ask rather than defying an order. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;A man who can read air at a mouth ... A man who can kneel ... <span class="redacted">redacted sentence: unpublished prose</span> Threefold anaphora on &quot;A man who&quot; plus the balanced &quot;it's not modesty, and it's not a cover&quot; is the most-flagged defect in the file, and this is a peak. Recast unbalanced, ending on the fact:</p>
+</li>
+</ol>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> does that with a candle. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Frightened, and slow, with a stick.&quot;</p>
+<ol start="12">
+<li>
+<p>&quot;Fourteen. She said the hill wants fourteen, and they've six, and they've written for eight, and the rider's two days off and the answer's a week off, and the hill's got twenty-two days by the guildmaster's reckoning and fewer by hers.&quot; — Part 5, and <code>peri.md</code> round-1/round-3 finding: this is the pile-strung-on-&quot;and&quot;, which is <span class="redacted">redacted</span>'s construction and the measured way Peri's voice fails (she out-Hallaed <span class="redacted">redacted</span>). Her own shape is the false start and the tally, and shorter turns. Recast as her figures with breaks in them: &quot;Fourteen. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> You wrote for eight. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>The shed, and the pool — Part 5, redundancy. Peri has had the shed story on the page (scene 07, &quot;One spell, one shed&quot;) and the pool's whole mechanism on the causeway (scene 26). Do not cut them: the account is the scene. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> It is, however, the third time the ruled-line-with-nothing-under-it appears (scene 55 <span class="unpub-tag">unpublished</span>; canon has it twice more in her history), and a repeat is Part 5's definition of a device rather than a line. Keep it here — this is the one place it is the point — and do not use it again in the remaining scenes.</p>
+</li>
+<li>
+<p>&quot;and she had a better way, which was to write him down and wait.&quot; — Part 2, the narrator supplying the epigram after the event has already landed (&quot;weird and unnecessary line&quot;). <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+</ol>
+<hr />
+<h2>Scene 63 <span class="unpub-tag">unpublished</span> — &quot;On your face at the chain&quot;</h2>
+<p><strong>Part 1</strong></p>
+<ol>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> The letter goes with <span class="redacted">redacted</span>'s rider on the 12th; this is the afternoon of the 13th; the letter cannot yet have been read, so there are no eight on any road, and she cannot know a date of arrival. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>; &quot;twenty past six in the evening by his status&quot;, scene 30). <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;She had walked five miles from the mouth without stopping&quot; — Part 1, viewpoint: he was at the pump; the not-stopping is not available to him. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;the small ones first because there's most of them and they're at the top&quot; — Part 1 / <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> She does have the attestation. Replacement: &quot;the small ones first. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;What I can do is refuse it.&quot; — Part 1, a word doing a job it cannot do; &quot;refuse&quot; as a term of art for a weather working reads as a coinage and the sentence needs the reader to wait for the next one to parse it. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Also &quot;I'd not promise&quot; is the dialect construction VOICE flags. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;at the whole of Fenholt in the flat afternoon light with nothing happening in it&quot; — Part 1's &quot;Nothing happened&quot; bullet (say what kind of nothing) and Part 2's banned &quot;the whole of it&quot; family. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;He's stood at that gate six hours for you once.&quot; — Part 1, justification and knowledge state. Ferrin did stand at the gate from five to eleven (scene 35), so the count is right; but he stood it for Mattie's field, not for Edwin, and <span class="redacted">redacted</span> was not in the parish that day. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> had it off Burl.&quot; Keep the line — it is an answer with a warrant, not a button, and it is the right ending for the scene.</p>
+</li>
+</ol>
+<p><strong>Part 5 / voice</strong></p>
+<ol start="10">
+<li>
+<p>&quot;Then that's the roster&quot; and &quot;Then that's yours ... and it's the only thing tonight that is&quot; — <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Replacements: &quot;Then here's the roster.&quot; / &quot;Then that's yours, and I'll roster the rest.&quot;</p>
+</li>
+<li>
+<p>&quot;and whatever comes down that causeway comes to the lamps and not to <span class="redacted">redacted</span>'s barn.&quot; — same rule: her pile runs out, it does not close on a purposive verdict. The roster before it is otherwise correctly hers (named ground, counts, no rate). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p>&quot;That's what I know.&quot; — <span class="redacted">redacted</span>.md rule 1 as revised: she does not round off; the reason stays in but the summary goes. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Keep it in 63, where <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Four hours.&quot;</p>
+</li>
+<li>
+<p>Edwin's mist account is otherwise plain and mechanism-first — the observed sky, then &quot;the ground's warm and the air's cooling, and that's all mist is&quot;, then the cost, the failure at the salt marsh, and the hour he will not promise past. Keep all of it, including the lambing that his wrong quarter cost: that is the reason the qualification exists and must not be trimmed with it.</p>
+</li>
+</ol>
+<hr />
+<p><strong>62 — the device a second round would be about:</strong> the closing flash-forward paragraph (&quot;the second of Edwin's three reasons ... the third&quot;). It cannot be made to work at scene scale, because its whole content is a withheld promise; remove it and end on Peri's line, as above.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Replace with the plain rate (&quot;large isn't quick&quot;), not with a better metaphor.</p>
+<p><strong>63 — the device a second round would be about:</strong> the know/think split in <span class="redacted">redacted</span>'s long speech, which is the best thing in the scene and is one sentence away from becoming an explanation of the hole. Keep the split, and hold every clause after &quot;What I think is&quot; to something she walked, paced or counted; the &quot;they're at the top&quot; clause is the one that crosses the line.</p>
+<p><strong>63 — what it would take:</strong> anchor each inference to the sign she has on the page (twelve days blowing, the fan of flattened sedge pointing south-west, the floor sign on the tenth), and the speech is a warden reasoning from her own record rather than the book explaining its monster.</p>
 </div>
 </body></html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Working dir &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read ALL 24 scene files in draft/boo…</title><style>
+<html><head><meta charset="utf-8"><title>Working dir [redacted]. Read ALL 24 scene files in draft/book-01/scen…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Working dir &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read ALL 24 scene files in draft/boo…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a025182be57e33bd3">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Working dir <span class="redacted">redacted: private</span>. Read ALL 24 scene files in draft/book-01/scenes/ (they are short, ~19k words total) and read <span class="redacted">redacted: private</span>/notes/canon/world/magic-theory.md.<br>
-<br>
-Your job: adversarially find every place where magic-theory.md contradicts what is actually on the page in the scenes. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Report back a numbered list. For each: severity (BREAKS/STRAINS/NIT), exact quote from magic-theory.md, exact quote from the scene file (with path), one sentence why, and a minimal proposed fix. Also list explicitly which of magic-theory.md's on-page quotations you verified as accurate and which you could NOT find in the scenes. Do not invent conflicts. Do not write any files.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Working dir [redacted]. Read ALL 24 scene files in draft/book-01/scen…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a025182be57e33bd3">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-30</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Working dir <span class="redacted">redacted</span>. Read ALL 24 scene files in draft/book-01/scenes/ (they are short, ~19k words total) and read <span class="redacted">redacted</span>/notes/canon/world/magic-theory.md.</p>
+<p>Your job: adversarially find every place where magic-theory.md contradicts what is actually on the page in the scenes. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Report back a numbered list. For each: severity (BREAKS/STRAINS/NIT), exact quote from magic-theory.md, exact quote from the scene file (with path), one sentence why, and a minimal proposed fix. Also list explicitly which of magic-theory.md's on-page quotations you verified as accurate and which you could NOT find in the scenes. Do not invent conflicts. Do not write any files.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -26,15 +37,15 @@ Report back a numbered list. For each: severity (BREAKS/STRAINS/NIT), exact quot
 </div>
 
 <details><summary>14 tool calls</summary>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/; wc -w <span class="redacted">redacted: private</span>/draft/book-01/sce…</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/draft/book-01/scenes/; wc -w <span class="redacted">redacted</span>/draft/book-01/scenes/* <span class="redacted">redacted</span>/n…</p>
 <p>✅ 50 lines, 2872 chars — 01-pellings-half-past-twelve-soft.md / 02-a-war-horse-on-a-milk-cart.md / 03-until-fulfilled.md</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/canon/world/magic-theory.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/canon/world/magic-theory.md</p>
 <p>✅ 43 lines, 2234 chars</p>
 <p>🔧 Bash: cat -n <span class="redacted">redacted: private</span></p>
 <p>✅ 39 lines, 2181 chars</p>
 <p>🔧 Read notes/canon/world/magic-theory.md</p>
 <p>✅ 550 lines, 34048 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in *.md; do echo "===== $f ====="; c…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; for f in *.md; do echo "===== $f ====="; cat "$f";…</p>
 <p>✅ 1 lines, 122 chars</p>
 <p>🔧 Read <span class="redacted">redacted: private</span></p>
 <p>✅ 651 lines, 62115 chars</p>
@@ -43,111 +54,141 @@ Report back a numbered list. For each: severity (BREAKS/STRAINS/NIT), exact quot
 </details>
 
 <div class="assistant-prose">
-<p>## Report: magic-theory.md vs. the 24 scenes</p>
-<p>I read all 24 scene files and `notes/canon/world/magic-theory.md` in full. Findings below, ordered by severity.</p>
-<p>---</p>
-<p>### BREAKS</p>
-<p>**1. The parish five are listed wrong.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Page (`scenes/07-can-you-actually-fight.md`): *"There are four, and they come in an order, and compost comes first, once you've built a heap without it." He did not look up from Widow Sepp's wrist. "A charm for what's in store. A blessing for a sick beast. Frost-sense. Water-finding."*<br>
-- Why: the page's five are compost / keeping charm / <span class="redacted">redacted: mechanic</span> / frost-sense / water-finding. The table invents "walk", splits "night" and "beast" out of the single <span class="redacted">redacted: mechanic</span>, and drops frost-sense and water-finding entirely — the two the rest of the file elsewhere (§2) correctly names.<br>
-- Fix: change the Addressed cell to `heap, store, beast, frost, water`.</p>
-<p>**2. "Blessing" means two incompatible things, and the page's meaning is the farmer's.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Page (07): *"And the blessing makes the beast well?" / "It buys you the night," said Mrs Tansy... <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Why: on the page a blessing is one of the five, cast by farmwives, taught by Edwin's teachers, costs mana like anything else, and demonstrably does something. §9's "a blessing does nothing" is stated unrestrictedly and collides head-on.<br>
-- Fix: in §9, open with the disambiguation — *"A priest's blessing (not the parish's <span class="redacted">redacted: mechanic</span>, which is a hold and is one of the five) is an asking-after..."* — and repeat the carve-out in the §5 table row.</p>
-<p>**3. §6 says the class does Peri's wording; the page makes wording the whole of her craft (and §7 agrees with the page).**<br>
-- magic-theory §6: *"[Seal of the Loom] and [<span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Page (`02-a-war-horse-on-a-milk-cart.md`): *"Two things. I spent a long time on the wording." She was proud of the wording and did not hide it.* And (`13-when-did-you-last-leave.md`): *"I'm getting better at the wording. That's the hard part."*<br>
-- Why: wording is Peri's single most repeated characteristic and the axis of her arc; §6 removes it from her. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<h2>Report: magic-theory.md vs. the 24 scenes</h2>
+<p>I read all 24 scene files and <code>notes/canon/world/magic-theory.md</code> in full. Findings below, ordered by severity.</p>
+<hr />
+<h3>BREAKS</h3>
+<p><strong>1. The parish five are listed wrong.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**4. Ground that has stopped doing business does answer the instruments — five of six of them.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> ground that has stopped doing business"*).<br>
-- Page (`18-nought-in-every-kind.md`): *"the block is healthy by every measure that does not require it to be alive"* — the salts assay *"came back sweet"*, water-and-air *"came back open-textured and easy"*, blight *"found none of them"*, taint *"Clean."*, exhaustion *"The block was rich."* Only the quickening assay returns *"nought, across every kind at once"*.<br>
-- Why: the whole horror of scene 18 is that the instruments work perfectly and report health; the theory says they cannot be used at all, which would defuse the scene.<br>
+<ul>
+<li>Page (<code>scenes/07-can-you-actually-fight.md</code>): <em>&quot;There are four, and they come in an order, and compost comes first, once you've built a heap without it.&quot; He did not look up from Widow Sepp's wrist. &quot;A charm for what's in store. A blessing for a sick beast. Frost-sense. Water-finding.&quot;</em></li>
+<li>Why: the page's five are compost / keeping charm / <span class="redacted">redacted</span> / frost-sense / water-finding. The table invents &quot;walk&quot;, splits &quot;night&quot; and &quot;beast&quot; out of the single <span class="redacted">redacted</span>, and drops frost-sense and water-finding entirely — the two the rest of the file elsewhere (§2) correctly names.</li>
+<li>Fix: change the Addressed cell to <code>heap, store, beast, frost, water</code>.</li>
+</ul>
+<p><strong>2. &quot;Blessing&quot; means two incompatible things, and the page's meaning is the farmer's.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Page (07): *&quot;And the blessing makes the beast well?&quot; / &quot;It buys you the night,&quot; said Mrs Tansy... <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Why: on the page a blessing is one of the five, cast by farmwives, taught by Edwin's teachers, costs mana like anything else, and demonstrably does something. §9's &quot;a blessing does nothing&quot; is stated unrestrictedly and collides head-on.</li>
+<li>Fix: in §9, open with the disambiguation — <em>&quot;A priest's blessing (not the parish's <span class="redacted">redacted</span>, which is a hold and is one of the five) is an asking-after...&quot;</em> — and repeat the carve-out in the §5 table row.</li>
+</ul>
+<p><strong>3. §6 says the class does Peri's wording; the page makes wording the whole of her craft (and §7 agrees with the page).</strong></p>
+<ul>
+<li>magic-theory §6: *&quot;[Seal of the Loom] and [<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Page (<code>02-a-war-horse-on-a-milk-cart.md</code>): <em>&quot;Two things. I spent a long time on the wording.&quot; She was proud of the wording and did not hide it.</em> And (<code>13-when-did-you-last-leave.md</code>): <em>&quot;I'm getting better at the wording. That's the hard part.&quot;</em></li>
+<li>Why: wording is Peri's single most repeated characteristic and the axis of her arc; §6 removes it from her. <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>4. Ground that has stopped doing business does answer the instruments — five of six of them.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> ground that has stopped doing business&quot;*).</p>
+<ul>
+<li>Page (<code>18-nought-in-every-kind.md</code>): <em>&quot;the block is healthy by every measure that does not require it to be alive&quot;</em> — the salts assay <em>&quot;came back sweet&quot;</em>, water-and-air <em>&quot;came back open-textured and easy&quot;</em>, blight <em>&quot;found none of them&quot;</em>, taint <em>&quot;Clean.&quot;</em>, exhaustion <em>&quot;The block was rich.&quot;</em> Only the quickening assay returns <em>&quot;nought, across every kind at once&quot;</em>.</li>
+<li>Why: the whole horror of scene 18 is that the instruments work perfectly and report health; the theory says they cannot be used at all, which would defuse the scene.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>5. The compost cantrip is a telling in theory and an asking on the page, and the page's failure mode is anger, not hand shape.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> a stiff wrist makes a heap go hot and sour in a night.&quot;* §12: <em>&quot;you 'tell' a heap.&quot;</em></p>
+<ul>
+<li>Page (<code>04-four-minutes.md</code>): <em>&quot;A heap is alive, and the cantrip asks it to hurry, and if you ask angrily it hears the anger and not the asking, and you get a heap that has gone hot and sour in one night and has to be pulled apart. I have seen it done by a good caster who had had a letter that morning. Calm hands.&quot;</em></li>
+<li>Why: two problems. (a) Nobody on the page ever &quot;tells&quot; a heap; Edwin explicitly calls the paradigm tell-working an <em>asking</em>. (b) The theory attributes the hot-and-sour failure to a stiff wrist; the page attributes it to the caster's state of mind, and a stiff wrist on the page is Widow Sepp's arthritis, not a miscasting. The theory has no channel at all for the caster's mood, though the page makes it load-bearing.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>6. &quot;Everything held goes back to what it was doing when you let go&quot; — the front does not.</strong></p>
+<ul>
+<li>magic-theory §2: <em>&quot;<strong>Everything held goes back to what it was doing when you let go</strong>; nothing is made permanent by holding.&quot;</em><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Why: he lets go and the front stays put overnight, ~18 hours, and delivers on schedule — the opposite of reverting.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> You do not get permanence, you get a new starting place.&quot;*</li>
+</ul>
+<hr />
+<h3>STRAINS</h3>
+<p><strong>7. Weather is hold-only in theory; the page also tells it.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**5. The compost cantrip is a telling in theory and an asking on the page, and the page's failure mode is anger, not hand shape.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> a stiff wrist makes a heap go hot and sour in a night."* §12: *"you 'tell' a heap."*<br>
-- Page (`04-four-minutes.md`): *"A heap is alive, and the cantrip asks it to hurry, and if you ask angrily it hears the anger and not the asking, and you get a heap that has gone hot and sour in one night and has to be pulled apart. I have seen it done by a good caster who had had a letter that morning. Calm hands."*<br>
-- Why: two problems. (a) Nobody on the page ever "tells" a heap; Edwin explicitly calls the paradigm tell-working an *asking*. (b) The theory attributes the hot-and-sour failure to a stiff wrist; the page attributes it to the caster's state of mind, and a stiff wrist on the page is Widow Sepp's arthritis, not a miscasting. The theory has no channel at all for the caster's mood, though the page makes it load-bearing.<br>
+<ul>
+<li>Page (<code>09</code>): <em>&quot;watched his rain do what it had been told&quot;</em>; (<code>01-pellings-half-past-twelve-soft.md</code>): <em>&quot;bring what was left over the Pellings at half past twelve as a warm rain with small drops in it.&quot;</em></li>
+<li>Why: choosing drop size and warmth is shaping, not merely walking a thing where it stood.</li>
+<li>Fix: §5 weather verb → <code>hold; small tells inside the hold</code>, with one line in §2 noting a held thing can be told small things about how it does what it is already doing.</li>
+</ul>
+<p><strong>8. Fate magic is not read as weather on the page.</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Page (<code>02</code>): <em>&quot;something worn close over the whole person, moving slowly, the way light moves on still water... On this girl it hung in loops. Great slack cabled loops of it... the way a ship's hawser might be draped on a child.&quot;</em> (<code>03</code>): <em>&quot;All that slack silver cabling.&quot;</em></li>
+<li>Why: the quoted phrase does not occur anywhere in the scenes; the page's image is rope and hawser, not weather. Only &quot;silver&quot; and &quot;slow&quot; survive.</li>
+<li>Fix: replace the quotation with the page's actual image, or mark it as a <code>magic.md</code>/plans citation rather than a page citation. If the weather reading is wanted, it must be written into a scene first.</li>
+</ul>
+<p><strong>9. Constant unconscious soil-listening is free on the page; theory says everything costs mana.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**6. "Everything held goes back to what it was doing when you let go" — the front does not.**<br>
-- magic-theory §2: *"**Everything held goes back to what it was doing when you let go**; nothing is made permanent by holding."*<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Why: he lets go and the front stays put overnight, ~18 hours, and delivers on schedule — the opposite of reverting.<br>
-<span class="redacted">redacted sentence: unpublished prose</span> You do not get permanence, you get a new starting place."*</p>
-<p>---</p>
-<p>### STRAINS</p>
-<p>**7. Weather is hold-only in theory; the page also tells it.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Page (`09`): *"watched his rain do what it had been told"*; (`01-pellings-half-past-twelve-soft.md`): *"bring what was left over the Pellings at half past twelve as a warm rain with small drops in it."*<br>
-- Why: choosing drop size and warmth is shaping, not merely walking a thing where it stood.<br>
-- Fix: §5 weather verb → `hold; small tells inside the hold`, with one line in §2 noting a held thing can be told small things about how it does what it is already doing.</p>
-<p>**8. Fate magic is not read as weather on the page.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Page (`02`): *"something worn close over the whole person, moving slowly, the way light moves on still water... On this girl it hung in loops. Great slack cabled loops of it... the way a ship's hawser might be draped on a child."* (`03`): *"All that slack silver cabling."*<br>
-- Why: the quoted phrase does not occur anywhere in the scenes; the page's image is rope and hawser, not weather. Only "silver" and "slow" survive.<br>
-- Fix: replace the quotation with the page's actual image, or mark it as a `magic.md`/plans citation rather than a page citation. If the weather reading is wanted, it must be written into a scene first.</p>
-<p>**9. Constant unconscious soil-listening is free on the page; theory says everything costs mana.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Page (`17-lid-up-the-whole-way.md`): *"the one he used on skies and on the vale's fields daily, so habitual by now that he did it walking past a garden without deciding to"* — versus, in the same sequence, *"eight castings in an hour, which would have emptied a second-year to the floor, and he felt it as a dent."*<br>
-- Why: a working billed at every use cannot also be done involuntarily all day at no noticed cost.<br>
-- Fix: add to §2 Asking — *listening is the cheapest asking there is, below the threshold a body notices; a lifetime's practitioner does it as a sense and pays for it the way you pay for looking.*</p>
-<p>**10. The "thirty days" of the Seal has no counterpart on the page and reads against the terms.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Page (`03-until-fulfilled.md`): *"&gt; [Terms: until fulfilled.]"*; (`13`): *"You have a claim on my future and we'll all learn its terms together."*<br>
-- Why: as written the sentence reads as a thirty-day duration sitting next to "until fulfilled"; both characters treat the binding as open-ended. If it is the cooldown, the sentence does not say so.<br>
+<ul>
+<li>Page (<code>17-lid-up-the-whole-way.md</code>): <em>&quot;the one he used on skies and on the vale's fields daily, so habitual by now that he did it walking past a garden without deciding to&quot;</em> — versus, in the same sequence, <em>&quot;eight castings in an hour, which would have emptied a second-year to the floor, and he felt it as a dent.&quot;</em></li>
+<li>Why: a working billed at every use cannot also be done involuntarily all day at no noticed cost.</li>
+<li>Fix: add to §2 Asking — <em>listening is the cheapest asking there is, below the threshold a body notices; a lifetime's practitioner does it as a sense and pays for it the way you pay for looking.</em></li>
+</ul>
+<p><strong>10. The &quot;thirty days&quot; of the Seal has no counterpart on the page and reads against the terms.</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**11. [<span class="redacted">redacted: mechanic</span>] returning nothing is not accounted for.**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> It never deflects and never explains."*<br>
-- Page (`02`): *"Then *who am I to fight*. Nothing at all."* (`05`): *"It showed her nothing."*<br>
-- Why: this null is the most load-bearing Weave result in the book, and the theory's account of answering has no slot for a blank.<br>
-- Fix: add — *a question with no answer in the world gets no image; a blank is a true answer and the commonest one people misread as a failed wording.*</p>
-<p>---</p>
-<p>### NIT</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> By the time I met them I'd muddled which answer went with what."* Fix: swap in the page's reason, or keep both and mark the contamination clause as unestablished.</p>
-<p>**13.** §1 *"emptying costs a day"* vs page (`06`) *"a working that size takes what you have and gives it back over days."* Fix: "costs days, not a day."</p>
-<p>**14.** §2's *"the sixth revealing's 'roll-call' word"* — the sixth is on the page (`18`) as *"the quickening assay... it counted the living"* and *"the census of a handful of ground"*; "roll-call" appears nowhere. Fix: use "census".</p>
-<p>**15.** §2/§5 give the keeping charm a *"push"* half (*"a hold on a store"*). The page (`07`) gives only a reading: *"It reads a thing's year off it... and gives it back a week or a season, depending on how it was picked and packed, and tells you the new date."* Not contradicted, but the push half is unestablished; flag it as Working rather than implied-on-page.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> Two senses of "cost" in one section. Fix: *"the destiny's weight falls on the bound person and nobody else (the casting's mana is Peri's, and is a separate matter)."*</p>
-<p>**17.** Page (`17`) establishes soil-listening as *"the sense that sits behind the mage-sight"* — one faculty stack. §2 lists soil-listening and mage-sight as unrelated askings. Fix: one clause in §2 noting they are the same sense at different ranges.</p>
-<p>---</p>
-<p>## Quotation audit</p>
-<p>**Verified present in the scenes, in the sense claimed:**<br>
-- *"the front did not move because he pushed it; it moved because he had it"* — `06` ✓ (exact)<br>
-- *"There is no better way to say it, and he had stopped looking for one in his first century."* — `06` ✓ (exact)<br>
-- *"the working was not aimed at him until it had already happened"* — `03` ✓ (exact)<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- *"a poor thin nothing"* (salt pan, burnt ground) — `17` ✓ (exact, and the salt-pan/burnt-ground context is right)<br>
-- *"needed isn't the same as important"* — `13` ✓ ("Needed isn't the same as important.")<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- *"two-mage days and black winters"* (staff) — `23` ✓ (exact)<br>
-- capacity *"grows only by being emptied"* / thirty-year-old capacity — `02` ✓ ("A pool grows by being emptied... most mages' capacity sits where it was at thirty")<br>
-- *"white, sweating, staggering"* as the ability's mana cost — `03` ✓ (in substance)<br>
-- Sorrel breaking a hail front — `10` ✓ ("the hail Sorrel had broken herself")<br>
-- [<span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- mage-sight reads what is *worn* — `02` ✓ ("She was wearing fate magic")<br>
-- `[Destiny: PENDING]` / `[Terms: until fulfilled.]` — `03`, `05` ✓ (exact)</p>
-<p>**Could NOT find anywhere in the 24 scenes:**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- *"a murmur of commerce"* (§3) — nearest is `17`: *"a murmur you learned in your first year at Wystow"* and *"keeping books with each other in the dark"*. The phrase itself is not on the page.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- *"a second set of weather ... like slow silver"* (§7) — see finding 8<br>
-- *"nothing in it to ask"* (blessing-sense, §9) — Ferrin does not appear in any of the 24 scenes; the only priest is offstage in the Fenholt letter (`14`): *"The priest came and looked and now he will not walk that field and will not say why not."*<br>
-- *"ninety and sixty years a priest"* (§7)<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- *"a soft wrist"* as a quoted phrase (§10) — the page has *"the wrists all soft"* (`10`) and *"every wrist soft"* (`17`), which support the point; the *stiff*-wrist failure claim does not (finding 5).<br>
-- *"in longer words"* (§10)<br>
+<ul>
+<li>Page (<code>03-until-fulfilled.md</code>): <em>&quot;&gt; [Terms: until fulfilled.]&quot;</em>; (<code>13</code>): <em>&quot;You have a claim on my future and we'll all learn its terms together.&quot;</em></li>
+<li>Why: as written the sentence reads as a thirty-day duration sitting next to &quot;until fulfilled&quot;; both characters treat the binding as open-ended. If it is the cooldown, the sentence does not say so.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<ol start="11">
+<li>[<span class="redacted">redacted</span>] returning nothing is not accounted for.<br />
+<span class="redacted">redacted sentence: unpublished prose</span> It never deflects and never explains.&quot;*</li>
+</ol>
+<ul>
+<li>Page (<code>02</code>): <em>&quot;Then <em>who am I to fight</em>. Nothing at all.&quot;</em> (<code>05</code>): <em>&quot;It showed her nothing.&quot;</em></li>
+<li>Why: this null is the most load-bearing Weave result in the book, and the theory's account of answering has no slot for a blank.</li>
+<li>Fix: add — <em>a question with no answer in the world gets no image; a blank is a true answer and the commonest one people misread as a failed wording.</em></li>
+</ul>
+<hr />
+<h3>NIT</h3>
+<p><span class="redacted">redacted sentence: unpublished prose</span> By the time I met them I'd muddled which answer went with what.&quot;* Fix: swap in the page's reason, or keep both and mark the contamination clause as unestablished.</p>
+<p><strong>13.</strong> §1 <em>&quot;emptying costs a day&quot;</em> vs page (<code>06</code>) <em>&quot;a working that size takes what you have and gives it back over days.&quot;</em> Fix: &quot;costs days, not a day.&quot;</p>
+<p><strong>14.</strong> §2's <em>&quot;the sixth revealing's 'roll-call' word&quot;</em> — the sixth is on the page (<code>18</code>) as <em>&quot;the quickening assay... it counted the living&quot;</em> and <em>&quot;the census of a handful of ground&quot;</em>; &quot;roll-call&quot; appears nowhere. Fix: use &quot;census&quot;.</p>
+<p><strong>15.</strong> §2/§5 give the keeping charm a <em>&quot;push&quot;</em> half (<em>&quot;a hold on a store&quot;</em>). The page (<code>07</code>) gives only a reading: <em>&quot;It reads a thing's year off it... and gives it back a week or a season, depending on how it was picked and packed, and tells you the new date.&quot;</em> Not contradicted, but the push half is unestablished; flag it as Working rather than implied-on-page.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Two senses of &quot;cost&quot; in one section. Fix: <em>&quot;the destiny's weight falls on the bound person and nobody else (the casting's mana is Peri's, and is a separate matter).&quot;</em></p>
+<p><strong>17.</strong> Page (<code>17</code>) establishes soil-listening as <em>&quot;the sense that sits behind the mage-sight&quot;</em> — one faculty stack. §2 lists soil-listening and mage-sight as unrelated askings. Fix: one clause in §2 noting they are the same sense at different ranges.</p>
+<hr />
+<h2>Quotation audit</h2>
+<p><strong>Verified present in the scenes, in the sense claimed:</strong></p>
+<ul>
+<li><em>&quot;the front did not move because he pushed it; it moved because he had it&quot;</em> — <code>06</code> ✓ (exact)</li>
+<li><em>&quot;There is no better way to say it, and he had stopped looking for one in his first century.&quot;</em> — <code>06</code> ✓ (exact)</li>
+<li><em>&quot;the working was not aimed at him until it had already happened&quot;</em> — <code>03</code> ✓ (exact)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><em>&quot;a poor thin nothing&quot;</em> (salt pan, burnt ground) — <code>17</code> ✓ (exact, and the salt-pan/burnt-ground context is right)</li>
+<li><em>&quot;needed isn't the same as important&quot;</em> — <code>13</code> ✓ (&quot;Needed isn't the same as important.&quot;)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><em>&quot;two-mage days and black winters&quot;</em> (staff) — <code>23</code> ✓ (exact)</li>
+<li>capacity <em>&quot;grows only by being emptied&quot;</em> / thirty-year-old capacity — <code>02</code> ✓ (&quot;A pool grows by being emptied... most mages' capacity sits where it was at thirty&quot;)</li>
+<li><em>&quot;white, sweating, staggering&quot;</em> as the ability's mana cost — <code>03</code> ✓ (in substance)</li>
+<li>Sorrel breaking a hail front — <code>10</code> ✓ (&quot;the hail Sorrel had broken herself&quot;)</li>
+<li>[<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>mage-sight reads what is <em>worn</em> — <code>02</code> ✓ (&quot;She was wearing fate magic&quot;)</li>
+<li><code>[Destiny: PENDING]</code> / <code>[Terms: until fulfilled.]</code> — <code>03</code>, <code>05</code> ✓ (exact)</li>
+</ul>
+<p><strong>Could NOT find anywhere in the 24 scenes:</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Checked and found clean (no conflict):**<br>
-- **Empty vs grey**: no scene uses "grey" as a mana state (only grey book / grey head / grey slant / grey-gold). `06` has *"He was emptied."* The distinction is unestablished on the page but nothing contradicts it.<br>
-- **The compost cantrip as unit**: no scene prices anything in cantrips. `18` gives *"eight castings in an hour, which would have emptied a second-year to the floor, and he felt it as a dent"* — compatible, not confirming.<br>
-- **Feeding mana / healing at the parish**: no healing occurs in any scene; no healer appears; Mrs Hobbet's shoulder and Widow Sepp's wrist go untreated. §8 and §14.6 are consistent with the page by absence.<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- **Stone and the dead**: never tested on the page; no conflict.</p>
+<ul>
+<li><em>&quot;a murmur of commerce&quot;</em> (§3) — nearest is <code>17</code>: <em>&quot;a murmur you learned in your first year at Wystow&quot;</em> and <em>&quot;keeping books with each other in the dark&quot;</em>. The phrase itself is not on the page.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><em>&quot;a second set of weather ... like slow silver&quot;</em> (§7) — see finding 8</li>
+<li><em>&quot;nothing in it to ask&quot;</em> (blessing-sense, §9) — Ferrin does not appear in any of the 24 scenes; the only priest is offstage in the Fenholt letter (<code>14</code>): <em>&quot;The priest came and looked and now he will not walk that field and will not say why not.&quot;</em></li>
+<li><em>&quot;ninety and sixty years a priest&quot;</em> (§7)<br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><em>&quot;a soft wrist&quot;</em> as a quoted phrase (§10) — the page has <em>&quot;the wrists all soft&quot;</em> (<code>10</code>) and <em>&quot;every wrist soft&quot;</em> (<code>17</code>), which support the point; the <em>stiff</em>-wrist failure claim does not (finding 5).</li>
+<li><em>&quot;in longer words&quot;</em> (§10)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Checked and found clean (no conflict):</strong></p>
+<ul>
+<li><strong>Empty vs grey</strong>: no scene uses &quot;grey&quot; as a mana state (only grey book / grey head / grey slant / grey-gold). <code>06</code> has <em>&quot;He was emptied.&quot;</em> The distinction is unestablished on the page but nothing contradicts it.</li>
+<li><strong>The compost cantrip as unit</strong>: no scene prices anything in cantrips. <code>18</code> gives <em>&quot;eight castings in an hour, which would have emptied a second-year to the floor, and he felt it as a dent&quot;</em> — compatible, not confirming.</li>
+<li><strong>Feeding mana / healing at the parish</strong>: no healing occurs in any scene; no healer appears; Mrs Hobbet's shoulder and Widow Sepp's wrist go untreated. §8 and §14.6 are consistent with the page by absence.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>Stone and the dead</strong>: never tested on the page; no conflict.</li>
+</ul>
 </div>
 </body></html>

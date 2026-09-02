@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are running the project&#x27;s editing pass on newly drafted prose at…</title><style>
+<html><head><meta charset="utf-8"><title>You are running the project's editing pass on newly drafted prose at…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,28 +7,38 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are running the project&#x27;s editing pass on newly drafted prose at…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a397a4f9c41120d88">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are running the project's editing pass on newly drafted prose at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first, then `.claude/skills/editing-pass/SKILL.md` and follow it.<br>
-<br>
-Your range: **scenes 29–42** in `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes/`. Read the whole arc first for context, then edit only your range.<br>
-<br>
-This is the pilot for scene-first drafting in Voice E, so the editing pass matters more than usual. Apply the skill in full, and pay particular attention to:<br>
-- **The construction-ownership check** (added 2026-08-28) — one character's declared prop-free marker in another's mouth. Known collisions: **<span class="redacted">redacted: character</span> against Edwin**, **<span class="redacted">redacted: character</span> against <span class="redacted">redacted: character</span>**, **Mattie against Ferrin**. Report per line.<br>
-- **Per-1,000-word span budgets**, not per-chapter rates. A device whose total is fine but whose distribution leaves a span empty has failed; **move one, never add one**. <span class="redacted">redacted sentence: unpublished prose</span><br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- **Dialogue rules** — every line has a want; answer the question asked; obliqueness paid for on the page.<br>
-<br>
-**Fix what is clearly wrong; flag what is a judgement call.** Do not revoice — this is a line pass, not a rewrite, and homogenising the prose is the failure mode the whole scene-first structure exists to avoid.<br>
-<br>
-Write `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/edit-C.md` with findings and what you changed.<br>
-<br>
-Your final message: counts by category, and the worst thing you found.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are running the project's editing pass on newly drafted prose at…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a397a4f9c41120d88">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are running the project's editing pass on newly drafted prose at <span class="redacted">redacted</span>. Read <code>CLAUDE.md</code> first, then <code>.claude/skills/editing-pass/SKILL.md</code> and follow it.</p>
+<p>Your range: <strong>scenes 29–42</strong> in <span class="redacted">redacted</span>/rewrite/book-01/arc-01/scenes/. Read the whole arc first for context, then edit only your range.</p>
+<p>This is the pilot for scene-first drafting in Voice E, so the editing pass matters more than usual. Apply the skill in full, and pay particular attention to:</p>
+<ul>
+<li><strong>The construction-ownership check</strong> (added 2026-08-28) — one character's declared prop-free marker in another's mouth. Known collisions: <span class="redacted">redacted</span> against Edwin**, <strong><span class="redacted">redacted</span> against <span class="redacted">redacted</span></strong>, <strong>Mattie against Ferrin</strong>. Report per line.</li>
+<li><strong>Per-1,000-word span budgets</strong>, not per-chapter rates. A device whose total is fine but whose distribution leaves a span empty has failed; **move one, never add one. <span class="redacted">redacted sentence: unpublished prose</span><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><strong>Dialogue rules</strong> — every line has a want; answer the question asked; obliqueness paid for on the page.</li>
+</ul>
+<p><strong>Fix what is clearly wrong; flag what is a judgement call.</strong> Do not revoice — this is a line pass, not a rewrite, and homogenising the prose is the failure mode the whole scene-first structure exists to avoid.</p>
+<p>Write <span class="redacted">redacted</span>/rewrite/book-01/arc-01/edit-C.md with findings and what you changed.</p>
+<p>Your final message: counts by category, and the worst thing you found.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -90,15 +100,15 @@ Your final message: counts by category, and the worst thing you found.</p></bloc
 <p>✅ 42 lines, 2363 chars</p>
 <p>🔧 Bash: cd rewrite/book-01/arc-01/scenes &amp;&amp; echo "--- man-who:"; grep -nE "a (man|woman|person|bo…</p>
 <p>✅ 15 lines, 331 chars</p>
-<p>🔧 Bash: cd rewrite/book-01/arc-01/scenes &amp;&amp; grep -n "roots went hairy" 42-nothing-to-write.md ⟦un…</p>
+<p>🔧 Bash: cd rewrite/book-01/arc-01/scenes &amp;&amp; grep -n "roots went hairy" 42-nothing-to-write.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 17 lines, 928 chars</p>
 <p>🔧 Bash: cd rewrite/book-01/arc-01/scenes &amp;&amp; for f in 29*.md 3*.md 4[0-2]*.md; do echo "== $f"; aw…</p>
 <p>✅ 54 lines, 1218 chars</p>
 <p>🔧 Bash: cd rewrite/book-01/arc-01/scenes &amp;&amp; python3 - &lt;&lt;'EOF' import io,re def ed(f,a,b,n=1):…</p>
 <p>✅ 5 lines, 226 chars — Exit code 1 / Traceback (most recent call last): /   File "&lt;stdin&gt;", line 27, in &lt;module&gt;</p>
-<p>🔧 Bash: cd rewrite/book-01/arc-01/scenes &amp;&amp; grep -n "Burl" 42-nothing-to-write.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd rewrite/book-01/arc-01/scenes &amp;&amp; grep -n "Burl" 42-nothing-to-write.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 3 lines, 230 chars</p>
-<p>🔧 Bash: cd rewrite/book-01/arc-01/scenes &amp;&amp; sed -n '94,97p' 42-nothing-to-write.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd rewrite/book-01/arc-01/scenes &amp;&amp; sed -n '94,97p' 42-nothing-to-write.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 2 lines, 105 chars</p>
 <p>🔧 Bash: cd rewrite/book-01/arc-01/scenes &amp;&amp; python3 - &lt;&lt;'EOF' def ed(f,a,b):     s=open(f).read()…</p>
 <p>✅ 9 lines, 477 chars</p>
@@ -110,24 +120,26 @@ Your final message: counts by category, and the worst thing you found.</p></bloc
 <p>Now the report.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01 &amp;&amp; cat &gt; edit-C.md &lt;&lt;'EOF' ⟦redacted senten…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/rewrite/book-01/arc-01 &amp;&amp; cat &gt; edit-C.md &lt;&lt;'EOF' <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 18 chars</p>
 <p>🔧 Bash: git add -A rewrite/book-01/arc-01 &amp;&amp; git commit -q -m "Editing pass C: scenes 29-42 line…</p>
 <p>✅ 1 lines, 59 chars — bf15fab Editing pass C: scenes 29-42 line pass and findings</p>
 
 <div class="assistant-prose">
-<p>Report written to `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/edit-C.md`; fixes committed.</p>
-<p>**Counts (scenes 29–42, 11,346 words)**</p>
-<p>- Pass 1 sense — **7 fixed**, **3 flagged**<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- Voice, endings — **4**<br>
-- Voice, other constructions — **5** (doubled-word, near-idiom, prose-at-rest, rule A1, motif rate)<br>
-- Construction ownership — **2 findings, 4 notes**<br>
-- Dialogue rules — **1**<br>
-- Entrances — **0**. All fourteen scenes open on a hand, a noise, a request or the first thing said. No date, clock, duration or verdict anywhere.<br>
-- Em dashes 1.76/1,000 (band 0.8–2.0), semicolons 0.6/1,000, zero banned lexicon, zero negative parallelism, zero hedged gesture tags, zero false precision, zero windup tags.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Cutting the second sentence costs nothing.</p>
-<p>**Runner-up (ownership):** Peri opens scene 35 with "**Forty-one**," … "I got to forty-one gates. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> "Not fifty."`</p>
+<p>Report written to <span class="redacted">redacted</span>/rewrite/book-01/arc-01/edit-C.md; fixes committed.</p>
+<p><strong>Counts (scenes 29–42, 11,346 words)</strong></p>
+<ul>
+<li>Pass 1 sense — <strong>7 fixed</strong>, <strong>3 flagged</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Voice, endings — <strong>4</strong></li>
+<li>Voice, other constructions — <strong>5</strong> (doubled-word, near-idiom, prose-at-rest, rule A1, motif rate)</li>
+<li>Construction ownership — <strong>2 findings, 4 notes</strong></li>
+<li>Dialogue rules — <strong>1</strong></li>
+<li>Entrances — <strong>0</strong>. All fourteen scenes open on a hand, a noise, a request or the first thing said. No date, clock, duration or verdict anywhere.</li>
+<li>Em dashes 1.76/1,000 (band 0.8–2.0), semicolons 0.6/1,000, zero banned lexicon, zero negative parallelism, zero hedged gesture tags, zero false precision, zero windup tags.</li>
+</ul>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Cutting the second sentence costs nothing.</p>
+<p><strong>Runner-up (ownership):</strong> Peri opens scene 35 with &quot;<strong>Forty-one</strong>,&quot; … &quot;I got to forty-one gates. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> &quot;Not fifty.&quot;</p>
 <p><span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 </body></html>

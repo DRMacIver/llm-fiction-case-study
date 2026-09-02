@@ -7,16 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are running the DIALOGUE part of an editing pass on one chapter o…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a1e86b49377a8400b">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are running the DIALOGUE part of an editing pass on one chapter of a novel.<br>
-Read, in order: <span class="redacted">redacted: private</span>/notes/voices.md (the section "Dialogue rules (round four)" is the spec; also read the round-three banned constructions above it), <span class="redacted">redacted: private</span>/.claude/skills/editing-pass/SKILL.md (the dialogue finding types), the "How they talk" sections of every file in <span class="redacted">redacted: private</span>/notes/canon/characters/ for speakers who appear, and then the chapter <span class="redacted">redacted: private</span>/chapters/020-the-field-in-autumn.md.<br>
-Check EVERY exchange of dialogue in the chapter against the ten rules. Do this in two sweeps. Sweep one, rules 1, 2, 4, 9 only: for every question asked, quote the reply and state whether its first sentence answers the question in usable terms; for every line that is clever, oblique, or an epigram, state what the speaker wants from the listener with it and what the listener does next (if a scene break, stage direction, or topic change follows an unanswered clever line, that is a finding). Sweep two, the mechanical rules 3, 5, 6, 7, 8, 10. Report sweep-one findings first; they are the ones the author cares most about. For rule 7 use the "Not hers/his" lists in the character files where present. For each violation give the exact quote, the line it replies to, which rule, why, and a concrete rewrite in that speaker's own grammar (per their character file). Rewrites must not add facts not in canon; if a rewrite needs the speaker to explain something, keep the explanation to what the chapter already establishes. Also run the strip-the-tags test on one page and report lines that could not be reattached as wrong-register. Report the aphorism count for narration+dialogue per scene if over budget.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are running the DIALOGUE part of an editing pass on one chapter o…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a1e86b49377a8400b">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-25</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are running the DIALOGUE part of an editing pass on one chapter of a novel.<br />
+Read, in order: <span class="redacted">redacted</span>/notes/voices.md (the section &quot;Dialogue rules (round four)&quot; is the spec; also read the round-three banned constructions above it), <span class="redacted">redacted</span>/.claude/skills/editing-pass/SKILL.md (the dialogue finding types), the &quot;How they talk&quot; sections of every file in <span class="redacted">redacted</span>/notes/canon/characters/ for speakers who appear, and then the chapter <span class="redacted">redacted</span>/chapters/020-the-field-in-autumn.md.<br />
+Check EVERY exchange of dialogue in the chapter against the ten rules. Do this in two sweeps. Sweep one, rules 1, 2, 4, 9 only: for every question asked, quote the reply and state whether its first sentence answers the question in usable terms; for every line that is clever, oblique, or an epigram, state what the speaker wants from the listener with it and what the listener does next (if a scene break, stage direction, or topic change follows an unanswered clever line, that is a finding). Sweep two, the mechanical rules 3, 5, 6, 7, 8, 10. Report sweep-one findings first; they are the ones the author cares most about. For rule 7 use the &quot;Not hers/his&quot; lists in the character files where present. For each violation give the exact quote, the line it replies to, which rule, why, and a concrete rewrite in that speaker's own grammar (per their character file). Rewrites must not add facts not in canon; if a rewrite needs the speaker to explain something, keep the explanation to what the chapter already establishes. Also run the strip-the-tags test on one page and report lines that could not be reattached as wrong-register. Report the aphorism count for narration+dialogue per scene if over budget.<br />
 Do not report narration-only issues. Do not manufacture findings; a clean exchange is clean. Mark severity 'fix' only where a listener would genuinely be confused or the rule is broken outright; 'consider' for judgement calls. Do not edit any file.</p></blockquote>
 
 
@@ -31,9 +44,9 @@ Do not report narration-only issues. Do not manufacture findings; a clean exchan
 <p>✅ 161 lines, 11611 chars</p>
 <p>🔧 Read chapters/020-the-field-in-autumn.md</p>
 <p>✅ 250 lines, 23459 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; ls &amp;&amp; for f in *.md; do echo "=== $f"; s…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/notes/canon/characters &amp;&amp; ls &amp;&amp; for f in *.md; do echo "=== $f"; sed -n '/H…</p>
 <p>✅ 216 lines, 11983 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput (<span class="redacted">redacted sentence: unpublished prose</span>)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

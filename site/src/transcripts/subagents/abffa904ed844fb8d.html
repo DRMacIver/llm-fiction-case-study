@@ -7,29 +7,41 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-abffa904ed844fb8d">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and <span class="redacted">redacted: private</span>/draft/book-01/author-notes/07-can-you-actually-fight.md. Also read <span class="redacted">redacted: private</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope "note") the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.<br>
-<br>
-Candidates:<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-abffa904ed844fb8d">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted</span>/tools/lint/rules.json and <span class="redacted">redacted</span>/draft/book-01/author-notes/07-can-you-actually-fight.md. Also read <span class="redacted">redacted</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope &quot;note&quot;) the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.</p>
+<p>Candidates:<br />
 []</p></blockquote>
 
 
 <details><summary>10 tool calls</summary>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json; echo ---; cat <span class="redacted">redacted: private</span>/draft/bo…</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/tools/lint/rules.json; echo ---; cat <span class="redacted">redacted</span>/draft/book-01/author-notes…</p>
 <p>✅ 59 lines, 2235 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/author-notes/07-can-you-actually-fight.md; echo ===…</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/draft/book-01/author-notes/07-can-you-actually-fight.md; echo ===; python3…</p>
 <p>✅ 5 lines, 981 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; wc -l draft/book-01/author-notes/07-can-you-actually-fight.md; py…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; wc -l draft/book-01/author-notes/07-can-you-actually-fight.md; python3 -c…</p>
 <p>✅ 109 lines, 17384 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 -c " import json rs=json.load(open('tools/lint/rules.json…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 -c " import json rs=json.load(open('tools/lint/rules.json')) for r…</p>
 <p>✅ 91 lines, 3956 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"verdicts": [], "judge_added": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

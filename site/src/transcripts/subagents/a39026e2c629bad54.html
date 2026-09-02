@@ -7,18 +7,29 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a39026e2c629bad54">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
-<br>
-Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/13-when-did-you-last-leave.md, read after scenes 01–12 in the same directory (they bind what is on the page — including what she asked Edwin for on Day 1, since she counts her asks). <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (the trap — never articulated by a character; check whether Peri's speech crosses that line or stays on the right side of it), notes/canon/characters/minor.md. Also chapters/003-the-improbability-engine.md — the groundwork this restages, which the author rates good.<br>
-<br>
-Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a39026e2c629bad54">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.</p>
+<p>Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/13-when-did-you-last-leave.md, read after scenes 01–12 in the same directory (they bind what is on the page — including what she asked Edwin for on Day 1, since she counts her asks). <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> (the trap — never articulated by a character; check whether Peri's speech crosses that line or stays on the right side of it), notes/canon/characters/minor.md. Also chapters/003-the-improbability-engine.md — the groundwork this restages, which the author rates good.</p>
+<p>Report findings only, per the skill's &quot;How to report&quot;: quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or &quot;cut&quot;. Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -44,43 +55,61 @@ Report findings only, per the skill's "How to report": quote, the Part and bulle
 <p>✅ 156 lines, 18222 chars</p>
 <p>🔧 Read notes/canon/characters/minor.md</p>
 <p>✅ 625 lines, 39678 chars</p>
-<p>🔧 Bash: grep -n -A 30 "The trap" notes/theme.md <span class="redacted">unpublished</span> | head -80</p>
+<p>🔧 Bash: grep -n -A 30 "The trap" notes/theme.md <span class="unpub-tag">unpublished</span> | head -80</p>
 <p>✅ 36 lines, 2061 chars</p>
-<p>🔧 Bash: sed -n 548,600p <span class="redacted">redacted: private</span>/notes/theme.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: sed -n 548,600p <span class="redacted">redacted</span>/notes/theme.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 2 lines, 151 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>## Findings</p>
-<p>**Part 1 — counts and facts**</p>
-<p>1. <span class="redacted">redacted sentence: unpublished prose</span><br>
-   Part 1, "check every count". It is at least the third, and she is the one who counts. Day 1 she asked him to come and help her save the world ("Also I did try asking first," sc. 03); on Day 2 she asked to be shown a spell and tallied it herself on the page — "That's twice I've asked" (sc. 07); this is the wording ask. Edwin then confirms the wrong number. The line also fails rule 6d's own test (`peri.md`): a tally that reports a *fact* is decoration; it has to report a loss.<br>
-   Replacement: `"That's the third thing I've asked for."` / `"It is."`</p>
-<p>2. **"And the four days that found me. The answers themselves, word for word."**<br>
-   Part 1, "an interrupted line has no plausible completion" / "a reply does not answer the line before it". Days do not find people, and he never actually asks anything — there is no question for "They're mine" to refuse. The groundwork had the verb and the ask; the compression removed both.<br>
-   Replacement: `"The four days that found me," he said. "What did it say? The answers themselves, word for word."`</p>
-<p>3. <span class="redacted">redacted sentence: unpublished prose</span> It's all in a circle round this hill. <span class="redacted">redacted sentence: unpublished prose</span><br>
-   Part 1, "check every inference". A map built out of what people *in the vale* say will be a circle round the vale whatever he did; the second sentence does not follow from the first, and the shrinking is asserted, not derived. Nothing in the speech distinguishes a narrowing life from local hearsay.<br>
-   Replacement: give her the dates, which is the only thing that makes it follow — `"It's all in a circle round this hill. The far ones are the ones people can put a year to. The near ones are the ones from this year."`</p>
-<p>4. <span class="redacted">redacted sentence: unpublished prose</span><br>
-   Part 1, "check every fact inside the scene". Twelve scenes have shown him being asked things constantly and answering at length — the class, Sorrel, Peri herself on Day 2 ("She asked why a blessing could not simply make the beast well, and listened to the answer all the way to its end"). The line means *new* asks and does not say so, so on the page it is contradicted by the book.<br>
-   Replacement: `"You said I announced instead of asking. Nobody's asked you for anything new in a long while, and I don't think you've noticed."`</p>
-<p>5. <span class="redacted">redacted sentence: unpublished prose</span><br>
-   Part 1, "check the dependents of every edit". In the groundwork "it" was his refusal; the inserted tally exchange now puts "It is." between, so "it" attaches to him agreeing with a count.<br>
-   Fix: move the tally exchange to follow "She thought about it, visibly, as she did with everything." — which is also where rule 6d wants it (the second tally falls where she is losing), or cut "It is."</p>
-<p>**Part 5 — device**</p>
-<p>6. **"If we worked on the wording together—"**<br>
-   Part 5, and `peri.md` rule 6a countable form. This is the scene in which she is under most pressure and it contains **no** false start — the only dash in her dialogue is Edwin cutting her off, which counts as zero and dilutes the construction to nothing. Two are required and no other dash is permitted.<br>
-   <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Part 6 — weak where it should be strong**</p>
-<p>7. **"She was not defending herself, and it took the ground out from under the argument he had been assembling."**<br>
-   Part 6, the plainest form at the beat that lands. The "and" makes the observation and its consequence one soft unit; the groundwork's full stop is the harder hit.<br>
-   Replacement: `She was not defending herself. It took the ground out from under the argument he had been assembling.`</p>
-<p>**Part 7 — scene as a whole**</p>
-<p>8. <span class="redacted">redacted sentence: unpublished prose</span><br>
-   Part 7, "Edwin first" — *"Starting with Peri rather than Edwin is completely the wrong choice."* In the groundwork this was a mid-chapter section under an Edwin opening; as a standalone scene the book's first words here are her name.<br>
-   Replacement: `He came down past the widow Crane's cottage at the bottom of his hill and Peri Millbrook was sitting on the wall with her notebook. He could have gone past with a nod. He stopped.`</p>
-<p>---</p>
-<p>The device a second round would be about is **Peri's closing speech**: it is one uninterrupted 140-word verdict from the character whose canon voice is short unsubordinated units and a false start, and its three load-bearing moves — the map, the shrinking circle, the asking reversal — are all asserted inside it rather than drawn out of him, so Edwin has nothing to do but take it. Making it work means splitting it into an exchange he answers into (he supplies the six counties, or the coast floods, and she puts the year on it), which also fixes findings 3, 4 and 6 in one pass; removing it means cutting to "The letters work" off the map alone. On the theme check: the speech stays on the right side of the trap — she gives evidence of the narrowing and never names the mechanism, and nothing in it says he stopped asking himself anything.</p>
+<h2>Findings</h2>
+<p><strong>Part 1 — counts and facts</strong></p>
+<ol>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+Part 1, &quot;check every count&quot;. It is at least the third, and she is the one who counts. Day 1 she asked him to come and help her save the world (&quot;Also I did try asking first,&quot; sc. 03); on Day 2 she asked to be shown a spell and tallied it herself on the page — &quot;That's twice I've asked&quot; (sc. 07); this is the wording ask. Edwin then confirms the wrong number. The line also fails rule 6d's own test (<code>peri.md</code>): a tally that reports a <em>fact</em> is decoration; it has to report a loss.<br />
+Replacement: <code>&quot;That's the third thing I've asked for.&quot;</code> / <code>&quot;It is.&quot;</code></p>
+</li>
+<li>
+<p><strong>&quot;And the four days that found me. The answers themselves, word for word.&quot;</strong><br />
+Part 1, &quot;an interrupted line has no plausible completion&quot; / &quot;a reply does not answer the line before it&quot;. Days do not find people, and he never actually asks anything — there is no question for &quot;They're mine&quot; to refuse. The groundwork had the verb and the ask; the compression removed both.<br />
+Replacement: <code>&quot;The four days that found me,&quot; he said. &quot;What did it say? The answers themselves, word for word.&quot;</code></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span> It's all in a circle round this hill. <span class="redacted">redacted sentence: unpublished prose</span><br />
+Part 1, &quot;check every inference&quot;. A map built out of what people <em>in the vale</em> say will be a circle round the vale whatever he did; the second sentence does not follow from the first, and the shrinking is asserted, not derived. Nothing in the speech distinguishes a narrowing life from local hearsay.<br />
+Replacement: give her the dates, which is the only thing that makes it follow — <code>&quot;It's all in a circle round this hill. The far ones are the ones people can put a year to. The near ones are the ones from this year.&quot;</code></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+Part 1, &quot;check every fact inside the scene&quot;. Twelve scenes have shown him being asked things constantly and answering at length — the class, Sorrel, Peri herself on Day 2 (&quot;She asked why a blessing could not simply make the beast well, and listened to the answer all the way to its end&quot;). The line means <em>new</em> asks and does not say so, so on the page it is contradicted by the book.<br />
+Replacement: <code>&quot;You said I announced instead of asking. Nobody's asked you for anything new in a long while, and I don't think you've noticed.&quot;</code></p>
+</li>
+<li>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+Part 1, &quot;check the dependents of every edit&quot;. In the groundwork &quot;it&quot; was his refusal; the inserted tally exchange now puts &quot;It is.&quot; between, so &quot;it&quot; attaches to him agreeing with a count.<br />
+Fix: move the tally exchange to follow &quot;She thought about it, visibly, as she did with everything.&quot; — which is also where rule 6d wants it (the second tally falls where she is losing), or cut &quot;It is.&quot;</p>
+</li>
+</ol>
+<p><strong>Part 5 — device</strong></p>
+<ol start="6">
+<li><strong>&quot;If we worked on the wording together—&quot;</strong><br />
+Part 5, and <code>peri.md</code> rule 6a countable form. This is the scene in which she is under most pressure and it contains <strong>no</strong> false start — the only dash in her dialogue is Edwin cutting her off, which counts as zero and dilutes the construction to nothing. Two are required and no other dash is permitted.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<p><strong>Part 6 — weak where it should be strong</strong></p>
+<ol start="7">
+<li><strong>&quot;She was not defending herself, and it took the ground out from under the argument he had been assembling.&quot;</strong><br />
+Part 6, the plainest form at the beat that lands. The &quot;and&quot; makes the observation and its consequence one soft unit; the groundwork's full stop is the harder hit.<br />
+Replacement: <code>She was not defending herself. It took the ground out from under the argument he had been assembling.</code></li>
+</ol>
+<p><strong>Part 7 — scene as a whole</strong></p>
+<ol start="8">
+<li><span class="redacted">redacted sentence: unpublished prose</span><br />
+Part 7, &quot;Edwin first&quot; — <em>&quot;Starting with Peri rather than Edwin is completely the wrong choice.&quot;</em> In the groundwork this was a mid-chapter section under an Edwin opening; as a standalone scene the book's first words here are her name.<br />
+Replacement: <code>He came down past the widow Crane's cottage at the bottom of his hill and Peri Millbrook was sitting on the wall with her notebook. He could have gone past with a nod. He stopped.</code></li>
+</ol>
+<hr />
+<p>The device a second round would be about is <strong>Peri's closing speech</strong>: it is one uninterrupted 140-word verdict from the character whose canon voice is short unsubordinated units and a false start, and its three load-bearing moves — the map, the shrinking circle, the asking reversal — are all asserted inside it rather than drawn out of him, so Edwin has nothing to do but take it. Making it work means splitting it into an exchange he answers into (he supplies the six counties, or the coast floods, and she puts the year on it), which also fixes findings 3, 4 and 6 in one pass; removing it means cutting to &quot;The letters work&quot; off the map alone. On the theme check: the speech stays on the right side of the trap — she gives evidence of the narrowing and never names the mechanism, and nothing in it says he stopped asking himself anything.</p>
 </div>
 </body></html>

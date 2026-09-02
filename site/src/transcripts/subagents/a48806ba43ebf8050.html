@@ -7,36 +7,46 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are running two cross-checks on sealed material for the novel at…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a48806ba43ebf8050">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are running two cross-checks on sealed material for the novel at <span class="redacted">redacted: private</span>.<br>
-<br>
-**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
-- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
-- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
-- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
-<br>
-You **may** read `notes/sealed/` in full. You report in **shape only**.<br>
-<br>
-Read `plans/book-01/clue-ledger.md` <span class="redacted">unpublished</span> ("Cross-checks still owed"), then every file in `notes/sealed/` including `COHERENCE.md`, then the three arc plans `plans/book-01/arc-0[123].md` <span class="redacted">unpublished</span> and `plans/book-01/overview.md`. <span class="redacted">unpublished</span><br>
-<br>
-Two checks, both across *all* answers, not per file:<br>
-1. <span class="redacted">redacted sentence: unpublished prose</span> List the uncovered ones by *answer name and item number only* (e.g. "destiny.md, clues-to-plant item 4 — uncovered"), never by content.<br>
-2. <span class="redacted">redacted sentence: unpublished prose</span> For each hit: scene id, answer name, and the *observable on the page* that trips it (which is already in the open plan), never the sealed reason.<br>
-<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Write `<span class="redacted">redacted: private</span>/rewrite/book-01/CROSSCHECK.md` — shape only, checked by you before saving for any sentence that would let a reader infer an answer. Then commit it.<br>
-<br>
-Your final message: counts (items checked, uncovered, prohibited) and the item-number recommendations. Nothing else.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are running two cross-checks on sealed material for the novel at…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a48806ba43ebf8050">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-29</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are running two cross-checks on sealed material for the novel at <span class="redacted">redacted</span>.</p>
+<p><strong>Standing rules for every agent in this run</strong> (from <code>CLAUDE.md</code>; read it first and obey it):</p>
+<ul>
+<li>Never state the content of anything in <code>notes/sealed/</code> outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe <em>shape</em> (counts, which constraints are satisfied, what conflicts) and never content. <code>plans/</code> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in <span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).</li>
+<li>`notes/canon/deferred-questions.md <span class="unpub-tag">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>Every file you write, you write to disk immediately — a later failure must lose nothing.</li>
+<li>When you finish, <code>git add</code> the files you touched and commit with a short message. Do not commit <code>comments/</code> or anything outside the project.</li>
+</ul>
+<p>You <strong>may</strong> read <code>notes/sealed/</code> in full. You report in <strong>shape only</strong>.</p>
+<p>Read <code>plans/book-01/clue-ledger.md</code> <span class="unpub-tag">unpublished</span> (&quot;Cross-checks still owed&quot;), then every file in <code>notes/sealed/</code> including <code>COHERENCE.md</code>, then the three arc plans <code>plans/book-01/arc-0[123].md</code> <span class="unpub-tag">unpublished</span> and <code>plans/book-01/overview.md</code>. <span class="unpub-tag">unpublished</span></p>
+<p>Two checks, both across <em>all</em> answers, not per file:</p>
+<ol>
+<li><span class="redacted">redacted sentence: unpublished prose</span> List the uncovered ones by <em>answer name and item number only</em> (e.g. &quot;destiny.md, clues-to-plant item 4 — uncovered&quot;), never by content.</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span> For each hit: scene id, answer name, and the <em>observable on the page</em> that trips it (which is already in the open plan), never the sealed reason.</li>
+</ol>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Write <span class="redacted">redacted</span>/rewrite/book-01/CROSSCHECK.md — shape only, checked by you before saving for any sentence that would let a reader infer an answer. Then commit it.</p>
+<p>Your final message: counts (items checked, uncovered, prohibited) and the item-number recommendations. Nothing else.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -44,64 +54,64 @@ Your final message: counts (items checked, uncovered, prohibited) and the item-n
 </div>
 
 <details><summary>50 tool calls</summary>
-<p>🔧 Bash: ls notes/sealed/ &amp;&amp; ls plans/book-01/ <span class="redacted">unpublished</span> &amp;&amp; ls rewrite/book-01/ 2&gt;/dev/null; w…</p>
+<p>🔧 Bash: ls notes/sealed/ &amp;&amp; ls plans/book-01/ <span class="unpub-tag">unpublished</span> &amp;&amp; ls rewrite/book-01/ 2&gt;/dev/null; w…</p>
 <p>✅ 54 lines, 1519 chars — COHERENCE.md / deeps.md / destiny.md</p>
-<p>🔧 Bash: cat plans/book-01/clue-ledger.md <span class="redacted">unpublished</span> &amp;&amp; echo "=====DEFERRED=====" &amp;&amp; cat notes/…</p>
+<p>🔧 Bash: cat plans/book-01/clue-ledger.md <span class="unpub-tag">unpublished</span> &amp;&amp; echo "=====DEFERRED=====" &amp;&amp; cat notes/…</p>
 <p>✅ 269 lines, 21279 chars</p>
 <p>🔧 Bash: grep -n -i "clue\|forbid\|never\|must not\|do not plant" notes/sealed/silent-soil.md | he…</p>
 <p>✅ 100 lines, 9836 chars</p>
 <p>🔧 Bash: for f in notes/sealed/silent-soil.md notes/sealed/deeps.md notes/sealed/destiny.md notes/…</p>
 <p>✅ 179 lines, 7646 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '760,842p' notes/sealed/deeps.md; echo "=====DESTINY 631-7…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '760,842p' notes/sealed/deeps.md; echo "=====DESTINY 631-712"; sed…</p>
 <p>✅ 154 lines, 8498 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '861,940p' notes/sealed/<span class="redacted">redacted: character</span>-grandmother-…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '861,940p' notes/sealed/<span class="redacted">redacted</span>-grandmother-people.md; echo "===…</p>
 <p>✅ 111 lines, 6292 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '2560,2660p' notes/sealed/silent-soil.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '2560,2660p' notes/sealed/silent-soil.md</p>
 <p>✅ 101 lines, 6077 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '53,260p' notes/sealed/COHERENCE.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '53,260p' notes/sealed/COHERENCE.md</p>
 <p>✅ 208 lines, 11373 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "^#\{2,3\} " plans/book-01/arc-02.md <span class="redacted">unpublished</span> plans/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "^#\{2,3\} " plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span> plans/book-01/a…</p>
 <p>✅ 67 lines, 5178 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1170,1380p' plans/book-01/arc-02.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1170,1380p' plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 211 lines, 11788 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "Clue" plans/book-01/arc-02.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "Clue" plans/book-01/arc-02.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 38 lines, 2795 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '171,231p' plans/book-01/arc-03.md; <span class="redacted">unpublished</span> echo "==…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '171,231p' plans/book-01/arc-03.md; <span class="unpub-tag">unpublished</span> echo "===CLUES===…</p>
 <p>✅ 63 lines, 3466 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "author's note\|candle\|mason\|<span class="redacted">redacted: place</span>\|Fros…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "author's note\|candle\|mason\|<span class="redacted">redacted</span>\|Frostmonth\|breathe"…</p>
 <p>✅ 40 lines, 3853 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '425,436p;908,925p' plans/book-01/arc-02.md; <span class="redacted">unpublished</span>…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '425,436p;908,925p' plans/book-01/arc-02.md; <span class="unpub-tag">unpublished</span> echo "==…</p>
 <p>✅ 65 lines, 3243 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '562,631p' notes/sealed/destiny.md; echo "===744==="; sed…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '562,631p' notes/sealed/destiny.md; echo "===744==="; sed -n '744,7…</p>
 <p>✅ 117 lines, 6577 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '101,126p;226,245p;515,535p;745,760p' plans/book-01/arc-02…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '101,126p;226,245p;515,535p;745,760p' plans/book-01/arc-02.md; <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 103 lines, 5621 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "engine\|clue\|pointer" plans/book-01/arc-01.md ⟦unpub…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "engine\|clue\|pointer" plans/book-01/arc-01.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 20 lines, 1426 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '125,150p;175,212p' plans/book-01/arc-01.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '125,150p;175,212p' plans/book-01/arc-01.md <span class="unpub-tag">unpublished</span></p>
 <p>✅ 63 lines, 3332 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "keeping charm\|roddon\|stackyard\|contour band\|⟦reda…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "keeping charm\|roddon\|stackyard\|contour band\|<span class="redacted">redacted</span>\|co…</p>
 <p>✅ 33 lines, 3348 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "scatter\|correlation\|managed\|management" plans/book…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n -i "scatter\|correlation\|managed\|management" plans/book-01/arc-0…</p>
 <p>✅ 5 lines, 662 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> | head -20</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span> | head -20</p>
 <p>✅ 12 lines, 831 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '920,972p' plans/book-01/arc-03.md; <span class="redacted">unpublished</span> echo "==…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '920,972p' plans/book-01/arc-03.md; <span class="unpub-tag">unpublished</span> echo "==C5/C7==";…</p>
 <p>✅ 110 lines, 5659 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls rewrite/book-01/ 2&gt;/dev/null; tail -20 rewrite/book-01/FLAGS.m…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; ls rewrite/book-01/ 2&gt;/dev/null; tail -20 rewrite/book-01/FLAGS.md 2&gt;/dev/…</p>
 <p>✅ 2 lines, 18 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; rewrite/book-01/CROSSCHECK.md &lt;&lt;'EOF' ⟦redacted sentence: u…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat &gt; rewrite/book-01/CROSSCHECK.md &lt;&lt;'EOF' <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 4 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' p='rewrite/book-01/CROSSCHECK.md' s=open(p).rea…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; python3 - &lt;&lt;'EOF' p='rewrite/book-01/CROSSCHECK.md' s=open(p).read() <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 1 lines, 76 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>**Counts.** 39 list items checked across five sealed answers (silent-soil 7, deeps 9, destiny 10, <span class="redacted">redacted: character</span>-grandmother-people 9, peri-pre-choosing 4). **7 uncovered/partial and in span**: `silent-soil.md` item 6 (uncovered) and item 7 (partial); `deeps.md` item 4 (uncovered) and item 9 (near-miss, counted uncovered); `<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>-grandmother-people.md` 7, 8; `peri-pre-choosing.md` 1–4.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> R2 — `arc-03.md` C5 and C7, assembly chapters 10 and 11, adjacent; `deeps.md` bars that conjunction. R3 — `COHERENCE.md` C3's ruling is unenforceable until the fabricated line at `notes/canon/world/institutions.md:298–307` is struck. All `silent-soil.md` never/not-before rows, the rest of `deeps.md`'s list including the C5 guards, and both other files' prohibitions: clean.</p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Opening the gate is an author decision and is flagged as unasked.</p>
-<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
-<p>Files: `<span class="redacted">redacted: private</span>/rewrite/book-01/CROSSCHECK.md`, `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (created; 7 bullets). Committed as 9c69925.</p>
+<p><strong>Counts.</strong> 39 list items checked across five sealed answers (silent-soil 7, deeps 9, destiny 10, <span class="redacted">redacted</span>-grandmother-people 9, peri-pre-choosing 4). <strong>7 uncovered/partial and in span</strong>: <code>silent-soil.md</code> item 6 (uncovered) and item 7 (partial); <code>deeps.md</code> item 4 (uncovered) and item 9 (near-miss, counted uncovered); <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>-grandmother-people.md<code>7, 8;</code>peri-pre-choosing.md 1–4.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> R2 — <code>arc-03.md</code> C5 and C7, assembly chapters 10 and 11, adjacent; <code>deeps.md</code> bars that conjunction. R3 — <code>COHERENCE.md</code> C3's ruling is unenforceable until the fabricated line at <code>notes/canon/world/institutions.md:298–307</code> is struck. All <code>silent-soil.md</code> never/not-before rows, the rest of <code>deeps.md</code>'s list including the C5 guards, and both other files' prohibitions: clean.</p>
+<p><span class="redacted">redacted sentence</span> <span class="redacted">redacted sentence</span> <span class="redacted">redacted sentence</span></p>
+<p><span class="redacted">redacted sentence</span> <span class="redacted">redacted sentence</span> Opening the gate is an author decision and is flagged as unasked.</p>
+<p><span class="redacted">redacted sentence</span></p>
+<p>Files: <span class="redacted">redacted</span>/rewrite/book-01/CROSSCHECK.md<code>, </code><span class="redacted">redacted</span>/rewrite/book-01/FLAGS.md (created; 7 bullets). Committed as 9c69925.</p>
 </div>
 </body></html>

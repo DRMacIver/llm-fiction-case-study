@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,45 +7,57 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a5a5497ade220b4c7">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the judge in a prose-lint pipeline for <span class="redacted">redacted: private</span>.<br>
-Target file: the .md file in draft/book-01/scenes/ whose name starts with 02-. Read it in full. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br>
-Candidates from haiku hunters (be sceptical; they over-report by design):<br>
-[<br>
- {<br>
-  "rule_id": "contamination-overlap",<br>
-  "quote": "She sat at his kitchen table with her pack still on and looked round the room with open interest, and Edwin, filling the kettle, was aware of what she was seeing: a shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said *beans*.",<br>
-  "reason": "Scene contains 25 overlapping 8+ word runs with deleted draft chapters/001-the-wrong-man.md; threshold is ≥5 runs, which requires redraft with source shut, not patching."<br>
- }<br>
-]<br>
-For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.<br>
-<br>
-Judge hints: phrases like "you learn", "says you should", "there is only one answer" often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; "wants [gerund]" retired; "nought" retired, write "zero"); "'ll not" in non-first person is a judgement call, not a ban; "[amount] of it" and "I'll say it" are warning signs needing judgement.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a5a5497ade220b4c7">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the judge in a prose-lint pipeline for <span class="redacted">redacted</span>.<br />
+Target file: the .md file in draft/book-01/scenes/ whose name starts with 02-. Read it in full. Read <span class="redacted">redacted</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br />
+Candidates from haiku hunters (be sceptical; they over-report by design):<br />
+[<br />
+{<br />
+&quot;rule_id&quot;: &quot;contamination-overlap&quot;,<br />
+&quot;quote&quot;: &quot;She sat at his kitchen table with her pack still on and looked round the room with open interest, and Edwin, filling the kettle, was aware of what she was seeing: a shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said <em>beans</em>.&quot;,<br />
+&quot;reason&quot;: &quot;Scene contains 25 overlapping 8+ word runs with deleted draft chapters/001-the-wrong-man.md; threshold is ≥5 runs, which requires redraft with source shut, not patching.&quot;<br />
+}<br />
+]<br />
+For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.</p>
+<p>Judge hints: phrases like &quot;you learn&quot;, &quot;says you should&quot;, &quot;there is only one answer&quot; often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; &quot;wants [gerund]&quot; retired; &quot;nought&quot; retired, write &quot;zero&quot;); &quot;'ll not&quot; in non-first person is a judgement call, not a ban; &quot;[amount] of it&quot; and &quot;I'll say it&quot; are warning signs needing judgement.<br />
 You may add violations the hunters missed as judge_added {rule_id, quote, reason}. Never rewrite the text.</p></blockquote>
 
 
 <details><summary>16 tool calls</summary>
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | head -20</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/draft/book-01/scenes/ | head -20</p>
 <p>✅ 20 lines, 511 chars</p>
 <p>🔧 Bash: python3 -c " import json;d=json.load(open('tools/lint/rules.json')) print(json.dumps([r f…</p>
 <p>✅ 21 lines, 1279 chars</p>
 <p>🔧 Bash: python3 tools/overlap_check.py draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md 2&gt;&amp;1…</p>
 <p>✅ 28 lines, 3038 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat ~/.claude/projects/-Users-drmaciver-Projects-autoroad/memory/…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat ~/.claude/projects/-Users-drmaciver-Projects-autoroad/memory/<span class="redacted">redacted: private</span>…</p>
 <p>✅ 39 lines, 2211 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "3\.7" -A25 draft/book-01/VOICE.md | head -60; echo ===;…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "3\.7" -A25 draft/book-01/VOICE.md | head -60; echo ===; sed -n '4…</p>
 <p>✅ 2 lines, 34 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "3\.7" -A 25 draft/book-01/VOICE.md | head -60; echo XXXX…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "3\.7" -A 25 draft/book-01/VOICE.md | head -60; echo XXXX; sed -n…</p>
 <p>✅ 57 lines, 3340 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; cat draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md</p>
 <p>✅ 93 lines, 7909 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"verdicts": [{"rule_id": "contamination-overlap", "quote":…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

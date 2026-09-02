@@ -7,39 +7,50 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a hostile, expert reader judging a sample dialogue scene for…</h1><div class="subagent-header"><a href="../10c1dd77-c31a-4be9-a7b6-23651a4792b4.html#agent-a6fc37ae57cf5d989">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a hostile, expert reader judging a sample dialogue scene for the novel at <span class="redacted">redacted: private</span>.<br>
-<br>
-MANDATORY READING before you write or judge anything (read the FILES, not just these names):<br>
-- <span class="redacted">redacted: private</span>/notes/voice-exemplars.md and the exemplar prose it names<br>
-- <span class="redacted">redacted: private</span>/notes/voices.md  (Voice D "Wry Practitioner" and its binding round-three rules)<br>
-- <span class="redacted">redacted: private</span>/notes/llm-tells.md<br>
-- <span class="redacted">redacted: private</span>/notes/premise.md, <span class="redacted">redacted: private</span>/notes/concept.md<br>
-- <span class="redacted">redacted: private</span>/notes/canon/characters/*.md<br>
-- <span class="redacted">redacted: private</span>  (the voice-differentiation brief)<br>
-Sample real dialogue from <span class="redacted">redacted: private</span>/chapters/*.md so you are matching the book, not inventing a new register.<br>
-Do NOT read <span class="redacted">redacted: private</span>/notes/sealed/ — not needed here.<br>
-<br>
-<br>
-STEP 1 — BLIND ATTRIBUTION. Read <span class="redacted">redacted: private</span> but STOP at the line "--- KEY (do not read before attributing) ---". The cast is: Edwin Moss and Peri Millbrook. Attribute every numbered line to one of the two speakers, writing your attributions down BEFORE you look at anything else. Then read the key and score yourself honestly. Do not cheat; an inflated attribution score destroys the value of this exercise. Note that a scene where you got 50% is a scene with no voice differentiation at all, and 100% is what we want.<br>
-<br>
-STEP 2 — Read the full scene at <span class="redacted">redacted: private</span> and judge it hard on:<br>
- - distinctness of the two voices in syntax, not just opinion or subject matter;<br>
- - emotional truth: do they feel something, is it earned rather than announced, would a reader believe it;<br>
- - caring: is anybody visibly wanting something they might not get, or is this two experts agreeing about procedure;<br>
- - llm-tells.md violations, counted;<br>
- - abruptness/uptake: is this a conversation with real uptake, or adjacent monologues of complete pre-defended rulings;<br>
- - fidelity to Voice D and to the published chapters, including the ending-is-a-cut rule.<br>
-<br>
-Write <span class="redacted">redacted: private</span> containing: your blind attributions and where you went wrong and WHY (which specific lines were unattributable, and what would have made them attributable); every llm-tell quoted; the three most damaging specific problems with concrete rewrites of the offending lines; and what the scene got RIGHT that should be codified as a rule. Be specific and quote constantly. Praise nothing vaguely.<br>
-<br>
-Return your scores.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a hostile, expert reader judging a sample dialogue scene for…</h1><div class="subagent-header"><a href="../10c1dd77-c31a-4be9-a7b6-23651a4792b4.html#agent-a6fc37ae57cf5d989">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-27</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a hostile, expert reader judging a sample dialogue scene for the novel at <span class="redacted">redacted</span>.</p>
+<p>MANDATORY READING before you write or judge anything (read the FILES, not just these names):</p>
+<ul>
+<li><span class="redacted">redacted</span>/notes/voice-exemplars.md and the exemplar prose it names</li>
+<li><span class="redacted">redacted</span>/notes/voices.md  (Voice D &quot;Wry Practitioner&quot; and its binding round-three rules)</li>
+<li><span class="redacted">redacted</span>/notes/llm-tells.md</li>
+<li><span class="redacted">redacted</span>/notes/premise.md, <span class="redacted">redacted</span>/notes/concept.md</li>
+<li><span class="redacted">redacted</span>/notes/canon/characters/*.md</li>
+<li><span class="redacted">redacted: private</span>  (the voice-differentiation brief)<br />
+Sample real dialogue from <span class="redacted">redacted</span>/chapters/*.md so you are matching the book, not inventing a new register.<br />
+Do NOT read <span class="redacted">redacted</span>/notes/sealed/ — not needed here.</li>
+</ul>
+<p>STEP 1 — BLIND ATTRIBUTION. Read <span class="redacted">redacted: private</span> but STOP at the line &quot;--- KEY (do not read before attributing) ---&quot;. The cast is: Edwin Moss and Peri Millbrook. Attribute every numbered line to one of the two speakers, writing your attributions down BEFORE you look at anything else. Then read the key and score yourself honestly. Do not cheat; an inflated attribution score destroys the value of this exercise. Note that a scene where you got 50% is a scene with no voice differentiation at all, and 100% is what we want.</p>
+<p>STEP 2 — Read the full scene at <span class="redacted">redacted: private</span> and judge it hard on:</p>
+<ul>
+<li>distinctness of the two voices in syntax, not just opinion or subject matter;</li>
+<li>emotional truth: do they feel something, is it earned rather than announced, would a reader believe it;</li>
+<li>caring: is anybody visibly wanting something they might not get, or is this two experts agreeing about procedure;</li>
+<li>llm-tells.md violations, counted;</li>
+<li>abruptness/uptake: is this a conversation with real uptake, or adjacent monologues of complete pre-defended rulings;</li>
+<li>fidelity to Voice D and to the published chapters, including the ending-is-a-cut rule.</li>
+</ul>
+<p>Write <span class="redacted">redacted: private</span> containing: your blind attributions and where you went wrong and WHY (which specific lines were unattributable, and what would have made them attributable); every llm-tell quoted; the three most damaging specific problems with concrete rewrites of the offending lines; and what the scene got RIGHT that should be codified as a rule. Be specific and quote constantly. Praise nothing vaguely.</p>
+<p>Return your scores.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -51,7 +62,7 @@ Return your scores.</p></blockquote>
 <p>✅ 43 lines, 2280 chars</p>
 <p>🔧 Read notes/voices.md</p>
 <p>✅ 509 lines, 31773 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/llm-tells.md (Read llm-tells notes)</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/llm-tells.md (Read llm-tells notes)</p>
 <p>✅ 219 lines, 13540 chars</p>
 <p>🔧 Bash: cat <span class="redacted">redacted: private</span> (Read dialogue brief)</p>
 <p>✅ 309 lines, 18403 chars</p>
@@ -59,17 +70,17 @@ Return your scores.</p></blockquote>
 <p>✅ 195 lines, 11472 chars</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> (Read character canon)</p>
 <p>✅ 50 lines, 2189 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,400p' notes/canon/characters/peri.md (Read Peri canon)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1,400p' notes/canon/characters/peri.md (Read Peri canon)</p>
 <p>✅ 400 lines, 24134 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "How they talk" -A 60 notes/canon/characters/edwin.md (Edwin how they talk)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "How they talk" -A 60 notes/canon/characters/edwin.md (Edwin how they talk)</p>
 <p>✅ 84 lines, 5110 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '458,520p' notes/canon/characters/edwin.md; echo "=== PERI… (Read banned constructions tails)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '458,520p' notes/canon/characters/edwin.md; echo "=== PERI TAIL ===… (Read banned constructions tails)</p>
 <p>✅ 51 lines, 2974 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "banned for her" -A 40 notes/canon/characters/peri.md (Peri banned constructions)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "banned for her" -A 40 notes/canon/characters/peri.md (Peri banned constructions)</p>
 <p>✅ 41 lines, 2484 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls chapters/ | tail -20; ls <span class="redacted">redacted: private</span> /private/tmp/cla… (List chapters and dialogue dir)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; ls chapters/ | tail -20; ls <span class="redacted">redacted: private</span> /private/tmp/cla… (List chapters and dialogue dir)</p>
 <p>✅ 40 lines, 1098 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,120p' chapters/025-the-famous-dropout.md (Sample chapter 025)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '1,120p' chapters/025-the-famous-dropout.md (Sample chapter 025)</p>
 <p>✅ 119 lines, 9706 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> awk '/--- KEY \(do not read before attributing\) ---/{exit} {print… (Read blind file up to key)</p>
 <p>✅ 54 lines, 4581 chars</p>
@@ -95,7 +106,7 @@ Return your scores.</p></blockquote>
 <p>✅ 7 lines, 555 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> cat &gt; edwin-peri-mortality-critique.md &lt;&lt;'CRIT' # Hostile critique… (Write critique file)</p>
 <p>✅ 1 lines, 41 chars</p>
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"abruptness": 7, "attributionCorrect": 47, "attributionTot…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </details>
 </body></html>

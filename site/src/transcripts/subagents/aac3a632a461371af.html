@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,28 +7,41 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-aac3a632a461371af">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 07-. Read it in full.<br>
-LENS: narration. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and extract ONLY the rules with "tier": "semantic" and "lens": "narration". Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-aac3a632a461371af">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 07-. Read it in full.<br />
+LENS: narration. Read <span class="redacted">redacted</span>/tools/lint/rules.json and extract ONLY the rules with &quot;tier&quot;: &quot;semantic&quot; and &quot;lens&quot;: &quot;narration&quot;. Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
-<p>I'll help you find and lint the target file. Let me start by locating the scene file that starts with "07-" in the draft/book-01/scenes/ directory.</p>
+<p>I'll help you find and lint the target file. Let me start by locating the scene file that starts with &quot;07-&quot; in the draft/book-01/scenes/ directory.</p>
 </div>
 
 <details><summary>6 tool calls</summary>
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -name "07-*" -type f (Find the target file starting with 07- in scenes directory)</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes -name "07-*" -type f (Find the target file starting with 07- in scenes directory)</p>
 <p>🔧 Read tools/lint/rules.json</p>
-<p>✅ 1 lines, 84 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/07-can-you-actually-fight.md</p>
+<p>✅ 1 lines, 84 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/07-can-you-actually-fight.md</p>
 <p>✅ 1196 lines, 51733 chars</p>
 <p>🔧 Read tools/lint/rules.json</p>
 <p>✅ 1256 lines, 70366 chars</p>
@@ -50,39 +63,45 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 
 <div class="assistant-prose">
 <p>Now I'll systematically check each semantic narration rule against the target scene.</p>
-<p>The semantic narration rules from rules.json are:<br>
-1. generalising-clause-budget<br>
-2. wants-gerund-budget  <br>
-3. prose-not-at-rest<br>
-4. unlocated-narration<br>
-5. motive-off-page<br>
-6. viewpoint-overreach<br>
-7. nominalised-absence<br>
-8. description-list<br>
-9. rest-register-misplaced<br>
-10. unearned-authority<br>
-11. likeability-drift<br>
-12. windup-tag-budget</p>
+<p>The semantic narration rules from rules.json are:</p>
+<ol>
+<li>generalising-clause-budget</li>
+<li>wants-gerund-budget</li>
+<li>prose-not-at-rest</li>
+<li>unlocated-narration</li>
+<li>motive-off-page</li>
+<li>viewpoint-overreach</li>
+<li>nominalised-absence</li>
+<li>description-list</li>
+<li>rest-register-misplaced</li>
+<li>unearned-authority</li>
+<li>likeability-drift</li>
+<li>windup-tag-budget</li>
+</ol>
 <p>Reading the scene in full with close attention to neighbors (as instructed):</p>
-<p>**Line 33 analysis** - Reading the full context:<br>
-- Before: "She asked why a blessing could not simply make the beast well, and listened to the answer all the way to its end."<br>
-- Flag point: "No young man who had ever climbed the hill wanting battle magic had ever done that."<br>
-- After: Next paragraph begins Peri's command.</p>
-<p>The sentence is responsive to Peri's action (listening fully), but it generalises outward to "young man who had climbed the hill wanting battle magic" — a category of people not present in the scene. The rule requires such generalisations be "about THESE people" and specifies a rate of one per 3,500 words. At 675 words, this scene falls below the frequency budget.</p>
-<p>**No other violations found:**<br>
-- "wants gerund" constructions: not present<br>
-- Rest register: appropriate for work-in-progress scene  <br>
-- Plain sentences: well-distributed among dialogue<br>
-- Unlocated narration: "The village says..." is Peri speaking, not narrator knowledge<br>
-- Motive: Edwin's choices explained; Peri's motivations clear<br>
-- Viewpoint: inferences (line 5, line 13 "he supposed") stay within Edwin's reasoning<br>
-- Nominalised absence: none detected<br>
-- Description lists: descriptions tied to action, not enumerated<br>
-- Unearned authority: Edwin teaching his established class; Peri commands herself<br>
-- Likeability: Peri is persistent and direct, but not contemptuous; presented as genuinely curious<br>
-- Windup tags: all simple dialogue tags</p>
+<p><strong>Line 33 analysis</strong> - Reading the full context:</p>
+<ul>
+<li>Before: &quot;She asked why a blessing could not simply make the beast well, and listened to the answer all the way to its end.&quot;</li>
+<li>Flag point: &quot;No young man who had ever climbed the hill wanting battle magic had ever done that.&quot;</li>
+<li>After: Next paragraph begins Peri's command.</li>
+</ul>
+<p>The sentence is responsive to Peri's action (listening fully), but it generalises outward to &quot;young man who had climbed the hill wanting battle magic&quot; — a category of people not present in the scene. The rule requires such generalisations be &quot;about THESE people&quot; and specifies a rate of one per 3,500 words. At 675 words, this scene falls below the frequency budget.</p>
+<p><strong>No other violations found:</strong></p>
+<ul>
+<li>&quot;wants gerund&quot; constructions: not present</li>
+<li>Rest register: appropriate for work-in-progress scene</li>
+<li>Plain sentences: well-distributed among dialogue</li>
+<li>Unlocated narration: &quot;The village says...&quot; is Peri speaking, not narrator knowledge</li>
+<li>Motive: Edwin's choices explained; Peri's motivations clear</li>
+<li>Viewpoint: inferences (line 5, line 13 &quot;he supposed&quot;) stay within Edwin's reasoning</li>
+<li>Nominalised absence: none detected</li>
+<li>Description lists: descriptions tied to action, not enumerated</li>
+<li>Unearned authority: Edwin teaching his established class; Peri commands herself</li>
+<li>Likeability: Peri is persistent and direct, but not contemptuous; presented as genuinely curious</li>
+<li>Windup tags: all simple dialogue tags</li>
+</ul>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": [{"rule_id": "generalising-clause-budget", "qu…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

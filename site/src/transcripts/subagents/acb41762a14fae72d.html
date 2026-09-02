@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Working dir: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt; (a novel project). Purely mechanical…</title><style>
+<html><head><meta charset="utf-8"><title>Working dir: [redacted] (a novel project). Purely mechanical extracti…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,29 +7,38 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Working dir: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt; (a novel project). Purely mechanical…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-acb41762a14fae72d">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Working dir: <span class="redacted">redacted: private</span> (a novel project). Purely mechanical extraction task, no writing.<br>
-<br>
-Read chapters/001 through chapters/031 (*.md in chapters/). Extract spoken lines by <span class="redacted">redacted: character</span> <span class="redacted">redacted: character</span>. Many lines are unattributed within an exchange — work out the speaker from the alternation and context.<br>
-<br>
-Give me THIRTY-FIVE of <span class="redacted">redacted: character</span>'s verbatim spoken lines, chosen to span her whole range: long piled-up speeches with numbers and dates, short answers, one-word answers, questions, imperatives, lines under pressure, lines where she concedes or is bad at something, flat functional lines. Prefer lines from chapters 012-022. Include at least ten lines of six words or fewer.<br>
-<br>
-Format each as:<br>
-[chapter file] one sentence of surrounding narration or the line she is answering<br>
-"THE VERBATIM LINE, exactly as in the file, including any narration inside the quote paragraph."<br>
-<br>
-Do NOT paraphrase or alter a single word. Do NOT include lines by other speakers. Your final message must be the list itself and nothing else — no preamble, no summary.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Working dir: [redacted] (a novel project). Purely mechanical extracti…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-acb41762a14fae72d">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Working dir: <span class="redacted">redacted</span> (a novel project). Purely mechanical extraction task, no writing.</p>
+<p>Read chapters/001 through chapters/031 (*.md in chapters/). Extract spoken lines by <span class="redacted">redacted</span> <span class="redacted">redacted</span>. Many lines are unattributed within an exchange — work out the speaker from the alternation and context.</p>
+<p>Give me THIRTY-FIVE of <span class="redacted">redacted</span>'s verbatim spoken lines, chosen to span her whole range: long piled-up speeches with numbers and dates, short answers, one-word answers, questions, imperatives, lines under pressure, lines where she concedes or is bad at something, flat functional lines. Prefer lines from chapters 012-022. Include at least ten lines of six words or fewer.</p>
+<p>Format each as:<br />
+[chapter file] one sentence of surrounding narration or the line she is answering<br />
+&quot;THE VERBATIM LINE, exactly as in the file, including any narration inside the quote paragraph.&quot;</p>
+<p>Do NOT paraphrase or alter a single word. Do NOT include lines by other speakers. Your final message must be the list itself and nothing else — no preamble, no summary.</p></blockquote>
 
 
-<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/chapters/ | head -40</p>
+<p>🔧 Bash: ls <span class="redacted">redacted</span>/chapters/ | head -40</p>
 <p>✅ 32 lines, 724 chars</p>
-<p>🔧 Bash: grep -c "<span class="redacted">redacted: character</span>" <span class="redacted">redacted: private</span>/chapters/0[1-3][0-9]*.md 2&gt;/dev/null…</p>
+<p>🔧 Bash: grep -c "<span class="redacted">redacted</span>" <span class="redacted">redacted</span>/chapters/0[1-3][0-9]*.md 2&gt;/dev/null | grep -v ":0"</p>
 <p>✅ 20 lines, 1410 chars</p>
 
 <div class="assistant-prose">
@@ -42,7 +51,7 @@ Do NOT paraphrase or alter a single word. Do NOT include lines by other speakers
 <p>✅ 222 lines, 20705 chars</p>
 
 <div class="assistant-prose">
-<p>I have plenty of <span class="redacted">redacted: character</span> lines from these two chapters. Let me quickly check a few more chapters to round out the range.</p>
+<p>I have plenty of <span class="redacted">redacted</span> lines from these two chapters. Let me quickly check a few more chapters to round out the range.</p>
 </div>
 
 <p>🔧 Read chapters/016-the-fen-margin.md</p>
@@ -52,81 +61,81 @@ Do NOT paraphrase or alter a single word. Do NOT include lines by other speakers
 
 <div class="assistant-prose">
 <p>I have enough material now. Let me compile 35 lines spanning the range required.</p>
-<p>[chapters/014-the-overdue-delve.md] <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-"Who put these in?"</p>
-<p>[chapters/014-the-overdue-delve.md] Edwin explains he built the twig line off Tess and Burl's memory; she assesses what she herself has to offer:<br>
-"More than what I've got. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] <span class="redacted">redacted: character</span> crouches by the fourth twig and asks Edwin to price his own evidence honestly:<br>
+<p>[chapters/014-the-overdue-delve.md] <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;Who put these in?&quot;</p>
+<p>[chapters/014-the-overdue-delve.md] Edwin explains he built the twig line off Tess and Burl's memory; she assesses what she herself has to offer:<br />
+&quot;More than what I've got. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] <span class="redacted">redacted</span> crouches by the fourth twig and asks Edwin to price his own evidence honestly:<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Responding to Edwin's <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-"It'll have moved. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Summing up what she has told <span class="redacted">redacted: character</span> three months running and gotten nowhere with:<br>
-<span class="redacted">redacted sentence: unpublished prose</span> "Things you've no name for. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] After Edwin notes none of it is written down anywhere either:<br>
-"<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Stopping Edwin short of the Deep's mouth:<br>
-"Stand here," she said. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Edwin asks what he's doing; she answers flatly:<br>
-"Standing there. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] After Edwin reports on the air:<br>
-"Yes. <span class="redacted">redacted sentence: unpublished prose</span> "It draws in. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Answering how long the mouth has been blowing out, with a long recital of dates:<br>
+<p>[chapters/014-the-overdue-delve.md] Responding to Edwin's <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;It'll have moved. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] Summing up what she has told <span class="redacted">redacted</span> three months running and gotten nowhere with:<br />
+<span class="redacted">redacted sentence: unpublished prose</span> &quot;Things you've no name for. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] After Edwin notes none of it is written down anywhere either:<br />
+&quot;<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] Stopping Edwin short of the Deep's mouth:<br />
+&quot;Stand here,&quot; she said. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] Edwin asks what he's doing; she answers flatly:<br />
+&quot;Standing there. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] After Edwin reports on the air:<br />
+&quot;Yes. <span class="redacted">redacted sentence: unpublished prose</span> &quot;It draws in. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] Answering how long the mouth has been blowing out, with a long recital of dates:<br />
 <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> On the twenty-eighth it drew. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Directing Edwin's attention to a second sense:<br>
-"And the sound," said <span class="redacted">redacted: character</span>.</p>
-<p>[chapters/014-the-overdue-delve.md] Answering Edwin's claim to hear a river underground:<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Coming out of the mouth after checking the first chamber:<br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> It goes to the walls."</p>
-<p>[chapters/014-the-overdue-delve.md] Edwin asks what the things are; she waves it off:<br>
-"Small stuff, mostly, by the sign. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> "Never mind what they are. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Edwin asks how long peat holds a mark; her answer is one clause:<br>
-"A week in this weather."</p>
-<p>[chapters/014-the-overdue-delve.md] After Edwin identifies the flattened sedge as the same road as her twig line, she concedes a miss:<br>
+<p>[chapters/014-the-overdue-delve.md] Directing Edwin's attention to a second sense:<br />
+&quot;And the sound,&quot; said <span class="redacted">redacted</span>.</p>
+<p>[chapters/014-the-overdue-delve.md] Answering Edwin's claim to hear a river underground:<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] Coming out of the mouth after checking the first chamber:<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> It goes to the walls.&quot;</p>
+<p>[chapters/014-the-overdue-delve.md] Edwin asks what the things are; she waves it off:<br />
+&quot;Small stuff, mostly, by the sign. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> &quot;Never mind what they are. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] Edwin asks how long peat holds a mark; her answer is one clause:<br />
+&quot;A week in this weather.&quot;</p>
+<p>[chapters/014-the-overdue-delve.md] After Edwin identifies the flattened sedge as the same road as her twig line, she concedes a miss:<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] <span class="redacted">redacted: character</span> tells her the guildmaster ruled the muster date and the money hasn't changed; her flat reply:<br>
-"Then get me the hands," said <span class="redacted">redacted: character</span>.</p>
-<p>[chapters/014-the-overdue-delve.md] <span class="redacted">redacted: character</span> asks on what grounds:<br>
+<p>[chapters/014-the-overdue-delve.md] <span class="redacted">redacted</span> tells her the guildmaster ruled the muster date and the money hasn't changed; her flat reply:<br />
+&quot;Then get me the hands,&quot; said <span class="redacted">redacted</span>.</p>
+<p>[chapters/014-the-overdue-delve.md] <span class="redacted">redacted</span> asks on what grounds:<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Asked whether <span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span><br>
-"Both ways. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Reciting the distance and status of the two neighbouring bands, with numbers and dates:<br>
-"Fellowship's sixty miles south-east. Wardens are forty north." <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>. <span class="redacted">redacted sentence: unpublished prose</span> Fellowship I couldn't say. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Working out the roster shortfall down to a hard number:<br>
-"I'm short four for <span class="redacted">redacted: event</span>, and I'm short eight for <span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> That's how people get killed. Four on the margin. Four's thin. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> There's no second six. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p><span class="redacted">redacted sentence: unpublished prose</span><br>
-"Eight," said <span class="redacted">redacted: character</span>, over his shoulder. "Four each. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/014-the-overdue-delve.md] Working the arithmetic of the post riders' travel times, ending with a bleak forecast:<br>
-"Four to <span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/015-the-break-night.md] Reporting to Edwin how the mouth's state has worsened, in front of the day book:<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/015-the-break-night.md] Telling <span class="redacted">redacted: character</span> to fetch the guildmaster, who is at his sister's:<br>
+<p>[chapters/014-the-overdue-delve.md] Asked whether <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;Both ways. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] Reciting the distance and status of the two neighbouring bands, with numbers and dates:<br />
+&quot;Fellowship's sixty miles south-east. Wardens are forty north.&quot; <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> Fellowship I couldn't say. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] Working out the roster shortfall down to a hard number:<br />
+&quot;I'm short four for <span class="redacted">redacted</span>, and I'm short eight for <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> That's how people get killed. Four on the margin. Four's thin. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> There's no second six. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br />
+&quot;Eight,&quot; said <span class="redacted">redacted</span>, over his shoulder. &quot;Four each. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/014-the-overdue-delve.md] Working the arithmetic of the post riders' travel times, ending with a bleak forecast:<br />
+&quot;Four to <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/015-the-break-night.md] Reporting to Edwin how the mouth's state has worsened, in front of the day book:<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/015-the-break-night.md] Telling <span class="redacted">redacted</span> to fetch the guildmaster, who is at his sister's:<br />
 <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/015-the-break-night.md] Giving the rule of thumb that says the parish has run out of time:<br>
-<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> There's nobody coming."</p>
-<p>[chapters/015-the-break-night.md] After Sennet worries aloud about three hundred ewes:<br>
+<p>[chapters/015-the-break-night.md] Giving the rule of thumb that says the parish has run out of time:<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> There's nobody coming.&quot;</p>
+<p>[chapters/015-the-break-night.md] After Sennet worries aloud about three hundred ewes:<br />
 <span class="redacted">redacted sentence: unpublished prose</span> I'll help you drive them. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/015-the-break-night.md] Bluntly assessing Edwin's exhaustion on the alehouse step:<br>
-"You're grey," she said.</p>
-<p>[chapters/015-the-break-night.md] Telling Edwin she already knows and has already written down what he told her on the causeway:<br>
-"I know," said <span class="redacted">redacted: character</span>. "You said it on the causeway. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/015-the-break-night.md] Answering Edwin's warning that they may lose somebody anyway, then getting up to go:<br>
-"Yes," said <span class="redacted">redacted: character</span>, and got up.</p>
-<p>[chapters/016-the-fen-margin.md] Directing the line as the <span class="redacted">redacted: object</span> come through the lamp doorway:<br>
-"On the lamps," said <span class="redacted">redacted: character</span>. "Not past them. <span class="redacted">redacted: character</span>, your line's the lamps."</p>
-<p>[chapters/016-the-fen-margin.md] Correcting Peri's swing, then approving the next kill:<br>
-"Good," said <span class="redacted">redacted: character</span>, not looking round. "Again like that. <span class="redacted">redacted: character</span>, count."</p>
-<p>[chapters/016-the-fen-margin.md] <span class="redacted">redacted: character</span> reports the <span class="redacted">redacted: object</span> are going round; her one-word question:<br>
-"Where?"</p>
-<p>[chapters/016-the-fen-margin.md] Telling the line to leave whatever's heading for the withy bed:<br>
-<span class="redacted">redacted sentence: unpublished prose</span> "Nobody follows. <span class="redacted">redacted sentence: unpublished prose</span> Hold the road."</p>
-<p>[chapters/016-the-fen-margin.md] Asked what she does with Edwin's read on dry ground, a plain question back:<br>
-"All right," said <span class="redacted">redacted: character</span>. "What do I do with that?"</p>
-<p>[chapters/016-the-fen-margin.md] After the thing she hooked instead of thrust nearly cost the Hobbs woman her life, admitting fault in front of five people:<br>
+<p>[chapters/015-the-break-night.md] Bluntly assessing Edwin's exhaustion on the alehouse step:<br />
+&quot;You're grey,&quot; she said.</p>
+<p>[chapters/015-the-break-night.md] Telling Edwin she already knows and has already written down what he told her on the causeway:<br />
+&quot;I know,&quot; said <span class="redacted">redacted</span>. &quot;You said it on the causeway. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/015-the-break-night.md] Answering Edwin's warning that they may lose somebody anyway, then getting up to go:<br />
+&quot;Yes,&quot; said <span class="redacted">redacted</span>, and got up.</p>
+<p>[chapters/016-the-fen-margin.md] Directing the line as the <span class="redacted">redacted</span> come through the lamp doorway:<br />
+&quot;On the lamps,&quot; said <span class="redacted">redacted</span>. &quot;Not past them. <span class="redacted">redacted</span>, your line's the lamps.&quot;</p>
+<p>[chapters/016-the-fen-margin.md] Correcting Peri's swing, then approving the next kill:<br />
+&quot;Good,&quot; said <span class="redacted">redacted</span>, not looking round. &quot;Again like that. <span class="redacted">redacted</span>, count.&quot;</p>
+<p>[chapters/016-the-fen-margin.md] <span class="redacted">redacted</span> reports the <span class="redacted">redacted</span> are going round; her one-word question:<br />
+&quot;Where?&quot;</p>
+<p>[chapters/016-the-fen-margin.md] Telling the line to leave whatever's heading for the withy bed:<br />
+<span class="redacted">redacted sentence: unpublished prose</span> &quot;Nobody follows. <span class="redacted">redacted sentence: unpublished prose</span> Hold the road.&quot;</p>
+<p>[chapters/016-the-fen-margin.md] Asked what she does with Edwin's read on dry ground, a plain question back:<br />
+&quot;All right,&quot; said <span class="redacted">redacted</span>. &quot;What do I do with that?&quot;</p>
+<p>[chapters/016-the-fen-margin.md] After the thing she hooked instead of thrust nearly cost the Hobbs woman her life, admitting fault in front of five people:<br />
 <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/016-the-fen-margin.md] Confirming the mist has arrived as promised and giving the order to withdraw:<br>
-"That's four," said <span class="redacted">redacted: character</span>. "Everybody in. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>[chapters/016-the-fen-margin.md] Delivering the casualty count at noon, in the room, with numbers exact and grim:<br>
-<span class="redacted">redacted sentence: unpublished prose</span> "Hurt: nine. Two badly. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Six dogs killed. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/016-the-fen-margin.md] Confirming the mist has arrived as promised and giving the order to withdraw:<br />
+&quot;That's four,&quot; said <span class="redacted">redacted</span>. &quot;Everybody in. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>[chapters/016-the-fen-margin.md] Delivering the casualty count at noon, in the room, with numbers exact and grim:<br />
+<span class="redacted">redacted sentence: unpublished prose</span> &quot;Hurt: nine. Two badly. <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> Six dogs killed. <span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 </body></html>

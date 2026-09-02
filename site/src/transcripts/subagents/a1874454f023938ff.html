@@ -7,46 +7,58 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>This is a capability probe. Do not do any file work.  1. Call ListAge…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a1874454f023938ff">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-This is a capability probe. Do not do any file work.<br>
-<br>
-1. Call ListAgents and report the EXACT full output verbatim.<br>
-2. Report whether a tool named SendMessage is available to you. If its schema is not loaded, try ToolSearch with query "select:SendMessage" and report whether that succeeds and what the schema says.<br>
-3. If SendMessage is available, try to send a message to an agent named "probe-b" and report the exact error or success text.<br>
-<br>
-Your final message: the verbatim ListAgents output, whether SendMessage exists for you, and the exact result of the send attempt. Be literal and complete — quote tool outputs exactly, do not summarise.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>This is a capability probe. Do not do any file work.  1. Call ListAge…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a1874454f023938ff">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>This is a capability probe. Do not do any file work.</p>
+<ol>
+<li>Call ListAgents and report the EXACT full output verbatim.</li>
+<li>Report whether a tool named SendMessage is available to you. If its schema is not loaded, try ToolSearch with query &quot;select:SendMessage&quot; and report whether that succeeds and what the schema says.</li>
+<li>If SendMessage is available, try to send a message to an agent named &quot;probe-b&quot; and report the exact error or success text.</li>
+</ol>
+<p>Your final message: the verbatim ListAgents output, whether SendMessage exists for you, and the exact result of the send attempt. Be literal and complete — quote tool outputs exactly, do not summarise.</p></blockquote>
 
 
 <details><summary>6 tool calls</summary>
-<p>🔧 ToolSearch</p>
+<p>🔧 ToolSearch ({"query": "select:ListAgents", "max_results": 5})</p>
 <p>✅ 1 lines, 32 chars</p>
-<p>🔧 ToolSearch</p>
+<p>🔧 ToolSearch ({"query": "select:SendMessage", "max_results": 5})</p>
 <p>✅ 1 lines, 54 chars</p>
-<p>🔧 ToolSearch</p>
+<p>🔧 ToolSearch ({"query": "list agents teammates", "max_results": 10})</p>
 <p>✅ 3 lines, 164 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>ListAgents does not appear to exist as a tool in this environment — ToolSearch cannot find it under any query I tried ("select:ListAgents", "list agents teammates"), and it is not among the deferred tools listed in the system reminders (EnterWorktree, ExitWorktree, Monitor, NotebookEdit, SendMessage, TaskStop, WebFetch, WebSearch, plus the Gmail/Calendar/Drive MCP tools). So I cannot report verbatim ListAgents output — the tool is unavailable to me, not merely unloaded.</p>
-<p>Now attempting the SendMessage call to "probe-b" as requested.</p>
+<p>ListAgents does not appear to exist as a tool in this environment — ToolSearch cannot find it under any query I tried (&quot;select:ListAgents&quot;, &quot;list agents teammates&quot;), and it is not among the deferred tools listed in the system reminders (EnterWorktree, ExitWorktree, Monitor, NotebookEdit, SendMessage, TaskStop, WebFetch, WebSearch, plus the Gmail/Calendar/Drive MCP tools). So I cannot report verbatim ListAgents output — the tool is unavailable to me, not merely unloaded.</p>
+<p>Now attempting the SendMessage call to &quot;probe-b&quot; as requested.</p>
 </div>
 
-<p>🔧 SendMessage</p>
+<p>🔧 SendMessage ({"to": "probe-b", "message": "probe", "type": "message", "r…)</p>
 <p>✅ 1 lines, 149 chars</p>
 
 <div class="assistant-prose">
 <p>Report:</p>
-<p>**1. ListAgents:** Not available. I attempted `ToolSearch` with query `"select:ListAgents"` (result: `No matching deferred tools found`) and with query `"list agents teammates"` (returned only `SendMessage`, `EnterWorktree`, and `WebSearch` — no `ListAgents`). No tool named `ListAgents` is listed in the deferred-tools system reminders either. I have no verbatim output to give because the tool does not exist in my toolset.</p>
-<p>**2. SendMessage:** Available. It was not initially loaded (only listed by name in the deferred-tools reminder), but `ToolSearch` with query `"select:SendMessage"` succeeded and loaded its full schema. Schema summary: takes `to` (recipient — teammate name, `"main"`, or an agent from `ListAgents`, optionally with a `[ref]` suffix), `message` (plain text content), optional `summary` (5-10 word UI preview), and optional `notify_when_idle` (boolean, one-shot idle notification subscription).</p>
-<p>**3. Send attempt to "probe-b":** Called `SendMessage` with `to: "probe-b"`, `message: "probe"`. Exact result:</p>
-<p>```<br>
-{"success":false,"message":"No agent named 'probe-b' is reachable.\nCheck the spelling, or use the agent ID from a background agent's spawn result."}<br>
-```</p>
+<p><strong>1. ListAgents:</strong> Not available. I attempted <code>ToolSearch</code> with query <code>&quot;select:ListAgents&quot;</code> (result: <code>No matching deferred tools found</code>) and with query <code>&quot;list agents teammates&quot;</code> (returned only <code>SendMessage</code>, <code>EnterWorktree</code>, and <code>WebSearch</code> — no <code>ListAgents</code>). No tool named <code>ListAgents</code> is listed in the deferred-tools system reminders either. I have no verbatim output to give because the tool does not exist in my toolset.</p>
+<p><strong>2. SendMessage:</strong> Available. It was not initially loaded (only listed by name in the deferred-tools reminder), but <code>ToolSearch</code> with query <code>&quot;select:SendMessage&quot;</code> succeeded and loaded its full schema. Schema summary: takes <code>to</code> (recipient — teammate name, <code>&quot;main&quot;</code>, or an agent from <code>ListAgents</code>, optionally with a <code>[ref]</code> suffix), <code>message</code> (plain text content), optional <code>summary</code> (5-10 word UI preview), and optional <code>notify_when_idle</code> (boolean, one-shot idle notification subscription).</p>
+<p><strong>3. Send attempt to &quot;probe-b&quot;:</strong> Called <code>SendMessage</code> with <code>to: &quot;probe-b&quot;</code>, <code>message: &quot;probe&quot;</code>. Exact result:</p>
+<pre><code>{&quot;success&quot;:false,&quot;message&quot;:&quot;No agent named 'probe-b' is reachable.\nCheck the spelling, or use the agent ID from a background agent's spawn result.&quot;}
+</code></pre>
 </div>
 </body></html>

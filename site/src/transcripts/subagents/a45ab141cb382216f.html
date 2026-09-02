@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a45ab141cb382216f">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="wit", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/08-what-youre-standing-in.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a45ab141cb382216f">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;wit&quot;, and scope includes &quot;scene&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/scenes/08-what-youre-standing-in.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -26,7 +39,7 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>🔧 Read draft/book-01/scenes/08-what-youre-standing-in.md</p>
 <p>✅ 56 lines, 3313 chars</p>
 <p>✅ 1216 lines, 49319 chars</p>
-<p>🔧 Bash: grep -n '"tier": "semantic"' <span class="redacted">redacted: private</span>/tools/lint/rules.json | grep -A 5 '"lens…</p>
+<p>🔧 Bash: grep -n '"tier": "semantic"' <span class="redacted">redacted</span>/tools/lint/rules.json | grep -A 5 '"lens": "wit"'</p>
 <p>✅ 1 lines, 31 chars</p>
 <p>🔧 Bash: jq '.[] | select(.tier == "semantic" and .lens == "wit" and (.scope | contains(["scene"])…</p>
 <p>✅ 10 lines, 228 chars</p>
@@ -40,32 +53,40 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>✅ 224 lines, 9606 chars</p>
 
 <div class="assistant-prose">
-<p>Now let me analyze the scene against the semantic wit rules with scope including "scene".</p>
-<p>The filtered rules are:<br>
-1. **triad-swerve-budget** - Triads where the third item confesses/swerves; max 1 per scene<br>
-2. **long-build-short-drop-budget** - Long ornate sentence + short punchy fragment; max 2 per scene  <br>
-3. **quiet-the-way-budget** - "quiet the way X is quiet" variants; max 1 per scene<br>
-4. **aphorism-budget** - Narrator aphorisms; max 1 per scene, must stay particular<br>
-5. **ornament-wit** - Jokes from narrator decoration, not from events/character<br>
-6. **jukebox-flourish** - Flourish with no nameable job<br>
-7. **wrong-world-metaphor** - Metaphor from non-existent world mechanics<br>
-8. **joke-rhythm-no-logic** - Shape of a good line with no underlying proposition<br>
-9. **weak-comic-beat-flat** - Funny observation in low-energy stage-direction register<br>
-10. **joke-character-could-not-make** - Dialogue funny for reader but character wouldn't sincerely say</p>
+<p>Now let me analyze the scene against the semantic wit rules with scope including &quot;scene&quot;.</p>
+<p>The filtered rules are:</p>
+<ol>
+<li><strong>triad-swerve-budget</strong> - Triads where the third item confesses/swerves; max 1 per scene</li>
+<li><strong>long-build-short-drop-budget</strong> - Long ornate sentence + short punchy fragment; max 2 per scene</li>
+<li><strong>quiet-the-way-budget</strong> - &quot;quiet the way X is quiet&quot; variants; max 1 per scene</li>
+<li><strong>aphorism-budget</strong> - Narrator aphorisms; max 1 per scene, must stay particular</li>
+<li><strong>ornament-wit</strong> - Jokes from narrator decoration, not from events/character</li>
+<li><strong>jukebox-flourish</strong> - Flourish with no nameable job</li>
+<li><strong>wrong-world-metaphor</strong> - Metaphor from non-existent world mechanics</li>
+<li><strong>joke-rhythm-no-logic</strong> - Shape of a good line with no underlying proposition</li>
+<li><strong>weak-comic-beat-flat</strong> - Funny observation in low-energy stage-direction register</li>
+<li><strong>joke-character-could-not-make</strong> - Dialogue funny for reader but character wouldn't sincerely say</li>
+</ol>
 <p>Let me examine the scene systematically for candidates:</p>
-<p>**Line 11:** "Peri had gone still. <span class="redacted">redacted sentence: unpublished prose</span><br>
-- Neighboring: "Widow Sepp waited until the trowels were down. She had been watching Peri sideways all morning..." (before) and "A hunger year,' she said." (after)<br>
-- This describes Peri's actual mental state. Not ornament-wit.</p>
-<p>**Line 37:** "The farmwives looked at things that were not Edwin, out of courtesy, and Dob looked straight at him, having no courtesy yet."<br>
-- Neighboring: "You'd need - you taught the teachers. Every parish, not one. For three hundred years." (before) and "'The class runs to eleven,' said Sorrel, from the gate." (after)<br>
-- Humor here comes from contrast between polite adults and impolite child—event-sourced, not decoration.</p>
-<p>**Line 47:** "Eleven years, and Edwin still could not read her when she did that."<br>
-- Neighboring: "'So I've heard.' (before) and "Peri opened her mouth, closed it, settled on 'Thank you for having me,' and went off down the bends." (after)<br>
-- This is the only narrator aphorism in the scene, staying particular to Edwin and Sorrel's specific relationship. Within budget of 1.</p>
-<p>**Triads, quiet-the-way constructions, jukebox-flourishes, wrong-world metaphors:** None found in the scene.</p>
-<p>**Scene length:** 56 lines ≈ 470-500 words (below the 600-word minimum, but this may be a fragment pending chapter assembly).</p>
+<p><strong>Line 11:</strong> &quot;Peri had gone still. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<ul>
+<li>Neighboring: &quot;Widow Sepp waited until the trowels were down. She had been watching Peri sideways all morning...&quot; (before) and &quot;A hunger year,' she said.&quot; (after)</li>
+<li>This describes Peri's actual mental state. Not ornament-wit.</li>
+</ul>
+<p><strong>Line 37:</strong> &quot;The farmwives looked at things that were not Edwin, out of courtesy, and Dob looked straight at him, having no courtesy yet.&quot;</p>
+<ul>
+<li>Neighboring: &quot;You'd need - you taught the teachers. Every parish, not one. For three hundred years.&quot; (before) and &quot;'The class runs to eleven,' said Sorrel, from the gate.&quot; (after)</li>
+<li>Humor here comes from contrast between polite adults and impolite child—event-sourced, not decoration.</li>
+</ul>
+<p><strong>Line 47:</strong> &quot;Eleven years, and Edwin still could not read her when she did that.&quot;</p>
+<ul>
+<li>Neighboring: &quot;'So I've heard.' (before) and &quot;Peri opened her mouth, closed it, settled on 'Thank you for having me,' and went off down the bends.&quot; (after)</li>
+<li>This is the only narrator aphorism in the scene, staying particular to Edwin and Sorrel's specific relationship. Within budget of 1.</li>
+</ul>
+<p><strong>Triads, quiet-the-way constructions, jukebox-flourishes, wrong-world metaphors:</strong> None found in the scene.</p>
+<p><strong>Scene length:</strong> 56 lines ≈ 470-500 words (below the 600-word minimum, but this may be a fragment pending chapter assembly).</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

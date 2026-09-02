@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,17 +7,30 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ae07a5a5a6773a4bc">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/author-notes/ whose name starts with the two-digit number 27-. Read it in full.<br>
-LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id "sense".<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ae07a5a5a6773a4bc">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/author-notes/ whose name starts with the two-digit number 27-. Read it in full.<br />
+LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id &quot;sense&quot;.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
@@ -25,29 +38,33 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>I'll help you lint the author notes file for sense-coherence issues. Let me first locate and read the target file.</p>
 </div>
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/author-notes/ -name "27-*.md" -type f</p>
-<p>✅ 1 lines, 97 chars — <span class="redacted">redacted: private</span>/draft/book-01/author-notes/27-the-cellar-at-saltings-corner.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/author-notes/ -name "27-*.md" -type f</p>
+<p>✅ 1 lines, 97 chars — <span class="redacted">redacted</span>/draft/book-01/author-notes/27-the-cellar-at-saltings-corner.md</p>
 <p>🔧 Read draft/book-01/author-notes/27-the-cellar-at-saltings-corner.md</p>
 <p>✅ 4 lines, 1289 chars</p>
 
 <div class="assistant-prose">
 <p>Now let me carefully analyze the file for sense-coherence issues. I'll examine each section and check the logical coherence of factual claims.</p>
-<p>**The fall section:**</p>
-<p>Reading through this, let me check each major claim:<br>
-1. Water moves through drains because drains go downhill - clear<br>
-2. A flat or backward-sloping drain holds water instead of carrying it - logical consequence<br>
-3. <span class="redacted">redacted sentence: unpublished prose</span><br>
-4. "The fall wanted is often too small to see by eye, and it is not optional, and it has to be there the whole way, because one dip in the run collects silt, and a silted pipe holds water at that point whatever the two ends are doing" - this is coherent (the required slope is small but critical; any dip collects silt and blocks flow)<br>
-5. <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**The keeping eels section:**</p>
-<p>Let me carefully examine: "eels take a good deal of their oxygen through their skin, so they will live for a long time in cool wet conditions that would kill anything else on the slab"</p>
-<p>Reading the context:<br>
-- Previous sentence establishes eels breathe through skin<br>
-- This sentence should explain why that matters<br>
-- Following context: "which is why the fens kept them alive in tanks and floating chests"</p>
-<p>The phrase "cool wet conditions that would kill anything else on the slab" is contradictory in its terms. A "slab" in fishmonger/food preservation context is a dry display surface. Cool wet conditions would not kill something *on* a slab—a slab is inherently not wet. The phrase confuses whether we're talking about conditions in water (tanks/chests) or conditions on a dry surface (slab). The comparative logic is unclear: is it saying other things would die if put in the same tanks, or that eels survive conditions that would kill a dry-preservation approach? A reader would need to re-read to disambiguate what "on the slab" modifies and how it relates to the "cool wet conditions."</p>
+<p><strong>The fall section:</strong></p>
+<p>Reading through this, let me check each major claim:</p>
+<ol>
+<li>Water moves through drains because drains go downhill - clear</li>
+<li>A flat or backward-sloping drain holds water instead of carrying it - logical consequence</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>&quot;The fall wanted is often too small to see by eye, and it is not optional, and it has to be there the whole way, because one dip in the run collects silt, and a silted pipe holds water at that point whatever the two ends are doing&quot; - this is coherent (the required slope is small but critical; any dip collects silt and blocks flow)</li>
+<li><span class="redacted">redacted sentence: unpublished prose</span></li>
+</ol>
+<p><strong>The keeping eels section:</strong></p>
+<p>Let me carefully examine: &quot;eels take a good deal of their oxygen through their skin, so they will live for a long time in cool wet conditions that would kill anything else on the slab&quot;</p>
+<p>Reading the context:</p>
+<ul>
+<li>Previous sentence establishes eels breathe through skin</li>
+<li>This sentence should explain why that matters</li>
+<li>Following context: &quot;which is why the fens kept them alive in tanks and floating chests&quot;</li>
+</ul>
+<p>The phrase &quot;cool wet conditions that would kill anything else on the slab&quot; is contradictory in its terms. A &quot;slab&quot; in fishmonger/food preservation context is a dry display surface. Cool wet conditions would not kill something <em>on</em> a slab—a slab is inherently not wet. The phrase confuses whether we're talking about conditions in water (tanks/chests) or conditions on a dry surface (slab). The comparative logic is unclear: is it saying other things would die if put in the same tanks, or that eels survive conditions that would kill a dry-preservation approach? A reader would need to re-read to disambiguate what &quot;on the slab&quot; modifies and how it relates to the &quot;cool wet conditions.&quot;</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": [{"rule_id": "sense", "quote": "they will live…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

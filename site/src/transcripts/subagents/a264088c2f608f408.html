@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Hou…</title><style>
+<html><head><meta charset="utf-8"><title>Repo: [redacted]. [redacted] House-word c…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,15 +7,28 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Hou…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a264088c2f608f408">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span> House-word convergence), .claude/skills/editing-pass/SKILL.md, then chapters/020-the-field-in-autumn.md in full.<br>
-You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span><br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Repo: [redacted]. [redacted] House-word c…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a264088c2f608f408">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-24</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Repo: <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> House-word convergence), .claude/skills/editing-pass/SKILL.md, then chapters/020-the-field-in-autumn.md in full.<br />
+You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span><br />
 Report ONLY findings within your lens, compactly, each as: quote (short) | problem | suggested fix. Precision matters: invented problems are as bad as misses. Do NOT declare the chapter clean or certify anything — absence of findings is simply an empty list.</p></blockquote>
 
 
@@ -26,42 +39,42 @@ Report ONLY findings within your lens, compactly, each as: quote (short) | probl
 <p>✅ 161 lines, 10468 chars</p>
 <p>🔧 Read chapters/020-the-field-in-autumn.md</p>
 <p>✅ 247 lines, 23131 chars</p>
-<p>🔧 Bash: wc -w <span class="redacted">redacted: private</span>/chapters/020-the-field-in-autumn.md ⟦redacted sentence: unpubli…</p>
+<p>🔧 Bash: wc -w <span class="redacted">redacted</span>/chapters/020-the-field-in-autumn.md <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 38 lines, 572 chars</p>
-<p>🔧 Bash: python3 -c " import re text = open('<span class="redacted">redacted: private</span>/chapters/020-the-field-in-autumn.…</p>
+<p>🔧 Bash: python3 -c " import re text = open('<span class="redacted">redacted</span>/chapters/020-the-field-in-autumn.md').read…</p>
 <p>✅ 4 lines, 57 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Em-dash count: 0. Not a finding (well within budget; the en-dash at line 21 is a range marker "chains eighteen–" style, not the banned construction).</p>
+<p>Em-dash count: 0. Not a finding (well within budget; the en-dash at line 21 is a range marker &quot;chains eighteen–&quot; style, not the banned construction).</p>
 <p>Now checking for banned constructions and Earth month names.</p>
 </div>
 
 <details><summary>14 tool calls</summary>
-<p>🔧 Bash: grep -no "not [a-z]*[^.]*, but \|not [a-z]* but " <span class="redacted">redacted: private</span>/chapters/020-the-fi…</p>
+<p>🔧 Bash: grep -no "not [a-z]*[^.]*, but \|not [a-z]* but " <span class="redacted">redacted</span>/chapters/020-the-field-in-au…</p>
 <p>✅ 3 lines, 70 chars</p>
-<p>🔧 Bash: grep -no ".\{15\}\(nobody\|somebody\|anybody\).\{15\}" <span class="redacted">redacted: private</span>/chapters/020-t…</p>
+<p>🔧 Bash: grep -no ".\{15\}\(nobody\|somebody\|anybody\).\{15\}" <span class="redacted">redacted</span>/chapters/020-the-field-…</p>
 <p>✅ 15 lines, 653 chars</p>
-<p>🔧 Bash: grep -noi ".\{15\}\(nobody\|somebody\|anybody\).\{15\}" <span class="redacted">redacted: private</span>/chapters/020-…</p>
+<p>🔧 Bash: grep -noi ".\{15\}\(nobody\|somebody\|anybody\).\{15\}" <span class="redacted">redacted</span>/chapters/020-the-field…</p>
 <p>✅ 15 lines, 650 chars</p>
-<p>🔧 Bash: grep -oiE "nobody|somebody|anybody" <span class="redacted">redacted: private</span>/chapters/020-the-field-in-autumn.…</p>
+<p>🔧 Bash: grep -oiE "nobody|somebody|anybody" <span class="redacted">redacted</span>/chapters/020-the-field-in-autumn.md | wc -…</p>
 <p>✅ 5 lines, 349 chars</p>
-<p>🔧 Bash: grep -noE "[Nn]ot [a-zA-Z' ]{2,25}, ?but " <span class="redacted">redacted: private</span>/chapters/020-the-field-in-…</p>
+<p>🔧 Bash: grep -noE "[Nn]ot [a-zA-Z' ]{2,25}, ?but " <span class="redacted">redacted</span>/chapters/020-the-field-in-autumn.md…</p>
 <p>✅ 3 lines, 71 chars</p>
-<p>🔧 Bash: grep -no "which is why\|which she knew\|which he knew\|knowing that\|which was" ⟦redacted…</p>
+<p>🔧 Bash: grep -no "which is why\|which she knew\|which he knew\|knowing that\|which was" <span class="redacted">redacted</span>…</p>
 <p>✅ 4 lines, 52 chars</p>
-<p>🔧 Bash: grep -no ".\{10\}like a .\{20\}\|.\{10\}as if .\{20\}\|.\{10\}as a .\{20\}" ⟦redacted: pr…</p>
+<p>🔧 Bash: grep -no ".\{10\}like a .\{20\}\|.\{10\}as if .\{20\}\|.\{10\}as a .\{20\}" <span class="redacted">redacted</span>/ch…</p>
 <p>✅ 6 lines, 239 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>## Findings — Register &amp; Mechanical lens</p>
-<p>**House-word convergence: nobody/somebody/anybody**<br>
-15 instances in 4,287 words (~35/10k) — well above the 2026-08-24 census target of halving the prior ~22/10k rate (i.e. target ~11/10k). <span class="redacted">redacted sentence: unpublished prose</span> | Concentrated indefinite-pronoun tic recurring at fingerprint rate in a single chapter. | Cut or replace at least half — several (esp. 93, 107, 233) can be named characters or dropped ("which nobody had planned" → "unplanned").</p>
-<p>**House-word convergence: "the whole of"**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> | This chapter alone is running the phrase at several times the already-flagged manuscript rate — reads as convergence within convergence. | Vary at least 3–4 of these ("all of it," "entirely," restructure, or cut the intensifier).</p>
-<p>**Aphorism budget: scene 5 (Peri's debt / wayfaring exchange, lines ~137–185)**<br>
-<span class="redacted">redacted sentence: unpublished prose</span> | Voice rule caps narrator/character aphorisms at one per scene, and the second one generalizes outward to "nobody sensible" rather than staying stuck to Edwin's particular case. | Cut or flatten the second into a plain statement tied only to Peri's own choice.</p>
-<p>No Earth-month names found (compound months used throughout — Harvestmonth, Frostmonth, Cornmonth, Fallowmonth, Saltmonth all correct). Em-dash count: 0 (well under the ~2/1000-word budget). "Half past" appears once (line 147) — within canon norms, no fix needed. No instances of "arithmetic," "ordinary," or abstract-concrete jukebox similes found; the two "honest/honesty" instances (21, 179) are within budget. <span class="redacted">redacted sentence: unpublished prose</span> 'Go on, then.'" — a flat, forward-pointing cut with no closing cleverness; not a violation of the endings-are-cuts rule.</p>
+<h2>Findings — Register &amp; Mechanical lens</h2>
+<p><strong>House-word convergence: nobody/somebody/anybody</strong><br />
+15 instances in 4,287 words (~35/10k) — well above the 2026-08-24 census target of halving the prior ~22/10k rate (i.e. target ~11/10k). <span class="redacted">redacted sentence: unpublished prose</span> | Concentrated indefinite-pronoun tic recurring at fingerprint rate in a single chapter. | Cut or replace at least half — several (esp. 93, 107, 233) can be named characters or dropped (&quot;which nobody had planned&quot; → &quot;unplanned&quot;).</p>
+<p><strong>House-word convergence: &quot;the whole of&quot;</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> | This chapter alone is running the phrase at several times the already-flagged manuscript rate — reads as convergence within convergence. | Vary at least 3–4 of these (&quot;all of it,&quot; &quot;entirely,&quot; restructure, or cut the intensifier).</p>
+<p><strong>Aphorism budget: scene 5 (Peri's debt / wayfaring exchange, lines ~137–185)</strong><br />
+<span class="redacted">redacted sentence: unpublished prose</span> | Voice rule caps narrator/character aphorisms at one per scene, and the second one generalizes outward to &quot;nobody sensible&quot; rather than staying stuck to Edwin's particular case. | Cut or flatten the second into a plain statement tied only to Peri's own choice.</p>
+<p>No Earth-month names found (compound months used throughout — Harvestmonth, Frostmonth, Cornmonth, Fallowmonth, Saltmonth all correct). Em-dash count: 0 (well under the ~2/1000-word budget). &quot;Half past&quot; appears once (line 147) — within canon norms, no fix needed. No instances of &quot;arithmetic,&quot; &quot;ordinary,&quot; or abstract-concrete jukebox similes found; the two &quot;honest/honesty&quot; instances (21, 179) are within budget. <span class="redacted">redacted sentence: unpublished prose</span> 'Go on, then.'&quot; — a flat, forward-pointing cut with no closing cleverness; not a violation of the endings-are-cuts rule.</p>
 </div>
 </body></html>

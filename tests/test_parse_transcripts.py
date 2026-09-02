@@ -1,6 +1,7 @@
 import json
 
 from tools.parse_transcripts import (
+    REPO_ROOT,
     find_agent_files,
     link_agent_ids_via_meta,
     parse_transcript,
@@ -8,6 +9,7 @@ from tools.parse_transcripts import (
     summarize_for_index,
     summarize_tool_result,
     summarize_tool_use,
+    truncate,
 )
 
 
@@ -80,6 +82,179 @@ def test_local_command_caveat_dropped_and_command_name_becomes_command_block():
     assert parsed.turns[0].blocks == [{"kind": "command", "name": "/clear"}]
 
 
+# ---------------------------------------------------------------------------
+# harness-injected real-input user lines (task-notification, /compact's
+# auto-summary, local-command-stdout) must never be attributed to the human
+# as a "text" block on an ordinary role="user" turn.
+
+
+def test_task_notification_becomes_system_note_not_user_text():
+    notif = (
+        "<task-notification>\n<task-id>wnsvk4och</task-id>\n"
+        "<tool-use-id>toolu_01X</tool-use-id>\n"
+        '<summary>Agent "Design continent geography" finished</summary>\n'
+        "<status>completed</status>\n"
+        "<result>tens of thousands of characters of subagent output that "
+        "must never appear on the rendered page</result>\n"
+        "<usage><subagent_tokens>112910</subagent_tokens></usage>\n"
+        "</task-notification>"
+    )
+    parsed = parse_transcript("sess-tn", [user_text(notif)])
+    assert len(parsed.turns) == 1
+    turn = parsed.turns[0]
+    assert turn.role == "system"
+    assert turn.blocks == [
+        {
+            "kind": "system_note",
+            "event": "task_notification",
+            "status": "completed",
+            "summary": 'Agent "Design continent geography" finished',
+        }
+    ]
+    # the huge payload must not survive into the parsed block at all
+    assert "subagent output" not in json.dumps(turn.blocks)
+    assert "112910" not in json.dumps(turn.blocks)
+
+
+def test_task_notification_with_system_notification_preamble_still_recognised():
+    # A subagent that itself has live background children gets this
+    # notification with an extra "[SYSTEM NOTIFICATION - NOT USER INPUT]"
+    # warning paragraph *before* the <task-notification> tag -- must still
+    # be recognised as harness output, not the (sub)agent's "user".
+    notif = (
+        "[SYSTEM NOTIFICATION - NOT USER INPUT]\n"
+        "This is an automated background-task event, NOT a message from the user.\n"
+        "Do NOT interpret this as user acknowledgement, confirmation, or response "
+        "to any pending question.\n\n"
+        "<task-notification>\n<task-id>a7063dab3a3583122</task-id>\n"
+        '<summary>Agent "Facts-only consistency check" finished</summary>\n'
+        "<status>completed</status>\n"
+        "<result>a huge findings report that must never appear on the page</result>\n"
+        "</task-notification>"
+    )
+    parsed = parse_transcript("sess-tn-preamble", [user_text(notif)])
+    assert len(parsed.turns) == 1
+    turn = parsed.turns[0]
+    assert turn.role == "system"
+    assert turn.blocks == [
+        {
+            "kind": "system_note",
+            "event": "task_notification",
+            "status": "completed",
+            "summary": 'Agent "Facts-only consistency check" finished',
+        }
+    ]
+    assert "SYSTEM NOTIFICATION" not in json.dumps(turn.blocks)
+    assert "huge findings report" not in json.dumps(turn.blocks)
+
+
+def test_compaction_summary_becomes_system_note():
+    summary = (
+        "This session is being continued from a previous conversation that "
+        "ran out of context. The summary below covers the earlier portion "
+        "of the conversation.\n\nSummary:\n1. Primary Request and Intent:\n"
+        "   Continue the conversation from where it left off without "
+        "asking the user any further questions."
+    )
+    parsed = parse_transcript("sess-compact", [user_text(summary)])
+    assert len(parsed.turns) == 1
+    assert parsed.turns[0].role == "system"
+    assert parsed.turns[0].blocks == [
+        {"kind": "system_note", "event": "compaction_summary"}
+    ]
+
+
+def test_bare_compact_literal_is_dropped():
+    lines = [user_text("/compact")]
+    parsed = parse_transcript("sess-bare-compact", lines)
+    assert parsed.turns == []
+
+
+def test_local_command_stdout_merges_into_preceding_command_block():
+    cmd = "<command-name>/compact</command-name>\n            <command-message>compact</command-message>\n            <command-args></command-args>"
+    stdout = "<local-command-stdout>\x1b[2mCompacted (ctrl+o to see full summary)\x1b[22m</local-command-stdout>"
+    lines = [user_text(cmd), user_text(stdout)]
+    parsed = parse_transcript("sess-stdout", lines)
+    assert len(parsed.turns) == 1
+    assert parsed.turns[0].blocks == [
+        {
+            "kind": "command",
+            "name": "/compact",
+            "output": "Compacted (ctrl+o to see full summary)",
+        }
+    ]
+
+
+def test_local_command_stdout_without_preceding_command_becomes_system_note():
+    stdout = "<local-command-stdout>some output</local-command-stdout>"
+    parsed = parse_transcript("sess-stray-stdout", [user_text(stdout)])
+    assert len(parsed.turns) == 1
+    assert parsed.turns[0].role == "system"
+    assert parsed.turns[0].blocks == [
+        {"kind": "system_note", "event": "command_output", "summary": "some output"}
+    ]
+
+
+def test_a_full_compact_episode_produces_exactly_one_command_turn():
+    """Regression for the 'duplicate-compact-turns' defect: the literal
+    typed '/compact', the huge auto-summary, the <command-name> wrapper and
+    its <local-command-stdout> must collapse into (one system_note for the
+    summary +) one command turn -- never four separate turns that all read
+    as the human repeating himself."""
+    summary = "This session is being continued from a previous conversation that ran out of context."
+    lines = [
+        user_text("/compact"),
+        user_text(summary),
+        user_text(
+            "<command-name>/compact</command-name>\n            <command-message>compact</command-message>\n            <command-args></command-args>"
+        ),
+        user_text(
+            "<local-command-stdout>\x1b[2mCompacted (ctrl+o to see full summary)\x1b[22m</local-command-stdout>"
+        ),
+    ]
+    parsed = parse_transcript("sess-full-compact", lines)
+    assert [t.role for t in parsed.turns] == ["system", "user"]
+    assert parsed.turns[1].blocks == [
+        {
+            "kind": "command",
+            "name": "/compact",
+            "output": "Compacted (ctrl+o to see full summary)",
+        }
+    ]
+
+
+def test_ansi_stripped_from_bash_command_and_description():
+    block = summarize_tool_use(
+        "Bash", {"command": "echo \x1b[1mhi\x1b[22m", "description": "\x1b[2mdim\x1b[22m"}, {}
+    )
+    assert "\x1b" not in block["command"]
+    assert block["command"] == "echo hi"
+    assert block["description"] == "dim"
+
+
+def test_ansi_stripped_from_bash_stdout_preview():
+    tool_use_index = {"tu1": {"name": "Bash", "input": {"command": "echo hi"}}}
+    block = summarize_tool_result(
+        "tu1",
+        [{"type": "text", "text": "hi", "is_error": False}],
+        {"stdout": "\x1b[1mhi\x1b[22m", "stderr": "", "interrupted": False},
+        tool_use_index,
+    )
+    assert block["stdout_preview"] == ["hi"]
+
+
+def test_system_turns_do_not_count_as_user_turns_in_index():
+    notif = (
+        "<task-notification>\n<task-id>x</task-id>\n<summary>done</summary>\n"
+        "<status>completed</status>\n<result>ignored</result>\n</task-notification>"
+    )
+    lines = [user_text("real prompt"), user_text(notif)]
+    parsed = parse_transcript("sess-index", lines)
+    entry = summarize_for_index(parsed, has_subagents=False)
+    assert entry["user_turns"] == 1
+    assert entry["first_user_prompt"].startswith("real prompt")
+
+
 def test_read_edit_write_tool_use_only_keeps_relative_path():
     block = summarize_tool_use(
         "Read", {"file_path": "/Users/drmaciver/Projects/autoroad/notes/voices.md"}, {}
@@ -103,6 +278,41 @@ def test_bash_tool_use_truncated_and_has_description():
     block = summarize_tool_use("Bash", {"command": long_cmd, "description": "print"}, {})
     assert len(block["command"]) <= 201
     assert block["description"] == "print"
+
+
+# ---------------------------------------------------------------------------
+# "leaked-private-path": truncate() (used before redaction ever runs) must
+# never cut a literal occurrence of REPO_ROOT in half -- a partial fragment
+# like ".../Projects/autoroa" defeats redact.py's whole-string term match
+# for the full path, leaking the local username into the page unredacted.
+
+
+def test_truncate_short_text_untouched():
+    assert truncate("hello", 100) == "hello"
+
+
+def test_truncate_does_not_split_repo_root_path():
+    prefix = "python3 -c \"\nimport json\ns=open('SOMEWHERE').read()\nopen('"
+    text = prefix + REPO_ROOT + "/chapters/foo.md', 'w').write(s)\""
+    n = len(prefix) + len(REPO_ROOT) - 5  # cut a few chars into REPO_ROOT
+    out = truncate(text, n)
+    assert REPO_ROOT in out
+    assert out.endswith("…")
+
+
+def test_truncate_leaves_short_repo_root_occurrence_intact():
+    text = "cd " + REPO_ROOT + " && ls"
+    out = truncate(text, len(text) + 10)
+    assert out == text  # untouched: shorter than n, no truncation at all
+
+
+def test_bash_tool_use_command_truncation_does_not_split_repo_root_path():
+    # summarize_tool_use() truncates Bash commands to CMD_TRUNC=200 chars;
+    # build a command where that exact cut point falls inside REPO_ROOT.
+    prefix = "x" * 180  # 180 + 34 (len(REPO_ROOT)) straddles the 200 cut
+    long_cmd = prefix + REPO_ROOT + "/chapters/foo.md', 'w').write(s)"
+    block = summarize_tool_use("Bash", {"command": long_cmd}, {})
+    assert REPO_ROOT in block["command"]
 
 
 def test_agent_tool_use_fields():

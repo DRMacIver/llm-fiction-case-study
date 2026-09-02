@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Editing task in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read draft/book-01/VOICE.md in f…</title><style>
+<html><head><meta charset="utf-8"><title>Editing task in [redacted]. Read draft/book-01/VOICE.md in full first…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,24 +7,40 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>Editing task in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read draft/book-01/VOICE.md in f…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a0e65ab0493aec2d5">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-Editing task in <span class="redacted">redacted: private</span>. Read draft/book-01/VOICE.md in full first (binding: plain modern English, no em dashes in body text, prose at rest, people say their reasons; the 'because' ration is a sentence-mechanism problem, NOT a reasons problem — never cut a reason). Then read draft/book-01/scenes/90-*.md through 100-*.md (eleven scenes). Do NOT touch 101 or later, and do not read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, plans/book-01/arc-0*.md <span class="redacted">unpublished</span> or their git history.<br>
-<br>
-Two independent quality reads have found that 'because' runs at about five per thousand words across these scenes and is every character's only way of attaching a reason (<span class="redacted">redacted: character</span>, Edwin, Marsh, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, the gatekeeper, <span class="redacted">redacted: character</span>), which is a convergence of sentence shape. Your job, scene by scene:<br>
-<br>
-1. Count 'because' per scene before you start. Convert at least half of the instances in each scene so that the reason survives as its own sentence, a colon, a 'so', a participial clause, a 'which was why', or simply juxtaposition — vary the joint. Keep every reason. Do not add new figures, aphorisms, buttons or explanations. Make the smallest edits that change the joint. Keep 'because' where a character is explicitly answering 'why' in dialogue and the word is the natural spoken form; the target is roughly two to three per scene.<br>
-<br>
-2. Give two characters a different way of attaching a reason as a habit: <span class="redacted">redacted: character</span> states the fact and the reason as two flat sentences with no conjunction ('I stood it down. The face wouldn't weather.'); the gatekeeper uses 'so' and 'that's why'. Apply those consistently in their dialogue across 93–96.<br>
-<br>
-3. One specific item in 95: <span class="redacted">redacted: character</span>' clipped declaratives currently share <span class="redacted">redacted: character</span>'s grammar ('Good.', 'Twenty-eight days.'). Where <span class="redacted">redacted: character</span> speaks in one-word verdicts, give him a full flat sentence instead ('That'll do.' becomes 'That's all right by me.' etc.), so his shape is the two-flat-sentences one above, not hers.<br>
-<br>
-Edit the files directly with minimal diffs (one paragraph per line; preserve line structure; never introduce an em dash; never use "I'll not"/"I'd not" in first person; no weekday names). Then run `python3 tools/overlap_check.py draft/book-01/scenes/9*.md draft/book-01/scenes/100-*.md` from the repo root and rephrase any 8+ word run reported in text you changed. Report: per-scene 'because' counts before and after, and three or four representative before/after sentences.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>Editing task in [redacted]. Read draft/book-01/VOICE.md in full first…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a0e65ab0493aec2d5">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>Editing task in <span class="redacted">redacted</span>. Read draft/book-01/VOICE.md in full first (binding: plain modern English, no em dashes in body text, prose at rest, people say their reasons; the 'because' ration is a sentence-mechanism problem, NOT a reasons problem — never cut a reason). Then read draft/book-01/scenes/90-<em>.md through 100-</em>.md (eleven scenes). Do NOT touch 101 or later, and do not read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, plans/book-01/arc-0*.md <span class="unpub-tag">unpublished</span> or their git history.</p>
+<p>Two independent quality reads have found that 'because' runs at about five per thousand words across these scenes and is every character's only way of attaching a reason (<span class="redacted">redacted</span>, Edwin, Marsh, <span class="redacted">redacted</span>, <span class="redacted">redacted</span>, the gatekeeper, <span class="redacted">redacted</span>), which is a convergence of sentence shape. Your job, scene by scene:</p>
+<ol>
+<li>
+<p>Count 'because' per scene before you start. Convert at least half of the instances in each scene so that the reason survives as its own sentence, a colon, a 'so', a participial clause, a 'which was why', or simply juxtaposition — vary the joint. Keep every reason. Do not add new figures, aphorisms, buttons or explanations. Make the smallest edits that change the joint. Keep 'because' where a character is explicitly answering 'why' in dialogue and the word is the natural spoken form; the target is roughly two to three per scene.</p>
+</li>
+<li>
+<p>Give two characters a different way of attaching a reason as a habit: <span class="redacted">redacted</span> states the fact and the reason as two flat sentences with no conjunction ('I stood it down. The face wouldn't weather.'); the gatekeeper uses 'so' and 'that's why'. Apply those consistently in their dialogue across 93–96.</p>
+</li>
+<li>
+<p>One specific item in 95: <span class="redacted">redacted</span>' clipped declaratives currently share <span class="redacted">redacted</span>'s grammar ('Good.', 'Twenty-eight days.'). Where <span class="redacted">redacted</span> speaks in one-word verdicts, give him a full flat sentence instead ('That'll do.' becomes 'That's all right by me.' etc.), so his shape is the two-flat-sentences one above, not hers.</p>
+</li>
+</ol>
+<p>Edit the files directly with minimal diffs (one paragraph per line; preserve line structure; never introduce an em dash; never use &quot;I'll not&quot;/&quot;I'd not&quot; in first person; no weekday names). Then run <code>python3 tools/overlap_check.py draft/book-01/scenes/9*.md draft/book-01/scenes/100-*.md</code> from the repo root and rephrase any 8+ word run reported in text you changed. Report: per-scene 'because' counts before and after, and three or four representative before/after sentences.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -36,16 +52,16 @@ Edit the files directly with minimal diffs (one paragraph per line; preserve lin
 <p>✅ 257 lines, 16258 chars</p>
 <p>🔧 Bash: ls draft/book-01/scenes/ | sed -n '85,110p'; echo ---; for f in draft/book-01/scenes/9*.m…</p>
 <p>✅ 32 lines, 1406 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 90-the-made-road.md <span class="redacted">unpublished</span>…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; for f in 90-the-made-road.md <span class="unpub-tag">unpublished</span> 91-the-<span class="redacted">redacted</span>…</p>
 <p>✅ 100 lines, 19428 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 93-up-out-of-the-fen.md ⟦unpublis…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; for f in 93-up-out-of-the-fen.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 162 lines, 26113 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 97-first-known-first-looked-at.md…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; for f in 97-first-known-first-looked-at.md <span class="unpub-tag">unpublished</span>…</p>
 <p>✅ 166 lines, 25915 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; grep -n -o '.\{60\}because.\{70\}' 9*.md 1…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; grep -n -o '.\{60\}because.\{70\}' 9*.md 100-*.md</p>
 <p>✅ 37 lines, 6269 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; python3 - &lt;&lt;'EOF' import re,glob for f in…</p>
-<p>✅ 51 lines, 7021 chars — 90-the-made-road.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> / 90-the-made-road.md <span class="redacted">unpublished</span> 7 ' <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> said "Twenty-fourth for ' / 90-the-made-road.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> It'</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; python3 - &lt;&lt;'EOF' import re,glob for f in sorted(gl…</p>
+<p>✅ 51 lines, 7021 chars — 90-the-made-road.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> / 90-the-made-road.md <span class="unpub-tag">unpublished</span> 7 ' <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> said "Twenty-fourth for ' / 90-the-made-road.md <span class="unpub-tag">unpublished</span> <span class="redacted">redacted sentence: unpublished prose</span> It'</p>
 </details>
 
 <div class="assistant-prose">
@@ -53,56 +69,113 @@ Edit the files directly with minimal diffs (one paragraph per line; preserve lin
 </div>
 
 <details><summary>22 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; python3 - &lt;&lt;'PYEOF' import io def sub(fn,…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; python3 - &lt;&lt;'PYEOF' import io def sub(fn, pairs):…</p>
 <p>✅ 1 lines, 2 chars — ok</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; python3 - &lt;&lt;'PYEOF' def sub(fn,a,b):     s…</p>
-<p>✅ 11 lines, 414 chars — 90-the-made-road.md <span class="redacted">unpublished</span>        2 / 91-the-<span class="redacted">redacted: character</span>-place.md        3 / <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>        2</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; grep -n -i -o '.\{0,50\}because.\{0,60\}'…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; python3 - &lt;&lt;'PYEOF' def sub(fn,a,b):     s=open(fn)…</p>
+<p>✅ 11 lines, 414 chars — 90-the-made-road.md <span class="unpub-tag">unpublished</span>        2 / 91-the-<span class="redacted">redacted</span>-place.md        3 / <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>        2</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; grep -n -i -o '.\{0,50\}because.\{0,60\}' 97-first-…</p>
 <p>✅ 4 lines, 125 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; python3 -c " import re for i,l in enumerat…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; python3 -c " import re for i,l in enumerate(open('9…</p>
 <p>✅ 4 lines, 571 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; python3 -c " fn='97-first-known-first-look…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/draft/book-01/scenes &amp;&amp; python3 -c " fn='97-first-known-first-looked-at.md…</p>
 <p>✅ 2 lines, 66 chars</p>
 <p>🔧 Bash: python3 tools/overlap_check.py draft/book-01/scenes/9*.md draft/book-01/scenes/100-*.md</p>
-<p>✅ 16 lines, 1441 chars — draft/book-01/scenes/90-the-made-road.md <span class="redacted">unpublished</span>: 0 overlapping run(s) of 8+ words / draft/book-01/scenes/91-the-<span class="redacted">redacted: character</span>-place.md: 0 overlapping run(s) of 8+ words / <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>: 0 overlapping run(s) of 8+ words</p>
+<p>✅ 16 lines, 1441 chars — draft/book-01/scenes/90-the-made-road.md <span class="unpub-tag">unpublished</span>: 0 overlapping run(s) of 8+ words / draft/book-01/scenes/91-the-<span class="redacted">redacted</span>-place.md: 0 overlapping run(s) of 8+ words / <span class="redacted">redacted sentence: unpublished prose</span> <span class="unpub-tag">unpublished</span>: 0 overlapping run(s) of 8+ words</p>
 <p>🔧 Bash: git diff --stat &amp;&amp; git diff | grep -c '—' ; git diff | grep -n "I'll not\|I'd not" ; true</p>
 <p>✅ 1 lines, 1 chars</p>
 <p>🔧 Bash: git diff --stat</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: git -C <span class="redacted">redacted: private</span> status --short; git -C <span class="redacted">redacted: private</span> diff --stat</p>
+<p>🔧 Bash: git -C <span class="redacted">redacted</span> status --short; git -C <span class="redacted">redacted</span> diff --stat</p>
 <p>✅ 1 lines, 31 chars</p>
-<p>🔧 Bash: grep -c because draft/book-01/scenes/95-the-twelve-foot.md <span class="redacted">unpublished</span>; git status --sh…</p>
+<p>🔧 Bash: grep -c because draft/book-01/scenes/95-the-twelve-foot.md <span class="unpub-tag">unpublished</span>; git status --sh…</p>
 <p>✅ 3 lines, 249 chars</p>
-<p>🔧 Bash: git log --oneline -3 -- draft/book-01/scenes/95-the-twelve-foot.md <span class="redacted">unpublished</span> &amp;&amp; git s…</p>
+<p>🔧 Bash: git log --oneline -3 -- draft/book-01/scenes/95-the-twelve-foot.md <span class="unpub-tag">unpublished</span> &amp;&amp; git s…</p>
 <p>✅ 23 lines, 1958 chars</p>
 </details>
 
 <div class="assistant-prose">
 <p>Done. All eleven scenes edited in place; the main session's commit 371d5cf already captured the changes (working tree clean).</p>
-<p>**'because' counts, before → after**</p>
-<p>| scene | before | after |<br>
-|---|---|---|<br>
-| 90 the made road | 5 | 2 |<br>
-| 91 the <span class="redacted">redacted: character</span> place | 6 | 3 |<br>
-| 92 care of the college | 6 | 2 |<br>
-| 93 up out of the fen | 2 | 1 |<br>
-| 94 a sixpence | 3 | 1 |<br>
-| 95 the Twelve Foot | 8 | 2 |<br>
-| 96 four foot three | 4 | 2 |<br>
-| 97 first known | 7 | 3 |<br>
-| 98 nine sentences | 5 | 2 |<br>
-| 99 seventy miles | 1 | 0 |<br>
-| 100 the sending-book | 6 | 3 |</p>
-<p>Total 53 → 21 (about 2.0 per thousand words, down from ~5.0). Every reason kept; what remains is mostly a character answering "why" aloud (<span class="redacted">redacted: character</span> on the struck four and on the third no, <span class="redacted">redacted: character</span> on the sending-book, Peri's middle-column filing, Edwin on his departure from the protocol). <span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Habits, applied 93–96**<br>
-- <span class="redacted">redacted: character</span> now states fact and reason as two flat sentences and never gives a one-word verdict: 94 `<span class="redacted">redacted: character</span> said, "Good,"` → `"That's just as well. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.` → `"That's twenty-eight days," said <span class="redacted">redacted: character</span>. <span class="redacted">redacted sentence: unpublished prose</span> In my name" already had the shape.<br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>**Other representative before/after**<br>
-- 90: "and Edwin's went onto Peri, because he carried nothing, and <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span> said"<br>
-- 92: "that it was not his writing arm any more because it was in a <span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span>, so this was the other one"<br>
-<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> had taught him... <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span> had taught him... and he was looking."<br>
-<span class="redacted">redacted sentence: unpublished prose</span></p>
-<p>Incidental fix inside one of the joints: 100 had the retired "wants" construction ("a thing like that wants four names"), now "needs four names".</p>
-<p>**Overlap check**: 5 runs reported, none in text I touched — <span class="redacted">redacted: character</span>' verbatim ledger entry (95), the System's three lines and Peri's quotation of them (98), the suspension board and one untouched narrative clause (99). Nothing to rephrase. No em dashes, no "I'll not"/"I'd not", no weekday names introduced; line structure preserved.</p>
+<p><strong>'because' counts, before → after</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>scene</th>
+<th>before</th>
+<th>after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>90 the made road</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>91 the <span class="redacted">redacted</span> place</td>
+<td>6</td>
+<td>3</td>
+</tr>
+<tr>
+<td>92 care of the college</td>
+<td>6</td>
+<td>2</td>
+</tr>
+<tr>
+<td>93 up out of the fen</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>94 a sixpence</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>95 the Twelve Foot</td>
+<td>8</td>
+<td>2</td>
+</tr>
+<tr>
+<td>96 four foot three</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>97 first known</td>
+<td>7</td>
+<td>3</td>
+</tr>
+<tr>
+<td>98 nine sentences</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>99 seventy miles</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>100 the sending-book</td>
+<td>6</td>
+<td>3</td>
+</tr>
+</tbody>
+</table></div>
+<p>Total 53 → 21 (about 2.0 per thousand words, down from ~5.0). Every reason kept; what remains is mostly a character answering &quot;why&quot; aloud (<span class="redacted">redacted</span> on the struck four and on the third no, <span class="redacted">redacted</span> on the sending-book, Peri's middle-column filing, Edwin on his departure from the protocol). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><strong>Habits, applied 93–96</strong></p>
+<ul>
+<li><span class="redacted">redacted</span> now states fact and reason as two flat sentences and never gives a one-word verdict: 94 <span class="redacted">redacted</span> said, &quot;Good,&quot;<code>→</code>&quot;That's just as well. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>.<code>→</code>&quot;That's twenty-eight days,&quot; said <span class="redacted">redacted</span>. <span class="redacted">redacted sentence: unpublished prose</span> In my name&quot; already had the shape.<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><strong>Other representative before/after</strong></p>
+<ul>
+<li>90: &quot;and Edwin's went onto Peri, because he carried nothing, and <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> said&quot;</li>
+<li>92: &quot;that it was not his writing arm any more because it was in a <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span>, so this was the other one&quot;<br />
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> had taught him... <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> had taught him... and he was looking.&quot;<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p>Incidental fix inside one of the joints: 100 had the retired &quot;wants&quot; construction (&quot;a thing like that wants four names&quot;), now &quot;needs four names&quot;.</p>
+<p><strong>Overlap check</strong>: 5 runs reported, none in text I touched — <span class="redacted">redacted</span>' verbatim ledger entry (95), the System's three lines and Peri's quotation of them (98), the suspension board and one untouched narrative clause (99). Nothing to rephrase. No em dashes, no &quot;I'll not&quot;/&quot;I'd not&quot;, no weekday names introduced; line structure preserved.</p>
 </div>
 </body></html>

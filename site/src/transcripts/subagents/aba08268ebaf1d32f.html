@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-aba08268ebaf1d32f">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="sense", and scope includes "note". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-aba08268ebaf1d32f">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;sense&quot;, and scope includes &quot;note&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -34,28 +47,32 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>Now let me identify the relevant rules and examine the author's note file more carefully.</p>
 </div>
 
-<p>🔧 Bash: wc -l "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md"</p>
-<p>✅ 1 lines, 103 chars —        1 <span class="redacted">redacted: private</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md</p>
-<p>🔧 Bash: cat "<span class="redacted">redacted: private</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md"</p>
+<p>🔧 Bash: wc -l "<span class="redacted">redacted</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md"</p>
+<p>✅ 1 lines, 103 chars —        1 <span class="redacted">redacted</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md</p>
+<p>🔧 Bash: cat "<span class="redacted">redacted</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md"</p>
 <p>✅ 1 lines, 605 chars</p>
 
 <div class="assistant-prose">
-<p>Now let me systematically check this author's note against the selected rules. The relevant rules (tier=="semantic", lens=="sense", scope includes "note") are:</p>
-<p>1. **shape-filled-fact-unchecked** - facts must check out<br>
-2. **near-idiom-general** - coined phrases that aren't real idioms<br>
-3. **ambiguous-word** - words read in the wrong sense<br>
-4. **missing-connective** - missing logical steps between sentences<br>
-5. **cause-left-out** - facts without their causes</p>
+<p>Now let me systematically check this author's note against the selected rules. The relevant rules (tier==&quot;semantic&quot;, lens==&quot;sense&quot;, scope includes &quot;note&quot;) are:</p>
+<ol>
+<li><strong>shape-filled-fact-unchecked</strong> - facts must check out</li>
+<li><strong>near-idiom-general</strong> - coined phrases that aren't real idioms</li>
+<li><strong>ambiguous-word</strong> - words read in the wrong sense</li>
+<li><strong>missing-connective</strong> - missing logical steps between sentences</li>
+<li><strong>cause-left-out</strong> - facts without their causes</li>
+</ol>
 <p>Let me examine the text carefully, reading with one sentence before and after each potential issue:</p>
-<p>The note reads: "**Beans in jars** - a jar of dry beans is a seed store, and a better one than it looks. Seed is alive, and it dies fastest warm and damp; the rule of thumb in seed banks is that storage life roughly doubles for every point of moisture dried out of it, and doubles again for every few degrees cooler it sits. A cool kitchen and a tight lid will hold beans good for sowing for years. The labels matter more than the lids. Every seed at the bottom of a jar looks like every other seed at the bottom of a jar, and I have watched a whole row come up as something nobody remembered sowing, and get eaten anyway."</p>
+<p>The note reads: &quot;<strong>Beans in jars</strong> - a jar of dry beans is a seed store, and a better one than it looks. Seed is alive, and it dies fastest warm and damp; the rule of thumb in seed banks is that storage life roughly doubles for every point of moisture dried out of it, and doubles again for every few degrees cooler it sits. A cool kitchen and a tight lid will hold beans good for sowing for years. The labels matter more than the lids. Every seed at the bottom of a jar looks like every other seed at the bottom of a jar, and I have watched a whole row come up as something nobody remembered sowing, and get eaten anyway.&quot;</p>
 <p>Checking each rule:</p>
-<p>- **shape-filled-fact-unchecked**: All factual claims (seed viability rules, storage conditions, seed appearance) are accurate to real agricultural facts. ✓<br>
-- **near-idiom-general**: No invented idiom-shaped phrases. "dies fastest warm and damp" is compressed prose, not a coined near-idiom. ✓<br>
-- **ambiguous-word**: "seed store" could initially read as "seed shop," but the full sentence clarifies it with "and a better one than it looks" — context makes the intended sense (storage container) clear. ✓<br>
-- **missing-connective**: All transitions are logical. "The labels matter more than the lids" flows to "Every seed...looks like every other seed" with clear implicit connection (labels needed because seeds are identical). ✓<br>
-- **cause-left-out**: Causes are stated directly ("dies fastest warm and damp") or in immediately adjacent sentences (why labels matter — because seeds look identical). ✓</p>
+<ul>
+<li><strong>shape-filled-fact-unchecked</strong>: All factual claims (seed viability rules, storage conditions, seed appearance) are accurate to real agricultural facts. ✓</li>
+<li><strong>near-idiom-general</strong>: No invented idiom-shaped phrases. &quot;dies fastest warm and damp&quot; is compressed prose, not a coined near-idiom. ✓</li>
+<li><strong>ambiguous-word</strong>: &quot;seed store&quot; could initially read as &quot;seed shop,&quot; but the full sentence clarifies it with &quot;and a better one than it looks&quot; — context makes the intended sense (storage container) clear. ✓</li>
+<li><strong>missing-connective</strong>: All transitions are logical. &quot;The labels matter more than the lids&quot; flows to &quot;Every seed...looks like every other seed&quot; with clear implicit connection (labels needed because seeds are identical). ✓</li>
+<li><strong>cause-left-out</strong>: Causes are stated directly (&quot;dies fastest warm and damp&quot;) or in immediately adjacent sentences (why labels matter — because seeds look identical). ✓</li>
+</ul>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,14 +7,27 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a20536c4d5c8a690f">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="sense", and scope includes "note". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/author-notes/03-until-fulfilled.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a prose-fault hunter. Read [redacted]/tools/lint/rules.json (…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a20536c4d5c8a690f">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a prose-fault hunter. Read <span class="redacted">redacted</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier==&quot;semantic&quot;, lens==&quot;sense&quot;, and scope includes &quot;note&quot;. SKIP rule &quot;contamination-overlap&quot; entirely (it is tooled elsewhere). Then read <span class="redacted">redacted</span>/draft/book-01/author-notes/03-until-fulfilled.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -25,19 +38,19 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>✅ 1216 lines, 49319 chars</p>
 
 <div class="assistant-prose">
-<p>Let me continue reading the rules file to see all the rules, especially looking for semantic rules with lens "sense" that include "note" in scope.</p>
+<p>Let me continue reading the rules file to see all the rules, especially looking for semantic rules with lens &quot;sense&quot; that include &quot;note&quot; in scope.</p>
 </div>
 
-<p>🔧 Bash: grep -E '(tier|lens|scope|id)' <span class="redacted">redacted: private</span>/tools/lint/rules.json | head -100</p>
+<p>🔧 Bash: grep -E '(tier|lens|scope|id)' <span class="redacted">redacted</span>/tools/lint/rules.json | head -100</p>
 <p>✅ 100 lines, 5868 chars</p>
-<p>🔧 Bash: jq '.[] | select(.tier=="semantic") | {id, tier, lens, scope}' <span class="redacted">redacted: private</span>/tools/…</p>
+<p>🔧 Bash: jq '.[] | select(.tier=="semantic") | {id, tier, lens, scope}' <span class="redacted">redacted</span>/tools/lint/rule…</p>
 <p>✅ 496 lines, 6595 chars</p>
 
 <div class="assistant-prose">
-<p>Now let me extract the full definitions for the semantic rules with lens "sense" that include "note" in scope. Let me get those rule definitions:</p>
+<p>Now let me extract the full definitions for the semantic rules with lens &quot;sense&quot; that include &quot;note&quot; in scope. Let me get those rule definitions:</p>
 </div>
 
-<p>🔧 Bash: jq '.[] | select(.tier=="semantic" and .lens=="sense" and (.scope | any(. == "note")))' ⟦…</p>
+<p>🔧 Bash: jq '.[] | select(.tier=="semantic" and .lens=="sense" and (.scope | any(. == "note")))' <span class="redacted">redacted</span>…</p>
 <p>✅ 118 lines, 6579 chars</p>
 
 <div class="assistant-prose">
@@ -51,22 +64,34 @@ You are a prose-fault hunter. Read <span class="redacted">redacted: private</spa
 <p>Let me check the actual length of this file:</p>
 </div>
 
-<p>🔧 Bash: wc -l <span class="redacted">redacted: private</span>/draft/book-01/author-notes/03-until-fulfilled.md &amp;&amp; cat ⟦redact…</p>
+<p>🔧 Bash: wc -l <span class="redacted">redacted</span>/draft/book-01/author-notes/03-until-fulfilled.md &amp;&amp; cat <span class="redacted">redacted</span>/draft…</p>
 <p>✅ 2 lines, 717 chars</p>
 
 <div class="assistant-prose">
 <p>Now I'll analyze this author's note against the 5 selected rules (shape-filled-fact-unchecked, near-idiom-general, ambiguous-word, missing-connective, cause-left-out). Let me examine each sentence carefully with attention to neighboring context per the critical instruction.</p>
-<p>**Paragraph 1 analysis:**</p>
+<p><strong>Paragraph 1 analysis:</strong></p>
 <p>Let me trace through for violations:</p>
-<p>1. **shape-filled-fact-unchecked** - Checking factual accuracy: Parliament 1531 ruling on bridge repairs is historically correct. "Rolls after 1531 look remarkably like the rolls before" is a stated observation about court records. All facts appear accurate to what an author researching historical records would assert.</p>
-<p>2. **near-idiom-general** - Checking for coined phrases with idiom shape: "in shorter supply than gravel" appears at the close. This is a natural comparison grown from the text's own material (the opening establishes rivers moving gravel as a constant). This is a craft comparison, not a coined near-idiom.</p>
-<p>3. **ambiguous-word** - Checking for words in non-primary senses: "ford", "gravel", "crossing", "quarrel" all appear in standard meanings.</p>
-<p>4. **missing-connective** - The critical transition is: "...and the rolls after 1531 look remarkably like the rolls before. As far as I can find out, nothing has ever settled such a quarrel except a person both sides trust..."</p>
+<ol>
+<li>
+<p><strong>shape-filled-fact-unchecked</strong> - Checking factual accuracy: Parliament 1531 ruling on bridge repairs is historically correct. &quot;Rolls after 1531 look remarkably like the rolls before&quot; is a stated observation about court records. All facts appear accurate to what an author researching historical records would assert.</p>
+</li>
+<li>
+<p><strong>near-idiom-general</strong> - Checking for coined phrases with idiom shape: &quot;in shorter supply than gravel&quot; appears at the close. This is a natural comparison grown from the text's own material (the opening establishes rivers moving gravel as a constant). This is a craft comparison, not a coined near-idiom.</p>
+</li>
+<li>
+<p><strong>ambiguous-word</strong> - Checking for words in non-primary senses: &quot;ford&quot;, &quot;gravel&quot;, &quot;crossing&quot;, &quot;quarrel&quot; all appear in standard meanings.</p>
+</li>
+<li>
+<p><strong>missing-connective</strong> - The critical transition is: &quot;...and the rolls after 1531 look remarkably like the rolls before. As far as I can find out, nothing has ever settled such a quarrel except a person both sides trust...&quot;</p>
+</li>
+</ol>
 <p>Reading with full context before and after: The sentence before establishes that Parliament's 1531 ruling failed to change outcomes (rolls stayed the same). The sentence after concludes that only trust-based resolution works. The neighboring sentence before supplies the implication: a formal rule didn't solve it. The logical connection (rule failed → only trust works) is inferable from this context, though the connective is not explicit.</p>
-<p>5. **cause-left-out** - "nothing has ever settled such a quarrel except a person both sides trust" - Is this a stated fact needing cause? This reads as a settled principle or observation from experience, not a concrete fact inviting "what does it mean?" This is similar to stating a general truth about human nature, not a specific event or mechanism requiring immediate causal explanation.</p>
+<ol start="5">
+<li><strong>cause-left-out</strong> - &quot;nothing has ever settled such a quarrel except a person both sides trust&quot; - Is this a stated fact needing cause? This reads as a settled principle or observation from experience, not a concrete fact inviting &quot;what does it mean?&quot; This is similar to stating a general truth about human nature, not a specific event or mechanism requiring immediate causal explanation.</li>
+</ol>
 <p>After careful analysis with attention to neighboring sentences:</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": []})</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,22 +7,35 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ab4f02e620c566798">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 15-. Read it in full.<br>
-LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id "sense".<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ab4f02e620c566798">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 15-. Read it in full.<br />
+LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id &quot;sense&quot;.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -name "15-*" -type f (Find the scene file starting with 15-)</p>
-<p>✅ 1 lines, 76 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/15-straight-water.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes -name "15-*" -type f (Find the scene file starting with 15-)</p>
+<p>✅ 1 lines, 76 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/15-straight-water.md</p>
 <p>🔧 Read draft/book-01/scenes/15-straight-water.md</p>
 <p>✅ 48 lines, 6068 chars</p>
 
@@ -30,36 +43,42 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>Reading the file now.</p>
 </div>
 
-<p>🔧 Bash: wc -l <span class="redacted">redacted: private</span>/draft/book-01/scenes/15-straight-water.md (Verify file length)</p>
-<p>✅ 1 lines, 85 chars —       47 <span class="redacted">redacted: private</span>/draft/book-01/scenes/15-straight-water.md</p>
+<p>🔧 Bash: wc -l <span class="redacted">redacted</span>/draft/book-01/scenes/15-straight-water.md (Verify file length)</p>
+<p>✅ 1 lines, 85 chars —       47 <span class="redacted">redacted</span>/draft/book-01/scenes/15-straight-water.md</p>
 
 <div class="assistant-prose">
-<p>Applying the sense lens systematically to the text. I'll check for:<br>
-1. Factual claims that don't survive flat restatement<br>
-2. Contradictions with neighboring sentences<br>
-3. Numbers/timespans that don't add up<br>
-4. Hard-to-parse sentences requiring re-reading</p>
+<p>Applying the sense lens systematically to the text. I'll check for:</p>
+<ol>
+<li>Factual claims that don't survive flat restatement</li>
+<li>Contradictions with neighboring sentences</li>
+<li>Numbers/timespans that don't add up</li>
+<li>Hard-to-parse sentences requiring re-reading</li>
+</ol>
 <p>Let me work through key passages:</p>
-<p>**Timeline check (Peri's arrival and activities):**<br>
-- Line 25: "This morning, first light" she asked the Weave question<br>
-- Line 25: "I tried, all evening" [previous evening] to word it correctly<br>
-- Line 25: "Then I spent all day working out what the answer means"<br>
-- Line 45: Now walking "at a pace that was eighteen miles a day being rehearsed"</p>
+<p><strong>Timeline check (Peri's arrival and activities):</strong></p>
+<ul>
+<li>Line 25: &quot;This morning, first light&quot; she asked the Weave question</li>
+<li>Line 25: &quot;I tried, all evening&quot; [previous evening] to word it correctly</li>
+<li>Line 25: &quot;Then I spent all day working out what the answer means&quot;</li>
+<li>Line 45: Now walking &quot;at a pace that was eighteen miles a day being rehearsed&quot;</li>
+</ul>
 <p>Timeline: question asked morning → all day interpreting → evening report ✓ Consistent</p>
-<p>**Distance/timing:**<br>
-- Line 33: Plans "twenty miles a day"<br>
-- Line 35: Edwin states she's never done this<br>
-- Line 37: "Eighteen, then, to be safe" — she revises down<br>
-- Line 45: She leaves practicing eighteen miles a day<br>
-✓ Consistent</p>
-<p>**Geographic description (Line 5):**<br>
+<p><strong>Distance/timing:</strong></p>
+<ul>
+<li>Line 33: Plans &quot;twenty miles a day&quot;</li>
+<li>Line 35: Edwin states she's never done this</li>
+<li>Line 37: &quot;Eighteen, then, to be safe&quot; — she revises down</li>
+<li>Line 45: She leaves practicing eighteen miles a day<br />
+✓ Consistent</li>
+</ul>
+<p><strong>Geographic description (Line 5):</strong><br />
 Reading the sentence about Wymstow carefully:</p>
-<p>"Wymstow lay beyond on the basin's dry rim, with its trial fields spread around it and the eastern extension somewhere out between, toward Fenholt."</p>
+<p>&quot;Wymstow lay beyond on the basin's dry rim, with its trial fields spread around it and the eastern extension somewhere out between, toward Fenholt.&quot;</p>
 <p>Flat restatement: Wymstow is a location on the basin's dry rim; it has trial fields around it; there is an eastern extension located somewhere between [locations unclear] in the direction toward Fenholt.</p>
-<p>**Issue:** The phrase "somewhere out between, toward Fenholt" lacks clear spatial anchors—between what and what? And what is "the eastern extension" extending from? The referent is unclear. A careful reader needs to re-read this to parse the spatial relationships being described.</p>
+<p><strong>Issue:</strong> The phrase &quot;somewhere out between, toward Fenholt&quot; lacks clear spatial anchors—between what and what? And what is &quot;the eastern extension&quot; extending from? The referent is unclear. A careful reader needs to re-read this to parse the spatial relationships being described.</p>
 <p>The sentence is grammatically coherent but spatially ambiguous. The meaning survives restatement but the geometric relationships are vague enough to require re-reading.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": [{"rule_id": "sense", "quote": "Wymstow lay be…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are running a measurement pass for a novel project at ⟦redacted:…</title><style>
+<html><head><meta charset="utf-8"><title>You are running a measurement pass for a novel project at [redacted].…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,42 +7,52 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are running a measurement pass for a novel project at ⟦redacted:…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a66881097a25c8acb">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are running a measurement pass for a novel project at <span class="redacted">redacted: private</span>. This is a mechanical job: write a script, run it, report numbers. Do not offer literary opinions beyond what the figures support.<br>
-<br>
-`samples/round5/study/current-voice.md` contains a measurement table over six chapters of the existing book, with a stated methodology (chapter bodies with author's notes and headings stripped). Read that file's "Measurements" section and reproduce its metrics exactly. `notes/voice-fusion-draft.md` contains a budget table with target ranges for those metrics and some new ones. Read it.<br>
-<br>
-Write a Python script to `samples/round5/full-chapter/census.py` that computes, for any chapter file:<br>
-- words, mean and median sentence length, % sentences under 8 words, % over 30, longest sentence<br>
-- paragraph count, median paragraph length, % single-sentence paragraphs<br>
-- % words inside quotation marks<br>
-- % sentences opening on a name or pronoun<br>
-- % sentences with 2+ and 3+ `and`<br>
-- % sentences containing a number (digits or written numerals)<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- em-dashes per 1,000 words, `had` per 1,000 words<br>
-- narratorial question marks (outside quotation marks)<br>
-- scene openings: for each scene, the first sentence, and a flag for whether it is date-stamped, clock-stamped, duration-announcing, or verdict-announcing<br>
-- volitional/affective verbs in narration, and epistemic-downgrade moves, using the same greps as the source document (find them in it)<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Write `samples/round5/full-chapter/census.md`: a comparison table (fusion / ch.13 source / ch.10 / ch.1 / the fusion spec's target range), then a section per metric where the fusion falls outside its target, then the full list of scene openings in the fusion chapter with their flags, then a **distribution check**: for the three or four devices the spec budgets, where in the chapter they actually fall (by decile of word count), so front-loading is visible.<br>
-<br>
-Be precise about what your heuristics can and cannot detect. Your final message: the metrics where the fusion is outside target, and whether the devices are evenly distributed.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are running a measurement pass for a novel project at [redacted].…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a66881097a25c8acb">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are running a measurement pass for a novel project at <span class="redacted">redacted</span>. This is a mechanical job: write a script, run it, report numbers. Do not offer literary opinions beyond what the figures support.</p>
+<p><code>samples/round5/study/current-voice.md</code> contains a measurement table over six chapters of the existing book, with a stated methodology (chapter bodies with author's notes and headings stripped). Read that file's &quot;Measurements&quot; section and reproduce its metrics exactly. <code>notes/voice-fusion-draft.md</code> contains a budget table with target ranges for those metrics and some new ones. Read it.</p>
+<p>Write a Python script to <code>samples/round5/full-chapter/census.py</code> that computes, for any chapter file:</p>
+<ul>
+<li>words, mean and median sentence length, % sentences under 8 words, % over 30, longest sentence</li>
+<li>paragraph count, median paragraph length, % single-sentence paragraphs</li>
+<li>% words inside quotation marks</li>
+<li>% sentences opening on a name or pronoun</li>
+<li>% sentences with 2+ and 3+ <code>and</code></li>
+<li>% sentences containing a number (digits or written numerals)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>em-dashes per 1,000 words, <code>had</code> per 1,000 words</li>
+<li>narratorial question marks (outside quotation marks)</li>
+<li>scene openings: for each scene, the first sentence, and a flag for whether it is date-stamped, clock-stamped, duration-announcing, or verdict-announcing</li>
+<li>volitional/affective verbs in narration, and epistemic-downgrade moves, using the same greps as the source document (find them in it)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+</ul>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Write <code>samples/round5/full-chapter/census.md</code>: a comparison table (fusion / ch.13 source / ch.10 / ch.1 / the fusion spec's target range), then a section per metric where the fusion falls outside its target, then the full list of scene openings in the fusion chapter with their flags, then a <strong>distribution check</strong>: for the three or four devices the spec budgets, where in the chapter they actually fall (by decile of word count), so front-loading is visible.</p>
+<p>Be precise about what your heuristics can and cannot detect. Your final message: the metrics where the fusion is outside target, and whether the devices are evenly distributed.</p></blockquote>
 
 
 <details><summary>6 tool calls</summary>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/samples/round5/study/current-voice.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/samples/round5/study/current-voice.md</p>
 <p>✅ 433 lines, 24766 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/voice-fusion-draft.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/notes/voice-fusion-draft.md</p>
 <p>✅ 48 lines, 2184 chars</p>
 <p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
 <p>✅ 48 lines, 2184 chars</p>
@@ -59,23 +69,23 @@ Be precise about what your heuristics can and cannot detect. Your final message:
 <p>Now let me check the fusion chapter and figures/downgrade greps used likely in study source (need to find actual grep patterns used - maybe in a script already). Let me check if there's an existing census script.</p>
 </div>
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/samples/round5 -type f | sort echo --- ls <span class="redacted">redacted: private</span>/sa…</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/samples/round5 -type f | sort echo --- ls <span class="redacted">redacted</span>/samples/round5/full-…</p>
 <p>✅ 30 lines, 1939 chars</p>
 
 <div class="assistant-prose">
 <p>No prior script exists — I'll build my own from scratch, using the grep phrases named in current-voice.md for downgrades/volitional verbs. Let me look at the fusion chapter and the two reference chapters.</p>
 </div>
 
-<p>🔧 Bash: wc -l <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span>⟦redact…</p>
+<p>🔧 Bash: wc -l <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 8 lines, 390 chars</p>
-<p>🔧 Bash: sed -n '1,40p' <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> echo === sed -n…</p>
+<p>🔧 Bash: sed -n '1,40p' <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span> echo === sed -n '1,30p' <span class="redacted">redacted</span>…</p>
 <p>✅ 42 lines, 3567 chars</p>
 
 <div class="assistant-prose">
 <p>Good, files readable. Now let's write the census script.</p>
 </div>
 
-<p>🔧 Bash: sed -n '590,720p' <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: sed -n '590,720p' <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 131 lines, 7453 chars</p>
 <p>🔧 Write samples/round5/full-chapter/census.py</p>
 <p>✅ 1 lines, 168 chars</p>
@@ -85,17 +95,17 @@ Be precise about what your heuristics can and cannot detect. Your final message:
 </div>
 
 <details><summary>12 tool calls</summary>
-<p>🔧 Bash: grep -n "^## Writer's notes\|^# Chapter" <span class="redacted">redacted: private</span>⟦redacted sentence: unpublish…</p>
+<p>🔧 Bash: grep -n "^## Writer's notes\|^# Chapter" <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 2 lines, 56 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 census.py 013-fusion.md --json…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 census.py 013-fusion.md --json &gt; /tmp/f…</p>
 <p>✅ 116 lines, 2957 chars</p>
 <p>🔧 Edit samples/round5/full-chapter/census.py</p>
 <p>✅ 1 lines, 178 chars</p>
 <p>🔧 Edit samples/round5/full-chapter/census.py</p>
 <p>✅ 1 lines, 178 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter for f in "013-fusion.md" "⟦redacted: p…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter for f in "013-fusion.md" "<span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span>…</p>
 <p>✅ 4 lines, 155 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 census.py 013-fusion.md --json…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 census.py 013-fusion.md --json &gt; /tmp/f…</p>
 <p>✅ 1 lines, 4 chars — done</p>
 </details>
 
@@ -103,7 +113,7 @@ Be precise about what your heuristics can and cannot detect. Your final message:
 <p>Now let's do the hand-check on the figure-of-speech heuristic — sample 20 flagged/candidate sentences from all four chapters combined and manually judge.</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 -c " import sys sys.path.inser…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 -c " import sys sys.path.insert(0,'.')…</p>
 <p>✅ 40 lines, 3309 chars</p>
 <p>🔧 Edit samples/round5/full-chapter/census.py</p>
 <p>✅ 1 lines, 178 chars</p>
@@ -113,26 +123,26 @@ Be precise about what your heuristics can and cannot detect. Your final message:
 </div>
 
 <details><summary>12 tool calls</summary>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 -c " import importlib, sys sys…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 -c " import importlib, sys sys.path.ins…</p>
 <p>✅ 41 lines, 3653 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 census.py 013-fusion.md --json…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 census.py 013-fusion.md --json &gt; /tmp/f…</p>
 <p>✅ 104 lines, 2897 chars</p>
-<p>🔧 Bash: grep -o '.\{20\}[—–].\{20\}' <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: grep -o '.\{20\}[—–].\{20\}' <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 12 lines, 503 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 -c " import census text = cens…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 -c " import census text = census.load_b…</p>
 <p>✅ 15 lines, 509 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 -c " import census text = cens…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 -c " import census text = census.load_b…</p>
 <p>✅ 5 lines, 144 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter grep -n "^---\|^(Voice E" 013-fusion.m…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter grep -n "^---\|^(Voice E" 013-fusion.md | head…</p>
 <p>✅ 12 lines, 89 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Confirmed — scene-break `---` lines were being counted as em-dashes. Fix: exclude scene-break-only lines before counting em-dashes/semicolons, and also strip the leading italic disclaimer line.</p>
+<p>Confirmed — scene-break <code>---</code> lines were being counted as em-dashes. Fix: exclude scene-break-only lines before counting em-dashes/semicolons, and also strip the leading italic disclaimer line.</p>
 </div>
 
 <details><summary>6 tool calls</summary>
-<p>🔧 Bash: sed -n '1,5p' <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: sed -n '1,5p' <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 5 lines, 249 chars</p>
 <p>🔧 Edit samples/round5/full-chapter/census.py</p>
 <p>✅ 1 lines, 178 chars</p>
@@ -141,14 +151,14 @@ Be precise about what your heuristics can and cannot detect. Your final message:
 </details>
 
 <div class="assistant-prose">
-<p>Now update `scenes_of` to split on the marker, and make sure the marker is stripped before all other analysis (word count, em-dash, etc). Let's update `analyze` to strip the marker from `text` used for most metrics, but pass raw text (with markers) to `scenes_of`.</p>
+<p>Now update <code>scenes_of</code> to split on the marker, and make sure the marker is stripped before all other analysis (word count, em-dash, etc). Let's update <code>analyze</code> to strip the marker from <code>text</code> used for most metrics, but pass raw text (with markers) to <code>scenes_of</code>.</p>
 </div>
 
 <p>🔧 Edit samples/round5/full-chapter/census.py</p>
 <p>✅ 1 lines, 178 chars</p>
 
 <div class="assistant-prose">
-<p>Now update `analyze` to build both `marked_text` (for scenes) and `text` (marker stripped) for everything else.</p>
+<p>Now update <code>analyze</code> to build both <code>marked_text</code> (for scenes) and <code>text</code> (marker stripped) for everything else.</p>
 </div>
 
 <p>🔧 Edit samples/round5/full-chapter/census.py</p>
@@ -157,30 +167,30 @@ Be precise about what your heuristics can and cannot detect. Your final message:
 <p>✅ 1 lines, 178 chars</p>
 
 <div class="assistant-prose">
-<p>Also `load_body`'s `--start/--end` path bypasses `strip_body`, so it won't have scene markers. Let's fix that path too, and rerun.</p>
+<p>Also <code>load_body</code>'s <code>--start/--end</code> path bypasses <code>strip_body</code>, so it won't have scene markers. Let's fix that path too, and rerun.</p>
 </div>
 
 <details><summary>16 tool calls</summary>
 <p>🔧 Edit samples/round5/full-chapter/census.py</p>
 <p>✅ 1 lines, 178 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 census.py 013-fusion.md --json…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 census.py 013-fusion.md --json &gt; /tmp/f…</p>
 <p>✅ 104 lines, 2896 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 -c " import json d=json.load(o…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 -c " import json d=json.load(open('/tmp…</p>
 <p>✅ 11 lines, 1210 chars</p>
 <p>🔧 Edit samples/round5/full-chapter/census.py</p>
 <p>✅ 1 lines, 178 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 census.py 013-fusion.md --json…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 census.py 013-fusion.md --json &gt; /tmp/f…</p>
 <p>✅ 22 lines, 2345 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 -c " import census, json text_…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 -c " import census, json text_marked =…</p>
 <p>✅ 5 lines, 251 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 -c " import json for f in ['fu…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 -c " import json for f in ['fusion','ch…</p>
 <p>✅ 28 lines, 709 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 -c " import json for f in ['fu…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 -c " import json for f in ['fusion','ch…</p>
 <p>✅ 4 lines, 51 chars</p>
 </details>
 
 <div class="assistant-prose">
-<p>Now writing the final `census.md`.</p>
+<p>Now writing the final <code>census.md</code>.</p>
 </div>
 
 <p>🔧 Write samples/round5/full-chapter/census.md</p>
@@ -190,22 +200,22 @@ Be precise about what your heuristics can and cannot detect. Your final message:
 <p>Let me verify the script runs cleanly end-to-end one more time and double check no leftover bugs (e.g., the em_dash_positions_words key referenced in md matches script output).</p>
 </div>
 
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/samples/round5/full-chapter python3 census.py 013-fusion.md echo "…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>/samples/round5/full-chapter python3 census.py 013-fusion.md echo "exit: $?"</p>
 <p>✅ 36 lines, 1711 chars — === 013-fusion.md === / words: 5114 / mean sentence: 13.5</p>
 
 <div class="assistant-prose">
-<p>Script works cleanly. Everything is written and consistent. Final files: `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Script works cleanly. Everything is written and consistent. Final files: <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 </div>
 
 <p>🔧 Bash: git status --short</p>
 <p>✅ 7 lines, 184 chars —  M .gitignore / ?? .DS_Store / ?? comments/</p>
-<p>🔧 Bash: rm -rf <span class="redacted">redacted: private</span>/samples/round5/full-chapter/__pycache__</p>
+<p>🔧 Bash: rm -rf <span class="redacted">redacted</span>/samples/round5/full-chapter/__pycache__</p>
 <p>✅ 1 lines, 31 chars — (Bash completed with no output)</p>
 
 <div class="assistant-prose">
-<p>Not committing — no instruction to commit was given for this measurement task, and other unrelated untracked content exists (`comments/`, `samples/round6/`) that isn't mine to stage.</p>
-<p>**The fusion chapter's only out-of-target metric:** % of sentences opening on a name/pronoun (44.4%, target ≤30) — but this script's heuristic diverges from the study's own method by roughly 2x on all four chapters tested (including ch.1, which the study treats as the un-drifted baseline), so this is very likely a methodology mismatch rather than a real fusion-chapter problem; it should be re-measured against whatever the study actually did before acting on it. Every other target-bearing row (mean sentence, %&lt;8/%&gt;30, longest sentence, %3+`and`, %-with-number, %-quoted, figures/1000, em-dashes/1000, semicolons/1000, date/clock-stamped openings, verdict/duration openings) falls inside its target band.</p>
-<p>**Distribution of the budgeted devices is not even, and it is uneven in a way that partly confirms the writer's own notes.** Figures of speech (8 total) are front-loaded — 5 of 8 in the first four deciles of the chapter, 3 of those in the first decile alone — while em-dashes (7 total) are back-loaded — 5 of 7 from decile 6 onward, none in the first two deciles. The middle of the chapter (roughly deciles 1, 4, 5 — the elimination-list and containment-work scenes) has neither device. Epistemic downgrades came back at 0 by the fixed-phrase grep, against 3 the writer's own close-reading notes report; this is a demonstrated undercount by the grep, not evidence the chapter has none.</p>
-<p>Two important caveats on the numbers themselves: the figures-of-speech heuristic hand-checked at 35–40% precision on two independent 20-sentence samples (mostly false-positiving on "like" as the verb "prefer" and on literal "looked like that/this" idioms), so the reported figures/1,000-words rate is best read as an upper bound, roughly 2.5x the true rate; and the fragment-closer count is unreliable enough (it flags almost any short sentence, not specifically a paragraph-final emphatic fragment) that it's reported for completeness only and shouldn't be used to score any chapter against the spec's ≤4/chapter cap.</p>
+<p>Not committing — no instruction to commit was given for this measurement task, and other unrelated untracked content exists (<code>comments/</code>, <code>samples/round6/</code>) that isn't mine to stage.</p>
+<p><strong>The fusion chapter's only out-of-target metric:</strong> % of sentences opening on a name/pronoun (44.4%, target ≤30) — but this script's heuristic diverges from the study's own method by roughly 2x on all four chapters tested (including ch.1, which the study treats as the un-drifted baseline), so this is very likely a methodology mismatch rather than a real fusion-chapter problem; it should be re-measured against whatever the study actually did before acting on it. Every other target-bearing row (mean sentence, %&lt;8/%&gt;30, longest sentence, %3+<code>and</code>, %-with-number, %-quoted, figures/1000, em-dashes/1000, semicolons/1000, date/clock-stamped openings, verdict/duration openings) falls inside its target band.</p>
+<p><strong>Distribution of the budgeted devices is not even, and it is uneven in a way that partly confirms the writer's own notes.</strong> Figures of speech (8 total) are front-loaded — 5 of 8 in the first four deciles of the chapter, 3 of those in the first decile alone — while em-dashes (7 total) are back-loaded — 5 of 7 from decile 6 onward, none in the first two deciles. The middle of the chapter (roughly deciles 1, 4, 5 — the elimination-list and containment-work scenes) has neither device. Epistemic downgrades came back at 0 by the fixed-phrase grep, against 3 the writer's own close-reading notes report; this is a demonstrated undercount by the grep, not evidence the chapter has none.</p>
+<p>Two important caveats on the numbers themselves: the figures-of-speech heuristic hand-checked at 35–40% precision on two independent 20-sentence samples (mostly false-positiving on &quot;like&quot; as the verb &quot;prefer&quot; and on literal &quot;looked like that/this&quot; idioms), so the reported figures/1,000-words rate is best read as an upper bound, roughly 2.5x the true rate; and the fragment-closer count is unreliable enough (it flags almost any short sentence, not specifically a paragraph-final emphatic fragment) that it's reported for completeness only and shouldn't be used to score any chapter against the spec's ≤4/chapter cap.</p>
 </div>
 </body></html>

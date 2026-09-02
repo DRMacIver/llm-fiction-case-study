@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at [redacted]. Target fil…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,22 +7,35 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a03e7574ad40d0cb0">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
-Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 08-. Read it in full.<br>
-LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id "sense".<br>
-MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are a lint hunter for a fiction project at [redacted]. Target fil…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a03e7574ad40d0cb0">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-31</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are a lint hunter for a fiction project at <span class="redacted">redacted</span>.<br />
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 08-. Read it in full.<br />
+LENS: sense (standing lens). Restate each factual claim in the file flatly and check it is coherent in itself and consistent with the sentences around it. Flag any sentence whose meaning does not survive flat restatement, any claim that contradicts a neighbouring sentence, any number or timespan that does not add up, and any sentence a careful reader would have to re-read to parse. Use rule_id &quot;sense&quot;.<br />
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br />
 Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
 
 
-<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -name "08-*.md" -type f (Find the scene file starting with 08-)</p>
-<p>✅ 1 lines, 84 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/08-what-youre-standing-in.md</p>
+<p>🔧 Bash: find <span class="redacted">redacted</span>/draft/book-01/scenes -name "08-*.md" -type f (Find the scene file starting with 08-)</p>
+<p>✅ 1 lines, 84 chars — <span class="redacted">redacted</span>/draft/book-01/scenes/08-what-youre-standing-in.md</p>
 <p>🔧 Read draft/book-01/scenes/08-what-youre-standing-in.md</p>
 <p>✅ 56 lines, 3265 chars</p>
 
@@ -30,22 +43,26 @@ Report every candidate generously - a later judge filters; do not self-censor bo
 <p>Now I'll read this file and apply the sense lens to check for factual claims that don't survive flat restatement, contradictions with neighboring sentences, and sentences that are hard to parse.</p>
 </div>
 
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/scenes/08-what-youre-standing-in.md (Read the scene file to analyze it)</p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span>/draft/book-01/scenes/08-what-youre-standing-in.md (Read the scene file to analyze it)</p>
 <p>✅ 55 lines, 3105 chars</p>
 
 <div class="assistant-prose">
 <p>I've read the full file. Now I'll apply the sense lens systematically, checking each factual claim for flat restatement, internal consistency, and parsing clarity.</p>
 <p>Checking key sentences:</p>
-<p>**Line 5** — "A grandmother of my grandmothers buried two children in a hunger year, and it has come down the family every winter since, in the same words each time. There's not been a hunger year in this vale since."<br>
-- Widow Sepp is describing a family blessing/saying tied to an ancestor, recited each winter. The implicit referent of "it" (a blessing or ritual memory) requires inference but is clear from context. No parsing issue.</p>
-<p>**Line 15** — Edwin's explanation of historical famines and the three-hundred-year timeframe is internally coherent: famines were ordinary three centuries ago, now prevented by spells and teaching.</p>
-<p>**Line 35** — "You'd need - you taught the teachers. Every parish, not one. For three hundred years."<br>
-- Reading this sentence flat: Peri is deducing that Edwin taught the teachers across every parish, and this has been occurring for three hundred years.<br>
-- Problem: The grammar of "you taught... for three hundred years" most naturally modifies Edwin's personal action. This would imply Edwin personally taught for three centuries—a claim about his immortality that contradicts the later "Eleven years, and Edwin still could not read her" (line 47), which establishes him within a normal human lifespan with Sorrel. <br>
-- A careful reader must re-read and work through whether Peri means the system has existed for three centuries, or is unknowingly implying Edwin is immortal. The narrative silence afterward suggests this is a significant realization, which compounds the ambiguity.</p>
-<p>**Other sentences**: Lines 11, 39-42, 47, 49-55 are clear in parsing and internally consistent.</p>
+<p><strong>Line 5</strong> — &quot;A grandmother of my grandmothers buried two children in a hunger year, and it has come down the family every winter since, in the same words each time. There's not been a hunger year in this vale since.&quot;</p>
+<ul>
+<li>Widow Sepp is describing a family blessing/saying tied to an ancestor, recited each winter. The implicit referent of &quot;it&quot; (a blessing or ritual memory) requires inference but is clear from context. No parsing issue.</li>
+</ul>
+<p><strong>Line 15</strong> — Edwin's explanation of historical famines and the three-hundred-year timeframe is internally coherent: famines were ordinary three centuries ago, now prevented by spells and teaching.</p>
+<p><strong>Line 35</strong> — &quot;You'd need - you taught the teachers. Every parish, not one. For three hundred years.&quot;</p>
+<ul>
+<li>Reading this sentence flat: Peri is deducing that Edwin taught the teachers across every parish, and this has been occurring for three hundred years.</li>
+<li>Problem: The grammar of &quot;you taught... for three hundred years&quot; most naturally modifies Edwin's personal action. This would imply Edwin personally taught for three centuries—a claim about his immortality that contradicts the later &quot;Eleven years, and Edwin still could not read her&quot; (line 47), which establishes him within a normal human lifespan with Sorrel.</li>
+<li>A careful reader must re-read and work through whether Peri means the system has existed for three centuries, or is unknowingly implying Edwin is immortal. The narrative silence afterward suggests this is a significant realization, which compounds the ambiguity.</li>
+</ul>
+<p><strong>Other sentences</strong>: Lines 11, 39-42, 47, 49-55 are clear in parsing and internally consistent.</p>
 </div>
 
-<p>🔧 StructuredOutput</p>
+<p>🔧 StructuredOutput ({"findings": [{"rule_id": "sense", "quote": "You'd need - y…)</p>
 <p>✅ 1 lines, 39 chars</p>
 </body></html>

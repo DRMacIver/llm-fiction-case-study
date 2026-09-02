@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>You are the author&#x27;s reader-of-first-resort for the novel at ⟦redacte…</title><style>
+<html><head><meta charset="utf-8"><title>You are the author's reader-of-first-resort for the novel at [redacted]…</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
 h1{font-size:1.4em;}
@@ -7,48 +7,55 @@ h1{font-size:1.4em;}
 .subagent-header a{color:#2565ae;}
 .redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
   padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
 details>summary{cursor:pointer;color:#666;}
 blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
 .assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
 .nav-links{color:#666;font-size:.9em;margin:1em 0;}
 .page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
   margin:1em 0;font-size:.92em;color:#555;}
-</style></head><body><h1>You are the author&#x27;s reader-of-first-resort for the novel at ⟦redacte…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ae74bf0942c95b21d">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
-You are the author's reader-of-first-resort for the novel at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first.<br>
-<br>
-The round-5 voice lab recommended a fusion voice and named its own limit: nine samples of 1,100 words, all rewrites, and "every failure that matters here is a rate failure — the next test is one full chapter in the fusion, four thousand words, run through the same census."<br>
-<br>
-That test has now run. Read:<br>
-- `notes/voice-fusion-draft.md` — the fusion spec (a Working proposal, not ruled)<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- `samples/round5/full-chapter/census.md` — the measurements<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-- `samples/round5/REPORT.md` and `samples/round5/study/current-voice.md` — what we predicted and what we diagnosed<br>
-<br>
-Judge one question: **does the fusion survive four thousand words, and should DRMacIver adopt it?**<br>
-<br>
-Read as a reader first, before you look at the numbers, and say so — your first section must be your reading experience of the chapter, uncontaminated by the census. Then check that experience against the figures and report where they disagree, which is the most informative thing this test can produce.<br>
-<br>
-Write `samples/round5/full-chapter/VERDICT.md`:<br>
-<br>
-## Read cold<br>
-Your experience of the chapter as prose. Is it exciting? Does the mystery pull? Where did your attention go? Where did it sag, by paragraph. Is it still this book?<br>
-## Against the census<br>
-Where the numbers confirm or contradict the reading. Any metric inside target where the prose is nonetheless worse, and any metric outside target that does not matter — those two lists are the point.<br>
-## Does it survive length<br>
-The rate question, answered directly: front-loading, device fatigue, whether a reader would tire of this at a chapter a day, and which specific device will be the first to wear out.<br>
-## What the writer's notes got right<br>
-They wrote 4,000 words under the spec; take their objections seriously and rule on each.<br>
-## Recommendation<br>
-Adopt / adopt with named amendments / do not adopt. Commit. If amendments, give the exact replacement wording for each rule.<br>
-## Proposed diff to notes/voices.md and notes/llm-tells.md<br>
-Concrete and quotable — which rules to keep, amend, strike, with replacement text. Do NOT edit those files.<br>
-## Remaining risk<br>
-What is still untested after this.<br>
-<br>
-<span class="redacted">redacted sentence: unpublished prose</span><br>
-<br>
-Your final message is what the author reads on his phone with no files visible: 20-25 lines. Did it work; the strongest and weakest thing in the chapter with one short quote each; the two or three census findings that actually matter; your recommendation and the named amendments; and the single biggest remaining risk. Plain text, no file paths.</p></blockquote>
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are the author's reader-of-first-resort for the novel at [redacted]…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ae74bf0942c95b21d">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-08-28</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are the author's reader-of-first-resort for the novel at <span class="redacted">redacted</span>. Read <code>CLAUDE.md</code> first.</p>
+<p>The round-5 voice lab recommended a fusion voice and named its own limit: nine samples of 1,100 words, all rewrites, and &quot;every failure that matters here is a rate failure — the next test is one full chapter in the fusion, four thousand words, run through the same census.&quot;</p>
+<p>That test has now run. Read:</p>
+<ul>
+<li><code>notes/voice-fusion-draft.md</code> — the fusion spec (a Working proposal, not ruled)<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><code>samples/round5/full-chapter/census.md</code> — the measurements<br />
+<span class="redacted">redacted sentence: unpublished prose</span></li>
+<li><code>samples/round5/REPORT.md</code> and <code>samples/round5/study/current-voice.md</code> — what we predicted and what we diagnosed</li>
+</ul>
+<p>Judge one question: <strong>does the fusion survive four thousand words, and should DRMacIver adopt it?</strong></p>
+<p>Read as a reader first, before you look at the numbers, and say so — your first section must be your reading experience of the chapter, uncontaminated by the census. Then check that experience against the figures and report where they disagree, which is the most informative thing this test can produce.</p>
+<p>Write <code>samples/round5/full-chapter/VERDICT.md</code>:</p>
+<h2>Read cold</h2>
+<p>Your experience of the chapter as prose. Is it exciting? Does the mystery pull? Where did your attention go? Where did it sag, by paragraph. Is it still this book?</p>
+<h2>Against the census</h2>
+<p>Where the numbers confirm or contradict the reading. Any metric inside target where the prose is nonetheless worse, and any metric outside target that does not matter — those two lists are the point.</p>
+<h2>Does it survive length</h2>
+<p>The rate question, answered directly: front-loading, device fatigue, whether a reader would tire of this at a chapter a day, and which specific device will be the first to wear out.</p>
+<h2>What the writer's notes got right</h2>
+<p>They wrote 4,000 words under the spec; take their objections seriously and rule on each.</p>
+<h2>Recommendation</h2>
+<p>Adopt / adopt with named amendments / do not adopt. Commit. If amendments, give the exact replacement wording for each rule.</p>
+<h2>Proposed diff to notes/voices.md and notes/llm-tells.md</h2>
+<p>Concrete and quotable — which rules to keep, amend, strike, with replacement text. Do NOT edit those files.</p>
+<h2>Remaining risk</h2>
+<p>What is still untested after this.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Your final message is what the author reads on his phone with no files visible: 20-25 lines. Did it work; the strongest and weakest thing in the chapter with one short quote each; the two or three census findings that actually matter; your recommendation and the named amendments; and the single biggest remaining risk. Plain text, no file paths.</p></blockquote>
 
 
 <div class="assistant-prose">
@@ -69,25 +76,25 @@ Your final message is what the author reads on his phone with no files visible: 
 <p>✅ 400 lines, 17157 chars</p>
 <p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 122 lines, 7104 chars</p>
-<p>🔧 Bash: cat <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cat <span class="redacted">redacted</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>✅ 277 lines, 23675 chars</p>
 <p>🔧 Bash: cat samples/round5/full-chapter/census.md</p>
 <p>✅ 266 lines, 14916 chars</p>
 <p>🔧 Bash: cat notes/voice-fusion-draft.md</p>
 <p>✅ 48 lines, 2184 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "^\*\*Rule\|^### Rule\|^## \|^**[0-9]" notes/voice-fusion…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -n "^\*\*Rule\|^### Rule\|^## \|^[0-9]" notes/voice-fusion-draft.md |…</p>
 <p>✅ 3 lines, 109 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -nE "^#+ |^\*\*[0-9]+\.|Rule [0-9]+" notes/voice-fusion-draf…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -nE "^#+ |^\*\*[0-9]+\.|Rule [0-9]+" notes/voice-fusion-draft.md</p>
 <p>✅ 70 lines, 5742 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '74,310p' notes/voice-fusion-draft.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '74,310p' notes/voice-fusion-draft.md</p>
 <p>✅ 237 lines, 13426 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; wc -l samples/round5/REPORT.md samples/round5/study/current-voice…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; wc -l samples/round5/REPORT.md samples/round5/study/current-voice.md; sed…</p>
 <p>✅ 123 lines, 6511 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '120,340p' samples/round5/REPORT.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '120,340p' samples/round5/REPORT.md</p>
 <p>✅ 221 lines, 12244 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '340,525p' samples/round5/REPORT.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; sed -n '340,525p' samples/round5/REPORT.md</p>
 <p>✅ 186 lines, 10247 chars</p>
-<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -nE "^#+ |^\*\*§|^\*\*[0-9]" samples/round5/study/current-vo…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted</span>; grep -nE "^#+ |^\*\*§|^\*\*[0-9]" samples/round5/study/current-voice.md |…</p>
 <p>✅ 27 lines, 2280 chars</p>
 </details>
 
@@ -102,8 +109,8 @@ Your final message is what the author reads on his phone with no files visible: 
 
 <div class="assistant-prose">
 <p>It worked. Adopt the fusion, with six amendments. This is the best prose the project has produced, and it is still recognisably your book — same facts, same people, camera eighteen inches closer to a body.</p>
-<p><span class="redacted">redacted sentence: unpublished prose</span> Close behind: the eleventh of Cornmonth landing against the fifteenth on the book's front page, with nobody saying "four days." I said it. The source says it for me.</p>
-<p>Weakest: "A yard a day is a mile in five years." The only sentence in 4,900 words where I heard the author instead of a person in a field. The writer flagged the same line independently. Two readers, one of whom wrote the rule, stopped in the same place.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Close behind: the eleventh of Cornmonth landing against the fifteenth on the book's front page, with nobody saying &quot;four days.&quot; I said it. The source says it for me.</p>
+<p>Weakest: &quot;A yard a day is a mile in five years.&quot; The only sentence in 4,900 words where I heard the author instead of a person in a field. The writer flagged the same line independently. Two readers, one of whom wrote the rule, stopped in the same place.</p>
 <p>Three census findings that matter. First, the census's own summary is wrong — it says one target row is outside, its table shows four. Second, and this is the real result: comedy, figures of speech and em-dashes all passed their per-chapter rates and all failed by distribution. Figures, three of eight in the first tenth with five tenths empty; em-dashes, five of seven in the back half; comedy at zero for nine hundred straight words inside a passing count. The decile table and my cold read located the sag in the same place. That is the failure only length could expose, and it exposed it. Third, the figure floor was met by inserting four figures, two of which the writer calls decoration — a quota satisfied by garnishing.</p>
 <p>The amendments. One: strike the translated number entirely; scale goes in the mouth of whoever is out the money, which the call rule already requires. Two: every device budget becomes a per-thousand-word coverage floor with a per-chapter ceiling, and a scene that forbids comedy is capped at seven hundred words. Three: the downgrade ration bans hedges, not hypotheses — as written it deleted the chapter's only pair of live competing explanations, which is exactly what the architecture graft exists to protect; and a qualifier written only in a book, unspoken, is exempt. <span class="redacted">redacted sentence: unpublished prose</span> Five: reader-ahead beats two per twenty-five hundred words rather than two per chapter. <span class="redacted">redacted sentence: unpublished prose</span></p>
 <p>Biggest remaining risk: this was still a rewrite of solved material by the person who wrote the spec. The spec's costliest property is that it spends words, and you cannot see that cost when you did not have to invent the scene. The next test is a chapter drafted from an arc plan with no source prose, by someone holding only the amended spec.</p>
