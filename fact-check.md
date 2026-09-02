@@ -2,28 +2,28 @@
 
 Fixes applied for the numbered problems below, all in `site/src/workflow/*.md`, `site/src/chronicle/*.md`, `site/src/about.md`, and `site/src/transcripts/titles.json`. Items in `howto/` are the other editor's and are marked as fixed separately.
 
-1. (howto pages: fixed separately)
-2. (howto pages: fixed separately)
-3. (howto pages: fixed separately)
-4. (howto pages: fixed separately)
-5. (howto pages: fixed separately)
-6. (howto pages: fixed separately)
+1. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
+2. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
+3. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
+4. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
+5. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
+6. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
 7. `workflow/README.md`: replaced the invented "a dozen times across fifty-odd scenes, six of them inside a seven-scene stretch" with the sourced figures, "ten times across Arc 3, four of them inside a single four-scene window, dragging a six-chapter stretch".
-8. (howto pages: fixed separately)
-9. (howto pages: fixed separately)
-10. (howto pages: fixed separately)
+8. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
+9. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
+10. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
 11. `workflow/overlap-checking.md`: reattributed the never-open rule from `CLAUDE.md` to the project's voice document, written as prose rather than a code-style citation.
 12. `workflow/royal-road-publishing.md`: rewrote the opening claim so the tool is described as logging in once through Playwright and then submitting the site's own forms directly over HTTP, rather than driving the whole publishing flow through a browser.
 13. `workflow/next-md-handoff.md`: replaced the "advisory pass checking that explanations weren't cut for brevity" description with the actual mechanical "because"/write-verb-tic thinning pass.
-14. (howto pages: fixed separately)
+14. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
 15. `workflow/canon-and-claim-levels.md`: changed the canon-conflict resolution from "both get flagged, and the decision belongs to David" to "canon wins and the earlier chapter is flagged for revision", matching the consistency-check skill.
-16. (howto pages: fixed separately)
+16. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
 17. `workflow/farming-facts-and-author-notes.md`: changed the transcript link text from "2026-08-31, redrafting scene by scene" to "2026-08-31, mapping the setting". `site/src/transcripts/titles.json`: checked both sessions' first user turns in `build/parsed/index.json` and corrected the mislabelling; `c214c046` (an 08-31 session whose first turn asks for an SVG map of the setting) now carries a title and blurb describing the mapping session, and `d1679987` (the 08-30/08-31 session whose first turn is the scene-by-scene redraft brief) keeps the "Finishing the rewrite and publishing to Royal Road" title and blurb, which already matched its real content.
 18. `workflow/overlap-checking.md`: corrected the sequence so the repository cleanup that deleted the discarded drafts is described as happening on the morning of 31 August so the overlap checker could run against git history during that day's redraft, rather than after the redraft was accepted.
-19. (howto pages: fixed separately)
+19. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
 20. `chronicle/2026-08-25.md`: changed the language census range from "chapters 1 to 21" to "chapters 1 to 23", matching the source note and `workflow/llm-tells-and-linting.md`.
 21. `about.md`: scoped the File contents paragraph to note the pre-premise exception in the project's first session, with a pointer to `howto/voice-first.md`.
-22. (howto pages: fixed separately)
+22. howto pages: fixed by the session editor, together with a reframing so every 'Steps you can take' item says the model writes and maintains the file on the author's instruction, and softening of the unverifiable claims listed below.
 
 Drift and ambiguity fixes also applied, on their own clear evidence:
 
