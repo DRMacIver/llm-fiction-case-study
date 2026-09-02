@@ -35,7 +35,7 @@ th,td{border:1px solid #ddd;padding:.3em .7em;}
 <li>Budget: more than one long note (&gt;~160 words), more than ~4 items, or &gt;~320 words total? Give counts.</li>
 <li>Term presence: is each bold term (or the thing it names) actually present in that chapter's prose? grep the chapter body for the key word. List any that are not.</li>
 <li>LLM tells: negative parallelism (&quot;not X. It is Y&quot;, &quot;not X but Y&quot;), triads with a swerve, epigram floating free of particulars, long-build/short-drop rhythm repeated, em dashes in the body (the heading &quot;<strong>Term</strong> —&quot; is allowed), house words (honest, arithmetic, &quot;the whole of&quot;, ordinary), overuse of somebody/nobody/anybody. Quote each.</li>
-<li>Persona: is the voice consistent with <a href="http://author.md">author.md</a> (excited, first person, scientist-not-farmer, at most one digression per chapter that reads as a digression, respectful of farmers)? Flag any note that reads flat/encyclopaedic (the old voice) or that overdoes the persona (cute, gushing, &quot;fun fact&quot;). Suggest concrete rewrites of one to two sentences where a note is flat.</li>
+<li>Persona: is the voice consistent with author.md (excited, first person, scientist-not-farmer, at most one digression per chapter that reads as a digression, respectful of farmers)? Flag any note that reads flat/encyclopaedic (the old voice) or that overdoes the persona (cute, gushing, &quot;fun fact&quot;). Suggest concrete rewrites of one to two sentences where a note is flat.</li>
 <li>Across the whole set: does the persona contradict itself anywhere (age, job, experiences)? Is any phrase or move repeated across notes at fingerprint rates (e.g. &quot;which is why&quot;, &quot;real and&quot;, &quot;I have&quot;)? Give counts.</li>
 </ol>
 <p>Return a concise findings list, ordered by severity, each with chapter, quote, problem, and a proposed fix. Do not edit files. Your final message is raw data for the orchestrator, not for the user.</p></blockquote>
@@ -45,7 +45,7 @@ th,td{border:1px solid #ddd;padding:.3em .7em;}
 <p>✅ 107 lines, 5672 chars</p>
 
 <div class="assistant-prose">
-<p>I need <a href="http://farming.md">farming.md</a>, <a href="http://llm-tells.md">llm-tells.md</a> sections, the chapter list, and all note sections extracted.</p>
+<p>I need farming.md, llm-tells.md sections, the chapter list, and all note sections extracted.</p>
 </div>
 
 <details><summary>16 tool calls</summary>
@@ -83,7 +83,7 @@ th,td{border:1px solid #ddd;padding:.3em .7em;}
 <div class="assistant-prose">
 <p>I have everything needed. Findings follow.</p>
 <h2>Findings, ordered by severity</h2>
-<h3>A. World-content leak / story annotation (rule 4; <a href="http://author.md">author.md</a> &quot;never explains the story&quot;)</h3>
+<h3>A. World-content leak / story annotation (rule 4; author.md &quot;never explains the story&quot;)</h3>
 <ol>
 <li>ch. <span class="redacted">redacted sentence: unpublished prose</span> Names the spell and explains what it rests on; more than a pointing clause. <span class="redacted">redacted sentence: unpublished prose</span></li>
 <li>ch. <span class="redacted">redacted sentence: unpublished prose</span> &quot;In our world&quot; contrasts with the story's water-finding spell; implicit spell commentary. Same move in ch. <span class="redacted">redacted sentence: unpublished prose</span> Fix: drop &quot;in our world&quot; in both; ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
@@ -160,7 +160,7 @@ Cut roughly half of these drops; let the note end on the fact.</li>
 <p>House words / indefinite pronouns across 26 notes (~5,800 words): somebody 12, nobody 6, anybody 2, everybody 2, anyone 6, everyone 2 = 30 (~52/10k, well above the narrator's halved target of ~11/10k). &quot;the whole of&quot;/&quot;honest&quot;/&quot;arithmetic&quot;: 0. &quot;ordinary&quot;: 1 (ch. 026 &quot;ordinary ground&quot;, literal, fine). &quot;really/real and/is real/this is true&quot;: &quot;real&quot; as an assurance word appears in 15 of 26 notes (&quot;real, common, and fungal&quot;, &quot;a real craft&quot;, &quot;real and expensive&quot;, &quot;real and standard test&quot;, &quot;a real tool&quot;, &quot;a real East Anglian word&quot;, &quot;This is real&quot;, &quot;this is true&quot;, &quot;really do this&quot;, &quot;really do breathe&quot;, &quot;The real English Fens&quot;, &quot;real laboratories&quot;, &quot;a real soil office&quot;, &quot;what really happens&quot;, &quot;the skill … is real&quot;). This is the notes' fingerprint word. Fix: keep &quot;real&quot; only where doubt is plausible (fairy rings, cave breathing, hay fire, Holme post); elsewhere just state the fact.</p>
 <p>&quot;which is why&quot;: 5 (ch. 001, 004, 010, 012, 029). Four are fine causal, but ch. 004 and 012 are annotation (A3, A4). &quot;I have&quot;: 10 across 8 notes, clustered in ch. 004 (4). &quot;very long&quot; 3 (&quot;a very long time&quot; x2, &quot;a very long look&quot;). &quot;I'll stop&quot; appears once (ch. 007) — good.</p>
 <h3>E. Persona (item 6)</h3>
-<p>Consistent with <a href="http://author.md">author.md</a> throughout: first person, scientist-not-farmer, no &quot;fun fact&quot;, respectful of farmers, one digression max. Issues:</p>
+<p>Consistent with author.md throughout: first person, scientist-not-farmer, no &quot;fun fact&quot;, respectful of farmers, one digression max. Issues:</p>
 <ul>
 <li><strong>Flat / old voice</strong> (encyclopaedic, no &quot;I&quot;, no reason-second): ch. 006 (all three), ch. 012 (all three), ch. 013 Hedging &amp; Fallow, ch. 014 Reading a kill &amp; Scrapes, ch. 016 (all), ch. 017 (all four), ch. 018, ch. 022, ch. 024, ch. 026. These are short so plainness is allowed (&quot;A note can be plain&quot;), but ch. 006, 012, 016, 017, 022 have no persona at all across the whole chapter. Suggested rewrites:
 <ul>
@@ -171,12 +171,12 @@ Cut roughly half of these drops; let the note end on the fact.</li>
 </ul>
 </li>
 <li><strong>Overdone persona</strong>: ch. 004 Manuring &quot;which tells you most of what you need to know about me&quot; (cute self-commentary, and &quot;I have&quot; 4x in the same note); ch. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
-<li>Digression count: only ch. 007 has a real digression with the &quot;I'll stop.&quot; Ch. 021 (Bedford Level) and ch. 023 (Holme post) wander without the author noticing; fine by rule but the &quot;notices and comes back&quot; beat is used once in 26 notes, and <a href="http://author.md">author.md</a> says it is a weak spot &quot;about once a chapter&quot;. The persona is under-digressing rather than over-digressing.</li>
+<li>Digression count: only ch. 007 has a real digression with the &quot;I'll stop.&quot; Ch. 021 (Bedford Level) and ch. 023 (Holme post) wander without the author noticing; fine by rule but the &quot;notices and comes back&quot; beat is used once in 26 notes, and author.md says it is a weak spot &quot;about once a chapter&quot;. The persona is under-digressing rather than over-digressing.</li>
 <li>Ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
 </ul>
 <h3>F. Cross-set consistency (item 7)</h3>
 <ul>
-<li>No contradictions of age/job/experience: claims (iodine test at fourteen, salt tables filled, Rothamsted for pleasure, soil face days, Old Bedford drive, Holme post, plot registers by hand, village damp argument) all match the <a href="http://author.md">author.md</a> log and each other. One gap: <a href="http://author.md">author.md</a> logs ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
+<li>No contradictions of age/job/experience: claims (iodine test at fourteen, salt tables filled, Rothamsted for pleasure, soil face days, Old Bedford drive, Holme post, plot registers by hand, village damp argument) all match the author.md log and each other. One gap: author.md logs ch. <span class="redacted">redacted sentence: unpublished prose</span></li>
 <li>Ch. <span class="redacted">redacted sentence: unpublished prose</span> 011 &quot;on the same day every month&quot; + ch. 025 &quot;for thirty years&quot; matches the postgraduate-on-a-long-experiment bio.</li>
 <li>Ch. <span class="redacted">redacted sentence: unpublished prose</span> 010 &quot;worms coming&quot;: consistent with worm special interest.</li>
 <li>Repeated moves at fingerprint rate: &quot;real&quot;/&quot;really&quot;/&quot;this is true&quot; assurance (15/26 notes); note-final short drop (~10/26); indefinite pronouns 30; &quot;for a very long time&quot; x2 (ch. 001, 007); &quot;which is why&quot; 5; &quot;I have [verb]ed&quot; 10; &quot;It is [adj] and it works&quot; x2 (ch. <span class="redacted">redacted sentence: unpublished prose</span> 006 Whips &quot;It is cheap and it works&quot;); &quot;X is the reason / is why&quot; causal closers in nearly every note.</li>
@@ -232,7 +232,7 @@ Cut roughly half of these drops; let the note end on the fact.</li>
 <span class="redacted">redacted sentence: unpublished prose</span></li>
 <li>007: &quot;I'll stop.&quot;</li>
 </ul>
-<p><strong>Proposed rule for <a href="http://author.md">author.md</a></strong></p>
+<p><strong>Proposed rule for author.md</strong></p>
 <p>An &quot;I&quot; sentence must have an object other than the author: say what you did or saw, where, with what. Never say what kind of person you are, and never append yourself to a sentence to license it (&quot;as somebody who…&quot;, &quot;and I have done a few&quot;, &quot;which tells you about me&quot;). If the experience matters, let the note know something only that experience would teach; the credential is then unnecessary. Fondness goes to the thing, never to the self for being fond of the thing.</p>
 <p><strong>Fixes for the two you named</strong></p>
 <p><span class="redacted">redacted sentence: unpublished prose</span><br />
@@ -251,7 +251,7 @@ Cut roughly half of these drops; let the note end on the fact.</li>
 <div class="assistant-prose">
 <p>That sharpens the criterion, and I think your version is the real one. The fault is not self-reference and it is not enthusiasm; it is the author standing outside their own enthusiasm to note that it is funny. <span class="redacted">redacted sentence: unpublished prose</span> The lines you like say the enthusiasm straight and let the reader do whatever they like with it: &quot;more worms coming&quot; is a promise, not a joke about wanting to make one; &quot;more impressive than the roads&quot; is an opinion held without apology; the kitchen table line is a memory, and &quot;never entirely got over it&quot; is stated as a fact about the author, not offered as a punchline.</p>
 <p>Which also explains &quot;I have filled in a few&quot;: it is not a wink, but it is the same posture, the author standing slightly outside the work and being modest about it, rather than inside it. The fixed version of the rule:</p>
-<p><strong>Rule (for <a href="http://author.md">author.md</a>).</strong> The author may say &quot;I&quot; and may be enthusiastic, and says it straight. Never joke about the enthusiasm, apologise for it, or frame it as a confession or a quirk (&quot;as somebody who…&quot;, &quot;for pleasure&quot;, &quot;for no reason anyone could see&quot;); never offer a credential to license a fact (&quot;and I have done a few&quot;). Say what you did, saw, or think, with the thing as the object, and stop. If it is funny, the reader will notice.</p>
+<p><strong>Rule (for author.md).</strong> The author may say &quot;I&quot; and may be enthusiastic, and says it straight. Never joke about the enthusiasm, apologise for it, or frame it as a confession or a quirk (&quot;as somebody who…&quot;, &quot;for pleasure&quot;, &quot;for no reason anyone could see&quot;); never offer a credential to license a fact (&quot;and I have done a few&quot;). Say what you did, saw, or think, with the thing as the object, and stop. If it is funny, the reader will notice.</p>
 <p>Revised list:</p>
 <p><strong>Cut or rewrite (wink or credential)</strong><br />
 <span class="redacted">redacted sentence: unpublished prose</span><br />

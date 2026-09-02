@@ -408,7 +408,7 @@ def test_write_readme_lists_sessions_only(tmp_path, monkeypatch):
         }
     ]
     render.write_readme(rows)
-    text = (tmp_path / "README.md").read_text()
+    text = (tmp_path / "index.md").read_text()
     assert "Hello world" in text
     assert "| 10 |" in text
     assert "| 20 |" in text
@@ -425,7 +425,7 @@ def test_update_summary_lists_sessions_only(tmp_path, monkeypatch):
     ]
     render.update_summary(rows)
     text = summary.read_text()
-    assert "[Transcripts](transcripts/README.md)" in text
+    assert "[Transcripts](transcripts/index.md)" in text
     assert "First session" in text
     assert "subagents/" not in text
 

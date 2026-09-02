@@ -14,12 +14,12 @@ The novel is still being published, so the site is redacted against spoilers. An
 
 There are four sections, and they cover the same ten days from different angles.
 
-[How to do this yourself](howto/README.md) is the place to start if your question is practical: what the back and forth between author and model actually looks like, which files and checks a project like this needs, when to throw work away, and which lessons should transfer to a different project. It stands back from the detail and points into the other sections for evidence.
+[How to do this yourself](howto/index.md) is the place to start if your question is practical: what the back and forth between author and model actually looks like, which files and checks a project like this needs, when to throw work away, and which lessons should transfer to a different project. It stands back from the detail and points into the other sections for evidence.
 
-[The workflow](workflow/README.md) is the systems view: the rule files that bind a drafting session, the exemplar-first method for holding a voice, the linting and review passes that hunt for machine-prose habits, the canon system, the handoff document that lets a fresh session pick up where the last one stopped, and the tooling for proofreading, commenting, and publishing. Read this if you want to know how the thing was built.
+[The workflow](workflow/index.md) is the systems view: the rule files that bind a drafting session, the exemplar-first method for holding a voice, the linting and review passes that hunt for machine-prose habits, the canon system, the handoff document that lets a fresh session pick up where the last one stopped, and the tooling for proofreading, commenting, and publishing. Read this if you want to know how the thing was built.
 
-[The chronicle](chronicle/README.md) is the narrative view: one page per day, from setting the premise on 24 August 2026 to finishing the draft on 2 September. It is reconstructed from commits and transcripts, so it is a record of what happened rather than of what anyone intended, which is mostly why it is worth reading. A good deal of the ten days went on work that was later thrown away.
+[The chronicle](chronicle/index.md) is the narrative view: one page per day, from setting the premise on 24 August 2026 to finishing the draft on 2 September. It is reconstructed from commits and transcripts, so it is a record of what happened rather than of what anyone intended, which is mostly why it is worth reading. A good deal of the ten days went on work that was later thrown away.
 
-[The transcripts](transcripts/README.md) are the raw material: the redacted Claude Code sessions themselves, prompt by prompt. They are long and they are not edited for readability. If a claim on one of the other pages looks too tidy, this is where to check it.
+[The transcripts](transcripts/index.md) are the raw material: the redacted Claude Code sessions themselves, prompt by prompt. They are long and they are not edited for readability. If a claim on one of the other pages looks too tidy, this is where to check it.
 
 The workflow pages and the chronicle link to each other where a rule and the failure that produced it belong together, which is most of the time.

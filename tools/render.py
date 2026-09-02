@@ -3,7 +3,7 @@
 Writes:
   site/src/transcripts/<session-id>.md            (split into -part2 etc if >400 turns)
   site/src/transcripts/subagents/<agent-id>.html   standalone static pages, NOT in SUMMARY.md
-  site/src/transcripts/README.md                  index table of the 9 sessions
+  site/src/transcripts/index.md                   index table of the 9 sessions
   site/src/SUMMARY.md                              Transcripts section rewritten
 
 Rendering rules (see tools/redact.py docstring for the ⟦...⟧ markers this
@@ -86,8 +86,14 @@ def esc(text: str) -> str:
 
 
 _MD = MarkdownIt("commonmark", {"html": False, "breaks": True, "linkify": True}).enable("table").enable("linkify")
+# Only link explicit http(s):// and www. URLs; fuzzy matching turns filenames
+# like notes.md and regex fragments into links.
+_MD.linkify.set({"fuzzy_link": False, "fuzzy_email": False, "fuzzy_ip": False})
 
 _TABLE_RE = re.compile(r"<table>.*?</table>", re.DOTALL)
+# Unwrap anchors whose href is not a plain http(s) URL (linkify occasionally
+# picks up regex fragments or odd schemes from transcript text).
+_BAD_LINK_RE = re.compile(r'<a href="(?!https?://)[^"]*">(.*?)</a>', re.DOTALL)
 
 
 def render_markdown(text: str | None) -> str:
@@ -104,6 +110,7 @@ def render_markdown(text: str | None) -> str:
         return ""
     rendered = _MD.render(text)
     rendered = _REDACT_MARKER_RE.sub(lambda m: _marker_span(m.group(1)), rendered)
+    rendered = _BAD_LINK_RE.sub(r"\1", rendered)
     rendered = _join_adjacent_spans(rendered)
     rendered = _TABLE_RE.sub(lambda m: f'<div class="table-wrap">{m.group(0)}</div>', rendered)
     # mdBook/pulldown-cmark treats a run of raw HTML lines as ending at the
@@ -524,7 +531,7 @@ def render_subagent_pages(
         page = (
             "<!doctype html>\n<html><head><meta charset=\"utf-8\">"
             f"<title>{rc.heading}</title>{SUBAGENT_STYLE}</head><body>"
-            f"<h1>{rc.heading}</h1>{header}{note_html}{nav_html}{rc.body}{nav_html}"
+            f"<h1>{rc.heading}</h1>{header}{note_html}{nav_html}{rc.body.replace('href=\"subagents/', 'href=\"')}{nav_html}"
             "</body></html>\n"
         )
         dest = SUBAGENTS_OUT_DIR / f"{fname}.html"
@@ -665,13 +672,13 @@ def write_readme(session_rows: list[dict]) -> None:
         "simplified, one-line form; the contents of files read or written are never shown. "
         "Thinking blocks are collapsed behind a \"thinking\" toggle."
     ), ""]
-    (TRANSCRIPTS_DIR / "README.md").write_text("\n".join(lines) + "\n")
+    (TRANSCRIPTS_DIR / "index.md").write_text("\n".join(lines) + "\n")
 
 
 def update_summary(session_rows: list[dict]) -> None:
     text = SUMMARY_PATH.read_text()
     marker = "- [Transcripts](transcripts.md)"
-    lines = ["- [Transcripts](transcripts/README.md)"]
+    lines = ["- [Transcripts](transcripts/index.md)"]
     for row in sorted(session_rows, key=lambda r: r["date"]):
         lines.append(
             f"  - [{row['date']}: {md_link_text(row['nav_title'])}](transcripts/{row['link']})"
@@ -679,9 +686,9 @@ def update_summary(session_rows: list[dict]) -> None:
     replacement = "\n".join(lines)
     if marker in text:
         new_text = text.replace(marker, replacement)
-    elif "- [Transcripts](transcripts/README.md)" in text:
+    elif "- [Transcripts](transcripts/index.md)" in text:
         new_text = re.sub(
-            r"- \[Transcripts\]\(transcripts/README\.md\)(\n {2,}- .*)*",
+            r"- \[Transcripts\]\(transcripts/(README|index)\.md\)(\n {2,}- .*)*",
             replacement,
             text,
         )
