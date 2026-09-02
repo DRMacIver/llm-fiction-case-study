@@ -10,6 +10,8 @@ The process was a loop, not a pipeline. David gave the model a goal and some tas
 
 ## The pages
 
+[Setting up: Claude Code, a folder, and a repository](setup.md) is for readers who have never used a terminal. It says what David used and offers the desktop app as the easier route.
+
 [Start with the voice, not the story](voice-first.md) covers the first day and a half, in which no fiction was written, and argues that this was the best decision in the project.
 
 [The loop: how the back and forth actually goes](the-loop.md) describes a typical exchange between author and model, and what makes feedback usable.

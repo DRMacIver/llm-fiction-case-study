@@ -3,6 +3,7 @@
 - [Introduction](introduction.md)
 - [About this site](about.md)
 - [How to do this yourself](howto/README.md)
+  - [Setting up Claude Code and a repository](howto/setup.md)
   - [Start with the voice, not the story](howto/voice-first.md)
   - [The loop: how the back and forth goes](howto/the-loop.md)
   - [Write everything down where the model will read it](howto/write-it-down.md)
