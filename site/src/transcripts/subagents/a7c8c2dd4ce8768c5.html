@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a7c8c2dd4ce8768c5">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<br>
+**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
+- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
+- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
+- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
+<br>
+Read `.claude/skills/editing-pass/SKILL.md`. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">unpublished</span> Cite the line and the canon file for every finding.<br>
+<br>
+Your material: scenes 01–07 in `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">unpublished</span> Report findings only, each with the line quoted; do not write "clean". Write `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/lens-leads-canon.md`. Do not edit prose. Do not commit.<br>
+<br>
+Your final message: finding count and the worst one.</p></blockquote>
+
+
+<details><summary>28 tool calls</summary>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> | head -200</p>
+<p>✅ 207 lines, 11560 chars</p>
+<p>🔧 Bash: sed -n '1,50p' notes/canon/deferred-questions.md <span class="redacted">unpublished</span></p>
+<p>✅ 50 lines, 4193 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 677 lines, 28615 chars</p>
+<p>🔧 Bash: cat notes/canon/world/timeline.md 2&gt;/dev/null | head -150</p>
+<p>✅ 150 lines, 9151 chars</p>
+<p>🔧 Bash: grep -rn -i "<span class="redacted">redacted: character</span>" notes/canon/characters/*.md | head -60</p>
+<p>✅ 60 lines, 6247 chars</p>
+<p>🔧 Bash: grep -n -i "arm\|<span class="redacted">redacted: event</span>\|palm\|stitch\|Fallowmonth\|Day 4[0-9]\|Day 5[0-9]" no…</p>
+<p>✅ 93 lines, 6616 chars</p>
+<p>🔧 Bash: sed -n '600,670p;750,800p' notes/canon/world/timeline.md</p>
+<p>✅ 121 lines, 6918 chars</p>
+<p>🔧 Bash: sed -n '410,432p' notes/canon/world/timeline.md</p>
+<p>✅ 23 lines, 1437 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> plans/book-01/arc-03.md <span class="redacted">unpublished</span>…</p>
+<p>✅ 23 lines, 2271 chars</p>
+<p>🔧 Bash: sed -n '2000,2030p;2255,2280p' plans/book-01/arc-03.md <span class="redacted">unpublished</span></p>
+<p>✅ 46 lines, 3036 chars</p>
+<p>🔧 Bash: sed -n '1600,1630p' plans/book-01/arc-03.md <span class="redacted">unpublished</span></p>
+<p>✅ 31 lines, 1835 chars</p>
+<p>🔧 Bash: grep -n -i "third clause\|assessor\|charter rate\|secondment\|journeyman" notes/canon/cha…</p>
+<p>✅ 6 lines, 426 chars</p>
+<p>🔧 Bash: grep -n -i "wystow\|Sorrel\|Marsh\|address" notes/canon/characters/edwin.md | grep -i "wy…</p>
+<p>✅ 14 lines, 1207 chars</p>
+<p>🔧 Bash: sed -n '75,95p' notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>✅ 21 lines, 1367 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>This matches scene 03's usage fine. I have enough to write the report now.</p>
+</div>
+
+<p>🔧 Write rewrite/book-01/arc-03/lens-leads-canon.md</p>
+<p>✅ 1 lines, 173 chars</p>
+
+<div class="assistant-prose">
+<p>4 findings. The worst: scenes 03–04 (the <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> assessment at 11:00 — a late-morning job lasting an hour and ten minutes. The <span class="redacted">redacted: object</span><span class="redacted">redacted sentence: unpublished prose</span> Report at `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/lens-leads-canon.md`.</p>
+</div>
+</body></html>

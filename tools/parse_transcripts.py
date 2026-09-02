@@ -31,8 +31,22 @@ ERROR_TRUNC = 200
 
 FILE_TOOLS = {"Read", "Edit", "Write", "NotebookEdit"}
 
+# Commands whose stdout is liable to include verbatim file contents (as
+# opposed to a status line, a count, a filename list, etc). Deliberately
+# broad and denylist-shaped: grep/awk/perl/etc. context lines, git show/diff/
+# log -p hunks, and interpreter one-liners that read files can all surface
+# quoted story prose or unpublished plot detail just as readily as cat/sed
+# can, so their stdout is never previewed either. Includes a "\n" separator
+# so a command later in a multi-line `cmd1\ncmd2` Bash invocation is still
+# recognised (not just ones at the very start or after |;&).
 CAT_LIKE_RE = re.compile(
-    r"(^|[|;&]\s*)(cat|head|tail|less|more|bat)\b|\bsed\s+-n\b|<\s*\S+\s*$",
+    r"(^|[|;&\n]\s*)(cat|head|tail|less|more|bat|grep|egrep|fgrep|rg|awk|perl|jq|"
+    r"strings|xxd|od|nl|diff|hexdump)\b"
+    r"|\bsed\s+(-n\b|-e?\s*'[^']*p)"
+    r"|\bgit\s+(show|diff|log\s+(-p|--patch|-u))\b"
+    r"|\b(python[0-9.]*|node)\b[^\n]*(-c\b|\.read\(\)|open\()"
+    r"|\bfind\b[^\n]*-exec\s+(cat|grep|sed|head|tail)\b"
+    r"|<\s*\S+\s*$",
 )
 
 

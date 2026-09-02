@@ -1,0 +1,85 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the voice director for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the voice director for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a2eacdc85e969e8cc">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the voice director for the novel at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it.<br>
+<br>
+Round 5 of the voice lab has finished. Read, in full:<br>
+- `samples/round5/REPORT.md` — the judgement. Its verdict is: **the Call-Out for the sentences, the Open Wager for the architecture, one instrument from the Rising Water and nothing else.**<br>
+- `samples/round5/voices/voice-1-the-rising-water.md`, `voice-2-the-open-wager.md`, `voice-3-the-call-out.md`<br>
+- `samples/round5/study/current-voice.md` — the diagnosis and the measurements<br>
+- `samples/round5/scenes/discovery-voice-3.md` and `discovery-voice-2.md` — the Call-Out failed the discovery scene (the four circles never made it in); the Open Wager passed it but had to write scoreboard paragraphs that broke its own bans.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Your job is to write the fusion as a single working voice spec that a writer can be held to over 300 chapters at a chapter a day. Not a summary of the report — a **usable instrument**. Resolve, do not restate, the tensions the report names:<br>
+<br>
+1. **The Call-Out's failure mode is losing the finding.** Its own gravity pulls to the yard, the body, the person who wants something. Write the rule that keeps the actual discovery in the scene without turning the prose back into a minute.<br>
+2. <span class="redacted">redacted sentence: unpublished prose</span> Say exactly which of them a *chapter writer* can execute at the sentence level without a scoreboard paragraph, and how. The narrator cannot keep score; who or what does?<br>
+3. **Pick the one Rising Water instrument** the report endorses, name it, and say precisely when it may be used and how often.<br>
+4. **The two amendments.** "Openings are entrances, not minutes" — write it as a checkable rule with its exceptions, if any. "The epistemic downgrade rationed to one finding in four" — write the counting rule, and say what replaces the downgrade in the other three.<br>
+5. **Rates, not moves.** The report says every failure that matters is a rate failure. Give the voice a **budget table**: per 1,000 words or per chapter, for every device that can be overused. Use the round-5 measurements as the baseline and state target ranges, with the reasoning. Include the ones the current prose is failing (date-stamped scene openings, sentences containing a number, polysyndeton, dialogue share, figures of speech, narratorial questions, mean sentence length) and the new devices this voice introduces.<br>
+<br>
+Write `<span class="redacted">redacted: private</span>/notes/voice-fusion-draft.md`. Mark it clearly at the top as **(Claude, Working proposal, 2026-08-28 — not yet ruled by DRMacIver; `notes/voices.md` Voice D remains binding until he says otherwise)**. Structure: The bet / What it inherits from each source / The binding rules (numbered, checkable) / The budget table / What it overrides in llm-tells.md and voices.md and why that is safe / Failure modes and their early warning signs / How to check a chapter against this spec in ten minutes.<br>
+<br>
+Do not edit `notes/voices.md` or `notes/llm-tells.md` — DRMacIver makes design decisions. Your final message: the bet in three lines, plus the three rules you expect to be hardest to keep.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required material.</p>
+</div>
+
+<details><summary>28 tool calls</summary>
+<p>🔧 Bash: wc -l CLAUDE.md samples/round5/REPORT.md samples/round5/voices/*.md samples/round5/study/…</p>
+<p>✅ 37 lines, 836 chars —      106 CLAUDE.md /      525 samples/round5/REPORT.md /       81 samples/round5/voices/README.md</p>
+<p>🔧 Bash: cat samples/round5/REPORT.md</p>
+<p>✅ 525 lines, 28776 chars</p>
+<p>🔧 Bash: cat samples/round5/voices/voice-3-the-call-out.md; echo "=====V2====="; cat samples/round…</p>
+<p>✅ 392 lines, 24286 chars</p>
+<p>🔧 Bash: cat samples/round5/study/current-voice.md</p>
+<p>✅ 433 lines, 24766 chars</p>
+<p>🔧 Bash: cat samples/round5/voices/voice-1-the-rising-water.md; echo "===DISC3==="; cat samples/ro…</p>
+<p>✅ 370 lines, 21133 chars</p>
+<p>🔧 Bash: sed -n '100,185p' samples/round5/scenes/discovery-voice-2.md</p>
+<p>✅ 86 lines, 4399 chars</p>
+<p>🔧 Bash: cat notes/voices.md</p>
+<p>✅ 44 lines, 2191 chars</p>
+<p>🔧 Bash: grep -n "^#\|^##\|^###\|^[0-9]\+\." <span class="redacted">redacted: private</span> | head -100</p>
+<p>✅ 34 lines, 2269 chars</p>
+<p>🔧 Bash: sed -n '86,180p;280,340p' <span class="redacted">redacted: private</span></p>
+<p>✅ 156 lines, 9794 chars</p>
+<p>🔧 Bash: grep -n "^#\|^\*\*[0-9]" notes/llm-tells.md</p>
+<p>✅ 8 lines, 374 chars</p>
+<p>🔧 Bash: sed -n '114,172p' notes/llm-tells.md</p>
+<p>✅ 59 lines, 3629 chars</p>
+<p>🔧 Bash: ls scripts tools bin 2&gt;/dev/null; find . -name "*census*" -o -name "*.py" | grep -v node_…</p>
+<p>✅ 17 lines, 313 chars</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span>/notes/voice-fusion-draft.md &lt;&lt;'EOF' # Voice E — "The Call and t…</p>
+<p>✅ 1 lines, 71 chars</p>
+<p>🔧 Bash: git add notes/voice-fusion-draft.md &amp;&amp; git commit -q -m "Voice lab: fusion spec draft (Vo…</p>
+<p>✅ 1 lines, 71 chars — 6fed7b8 Voice lab: fusion spec draft (Voice E, 'The Call and the Book')</p>
+</details>
+
+<div class="assistant-prose">
+<p>`<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> Committed as 6fed7b8; `notes/voices.md` and `notes/llm-tells.md` untouched.</p>
+<p>**The bet, in three lines:**<br>
+1. The reader stays because a named person with money on it is having a bad afternoon, and the mystery advances as a by-product of work that cannot be put off.<br>
+2. The mystery stays alive because <span class="redacted">redacted: plot</span> — Peri's three columns — and a hypothesis is only ever re-entered as an act by a hand, never as a paragraph by the narrator.<br>
+3. The scale is admitted exactly once a chapter, in a translated number nobody reacts to.</p>
+<p>**The three rules I expect to be hardest to keep:**</p>
+<p>- **Rule 2, the call is answered by the finding** (with Rule 3's finding-first draft order). It is the one rule that requires the drafter to write out of sequence, and it fights the pleasure of writing the yard. The moment somebody drafts front-to-back because the gateway is going well, discovery-voice-3 happens again — and the failure is invisible until the last fifth of the chapter.<br>
+- **Rule 8, the narrator never keeps score.** The prose will always want to help the reader remember where the bet stands, and helping is one sentence away. Both of the Open Wager's scoreboard paragraphs were written by an author who had explicitly banned them.<br>
+- **Rule 14, the downgrade ration.** It erodes because every individual instance is correct characterisation and feels right locally; only the rate is fatal, and rate is the thing a drafter cannot feel. This one survives only if the census is actually run per chapter — which is also failure mode 9, and the reason the census script is the first task if the spec is adopted.</p>
+</div>
+</body></html>

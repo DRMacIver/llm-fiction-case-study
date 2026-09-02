@@ -1,0 +1,94 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for a fiction project with…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-af28d4d7bf30c396a">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and <span class="redacted">redacted: private</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md. Also read <span class="redacted">redacted: private</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance of that rule, worth a human look), FALSE-POSITIVE (misread, counter-example, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule) into one verdict. Then add to judge_added any clear violations of the semantic rules (scope "scene") the scanners missed. Be strict: the cost of a false CONFIRMED is DRMacIver's time.<br>
+<br>
+Candidates:<br>
+[<br>
+ {<br>
+  "rule_id": "missing-qualifier",<br>
+  "quote": "It's called the Pellings.",<br>
+  "reason": "The Pellings is a bare noun phrase without context or qualifier; reader cannot determine its sense (place, organization, task, etc.)"<br>
+ },<br>
+ {<br>
+  "rule_id": "unanswered-question",<br>
+  "quote": "\"From what?\" / \"That hasn't been revealed yet.\"",<br>
+  "reason": "Edwin's practical question 'From what?' receives a non-answer as the first sentence. The rule requires the first sentence to answer a practical question in usable terms; instead, Peri defers with 'That hasn't been revealed yet' before eventually providing speculation in later sentences."<br>
+ },<br>
+ {<br>
+  "rule_id": "description-list",<br>
+  "quote": "Bunches of herbs drying from the beam. A dresser of crockery, no two pieces alike, because parishes send things. A stack of seed catalogues older than she was. A shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said *beans*. On the wall, in a frame, a sampler with a wheat sheaf on it that a farmwife had worked for him one winter.",<br>
+  "reason": "Description presented as sequential list of room items (bunches, dresser, catalogues, jars, sampler) rather than one noticed thing bound to viewpoint action"<br>
+ },<br>
+ {<br>
+  "rule_id": "unearned-authority",<br>
+  "quote": "\"Don't ask it *who*. You've done *who*. Ask it *what*. What am I to save the world from.\"",<br>
+  "reason": "Edwin issues direct commands to Peri without established ground for authority; Peri explicitly rejects by interrupting and declining to continue"<br>
+ },<br>
+ {<br>
+  "rule_id": "canon-scale-contradiction",<br>
+  "quote": "had done for three hundred years",<br>
+  "reason": "Edwin claims three hundred years here, but line 17 says 'three hundred and fifty years' — internally contradictory age reference"<br>
+ },<br>
+ {<br>
+  "rule_id": "canon-scale-contradiction",<br>
+  "quote": "He had seen it twice in three hundred and fifty years.",<br>
+  "reason": "Claims 350 years, but elsewhere (lines 13, 71) claims 300 years — contradicts other age statements"<br>
+ },<br>
+ {<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "She sat at his kitchen table with her pack still on and looked round the room with open interest, and Edwin, filling the kettle, was aware of what she was seeing.",<br>
+  "reason": "Eight-word run matches deleted chapters/001-the-wrong-man.md; overlap check found 26 total contaminating runs"<br>
+ },<br>
+ {<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "What he read on Peri Millbrook nearly made him scald himself.",<br>
+  "reason": "Matches deleted chapters/001; part of the 26-run contamination detected by overlap_check.py"<br>
+ },<br>
+ {<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "She was wearing fate magic.",<br>
+  "reason": "Matches deleted chapters/001; core revelation sentence contaminated"<br>
+ },<br>
+ {<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "He put her tea in front of her, and his own, and sat down. \"Tell me about this class of yours.\"",<br>
+  "reason": "Matches deleted chapters/001; part of 26-run contamination from overlap_check.py"<br>
+ }<br>
+]</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll read the rules, the scene, and the exemplars.</p>
+</div>
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>✅ 66 lines, 2240 chars</p>
+<p>🔧 Bash: cat -n <span class="redacted">redacted: private</span>/draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md</p>
+<p>✅ 93 lines, 8905 chars</p>
+<p>🔧 Bash: python3 -c " import json rs=json.load(open('tools/lint/rules.json')) print([r['id'] for r…</p>
+<p>✅ 120 lines, 8087 chars</p>
+<p>🔧 Bash: python3 tools/overlap_check.py draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md 2&gt;&amp;1…</p>
+<p>✅ 29 lines, 3116 chars</p>
+<p>🔧 Bash: grep -n "3\.7" -A 25 draft/book-01/VOICE.md | head -60</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: grep -rn "3.7\|contaminat\|mirror" draft/book-01/VOICE.md | head -30; echo ---; grep -n "…</p>
+<p>✅ 37 lines, 3645 chars</p>
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>

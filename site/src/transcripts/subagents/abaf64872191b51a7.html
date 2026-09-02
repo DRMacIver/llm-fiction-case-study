@@ -1,0 +1,109 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Run the pre-David pass exactly as specified in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/.c…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Run the pre-David pass exactly as specified in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/.c…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-abaf64872191b51a7">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Run the pre-David pass exactly as specified in <span class="redacted">redacted: private</span>/.claude/skills/pre-david-pass/SKILL.md (read it first, in full, and follow every part) on two freshly drafted scenes: draft/book-01/scenes/101-of-this-college.md <span class="redacted">unpublished</span> and 102-plot-fourteen.md <span class="redacted">unpublished</span>. Read draft/book-01/VOICE.md in full first, then draft/book-01/SCENES.md's act-three binding list (end of file), notes/canon/characters/ for <span class="redacted">redacted: character</span>, Peri, Edwin, <span class="redacted">redacted: character</span>, minor.md (<span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, Ossett), and scenes 99, 100 for immediate context. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>: a long enthusiast's speech — is it a monologue device or his shape? <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s poker/I-skipped-I line); <span class="redacted">redacted: character</span>'s register (her Ossett report: 'that's what a warden on a road is for, and I didn't know that until I'd done it' — verdict tail? hers?); Peri's <span class="redacted">redacted: character</span> 'No' beat — is the narration's 'she had shut it' the right amount, and does 'had learned in six weeks that Peri's shut the same way' gesture; Edwin's aphorism budget (101: none? <span class="redacted">redacted sentence: unpublished prose</span> 102 on 'Sixty-one censuses.' fragment — announcing?); buttons (102's last paragraph: 'because you were nineteen' and the kneeling: earned or button? <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> — flag); clocks (seven to one, four hours, sixty-one cuts: plausible?). STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history. Report numbered findings with the quoted line, the fault, and a proposed replacement. Do not edit any file.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the skill and all the context files.</p>
+</div>
+
+<details><summary>42 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 257 lines, 16258 chars</p>
+<p>✅ 426 lines, 27364 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/101-of-this-college.md <span class="redacted">unpublished</span>; echo "=====102====="; cat…</p>
+<p>✅ 67 lines, 11562 chars</p>
+<p>🔧 Bash: tail -120 draft/book-01/SCENES.md</p>
+<p>✅ 120 lines, 11329 chars</p>
+<p>🔧 Bash: ls notes/canon/characters/ &amp;&amp; cat notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>✅ 49 lines, 2226 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/099-*.md draft/book-01/scenes/100-*.md</p>
+<p>✅ 2 lines, 69 chars</p>
+<p>🔧 Bash: ls draft/book-01/scenes/ | sed -n '95,110p'</p>
+<p>✅ 8 lines, 248 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.md</p>
+<p>✅ 38 lines, 2189 chars</p>
+<p>🔧 Bash: ls draft/book-01/scenes/ | tail -8; echo ---; cat draft/book-01/scenes/99-seventy-miles-i…</p>
+<p>✅ 44 lines, 5718 chars</p>
+<p>🔧 Bash: grep -n -i -e <span class="redacted">redacted: character</span> -e <span class="redacted">redacted: character</span> -e ossett -e "particular way…</p>
+<p>✅ 6 lines, 473 chars</p>
+<p>🔧 Bash: sed -n '365,445p' notes/canon/characters/minor.md</p>
+<p>✅ 81 lines, 4964 chars</p>
+<p>🔧 Bash: grep -rn "assumed nothing he had said would be checked\|particular way of standing\|⟦reda…</p>
+<p>✅ 30 lines, 3471 chars</p>
+<p>🔧 Bash: sed -n '375,400p' notes/canon/world/geography.md; echo ---; grep -n "⟦redacted: character…</p>
+<p>✅ 67 lines, 4727 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/<span class="redacted">redacted: character</span>.md; echo ===; grep -n "nineteen\|⟦redact…</p>
+<p>✅ 176 lines, 10039 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes; for f in 101-of-this-college.md ⟦unpublished…</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "nineteen\|plot 14\|<span class="redacted">redacted: place</span>\|examination\|no de…</p>
+<p>✅ 10 lines, 211 chars</p>
+<p>✅ 18 lines, 1532 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '290,330p' notes/canon/characters/edwin.md; echo ...; sed…</p>
+<p>✅ 55 lines, 3548 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "—" draft/book-01/scenes/101-of-this-college.md ⟦unpublis…</p>
+<p>✅ 9 lines, 564 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "Day 1\b\|Day 2\b\|<span class="redacted">redacted: character</span> joins\|Fallowmon…</p>
+<p>✅ 40 lines, 2886 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '460,490p' notes/canon/world/timeline.md; echo ---; grep -…</p>
+<p>✅ 48 lines, 3497 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '390,420p' notes/canon/characters/<span class="redacted">redacted: character</span>.md…</p>
+<p>✅ 33 lines, 1865 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>I read the skill in full, `VOICE.md`, `SCENES.md`'s act-three binding list, `edwin.md`/`peri.md`/`<span class="redacted">redacted: character</span>.md`/`<span class="redacted">redacted: character</span>.md`/`minor.md` (<span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, Ossett, the four signatories), `world/geography.md` (the <span class="redacted">redacted: character</span> ruling) and `world/timeline.md` Days 61–63, plus scene 99 <span class="redacted">unpublished</span>. **Note: there is no scene 100 <span class="redacted">unpublished</span> on disk** — `scenes/` ends at `99-seventy-miles-in-eleven-days.md <span class="redacted">unpublished</span>`, so 101 and 102 currently follow 99 directly and the field-office/sending-book material the SCENES table assigns to 100 has not been written. Several findings below turn on that gap. I edited nothing.</p>
+<p>## Part 1 — sense, counts, facts</p>
+<p>**1. 101: "the slip <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Fault: invented dependent of an edited fact. Fix: cut "and had told him not to read".</p>
+<p>**2. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**3. <span class="redacted">redacted sentence: unpublished prose</span> The words she added unasked are *of this college*: three. Fix: "three words" in both places.</p>
+<p>**4. 101: "he had learned in six weeks that Peri's shut the same way"** — count. This is Day 62 (16 Fallowmonth); Peri arrived Day 1. Nine weeks, not six. Fix: "in nine weeks".</p>
+<p>**5. 101, <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span>'s six, Ossett's hall) fall between Day 50 and Day 62; she came onto the road on 4 Fallowmonth. Fix: "That's four houses in a fortnight".</p>
+<p>**6. 102: the clock does not close.** "at seven in the morning" … "Sixty-one cuts, nine stakes, four hours" … "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Seven to one is six hours, and the noon paragraph sits after the end-of-work paragraph. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**7. 102: "You said at the gate you were going to put your hand on it first. Before the spade. <span class="redacted">redacted sentence: unpublished prose</span> Also "You walked here to." is a sentence ending on a stranded "to" with no plausible completion (Part 1, interrupted line). <span class="redacted">redacted sentence: unpublished prose</span> Before the spade. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**8. <span class="redacted">redacted sentence: unpublished prose</span> Fix: "A to H and then J. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**9. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**10. 102: "a sheet with three hands on it"** — inconsistent with the paragraph that establishes the arrangement: <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> The sheet has one hand; the three hands are spread across three books. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**11. 102: by what authority is the rope off?** "with the rope off the road gate and <span class="redacted">redacted: character</span>'s key in the fence" — 99 put a board on that rope reading *Trials suspended. No entry until the inquiry is done. <span class="redacted">redacted sentence: unpublished prose</span> A cause left out; the reader asks it on the first line. Fix: a clause on <span class="redacted">redacted: character</span>'s key — "with <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**12. <span class="redacted">redacted sentence: unpublished prose</span> Fix: "came in at the ordinary numbers".</p>
+<p>**13. 101: "a soils Fellow of about a hundred and forty"** — viewpoint knowledge. Edwin has never met <span class="redacted">redacted: character</span>; the number arrives from nowhere on a first look ("does Edwin know this?"). Fix: cut the age from the narration — <span class="redacted">redacted: character</span>'s own "since I was ninety" plus "fifty years" already places him. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**14. 101 (low): <span class="redacted">redacted: character</span> "has been in the fellows' passage since two" on the 15th (scene 99 <span class="redacted">unpublished</span>), yet first meets Edwin at noon on the 16th** having spent that morning showing Peri round. Not a contradiction, but a reader will ask what happened to the passage. One clause in <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 2 — gestures at meaning, announcing fragments, buttons</p>
+<p>**15. 102 opening: "Sixty-one censuses."** — the announcing fragment, exactly the *"Fate magic. She was wearing fate magic."* case: it tells the reader the result before the method and then tells it again in the body ("Sixty-one cuts, nine stakes"). It also breaks the act-three binding line "start on an event, an object, or a line of speech". <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**16. <span class="redacted">redacted sentence: unpublished prose</span> It is also the second of the two scenes to end on writing. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**17. <span class="redacted">redacted sentence: unpublished prose</span> Fix: cut "which was the method."</p>
+<p>**18. 102: "one at a time, the way a committee leaves a room it has decided not to sit in"** — a figure doing what the plain fact does better, and oblique at the point of the joke ("a room it has decided not to sit in" needs unpacking). <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> off. 101 has none, correctly.</p>
+<p>**19. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> 025. VOICE §3 is explicit that a canon entry quoting a groundwork line is a fact, never a line to reuse. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**20. <span class="redacted">redacted sentence: unpublished prose</span> It is `minor.md`'s quoted groundwork phrase for <span class="redacted">redacted: character</span>, reused here on a different man; and it is an unnamed manner, which Part 6 rules is not a description. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**21. 101: "he had learned from <span class="redacted">redacted: character</span> what a shut door sounded like and had learned in six weeks that Peri's shut the same way"** — **your question answered: "she had shut it" is the right amount and should stay; the <span class="redacted">redacted: character</span> comparison is the overspend.** A door that "sounds shut" and a person shutting "the same way" is a figure the reader cannot hold, and it spends a <span class="redacted">redacted: character</span> comparison on a Peri beat. <span class="redacted">redacted sentence: unpublished prose</span> He asked the numbers back instead."</p>
+<p>**22. 101: "which put him between two women with books on a college's front step in front of a square"** — a narrator flourish noticing a tableau with no proposition under it; "in front of a square" is dead. Fix: cut the clause — "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**23. 101: "said, 'Thank you,' because it was the only thing"** — a reason that names nothing. Fix: "because there was no other answer to it" or cut the clause.</p>
+<p>## Part 3 / Part 4 — world, character, register</p>
+<p>**24. 101, <span class="redacted">redacted: character</span>: "and I'm entering it that way, as four, because that's what a warden on a road is for, and I didn't know that until I'd done it."** — **Your question: no, this tail is not hers.** `<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> This line is both at once, plus a self-summary she does not do. <span class="redacted">redacted sentence: unpublished prose</span> Fix: "and I'm entering it that way, as four. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**25. 101: <span class="redacted">redacted: character</span>'s single 160-word turn.** **Your question: monologue device, not his shape.** `minor.md` gives him delight, speed and a hat, not a set-piece; what is on the page is a recitation delivering the prospectus line plus seven honours strung on "and" — the *"it is the core joke of this interaction, but it would flow better as a conversation"* case, with the "Item:" tic's structure in and-form. Peri is standing right there and has already prompted once, so the device has a working version. Fix: break it across three turns with Peri prompting twice — <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**26. Clipped "have" (Peri and <span class="redacted">redacted: character</span>, four instances): "and I've the numbers" (101), "They've <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> The auxiliary-less "I've the X" is the same family as the retired "I'll not"/"wants doing": syntax standing in for local flavour. Fix: "and I've got the numbers"; "They have <span class="redacted">redacted: character</span>'s copy"; "I have the edge".</p>
+<p>**27. 101, Peri's <span class="redacted">redacted: character</span> beat: "'No.' She did not write anything. 'I've said no. That's what I said.'"** — the second and third sentences restate the first and answer nothing; this is precisely the act-two failure mode (a question answered with a fragment that gestures). Canon (`peri.md`, 2026-08-28) rules the "No" a lie and rules that it stays one, so the beat must hold the lie while still parsing. Fix: "'No,' she said. She did not write anything. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**28. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 5 — devices</p>
+<p>**29. The "write it down" instruction fires three times in 102** — "Write *so far*" (Peri to the second-year), "Write *appeared to*" (Edwin to Peri), "writing that the hand disagreed" (Peri, narrated). The third is narration and fine; of the two instructions, **Edwin's is redundant**: Peri has already said "Appeared to," aloud, in her own practice, so being told to write it takes the move off her. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**30. `because` density.** 101: five in 1,077 words; 102: seven in 1,183 — against SCENES' "`because` rationed" for this act. Findings 8, 9, 17 and 23 remove four between them; that is enough.</p>
+<p>## Two lines on the devices</p>
+<p>The device a second round of comments would be about is **the and-chained run-on sentence**, which is now doing every job in both scenes: <span class="redacted">redacted: character</span>'s speech, Peri's report, <span class="redacted">redacted: character</span>'s report, the stake paragraph and the closing slip paragraph are the same shape, so three distinct speakers and the narrator read as one voice, and the shape's own effect (accumulation) has stopped registering. To make it work, cap it: one such sentence per speaker per scene, with the others broken at their natural joints — <span class="redacted">redacted: character</span>'s report in particular gains from her canonical short mode, which is currently absent from both scenes.</p>
+<p>The second is **contamination**: findings 19 and 20 are verbatim reuse of phrases `minor.md` quotes from the deleted ch. 025, and several other beats in these two scenes sit very close to canon's summaries of chs. <span class="redacted">redacted sentence: unpublished prose</span> Moss, of this college*). The facts are canon and are right to be here; the *wordings* should be re-made. I could not run `tools/overlap_check.py` (it reads the deleted prose from git history, which is inside my read ban) — the main session should run it on both files before these go to DRMacIver.</p>
+</div>
+</body></html>

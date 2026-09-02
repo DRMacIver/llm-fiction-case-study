@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-afed13b8d2abeff3f">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="world", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/05-in-some-sort-of-order.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1216 lines, 49319 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1071 lines, 58428 chars</p>
+
+<div class="assistant-prose">
+<p>Now I'll read the scene file to analyze it for violations of the selected rules.</p>
+</div>
+
+<p>🔧 Read draft/book-01/scenes/05-in-some-sort-of-order.md</p>
+<p>✅ 76 lines, 4919 chars</p>
+
+<div class="assistant-prose">
+<p>I'll analyze the scene against the five selected rules (semantic tier, world lens, scene scope):</p>
+<p>1. **worldbuilding-to-save-a-line** - Looking for invented worldbuilding to justify a line<br>
+2. **tech-level-anachronism** - Objects/practices postdating pre-industrial tech<br>
+3. **canon-scale-contradiction** - Numbers contradicting established canon<br>
+4. **system-terminology** - Wrong nouns for established world terms<br>
+5. **italics-misplaced** - Emphasis in wrong places</p>
+<p>Reading through the scene systematically:</p>
+<p>The worldbuilding (sea-front, frost list, fate magic, ledger, loops) integrates organically. "The sea-front" and "the front" are terms for a weather phenomenon Edwin can magically influence—this serves multiple narrative purposes, not invented to save a single line.</p>
+<p>I find no anachronistic objects or practices. The technology level is pre-industrial with magic.</p>
+<p>Specific numbers appear ("Eleven years," "forty years," "eighteen-year-old," "four days"), but I cannot identify internal contradictions within the scene. The age "eighteen-year-old" for Peri is stated directly; without reference to canon files, I cannot verify contradictions.</p>
+<p>System terminology appears correct: "Weave," "Fate," "Destiny," "Agent of Fate," "Terms" are capitalized System concepts. "Fate magic" is used as a generic descriptor for the domain, which seems appropriate.</p>
+<p>The italics (line 41: "*terms*" and line 75: "*Marsh Barton, 19th, dry*") are appropriate: the first emphasizes a key System concept the speaker would stress; the second marks actual written text in the ledger, not emphasis.</p>
+</div>
+
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

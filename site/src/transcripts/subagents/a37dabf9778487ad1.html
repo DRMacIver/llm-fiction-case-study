@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are making two small edits to sealed files in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are making two small edits to sealed files in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a37dabf9778487ad1">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are making two small edits to sealed files in <span class="redacted">redacted: private</span>. Do not print the files' contents in your final reply; report only that the edits were made and where (file + section name). Use the Edit tool.<br>
+<br>
+1. In notes/sealed/magic-origins.md, at the end of section "## 3. The builders and the working", append this bullet (verbatim):<br>
+<br>
+- **The Choosing at eighteen, from the builders' side (DRMacIver,<br>
+  2026-08-30).** The builders had a modern child-mortality rate, for<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  as protecting them. So the working takes nobody under eighteen — no<br>
+  class, no attributes, no vitality, no protection — and in a world<br>
+  that has since fallen to a medieval rate, about half of children<br>
+  never reach it. Nobody on the page knows this is a design choice;<br>
+  it is weather. This is the series' villain (`notes/theme.md`, <span class="redacted">unpublished</span> "The<br>
+  series spine") and it is never a plot feature that the builders did<br>
+  it.<br>
+<br>
+2. In notes/sealed/destiny.md, find the section "## What the story is now committed to" and, immediately before the line beginning "**Can no longer happen.**", insert this paragraph (verbatim):<br>
+<br>
+**Cross-note, 2026-08-30 (DRMacIver's series spine — `notes/theme.md` <span class="redacted">unpublished</span>).** The owed "second binding" has a candidate: Peri casts [Seal of the Loom] on a dying child to make it live, and the fever breaks overnight (`notes/canon/deferred-beats.md`, "<span class="redacted">redacted: event</span>"). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: mechanic</span>, the nursing, the revealings, the Seal) — the mechanism is never stated whole; the Seal does not cure and is not a tell on the body; no prohibition-shaped reading ("bound to not die") may be voiced as true; the child is never visibly harmed by the Seal on the page. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<br>
+Then confirm both edits by grepping for the phrases "from the builders' side" and "Cross-note, 2026-08-30" and report the line numbers only.</p></blockquote>
+
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Read notes/sealed/magic-origins.md</p>
+<p>✅ 318 lines, 19580 chars</p>
+<p>🔧 Read notes/sealed/destiny.md</p>
+<p>✅ 790 lines, 52956 chars</p>
+<p>🔧 Edit notes/sealed/magic-origins.md</p>
+<p>✅ 1 lines, 170 chars</p>
+<p>🔧 Edit notes/sealed/destiny.md</p>
+<p>✅ 1 lines, 164 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>I misplaced the destiny.md insertion — it should be immediately before "**Can no longer happen.**", not before the section heading. Fixing.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Edit notes/sealed/destiny.md</p>
+<p>✅ 1 lines, 164 chars</p>
+<p>🔧 Edit notes/sealed/destiny.md</p>
+<p>✅ 1 lines, 164 chars</p>
+<p>🔧 Bash: grep -n "from the builders' side" <span class="redacted">redacted: private</span>/notes/sealed/magic-origins.md; grep… (Grep for confirmation phrases)</p>
+<p>✅ 2 lines, 1223 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Both edits made and confirmed.</p>
+<p>1. `notes/sealed/magic-origins.md` — bullet appended at the end of section "## 3. The builders and the working" (line 120).<br>
+2. `notes/sealed/destiny.md` — paragraph inserted in section "## What the story is now committed to", immediately before "**Can no longer happen.**" (line 581).</p>
+</div>
+</body></html>

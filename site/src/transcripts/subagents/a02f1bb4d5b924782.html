@@ -1,0 +1,80 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. You are the verification stage of the chap…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. You are the verification stage of the chap…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a02f1bb4d5b924782">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. You are the verification stage of the<br>
+chapter pipeline. Read, in order: notes/voice-exemplars.md plus<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+notes/canon/characters/edwin.md, peri.md, sorrel.md,<br>
+notes/premise.md, .claude/skills/consistency-check/SKILL.md and<br>
+.claude/skills/editing-pass/SKILL.md (apply both), and then the<br>
+target chapter <span class="redacted">redacted: private</span>/samples/model-test/verify-test-A.md in full. Read ONLY these files.<br>
+<br>
+Produce your complete findings list: every register, sense,<br>
+consistency, and hard-rule problem in the target, each with the exact<br>
+quote, the category, and the correct fix. Be thorough AND precise —<br>
+missed real problems and invented problems are both failures. A clean<br>
+chapter yielding "no findings" is a valid result; do not invent nits.<br>
+Return the findings as a numbered list (empty list if none).</p></blockquote>
+
+
+<details><summary>28 tool calls</summary>
+<p>🔧 Read notes/voice-exemplars.md</p>
+<p>✅ 43 lines, 2280 chars</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 306 lines, 15941 chars</p>
+<p>🔧 Read notes/voices.md</p>
+<p>✅ 182 lines, 10997 chars</p>
+<p>🔧 Read notes/llm-tells.md</p>
+<p>✅ 135 lines, 8761 chars</p>
+<p>🔧 Read notes/canon/README.md</p>
+<p>✅ 37 lines, 1853 chars</p>
+<p>🔧 Read notes/canon/system.md</p>
+<p>✅ 369 lines, 21989 chars</p>
+<p>🔧 Read notes/canon/world/timeline.md</p>
+<p>✅ 123 lines, 7298 chars</p>
+<p>🔧 Read notes/canon/characters/edwin.md</p>
+<p>✅ 149 lines, 8799 chars</p>
+<p>🔧 Read notes/canon/characters/peri.md</p>
+<p>✅ 124 lines, 7337 chars</p>
+<p>🔧 Read notes/canon/characters/sorrel.md</p>
+<p>✅ 72 lines, 3775 chars</p>
+<p>🔧 Read notes/premise.md</p>
+<p>✅ 185 lines, 11466 chars</p>
+<p>🔧 Read .claude/skills/consistency-check/SKILL.md</p>
+<p>✅ 93 lines, 5103 chars</p>
+<p>🔧 Read .claude/skills/editing-pass/SKILL.md</p>
+<p>✅ 81 lines, 4430 chars</p>
+<p>🔧 Read samples/model-test/verify-test-A.md</p>
+<p>✅ 112 lines, 17215 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>1. **Contradiction (canon/timeline) — the wall record's year count.** Quote: "*Goodman Moss missed the ten o'clock entire. First in 9 yrs. Late (4 min) last week.*" Canon (edwin.md, timeline.md, chs. <span class="redacted">redacted sentence: unpublished prose</span> Fix: "First in 11 yrs."</p>
+<p>2. <span class="redacted">redacted sentence: unpublished prose</span> Fix: "five days since" / "five days' precedent" or similar day-count phrasing.</p>
+<p>3. **Contradiction (System mechanics) — mana as a stored bank.** Quote: "He had a comfortable store of mana laid by from a quiet fortnight, more than enough to spend six revealings out of, and he was glad of the savings now." Canon (system.md; ch. 007): mana is a **recharge ceiling, not a stored bank accumulated over time** — this is the named trap in the consistency-check skill, and ch. 007's lecture explicitly mocks the "savings" framing ("keeps his savings by never earning"). Fix: rephrase as being at full recharge, e.g. "He was full, near enough — a quiet fortnight had let him recharge to the brim — and six revealings would not empty him."</p>
+<p>4. **Contradiction (world facts / knowledge state) — the ring measurement.** Quote: "in rings in a woman's top field at Fenholt, getting bigger, nine chains and a half at the last measuring." Canon (timeline.md, ch. 010): **9 chains 50 is Edwin's own Day 10 measurement**; the last measuring he could know of on Day 6 is Mattie's ~21 Weedmonth chaining, roughly two months earlier, which must be substantially smaller (ch. 010 projects "eleven chains next month" from the Day-10 figure — growth ~1.5 chains/month puts the Weedmonth reading nearer 6–7 chains). As written, the rings haven't grown by Day 10 and Edwin knows a number he hasn't measured yet. Fix: use a smaller figure ("seven chains at the last chaining, two months back") or go vague ("bigger at every measuring").</p>
+<p>5. **Sense (broken logic) — the null case both designed-in and impossible.** Quote: "it came back with the answer it was written never to give, the answer he had put into the design as the null case." If he put the null case into the design, the assay was written *able* to give it; "written never to give" contradicts the same clause. Fix: "the answer he had never once seen it give, the one he had written into the design as the null case."</p>
+<p>6. <span class="redacted">redacted sentence: unpublished prose</span> Fix: cut the sentence entirely; end on "'Two weeks,' Sorrel agreed, and took the box down to the pump." (which is a correct cut — mid-flow, on work).</p>
+<p>7. **Voice (aphorism budget) — two narrator aphorisms back to back, one free-floating.** Quote: "Frightened men do first and write after. Bad news has always been the one cargo that builds its own roads." Max one per scene, stuck to its particulars; the second is portable quotable wisdom. Fix: keep the first, cut the second.</p>
+<p>8. **Voice (aphorism/self-annotation) — the teaching epigram.** Quote: "which was, he reflected, the whole trick of teaching: turning what you are into something anyone can count." A second-scene narrator aphorism that generalizes free of the moment and half-annotates the assay's design. Fix: trim to "He had written it because listening could not be taught to everyone, and a census can." (Listed as a candidate per the skill; author may keep one.)</p>
+<p>9. **Voice (banned construction) — "not X, it's Y" in dialogue plus a run of "Not X. <span class="redacted">redacted sentence: unpublished prose</span> Not dead soil."; "Not dead worms. No worms."; "The block was rich. Not average. Rich, provisioned…" Negative parallelism and its cousins as a habit — four instances. The dialogue one and one narration instance can stand as characterization; fix at least two, e.g. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>10. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>11. <span class="redacted">redacted sentence: unpublished prose</span> Fix: "nothing could be seen but a man standing very still" or move the bench relative to the window.</p>
+<p>12. **Ambiguity (world facts, minor) — distance to Wystow.** Quote: "Wystow was the better part of eighty miles beyond the bridge." Canon (timeline.md) puts Wystow at ~85 miles total, and the bridge is a half-day's walk out (Day 7); "eighty beyond the bridge" pushes the total toward 90+. Fix: "the better part of eighty miles" (drop "beyond the bridge") or "seventy-odd miles beyond the bridge."</p>
+</div>
+</body></html>

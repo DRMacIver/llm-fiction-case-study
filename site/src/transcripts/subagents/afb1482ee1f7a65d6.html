@@ -1,0 +1,99 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Facts-only consistency check on two freshly drafted scenes in ⟦redact…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Facts-only consistency check on two freshly drafted scenes in ⟦redact…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-afb1482ee1f7a65d6">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Facts-only consistency check on two freshly drafted scenes in <span class="redacted">redacted: private</span>: draft/book-01/scenes/97-first-known-first-looked-at.md <span class="redacted">unpublished</span> (Days 55–56 = 9–10 Fallowmonth) and 98-nine-sentences.md <span class="redacted">unpublished</span> (Day 57 = 11 Fallowmonth). <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span>'s a spade; Peri's pencil map 'a shape like nothing... <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span>'s line, 'not evidence'; <span class="redacted">redacted: place</span> eleven miles NE, <span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.md (the second hand; the registers in days; the sending-book), notes/canon/characters/<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Also: (1) <span class="redacted">redacted: character</span>'s 'That's three. Fenholt, the <span class="redacted">redacted: character</span> place, this' — the three places where the four-mile test was answered no: does canon list Fenholt as one of the three (Holm Deep and the Ordish field? the pale field and Ranner's Sluice?); (2) 'the fourth time in a month he had watched a person write against what they had wanted to be true, and two of the four had been him' — count against the page: <span class="redacted">redacted: character</span>? <span class="redacted">redacted: character</span>'s no? Edwin's list? <span class="redacted">redacted: character</span>'s name? <span class="redacted">redacted sentence: unpublished prose</span> STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history. Report numbered findings with quoted line, canon source, minimal fix; then 'New facts'. Do not edit any file.</p></blockquote>
+
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cat draft/book-01/scenes/97-first-known-first-looked-at.md <span class="redacted">unpublished</span> draft/book-01/sc…</p>
+<p>✅ 74 lines, 12863 chars</p>
+<p>🔧 Bash: cat notes/canon/world/silent-soil.md</p>
+<p>✅ 43 lines, 2189 chars</p>
+<p>🔧 Bash: grep -n "" notes/canon/world/silent-soil.md | sed -n '1,400p'</p>
+<p>✅ 400 lines, 25272 chars</p>
+<p>🔧 Bash: sed -n '400,700p' notes/canon/world/silent-soil.md</p>
+<p>✅ 270 lines, 16353 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me check timeline.md, minor.md, <span class="redacted">redacted: character</span>.md, <span class="redacted">redacted: character</span>.md, edwin.md, and system.md sections.</p>
+</div>
+
+<p>🔧 Bash: grep -n "Day 5[4-8]\|55\|56\|57" notes/canon/world/timeline.md | sed -n '1,80p'</p>
+<p>✅ 8 lines, 511 chars</p>
+<p>🔧 Bash: sed -n '435,470p' notes/canon/world/timeline.md</p>
+<p>✅ 36 lines, 2292 chars</p>
+
+<div class="assistant-prose">
+<p>Wystow arrival is 15 Fal — matches the draft letter's "on or about the fifteenth." Now let's check edwin.md nine-sentences note, minor.md, <span class="redacted">redacted: character</span>.md, <span class="redacted">redacted: character</span>.md.</p>
+</div>
+
+<details><summary>18 tool calls</summary>
+<p>🔧 Bash: grep -n "embarrass\|nine sentence\|sixpence" notes/canon/characters/edwin.md echo ---MINO…</p>
+<p>✅ 31 lines, 2075 chars</p>
+<p>🔧 Bash: sed -n '320,340p' notes/canon/characters/edwin.md echo --- grep -rn "guild house\|refused…</p>
+<p>✅ 25 lines, 1680 chars</p>
+<p>🔧 Bash: sed -n '235,260p' notes/canon/world/geography.md echo ---INSTITUTIONS--- sed -n '280,310p…</p>
+<p>✅ 58 lines, 3840 chars</p>
+<p>🔧 Bash: grep -n "<span class="redacted">redacted: character</span>\|warden.*dead\|dead.*warden\|daughter" notes/canon/*.md no…</p>
+<p>✅ 27 lines, 2814 chars</p>
+<p>🔧 Bash: sed -n '355,375p' notes/canon/characters/minor.md</p>
+<p>✅ 21 lines, 1061 chars</p>
+<p>🔧 Bash: grep -n "<span class="redacted">redacted: character</span> place\|Ranner" notes/canon/world/geography.md</p>
+<p>✅ 11 lines, 791 chars</p>
+<p>🔧 Bash: grep -n "Deep thread\|never touches\|evidence" notes/canon/system.md</p>
+<p>✅ 2 lines, 143 chars</p>
+<p>🔧 Bash: grep -rn "Deep thread" notes/ 2&gt;/dev/null</p>
+<p>✅ 17 lines, 2844 chars</p>
+<p>🔧 Bash: sed -n '120,140p' notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>✅ 20 lines, 1383 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Facts-only consistency check: scenes 97–98</p>
+<p>### Findings</p>
+<p>**1. <span class="redacted">redacted: character</span>'s "That's three. Fenholt, the <span class="redacted">redacted: character</span> place, this" — wrong site named.**<br>
+Quoted line (97): *"That's three. Fenholt, the <span class="redacted">redacted: character</span> place, this."*<br>
+Canon (`silent-soil.md` line ~285–287, `<span class="redacted">redacted: character</span>.md` line ~128–132, `institutions.md` line ~280–282): <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span>/<span class="redacted">redacted: place</span> as the third — matching `<span class="redacted">redacted: character</span>.md`'s "the eleven-mile walk to <span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> place is a different, unrelated assessment** (5 Fal, a dog's-date correction job, `<span class="redacted">redacted: character</span>.md` line 127) with no stated connection to the four-mile mouth test.<br>
+Minimal fix: change "the <span class="redacted">redacted: character</span> place" to "the pale field" (or "<span class="redacted">redacted: character</span>'s," matching the sheet's own naming in scene 97 <span class="redacted">unpublished</span>'s sheet-building dialogue).</p>
+<p>**2. "The fourth time in a month... two of the four had been him" — plausible but unverifiable, flag for author.**<br>
+Quoted line (97): *"...it was the fourth time in a month he had watched a person write against what they had wanted to be true, and two of the four had been him."*<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> No second Edwin instance is checkable in the cited canon files within the same month (Fallowmonth); nothing contradicts it, but nothing confirms it either. Not an error, but not independently verifiable from the cited sources — flag for the author to confirm intent (e.g. <span class="redacted">redacted sentence: unpublished prose</span> 013, an earlier month?).</p>
+<p>**3. Marsh's/Edwin's "embarrass him" — resolved, no error.**<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Scene 98 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**4. Nine sentences and Marsh's own answer — matches canon, correctly kept separate.**<br>
+Canon (`silent-soil.md` line ~392–397): Edwin's nine sentences cover cause-unknown, resume-at-own-risk (would not advise/forbid), fencing/draining/ploughing/selling impossibility, the record's value, water fitness unknown, sixpence paid. <span class="redacted">redacted sentence: unpublished prose</span> The draft correctly keeps this out of Edwin's nine-sentence list and gives it to Marsh's own dialogue ("The tenants stay off it. The record is kept. <span class="redacted">redacted sentence: unpublished prose</span> No fix needed.</p>
+<p>**5. Wystow arrival "the fifteenth" — consistent.**<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**6. Weave answers on the spoil bank, 11 Fal, noon — verbatim match.**<br>
+Draft's three lines match `silent-soil.md` exactly: *"[<span class="redacted">redacted: mechanic</span>, and <span class="redacted">redacted: mechanic</span>.]" / "[You are counting places. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Consistent, canon-sanctioned.</p>
+<p>**7. "Beginnings is not beginners" vs canon's "Beginnings isn't beginners" — minor wording drift.**<br>
+Draft (98): *"Beginnings is not beginners. Middle column."* Canon (`silent-soil.md`): *"Beginnings isn't beginners."* Contraction dropped. Minimal fix: restore the contraction if exact-quote fidelity to that established phrase is wanted (this is the phrase's origin scene, so the draft actually sets canon's wording here — worth getting right since canon currently quotes the contracted form).</p>
+<p>**8. Guild houses / dead warden's daughter — matches canon closely.**<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Matches `minor.md` line ~364–366 exactly (including "nine years back," "in a woman's memory," daughter reading her mother's hand). No fix needed.</p>
+<p>**9. <span class="redacted">redacted: character</span>'s day-book search — three entries, two 400 yd apart — matches canon.**<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span>'s line). Consistent.</p>
+<p>**10. Cause-of-phenomenon check — clean.**<br>
+Neither scene explains *what* <span class="redacted">redacted: mechanic</span> is or *why* it appears; both stay within "first known / first looked at," dating, and Marsh's practical response. No sealed material is exposed on the page — consistent with canon's permanent agnosticism.</p>
+<p>**11. "Four being seen is not four appearing" — permitted.**<br>
+Peri's third-column note in scene 97 <span class="redacted">unpublished</span> pre-echoes the later verbatim Weave-adjacent line "That's not five appearing. That's five being seen" (ch. 030, Saltmonth) — but this is a distinct, earlier utterance at a different site-count (four vs. five) and isn't presented as a quote of that later line. Permitted as a natural recurring turn of phrase for the same character; not a contradiction.</p>
+<p>### New facts (candidates for backfill)<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- Edwin's "fourth time in a month" line introduces an implied tally of self-correction moments that isn't itself established elsewhere — if kept, it's a new claim that should either get a canon note enumerating the four instances, or be softened if the count can't be defended.<br>
+- "The <span class="redacted">redacted: character</span> place" is misapplied in <span class="redacted">redacted: character</span>'s line (finding 1) — once fixed, no new fact results; flagging only so the fix doesn't get missed at backfill.</p>
+<p>No files were edited.</p>
+</div>
+</body></html>

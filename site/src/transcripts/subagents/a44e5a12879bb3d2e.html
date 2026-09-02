@@ -1,0 +1,100 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a44e5a12879bb3d2e">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<br>
+**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
+- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
+- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
+- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
+<br>
+Read `.claude/skills/editing-pass/SKILL.md`. <span class="redacted">redacted sentence: unpublished prose</span> Never totals.<br>
+<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> and prior-arc summaries `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> Report findings only, each with the file, the line quoted, and what is wrong; do not write "clean". Write `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/lens/B-mechanical.md`. Do not edit prose. Do not commit.<br>
+<br>
+Your final message: finding count and the worst one.</p></blockquote>
+
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/.claude/skills/editing-pass/SKILL.md</p>
+<p>✅ 175 lines, 12225 chars</p>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes/ | sed -n '1,30p'</p>
+<p>✅ 30 lines, 827 chars</p>
+<p>🔧 Bash: sed -n '1,400p' notes/voices.md | head -400</p>
+<p>✅ 400 lines, 23808 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 11 lines, 670 chars — <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> /      881 rewrite/book-01/arc-02/scenes/09-what-again-costs.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "House-word convergence" -A 60 notes/llm-tells.md | head -…</p>
+<p>✅ 65 lines, 4272 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes mkdir -p /tmp2 2&gt;/dev/null for f in…</p>
+<p>✅ 10 lines, 345 chars — <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> / === 09-what-again-costs.md ===</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me build a stripped combined corpus and run the mechanical greps per scene.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes SP=<span class="redacted">redacted: private</span> mkdir -p $SP/…</p>
+<p>✅ 11 lines, 1530 chars</p>
+
+<div class="assistant-prose">
+<p>No author's-note blocks apparently (word counts unchanged). Let me actually read the scenes and run greps.</p>
+</div>
+
+<details><summary>32 tool calls</summary>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped echo "=== em dashes per file ===" for f in *.md; d…</p>
+<p>✅ 18 lines, 1200 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped echo "=== nobody/somebody/anybody ===" grep -in "\…</p>
+<p>✅ 36 lines, 2300 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped echo "=== trailing which verdict ===" grep -n ", w…</p>
+<p>✅ 33 lines, 2730 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> SP=<span class="redacted">redacted: private</span></p>
+<p>✅ 12 lines, 616 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped <span class="redacted">redacted sentence: unpublished prose</span> echo --- se…</p>
+<p>✅ 54 lines, 2643 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped for f in *.md; do echo "=== $f ==="; head -3 "$f";…</p>
+<p>✅ 49 lines, 1388 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped for f in *.md; do   n=$(grep -oE "[0-9]+|\b(one|tw…</p>
+<p>✅ 10 lines, 615 chars — <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> / 09-what-again-costs.md:       28 figures /      881 words</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped cat 09-what-again-costs.md</p>
+<p>✅ 90 lines, 4489 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped grep -nE "(\b\w{5,}\b)[^.]{3,40}\1" *.md | head -40</p>
+<p>✅ 3 lines, 91 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped for f in *.md; do   perl -ne 'while (/\b(\w{5,})\b…</p>
+<p>✅ 38 lines, 2508 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 4 lines, 290 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped <span class="redacted">redacted sentence: unpublished prose</span> echo ---16-…</p>
+<p>✅ 25 lines, 1130 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped echo "=== properly/exactly/plainly ===" grep -in "…</p>
+<p>✅ 33 lines, 1514 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> cd $SP/stripped grep -n "^Nothing\.$\|Nothing\.\"" 15-eleven-hazel…</p>
+<p>✅ 1 lines, 11 chars</p>
+<p>🔧 Bash: SP=<span class="redacted">redacted: private</span> sed -n '48,58p' $SP/stripped/15-eleven-hazel-twigs.md</p>
+<p>✅ 11 lines, 339 chars</p>
+<p>🔧 Write rewrite/book-01/arc-02/lens/B-mechanical.md</p>
+<p>✅ 1 lines, 174 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>11 findings, no commit made per instructions (do not commit).</p>
+<p>Worst finding: **"I'll not"** — a fake-archaic construction explicitly banned in `notes/voices.md`'s language census — appears 8 times across the span, spoken by five different characters (<span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, Peri, Edwin, <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>File written: `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/lens/B-mechanical.md`</p>
+</div>
+</body></html>

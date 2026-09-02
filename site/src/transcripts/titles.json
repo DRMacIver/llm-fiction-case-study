@@ -1,0 +1,38 @@
+{
+  "0c653b33-1efd-45bb-b7ab-26ed3dca981e": {
+    "title": "Finding the voice and starting the draft",
+    "blurb": "The project's opening session: researching Royal Road conventions, testing narrator voices, and mining published web fiction for craft lessons before the real story concept arrived. From there the collaborators built out canon files, editing skills, worldbuilding, and a decision-making process, then moved into planning chapter arcs. It closes with a rigorous voice-drift fix, a blind test settling which model would draft versus judge, and an unattended push to finish drafting book one."
+  },
+  "10c1dd77-c31a-4be9-a7b6-23651a4792b4": {
+    "title": "Building the System and starting the draft",
+    "blurb": "An early session building the setting's magic system, calendar, and geography, and establishing a claim-graded canon structure for tracking established versus working ideas. The tone was calibrated deliberately away from cosy fantasy toward competence-driven storytelling, and the book was structured into arcs and chapters before drafting began. The session ends with the collaborators pausing mid-draft to resolve a batch of open story decisions together."
+  },
+  "3ef92e14-71be-4557-a7d1-f251a7410081": {
+    "title": "Rebuilding the draft through several full rewrites",
+    "blurb": "A long, multi-day session covering the earliest voice experiments, a multi-agent dialogue trial that ran into scoring problems, and an autonomous overnight push to seal outstanding canon questions and catch fabricated citations. It then moves through a full plan-and-rewrite of book one's opening arc, several rounds of editorial passes catching continuity and voice issues, and a deep dive into how the setting's magic actually works. The session ends mid-crisis, after discovering that a drafted section of the book had unintentionally copied earlier prose too closely, and quarantining that material for a fresh rewrite."
+  },
+  "61a194e2-4e55-494c-bb3e-5d225e267758": {
+    "title": "Working out the world's material history",
+    "blurb": "A short worldbuilding session establishing a historical timeline for the setting, covering the development of agriculture, paper, and other everyday materials to avoid an anachronistic feel. It also worked out limits on how magic can improve farming, population and mage density figures, and the shape of a separate, more restricted tradition of healing magic. All plot-sensitive material was kept out of the public write-up."
+  },
+  "7257e15f-eb7f-4d0b-83e8-dde205ef5352": {
+    "title": "Drafting to the end of book one",
+    "blurb": "A late session focused on finishing the first draft of book one, working scene by scene through a pipeline of drafting, independent quality checks, and revision, with periodic stops if quality slipped. It also includes an earlier, unrelated piece of tooling work: a script to sync the book to a Kindle and a companion tool that keeps a reader's place across text edits."
+  },
+  "92c486ed-62f3-40a9-8d7d-b9dd6554d07e": {
+    "title": "Syncing the book to a Kindle",
+    "blurb": "A short tooling session building a script to copy the latest epub build onto a mounted Kindle. It diagnosed a page-turning freeze caused by a stale index file and an outdated ebook format, then built and tested a module that keeps a reader's position stable across later text edits by anchoring to surrounding prose."
+  },
+  "be6bcf16-d9e6-4525-85d6-ce35993a5324": {
+    "title": "Building a local commenting tool",
+    "blurb": "A short session building a local web tool for reading and commenting on draft chapters in a Royal Road style layout, with logic to keep comment anchors attached to the right text across edits. Two small follow-up requests improved the visibility of scene breaks and the styling of in-story system message boxes."
+  },
+  "c214c046-1bb3-4385-abee-f924d8349bad": {
+    "title": "Redrafting the second act, scene by scene",
+    "blurb": "A short session redrafting part of book one's second act using a gated, scene-by-scene pipeline of drafting, automated review, and author approval. Partway through, the process caught itself at risk of reusing earlier draft text too closely, paused to flag the issue, and worked out a fix before continuing."
+  },
+  "d1679987-c781-4167-82f2-4fb2b67962c1": {
+    "title": "Finishing the rewrite and publishing to Royal Road",
+    "blurb": "This session finished redrafting book one's second act scene by scene, gradually loosening the review process as trust built, then pivoted to publishing. The collaborators settled on the series title and blurb, built tooling to submit chapters to Royal Road directly, wrote in-story author's notes in a consistent voice, and built an automated linting pipeline to catch recurring machine-writing tells."
+  }
+}

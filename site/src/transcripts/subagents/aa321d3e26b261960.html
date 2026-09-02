@@ -1,0 +1,105 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Run the pre-David pass exactly as specified in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/.c…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Run the pre-David pass exactly as specified in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/.c…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-aa321d3e26b261960">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Run the pre-David pass exactly as specified in <span class="redacted">redacted: private</span>/.claude/skills/pre-david-pass/SKILL.md (read it first, in full, and follow every part) on two freshly drafted scenes: draft/book-01/scenes/103-the-wrong-place.md <span class="redacted">unpublished</span> and 104-ground-that-doesnt-answer.md <span class="redacted">unpublished</span> (<span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span> Read draft/book-01/VOICE.md in full first, then draft/book-01/SCENES.md's act-three binding list (end of file), notes/canon/characters/ for <span class="redacted">redacted: character</span>, Peri, Edwin, <span class="redacted">redacted: character</span>, minor.md (<span class="redacted">redacted: character</span>, the second-years), and scenes 101, 102 for immediate context. Warnings to police: the 'writing it down' motif (both scenes end on the attempts page / the facing page — flag, and propose which one keeps it; count instances); 'because' density (ration; propose reattachments); <span class="redacted">redacted: character</span>'s register; Peri's turn speech in 104 — is it hers (counts, checks words, no balanced antithesis, no aphorism) or composed? ('It's not absence... <span class="redacted">redacted sentence: unpublished prose</span> Which is the most expensive kind' — canon phrase from magic-explained; 'a man who has been wrong four times in a row will try the thing he has ruled out'); openings (103 opens on Peri's line: fine? <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>, first person retired: flag); em dashes in the body (none allowed); negative parallelism ('It's not a spot. It's a step' is canon; 'It's not absence. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> running ahead, second-years, <span class="redacted">redacted: character</span> 'from somewhere with his hat') is a device. STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history. Report numbered findings with the quoted line, the fault, and a proposed replacement. Do not edit any file.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the skill and the required context.</p>
+</div>
+
+<details><summary>42 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 257 lines, 16258 chars</p>
+<p>✅ 426 lines, 27364 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/103-the-wrong-place.md <span class="redacted">unpublished</span> &amp;&amp; echo "=====104=====" &amp;&amp;…</p>
+<p>✅ 95 lines, 14887 chars</p>
+<p>🔧 Bash: tail -80 draft/book-01/SCENES.md &amp;&amp; echo "=====101=====" &amp;&amp; cat draft/book-01/scenes/101-…</p>
+<p>✅ 148 lines, 20332 chars</p>
+<p>🔧 Bash: wc -w notes/canon/characters/*.md</p>
+<p>✅ 10 lines, 399 chars —      826 notes/canon/characters/appearance.md /     2455 notes/canon/characters/<span class="redacted">redacted: character</span>.md /    10613 notes/canon/characters/edwin.md</p>
+<p>🔧 Bash: cat notes/canon/characters/<span class="redacted">redacted: character</span>.md notes/canon/characters/⟦redacted: cha…</p>
+<p>✅ 41 lines, 2181 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
+<p>✅ 41 lines, 2181 chars</p>
+<p>🔧 Read notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>✅ 543 lines, 35998 chars</p>
+<p>🔧 Read notes/canon/characters/peri.md</p>
+<p>✅ 975 lines, 64406 chars</p>
+<p>🔧 Read notes/canon/characters/peri.md</p>
+<p>✅ 356 lines, 22294 chars</p>
+<p>🔧 Bash: sed -n '1,40p' notes/canon/characters/edwin.md &amp;&amp; echo "..." &amp;&amp; grep -n "Voice — binding"…</p>
+<p>✅ 341 lines, 22060 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "true answer to the wrong question" notes/ draft/ | head…</p>
+<p>✅ 262 lines, 15922 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '520,600p' notes/canon/world/magic.md; echo ---; sed -n '1…</p>
+<p>✅ 163 lines, 9295 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 8 lines, 888 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '35,70p;205,250p' notes/canon/world/magic.md</p>
+<p>✅ 82 lines, 5218 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "<span class="redacted">redacted: character</span>" -A 25 notes/canon/characters/mino…</p>
+<p>✅ 47 lines, 3283 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 tools/overlap_check.py draft/book-01/scenes/103-the-wrong…</p>
+<p>✅ 2 lines, 165 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for f in draft/book-01/scenes/103-the-wrong-place.md ⟦unpublished…</p>
+<p>✅ 12 lines, 393 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "—" draft/book-01/scenes/103-the-wrong-place.md ⟦unpublis…</p>
+<p>✅ 11 lines, 763 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "church tower\|the tower" draft/book-01/SCENES.md notes/…</p>
+<p>✅ 41 lines, 3018 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "four" notes/canon/world/silent-soil.md | grep -in "weave…</p>
+<p>✅ 7 lines, 500 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Both files changed on disk while I was reading canon (pump-handle simile, <span class="redacted">redacted: character</span>'s "I'd not", the cost/clock, <span class="redacted">redacted: character</span>'s spade). Everything below is against the current text.</p>
+<p>## Part 1 — sense, counts, facts</p>
+<p>**1. The manuring books cannot contain <span class="redacted">redacted: place</span>'s plots.** 103: *"twelve volumes covering eight plots over sixty years"* … *"And then <span class="redacted">redacted: place</span>, two springs back"* … *"Fourteen … Eleven, here … Nine this spring. Twenty-two this summer."* Scene 101 <span class="redacted">unpublished</span>'s slip, two scenes back, reads *"the manuring series, plots one to eight, all volumes."* The scene's whole evidential spine sits in volumes that by canon-on-the-page do not cover plots 9, 11, 14 or 22. Fix one of the two: either 101's slip becomes *"the manuring series, all volumes"* (and 103 drops "covering eight plots"), or 103 makes the series <span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**2. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**3. Edwin misquotes the Weave, and Peri had it right.** 103: *"'The Weave said <span class="redacted">redacted: mechanic</span> and <span class="redacted">redacted: mechanic</span>.' / 'The Weave said four places.'"* Canon (`silent-soil.md`): Peri's question named four places; the answer was *[<span class="redacted">redacted: mechanic</span>, and <span class="redacted">redacted: mechanic</span>.]* As written, his framing correction is simply wrong, and he is the character who does not get facts wrong about a record. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: mechanic</span> and <span class="redacted">redacted: mechanic</span>. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**4. <span class="redacted">redacted sentence: unpublished prose</span> He has four years; day-zero days come from <span class="redacted">redacted: character</span>'s converted registers, not from the manuring books. <span class="redacted">redacted sentence: unpublished prose</span> Give them to <span class="redacted">redacted: character</span> and get me the days."*</p>
+<p>**5. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**6. Two day-counts on two different conventions.** 104: Peri, on the 24th, *"Six days and five wrong"* (elapsed from the 18th); Edwin, on the 25th, *"write under it that it took nine days"* (inclusive to the 26th, which has not happened — the twelve walks are 26 Fal, scene 105 <span class="redacted">unpublished</span>, and canon puts *"built in nine days"* in the note written that day). On the 25th the honest number is eight. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**7. "which was the arrangement" has no antecedent.** 104: *"<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> wanted me to say that"*, which implies the opposite arrangement. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**8. <span class="redacted">redacted sentence: unpublished prose</span> Her evidence is in the next sentence anyway. <span class="redacted">redacted sentence: unpublished prose</span> I've watched you. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**9. The charm did not walk.** 103: *"It walked across the edge on <span class="redacted">redacted: place</span>, at stake C."* The antecedent of "It" is the charm; the walker is Edwin. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span>, at stake C."*</p>
+<p>**10. Viewpoint knowledge on the buried boards.** 103: *"two iron plot-boards somebody had buried face down at a corner forty years ago."* They dug only the sump; face-down and forty years are numbers nobody on the page has. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**11. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**12. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 2 — gestures, announcements, buttons</p>
+<p>**13. 104's opening announces the turn.** *"Two more wrong directions, and then Peri said the sentence."* Part 2's announcing fragment exactly: it tells the reader to be impressed before anything happens, and "the sentence" has no referent. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**14. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**15. 103's closing narrator flourish.** *"and Edwin saw that it was still blank, and knew what it was for, and did not know yet what would go on it."* Portent with the content withheld — and it also spends the reveal that 104's ending needs. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**16. 104's last line is the third telling, and it is a bow.** *"he wrote it down first. E.M.'s book, 24 Fal. Before he built anything."* The narration already said he wrote it in his book before he did anything else (line 25); Edwin then dictates that same fact aloud (line 47); the button says it a third time. **Verdict: earned in principle, over-told in practice.** Keep the button; cut the dictated clause *"and that I wrote it in my book before I built anything"* from Edwin's speech, and cut *"I've written that." / "Write it again on the facing page."* — which makes her writing it her own act rather than an order obeyed, which is what the scene is about.</p>
+<p>## Part 3 / Part 5 — devices, register, rations</p>
+<p>**17. The "writing it down" motif is the device a second round of comments would be about.** Roughly ten instances in 103 and thirteen in 104, and both scenes currently end on the notebook. **Proposal: 104 keeps it** — the facing page is its payoff and the whole point of the pair. 103 gives it up: end on <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**18. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> They can have it. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span> and it's no use to me."*</p>
+<p>**19. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**20. <span class="redacted">redacted sentence: unpublished prose</span> Fences, drains, boards, a sump, a barn."* The paragraph above has just listed all five at length. Part 5's recitation-should-be-conversation. → cut the list from his mouth and let <span class="redacted">redacted: character</span>, standing in the hole he dug, supply one: *"'It found the sump,' said <span class="redacted">redacted: character</span>. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**21. <span class="redacted">redacted sentence: unpublished prose</span> Two repairs: (a) *"It's not empty."* is a third negative-parallelism clause she wrote herself, on top of the two canon ones — cut it. (b) *"Ask the ground a thing living ground always answers"* is a generic habitual present about the material world, which `peri.md` 7f bans for her by name, ever. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**22. The seventh is named on day one, which spends 104's naming beat.** 103: her page is *headed "The seventh, attempts"*; 104 ends on *"'Seven,' said Peri. 'It's the seventh. It goes after the six. What do I call it.'"* → head the page *"Attempts"* in 103 and let the number arrive with the thing.</p>
+<p>**23. <span class="redacted">redacted: character</span>'s two lines carry no anchor.** 104: *"Well,"* and *"I wouldn't tell the college the price. They'll want it cheaper."* The dialect is now fixed, but per `<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> They'll want it cheaper."*</p>
+<p>**24. The mechanism is explained twice.** 103 glosses frost-sense and water-finding in full; 104 glosses them again (*"Frost-sense for the shape … Water-finding for the walking"*). **Ruling on the amount: 104's is the right amount and belongs where the thing is worked**; 103's is redundant once 104 exists. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**25. <span class="redacted">redacted sentence: unpublished prose</span> Uninteresting. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> → *"…Uninteresting. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**26. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**27. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> came from somewhere with his hat."* The witnesses belong (the scene's premise is public work); the cute tag does not — <span class="redacted">redacted: character</span>'s hat has now been worked in 101 and 102 and it is doing the job of characterisation for a third time. → *"…and <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**28. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**Clocks and viewpoint:** four o'clock to five, an hour, a compost cantrip an hour — now all consistent with canon and with status-not-clocks. Edwin reading the manuring books and Peri reporting the twenty-second are both properly sourced. `tools/overlap_check.py` reports zero eight-word runs against the old drafts for both scenes.</p>
+<p>**The device a second round would be about:** the notebook. Across 103–104 the page is where every beat lands — the attempts page, the facing page, the dictation, the button — and two consecutive scene endings on writing breach SCENES's one-in-three. Making it work costs one ending: give 103 to <span class="redacted">redacted: character</span>'s "in writing tonight" and let 104 own the page, or the pair will read as a story about stationery.</p>
+</div>
+</body></html>

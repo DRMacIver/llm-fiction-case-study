@@ -1,0 +1,93 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a canon/consistency lens for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a canon/consistency lens for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a4fad1437fc122b1e">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a canon/consistency lens for the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it; do not read notes/sealed/.<br>
+<br>
+Your material: draft/book-01/scenes/15-straight-water.md, read after scenes 01–14 in the same directory (Day 5, evening).<br>
+<br>
+Check every fact, mechanic and inference against, read IN FULL: notes/canon/world/geography.md (Fenholt forty miles east where the hills let down into the fen basin; Marsh's estates; Wystow on the basin's dry rim; <span class="redacted">redacted: place</span> fields toward Fenholt; the map changing hands east of the bridge), notes/canon/system.md ([<span class="redacted">redacted: mechanic</span><span class="redacted">redacted sentence: unpublished prose</span> Also chapters/004-three-letters.md, the groundwork this restages.<br>
+<br>
+Report FINDINGS ONLY — line quoted, canon file and line, what is wrong. No "clean" verdicts. Briefly and separately: canon the scene could use and does not. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<details><summary>46 tool calls</summary>
+<p>🔧 Bash: cat draft/book-01/scenes/15-straight-water.md</p>
+<p>✅ 47 lines, 5676 chars</p>
+<p>🔧 Bash: cat notes/canon/world/geography.md</p>
+<p>✅ 402 lines, 24182 chars</p>
+<p>🔧 Bash: cat notes/canon/system.md</p>
+<p>✅ 45 lines, 2228 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/peri.md</p>
+<p>✅ 43 lines, 2181 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/edwin.md</p>
+<p>🔧 Bash: cat notes/canon/world/timeline.md</p>
+<p>✅ 45 lines, 2189 chars</p>
+<p>✅ 42 lines, 2239 chars</p>
+<p>🔧 Bash: grep -n -i "<span class="redacted">redacted: mechanic</span>\|one question a day\|24 hours\|images, not names\|paraph…</p>
+<p>✅ 9 lines, 661 chars</p>
+<p>🔧 Bash: grep -n -i "day 5\|straight water\|church tower\|saving it\|twenty miles\|eighteen\|raw a…</p>
+<p>✅ 5 lines, 374 chars</p>
+<p>🔧 Bash: grep -n -i "day 5" notes/canon/world/timeline.md</p>
+<p>✅ 11 lines, 818 chars</p>
+<p>🔧 Bash: sed -n '1,200p' rewrite/book-01/CROSSCHECK.md | grep -n "" | sed -n '1,10p'; echo ---; gr…</p>
+<p>✅ 12 lines, 622 chars</p>
+<p>🔧 Bash: grep -n -i "not lying in ink\|met Lord Marsh\|never been to Fenholt" notes/canon/characte…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: sed -n '620,740p' notes/canon/system.md</p>
+<p>✅ 121 lines, 7927 chars</p>
+<p>🔧 Bash: grep -n -i "east\|weave\|straight water\|church tower\|day 5\|day5\|quest begins\|Fenholt…</p>
+<p>✅ 33 lines, 2461 chars</p>
+<p>🔧 Bash: grep -n -i "ink\|Marsh\|Fenholt" notes/canon/characters/edwin.md</p>
+<p>🔧 Bash: sed -n '75,140p' rewrite/book-01/CROSSCHECK.md</p>
+<p>✅ 65 lines, 3582 chars</p>
+<p>✅ 9 lines, 656 chars</p>
+<p>🔧 Bash: sed -n '1040,1210p' notes/canon/characters/peri.md</p>
+<p>✅ 170 lines, 9500 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 15 lines, 1560 chars</p>
+<p>🔧 Bash: cat chapters/004-three-letters.md 2&gt;/dev/null | head -200</p>
+<p>✅ 135 lines, 14815 chars</p>
+<p>🔧 Bash: grep -rn "knot behind his breastbone\|breastbone" <span class="redacted">redacted: private</span> --include=*.md 2&gt;/d…</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>🔧 Bash: sed -n '140,150p' notes/canon/world/timeline.md</p>
+<p>✅ 11 lines, 690 chars</p>
+<p>🔧 Bash: grep -n -i "straight water\|three letters\|day 5\|scene 15\|weave\b" notes/reader-notes-b…</p>
+<p>✅ 2 lines, 208 chars</p>
+<p>🔧 Bash: grep -n -i "straight water\|three letters\|weave\|knot\|breastbone\|fate.sense\|attribut"…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: grep -n -i "destiny\|forbidden\|post\b\|letters" rewrite/book-01/CROSSCHECK.md | head -30</p>
+<p>✅ 14 lines, 919 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, this confirms H1 is exactly this scene's mechanism. Now I have enough to write the report.</p>
+<p>## Findings</p>
+<p>**1. Scene's engine trips the flagged CROSSCHECK prohibition (H1).**<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> Movement C, scenes C1–C3. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Scene 15's own engine is exactly that move: `"Together they said east, three times, in three hands, in one afternoon's post."` This is the scene CROSSCHECK already flagged as needing re-engineering, restaged unchanged from `chapters/004-three-letters.md`. The CROSSCHECK entry states repair is cheap and doesn't cost the movement — but scene 15 as drafted still has the flagged form.</p>
+<p>**2. "The knot behind his breastbone did nothing whatever."**<br>
+Scene 15, restaged verbatim from `chapters/004-three-letters.md`. This phrase does not appear anywhere else in canon (`notes/canon/**`, `chapters/**`) — it is not an established physiological tell of Edwin's, on-page or in canon files. As written it reads as a narrator attribution: implying some mechanism *could* have reacted to the three-letters-converging-east pattern and here notably didn't. That is precisely the kind of narrator-side attribution the task brief's engine grammar note warns against ("the NARRATOR must not attribute their arrival to anything") — even a negation ("did nothing") still frames the convergence as the kind of thing that has a mechanism to react or not react. It should either be cut or be grounded as an ordinary bodily reaction (dread, tension) with zero implied magical apparatus.</p>
+<p>**3. Peri's "saving it" phrasing.**<br>
+`"I used my question," she said... "I'd been saving it."` — `notes/canon/system.md` (~line 647) explicitly rules on this exact line's ancestor from ch. <span class="redacted">redacted sentence: unpublished prose</span> Scene 15's phrasing is technically compatible with that reading (it doesn't claim she held two questions), but it's the identical phrase already flagged as risky in the ruling discussion, restaged with zero of the disambiguating context added. Worth a second look to make sure a reader can't take it as banking.</p>
+<p>**4. Verbatim vs. paraphrase format.**<br>
+No violation found — the scene reports Peri's Weave answer only in her own paraphrased speech ("What I got was east... a church tower..."), never in the boxed verbatim System format. That's consistent with `notes/canon/characters/peri.md`'s "she keeps raw answers private" and the "images, not names" ruling — the answer gives imagery (road, water, tower), never a name, matching canon's explicit rule that the Weave never gives names.</p>
+<p>**5. Geography, mileage, timeline** — all check out. "Fenholt forty miles east," the map-changes-hands-at-the-Ashway-bridge line, Marsh's south-east estates and Wystow beyond on the dry rim, all match `geography.md` verbatim (scene largely reuses ch. 004's phrasing, itself canon-sourced). Peri's 20→18 miles/day planning figure matches canon's noted gap between planning fantasy and the road's actual pace. <span class="redacted">redacted sentence: unpublished prose</span> Edwin's "rule about not lying in ink," never having been to Fenholt, and having met Marsh only once are all consistent with `edwin.md` and are used correctly (the funeral detail simply isn't repeated here, which is fine — it's not contradicted).</p>
+<p>**6. <span class="redacted">redacted sentence: unpublished prose</span> 004's original "six kingdoms" to match `edwin.md`'s established "six counties" / the one-kingdom-holds-six-counties ruling in `geography.md`. Not a finding against the scene — flagging only so it isn't mistaken for a drift.</p>
+<p>## Canon the scene could use and doesn't</p>
+<p>- The scene never marks that this Weave use is a **new, separate question** from the Day-1 search questions in `peri.md`'s rebuilt search section — worth a line grounding that this is her disciplined, trained-up Weave use (per `peri.md`: "stopped asking daily... works the wording for hours") in contrast to the earlier scramble, since that contrast is established canon character growth the scene is well-placed to show and currently doesn't lean on.<br>
+- Canon's ruling that Edwin's "the knot did nothing" beat (if kept) should be replaced with something explicitly *ordinary* — the scene has no other physical beat marking his read of the convergence; canon's engine-grammar rule ("Edwin may infer 'east' himself from three letters") means his own deduction is fine to dramatize, but nothing sourced from the letters/post as a *mechanism*.</p>
+</div>
+</body></html>

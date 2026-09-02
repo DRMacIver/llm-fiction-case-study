@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a6e00cb18d1b432f9">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="wit", and scope includes "note". Then read <span class="redacted">redacted: private</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md in full. Hunt for violations of those selected rules only. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. Report candidates generously — a judge filters later — but every candidate needs an exact quote from the file (verbatim substring) and the rule_id it violates plus a one-line reason. Do not rewrite anything. If nothing, return an empty findings list.</p></blockquote>
+
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md</p>
+<p>✅ 2 lines, 610 chars</p>
+<p>✅ 1241 lines, 49578 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1013 lines, 53905 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me identify the rules matching the criteria (tier="semantic", lens="wit", scope includes "note"):</p>
+</div>
+
+<p>🔧 Bash: jq -r '.[] | select(.tier=="semantic" and .lens=="wit" and (.scope[] | select(.=="note"))…</p>
+<p>✅ 4 lines, 216 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me examine the author's note against each of these four rules:</p>
+</div>
+
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/author-notes/02-a-war-horse-on-a-milk-cart.md</p>
+<p>✅ 1 lines, 605 chars</p>
+
+<div class="assistant-prose">
+<p>Analyzing the note against the four identified rules:</p>
+<p>1. **triad-swerve-budget** (A list of three where the third item confesses or swerves): No triads with swerves found in the note.</p>
+<p>2. **jukebox-flourish** (Flourish with no nameable job): "Every seed at the bottom of a jar looks like every other seed at the bottom of a jar" is a simile, but it serves a clear function—explaining why labels are essential and setting up the anecdote about sowing unknowable seeds. It has a job.</p>
+<p>3. **wrong-world-metaphor** (Figures from nonexistent institutions): "seed banks" appears in "the rule of thumb in seed banks," but this is real-world farming content in an author's note (which is explicitly real-world only per CLAUDE.md), using appropriate real-world terminology.</p>
+<p>4. **joke-rhythm-no-logic** (Shape without substance): "The labels matter more than the lids" is flat, restateable as "labels are more important than lids for identifying seeds"—a genuine claim with logic.</p>
+<p>No violations found.</p>
+</div>
+
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a29e6027ad61dadee">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<br>
+**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
+- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
+- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
+- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
+<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/edit-*.md`), `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> **Chapter numbering continues globally**: find the highest-numbered chapter across `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-0*/chapters/` and start at the next number.<br>
+<br>
+Group consecutive scenes from `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes/` into chapters of **~2,000 words (occasionally to 3,000; over 3,000 needs a written reason)**, write `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/chapters/NNN-slug.md` with a `# Chapter N: Title` heading, choose cut points — **at least two must fall inside a scene**, between a question and its answer or mid-argument, where the plan's Assembly section now says to find them — title the chapters, place the author's notes. **Assembly groups, orders, cuts, titles and places notes. It never revoices.** A repeated word across a join or a dangling reference may be fixed and must be logged; anything more goes back to the scene file with a note in `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Write `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> Commit.<br>
+<br>
+Your final message: chapter numbers covered, word-count distribution, chapters over 3,000 with reasons, where the mid-scene cuts fall.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the key process and reference files.</p>
+</div>
+
+<details><summary>76 tool calls</summary>
+<p>🔧 Bash: sed -n '1,200p' notes/process.md</p>
+<p>✅ 200 lines, 11373 chars</p>
+<p>🔧 Bash: ls rewrite/book-01/arc-01/chapters/ rewrite/book-01/arc-02/ rewrite/book-01/arc-02/scenes…</p>
+<p>✅ 83 lines, 1996 chars — rewrite/book-01/arc-01/chapters/: / 001-four-ways-of-asking.md / 002-until-fulfilled.md</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 139 lines, 7781 chars</p>
+<p>🔧 Bash: sed -n '/stage 7/,/^## /p' .claude/skills/write-arc/SKILL.md | head -80; echo ====; grep…</p>
+<p>✅ 27 lines, 1445 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls plans/book-01/; <span class="redacted">unpublished</span> echo ---; grep -n -i "assembly\|…</p>
+<p>✅ 28 lines, 983 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "Stage 7" -A 60 .claude/skills/write-arc/SKILL.md | sed -…</p>
+<p>✅ 61 lines, 3355 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1310,1400p' plans/book-01/arc-02.md <span class="redacted">unpublished</span></p>
+<p>✅ 91 lines, 4489 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "^### Stage 7" -A 70 .claude/skills/write-arc/SKILL.md</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "Chapter assembly\|assembly" .claude/skills/write-arc/SKI…</p>
+<p>✅ 5 lines, 677 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 50 lines, 1774 chars — 01-the-north-<span class="redacted">redacted: character</span>-gap.md      895 / 02-twelve-stakes.md      879 / <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>-gap.md;…</p>
+<p>✅ 28 lines, 1835 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>-gap.md</p>
+<p>✅ 112 lines, 4522 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 42 lines, 2850 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 2 lines, 208 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '225,320p' rewrite/book-01/arc-02/edit-1.md; echo =====; s…</p>
+<p>✅ 58 lines, 3466 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '215,300p' rewrite/book-01/arc-02/edit-2.md</p>
+<p>✅ 39 lines, 2196 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes; cat 02*.md 03*.md 04*.md 05*.md 06*…</p>
+<p>✅ 53 lines, 2245 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 1219 lines, 57341 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes; cat 14-*.md 15-*.md 16-*.md 17-*.md…</p>
+<p>✅ 1 lines, 114 chars</p>
+<p>🔧 Read /tmp/claude-501/-Users-drmaciver-Projects-autoroad/3ef92e14-71be-4557-a7d1-f251a7410081/scratchpad/b2.txt</p>
+<p>✅ 1241 lines, 60334 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes; cat 27-*.md 28-*.md 29-*.md 30-*.md…</p>
+<p>✅ 1 lines, 2 chars</p>
+<p>🔧 Read /tmp/claude-501/-Users-drmaciver-Projects-autoroad/3ef92e14-71be-4557-a7d1-f251a7410081/scratchpad/b3.txt</p>
+<p>✅ 1137 lines, 56430 chars</p>
+<p>🔧 Read /tmp/claude-501/-Users-drmaciver-Projects-autoroad/3ef92e14-71be-4557-a7d1-f251a7410081/scratchpad/b4.txt</p>
+<p>✅ 1133 lines, 55827 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 35 lines, 3481 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n '^\* \* \*\|^---$' rewrite/book-01/arc-01/chapters/*.md |…</p>
+<p>✅ 21 lines, 1405 chars</p>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/chapters &amp;&amp; cat &gt; /tmp/claude-501/-Us…</p>
+<p>✅ 21 lines, 751 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; tail -6 rewrite/book-01/arc-01/chapters/arc-01-scenes/14-the-refu…</p>
+<p>✅ 12 lines, 153 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; tail -5 rewrite/book-01/arc-01/scenes/14-the-refusal.md</p>
+<p>✅ 5 lines, 386 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes python3 - &lt;&lt;'PY' import re ⟦redacted…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p="/tmp/claude-501/-Users-drmaciver-Projects-aut…</p>
+<p>✅ 21 lines, 751 chars — (17, 'A Hole in My Grass', 2672) / <span class="redacted">redacted sentence: unpublished prose</span> / (19, 'The Stopping Is the Entry', 2082)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/chapters; grep -l "Assembly seam" *.md; ech…</p>
+<p>✅ 26 lines, 1421 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/chapters; sed -n '/^---$/!d;=' 018-*.md &gt;/d…</p>
+<p>✅ 9 lines, 288 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls samples/round5/full-chapter/; head -30 samples/round5/full-cha…</p>
+<p>✅ 34 lines, 1518 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 samples/round5/full-chapter/census.py rewrite/book-01/arc…</p>
+<p>✅ 2 lines, 1269 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 samples/round5/full-chapter/census.py rewrite/book-01/arc…</p>
+<p>✅ 9 lines, 610 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 35 lines, 1551 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 9 lines, 128 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1541,1600p' plans/book-01/arc-02.md; <span class="redacted">unpublished</span> echo .…</p>
+<p>✅ 68 lines, 4439 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now I'll write the assembly record, log the drift, and flag what belongs to editing.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt;&gt; plans/book-01/arc-02.md <span class="redacted">unpublished</span> &lt;&lt;'EOF'  ⟦redacted s…</p>
+<p>✅ 1 lines, 4 chars</p>
+<p>🔧 Bash: cd /tmp/claude-501/-Users-drmaciver-Projects-autoroad/3ef92e14-71be-4557-a7d1-f251a741008…</p>
+<p>✅ 15 lines, 853 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' <span class="redacted">redacted sentence: unpublished prose</span> t=open(p)…</p>
+<p>✅ 8 lines, 562 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' <span class="redacted">redacted sentence: unpublished prose</span> t=open(p)…</p>
+<p>✅ 2 lines, 262 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the assembly record.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> ⟦redacted sentence: series s…</p>
+<p>✅ 1 lines, 43 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 16 lines, 623 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 -c " <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 2 lines, 121 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span>  Co-Authored-By…</p>
+<p>✅ 53 lines, 2736 chars — M  plans/book-01/arc-02.md <span class="redacted">unpublished</span> / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span></p>
+</details>
+
+<div class="assistant-prose">
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**Word-count distribution** (prose body, notes/headings excluded): mean 2,114, median ~2,098, range 1,597–2,672.<br>
+017 2,672 · 018 2,148 · 019 2,082 · 020 2,529 · 021 1,654 · 022 2,437 · 023 1,678 · 024 2,501 · 025 1,691 · 026 2,623 · 027 1,739 · 028 1,778 · 029 2,467 · 030 1,686 · 031 2,325 · 032 2,014 · 033 2,504 · 034 1,597 · 035 2,478 · 036 1,679</p>
+<p>**Chapters over 3,000: none.** No written reason needed.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+1. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+2. Inside scene 38 (*the second chamber*). 031 ends on "*Well?*" / "*Nothing.*"; 032 opens on "*Nothing how?*"</p>
+<p>Three further candidates were considered and rejected on balance (scene 13 — the plan's own named cut, which leaves a 1,240-word chapter; scene 12, a 180-word tail; scene 29, available but a dread cut and not needed). Reasons are in ASSEMBLY.md.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> Revisions (arithmetic — the scenes came in at 42.3k against a ~38k budget).</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> All pass.</p>
+<p>**Notes placed:** five, in chapters 018 (*the quarter*, long), 020 (*the boot*), 022 (*finishing*), 024 (*the cradle* + *drove crown*). Chapters 025–036 carry none — the edit passes earned no note in scenes 27–50, and inventing one at assembly is not permitted; recorded in ASSEMBLY.md.</p>
+<p>**Prose changed:** four single words, all opening pronouns that lost their antecedent across a new chapter break, all made in the scene files with an editorial line at the foot (`scenes/12`, `scenes/14`, `scenes/31`, `scenes/46`). Nothing else — no smoothing.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Both are line-level and belong to stage 5.</p>
+<p>Files: `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/chapters/`, `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span>/plans/book-01/arc-02.md`. <span class="redacted">unpublished</span> Committed as 80513d3. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

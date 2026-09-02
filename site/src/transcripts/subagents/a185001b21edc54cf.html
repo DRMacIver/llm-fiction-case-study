@@ -1,0 +1,92 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a lint hunter for a fiction project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a185001b21edc54cf">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a lint hunter for a fiction project at <span class="redacted">redacted: private</span>.<br>
+Target file: the single .md file in draft/book-01/scenes/ whose name starts with the two-digit number 22-. Read it in full.<br>
+LENS: narration. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and extract ONLY the rules with "tier": "semantic" and "lens": "narration". Apply exactly those rules (their description, why, examples, counter_examples) to the target file.<br>
+MANDATORY: before flagging any quote, read at least one full sentence either side of it; a quote that looks like a violation is often licensed by its neighbours (this is the top false-positive cause). Check counter_examples before flagging.<br>
+Report every candidate generously - a later judge filters; do not self-censor borderline ones. Never rewrite the text. Return findings as {rule_id, quote (exact, verbatim), reason (one line)}. If nothing, return an empty findings list.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you lint the target file using the semantic/narration rules. Let me start by finding the target file and reading the rules.</p>
+</div>
+
+<p>🔧 Bash: find <span class="redacted">redacted: private</span>/draft/book-01/scenes -name "22-*.md" -type f (Find the scene file starting with 22-)</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1 lines, 81 chars — <span class="redacted">redacted: private</span>/draft/book-01/scenes/22-the-price-of-a-mule.md</p>
+<p>✅ 1196 lines, 51733 chars</p>
+
+<div class="assistant-prose">
+<p>Let me continue reading the rules file to get all semantic/narration rules.</p>
+</div>
+
+<p>🔧 Bash: grep -n '"tier":\s*"semantic"' <span class="redacted">redacted: private</span>/tools/lint/rules.json | head -20 (Find all rules with tier: semantic)</p>
+<p>✅ 20 lines, 575 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1256 lines, 70366 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me read the target file.</p>
+</div>
+
+<p>🔧 Read draft/book-01/scenes/22-the-price-of-a-mule.md</p>
+<p>✅ 40 lines, 3451 chars</p>
+
+<div class="assistant-prose">
+<p>Now I'll apply the semantic/narration rules to the target file. Let me extract those rules first:</p>
+</div>
+
+<p>🔧 Bash: python3 &lt;&lt; 'EOFPYTHON' import json  with open('<span class="redacted">redacted: private</span>/tools/lint/rules.json'… (Extract semantic/narration rules from rules.json)</p>
+<p>✅ 59 lines, 3025 chars — generalising-clause-budget: Generalising closing clause budget /   Severity: warn /   Description: The narrator generalising outward from a character to people in general in a closing clause: one per...</p>
+
+<div class="assistant-prose">
+<p>Now let me carefully apply each rule to this scene, reading neighboring sentences where needed:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; /tmp/check_rules.txt &lt;&lt; 'EOF' SEMANTIC/NARRATION RULES TO CHECK: 1. generalising-cl… (Check rules systematically)</p>
+<p>✅ 15 lines, 1056 chars</p>
+
+<div class="assistant-prose">
+<p>Let me check the critical passage at the end:</p>
+</div>
+
+<p>🔧 Bash: sed -n '35,40p' <span class="redacted">redacted: private</span>/draft/book-01/scenes/22-the-price-of-a-mule.md (Check the ending section for context)</p>
+<p>✅ 5 lines, 724 chars</p>
+
+<div class="assistant-prose">
+<p>I've reviewed the scene against all 12 semantic/narration rules. Let me identify any violations:</p>
+<p>**Checking each rule:**</p>
+<p>1. ✓ **generalising-clause-budget** - No closing clauses generalizing to people broadly<br>
+2. ✓ **windup-tag-budget** - No long biographical dialogue tags<br>
+3. ✓ **wants-gerund-budget** - No "wants X-ing" narration constructions<br>
+4. ✓ **prose-not-at-rest** - Scene contains plain sentences: "She had no notebook out and wrote nothing down, and he could see her keeping it anyway. There would be time on the road to argue about what things were. There would be two days of it."<br>
+5. ✓ **unlocated-narration** - No village knowledge reported without a route<br>
+6. ✓ **motive-off-page** - No unmotivated deliberate acts<br>
+7. **⚠ viewpoint-overreach** - FOUND VIOLATION (see below)<br>
+8. ✓ **nominalised-absence** - No absences/silences as grammatical subjects<br>
+9. ✓ **description-list** - No catalogued descriptions<br>
+10. ✓ **rest-register-misplaced** - Opening is plain narrative, not McPhee process register<br>
+11. ✓ **unearned-authority** - Edwin's authority accepted by Peri without resistance<br>
+12. ✓ **likeability-drift** - Peri portrayed as competent and likeable</p>
+<p>**VIOLATION FOUND:**</p>
+<p>In the final paragraph, Edwin observes that Peri has "priced a mule this week" (her words). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Edwin assigns a specific count ("six days") that Peri never stated. She only said "this week." Edwin has no way to know it's been exactly six days—he's assigning a precise temporal measure without textual basis. This violates the viewpoint-overreach rule: "The POV character reports a fact they have no way to know...a count nobody has told them."</p>
+</div>
+
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

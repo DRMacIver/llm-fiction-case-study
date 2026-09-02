@@ -1,0 +1,62 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Hou…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Hou…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a79fece9319a1f9f8">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span> House-word convergence), .claude/skills/editing-pass/SKILL.md, then chapters/016-the-fen-margin.md in full.<br>
+You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Report ONLY findings within your lens, compactly, each as: quote (short) | problem | suggested fix. Precision matters: invented problems are as bad as misses. Do NOT declare the chapter clean or certify anything — absence of findings is simply an empty list.</p></blockquote>
+
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/voices.md</p>
+<p>✅ 181 lines, 10376 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/llm-tells.md</p>
+<p>✅ 160 lines, 9931 chars</p>
+<p>🔧 Bash: cat "<span class="redacted">redacted: private</span>/.claude/skills/editing-pass/SKILL.md"</p>
+<p>✅ 107 lines, 5646 chars</p>
+<p>🔧 Bash: cat -n "<span class="redacted">redacted: private</span>/chapters/016-the-fen-margin.md"</p>
+<p>✅ 207 lines, 24490 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters python3 - &lt;&lt;'EOF' import re text = open("016-the-fen-marg…</p>
+<p>✅ 13 lines, 174 chars — wordcount 4559 / emdashes 1 per1000 0.21934634788330776 / nobody 7</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters grep -noiE "nobody|somebody|anybody" 016-the-fen-margin.m…</p>
+<p>✅ 53 lines, 570 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters grep -noE ".{30}\blike\b.{30}" 016-the-fen-margin.md echo…</p>
+<p>✅ 9 lines, 468 chars</p>
+<p>🔧 Bash: grep -n "—" <span class="redacted">redacted: private</span>/chapters/016-the-fen-margin.md</p>
+<p>✅ 1 lines, 48 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Findings — Register &amp; Mechanical lens only (chapter 16, "The Fen Margin"):</p>
+<p>**Em-dash budget:** 1 em-dash in 4,559 words (~0.22/1000, well under the ~2/1000 budget) — no issue, noted for completeness.</p>
+<p>**Month names:** none found; compound months used correctly (Harvestmonth, Fallowmonth, Cornmonth, Frostmonth).</p>
+<p>**Negative parallelism:**<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**Aphorism budget (max 1/scene):**<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**Appraisal-formula / self-annotated device:** none found meeting that shape (the "like a heron out of a dyke" and "like a claw" similes are concrete-to-concrete, not the abstract-concrete jukebox formula); no self-annotated devices caught ("which she knew, which is why..." pattern absent).</p>
+<p>**Triad swerve:** none found beyond the negative-parallelism triad flagged above.</p>
+<p>**House-word census:**<br>
+- nobody/somebody/anybody: 14 instances (L5, 31, 33, 51×2, 73, 83×2, 91, 123, 143, 193, 205, 207) — ~30.7/10k words, well above the halved target (~11/10k) the 2026-08-24 census set.<br>
+- stood/standing: 19 instances (L7×2, 15, 25, 29, 33, 37, 61, 95, 101×2, 111, 117×2, 131, 157, 175, 177, 187, 189) — staging-verb monoculture flagged in the census; still running dense here.<br>
+- "out loud": 2 (L73, 117) — within/near reasonable range but both are near-tag uses ("did the sum out loud," "said... <span class="redacted">redacted sentence: unpublished prose</span><br>
+- "the whole of": 2 (L5, 207) — at the watch-listed construction; both are candidates for "all of it" or restructure.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> the ordinary way"); that's a local doubling worth varying even though the arc-wide budget may still hold.<br>
+- half past: 6 (L55, 89, 143, 157, 169×2) — all appear to be literal clock-time uses (the timekeeping canon), consistent with the "vary phrasings, don't ban" guidance, but flagging the raw count since it's dense within one chapter — worth checking arc-wide total against the "vary the clock phrasings" instruction.<br>
+- arithmetic: 0 (clean, retired construction not present).</p>
+<p>**Ending:** last two paragraphs (L205–207, <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

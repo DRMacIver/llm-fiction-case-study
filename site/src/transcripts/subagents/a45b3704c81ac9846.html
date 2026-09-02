@@ -1,0 +1,62 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦red…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦red…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a45b3704c81ac9846">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span>/samples/model-test/verify-test-A.md in full.<br>
+You are a narrow reviewer with ONE lens. REGISTER &amp; MECHANICAL: banned constructions (negative parallelism in narration, self-annotated devices, free-floating epigrams, appraisal-formula similes, triad swerves), em-dash budget, Earth month names (canon uses compound months), house-word census, decorated/composed endings vs the cuts rule. Quote every hit.<br>
+Report ONLY findings within your lens, each as: quote | problem | suggested fix. Be precise: invented problems are as bad as misses. "No findings" is valid.</p></blockquote>
+
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Read notes/voices.md</p>
+<p>✅ 182 lines, 10997 chars</p>
+<p>🔧 Read notes/llm-tells.md</p>
+<p>✅ 161 lines, 10468 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/.claude/skills/editing-pass/SKILL.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/samples/model-test/verify-test-A.md</p>
+<p>✅ 107 lines, 5646 chars</p>
+<p>✅ 111 lines, 16874 chars</p>
+<p>🔧 Bash: F=<span class="redacted">redacted: private</span>/samples/model-test/verify-test-A.md echo "wordcount:"; wc -w "$F" e…</p>
+<p>✅ 15 lines, 653 chars</p>
+<p>🔧 Bash: grep -n "March" <span class="redacted">redacted: private</span>/samples/model-test/verify-test-A.md</p>
+<p>✅ 1 lines, 572 chars</p>
+<p>🔧 Bash: F=<span class="redacted">redacted: private</span>/samples/model-test/verify-test-A.md grep -n "Not \|not just\|not on…</p>
+<p>✅ 5 lines, 2615 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Register &amp; Mechanical findings</p>
+<p>**Earth month name (canon violation)**<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+Problem: "March" is an Earth month name; canon uses compound months exclusively (the same sentence correctly uses "Haymonth," making the lapse conspicuous). Fix: replace with the vale's compound-month equivalent for early spring (e.g., whatever compound name precedes "Haymonth" in the calendar; check system.md) — "it told you in [Compound-month] what you would otherwise learn in Haymonth."</p>
+<p>**Free-floating epigrams — over budget (two aphorisms in the pre-break scene alone)**<br>
+&gt; "Frightened men do first and write after. Bad news has always been the one cargo that builds its own roads."<br>
+Problem: two stacked, fully general, quotable-wisdom sentences back to back — neither stays stuck to a specific particular of this box/letter, both would transplant cleanly to any story. Exceeds the one-aphorism-per-scene cap by itself. Fix: cut the second sentence outright; let "Frightened men do first and write after" (already borderline) stand alone, or ground it in the specific object in front of him rather than "cargo" in general.</p>
+<p>**Free-floating epigram + self-annotated device (second scene)**<br>
+&gt; "which was, he reflected, the whole trick of teaching: turning what you are into something anyone can count"<br>
+Problem: doubly flagged — it's a portable aphorism about teaching in general, and it's self-annotating (the prose explains the cleverness of the census-metaphor it just performed rather than letting the reader see it). Fix: cut the "which was... whole trick of teaching" clause entirely; the census idea already lands without narration glossing its own trick.</p>
+<p>**Second aphorism in same scene — exceeds one-per-scene cap**<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+Problem: this scene already used its aphorism budget on the teaching-trick line above; this is a second free-standing generalization (about "this trade," not this moment), doing the frictionless-quotable-wisdom move the rules specifically flag. Fix: keep the concrete image ("that grass is spending its savings... I do not know what happens to it in the spring") and cut the generalizing frame sentences, or keep only one of the two aphorisms in this scene.</p>
+<p>**Recurring negation-first construction (habitual pattern, cousin of banned negative parallelism)**<br>
+&gt; "Not dead soil." / "Not dead worms. No worms." / "Not average."<br>
+Problem: the same rhetorical tic — flat negation fragment, then correction — recurs four times across the chapter. Rule 5 bans negative-parallelism constructions "as habits," and this is the habit even though it never literally takes the "not X, but Y" clause form. Fix: vary the move — let at least two of these land as a positive statement instead of a negation-first beat.</p>
+<p>**Composed/decorated ending (hard rule violation)**<br>
+&gt; "'Two weeks,' Sorrel agreed, and took the box down to the pump. Outside, the evening settled over the vale like a held breath, and somewhere east of the bridge a field went on quietly forgetting how to be alive."<br>
+Problem: this is exactly the banned ending shape — a crafted simile ("like a held breath") plus a resonant thematic callback line that rhymes with the chapter's central image (soil "forgetting how to be alive" callbacks the earlier "nothing alive" material). <span class="redacted">redacted sentence: unpublished prose</span> Fix: end on the preceding beat instead — Sorrel taking the box down to scrub it, or Edwin ruling the line under plot 14 and starting the map — cut before the "evening settled" sentence entirely.</p>
+<p>**Em-dash budget**: 6 raw em dashes in 3,163 words (~1.9/1000) — within the ~2/1000 budget. No finding, though note four of the six are stacked in one sentence as list separators (line: "sample boxes (6) — the grey book — the east maps — the good staff"), a different rhetorical use than the parenthetical-aside the budget was written against; flagging for awareness only, not a violation.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦unp…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦unp…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-ac967f055057c7f54">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (find every finding for chapter 007), then chapters/007-the-east-road.md in full.<br>
+<br>
+You are retrofitting this ONE chapter (edit no other file). Two jobs, applied sentence by sentence, with the content, beats, dialogue intent, ending cut, and author's-note block (if present, below the '---') all preserved:<br>
+1. LANGUAGE: apply the thirteen census rules. The big one is the verdict clause — every trailing ", which was new / took some doing / was the mistake / Edwin took to mean…" either ends before the comma or becomes a plain separate sentence of fact; type-of-person clauses become the specific observed thing; maxim-capped speech loses the maxim (characters say what they mean and stop; only Edwin's teaching register may lecture, and rarely); nominalised absences become actions; near-idioms become the real idiom or plain words; interior false precision goes; hedged gesture tags go or become the gesture; windup dialogue tags become plain "said"; register slips (modern/clinical, fake-archaic) fixed; motif-word reuse thinned; fragment closers used sparingly. Do NOT flatten the approved voice: keep the seed-shaped similes at ~2 per chapter, the diegetic clock times and counts, "wants doing", Edwin's occasional composed paragraph. <span class="redacted">redacted sentence: unpublished prose</span><br>
+2. FARMING: apply this chapter's corrections from farming-findings.md exactly (they cite the real mechanism and the corrected line). If a correction changes a number other chapters depend on, apply it here and list it in your report as a cross-chapter dependency — do not edit the other chapter.<br>
+Write the revised chapter in place. Commit: "Retrofit 007: language census rules + farming corrections" with trailer "Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;". Return: verdict-clause count before/after (grep ', which was\|, which took\|took to mean'), the farming corrections applied, any cross-chapter dependencies, and one sentence on anything you declined to change and why.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required files.</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> chapters/007-the-east-road.md</p>
+<p>✅ 8 lines, 261 chars —       42 notes/voice-exemplars.md / <span class="redacted">redacted sentence: unpublished prose</span> /      424 notes/voices.md</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 348 lines, 16999 chars</p>
+<p>🔧 Bash: cat notes/voices.md</p>
+<p>✅ 424 lines, 24733 chars</p>
+<p>🔧 Bash: cat notes/llm-tells.md; echo "=====FARMING====="; cat notes/farming.md</p>
+<p>✅ 281 lines, 16494 chars</p>
+<p>🔧 Bash: grep -n -i "007\|chapter 7\|ch\. 7\|ch 7" plans/book-01/farming-findings.md <span class="redacted">unpublished</span></p>
+<p>✅ 3 lines, 225 chars</p>
+<p>🔧 Bash: sed -n 1,60p plans/book-01/farming-findings.md; <span class="redacted">unpublished</span> echo ...; sed -n 330,442p p…</p>
+<p>✅ 174 lines, 9327 chars</p>
+<p>🔧 Bash: grep -n -B4 -A12 "007" notes/canon/world/farming-glossary.md | head -120</p>
+<p>✅ 38 lines, 1876 chars</p>
+<p>🔧 Bash: sed -n 455,620p notes/canon/world/farming-glossary.md</p>
+<p>✅ 166 lines, 8368 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the chapter.</p>
+</div>
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Bash: cat -n chapters/007-the-east-road.md</p>
+<p>✅ 165 lines, 18429 chars</p>
+<p>🔧 Bash: grep -c ', which was\|, which took\|took to mean' chapters/007-the-east-road.md; grep -o…</p>
+<p>✅ 4 lines, 58 chars</p>
+<p>🔧 Bash: grep -n ', which was\|, which took\|took to mean' chapters/007-the-east-road.md; grep -on…</p>
+<p>✅ 10 lines, 295 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import io p='chapters/007-the-east-road.md' s=io.open(p,encoding='utf-8…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import io p='chapters/007-the-east-road.md' s=io.open(p,encoding='utf-8…</p>
+<p>✅ 14 lines, 1784 chars</p>
+<p>🔧 Bash: grep -n '—' chapters/007-the-east-road.md</p>
+<p>✅ 9 lines, 2564 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import io p='chapters/007-the-east-road.md' s=io.open(p,encoding='utf-8…</p>
+<p>✅ 8 lines, 102 chars</p>
+<p>🔧 Bash: grep -n -i 'nobody\|somebody\|anybody\|\bstood\b\|standing' /tmp/p.txt</p>
+<p>✅ 17 lines, 7429 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import io p='chapters/007-the-east-road.md' s=io.open(p,encoding='utf-8…</p>
+<p>✅ 4 lines, 1002 chars</p>
+<p>🔧 Bash: git add chapters/007-the-east-road.md &amp;&amp; git commit -q -m "Retrofit 007: language census…</p>
+<p>✅ 1 lines, 65 chars — c21f3b6 Retrofit 007: language census rules + farming corrections</p>
+</details>
+
+<div class="assistant-prose">
+<p>Verdict clauses (grep `, which was\|, which took\|took to mean`): **1 before → 0 after**. Total `, which` in prose fell 6 → 2 (both causal/relative); the author's-note block below the `---` is untouched.</p>
+<p>File: <span class="redacted">redacted: private</span>/chapters/007-the-east-road.md</p>
+<p>Farming corrections applied — finding **16** (the only ch. 007 finding; the spring line and causeway material is otherwise on the commended list):<br>
+- Split the diagnosis exactly as the finding directs. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Instruments, not oracles.<br>
+- The chapter already carries its five author's notes matching the glossary, so the outstanding term findings were already satisfied here.</p>
+<p>Cross-chapter dependencies: **none.** No number other chapters rely on changed — distances (fifteen miles, twenty planned), timings, and the Fenholt arrival day are all as they were.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Kept: the doorway-rain and city-underfoot similes (2, on target), the diegetic waymarker/mileage counts, "wants" phrasing where a character owns it, Edwin's composed mana paragraph, and "One spell, one shed."</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

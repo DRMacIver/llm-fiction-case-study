@@ -1,0 +1,198 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are doing an integration and hygiene pass on the novel&#x27;s notes at…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are doing an integration and hygiene pass on the novel&#x27;s notes at…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a7b73eb2d8fb3a124">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are doing an integration and hygiene pass on the novel's notes at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it. Never put sealed content anywhere outside `notes/sealed/`, and never state it to DRMacIver.<br>
+<br>
+Four domain agents have just ruled the outstanding decisions and triaged the open questions in their files, reporting to `notes/decisions/*.md`. Read all four reports and the canon they changed.<br>
+<br>
+**1. Stale-status sweep — this is the priority.** On 2026-08-28 the Mattie/Ferrin collision was found marked **RULED** in `notes/canon/characters/mattie-ordish.md` and simultaneously described as **unruled** in `notes/voices.md` and `notes/dialogue-voices.md`. <span class="redacted">redacted sentence: unpublished prose</span> Stale status claims propagate into work.<br>
+<br>
+Grep `notes/` and `plans/` <span class="redacted">unpublished</span> for: "unruled", "not yet decided", "undecided", "pending" (excluding the in-world Destiny [PENDING], which is a story term), "TBD", "open question", "to be decided", "mechanism undecided", "(partial)", "awaiting", "still open". For each hit, find the file that *owns* that question and check whether it has since been answered. **Correct every stale claim, and add a pointer to the owning file** so the next reader does not have to do this again.<br>
+<br>
+**2. Cross-domain integration.** The same underlying question often appears in two domains with two different rulings. Find those and resolve each into one position, editing whichever file is wrong. Check specifically that no domain resolved something that belongs to a sealed answer.<br>
+<br>
+**3. <span class="redacted">redacted sentence: unpublished prose</span> There were 42 across 22 files before this pass. Any that are still undifferentiated, fix — that is the whole point of the exercise.<br>
+<br>
+**4. Collect the deferred triggers into one place.** Write `notes/canon/deferred-questions.md`: <span class="redacted">unpublished</span> every deferred question, its trigger, and the file that owns it, sorted by how soon the trigger fires. This is the list a future session checks before writing anything.<br>
+<br>
+Write your report to `notes/decisions/SWEEP.md`: `## Stale claims corrected`, `## Cross-domain conflicts resolved`, `## Triage verification` (with the before/after counts), `## Still genuinely open, and why`, `## Possible unanswered mysteries`.<br>
+<br>
+Then commit everything from this workflow with a clear message.<br>
+<br>
+Your final message: the before/after open-question counts, the number of stale claims corrected, and anything that still needs attention. No sealed content.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required context.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: ls notes/decisions/ 2&gt;/dev/null &amp;&amp; echo "---" &amp;&amp; ls notes/ &amp;&amp; echo "---CANON---" &amp;&amp; find…</p>
+<p>🔧 Read CLAUDE.md</p>
+<p>✅ 109 lines, 6054 chars</p>
+<p>✅ 87 lines, 3287 chars — characters.md / premise-and-plans.md / system-and-timeline.md</p>
+<p>🔧 Bash: wc -l notes/decisions/*.md &amp;&amp; for f in notes/decisions/*.md; do echo "=============== $f"…</p>
+<p>✅ 42 lines, 2232 chars</p>
+<p>🔧 Bash: sed -n '1,240p' <span class="redacted">redacted: private</span></p>
+<p>✅ 239 lines, 15238 chars</p>
+<p>🔧 Bash: sed -n '240,700p' <span class="redacted">redacted: private</span></p>
+<p>✅ 460 lines, 29242 chars</p>
+<p>🔧 Bash: sed -n '700,1120p' <span class="redacted">redacted: private</span></p>
+<p>✅ 391 lines, 23845 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the grep sweep.</p>
+</div>
+
+<details><summary>36 tool calls</summary>
+<p>🔧 Bash: grep -rniE "unruled|not yet decided|undecided|TBD|to be decided|awaiting|still open|\(par…</p>
+<p>✅ 189 lines, 17996 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "Mattie" notes/voices.md | head -30; echo "=== ferrin 100…</p>
+<p>✅ 133 lines, 11248 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "RULED\|collision" notes/canon/characters/mattie-ordis…</p>
+<p>✅ 64 lines, 4019 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '353,365p;400,425p' notes/canon/characters/mattie-ordish.m…</p>
+<p>✅ 80 lines, 4005 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for f in $(find notes/canon -name '*.md'|sort); do echo "--- $f";…</p>
+<p>✅ 52 lines, 1985 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '203,215p' notes/canon/characters/<span class="redacted">redacted: character</span>.md…</p>
+<p>✅ 124 lines, 6782 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "438\|leakage\|fifteen months\|unwalked\|projection" note…</p>
+<p>✅ 20 lines, 1406 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '240,300p' notes/canon/world/dungeons.md; echo "@@@@@@@@@@…</p>
+<p>✅ 153 lines, 8139 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>✅ 32 lines, 2725 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '155,172p;682,700p' notes/canon/world/magic.md; echo "===…</p>
+<p>✅ 61 lines, 3774 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '222,236p' notes/canon/world/magic.md; echo "=== system.md…</p>
+<p>✅ 16 lines, 968 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "number of casts\|per cast\|one face or one core" notes/…</p>
+<p>✅ 2 lines, 210 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '424,470p' notes/canon/characters/mattie-ordish.md; echo "…</p>
+<p>✅ 75 lines, 4948 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls -la notes/sealed/; git status --short | head -20</p>
+<p>✅ 11 lines, 527 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git diff .gitignore; echo "=== sealed silent-soil rate coherence"…</p>
+<p>✅ 27 lines, 3527 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '405,440p' notes/sealed/silent-soil.md; echo "###"; grep -…</p>
+<p>✅ 51 lines, 3868 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "holm\|dungeon\|deep" notes/sealed/silent-soil.md | he…</p>
+<p>✅ 25 lines, 1809 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; echo "--theme 70-80"; sed -n '70,80p' notes/theme.md; ⟦unpublishe…</p>
+<p>✅ 132 lines, 7045 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the cross-domain reconciliations. First the Deep-date rule collision.</p>
+</div>
+
+<p>🔧 Bash: python3 - &lt;&lt;'PY' import re,io p='notes/canon/world/dungeons.md' s=open(p).read()  ⟦redact…</p>
+<p>✅ 2 lines, 23 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/magic.md' s=open(p).read()…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+
+<div class="assistant-prose">
+<p>Now the Mattie/Ferrin stale-status cluster — the failure this sweep exists to prevent.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' def ed(p, pairs):     s=open(p).read()     for o…</p>
+<p>✅ 8 lines, 347 chars — Exit code 1 / ok notes/dialogue-voices.md / ok notes/canon/characters/mattie-ordish.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '110,116p' notes/voice-experiments-2026-08-28.md | cat -A…</p>
+<p>✅ 2 lines, 58 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '109,115p' notes/voice-experiments-2026-08-28.md</p>
+<p>✅ 6 lines, 416 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/voice-experiments-2026-08-28.md' s=open…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' banner = """## Open questions  ⟦redacted sentenc…</p>
+<p>✅ 7 lines, 255 chars — ok notes/canon/characters/<span class="redacted">redacted: character</span>.md / ok notes/canon/characters/edwin.md / ok notes/canon/characters/ferrin.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/world/silent-soil.md' s=open(p).r…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the remaining stale pointers across canon and plans.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' def ed(p,pairs):     s=open(p).read()     for o,…</p>
+<p>✅ 7 lines, 225 chars — ok notes/canon/world/continent.md / ok notes/canon/characters/minor.md / ok notes/canon/characters/sorrel.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '43,52p' notes/canon/characters/sorrel.md; echo "=== minor…</p>
+<p>✅ 47 lines, 3029 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt;&gt; notes/canon/characters/minor.md &lt;&lt;'EOF'  ⟦redacted sentenc…</p>
+<p>✅ 1 lines, 2 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the plans and README pointers.</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '598,615p' plans/book-01/arc-03.md; <span class="redacted">unpublished</span> echo "==…</p>
+<p>✅ 112 lines, 6102 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '95,132p' plans/rewrite-readiness.md; <span class="redacted">unpublished</span> echo -…</p>
+<p>✅ 60 lines, 3958 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='plans/rewrite-readiness.md <span class="redacted">unpublished</span>' s=o…</p>
+<p>✅ 1 lines, 9 chars — ticked 15</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' def ed(p,pairs):     s=open(p).read()     for o,…</p>
+<p>✅ 5 lines, 163 chars — ok plans/book-01/arc-03.md <span class="redacted">unpublished</span> / ok plans/farm-curriculum/d-impact.md <span class="redacted">unpublished</span> / ok plans/farm-curriculum/a-foundational-five.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 62 lines, 3939 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' import re,glob files=sorted(glob.glob('notes/can…</p>
+<p>✅ 23 lines, 3094 chars — total entries: 141 / undifferentiated: 21 / <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' import re p='notes/canon/world/silent-soil.md' l…</p>
+<p>✅ 4 lines, 134 chars — silent-soil bullets marked: 12 / ok notes/canon/characters/edwin.md / ok notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' import re,glob files=sorted(glob.glob('notes/can…</p>
+<p>✅ 3 lines, 286 chars — total: 141 undifferentiated: 2 / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span></p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the collected deferred-questions index.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; notes/canon/deferred-questions.md <span class="redacted">unpublished</span> &lt;&lt;'EOF' ⟦re…</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/canon/README.md' s=open(p).read() o="-…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' import glob tot=0 for f in sorted(glob.glob('not…</p>
+<p>✅ 36 lines, 1160 chars — notes/canon/characters/<span class="redacted">redacted: character</span>.md 2 / notes/canon/characters/edwin.md 12 / notes/canon/characters/ferrin.md 4</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the sweep report.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; notes/decisions/SWEEP.md &lt;&lt;'EOF' # Integration and hygiene…</p>
+<p>✅ 1 lines, 33 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git add notes/ plans/ <span class="redacted">unpublished</span> &amp;&amp; git status --short &amp;&amp; git…</p>
+<p>✅ 30 lines, 1009 chars —  M .gitignore / M  notes/canon/README.md / M  notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+
+<div class="assistant-prose">
+<p>Committed as `7fd4e3f`.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> The count rose because the domain passes split compound questions; the sweep found two categories they had missed — 63 legacy bullets in seven character files left sitting above their new triaged tables with nothing marking them superseded, and `world/silent-soil.md`, which had no triage at all (the exact file CLAUDE.md names as the original sin).</p>
+<p>**Stale claims corrected: 17, across 16 files.** The priority case: the Mattie/Ferrin collision was ruled 2026-08-27 and four live files still called it open, including `dialogue-voices.md` §7 whose heading read "awaiting DRMacIver's ruling" — that is the text the subagent read. All four corrected, with §7 relabelled evidence-not-status. Also 15 checklist items in `plans/rewrite-readiness.md` <span class="redacted">unpublished</span> that were done but unticked, and four plan files citing canon questions that are now ruled. Deliberately *not* corrected: `notes/audit/**` and the arc findings — they are dated records, and rewriting them destroys the audit trail.</p>
+<p>**Cross-domain conflicts: 4 resolved.** The significant one: two domains ruled how a Deep's date is set two incompatible ways, both written into `world/dungeons.md`, one of which states flatly that the other's mechanism is forbidden. The interval rule survives (its arithmetic closes exactly, it explains the odd date, it puts the roster failure on a public notice as <span class="redacted">redacted: character</span>'s argument needs); the leakage-projection version is marked superseded, kept in place, and its four compatible elements folded in. Also: <span class="redacted">redacted: mechanic</span>'s cost reconciled into one position, Mr. Ordish's specifics folded in, Goodman Moss filed to an owner. **No domain resolved anything a sealed answer owns** — I checked each sealed-adjacent ruling against the sealed material, and the notable one (the rate-gap finding) is coherent with it, guard included.</p>
+<p>New: `notes/canon/deferred-questions.md`, <span class="redacted">unpublished</span> 60+ rows in six bands by how soon the trigger fires, plus a pointer to it from `canon/README.md` and every legacy list.</p>
+<p>**Still needing attention:**</p>
+<p>1. **There is no written answer to what a Deep is.** Three domains defer to a sealed answer described as "being written in parallel"; it does not exist in `notes/sealed/`. Meanwhile the page carries five pieces of origin evidence and <span class="redacted">redacted: character</span> has promised on the page to re-measure the tide mark in Frostmonth. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> The no-more-evidence constraint is in force but is a tourniquet, not a fix.<br>
+2. **The unpaid "told" in ch. 031** — a told with no teller, in print, gesturing at an instructing agency. Recommend answering it in the same pass as the destiny material; they may be one design problem.<br>
+3. **Peri's pre-Choosing life** — five pointers, no written answer, and the romance ruling makes the sixth pointer likelier, not less likely.<br>
+4. Lower severity: the coast floods / College flood year silent merge, and <span class="redacted">redacted: character</span>'s unbacked "there'll be something after <span class="redacted">redacted: place</span>".</p>
+</div>
+</body></html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Run the pre-David pass exactly as specified in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/.c…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Run the pre-David pass exactly as specified in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/.c…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a70572e21eb206627">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Run the pre-David pass exactly as specified in <span class="redacted">redacted: private</span>/.claude/skills/pre-david-pass/SKILL.md (read it first, in full, and follow every part) on one freshly drafted scene: draft/book-01/scenes/73-thirteen-down.md <span class="redacted">unpublished</span>. Read draft/book-01/VOICE.md in full first, then notes/canon/characters/ for <span class="redacted">redacted: character</span>, Peri, Edwin, minor.md (<span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>), and scenes 63, 65, 71, 72 for immediate context. Current warnings to police: the 'writing it down' motif as a house verb (count instances; propose cuts where it is a period not a decision); <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span> and the narrator converging on one clipped maxim-capped register (<span class="redacted">redacted: character</span>: procedural, unhurried, no epigrams; <span class="redacted">redacted: character</span>: attests and inherits, no definitional 'That's X'); scene openings that announce their own turn; endings that button; dialect (plain modern English; first-person "I'll not"/"I'd not" retired); em dashes in body (none allowed); negative parallelism; viewpoint slips (Edwin's viewpoint throughout); sense errors and counts. Specific attention: (a) the ending paragraph on the `[Holm Deep.]` box: is it overwritten, does it explain, is <span class="redacted">redacted: place</span> in the right place; (b) the mason's sentence: said once, unanswered, and not underlined by the narrator; (c) the candle paragraph: thirteen people watching a candle — is it doing work or is it a device; (d) 'felt three hundred years old saying it' in the first paragraph. STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history. Report numbered findings with the quoted line, the fault, and a proposed replacement. Do not edit any file.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the skill and the required context files.</p>
+</div>
+
+<details><summary>26 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 257 lines, 16258 chars</p>
+<p>✅ 426 lines, 27364 chars</p>
+<p>🔧 Bash: cat -n draft/book-01/scenes/73-thirteen-down.md <span class="redacted">unpublished</span></p>
+<p>✅ 37 lines, 6578 chars</p>
+<p>🔧 Bash: ls notes/canon/characters/ &amp;&amp; wc -l notes/canon/characters/*.md</p>
+<p>✅ 19 lines, 496 chars — appearance.md / <span class="redacted">redacted: character</span>.md / edwin.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; ls | sed -n '55,90p'</p>
+<p>✅ 20 lines, 543 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> draft/book-01/scenes/65-the-sluice-ke…</p>
+<p>✅ 86 lines, 13304 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/71-in-the-hill.md <span class="redacted">unpublished</span> draft/book-01/scenes/72-not-in-t…</p>
+<p>✅ 78 lines, 11990 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>✅ 41 lines, 2181 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "first warden\|<span class="redacted">redacted: character</span>\|⟦redacted: characte…</p>
+<p>✅ 12 lines, 895 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,60p' notes/canon/characters/minor.md; echo ====; grep -…</p>
+<p>✅ 61 lines, 3852 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "<span class="redacted">redacted: character</span>\|<span class="redacted">redacted: character</span>\|⟦redacted:…</p>
+<p>✅ 38 lines, 2883 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '205,260p' notes/canon/characters/minor.md</p>
+<p>✅ 56 lines, 3604 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; f=draft/book-01/scenes/73-thirteen-down.md <span class="redacted">unpublished</span>; grep -n…</p>
+<p>✅ 14 lines, 193 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Findings on `draft/book-01/scenes/73-thirteen-down.md <span class="redacted">unpublished</span>`. (Nothing edited.)</p>
+<p>## Part 1 — sense, counts, facts</p>
+<p>**1.** "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> with a lantern**"<br>
+Broken sentence: <span class="redacted">redacted: character</span> is both subject and instrument. Nothing restates flat.<br>
+→ "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**2.** "and the **thirteenth** name was Edwin's"<br>
+Contradicts scene 72 <span class="redacted">unpublished</span>, which is explicit: "the mage on the **twelfth** line ... the girl on the **thirteenth**." Peri is the last name, not Edwin.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**3.** Count spine across 71/72/73. Scene 71 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> and herself; six of <span class="redacted">redacted: character</span>'s, and <span class="redacted">redacted: character</span>. **That's twelve**", with Peri as "the twelfth". Scene 72 <span class="redacted">unpublished</span>'s paper is "Charter, four, <span class="redacted">redacted: character</span> first; <span class="redacted">redacted: place</span>, seven, <span class="redacted">redacted: character</span> last; Moss; Millbrook" = **thirteen down**, and this scene's title and body take thirteen. Scene 73 <span class="redacted">unpublished</span> is internally consistent with 72 ("<span class="redacted">redacted: character</span> and <span class="redacted">redacted: character</span> and the fourth of hers, <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s four including herself; "<span class="redacted">redacted: character</span>'s six ... with <span class="redacted">redacted: character</span> at the back" = seven). So the error is upstream in 71, but it lands here: a reader arrives at "thirteen down" having been told twelve two scenes ago. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> They went out at **twenty past six** ... <span class="redacted">redacted sentence: unpublished prose</span><br>
+Twenty past six to twenty past eight is exactly two hours, not "a little over".<br>
+→ either "half past eight" at the thorn, or drop "a little over" from the first clause and keep it only for <span class="redacted">redacted: character</span>'s walk on the thirteenth.</p>
+<p>**5.** "At **half past eight** <span class="redacted">redacted: character</span> stepped over the chain." against "thirteen people ... at **half past eight** in the morning watching a candle."<br>
+Between the two: the candle burned and was counted to ten and pinched out, the throat was crossed to and described, <span class="redacted">redacted: character</span>'s exchange happened, and <span class="redacted">redacted: character</span> read the whole order and had the four things said back by two people. That is fifteen minutes of business inside one minute of clock.<br>
+→ candle at "half past eight"; the chain at "At a quarter to nine <span class="redacted">redacted: character</span> stepped over the chain."</p>
+<p>**6.** "The air met them at **two hundred yards**." / "At the **thorn** she stopped them"<br>
+Scene 63 <span class="redacted">unpublished</span> fixes the thorn at "two hundred yards from the door". The scene therefore names the same place twice as if they were two stages of the approach.<br>
+→ make the first one a different distance ("The air met them a half mile out"), or cut "at two hundred yards" and let the thorn carry it.</p>
+<p>**7.** "because <span class="redacted">redacted: character</span>'s house ate standing before a hill and <span class="redacted">redacted: character</span> had asked her what <span class="redacted">redacted: place</span> did and taken it"<br>
+Canon (<span class="redacted">redacted: character</span>.md, Established, ch. 019): **<span class="redacted">redacted: character</span> eats standing, every morning.** It is her habit, not a borrowed <span class="redacted">redacted: place</span> practice, and the sentence invents an institution to explain a thing already established about her.<br>
+→ "They ate standing, because <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**8.** "her own hands' at the laces"<br>
+Ungrammatical; no restatement available. Presumably "her own hands at the laces".<br>
+→ "and put her own hands to the laces,"</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Two faults. The relative clause slips subject ("which were the boots ... and had been resoled"). And the point of the beat — that <span class="redacted">redacted: character</span> passed bad boots — is left as a silence the reader must price.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Flat restatement of the sentence before it.<br>
+→ cut "Nobody hurried."</p>
+<p>**11.** "and that his hand missed it every third step"<br>
+A counted specific the viewpoint cannot have; he notices the want, not the interval.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**12.** "and she had never yet laughed at anybody for saying the air had moved, and would not start today"<br>
+Edwin cannot know the first clause and certainly not the second; it is narration standing in for her authority, and "would not start today" is a flourish.<br>
+→ put it in her mouth inside the order: "Say it if you think it moved. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 2 — gesture at meaning</p>
+<p>**13.** "and **felt three hundred years old saying it**"<br>
+The claim is empty by being true: he is three hundred and twelve. The idiom means "suddenly aged", which cannot happen to a man that age, so the sentence gestures at weight and cashes nothing — and it is the last clause of the opening sentence, where it reads as the paragraph's point.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**14.** "thirteen people standing in a row on a peat island at half past eight in the morning watching a candle"<br>
+This is the narrator stepping back to frame a tableau and inviting the reader to find it striking — the device, not the observation. It also contradicts the file order established three paragraphs earlier ("a loose file"). <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**15.** "and it was not said again, then or afterwards, and Edwin wrote it down that night with the man's name against it and no comment under it."<br>
+This is the narrator underlining the mason's sentence — exactly what the sentence must not have. "then or afterwards" is a flash-forward out of the scene, and the writing-down is a period, not a decision (contrast the genuine one four paragraphs above, where he wrote it down *because* he had asked twice and been given nothing). It is also the scene's second "wrote it down" in five paragraphs, on top of scene 72 <span class="redacted">unpublished</span> having ended on the rule about writing things down.<br>
+→ "Nobody answered him. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Italics quoting a phrase inside narration reads oddly (Part 6), and the sentence footnotes a line that has just landed.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 4 — character / register convergence</p>
+<p>**17.** "and <span class="redacted">redacted: character</span>, at the back, said **"Out. Steady. I'd say warmer,"**"<br>
+<span class="redacted">redacted: character</span> echoes <span class="redacted">redacted: character</span>'s three terms back in <span class="redacted">redacted: character</span>'s own order and <span class="redacted">redacted: character</span>'s clipped shape. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> is procedural, demands the form, no epigrams. As written the two women are one voice with a lag.<br>
+→ "and <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> "Out. Steady. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**18.** The order paragraph runs <span class="redacted">redacted: character</span>'s rules into a chain of short declaratives ending "Nobody goes after anything. Nobody stops to help unless she says." — the clipped-maxim register the warning names. The chain is reported speech, so it can be given shape without losing content.<br>
+→ break it: give the two absolutes to her directly in quotes, once, and leave the rest as report ("She said the order once. She would go first... <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Then she said the two she always says aloud. "Nobody goes after anything. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 5 — the device</p>
+<p>**19.** The closing paragraph on `*[Holm Deep.]*`. It is overwritten and it explains. "Twelve people who had all been told the same thing at the same moment by a voice that had never once said anything else, and not one of them said what it was, because everybody there had it and nobody there had ever been told what it meant" is a gloss on a beat the three preceding clauses have already delivered in images (the hand going still on the bill, the head turning half an inch, Peri's mouth set). <span class="redacted">redacted: place</span> is also in the wrong place: it runs past the box, past the lighting fact, and lands on <span class="redacted">redacted: character</span>'s back, which buttons.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Nobody said what it was. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> was already past it."</p>
+<p>**20.** Minor, worth a check rather than an edit: <span class="redacted">redacted: character</span> is canon-established as the <span class="redacted">redacted: place</span> hand with the knee, "on the cart" (minor.md). This scene puts all six of <span class="redacted">redacted: character</span>'s down the hill and gives the sixth slot to a new name, <span class="redacted">redacted: character</span>. If <span class="redacted">redacted: character</span>'s knee still keeps him off, <span class="redacted">redacted: place</span> is five hands plus <span class="redacted">redacted: character</span> and the thirteen does not close. Either name <span class="redacted">redacted: character</span> as replaced and say by whom, or the count needs redoing.</p>
+<p>---</p>
+<p>**Device that would draw a second round:** the writing-it-down motif. It is now a house verb rather than a character act — scene 72 <span class="redacted">unpublished</span> ended on it as a stated rule, and this scene uses it twice more, once (finding 15) purely as a full stop on a beat. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> one is not), and it should be absent from at least the next two scenes.</p>
+<p>**Second candidate:** the clipped-declarative register is now shared by <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span> and the narrator's report of the order, so the scene has one voice speaking through three mouths. Fixing 17 and 18 separates <span class="redacted">redacted: character</span> (procedural, attests as hers, unhurried) from <span class="redacted">redacted: character</span> (attests and inherits); the narrator's stretch in para 29 then needs to be plainer report and not a chain of maxims.</p>
+</div>
+</body></html>

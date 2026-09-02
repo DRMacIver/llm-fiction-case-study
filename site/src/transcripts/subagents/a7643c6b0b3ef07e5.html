@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a7643c6b0b3ef07e5">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the judge in a prose-lint pipeline for <span class="redacted">redacted: private</span>.<br>
+Target file: the .md file in draft/book-01/scenes/ whose name starts with 27-. Read it in full. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br>
+Candidates from haiku hunters (be sceptical; they over-report by design):<br>
+[<br>
+ {<br>
+  "rule_id": "system-terminology",<br>
+  "quote": "the course at the crossroads",<br>
+  "reason": "Using 'course' where established noun is 'the class' per rule example"<br>
+ }<br>
+]<br>
+For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.<br>
+<br>
+Judge hints: phrases like "you learn", "says you should", "there is only one answer" often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; "wants [gerund]" retired; "nought" retired, write "zero"); "'ll not" in non-first person is a judgement call, not a ban; "[amount] of it" and "I'll say it" are warning signs needing judgement.<br>
+You may add violations the hunters missed as judge_added {rule_id, quote, reason}. Never rewrite the text.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll read the scene and the rule definitions.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | head -50</p>
+<p>✅ 40 lines, 1021 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('tools/lint/rules.json')) print(json.dumps(d,in…</p>
+<p>✅ 12 lines, 200 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/27-the-cellar-at-saltings-corner.md; echo ====; python3 -c " imp…</p>
+<p>✅ 37 lines, 6499 chars</p>
+<p>🔧 Bash: python3 -c " import json for r in json.load(open('tools/lint/rules.json')):   if 'termin'…</p>
+<p>✅ 52 lines, 12532 chars</p>
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>

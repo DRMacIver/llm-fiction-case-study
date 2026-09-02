@@ -1,0 +1,66 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a6dc94059d640bb16">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the judge in a prose-lint pipeline for <span class="redacted">redacted: private</span>.<br>
+Target file: the .md file in draft/book-01/scenes/ whose name starts with 12-. Read it in full. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br>
+Candidates from haiku hunters (be sceptical; they over-report by design):<br>
+[<br>
+ {<br>
+  "rule_id": "implication-stopped-short",<br>
+  "quote": "\"That's a yes, then,\" said the chairman comfortably, and went back to his sheep.",<br>
+  "reason": "Insinuates Edwin's acceptance of the quest despite his denial without stating it; implication not cashed out in adjacent text."<br>
+ },<br>
+ {<br>
+  "rule_id": "sense",<br>
+  "quote": "three centuries of his work had been the reading of this sort of evidence",<br>
+  "reason": "Timespan does not add up: implies 300 years of personal work history, but Edwin appears mortal and context shows feud is ~100-120 years old with Edwin arbitrating since its early years"<br>
+ },<br>
+ {<br>
+  "rule_id": "dialect-grammar",<br>
+  "quote": "Girl come up special from the north with a sword, to fetch you for it.",<br>
+  "reason": "Nonstandard past tense 'come' instead of 'came'; rule cites 'when it come up' as prohibited example and requires plain modern English (ruled 2026-08-31)"<br>
+ },<br>
+ {<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "He delivered the market-day split himself later that morning, because it was feud season and the feud was his to arbitrate. The Marsh Barton and Upper Wold business concerned which parish's carts had precedence at the shared ford on market day.",<br>
+  "reason": "Scene contains 11 overlapping 8+ word runs with chapters/003-the-improbability-engine.md; rule requires redraft with source shut, not patching, for &gt;=5 runs"<br>
+ }<br>
+]<br>
+For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.<br>
+<br>
+Judge hints: phrases like "you learn", "says you should", "there is only one answer" often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; "wants [gerund]" retired; "nought" retired, write "zero"); "'ll not" in non-first person is a judgement call, not a ban; "[amount] of it" and "I'll say it" are warning signs needing judgement.<br>
+You may add violations the hunters missed as judge_added {rule_id, quote, reason}. Never rewrite the text.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll read the target file and rules.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | head -40</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>✅ 40 lines, 1021 chars</p>
+<p>✅ 54 lines, 2247 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/scenes/12-thats-a-yes-then.md; echo ====; python3 -…</p>
+<p>✅ 39 lines, 3918 chars</p>
+<p>🔧 Bash: python3 -c " import json rs=json.load(open('<span class="redacted">redacted: private</span>/tools/lint/rules.json'))…</p>
+<p>✅ 77 lines, 5537 chars</p>
+<p>🔧 Bash: python3 tools/overlap_check.py draft/book-01/scenes/12-thats-a-yes-then.md 2&gt;&amp;1 | head -40</p>
+<p>✅ 12 lines, 3789 chars</p>
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>

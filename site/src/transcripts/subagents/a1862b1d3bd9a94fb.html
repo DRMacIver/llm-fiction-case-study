@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a canon/consistency lens for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a canon/consistency lens for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a1862b1d3bd9a94fb">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a canon/consistency lens for the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it; do not read notes/sealed/.<br>
+<br>
+Your material: draft/book-01/scenes/23-the-good-staff.md, read after scenes 01–22 in the same directory (Day 6, night; the packing).<br>
+<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Also chapters/006-the-handover.md, the groundwork this restages. Check "walking to the sea" against geography.md (the groundwork said "the Reaches" — is that a named place in canon?).<br>
+<br>
+Report FINDINGS ONLY — line quoted, canon file and line, what is wrong. No "clean" verdicts. Briefly and separately: canon the scene could use and does not. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Bash: cat draft/book-01/scenes/23-the-good-staff.md</p>
+<p>✅ 33 lines, 3493 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/edwin.md</p>
+<p>✅ 45 lines, 2189 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/sorrel.md</p>
+<p>✅ 44 lines, 2191 chars</p>
+<p>🔧 Bash: cat notes/canon/world/magic.md</p>
+<p>✅ 44 lines, 2245 chars</p>
+<p>🔧 Bash: cat notes/canon/world/timeline.md</p>
+<p>✅ 42 lines, 2239 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== edwin.md trowel/staff/robes ==="  grep -n -i "trowel\|ro…</p>
+<p>✅ 216 lines, 21428 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== timeline day6/7 ==="  grep -n -i "day 6\|day 7" notes/ca…</p>
+<p>✅ 36 lines, 2439 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> ls draft/book-01/scenes | head -30 sed -n '1,200p' draft/book-01/s…</p>
+<p>✅ 63 lines, 4557 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== edwin.md 75-95 ===" sed -n '75,95p' notes/canon/characte…</p>
+<p>✅ 95 lines, 11579 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '1,30p' notes/canon/world/geography.md echo "---Reaches con…</p>
+<p>✅ 61 lines, 3440 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Findings</p>
+<p>**1. "Eleven years" mis-substituted for "a century" — factual regression from groundwork, contradicts Edwin's established teaching tenure.**</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>vs. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Eleven years is Sorrel's tenure at the tower (`notes/canon/characters/sorrel.md`: "Eleven years at the tower"), not Edwin's. Edwin has been teaching parish classes for roughly three centuries (`notes/canon/characters/edwin.md`: "~330 years ago... <span class="redacted">redacted sentence: unpublished prose</span> The line as drafted wrongly collapses Edwin's centuries-long habit into Sorrel's eleven-year watch, which is a factual error, not a stylistic trim.</p>
+<p>**2. "You're not walking to the sea" — ungrounded geography, and a silent divergence from the groundwork's (also shaky) "the Reaches."**</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> It's forty miles."*</p>
+<p>vs. ch. <span class="redacted">redacted sentence: unpublished prose</span> It's forty miles."*</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> 96, 178, 214) — nowhere is Fenholt or the eastward road described as coastal or sea-adjacent. The only "sea" and "coast" references in canon attach to the vale's own western/coastal parishes (soil-salts, weather that "turns," ch. 002/003/006) — a different region from the Fenholt road entirely. Swapping "the Reaches" for "the sea" doesn't fix the original geographic looseness (the Reaches was never on the Fenholt line either) — it replaces one ungrounded destination with another, with no canon basis for either.</p>
+<p>**3. Dropped word weakens the staff's canon-defined function.**</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>vs. ch. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Not a finding, confirmed correct</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+- The gate-latch line ("The latch sticks") is consistent with scene 12's wording ("had stuck twice this week"), correcting ch. 006's inconsistent "drops when the nights turn cold."<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Canon the scene could use and doesn't</p>
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+- Nothing in the scene marks that this is the first time in "eleven years" (properly Sorrel's tenure, not his) that a parting doesn't need saying — sorrel.md's note on their wordless-parting pattern (drawn on explicitly the next scene, 24) could be seeded here instead of only in 24.</p>
+</div>
+</body></html>

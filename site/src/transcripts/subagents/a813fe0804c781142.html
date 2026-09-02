@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦unp…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦unp…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a813fe0804c781142">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (find every finding for chapter 020), then chapters/020-the-field-in-autumn.md in full.<br>
+<br>
+You are retrofitting this ONE chapter (edit no other file). Two jobs, applied sentence by sentence, with the content, beats, dialogue intent, ending cut, and author's-note block (if present, below the '---') all preserved:<br>
+1. LANGUAGE: apply the thirteen census rules. The big one is the verdict clause — every trailing ", which was new / took some doing / was the mistake / Edwin took to mean…" either ends before the comma or becomes a plain separate sentence of fact; type-of-person clauses become the specific observed thing; maxim-capped speech loses the maxim (characters say what they mean and stop; only Edwin's teaching register may lecture, and rarely); nominalised absences become actions; near-idioms become the real idiom or plain words; interior false precision goes; hedged gesture tags go or become the gesture; windup dialogue tags become plain "said"; register slips (modern/clinical, fake-archaic) fixed; motif-word reuse thinned; fragment closers used sparingly. Do NOT flatten the approved voice: keep the seed-shaped similes at ~2 per chapter, the diegetic clock times and counts, "wants doing", Edwin's occasional composed paragraph. <span class="redacted">redacted sentence: unpublished prose</span><br>
+2. FARMING: apply this chapter's corrections from farming-findings.md exactly (they cite the real mechanism and the corrected line). If a correction changes a number other chapters depend on, apply it here and list it in your report as a cross-chapter dependency — do not edit the other chapter.<br>
+Write the revised chapter in place. Commit: "Retrofit 020: language census rules + farming corrections" with trailer "Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;". Return: verdict-clause count before/after (grep ', which was\|, which took\|took to mean'), the farming corrections applied, any cross-chapter dependencies, and one sentence on anything you declined to change and why.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading all the required context.</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> chapters/020-the-field-in-autumn.md</p>
+<p>✅ 8 lines, 267 chars —       42 notes/voice-exemplars.md / <span class="redacted">redacted sentence: unpublished prose</span> /      424 notes/voices.md</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 348 lines, 16999 chars</p>
+<p>🔧 Bash: cat notes/voices.md</p>
+<p>✅ 424 lines, 24733 chars</p>
+<p>🔧 Bash: cat notes/llm-tells.md; echo "=====FARMING====="; cat notes/farming.md</p>
+<p>✅ 281 lines, 16494 chars</p>
+<p>🔧 Bash: grep -n -i "020\|chapter 20\|ch. 20\|ch 20" plans/book-01/farming-findings.md ⟦unpublishe…</p>
+<p>✅ 8 lines, 624 chars</p>
+<p>🔧 Bash: cat plans/book-01/farming-findings.md <span class="redacted">unpublished</span></p>
+<p>✅ 442 lines, 23563 chars</p>
+<p>🔧 Bash: cat -n chapters/020-the-field-in-autumn.md</p>
+<p>✅ 246 lines, 24075 chars</p>
+<p>🔧 Bash: grep -c ", which was\|, which took\|took to mean" chapters/020-the-field-in-autumn.md; ec…</p>
+<p>✅ 21 lines, 4971 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now applying the edits.</p>
+</div>
+
+<p>🔧 Bash: python3 - &lt;&lt;'PY' import io p='chapters/020-the-field-in-autumn.md' s=io.open(p,encoding='…</p>
+<p>✅ 7 lines, 1718 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 4 lines, 106 chars</p>
+
+<div class="assistant-prose">
+<p>Verdict clauses (`grep -c ', which was\|, which took\|took to mean'`): **5 before → 0 after**. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Farming corrections applied (`<span class="redacted">redacted: private</span>/chapters/020-the-field-in-autumn.md`):</p>
+<p>- **Finding 1 (orchard frost, `unreal`)** — cold-air drainage, not radiative tops, on terraced hillside orchards. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Finding 15 (salt burn, `mechanism violation`)** — shedding rain inland cannot lay salt, but denying the rinse can. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Cross-chapter dependencies (not edited, per instruction):<br>
+<span class="redacted">redacted sentence: unpublished prose</span> 020)" — now contradicts the chapter; needs to read *terrace bottoms*.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- `chapters/024-four-sites.md:21` summarises the west-side confounder as "a trench with it" — no depth cited, so no change needed.<br>
+- `.claude/skills/farming-check/SKILL.md` still says "why orchard tops freeze first" (finding 1 asks for that phrasing to name both halves).</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Kept: both seed-shaped similes (the badly hung gate, old grass holding the light), all diegetic chain readings and dates, "the candle wanted trimming", and Edwin's composed hundred-years paragraph as the scene's one aphorism.</p>
+<p>Declined: I did not append an author's-note block for the chapter's `unexplained term` findings — the note texts live in the glossary rather than in farming-findings.md, and the task scoped me to the corrections that cite a mechanism and a corrected line.</p>
+</div>
+</body></html>

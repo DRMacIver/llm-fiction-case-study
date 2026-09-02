@@ -1,0 +1,142 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Project &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read CLAUDE.md (&quot;Sealed answers&quot;). Then…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Project &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read CLAUDE.md (&quot;Sealed answers&quot;). Then…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a906ee1d448b0cb7f">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Project <span class="redacted">redacted: private</span>. Read CLAUDE.md ("Sealed answers"). Then read the new/rewritten plan files: plans/series.md, <span class="redacted">unpublished</span> plans/book-02/overview.md, <span class="redacted">unpublished</span> plans/book-03/overview.md, <span class="redacted">unpublished</span> plans/book-04/overview.md, <span class="redacted">unpublished</span> plans/book-05/overview.md, <span class="redacted">unpublished</span> and the last revision entry of plans/book-01/overview.md. <span class="redacted">unpublished</span> Then read every sealed file in notes/sealed/ (destiny.md may be receiving a small edit from another agent right now — read it last, and re-read it before you finish), plus notes/theme.md, <span class="redacted">unpublished</span> notes/premise.md, notes/canon/deferred-beats.md, notes/canon/world/healing.md, notes/canon/system.md ([Seal of the Loom]), notes/canon/characters/<span class="redacted">redacted: character</span>.md and peri.md.<br>
+<br>
+Two jobs, adversarial:<br>
+<br>
+A. LEAKS. The plan files are user-visible; DRMacIver reads them and must not learn sealed content from them. <span class="redacted">redacted sentence: unpublished prose</span> Find every place a plan file states or lets a reader infer sealed content — <span class="redacted">redacted: mechanic</span>'s mechanism, state or cause; the Deep's mechanism; the destiny answer's fulfilment test, the engine's verbs, the fill-in; Peri's pre-Choosing answer; <span class="redacted">redacted: character</span>'s people. Be strict: phrases like "the state, not the cause", "the pivot", "nothing awake", "the circuit", "the treatment column", "the negative-control parish", "the charm and the field in one sentence", "the smoothing", "whatever has her in it", "the demand", "no hold left" etc. may all be leaks if they let the reader reconstruct an answer. For each: file, exact quote, what it leaks, and a replacement wording that keeps the plan usable (an item number plus a page-level description).<br>
+<br>
+B. CONSISTENCY. Every place a plan contradicts a sealed must-happen / can-no-longer-happen list, a clue's Must-not, a schedule (which book an item belongs to), a character guard (<span class="redacted">redacted: character</span> never has an opinion on the Seal; nothing sourced to her upbringing at a mouth; Peri's gated clues; the engine never on evidence or near a mouth/site), theme.md's anchors and ending, premise.md's party/romance rules, or canon (ages, the calendar, the Choosing at 18, <span class="redacted">redacted: mechanic</span>, the Seal's two failure modes, healing.md's orders). <span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+FINAL REPLY: a numbered list, severity (BREAKS / LEAKS / STRAINS / NIT), file + quote + fix. Your reply is read by the author, so your fixes and explanations must themselves contain no sealed content — describe leaks by pointing at the quote and saying "reveals sealed material from &lt;file&gt; §&lt;section&gt;" without restating it. Do not edit any file.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required files.</p>
+</div>
+
+<details><summary>62 tool calls</summary>
+<p>🔧 Bash: ls notes/sealed/ &amp;&amp; wc -l plans/series.md <span class="redacted">unpublished</span> plans/book-0*/overview.md ⟦unpubl…</p>
+<p>✅ 44 lines, 1419 chars — COHERENCE.md / deeps.md / destiny.md</p>
+<p>🔧 Bash: cat plans/series.md <span class="redacted">unpublished</span></p>
+<p>✅ 173 lines, 9506 chars</p>
+<p>🔧 Bash: cat plans/book-02/overview.md <span class="redacted">unpublished</span> plans/book-03/overview.md <span class="redacted">unpublished</span> plans…</p>
+<p>✅ 461 lines, 24940 chars</p>
+<p>🔧 Bash: cat notes/sealed/silent-soil.md</p>
+<p>✅ 44 lines, 2214 chars</p>
+<p>🔧 Bash: grep -n '^#\{1,4\} ' notes/sealed/silent-soil.md</p>
+<p>✅ 62 lines, 2455 chars</p>
+<p>🔧 Bash: sed -n '1691,1900p;2560,2660p' notes/sealed/silent-soil.md</p>
+<p>✅ 311 lines, 17799 chars</p>
+<p>🔧 Bash: grep -n '^#\{1,4\} ' notes/sealed/deeps.md notes/sealed/<span class="redacted">redacted: character</span>-grandmother…</p>
+<p>✅ 105 lines, 7686 chars</p>
+<p>🔧 Bash: sed -n '29,150p;696,830p' notes/sealed/deeps.md</p>
+<p>✅ 257 lines, 14505 chars</p>
+<p>🔧 Bash: sed -n '33,62p;784,940p' notes/sealed/<span class="redacted">redacted: character</span>-grandmother-people.md</p>
+<p>✅ 187 lines, 10968 chars</p>
+<p>🔧 Bash: sed -n '68,130p;235,300p;469,558p' notes/sealed/peri-pre-choosing.md</p>
+<p>✅ 219 lines, 10755 chars</p>
+<p>🔧 Bash: cat notes/theme.md <span class="redacted">unpublished</span> notes/premise.md notes/canon/deferred-beats.md</p>
+<p>✅ 43 lines, 2187 chars</p>
+<p>🔧 Bash: grep -n -A40 'The series spine' notes/theme.md <span class="redacted">unpublished</span> | head -120; echo ======; gr…</p>
+<p>✅ 43 lines, 2669 chars</p>
+<p>🔧 Bash: sed -n '604,632p' notes/theme.md; <span class="redacted">unpublished</span> echo =====; grep -n 'ending' notes/theme.…</p>
+<p>✅ 31 lines, 1690 chars</p>
+<p>🔧 Bash: cat notes/premise.md; echo =====DB; cat notes/canon/deferred-beats.md</p>
+<p>✅ 184 lines, 10039 chars</p>
+<p>🔧 Bash: cat notes/canon/deferred-beats.md</p>
+<p>✅ 203 lines, 12241 chars</p>
+<p>🔧 Bash: grep -n -i 'order\|taboo\|three of the seven\|cantrip' notes/canon/world/healing.md | hea…</p>
+<p>✅ 22 lines, 1638 chars</p>
+<p>🔧 Bash: sed -n '340,400p' notes/canon/world/healing.md; echo ===; sed -n '75,140p' notes/canon/wo…</p>
+<p>✅ 63 lines, 3772 chars</p>
+<p>🔧 Bash: grep -n -A60 'Seal of the Loom' notes/canon/system.md | sed -n '1,140p'</p>
+<p>✅ 140 lines, 8438 chars</p>
+<p>🔧 Bash: grep -n 'Seal of the Loom' notes/canon/system.md</p>
+<p>✅ 9 lines, 666 chars</p>
+<p>🔧 Bash: sed -n '660,760p' notes/canon/system.md</p>
+<p>✅ 101 lines, 6768 chars</p>
+<p>🔧 Bash: grep -n -i 'age\|eighteen\|birth' notes/canon/characters/peri.md | head -30; echo ===; gr…</p>
+<p>✅ 32 lines, 2130 chars</p>
+<p>🔧 Bash: sed -n '330,360p' notes/canon/characters/peri.md; echo ===; grep -rn 'Saltmonth\|Frostmon…</p>
+<p>✅ 33 lines, 1989 chars</p>
+<p>🔧 Bash: ls notes/canon/world/; grep -rn -i 'months\|Saltmonth' notes/canon/world/timeline.md | he…</p>
+<p>✅ 36 lines, 2291 chars</p>
+<p>🔧 Bash: grep -n -B3 -A20 'month names\|Month names\|twelve months\|Milkmonth' notes/canon/world/t…</p>
+<p>✅ 60 lines, 3696 chars</p>
+<p>🔧 Bash: grep -n '^#\{1,4\} ' notes/sealed/destiny.md</p>
+<p>✅ 23 lines, 1029 chars</p>
+<p>🔧 Bash: sed -n '45,260p' notes/sealed/destiny.md</p>
+<p>✅ 215 lines, 11464 chars</p>
+<p>🔧 Bash: sed -n '261,480p' notes/sealed/destiny.md</p>
+<p>✅ 220 lines, 13408 chars</p>
+<p>🔧 Bash: sed -n '480,600p;901,1070p' notes/sealed/destiny.md</p>
+<p>✅ 291 lines, 16656 chars</p>
+<p>🔧 Bash: grep -rn -i 'quarter day\|quarter-day\|quarter days' notes/canon/ | head</p>
+<p>✅ 5 lines, 531 chars</p>
+<p>🔧 Bash: sed -n '298,312p' notes/canon/world/farming-glossary.md</p>
+<p>✅ 15 lines, 811 chars</p>
+<p>🔧 Bash: git status --short notes/sealed/ &amp;&amp; git log --oneline -3 -- notes/sealed/destiny.md &amp;&amp; gr…</p>
+<p>✅ 5 lines, 381 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>I have read all the listed files (destiny.md re-checked at the end; `git status` shows no uncommitted edit to it, so what I read is current). Findings, worst first.</p>
+<p>## BREAKS</p>
+<p>**1. The tier-up cannot happen where the plans put it.**<br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> Peri ends Book 1 at `[Agent of Fate — Level 26]` (ch. 028, pinned in `peri.md` and `timeline.md`). She cannot reach 100 inside one book, however fast she levels. Also note a shortened cooldown is a *level* effect in canon (system.md line 22), not a tier effect, so the named payoff doesn't need a tier-up at all.<br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Do not leave it implicit.</p>
+<p>**2. Three files disagree about when the tier-up happens.**<br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Three different answers.<br>
+**Fix:** pick one and state it in `series.md` rule 6 and `peri.md` in the same words; if it survives finding 1 at all.</p>
+<p>**3. `deferred-beats.md` still describes the child's binding under the superseded destiny answer.**<br>
+`notes/canon/deferred-beats.md`, "<span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> Canon and plan now contradict each other on a beat that is about to be drafted.<br>
+**Fix:** amend the deferred-beats line to match `system.md`'s ruling without describing the field's content — e.g. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## LEAKS</p>
+<p>Each of these lets a reader of a user-visible plan reconstruct sealed content. Fix pattern throughout: **item number + what a reader sees on the page**, never the name of the state, the mechanism, or the answer's own section titles.</p>
+<p>**4. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>**5. `plans/series.md`, <span class="redacted">unpublished</span> Book 4 paragraph and `plans/book-04/overview.md` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> The verb and the remedy together give away the sealed mechanism and the state (silent-soil §Reveal schedule, Book 4, items 1–2; §Mechanism). This is the single most damaging leak in the set, because it retro-explains everything cited in Books 2–3.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**6. `plans/book-03/overview.md` <span class="redacted">unpublished</span> §End-state:** *"The soil has a cause named in a kitchen and an open question (**whether waking is durable**)."* Same leak as 5, plus item 11's open question verbatim. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**7. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**8. `plans/book-05/overview.md` <span class="redacted">unpublished</span> §Beats, soil bullet:** *"the fragment about a book they did not write pays off as the register itself (2)"* — states the sealed identification of a planted Weave fragment with its payoff (silent-soil, Book 5 item 2). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**9. `plans/series.md` <span class="redacted">unpublished</span> §The braid:** *"Peri is its clerk (**the sealed answer's own word**), paid back by three debts it names"*. Quoting the sealed file's own word, and disclosing that the answer demotes the co-lead (silent-soil §Peri's three debts). Also see finding 15 — it conflicts with a Peri guard. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**10. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> The word "smoothing" is that section's verb.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Nobody says the engine wanted anything."</p>
+<p>**11. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> "Terminal rite" names the structural rule that clue 7 exists to reveal on the page (`<span class="redacted">redacted: character</span>-grandmother-people.md` §3/§6 and clue 7's own *Must not*). **Fix:** "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**12. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>**13. `plans/book-03/overview.md`:** <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> Lower severity — `system.md` already states this failure mode publicly in near-identical words, so nothing sealed is disclosed. But clue 7c's *Must not* is that the failure is never explained; a plan that hands the drafter a stated cause invites a line of explanation.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**14. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Each is meaning-level rather than page-level. Cite the numbers and describe what happens in the room.</p>
+<p>## STRAINS</p>
+<p>**15. "Clerk" is a forbidden framing for Peri.** `notes/sealed/peri-pre-choosing.md`, *Can no longer happen*: no scene presenting her as a clerk or admiring her paperwork as such. `plans/book-02/overview.md` <span class="redacted">unpublished</span> §4(d): *"Peri **clerk of record** and something else beginning"*; `plans/series.md`: <span class="redacted">unpublished</span> *"Peri is its clerk"*. The plans install as a role what the sealed guard forbids as a presentation.<br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>**16. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> A thing with no existence cannot split, and a synod needs saying whose. Note `theme.md` uses "the church" loosely too, so this is a wording discipline, not a ruling to reverse.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**17. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> The must-not is presumably aimed at the person-safety question (a Book 4 item), but as written it forbids the arc beat above it.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**18. The second binding's price is written for a much younger child.** `destiny.md` §8 sets out the price of the child's binding as a span of years; "about twelve" (`series.md`) cuts that span to roughly a third. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Nothing in the plans is wrong yet; the sealed file and the plan simply assume different children.</p>
+<p>## NITs</p>
+<p>**19. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Peri 20–21; Edwin 352–353"*). Everything else in the series table is arithmetically clean: Peri 18→19 (10542–43), 20–21 (10544–45), 24 in 10548; Edwin 350 + n. **Fix:** "Peri 21–23; Edwin 353–355."</p>
+<p>**20. <span class="redacted">redacted sentence: plague/epidemic</span></p>
+<p>**21. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Canon dates the quarter-days nowhere I can find (`institutions.md` 104/575/587/734, `farming-glossary.md` 303 — all use them, none fixes them). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**22. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> **Fix:** always prefix the file, as the same file does elsewhere.</p>
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+</div>
+</body></html>

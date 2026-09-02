@@ -1,0 +1,167 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are reconciling the clue ledger of Book 1 of the novel at ⟦redact…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are reconciling the clue ledger of Book 1 of the novel at ⟦redact…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a098f34b3349d01c6">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are reconciling the clue ledger of Book 1 of the novel at <span class="redacted">redacted: private</span> against the page.<br>
+<br>
+**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
+- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
+- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
+- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
+<br>
+You **may** read `notes/sealed/`; you report in shape only and write only observables into open files.<br>
+<br>
+Read `plans/book-01/clue-ledger.md`, <span class="redacted">unpublished</span> `<span class="redacted">redacted: private</span>/rewrite/book-01/CROSSCHECK.md`, every sealed answer's "clues to plant" and forbidden lists, and every chapter in `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-0*/chapters/`. For each sealed answer: which of its clues are on the page (scene/chapter, observable), which planned clues were dropped in drafting, which clues are on the page that were never planned, whether any planted observable is on any answer's forbidden list, and whether any is more legible than its answer allows (a reader who guesses the answer from this alone). Rates per arc. Peri's pointers counted against the budget of five. Update the ledger to match the page (observables only) and write `<span class="redacted">redacted: private</span>/rewrite/book-01/CLUES-REPORT.md` in shape only. Where a forbidden or over-legible plant exists, fix the line in both the scene and chapter file, minimally, and log it in `<span class="redacted">redacted: private</span>/rewrite/book-01/edit-book.md`. Commit.<br>
+<br>
+Your final message: per answer, counts of planned/planted/dropped/unplanned, and the fixes made — by scene id, never content.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the key files.</p>
+</div>
+
+<details><summary>80 tool calls</summary>
+<p>🔧 Bash: ls &amp;&amp; echo ---- &amp;&amp; ls rewrite/book-01/ &amp;&amp; echo ---- &amp;&amp; ls rewrite/book-01/arc-0*/chapters…</p>
+<p>✅ 116 lines, 2393 chars — book-1.epub / book-inspirations / build</p>
+<p>🔧 Bash: wc -l plans/book-01/clue-ledger.md <span class="redacted">unpublished</span> rewrite/book-01/CROSSCHECK.md notes/seal…</p>
+<p>✅ 16 lines, 657 chars —      472 plans/book-01/clue-ledger.md <span class="redacted">unpublished</span> /      249 rewrite/book-01/CROSSCHECK.md /      553 notes/sealed/COHERENCE.md</p>
+<p>🔧 Bash: cat plans/book-01/clue-ledger.md <span class="redacted">unpublished</span></p>
+<p>✅ 43 lines, 2193 chars</p>
+<p>🔧 Bash: sed -n '40,472p' plans/book-01/clue-ledger.md <span class="redacted">unpublished</span></p>
+<p>✅ 34 lines, 2222 chars</p>
+<p>🔧 Bash: sed -n '60,240p' <span class="redacted">redacted: private</span>/plans/book-01/clue-ledger.md <span class="redacted">unpublished</span></p>
+<p>✅ 42 lines, 2210 chars</p>
+<p>🔧 Read plans/book-01/clue-ledger.md <span class="redacted">unpublished</span></p>
+<p>✅ 200 lines, 44247 chars</p>
+<p>🔧 Read plans/book-01/clue-ledger.md <span class="redacted">unpublished</span></p>
+<p>✅ 195 lines, 13017 chars</p>
+<p>🔧 Read rewrite/book-01/CROSSCHECK.md</p>
+<p>✅ 250 lines, 14923 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/sealed &amp;&amp; grep -n -i "forbid\|never\|must not\|clues to plan…</p>
+<p>✅ 120 lines, 12725 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/sealed &amp;&amp; sed -n '560,700p' destiny.md</p>
+<p>✅ 141 lines, 7735 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01 &amp;&amp; ls arc-02/scenes/ | head -60 &amp;&amp; echo --- &amp;&amp; ls…</p>
+<p>✅ 98 lines, 1912 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes &amp;&amp; cat 17-before-the-charter.md</p>
+<p>✅ 110 lines, 4615 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 42 lines, 1592 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 5 lines, 295 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01 &amp;&amp; cat &gt; /tmp/ck.sh &lt;&lt;'EOF' p(){ printf '%-40s ' "…</p>
+<p>✅ 61 lines, 11788 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 26 lines, 1506 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; grep -n "walked\|where.*from\|A l…</p>
+<p>✅ 3 lines, 291 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes &amp;&amp; ls</p>
+<p>✅ 47 lines, 1062 chars — 01-the-fork.md / 02-the-stitches.md / <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes &amp;&amp; grep -n "day-book\|read it\|read…</p>
+<p>✅ 9 lines, 799 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes &amp;&amp; grep -n "Agent of Fate\|twenty-se…</p>
+<p>✅ 6 lines, 321 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes &amp;&amp; echo "== 24 kit"; grep -n "gouge\…</p>
+<p>✅ 23 lines, 1453 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/sealed &amp;&amp; grep -n "^## \|^### " silent-soil.md | sed -n '1,8…</p>
+<p>✅ 61 lines, 2419 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/sealed &amp;&amp; sed -n '2560,2655p' silent-soil.md</p>
+<p>✅ 96 lines, 5818 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01 &amp;&amp; echo "== keeping/held"; grep -rin "the keeping\…</p>
+<p>✅ 10 lines, 866 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>✅ 96 lines, 4507 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01 &amp;&amp; echo "== grandmother"; grep -rn "grandmother" a…</p>
+<p>✅ 18 lines, 1622 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; sed -n '1,40p' 15-the-mis-sorted-…</p>
+<p>✅ 64 lines, 2611 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; grep -ln "knot" *.md; echo "== no…</p>
+<p>✅ 9 lines, 233 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; for f in 05-the-knot-behind-the-b…</p>
+<p>✅ 13 lines, 717 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01 &amp;&amp; grep -rn "knot" arc-02/scenes/ arc-03/scenes/</p>
+<p>✅ 13 lines, 1390 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes &amp;&amp; sed -n '55,62p;88,96p' 49-ask-me-…</p>
+<p>✅ 15 lines, 633 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 9 lines, 1043 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes &amp;&amp; sed -n '98,116p' 02-twelve-stakes…</p>
+<p>✅ 12 lines, 353 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/sealed &amp;&amp; sed -n '861,935p' <span class="redacted">redacted: character</span>-grandmothe…</p>
+<p>✅ 74 lines, 4694 chars</p>
+<p>🔧 Bash: grep -rn "who reads it when\|reads it when we" rewrite/book-01/arc-0*/scenes/; echo "===…</p>
+<p>✅ 51 lines, 2846 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-02/scenes &amp;&amp; sed -n '1,20p;40,55p' 35-not-in-t…</p>
+<p>✅ 35 lines, 1475 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01 &amp;&amp; grep -rln "Author's note\|author's note" arc-0*…</p>
+<p>✅ 21 lines, 1267 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 6 lines, 730 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> python3 - "$f" &lt;&lt;'PY' import…</p>
+<p>✅ 4 lines, 485 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'PY' p='plans/book-01/clue-ledger.md <span class="redacted">unpublished</span>'; s=open(p).read()  # 1. c…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the reconciliation section and revision entry in the ledger.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: python3 - &lt;&lt;'PY' p='plans/book-01/clue-ledger.md <span class="redacted">unpublished</span>'; s=open(p).read() anchor=…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01 &amp;&amp; tail -25 edit-book.md &amp;&amp; echo "=====FLAGS" &amp;&amp; t…</p>
+<p>✅ 41 lines, 2705 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01 &amp;&amp; cat &gt;&gt; edit-book.md &lt;&lt;'EOF'  ---  ## Clue-recon…</p>
+<p>✅ 1 lines, 4 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the report.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01 &amp;&amp; cat &gt; CLUES-REPORT.md &lt;&lt;'EOF' ⟦redacted sentenc…</p>
+<p>✅ 1 lines, 24 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01 &amp;&amp; python3 - &lt;&lt;'PY' p='CLUES-REPORT.md'; s=open(p)…</p>
+<p>✅ 1 lines, 2 chars</p>
+<p>🔧 Bash: git add plans/book-01/clue-ledger.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 2 lines, 85 chars — f4147e5 Clue ledger reconciled against the page; two prohibition repairs / ?? comments/</p>
+</details>
+
+<div class="assistant-prose">
+<p>Reconciled, corrected, edited and committed (`f4147e5`).</p>
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+|---|---:|---:|---:|---:|---|<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+| `<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Rates per arc are in `<span class="redacted">redacted: private</span>/rewrite/book-01/CLUES-REPORT.md` §4. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> No ledger row described something absent from the page.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> 023 — one item in the six-item list moved out of a forbidden effect-class into the permitted one.<br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**Flagged, not edited (`rewrite/book-01/FLAGS.md`):** one planned clue dropped at assembly (an author's note absent from chs. 030–033; owner `arc-02/ASSEMBLY.md`); a chapter-level adjacency two sealed files jointly forbid at ch. 023 (structural — wants a scene move, owner `arc-02/ASSEMBLY.md`); a weaker adjacency of the same shape at ch. 044 (owner `arc-03/ASSEMBLY.md`); and the counting-convention recount itself.</p>
+<p>Two of `CROSSCHECK.md` §1a's recorded gaps are **discharged by the draft** (`deeps` items 4 and 9 are on the page; `<span class="redacted">redacted: character</span>-grandmother-people` items 6 and 6b likewise) — worth noting because that file's headline count of uncovered items is now stale.</p>
+</div>
+</body></html>

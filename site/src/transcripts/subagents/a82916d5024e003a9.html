@@ -1,0 +1,126 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Run the pre-David pass on two redrafted scenes of the third draft of…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Run the pre-David pass on two redrafted scenes of the third draft of…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a82916d5024e003a9">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Run the pre-David pass on two redrafted scenes of the third draft of Book 1 of Autoroad. Read first, in full: `.claude/skills/pre-david-pass/SKILL.md` — note especially the **Standing caution (2026-08-31)** at the head of Part 2: findings that cut a reason, an answer, an explanation or a qualification are wrong unless the thing is nonsense or does not fit; never propose a scene ending on the ground that it is a cadence; where dialogue is compressed to code the finding is *elaborate*. Then `draft/book-01/VOICE.md` (especially §2 "Scene endings" and "People say what they mean", and §5a). Then the scenes: `draft/book-01/scenes/32-nobodys-going-to-laugh.md` and `33-a-man-in-a-robe.md`. For context read scenes 26, 30 and 31 (do not review those). Consult `notes/canon/characters/ferrin.md`, `mattie-ordish.md`, `minor.md`, `peri.md`, `edwin.md` for facts; treat their "Voice — binding" sections as advisory only. Do not read or cite `notes/sealed/`.<br>
+<br>
+Report every finding as: file, the exact sentence quoted, the problem in one line, and a concrete replacement. The lens that matters most here is "does this sentence make sense" (a shape filled without the fact under it) and legibility — could a reader who has not read the previous scene follow every exchange. Number the findings. No preamble, no praise.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the skill and voice memo.</p>
+</div>
+
+<details><summary>32 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>✅ 413 lines, 26461 chars</p>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 193 lines, 11718 chars</p>
+<p>🔧 Bash: cat 32-nobodys-going-to-laugh.md 33-a-man-in-a-robe.md</p>
+<p>✅ 120 lines, 15841 chars</p>
+<p>🔧 Bash: cat 26-*.md 30-*.md 31-*.md</p>
+<p>✅ 201 lines, 20918 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; cat ferrin.md mattie-ordish.md minor.md</p>
+<p>✅ 47 lines, 2224 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; cat peri.md edwin.md</p>
+<p>✅ 43 lines, 2184 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; tail -c 30000 bxyjp26o8.txt</p>
+<p>✅ 494 lines, 29809 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; grep -n -i "robe\|image\|Weave show\|fight" bazpl7z6q.txt | hea…</p>
+<p>✅ 15 lines, 1080 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '1040,1140p' bazpl7z6q.txt; echo ====; grep -n -i "robe"…</p>
+<p>✅ 102 lines, 5755 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> &amp;&amp; sed -n '1410,1430p' bazpl7z6q.txt; grep -rn "man in a robe\|rob…</p>
+<p>✅ 26 lines, 2152 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01 &amp;&amp; grep -n "^## *3[0-9]\|^### *3[0-9]\|32\b\|33\b" S…</p>
+<p>✅ 3 lines, 336 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01 &amp;&amp; sed -n '70,100p' SCENES.md</p>
+<p>✅ 31 lines, 1965 chars</p>
+<p>🔧 Bash: grep -n -i "robe\|image\|fragment" <span class="redacted">redacted: private</span>/notes/canon/world/magic.md | head…</p>
+<p>✅ 14 lines, 1569 chars</p>
+<p>🔧 Bash: sed -n '680,700p' <span class="redacted">redacted: private</span>/notes/canon/world/magic.md</p>
+<p>✅ 21 lines, 1172 chars</p>
+<p>🔧 Bash: grep -rn "Cornmonth" <span class="redacted">redacted: private</span>/notes/canon/ | head; echo ---; grep -rn -A16 "mo…</p>
+<p>✅ 27 lines, 1563 chars</p>
+<p>🔧 Bash: sed -n '950,970p' <span class="redacted">redacted: private</span>/notes/canon/system.md; sed -n '605,625p' ⟦redacted:…</p>
+<p>✅ 42 lines, 2453 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Findings, numbered, Part 1 first.</p>
+<p>## `draft/book-01/scenes/32-nobodys-going-to-laugh.md`</p>
+<p>**1. Count is wrong.** "Nine people came into it, and Tess gave up her chair and went and sat on the stairs."<br>
+The scene lists Sennet, the woman in the shawl, the boy, four more, the alehouse keeper — eight.<br>
+→ Either "Then five more, in ones and twos" earlier, or here "Eight people came into it".</p>
+<p>**2. The second count compounds the first.** "Nine people turned and looked at her, and saw what they had not been looking at"<br>
+At this point the room also holds Mattie, Tess and Edwin, so "nine" is neither the visitors nor the room; and it silently reuses the wrong number from finding 1.<br>
+→ "The room turned and looked at her, and saw what it had not been looking at"</p>
+<p>**3. A month used as if it were past.** "The corn factor's man came through in Cornmonth and knocked a shilling and threepence off the price of Fenholt barley."<br>
+Day 1 is 15 Cornmonth (`system.md`, calendar), so this scene is 23 Cornmonth — the alehouse keeper is naming the month he is standing in, which nobody does.<br>
+→ "The corn factor's man came through a fortnight before harvest and knocked a shilling and threepence off the price of Fenholt barley."</p>
+<p>**4. The reason runs backwards.** "The neighbours came at half past eight, and Mattie had known they would, because she had put the good cups out before the knocking started."<br>
+As written, putting the cups out is why she knew; it is the evidence that she knew.<br>
+→ "The neighbours came at half past eight. Mattie had known they would: the good cups were out before the knocking started."</p>
+<p>**5. Compressed to a code a fresh reader cannot open.** "He had seen a piece of the same trouble in a box, from a place fifty miles off."<br>
+"A piece of the trouble in a box" only parses if you have read scene 31; it is also the second time the box has stood in for the fact instead of stating it.<br>
+→ "He had a box of soil in his pack, cut out of another field fifty miles off that had gone wrong in the same way, and he did not know what was wrong with that one either."</p>
+<p>**6. <span class="redacted">redacted sentence: unpublished prose</span> So would she. The difference was that she had not been asked to know anything, and had promised only what she could keep."<br>
+The fortnight is offered as part of why he could not say it, and then the next sentence names a different difference; the clause contradicts the point it is attached to.<br>
+→ "They had asked him to know, and he did not. She had not been asked to know anything, and had promised only what she could keep."</p>
+<p>**7. Edwin thinking his own praise unbidden** (`VOICE.md` §2: the count of lives, the famine, arrive only when someone else raises them). <span class="redacted">redacted sentence: unpublished prose</span><br>
+Mattie may say this in scene 31; his own narration may not.<br>
+→ "Hearing it again from the man they had sent for was not reassurance; it was confirmation."</p>
+<p>**8. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Nothing in the vale scenes is a frightened room; the claim's second half is a whole invisible track record.<br>
+→ "because she was better at a frightened room than he was, which was not a thing he had known about her until the last two minutes."</p>
+<p>## `draft/book-01/scenes/33-a-man-in-a-robe.md`</p>
+<p>**9. Edwin contradicts himself across two lines.** "'That's the ground,' said Edwin. 'I'd have asked about the ground next, and you've saved me the trouble.'"<br>
+He asked about the ground — "And the ground under your boot?" is the line immediately before Ferrin's answer.<br>
+→ "'That's the ground,' said Edwin, 'and it's what I asked for. Now I'm asking about you. What was it like, standing in it?'"</p>
+<p>**10. The clock contradicts itself.** "'I'm walking the field at first light,' he said. 'I'll be at that gate at five.'" against "he wrote *gate at five*, because first light was twenty past".<br>
+Five is not first light; and the *because* as written gives no reason to be there twenty minutes early.<br>
+→ Ferrin's line: "'I'm walking the field in the morning,' he said. 'I'll be at that gate at five, before the light's up.'" And the list: "because first light was twenty past, and he wanted to be standing in the gate with his box open when the low sun came across the grass from the east."</p>
+<p>**11. Two incompatible accounts of how Peri got the time.** "He had said so at supper, across the table, and Peri had read it upside down in his hand and nodded"<br>
+If he said it, there is nothing to read upside down; and supper was before he settled on five with Ferrin in the lane.<br>
+→ "He had said five to her in the kitchen after the priest had gone, and she had copied it to the head of her own page without being asked, and he had learned in nine days that this meant she had it and would be there."</p>
+<p>**12. A fact she has not got.** "He blesses fields," she said. "Out of a book, in a robe, in the spring."<br>
+Ferrin is in plain clothes and has been for the whole scene; she has never seen him in a robe, and the reader has just been told what he is wearing. The robe is the hinge of the scene and needs to be an inference she owns.<br>
+→ "He blesses fields," she said. "Out of a book, in the spring, and I'd be very surprised if he does that in the clothes he's standing in."</p>
+<p>**13. Ambiguous reference — which tower road.** "the way she had watched the bends of the tower road on her first morning"<br>
+They spent the previous day walking toward Fenholt's church tower, so "the tower road" reads as yesterday's road rather than Edwin's hill.<br>
+→ "the way she had watched the bends of the road up to his tower on her first morning in the vale"</p>
+<p>**14. Vague "that week", and the wrong noun for the thing taught.** "the way he had taught her that week to lay out a reading before saying what it meant."<br>
+"A reading" collides with the Weave readings the very next sentence is about; and the teaching is nine days old, on the road, not "that week".<br>
+→ "the way he had taught her on the road to lay out what he had actually found in a field before saying what he thought it meant."</p>
+<p>**15. A fact overstated into a falsehood.** "and he had not heard it in two hundred years."<br>
+He has lived above a village for two hundred years and hears it nightly; what stopped was sleeping in a strange parish.<br>
+→ "and he had not slept in a strange one in two hundred years."</p>
+<p>**16. <span class="redacted">redacted sentence: unpublished prose</span> He knew that. He had known it for three hundred years."<br>
+If he had known it for three hundred years, it cannot have taken him two hours to work out; the joke wants the knowledge to be instant and useless.<br>
+→ "What had happened at eleven was that the wind had come round to the west and was carrying the street's noise away from him instead of toward him. He had known since he was twenty what a west wind does to the sound of a street. He had lain there two hours anyway."</p>
+<p>**17. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Mattie's account (scene 31) is that it does not heat, does not smell, is not mouldy and holds no mice; nobody has set fire to it, and "would not burn" asserts a test that was not made.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**18. A gesture with no proposition under it.** "and could not get to sleep for thinking about it, which he supposed was the point."<br>
+The point of what? Nothing in the scene supplies an antecedent, and the clause reads as significance asserted rather than earned.<br>
+→ Cut from "which"; end on "and could not get to sleep for thinking about it."</p>
+<p>**19. A noticing the sentence then cancels.** "and did not look toward the field, which lay off to the north of them in the dark where neither of them could have seen it anyway."<br>
+The observation is offered as meaningful and then disqualified in the same breath, so it claims only that something is meaningful.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Devices a second round would be about</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Either keep only the closing statement of it and let the middle two be events (what he said, what the room did), or the closing paragraph will read as the narrator explaining a scene the reader has already watched.<br>
+- **Scene 33's night-listening cluster.** Three figures in six lines — a dog "with an opinion", a taproom door, "water going nowhere in particular, slowly" — in a passage whose job is plain report. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

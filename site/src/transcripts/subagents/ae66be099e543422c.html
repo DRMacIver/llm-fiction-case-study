@@ -1,0 +1,126 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a canon/consistency lens for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a canon/consistency lens for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ae66be099e543422c">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a canon/consistency lens for the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it; do not read notes/sealed/.<br>
+<br>
+Your material: draft/book-01/scenes/03-until-fulfilled.md, read after scenes 01 and 02 in the same directory (continuity with them matters: what is on the table, what has been said, the day and hour).<br>
+<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> 001 — say whether any objected-to line or pattern from the groundwork is reproduced here), notes/reader-notes-rewrite.md, notes/theme.md, <span class="redacted">unpublished</span> notes/premise.md (the hard rule on Edwin/Peri).<br>
+<br>
+Report FINDINGS ONLY — scene, line quoted, canon file and line, what is wrong. No "clean" verdicts. Separately and briefly: canon this scene could use and does not. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<details><summary>74 tool calls</summary>
+<p>🔧 Bash: cat draft/book-01/scenes/01*.md draft/book-01/scenes/02*.md draft/book-01/scenes/03-until…</p>
+<p>✅ 179 lines, 16362 chars</p>
+<p>🔧 Bash: cat notes/canon/system.md</p>
+<p>✅ 45 lines, 2228 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/edwin.md &gt; /tmp/edwin.md; wc -l /tmp/edwin.md echo --- cat not…</p>
+<p>🔧 Bash: cat notes/canon/world/magic.md</p>
+<p>🔧 Bash: cat notes/canon/world/timeline.md</p>
+<p>🔧 Bash: cat notes/canon/world/geography.md</p>
+<p>✅ 45 lines, 2210 chars</p>
+<p>✅ 396 lines, 23756 chars</p>
+<p>✅ 42 lines, 2239 chars</p>
+<p>✅ 44 lines, 2243 chars</p>
+<p>🔧 Bash: sed -n '1,80p' notes/canon/deferred-questions.md <span class="redacted">unpublished</span></p>
+<p>✅ 80 lines, 7732 chars</p>
+<p>🔧 Bash: cat notes/reader-notes-book-1.md</p>
+<p>🔧 Bash: cat notes/reader-notes-rewrite.md</p>
+<p>✅ 68 lines, 3744 chars</p>
+<p>✅ 207 lines, 11627 chars</p>
+<p>🔧 Bash: cat notes/theme.md; <span class="redacted">unpublished</span> echo ---PREMISE---; cat notes/premise.md</p>
+<p>✅ 43 lines, 2187 chars</p>
+<p>🔧 Bash: grep -n "Agent of Fate" -A 40 notes/canon/system.md | head -150</p>
+<p>🔧 Bash: grep -n "Seal of the Loom" -A 40 notes/canon/system.md | head -150</p>
+<p>✅ 150 lines, 8970 chars</p>
+<p>✅ 150 lines, 8948 chars</p>
+<p>🔧 Bash: grep -n "cooldown\|clock\|box format\|Box format\|timekeep" -n notes/canon/system.md | he…</p>
+<p>🔧 Bash: grep -n "premise" -l notes/premise.md; sed -n '1,200p' notes/premise.md</p>
+<p>✅ 33 lines, 2385 chars</p>
+<p>✅ 201 lines, 11708 chars</p>
+<p>🔧 Bash: sed -n '630,760p' notes/canon/system.md</p>
+<p>✅ 131 lines, 8561 chars</p>
+<p>🔧 Bash: sed -n '980,1040p' notes/canon/system.md</p>
+<p>✅ 61 lines, 3392 chars</p>
+<p>🔧 Bash: grep -n "mage-sight\|Mage-sight" -A 15 notes/canon/world/magic.md | head -100</p>
+<p>✅ 16 lines, 1067 chars</p>
+<p>🔧 Bash: grep -n "rulebook\|The rulebook" -A 30 notes/canon/world/magic.md | head -100</p>
+<p>✅ 57 lines, 3509 chars</p>
+<p>🔧 Bash: ls chapters/ 2&gt;/dev/null | head -20; echo ---; ls draft/book-01/scenes/ 2&gt;/dev/null; echo…</p>
+<p>✅ 29 lines, 727 chars</p>
+<p>🔧 Bash: grep -n "not clever\|I'd probably lose\|apologis" -n notes/canon/characters/peri.md</p>
+<p>✅ 6 lines, 439 chars</p>
+<p>🔧 Bash: cat chapters/001-the-wrong-man.md</p>
+<p>✅ 171 lines, 16422 chars</p>
+<p>🔧 Bash: sed -n '985,1050p' notes/canon/characters/peri.md</p>
+<p>✅ 66 lines, 3249 chars</p>
+<p>🔧 Bash: cat plans/NEXT.md <span class="redacted">unpublished</span> 2&gt;/dev/null | head -100</p>
+<p>✅ 100 lines, 5908 chars</p>
+<p>🔧 Bash: grep -n "search rebuilt\|Peri's search\|rumour-and-Weave\|gives images not names\|Edwin's…</p>
+<p>✅ 1 lines, 63 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 10 lines, 831 chars — <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> / 1973439 Sealed: fifth answer written; canon deferral closed and two open defects fixed</p>
+<p>🔧 Bash: git show 9301a8a --stat; echo ---; git show 9301a8a | head -200</p>
+<p>🔧 Bash: git show 335b171 | head -250</p>
+<p>✅ 84 lines, 5135 chars</p>
+<p>✅ 105 lines, 5371 chars</p>
+<p>🔧 Bash: git show fdedc75 | head -150</p>
+<p>✅ 19 lines, 950 chars</p>
+<p>🔧 Bash: git show fb637ee | head -150</p>
+<p>🔧 Bash: git show f3c1f8b | head -150</p>
+<p>✅ 22 lines, 1020 chars</p>
+<p>✅ 24 lines, 1158 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> 2&gt;/dev/null | head -40</p>
+<p>✅ 18 lines, 1844 chars</p>
+<p>🔧 Bash: sed -n '1,60p' notes/canon/characters/edwin.md</p>
+<p>✅ 60 lines, 3294 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 17 lines, 1719 chars</p>
+<p>🔧 Bash: sed -n '830,870p' notes/canon/characters/edwin.md</p>
+<p>✅ 40 lines, 2500 chars</p>
+<p>🔧 Bash: grep -n "^- \*\*Sorrel\|clerk\|Marsh Barton and Upper Wold\|Sorrel of Appleford\|both cle…</p>
+<p>✅ 4 lines, 268 chars</p>
+<p>🔧 Bash: sed -n '280,320p' notes/canon/characters/edwin.md</p>
+<p>✅ 41 lines, 2716 chars</p>
+<p>🔧 Bash: grep -n "clerk\|<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 8 lines, 814 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>FINDINGS</p>
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>1. **Peri's stated reason for not arguing has drifted from the beat `characters/peri.md` marks Established/self-aware.**<br>
+   - Scene 03: *"You argue well. That's the trouble. I'd lose. Not because you're right. Because you're better at it."*<br>
+   - `characters/peri.md` line 20–22 (Established, citing ch. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> 001)."*<br>
+   - The original's phrasing put the reason in her own limitation ("I'm not clever"); the new line puts it entirely in Edwin's skill and explicitly denies it's about being right ("Not because you're right"). <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Worth a deliberate check that this is an intended characterization shift and not an incidental drift.</p>
+<p>2. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> You said you would decide."* / Edwin's first line to Peri: *"If it's Upper Wold about the fourteenth, I haven't decided, and I've said so twice."*<br>
+<span class="redacted">redacted sentence: unpublished prose</span> 003) — a settled, recurring arrangement, not an item still pending "the fourteenth."<br>
+   - This isn't a contradiction (nothing says there can't be a second, separate dispute between the same two parishes), but the scene doesn't establish what "the fourteenth" is for, and a reader/continuity-checker familiar with the established ford feud may reasonably expect this to be the same dispute — which it can't quite be, since that one is already settled by a standing seasonal rule. This is worth a one-line clarification (what event falls on "the fourteenth") so it doesn't read as a soft contradiction of the ford resolution.</p>
+<p>No other quoted fact, name, number, mechanic, box format, or inference in these three scenes contradicts canon. Specifically checked and consistent:<br>
+- <span class="redacted">redacted: event</span> (350), the "two hundred" swap for the flagged "ninety" line (system.md rule 3 — the original's "turned ninety" was exactly the banned age-as-seniority-marker; scene 01 fixes this correctly).<br>
+- Mage-sight description and "twice in three hundred and fifty years" (`world/magic.md`).<br>
+- `[Seal of the Loom]` box text, "twenty-nine more days," "cannot be unbound by the one who cast it or the one it's on" (`system.md` cooldown section, matches ch. 001 exactly).<br>
+- The rulebook explanation for "she was quoting a rulebook" — correctly resolves DRMacIver's flagged "What rulebook?" using the newly-ruled church pamphlet (`world/magic.md`, "The rulebook").<br>
+- The two Weave questions ("who is the best person to teach me magic" / "who can show me how to save the world") — verbatim match to the newly-ruled `characters/peri.md` "search rebuilt" section (commits 9301a8a, 335b171, fb637ee), including the Weave-gives-images-not-names structure (the hill) and the rumour/coach-travel origin of the "archmage" frame.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- Geography (Appleford, the Drovers inn, ten parishes, the ford feud parties) and premise's Edwin/Peri hard rule — no violations.<br>
+- Reader-notes-book-1's flagged "Fate magic. She was wearing fate magic." fragment-echo pattern and the "rule about anger and fright... it wasn't fright" confusing line are both corrected in this draft, not reproduced.</p>
+<p>CANON THIS SCENE COULD USE AND DOES NOT</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Not required this early (the ruling only asks the reader reconstruct it "by the end of the book"), but the famine fact (`characters/edwin.md`, `world/green-revolution.md`) is available and unused if a later scene in this movement wants to seed it early.</p>
+</div>
+</body></html>

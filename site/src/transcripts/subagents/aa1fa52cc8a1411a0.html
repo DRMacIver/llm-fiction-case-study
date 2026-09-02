@@ -1,0 +1,58 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-aa1fa52cc8a1411a0">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="closers", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/09-the-cart-up-the-hill.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for prose faults in the scene file. Let me start by reading the rules and then analyzing the scene.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/scenes/09-the-cart-up-the-hill.md</p>
+<p>✅ 24 lines, 2866 chars</p>
+<p>✅ 1216 lines, 49319 chars</p>
+
+<div class="assistant-prose">
+<p>I need to find the rules matching your criteria and scan the scene. Let me read more of the rules file to ensure I find all semantic + closers rules.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1070 lines, 57859 chars</p>
+
+<div class="assistant-prose">
+<p>Now I have the complete rules file. Let me identify all semantic rules with `lens=="closers"` and `scope` includes `"scene"`:</p>
+<p>1. **fragment-closer-budget** (line 896)<br>
+2. **implication-stopped-short** (line 1431)<br>
+3. **tidy-button-ending** (line 1476)<br>
+4. **cute-cryptic-closer** (line 1497)<br>
+5. **theme-stated** (line 1518)<br>
+6. **announce-before-deliver** (line 1537)<br>
+7. **obliqueness-unpaid** (line 1808)</p>
+<p>Now I'll check the scene systematically against each rule:</p>
+<p>**1. fragment-closer-budget**: Looking for one-word or three-word emphasis fragments (max 1 per 1,800 words). The scene has no such fragments—all sentences are complete.</p>
+<p>**2. implication-stopped-short**: Checking for implications set up but not delivered. "The philosophy of the thing was above his wage" (para 8) could be borderline—"the thing" is undefined. But the neighboring sentence establishes context (carter said nothing after looking at box and hill), and the implication is completed: the carter can't judge the principle. Not flagged.</p>
+<p>**3. tidy-button-ending**: The final paragraph is functional action with explanation ("He carried it in... because it was a piece of somebody else's business he had just agreed to be responsible for, and went to find Sorrel"), not an epigram, rhyme, flash-forward, or callback.</p>
+<p>**4. cute-cryptic-closer**: The last line "went to find Sorrel about the frost list" is straightforward and fact-based, not cryptic.</p>
+<p>**5. theme-stated**: No sentence explicitly states story theme (mortality, succession, ordinary work, etc.).</p>
+<p>**6. announce-before-deliver**: No bare naming fragments ("Silence." / "A knock.") placed before sentences delivering the thing named.</p>
+<p>**7. obliqueness-unpaid**: The carter offers to take the parcel back; Edwin's action of signing for it answers this offer clearly. No oblique dialogue left unanswered. The response is cashed out by the narration ("He signed for it").</p>
+<p>The scene is clean across all seven rules.</p>
+</div>
+
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

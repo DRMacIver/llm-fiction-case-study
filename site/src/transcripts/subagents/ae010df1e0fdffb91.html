@@ -1,0 +1,122 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working on the novel project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read `CL…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are working on the novel project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read `CL…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ae010df1e0fdffb91">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are working on the novel project at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it, including the rule that sealed answers in `notes/sealed/` are never described by content to DRMacIver — only by shape.<br>
+<br>
+Five domain agents have just audited the whole story (31 chapters) against canon and written reports to `notes/audit/system-and-magic.md`, `notes/audit/characters.md`, `notes/audit/world.md`, `notes/audit/timeline.md`, `notes/audit/theme-and-narrative.md`. The per-chapter source reports are in `notes/audit/chapters/`. The canon they edited is in `notes/canon/**`.<br>
+<br>
+Your job is integration, not repetition:<br>
+1. Read all five reports. Cross-check them against each other: the same underlying problem often shows up in two domains with two different recommendations, and a fix one domain made may have broken an assumption another domain relied on. Resolve those into a single position each.<br>
+2. Verify the most load-bearing contradictions yourself against the actual chapters and canon files before they go in the final list. Drop anything that does not survive checking, and say what you dropped.<br>
+3. Spot-check the canon edits the domain agents made: did anyone resolve an Open question they should have flagged, weaken canon to fit a draft, mark an [implied] fact as Established, or cite a chapter that does not support the claim? Fix what is clearly wrong (you may edit any canon file) and report it.<br>
+4. Check for gaps that fall between domains and so belong to nobody — the questions no domain claimed.<br>
+<br>
+Then write `notes/audit/REPORT.md`, the single document DRMacIver reads. Structure it:<br>
+- `## Verdict` — a short honest paragraph on how well the world, the notes and the narrative currently hold together.<br>
+- `## Contradictions to fix` — ranked, most load-bearing first. Each: what, the two citations, the cheaper side to change, and your recommendation. Separate a short list of "certain" from "worth a look".<br>
+- `## Decisions needed from DRMacIver` — genuine authorial choices, each with the options and a recommendation.<br>
+- `## Load-bearing mysteries without written answers` — per CLAUDE.md this is the highest-severity category; name each and what evidence is accumulating for it. Do not invent answers, and do not reveal sealed ones.<br>
+- `## Canon changes made in this pass` — a summary by file of what the audit added and corrected.<br>
+- `## Narrative and thematic health` — the substance of the theme report, integrated.<br>
+- `## What this audit did not cover` — be explicit about limits.<br>
+<br>
+Be candid about severity; do not flatten everything to "minor". Your final message is a 15-line executive summary for the terminal: the verdict, the count of findings by severity, the top five things that need attention, and anything needing a decision.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the project instructions and the audit reports.</p>
+</div>
+
+<details><summary>64 tool calls</summary>
+<p>🔧 Bash: ls notes/audit/ &amp;&amp; ls notes/audit/chapters/ | head -40 &amp;&amp; echo "---" &amp;&amp; wc -l notes/audit…</p>
+<p>🔧 Read CLAUDE.md</p>
+<p>✅ 107 lines, 5868 chars</p>
+<p>✅ 102 lines, 3604 chars</p>
+<p>🔧 Bash: cat notes/audit/system-and-magic.md notes/audit/characters.md</p>
+<p>✅ 43 lines, 2211 chars</p>
+<p>🔧 Bash: sed -n '40,278p' notes/audit/system-and-magic.md</p>
+<p>✅ 239 lines, 13221 chars</p>
+<p>🔧 Bash: cat notes/audit/characters.md</p>
+<p>✅ 286 lines, 17521 chars</p>
+<p>🔧 Bash: cat notes/audit/world.md</p>
+<p>✅ 308 lines, 18821 chars</p>
+<p>🔧 Bash: cat notes/audit/timeline.md</p>
+<p>✅ 305 lines, 17633 chars</p>
+<p>🔧 Bash: cat notes/audit/theme-and-narrative.md</p>
+<p>✅ 260 lines, 14990 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span> …</p>
+<p>✅ 8 lines, 2264 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "post-bag\|eight days\|Post speeds" -A4 -B2 notes/canon/w…</p>
+<p>✅ 60 lines, 3504 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '328,360p' notes/canon/world/institutions.md</p>
+<p>✅ 33 lines, 1819 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git log --oneline -3 -- notes/canon/world/institutions.md; git di…</p>
+<p>✅ 8 lines, 493 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== 001 twenty-nine ==="; grep -n "twenty-nine\|thirty days\…</p>
+<p>✅ 15 lines, 3399 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "Sennet" chapters/011-measured-ground.md | head -20 echo "…</p>
+<p>✅ 34 lines, 7326 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 7 lines, 3385 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "Six weeks\|six weeks\|eight weeks\|seventeenth of Saltmon…</p>
+<p>✅ 6 lines, 2359 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '9p' chapters/020-the-field-in-autumn.md; echo "=== 030 ⟦r…</p>
+<p>✅ 4 lines, 808 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "030:51,85"; sed -n '51p;85p' chapters/030-the-seventh-reveal…</p>
+<p>✅ 10 lines, 3816 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git diff --stat e07433d~1 HEAD -- notes/canon/; echo "=== removed…</p>
+<p>✅ 56 lines, 3452 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== healing diff ==="; git diff e07433d~1 HEAD -- notes/cano…</p>
+<p>✅ 61 lines, 3607 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 19 lines, 8326 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "shilling a week" -B8 -A8 notes/canon/world/development.m…</p>
+<p>✅ 35 lines, 2217 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '100,137p' notes/canon/world/development.md</p>
+<p>✅ 37 lines, 2090 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "rewrite\|from scratch\|groundwork" notes/process.md | he…</p>
+<p>✅ 9 lines, 672 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,35p' notes/process.md</p>
+<p>✅ 35 lines, 1889 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "digging\|shilling a week\|nine soils" -B4 -A10 notes/can…</p>
+<p>✅ 55 lines, 3789 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "leakage\|vent" notes/canon/world/dungeons.md | head -20</p>
+<p>✅ 18 lines, 1269 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '60,90p;198,210p' notes/canon/world/dungeons.md</p>
+<p>✅ 44 lines, 2778 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import re,io p='notes/canon/world/institutions.md' s=open(p).read() old…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' p='notes/canon/characters/edwin.md' s=open(p).read() ⟦redacted sentence…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls notes/sealed/; sed -n '45,55p' chapters/006-the-handover.md; e…</p>
+<p>✅ 18 lines, 1692 chars</p>
+<p>🔧 Bash: cat &gt; notes/audit/REPORT.md &lt;&lt;'EOF' # Book 1 audit — integrated report (2026-08-27)  Inte…</p>
+<p>✅ 1 lines, 63 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>VERDICT: the world and the numbers hold up unusually well — 31 chapters of on-page arithmetic reconcile almost everywhere, and the notes are in better shape than the plan. Two real problems: the highest-severity CLAUDE.md category is occupied, and four of five domain reports were written as though `chapters/` were text to maintain (it isn't — process.md, groundwork for a rewrite), which changes every ranking.</p>
+<p>FINDINGS: 3 critical, 6 significant, 9 minor, 4 report errors dropped, 4 canon errors fixed by me.</p>
+<p>TOP FIVE<br>
+1. M1 — destiny [PENDING] has no written answer. Three domains found it independently. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+2. M2 — Holm Deep. Evidence deposited across chs. 014/018/019 and an appointment booked (<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Cannot be dramatized by an author who doesn't know what it reads.<br>
+3. The yard-a-day rate: chain readings on the north line and hand/census readings in Sennet's grass disagree by a factor of six on the same line (chs. 011, 020, 028). Only the timeline domain caught it. Recommend making it a finding, not fixing it as an error.<br>
+4. The 4 Saltmonth post-bag carries a sheet posted four days after it left (chs. 021, 028). The world domain resolved this the wrong way and canonised the impossible number as a post-bag speed — withdrawn.<br>
+5. theme.md's locked mortality seeding is contradicted by ch. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: Edwin's death/mortality</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>Report: <span class="redacted">redacted: private</span>/notes/audit/REPORT.md. Canon fixes in institutions.md, development.md, edwin.md, dungeons.md. Committed as 9d5953d.</p>
+</div>
+</body></html>

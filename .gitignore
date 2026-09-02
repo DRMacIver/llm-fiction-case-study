@@ -4,6 +4,5 @@ build/
 __pycache__
 .pytest_cache
 
-# Never commit raw (unredacted) transcripts
-*transcript*
-!tools/**
+# Raw transcripts live outside the repo (~/.claude/projects) and are read in place; never copy them here.
+*.jsonl

@@ -1,0 +1,200 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are running the pre-David pass on four newly drafted scenes of th…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are running the pre-David pass on four newly drafted scenes of th…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a4f1e539af360a8ef">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are running the pre-David pass on four newly drafted scenes of the third draft of Book 1 of Autoroad. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>`, `44-where-they-stopped-writing.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>`, `46-a-list-of-houses.md <span class="redacted">unpublished</span>`. For context also read scenes 34–42 in the same directory (do not review those). <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Do not read or cite anything under `notes/sealed/`.<br>
+<br>
+Report every finding as: file, the exact sentence quoted, the problem in one line, and a concrete replacement wording where one is needed. Apply the "does this sentence make sense" lens (shape filled but fact unchecked) as a separate sweep after the voice sweep. Number the findings. No preamble, no praise.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the skill and voice docs.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>✅ 395 lines, 25262 chars</p>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 151 lines, 8887 chars</p>
+<p>🔧 Bash: cat notes/voices.md &amp;&amp; echo "=====LLMTELLS" &amp;&amp; cat notes/llm-tells.md</p>
+<p>✅ 44 lines, 2191 chars</p>
+<p>🔧 Bash: sed -n '1,400p' notes/llm-tells.md</p>
+<p>✅ 332 lines, 19871 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the scenes.</p>
+</div>
+
+<details><summary>26 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; ls &amp;&amp; echo "=====" &amp;&amp; for f in 43-two-line…</p>
+<p>✅ 295 lines, 25457 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 34*.md 35*.md 36*.md 37*.md 38*.m…</p>
+<p>✅ 29 lines, 1837 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 575 lines, 52034 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/<span class="redacted">redacted: character</span>.md &amp;&amp; echo "===TIMELINE" &amp;&amp; cat notes/ca…</p>
+<p>✅ 41 lines, 2181 chars</p>
+<p>🔧 Bash: wc -l notes/canon/characters/<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 5 lines, 177 chars —      544 notes/canon/characters/<span class="redacted">redacted: character</span>.md /      865 notes/canon/world/timeline.md /      669 notes/canon/world/silent-soil.md</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 852 lines, 56149 chars</p>
+<p>🔧 Bash: grep -rn "dventurer" notes/canon/ | head -40; echo "---CLASS"; grep -rn "Choosing" notes/…</p>
+<p>✅ 41 lines, 3962 chars</p>
+<p>🔧 Bash: sed -n '25,45p;460,485p' notes/canon/world/institutions.md; echo "---CHOOSING RITE"; sed…</p>
+<p>✅ 117 lines, 7236 chars</p>
+<p>🔧 Bash: grep -n -i "<span class="redacted">redacted: character</span>\|<span class="redacted">redacted: character</span>\|<span class="redacted">redacted: character</span>\b\|⟦redac…</p>
+<p>✅ 50 lines, 3685 chars</p>
+<p>🔧 Bash: sed -n '195,260p;520,615p' notes/canon/characters/minor.md</p>
+<p>✅ 162 lines, 9697 chars</p>
+<p>🔧 Bash: grep -n -i "west–east\|west-east\|second line\|two lines\|circle\|centre\|center" notes/c…</p>
+<p>✅ 12 lines, 861 chars</p>
+<p>🔧 Bash: sed -n '160,200p' notes/canon/world/silent-soil.md</p>
+<p>✅ 41 lines, 2505 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 43*.md 44*.md 45*.md 46*.md; do e…</p>
+<p>✅ 4 lines, 249 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Findings</p>
+<p>### Part 1 — Does this sentence make sense?</p>
+<p>**1.** `43-two-lines-one-field.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+Pronoun with no antecedent: Peri has not put a middle anywhere; Edwin did both geometries himself. Two *lines* put two middles.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Three accounts of the same run that do not fit: the crew list has Mattie at the far end and Peri writing, then Edwin writes it himself, then Edwin claims he was on the chain. Nobody is named on the near end.<br>
+→ Put him on the chain in para 3: "Edwin took the ring end himself. Mattie had the far end. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Count unchecked. A day has passed and the thing goes a yard a day, so the crossing should have moved three or four links on this line; it moved two, the wrong way. Edwin dismisses the difference without noticing that a day's growth has failed to show — which is exactly the finding the west line will later turn out to carry.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Thirty yards was not."</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+"Second line" means the west–east line, which they laid this morning. Wrong noun for the thing meant (a line run beyond Mattie's <span class="redacted">redacted: character</span>).<br>
+→ "and us no line past her <span class="redacted">redacted: character</span>."</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+Transition: the previous paragraph has Edwin handing the book back mid-field; nobody has walked to the gate. Then the last paragraph says "everybody at the gate".<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+The justification does not distinguish — Burl has eight words in an hour and no reason to have done chain arithmetic — and the narration states the sum in the same sentence it says he withheld it.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**7.** `44-where-they-stopped-writing.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+Explanation stopped halfway: the reader is told a fact shows and not what it is.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+False inside the book: the Fenholt farmer's letter arrived on Day 5, two days before the bridge. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Count: he heard it at Mattie's supper on the ninth day; this is the fifteenth. Six days, and "five days" is used two paragraphs earlier for the same span.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+The board description four paragraphs earlier reads the dues, the clearings, the reciprocity agreement and Holm Deep, and there is no hiring notice on it. He cites a document the scene never showed him.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Edwin's "Five, with the Twelve Acre" and <span class="redacted">redacted: character</span>'s "Four."<br>
+Counts do not reconcile: three older notices plus the Twelve Acre is four, and Edwin needs five with her name on them.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**12.** `44` — "The days are a week apart. Somebody walks somewhere on the same day of the week and writes *in*."<br>
+Does not follow from what she just read: three lines *in three hands* is three people, not somebody's routine.<br>
+→ "'The days are a week apart,' she said. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**13.** `44` — "It isn't a trick, Peri. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Overstated into a falsehood. She got the hands and the gap in the clearings; he supplied the hiring notice, the fair hand, and every inference off them.<br>
+→ "It isn't a trick, Peri. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+"Neither of them" reads first as Edwin and Peri. Both readings are available and the wrong one is the nearer.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+"Both numbers" has no clear pair: a yard a day is one number and "nothing in the ground at all" is not a number.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**16.** `45` — "'It's in the protocol. Item four.'"<br>
+Contradicts the protocol as the scene summarised it, where the fourth thing asked for is the two numbers a month to Wystow. What <span class="redacted">redacted: character</span> asked for — that the man answers people in the street — is not in that list at all.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Then Edwin's line stands: "It's in the protocol."</p>
+<p>**17.** `45` — "'An hour,' said <span class="redacted">redacted: character</span>. <span class="redacted">redacted sentence: unpublished prose</span><br>
+The reader has not met the second gate, and the stakes were placed "north of the church" a paragraph earlier; the route named does not connect the two things.<br>
+→ "'An hour. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+"Took" cannot do this job for a Choosing; the verb belongs to a cantrip on a heap (and is used that way in scene 41 <span class="redacted">unpublished</span>).<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**19.** `45` — "and Edwin gave him his name for it and the date."<br>
+<span class="redacted">redacted: character</span> has just written the date in the previous clause, and "gave him his name for it" is doing two jobs badly.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+"Between them" reads as between the two people, which is where it is; the intended sense is between her hands.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**21.** `46-a-list-of-houses.md <span class="redacted">unpublished</span>` — "Nothing in hands. It's not hands."<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+→ "It's not a shortage. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**22.** `46` — "What does another five weeks cost?"<br>
+<span class="redacted">redacted: character</span> has just said thirty-three days and Edwin has said a month. Five weeks is thirty-five, and the number is hers to have got from neither of them.<br>
+→ "What does another month cost? In hands. Not in money."</p>
+<p>**23.** `46` — "and under that a line by itself."<br>
+Then a five-sentence paragraph. "A line by itself" is not what follows.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+He has just watched her write it, at the wall, now. Either she composed it earlier and is copying, and the narration should say so, or the claim is wrong.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Part 2 — The gesture at meaning</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Shaped like significance; the proposition under it is only that the stakes are small, and it works against scene 38's whole point that the parish can walk out and read them.<br>
+→ Cut.</p>
+<p>**26.** `43` — "Nine seventy-three."<br>
+A bare figure fronted before the sentence that delivers it, and the number was already given four paragraphs back. The naming-fragment tell.<br>
+→ Cut the fragment; open "Twenty-three links in five days…".</p>
+<p>**27.** `45` — "He's somebody's now. There's no column for it."<br>
+Claims that something is meaningful and nothing else; "somebody's" is doing work no reader can cash.<br>
+→ Cut both sentences (see finding 30 — the whole speech goes).</p>
+<p>**28.** `45` / `46` — "and stopped, because there was nothing further to read." / "She stopped there, because that was the end of the list and not because the argument had closed."<br>
+The narrator annotating the same construction twice in two scenes — explaining that her speeches end untidily instead of letting them.<br>
+→ Cut both clauses. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>."</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Budget is one, and the second is also an unlocated prior instruction the book has never shown him giving.<br>
+→ Keep the first. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Part 3 / Part 4 — Would this exist, and would this person say it?</p>
+<p>**30.** `45` — <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> There's no column for it."<br>
+Canon (`characters/minor.md`): <span class="redacted">redacted: character</span> hides behind the book, refuses in procedure and never in opinion, is short, and gives no imperatives; his records stay. This is a wistful personal vignette delivered to a stranger because the reader needs the Choosing lore. It is the scene's biggest single fault.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> 'Ours goes there twice a season. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+The Charter's own traffic runs to Ashway twice a season and the eastern post is a carrier twice a week; no standing rider to Wystow exists anywhere in canon, and one invented here to save the sentence would not exist otherwise.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+A maxim about how people in general behave, in <span class="redacted">redacted: character</span>'s mouth; `<span class="redacted">redacted: character</span>.md` 6c/7b assign that construction to Edwin. Her warrant is what she did and who was standing there.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+A balanced verdict closing a long speech: `<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Strip the last clause and the speech is better, which is the file's own test.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+This is the *retired* form of her doubled insistence (`<span class="redacted">redacted: character</span>.md` 6b, revised 2026-08-27): the pair sitting inside one short speech as emphasis. The live form brackets a whole speech or somebody else's evasion.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Part 5 — The device, not the sentence</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+The same beat, the same gesture, the same meaning, four scenes apart. The second reads as the drafter's signature for Peri revising herself.<br>
+→ Keep 43's. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**36.** `46` — the gear list written into the grey book.<br>
+The grey book is Edwin's field record — Wystow block at the front, the case at the back. Peri's own notebook is where her lists, her Weave answers and her headings go (scenes 39, 40). A list of a stranger's straps under a heading *Adventurer* in his professional record is the wrong book, and it also makes the reveal of the heading less hers.<br>
+→ Have her shut the grey book (as she is already holding it shut in the opening paragraph) and open the notebook.</p>
+<p>**37.** `46` — "'I don't know yet,' she said. 'It doesn't fit. I'll find one.'"<br>
+The scene closes on a cadence that states the book's theme — her genre frame failing to hold a real person — and the last two paragraphs are supposed to carry near-zero cleverness and end on forward-pointing work.<br>
+→ End on the act, not the verdict: "She looked at the page. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Part 6 — Weak where it should be strong</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Three appositives stacked on the end of the ruling.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+"Took her other side" has the shape of an idiom and is not one.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>---</p>
+<p>**The device a second round would be about:** the narrator standing behind <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Four gradings of her in two scenes, from a viewpoint that has known her for twenty minutes.</p>
+<p>**What it would take:** cut the two "stopped because" clauses outright (finding 28) and keep at most one of the face/waiting observations, the one Edwin has a reason to be reading — he is judging whether she will do what she has just promised. Her speeches already end untidily; the annotation is the drafter checking that the reader noticed.</p>
+</div>
+</body></html>

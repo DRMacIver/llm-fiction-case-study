@@ -1,0 +1,137 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Run the pre-David pass exactly as specified in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;⟦re…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Run the pre-David pass exactly as specified in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;⟦re…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-af041dd5b1302359b">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Run the pre-David pass exactly as specified in <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>, 95-the-twelve-foot.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>. Read draft/book-01/VOICE.md in full first, then draft/book-01/SCENES.md's act-three binding list (end of file), notes/canon/characters/ for <span class="redacted">redacted: character</span>, Peri, Edwin, minor.md (Lord Marsh, the gatekeeper, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>), and scenes 85, 93 for immediate context. Warnings to police: the 'writing it down' motif (count; 95 ends on Peri's middle-column entry and 96 on <span class="redacted">redacted: character</span> underlining Edwin's name — at most one of the three may end on writing: rule and propose); 'because' density (ration; propose reattachments); new adults' sentence shapes: Lord Marsh (past forty, stands, decision-first; does his long speech in 94 read as a lord or as <span class="redacted">redacted: character</span>? is 'I find that I am looking forward to it more than to anything I have paid for this year' a button?), <span class="redacted">redacted: character</span> (fewest words; 'aye' — dialect? the book bans dialect; rule on 'aye'), <span class="redacted">redacted: character</span> (does not speak for the first hour; 'did not stop being useful' is a canon-quoted groundwork phrase — flag as reuse), the secretary; <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s knife work at the foot of a seven-foot cut from the bank top? check); sense (<span class="redacted">redacted: character</span> cut the face on the ninth and stood it down on the eleventh: two days of not weathering is not 'knowing'; the twenty-six days from the ninth to the seventh of Fallowmonth: 9 Har to 7 Fal = 28 days: FLAG the arithmetic); clocks; whether Peri's 'Twice is a thing. I don't know what thing. Middle column' is hers or a composed tag; whether 96's <span class="redacted">redacted: character</span> answer speech is too long. STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history. Report numbered findings with the quoted line, the fault, and a proposed replacement. Do not edit any file.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the skill and the required context files.</p>
+</div>
+
+<details><summary>32 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 257 lines, 16258 chars</p>
+<p>✅ 426 lines, 27364 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> draft/book-01/scenes/95-the-twelve-fo…</p>
+<p>✅ 115 lines, 19292 chars</p>
+<p>🔧 Bash: tail -120 draft/book-01/SCENES.md &amp;&amp; echo ===== &amp;&amp; ls notes/canon/characters/</p>
+<p>✅ 114 lines, 10039 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/85-*.md draft/book-01/scenes/93-*.md</p>
+<p>✅ 60 lines, 9928 chars</p>
+<p>🔧 Bash: grep -n "Openings: no scene opens" -A 30 draft/book-01/SCENES.md | head -60</p>
+<p>✅ 31 lines, 4800 chars</p>
+<p>🔧 Bash: wc -l notes/canon/characters/*.md &amp;&amp; sed -n '1,400p' notes/canon/characters/⟦redacted: ch…</p>
+<p>✅ 410 lines, 25091 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "marsh\|<span class="redacted">redacted: character</span>\|<span class="redacted">redacted: character</span>\|…</p>
+<p>✅ 11 lines, 806 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "middle column\|three columns\|notebook" notes/canon/c…</p>
+<p>✅ 30 lines, 4121 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '325,370p' notes/canon/characters/minor.md</p>
+<p>✅ 45 lines, 2744 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "month\|calendar\|days in" notes/canon/world/calendar.…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls notes/canon/world/; grep -rn "twenty-eight days\|thirty days\|…</p>
+<p>✅ 38 lines, 2317 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes; for f in 94-*.md 95-*.md 96-*.md; do echo "=…</p>
+<p>✅ 19 lines, 383 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes; for f in 94-*.md 95-*.md 96-*.md; do echo "=…</p>
+<p>✅ 21 lines, 2282 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "Twelve Foot" notes/canon/ draft/book-01/SCENES.md draft…</p>
+<p>✅ 11 lines, 3147 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '230,255p' notes/canon/world/geography.md; sed -n '255,270…</p>
+<p>✅ 42 lines, 2842 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Findings — scenes 94, 95, 96</p>
+<p>### Part 1 — sense, counts, facts</p>
+<p>**1. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**2. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+Arithmetic. Months are 30 days (timeline.md: Day 47 = 1 Fal, Day 77 = 1 Salt); the scene is 7 Fallowmonth. 9 Harvestmonth → 7 Fallowmonth is **28** days; 11 Harvestmonth → 7 Fallowmonth is 26. <span class="redacted">redacted sentence: unpublished prose</span> Either make all three "twenty-eight" and let <span class="redacted">redacted: character</span> count from his spade, or keep twenty-six and attach it to the stand-down throughout ("nothing has happened on it for twenty-six days, and the face has stood twenty-eight"). The third instance ("wanting somebody to ask him") should count from the ledger entry, so twenty-six.</p>
+<p>**3. (95) "and the why's four words" / "Four words for the why" / "you wrote it in four words" vs. the quoted entry "*Ground won't weather.*"**<br>
+That is three words. Canon has the entry as *Ground will not weather* (minor.md, <span class="redacted">redacted: character</span>). Restore the four-word form in the quotation: *"Eleventh of Harvestmonth. Fourth mile stood down. Ground will not weather. <span class="redacted">redacted: character</span>."*</p>
+<p>**4. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Two foot six plus about eighteen inches plus a hand's breadth is about four foot four, not five foot one — the second core reproduces the first core's layer depths and then reports a top ten inches lower. The overlying peat has to be thicker there or the finding is impossible. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**5. (95) <span class="redacted">redacted: character</span> "knowing" on the ninth.** "I stood there on the ninth with the spade and I cut a face and I looked at it and I knew, the way you know a beast's going to go before it goes."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**6. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Down off it to where? <span class="redacted">redacted sentence: unpublished prose</span> As written it reads as him going into the drain, which contradicts both <span class="redacted">redacted: character</span>'s roster line (<span class="redacted">redacted: character</span>.md road rules) and scene 95 <span class="redacted">unpublished</span>. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**7. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Edwin asked Marsh's household on the previous day not to call her the girl, and Marsh conceded it in front of him. He would not then say it himself to a tenant's man who will have it repeated. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**8. (95) "because <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+"it had cost her nothing yet" has no clear referent and no flat restatement — the looking? the not speaking? Replace: *"because <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**9. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>' boundary was."**<br>
+<span class="redacted">redacted: character</span> is Marsh's foreman; the boundary is not his. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s began"* — and let <span class="redacted">redacted: character</span>' objection follow from that ("a number that stops at another man's <span class="redacted">redacted: character</span> is no use").</p>
+<p>**10. (94) "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+No reason on the page for a foreman to object to a warden at a drain his gang is digging; the reader cannot supply one until scene 95 <span class="redacted">unpublished</span> explains it. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**11. (95) "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+The living end is beyond a peg; "moved along" reads as a step, and the four cuts as one standstill. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**12. <span class="redacted">redacted sentence: unpublished prose</span> Nobody had."**<br>
+He cannot know what nobody has ever seen. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**13. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Reuse across consecutive scenes reads as a copied clause, not a callback. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Part 2 — gesture at meaning; buttons</p>
+<p>**14. (94, scene-end of the Marsh interview) "and I find that I am looking forward to it more than to anything I have paid for this year."**<br>
+A resolving button, and one that hands the lord the best line in the room. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**15. (96) "meaning a thing and standing still while it was done were two different sizes of thing."**<br>
+"sizes of thing" is a coinage doing the work of a measure it never names; it is also the scene's one narrator aphorism, spent on vagueness. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**16. <span class="redacted">redacted sentence: unpublished prose</span><br>
+"the world went on" is a significance-flag with nothing under it. Cut the clause; the two "agains" already close the sentence.</p>
+<p>**17. (95) "Nobody wrote that down, and then <span class="redacted">redacted: character</span> did."**<br>
+Coy: it tells the reader a beat has happened rather than saying what happened. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**18. (96) "and she had learned that from somebody."**<br>
+An unnamed antecedent standing in for a reason. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Part 3/4 — world, character, register</p>
+<p>**19. (95) "said, 'Aye,' and nothing else" and "<span class="redacted">redacted: character</span> thought about that and said aye." — RULING: "aye" is out.**<br>
+It is the dialect ban's exact shape: a syntax/lexis marker standing in for local colour, and twice in one scene it is a tic. Plain modern English: first instance *"said, 'Yes. In my name,' and nothing else"*; second *"and <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**20. (95) <span class="redacted">redacted: character</span>: "I'll not say more than that, because that's all the knife says."**<br>
+Two faults. First-person "I'll not" is retired by name (VOICE.md, "particularly weird"). And "that's all the knife says" is the tidy verdict-tail banned for her (<span class="redacted">redacted: character</span>.md 7a — Edwin's construction). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**21. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Same retired form. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**22. <span class="redacted">redacted sentence: unpublished prose</span><br>
+This is the best-turned sentence in the scene and it is in the wrong mouth: a balanced two-half construction with the verdict in the second half is Edwin's shape, and it makes Marsh the second-cleverest man in the book on his first page. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> than like a lord, and the narration's "It was the way <span class="redacted">redacted: character</span> asked things" half-admits it; with the epigram flattened, "decision first and money second" carries the resemblance and the resemblance becomes a fact about the trade rather than an echo.</p>
+<p>**23. (94) Edwin's four "I am going to" clauses.**<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**24. <span class="redacted">redacted sentence: unpublished prose</span> Sixpence is not."<br>
+The last is the title and earns the scene; the sixpence explanation is the mechanism and stays. <span class="redacted">redacted sentence: unpublished prose</span> Sixpence is not" is Edwin's voice and is not a button; it lands mid-speech, and the sixpence is a canon practice (institutions.md), not an invention for the line. Keep it.</p>
+<p>**25. (94) "and after that he did not stop being useful."**<br>
+`minor.md` quotes this as <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Canon quotations are facts, not lines to reuse (VOICE.md §3), and this one would be found by grep. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**26. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Exactly the banned opening shape: NAME + verb + TIME + trailer (SCENES.md act-three binding). <span class="redacted">redacted sentence: unpublished prose</span> (95 opens on the pegs and 96 on the gouge: both fine as objects. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>' hands" repeats 94's original rhythm, so fixing 94 also fixes the run.)</p>
+<p>**27. Scene endings on writing — RULING: 95 keeps it, 96 gives it up.**<br>
+Two of three end on an act of writing (95: the middle-column entry; 96: <span class="redacted">redacted: character</span> underlining the name), against the binding "no more than one in three", and 94's last sentence is writing-adjacent too. 95's ending is the act's spine and is named in the scene table; it stays. For 96, end on the departure and let the underline sit inside the paragraph: *"<span class="redacted">redacted: character</span> wrote 'nobody knows, E. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**28. (95) Peri's close: "Twice is a thing. I don't know what thing. Middle column."**<br>
+"Middle column" as a two-word close is a callback fragment carrying its meaning by itself, which the voice memo forbids outright; and "Twice is a thing" is a composed tag rather than her sincere, wrong-from-the-foundations voice. The two lines before it are hers and are good. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**29. `because` density — RULING: ration to four per scene; 94 has seven, 95 eleven, 96 six.**<br>
+Most carry real reasons and must stay (cutting reasons is the act-two failure). The ones to reattach, because the reason is either obvious or better as a fact:<br>
+<span class="redacted">redacted sentence: unpublished prose</span> The pen stopped."*<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+- (95) "and to <span class="redacted">redacted: place</span>, because <span class="redacted">redacted: character</span> said so and nobody argued" → *"and to <span class="redacted">redacted: place</span>, which <span class="redacted">redacted: character</span> said and nobody argued with."*<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**30. Canon conflict to raise, not fix in prose.** `SCENES.md` act-three binding says "the Twelve Foot (Marsh's mouth)" — a Deep, <span class="redacted">redacted: character</span>'s trade. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span>, eleven miles off. The scenes are consistent with geography.md; the binding line is the error, and <span class="redacted">redacted: character</span>'s business at the Twelve Foot is her own men, not an assessment. Flagging for the main session; no scene edit needed beyond finding 10.</p>
+<p>### Direct answers to the queried items<br>
+- **<span class="redacted">redacted: character</span> answer speech (96):** not too long — refusing to overclaim in front of a witness is the scene's business and the length is the point. Trim only per finding 7.<br>
+- **<span class="redacted">redacted: character</span>' long speech (95):** allowed. It is his one long speech, it is set up ("wanting somebody to ask him"), and "the way you know a beast's going to go before it goes" is a figure from his own world. Elsewhere he stays at the fewest words that will do.<br>
+- **Viewpoint on <span class="redacted">redacted: character</span>'s knife work:** sound as constructed — he sees the cuts, she reports what the blade did. Fix only the movement (11).<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Em dashes in body text:** none (the only dash in each file is the title heading).<br>
+- **Clocks:** eight, seven, noon, three, nine, eleven — all called times or hall-and-supper times; nothing read off a clock face.</p>
+<p>### The two closing lines<br>
+**The device a second round would be about: the ledger.** Three consecutive scenes run on the same move — somebody says a thing, somebody else writes it in a book, and the writing is the beat. It works in 95, where the ledger *is* the discovery; in 94 and 96 it is the punctuation of every paragraph (five and eleven instances of write/wrote/written), and Peri, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span> and Edwin all do it. To make it work: let 96 carry the protocol as already-settled routine and give its beats to the *hands* — the gouge, the plank, the thumbprint, the spade astride the hole — with <span class="redacted">redacted: character</span>'s writing mentioned twice and never at a paragraph's end. If that cannot be done, the alternative is to cut the protocol's re-statement in 96 entirely and open on the second core.</p>
+</div>
+</body></html>

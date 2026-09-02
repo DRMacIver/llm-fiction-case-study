@@ -1,0 +1,142 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are running the pre-David pass on three newly drafted scenes of a…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are running the pre-David pass on three newly drafted scenes of a…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a161daffd54ca6457">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are running the pre-David pass on three newly drafted scenes of a novel. Working directory: <span class="redacted">redacted: private</span>.<br>
+<br>
+Read, in this order, in full:<br>
+1. .claude/skills/pre-david-pass/SKILL.md (the whole brief — it is the checklist you apply)<br>
+2. draft/book-01/VOICE.md<br>
+3. draft/book-01/scenes/24-which-way-at-the-bridge.md (the scene before)<br>
+4. The three scenes under review: draft/book-01/scenes/25-walking-point.md, 26-a-ceiling-you-recharge-to.md, 27-the-cellar-at-saltings-corner.md<br>
+5. <span class="redacted">redacted sentence: unpublished prose</span><br>
+6. draft/book-01/REMAINDER.md §3 (the fourteen rulings that bind this act) and the act-two binding list at the foot of draft/book-01/SCENES.md.<br>
+<br>
+Then apply the pre-David pass exactly as the skill says: Part 1 sentence by sentence (restate every sentence flat; check every count, fact, inference, viewpoint knowledge), then one pass each with Parts 2–7. Report findings only — quote, Part/bullet failed, one sentence why, replacement or "cut". Do not report praise. Do not apply any edits; report to me. Order by Part 1 first. End with two lines: is there any device in any of the three scenes that a second round of comments would be about, and what would it take to fix or remove it. Be concrete and terse. Also flag any line that a 2026-08-30 ruling has overtaken (e.g. "six counties" as his reach, "pending", a lifespan stated as a guarantee, the "one spell, one shed" callback, the shed at an age other than nineteen).</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the brief and all the required context.</p>
+</div>
+
+<details><summary>40 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>✅ 395 lines, 25262 chars</p>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 151 lines, 8887 chars</p>
+<p>🔧 Bash: for f in draft/book-01/scenes/24-which-way-at-the-bridge.md draft/book-01/scenes/25-walki…</p>
+<p>✅ 216 lines, 24935 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/edwin.md</p>
+<p>✅ 44 lines, 2208 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/peri.md</p>
+<p>✅ 43 lines, 2183 chars</p>
+<p>🔧 Read notes/canon/characters/edwin.md</p>
+<p>✅ 972 lines, 64776 chars</p>
+<p>🔧 Read notes/canon/characters/peri.md</p>
+<p>✅ 975 lines, 64406 chars</p>
+<p>🔧 Read notes/canon/characters/peri.md</p>
+<p>✅ 356 lines, 22294 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 31 lines, 1264 chars</p>
+<p>🔧 Bash: sed -n '1,60p;54,332p' notes/canon/system.md</p>
+<p>✅ 339 lines, 20003 chars</p>
+<p>🔧 Bash: sed -n '483,600p;647,860p' notes/canon/system.md</p>
+<p>✅ 332 lines, 19823 chars</p>
+<p>🔧 Bash: grep -n -i -A6 "Saltings\|Ashway\|east road\|east lane\|Fenholt" notes/canon/world/geogra…</p>
+<p>✅ 150 lines, 8643 chars</p>
+<p>🔧 Bash: grep -n -i -B2 -A10 "sixpence\|coinage\|shilling\|Charter\|the post\b\|postmistress\|carr…</p>
+<p>✅ 200 lines, 12869 chars</p>
+<p>🔧 Bash: grep -n -A25 -i "## .*Literacy\|Literacy" notes/canon/world/institutions.md | sed -n '1,8…</p>
+<p>✅ 70 lines, 4409 chars</p>
+<p>🔧 Bash: sed -n '1,301p' notes/canon/world/magic-explained.md</p>
+<p>✅ 301 lines, 16987 chars</p>
+<p>🔧 Bash: cat notes/llm-tells.md</p>
+<p>✅ 332 lines, 19871 chars</p>
+<p>🔧 Bash: sed -n '1,196p' draft/book-01/REMAINDER.md; echo "=========SCENES"; sed -n '120,215p' dra…</p>
+<p>✅ 293 lines, 21993 chars</p>
+<p>🔧 Bash: sed -n '95,125p' draft/book-01/SCENES.md</p>
+<p>✅ 31 lines, 2034 chars</p>
+<p>🔧 Bash: grep -rn "taint assay\|Weedmonth\|quickening assay" notes/ draft/ | head -30; echo ---; g…</p>
+<p>✅ 66 lines, 7043 chars</p>
+<p>🔧 Bash: grep -n -i "revealing\|assay" notes/canon/world/magic.md | head -40</p>
+<p>✅ 24 lines, 1692 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Part 1 — sense, counts, facts, viewpoint</p>
+<p>**Scene 25**</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> The stated reason is false. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> → cut everything after "unsettled sky."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Three arches: halfway over is the middle of the second. → "Halfway over, on the second arch,".<br>
+<span class="redacted">redacted sentence: unpublished prose</span> → give the dogs to a farm gate they are approaching, or cut the boy from the traffic list and put him ahead.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> → "would be there before he was."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> The self-interruption is unearned. → cut the sentence, or "He stopped, because the next three sentences were for a class."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Edwin has no way to hold that count. → "the carter, who knew her."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> downhill. → "and the road went down the last of the vale toward the Ashway."</p>
+<p>**Scene 26**</p>
+<p>- **"Every college teaches that and every trained mage knows it ... because here's the other half: the ceiling is raised by spending ... Nobody hid it from anybody."** — Part 1, an explanation stopped halfway and then reversed. "The other half" says the growth rule is not taught; four sentences later he says nobody hid it. Canon (`system.md`, 2026-08-28) is that both halves are in the books. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- **"Nobody hid it from anybody. Nobody had a reason to do it."** — Part 1, pronoun with no clear antecedent ("it" reads as *hid it*). → "Nobody hid it. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> At fifteen they have arrived, and the scene then has them navigating to it. → "at thirteen from the tower".<br>
+<span class="redacted">redacted sentence: unpublished prose</span> → "That isn't in the books."<br>
+- **"podding badly on the fen side"** — Part 1, ambiguous referent: everything past the bridge is the fen side. → "podding badly at the low end."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> → cut.</p>
+<p>**Scene 27**</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+- **"He picked the tray back up"** — Part 1, continuity: no tray has been mentioned; he brought two mugs. → put the tray in when he brings the mugs.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> → make the shadow his own, or cut the shadow beat.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> → "a hand's width high".<br>
+<span class="redacted">redacted sentence: unpublished prose</span> → have him ask it at the tanks earlier ("Where do you top these?").<br>
+<span class="redacted">redacted sentence: unpublished prose</span> → "and you'll pay it".<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+- **"a foul thing on his trowel"** — Part 1, weak/vague noun for a known substance. → "drain-water muck on his trowel".<br>
+<span class="redacted">redacted sentence: unpublished prose</span> → "the way the last two had."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Apparently.'"** — Part 1, does not parse as a reply and the Ashway is not his. <span class="redacted">redacted sentence: unpublished prose</span> Apparently I am.'"</p>
+<p>## Part 2 — gesture at meaning</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Cut from "and he watched"; also cut the "without blinking / blinked once" pun, which footnotes itself.<br>
+- 26: **"Nobody had done anything wrong; the hill had."** — negative parallelism with a hill given agency; the claim underneath ("it is the ground, not the farming") is already made by the spring line. → cut.<br>
+- 27: **"It was loud. That was the first fact"** — announces a series that has no second fact. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> There's a drain."** — the scene's portable closer, and it pre-empts Peri's "It's a drain," which is the line that should carry it. → cut both sentences; end on "until then. That's all of it."</p>
+<p>## Part 3 — would this exist</p>
+<p>- 25: **"It was out of an engraving."** — a scene that has Edwin say "Printing is new" cannot then rest a recognition on a circulated engraving of a swordsman's stance. → "It was out of a book."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> → "a brother down the fen with views of his own".</p>
+<p>## Part 4 — why would this character</p>
+<p>- 26: **"you've had the whole of my military record."** — the "one spell, one shed" callback in other words; `SCENES.md` act-two binding says the callback is spent. → "you've had all of it already."<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>'s beat in advance. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> Redundant with her real question two lines later. → "'On a schedule?'", and keep Edwin's chimney answer.<br>
+- 26: **"'It's waterlogged. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> → cut "and the wall at his back".<br>
+- 26: Peri's speech beginning **"Those were noticing things"** carries four "and"s (`peri.md` 1 caps her at two) and the scene gives her only one false start where the rule wants two under pressure. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 5 — device, not sentence</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+- 27: **the taint assay is cast after the verdict has been delivered in full**, so the instrument does nothing. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 6 — weak where it should be strong</p>
+<p>- 27: **"The front room was secured."** → "They got the front room."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> and had told the landlord ... and had managed nearly an hour"** — three pluperfects where the simple past is the event. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> → quote marks or plain.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> → "'Then navigate,' said Edwin."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> You'll want that before Fenholt."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Aphorism budget</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> The budget is one. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## 2026-08-30 rulings check</p>
+<p>No "six counties", no "pending", no lifespan guarantee, no shed at any age. The one hit is the **"one spell, one shed" callback in paraphrase** ("you've had the whole of my military record", scene 26), listed above.</p>
+<p>---</p>
+<p>**Device a second round would be about:** the withheld interiority pair — Edwin listening longer than the work needs and declining to look at it, and Peri filing under a heading he is not shown — run twice each across scenes 26 and 27, so the reader is told twice in two scenes that both characters have a private file and is shown neither.</p>
+<p>**What it would take:** spend one of the four. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

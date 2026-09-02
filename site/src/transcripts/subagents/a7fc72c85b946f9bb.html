@@ -1,0 +1,88 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦unp…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦unp…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a7fc72c85b946f9bb">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (find every finding for chapter 015), then chapters/015-the-break-night.md in full.<br>
+<br>
+You are retrofitting this ONE chapter (edit no other file). Two jobs, applied sentence by sentence, with the content, beats, dialogue intent, ending cut, and author's-note block (if present, below the '---') all preserved:<br>
+1. LANGUAGE: apply the thirteen census rules. The big one is the verdict clause — every trailing ", which was new / took some doing / was the mistake / Edwin took to mean…" either ends before the comma or becomes a plain separate sentence of fact; type-of-person clauses become the specific observed thing; maxim-capped speech loses the maxim (characters say what they mean and stop; only Edwin's teaching register may lecture, and rarely); nominalised absences become actions; near-idioms become the real idiom or plain words; interior false precision goes; hedged gesture tags go or become the gesture; windup dialogue tags become plain "said"; register slips (modern/clinical, fake-archaic) fixed; motif-word reuse thinned; fragment closers used sparingly. Do NOT flatten the approved voice: keep the seed-shaped similes at ~2 per chapter, the diegetic clock times and counts, "wants doing", Edwin's occasional composed paragraph. <span class="redacted">redacted sentence: unpublished prose</span><br>
+2. FARMING: apply this chapter's corrections from farming-findings.md exactly (they cite the real mechanism and the corrected line). If a correction changes a number other chapters depend on, apply it here and list it in your report as a cross-chapter dependency — do not edit the other chapter.<br>
+Write the revised chapter in place. Commit: "Retrofit 015: language census rules + farming corrections" with trailer "Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;". Return: verdict-clause count before/after (grep ', which was\|, which took\|took to mean'), the farming corrections applied, any cross-chapter dependencies, and one sentence on anything you declined to change and why.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required files.</p>
+</div>
+
+<details><summary>22 tool calls</summary>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> chapters/015-the-break-night.md</p>
+<p>✅ 8 lines, 263 chars —       42 notes/voice-exemplars.md / <span class="redacted">redacted sentence: unpublished prose</span> /      424 notes/voices.md</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 348 lines, 16999 chars</p>
+<p>🔧 Bash: cat notes/voices.md</p>
+<p>✅ 424 lines, 24733 chars</p>
+<p>🔧 Bash: cat notes/llm-tells.md; echo "=====FARMING====="; cat notes/farming.md</p>
+<p>✅ 281 lines, 16494 chars</p>
+<p>🔧 Bash: grep -n -i "015\|chapter 15\|ch\. 15\|ch 15" plans/book-01/farming-findings.md ⟦unpublish…</p>
+<p>✅ 1 lines, 75 chars</p>
+<p>🔧 Bash: sed -n 1,120p plans/book-01/farming-findings.md <span class="redacted">unpublished</span></p>
+<p>✅ 120 lines, 5877 chars</p>
+<p>🔧 Bash: grep -n "015" plans/book-01/farming-findings.md <span class="redacted">unpublished</span></p>
+<p>✅ 1 lines, 75 chars</p>
+<p>🔧 Bash: sed -n 120,442p plans/book-01/farming-findings.md <span class="redacted">unpublished</span></p>
+<p>✅ 323 lines, 17755 chars</p>
+<p>🔧 Bash: grep -n -i "015\|ch\. 15" notes/canon/world/farming-glossary.md</p>
+<p>✅ 1 lines, 36 chars</p>
+<p>🔧 Bash: sed -n 940,1010p notes/canon/world/farming-glossary.md; echo ---; sed -n 1,40p notes/cano…</p>
+<p>✅ 112 lines, 5517 chars</p>
+<p>🔧 Bash: cat -n chapters/015-the-break-night.md</p>
+<p>✅ 221 lines, 22860 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now applying the edits.</p>
+</div>
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Bash: grep -c ', which was\|, which took\|took to mean' chapters/015-the-break-night.md; grep -…</p>
+<p>✅ 3 lines, 19 chars</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'PYEOF' import io p='chapters/015-the-break-night.md' s=io.op…</p>
+<p>✅ 2 lines, 88 chars</p>
+<p>🔧 Bash: sed -n 75p chapters/015-the-break-night.md | cat -A | head -c 300</p>
+<p>✅ 2 lines, 58 chars</p>
+<p>🔧 Bash: grep -c "’" chapters/015-the-break-night.md; git -C <span class="redacted">redacted: private</span> diff --stat</p>
+<p>✅ 4 lines, 206 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'PYEOF' import re f='<span class="redacted">redacted: private</span>' s=open(f,encoding='utf-8').read().r…</p>
+<p>✅ 5 lines, 418 chars — Exit code 1 /   File "<span class="redacted">redacted: private</span>", line 24 /     'He said it to the parapet. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: python3 - &lt;&lt;'PYEOF' f='<span class="redacted">redacted: private</span>' s=open(f,encoding='utf-8').read() s=s.replace…</p>
+<p>✅ 2 lines, 88 chars — Exit code 1 / <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: python3 - &lt;&lt;'PYEOF' f='<span class="redacted">redacted: private</span>' s=open(f,encoding='utf-8').read() s=s.replace…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: python3 - &lt;&lt;'PYEOF' p='chapters/015-the-break-night.md' s=open(p,encoding='utf-8').read()…</p>
+<p>✅ 10 lines, 1749 chars</p>
+<p>🔧 Bash: grep -n "'ll not\|'d not\|stood\|standing" chapters/015-the-break-night.md; echo ---; sed…</p>
+<p>✅ 11 lines, 3437 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'PYEOF' p='chapters/015-the-break-night.md' s=open(p,encoding='utf-8').read()…</p>
+<p>✅ 2 lines, 68 chars — ok / 8d0b74b Retrofit 015: language census rules + farming corrections</p>
+</details>
+
+<div class="assistant-prose">
+<p>**Verdict clauses** (`grep -c ', which was\|, which took\|took to mean'`): **3 before → 0 after**. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**Farming corrections applied: none — chapter 015 has no findings against it.** `plans/book-01/farming-findings.md` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> 015)". Its three glossary terms (radiation mist, pightle, the mouth) are already published as the author's-note block at the foot of the file, and the glossary marks 001–019 as published. The note block was left byte-identical.</p>
+<p>**Cross-chapter dependencies: none.** No number changed. All diegetic figures (twenty past two, half past three, four hours, thirty feet, 290 of 300 ewes, mile and a half, twenty-five past eleven, eight minutes to midnight, the midnight Seal cooldown) are untouched.</p>
+<p>**Main language changes** (all in `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span> lands on the chore. Em-dashes now 3 in ~2,900 prose words; `standing` reduced to literal uses.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

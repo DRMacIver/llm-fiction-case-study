@@ -1,0 +1,154 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are writing the bottom-of-chapter author&#x27;s notes for chapters 11–…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are writing the bottom-of-chapter author&#x27;s notes for chapters 11–…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a5a84520585ff1c34">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are writing the bottom-of-chapter author's notes for chapters 11–40 of a fiction serial. Working directory: <span class="redacted">redacted: private</span>. Work directly on disk; commit nothing (the main session commits).<br>
+<br>
+Read first, in full, in this order:<br>
+1. notes/author.md — the persona and its binding rules, INCLUDING the 2026-08-31 banned list ("worth saying plainly", "the X is the gamble", "is the plain record", cute-cryptic closers, anecdotes that don't physically make sense) and the autobiographical-claims log.<br>
+2. notes/author-note-exemplars.md — 26 exemplar notes. THESE ARE THE VOICE; never draft from the rules alone. The fact carries the delight; every note ends on a fact-snap, not a summary; specifics are loved. You may reuse an exemplar nearly wholesale when its term matches a placement, adapting pointers to the new chapter — but re-verify its facts (they were not all checked) and note the old chapter numbers are a different, deleted draft.<br>
+3. <span class="redacted">redacted sentence: unpublished prose</span><br>
+4. <span class="redacted">redacted sentence: unpublished prose</span><br>
+5. draft/book-01/scenes/11-*.md through 40-*.md — the thirty chapters (ls draft/book-01/scenes/). Read each scene before writing its note.<br>
+6. draft/book-01/author-notes/01-*.md .. 10-*.md — the accepted style for this batch, post-feedback.<br>
+<br>
+Do NOT read: chapters/, rewrite/, draft/book-01/rejected-act2/ (deleted; do not fetch from git history), summaries/, plans/book-01/arc-*.md, <span class="redacted">unpublished</span> notes/sealed/**, or any session transcript.<br>
+<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Format: no header, no "---", just note bodies: `**Term** — text`, blank line between notes. The heading em dash is the only em dash a note gets. EVERY chapter gets a file — where a chapter introduces no farming term worth a note, write a tangential note (something real, adjacent to what's on the page) rather than skipping.<br>
+<br>
+Hard constraints:<br>
+- Every fact real and stated at the confidence the evidence supports ("as far as I can find out" is allowed and means it). No invented citations, diaries, or specific documents you cannot vouch for. Numbers and dates only where you are confident.<br>
+- Real-world content only. One page-pointing clause max ("a frost list like Edwin's is that record"). Never annotate the story's devices, never confirm or hint at any of the story's mysteries — where a scene investigates the strange ground, the note explains the real METHOD (worm counts, controls, transects, chains, stakes) and says nothing about causes.<br>
+- Persona: first person allowed; enthusiasm said straight, no winking, no credentials-to-license-facts, no "not X but Y", no swerving triads, exclamation marks rare. One digression per chapter at most, and it must notice itself ("I'll stop."). Any NEW autobiographical claim you invent must be consistent with the bio and the log — and APPEND it to the log in notes/author.md under the third-draft section, with its chapter number.<br>
+- Placement: spend the long note where the thing is worked. The owed items above land at their listed chapters. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Old-numbering exemplars that match terms owed here (the chain, worm counts, stakes, cutting a sample, living soil, marl, hay-fire, casts and molehills, billhook, pightle, etc.) are your best raw material.<br>
+<br>
+Before finishing: re-read every file you wrote once, as a batch, checking (a) each fact would survive a sceptic, (b) no banned construction, (c) budgets, (d) no term explained twice across 01–40, (e) each anecdote physically makes sense. Fix what you find.<br>
+<br>
+Final message: a compact report — for each chapter, the terms placed and long/short; every new autobiographical claim added; every fact you were less than sure of and how you hedged it; anything you deferred past ch 40; any scene where you struggled to find a note and what you did. Raw report, no pleasantries.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required context files.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Read notes/author.md</p>
+<p>✅ 152 lines, 8623 chars</p>
+<p>🔧 Read notes/author-note-exemplars.md</p>
+<p>✅ 166 lines, 28863 chars</p>
+<p>🔧 Read notes/farming.md</p>
+<p>✅ 126 lines, 7489 chars</p>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ <span class="redacted">redacted: private</span>/draft/book-01/author-not… (List scene and note files)</p>
+<p>✅ 54 lines, 1448 chars — <span class="redacted">redacted: private</span>/draft/book-01/author-notes/: / 01-pellings-half-past-twelve-soft.md / 02-a-war-horse-on-a-milk-cart.md</p>
+<p>🔧 Bash: sed -n '1,200p' notes/canon/world/farming-glossary.md (Read glossary head)</p>
+<p>✅ 200 lines, 10763 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/author-notes &amp;&amp; for f in 0*.md 10*.md; do echo "====… (Read accepted notes 01-10)</p>
+<p>✅ 35 lines, 8101 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the scenes. Reading in batches.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 11-*.md 12-*.md 13-*.md 14-*.md 1… (Read scenes 11-20)</p>
+<p>✅ 27 lines, 2088 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 423 lines, 47765 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 21-*.md 22-*.md 23-*.md 24-*.md 2… (Dump scenes 21-30)</p>
+<p>✅ 1 lines, 115 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 523 lines, 67567 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 31-*.md 32-*.md 33-*.md 34-*.md 3… (Dump scenes 31-40)</p>
+<p>✅ 1 lines, 115 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 569 lines, 73167 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>I have all thirty scenes. Writing the notes now.</p>
+</div>
+
+<p>🔧 Bash: mkdir -p /tmp/claude-501/-Users-drmaciver-Projects-autoroad/d1679987-c781-4167-82f2-4fb2b… (Write all 30 note files)</p>
+<p>✅ 30 lines, 855 chars</p>
+
+<div class="assistant-prose">
+<p>Now the review pass.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/author-notes &amp;&amp; python3 - &lt;&lt;'EOF' import glob,re for… (Check dashes and banned constructions)</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/author-notes &amp;&amp; python3 - &lt;&lt;'EOF' p="27-the-cellar-a… (Soften drain fall figure)</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+
+<div class="assistant-prose">
+<p>Now the ledger and the autobiographical log.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' g="notes/canon/world/farming-glossary.md" t=open(g).read() old = """Def… (Append ledger and autobiographical log entries)</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/author-notes &amp;&amp; cat 11-*.md 19-*.md 26-*.md 32-*.md… (Re-read sample of notes)</p>
+<p>✅ 16 lines, 7055 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/author-notes &amp;&amp; python3 - &lt;&lt;'EOF' subs = { "19-the-t… (Remove rhetorical negation constructions)</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/author-notes &amp;&amp; cat 13-*.md 15-*.md 21-*.md 23-*.md… (Re-read remaining notes)</p>
+<p>✅ 23 lines, 10703 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/author-notes &amp;&amp; python3 - &lt;&lt;'EOF' subs={ "23-the-goo… (Final edits)</p>
+<p>✅ 2 lines, 11 chars — ok /       41</p>
+</details>
+
+<div class="assistant-prose">
+<p>Done. 30 note files written (`draft/book-01/author-notes/11-*.md` … `40-*.md`, filenames matching the scenes), ledger and persona log updated, nothing committed.</p>
+<p>**Placements** (L = long, s = short)</p>
+<p>| ch | notes |<br>
+|---|---|<br>
+| 11 | Muck (L); Bedding (s) |<br>
+| 12 | Naming fields, tithe maps (L); A root field (s) |<br>
+| 13 | Walking the boundary, Rogationtide (L); Counting a <span class="redacted">redacted: character</span> (s) |<br>
+| 14 | The manuring series, Broadbalk/Park Grass/sample archive (L) |<br>
+| 15 | Straight water, meanders + the levels + Old Bedford (L, digression) |<br>
+| 16 | Fairy rings (L); Clover (s) |<br>
+| 17 | Cutting a sample (L); Boxing a sample (s) — owed item |<br>
+| 18 | Living soil (L); Marl (s) — owed item |<br>
+| 19 | Counting the hay (L); The hungry gap (s) |<br>
+| 20 | Oilskin (L); Bread and cheese (s) |<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+| 22 | Drove roads (L); Mules (s) |<br>
+| 23 | Ash (L); Blackthorn (s) |<br>
+| 24 | Germination figures (L) |<br>
+| 25 | Verges and the parish, 1555 statute labour (L); Camber (s) |<br>
+| 26 | Windpumps (L); Reeds (s) |<br>
+| 27 | The fall (L); Keeping eels (s) — owed item |<br>
+| 28 | The rain-glass (L); Geese on the road (s) |<br>
+| 29 | Starlings (L); Reading a sward (s) |<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+| 31 | The rotation (L); A spit (s) — owed |<br>
+| 32 | Sold as one lot, malting barley and district reputation (L) |<br>
+| 33 | Sound at night (L) |<br>
+| 34 | The chain (L); The headland (s) — owed |<br>
+| 35 | Controls (L); Dating a molehill (s) — owed |<br>
+| 36 | Worm counts (L); A transect (s) — owed |<br>
+| 37 | Old grass (L); Two directions, dog commands (s) |<br>
+| 38 | Stakes (L); Seasoning (s) — owed |<br>
+| 39 | Days from a fixed day (L); Sand on a letter (s) |<br>
+| 40 | Worms by depth (L); Old burrows (s) |</p>
+<p>**New/re-made autobiographical claims** (appended to `notes/author.md` third-draft section): ch 15 driven the Old Bedford River (re-made); ch 23 watched a lane of ash go to dieback (new); ch 25 Roman ditches over roads (re-made); ch 27 the village arguing about damp (re-made); ch 30 stood by the Holme Fen post (re-made); ch 33 heard a road nine miles off one night and nothing the next (new); ch 36 monthly worm counts on familiar ground (new, job-consistent).</p>
+<p><span class="redacted">redacted sentence: medicine/disease</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**Thin chapters**: 13, 33 and 39 have almost no farming term on the page, so each got a tangential real note off something physically present (the boundary walk Edwin mentions; the west wind that changes the village's sound; the fixed-starting-day request in his letter). Ch 32 and 24 got a single long note rather than a long plus shorts, since there was one thing worth going on about.</p>
+</div>
+</body></html>

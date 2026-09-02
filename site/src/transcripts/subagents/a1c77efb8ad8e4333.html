@@ -1,0 +1,1294 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the synthesis stage of a prose-lint run over a 40-scene book…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the synthesis stage of a prose-lint run over a 40-scene book…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a1c77efb8ad8e4333">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the synthesis stage of a prose-lint run over a 40-scene book plus author's notes at <span class="redacted">redacted: private</span> (rules: tools/lint/rules.json).<br>
+CONFIRMED findings: [<br>
+ {<br>
+  "file": "scene 2",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "She sat at his kitchen table with her pack still on and looked round the room with open interest, and Edwin, filling the kettle, was aware of what she was seeing: a shelf of small labelled jars that a visitor might take for reagents, until she read a label, which said *beans*.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py (the deterministic gate the rule names) reports 25 runs of 8+ words shared with chapters/001-the-wrong-man.md, far above the &gt;=5 redraft threshold; the runs are whole sentences and dialogue exchanges, not shared proper nouns or restated canon facts, so the counter_example does not apply.",<br>
+  "keeper_note": "Author-context caveat for the human: this is accepted act-one prose, and DRMacIver named ch.001's Edwin/Peri dialogue as Peri's reference voice (feedback-opening-engine-not-entrance). Nothing on record exempts the text itself from §3.7, so the finding stands as measured; whether to redraft an already-accepted scene 02 with the source shut is his call, not the linter's."<br>
+ },<br>
+ {<br>
+  "file": "scene 3",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "Afterwards he went over it a good many times, and there had been a sign. She had gone still. Her eyes had moved left to right on nothing, twice.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reproduces 21 runs of 8+ words against chapters/001-the-wrong-man.md, well over the 5-run redraft threshold — though DRMacIver has previously called the original ch.001 dialogue 'Peri's reference', so the scale of the licence here is his call, not the lint's."<br>
+ },<br>
+ {<br>
+  "file": "scene 4",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "with a stranger's knot behind his breastbone and the tea things not cleared",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py confirms an 8+ word run against chapters/001-the-wrong-man.md.",<br>
+  "keeper_note": "Scene total is 4 runs, under the &gt;=5 redraft threshold: sentence-level replacement, source shut."<br>
+ },<br>
+ {<br>
+  "file": "scene 4",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "Mrs Tansy, who came in from Nether Wold on the dairy cart and was broad, and red-faced from the ride",<br>
+  "verdict": "CONFIRMED",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+ },<br>
+ {<br>
+  "file": "scene 4",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "\"Right,\" said Edwin. \"Sorry. Get your trowels out.\"",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Tool confirms 'right said edwin sorry get your trowels out' against chapters/001-the-wrong-man.md."<br>
+ },<br>
+ {<br>
+  "file": "scene 4",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "and went and sat on the end of the bench next to Widow Sepp",<br>
+  "verdict": "CONFIRMED",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+ },<br>
+ {<br>
+  "file": "scene 5",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "The scene contains 19 overlapping runs of 8+ words matching deleted chapters/002, chapters/001",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reproduces 19 runs, several of them 20+ words of verbatim dialogue from chapters/002 — far past the &gt;=5 threshold, so the scene needs a fresh redraft with the source shut, not sentence patching.",<br>
+  "keeper_note": ""<br>
+ },<br>
+ {<br>
+  "file": "scene 6",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "The knot behind his breastbone did nothing.",<br>
+  "verdict": "CONFIRMED",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+ },<br>
+ {<br>
+  "file": "scene 6",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "aimed at him until it had already happened",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Confirmed by overlap_check against chapters/001-the-wrong-man.md; note the same clause also stands in current scene 03, so any fix should treat both."<br>
+ },<br>
+ {<br>
+  "file": "scene 6",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "and went to bed at his usual hour",<br>
+  "verdict": "CONFIRMED",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "keeper_note": "Scene-level: 3 runs, all short and anodyne; no redraft warranted."<br>
+ },<br>
+ {<br>
+  "file": "scene 6",<br>
+  "rule_id": "simile-budget",<br>
+  "quote": "the way you have a horse by the head-collar, and you walk it",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Three 'the way' similes in 635 words (4.7/1000 against a max of 3), two of them the same horse vehicle in one paragraph.",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+ },<br>
+ {<br>
+  "file": "scene 7",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "She was at the ten o'clock the next morning. He saw her from the study window first, coming up the three long bends with the limp improved, and he had time while she climbed to consider his options.",<br>
+  "verdict": "CONFIRMED",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+ },<br>
+ {<br>
+  "file": "scene 8",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "Widow Sepp waited until the trowels were down. She had been watching Peri sideways all morning, and she spoke to the garden at large, the way she said most things. \"A grandmother of my grandmothers buried two children in a hunger year, and it has come down the family every winter since, in the same words each time.",<br>
+  "verdict": "CONFIRMED",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "keeper_note": ""<br>
+ },<br>
+ {<br>
+  "file": "scene 9",<br>
+  "rule_id": "dialect-grammar",<br>
+  "quote": "\"It come from the east with the Wystow post,\"",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Nonstandard past tense matching the rule's own example form ('when it come up'); 2026-08-31 ruling is plain modern English, so 'came'."<br>
+ },<br>
+ {<br>
+  "file": "scene 9",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "The Pellings' rain arrived at half past twelve, soft and warm, and was done by evening. Four hundred sheep had been sheared dry. Nobody remarked on it.",<br>
+  "verdict": "CONFIRMED",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "keeper_note": "Scene-level: no salvage — the dialect fix is moot until the scene is redrafted from the scene plan."<br>
+ },<br>
+ {<br>
+  "file": "scene 10",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "The morning after the parcel he got up early and gave the day more work than it needed.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reports 14 runs of 8+ words against chapters/003 and chapters/002, several running 30+ words verbatim including the entire final paragraph; well past the &gt;=5 threshold, so the scene needs a full redraft with the source shut, not sentence patching."<br>
+ },<br>
+ {<br>
+  "file": "scene 11",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "The reports on Peri Millbrook came up the hill the way news did, secondhand and improved on the way.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py confirms 15 runs of 8+ words against chapters/003, several spanning whole paragraphs and dialogue turns; well over the &gt;=5 threshold, so the scene needs a redraft from the scene plan with the old source shut, not sentence patching."<br>
+ },<br>
+ {<br>
+  "file": "scene 12",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "He delivered the market-day split himself later that morning, because it was feud season and the feud was his to arbitrate. The Marsh Barton and Upper Wold business concerned which parish's carts had precedence at the shared ford on market day.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reports 11 runs of 8+ words against chapters/003, several hundreds of words long — effectively the whole scene is the deleted draft; per the rule this requires a redraft with the source shut, not patching."<br>
+ },<br>
+ {<br>
+  "file": "scene 12",<br>
+  "rule_id": "dialect-grammar",<br>
+  "quote": "Girl come up special from the north with a sword, to fetch you for it.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Nonstandard past tense 'come' for 'came' is exactly the banned form ('when it come up'); the same speech also carries 'Heard you'd a quest on, Goodman', so the whole exchange needs plain modern English."<br>
+ },<br>
+ {<br>
+  "file": "scene 13",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "Scene 13: 15 overlapping 8+ word runs with chapters/003-the-improbability-engine.md",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reproduces the finding: 15 runs, several hundreds of words long — most of the scene is near-verbatim chapter 003; &gt;=5 runs means redraft with the source shut, not sentence patching."<br>
+ },<br>
+ {<br>
+  "file": "scene 13",<br>
+  "rule_id": "nominalised-absence",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "An abstract absence ('the silence') is the grammatical subject taking a verb — the exact pattern the rule names ('the stillness'); recast with Edwin or Peri as subject."<br>
+ },<br>
+ {<br>
+  "file": "scene 14",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "He read them in the wrong order, and knew it while he was doing it. She had picked the Wystow letter out for him, and he had not argued.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reports 11 runs of 8+ words against chapters/003 and 004, several hundreds of words long — effectively the entire scene is lifted; redraft with the source shut, not sentence patching.",<br>
+  "keeper_note": ""<br>
+ },<br>
+ {<br>
+  "file": "scene 14",<br>
+  "rule_id": "implication-stopped-short",<br>
+  "quote": "He heard himself say it.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Final line insinuates that he has already decided to go without saying so, and nothing adjacent cashes it out (scene ends there).",<br>
+  "keeper_note": ""<br>
+ },<br>
+ {<br>
+  "file": "scene 15",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "The entire scene (lines 3–48) overlaps with chapters/004-three-letters.md in 12 runs of 8+ words",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "I re-ran tools/overlap_check.py: 12 runs of 8+ words against chapters/004-three-letters.md, several hundreds of words long — the scene is effectively the deleted chapter; well over the &gt;=5-run redraft threshold, so it must be rewritten with the source shut, not patched."<br>
+ },<br>
+ {<br>
+  "file": "scene 16",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "You've stopped drafting,\" said Sorrel from the doorway, later, with a candle in her hand.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reports 9 runs of 8+ words against chapters/004-three-letters.md and 005-the-sample.md, several hundreds of words long — effectively the whole scene is the deleted draft; redraft with the source shut."<br>
+ },<br>
+ {<br>
+  "file": "scene 16",<br>
+  "rule_id": "sense",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "'rode to form' is not English idiom and the conditional's logic (riding in formation → badly packed box) does not parse without a reader stopping."<br>
+ },<br>
+ {<br>
+  "file": "scene 17",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "The rider came up the hill at twenty past eight in the morning. By every count Edwin could make, that was too early.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reports 15 runs of 8+ words against chapters/005-the-sample.md, several of them hundreds of words long - effectively the entire scene is the deleted draft; well over the &gt;=5 threshold, so redraft with the source shut, not sentence patching."<br>
+ },<br>
+ {<br>
+  "file": "scene 17",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "Frightened men do first and write after.",<br>
+  "verdict": "CONFIRMED",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "keeper_note": "KEEPER: \"Frightened men do first and write after.\" It is the scene's actual turn and is cashed out immediately by the box arriving ahead of the letter. <span class="redacted">redacted sentence: unpublished prose</span><br>
+ },<br>
+ {<br>
+  "file": "scene 18",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "Sorrel came and listened. Edwin watched her do it, the small stillness, the frown starting between her eyebrows and then stopping, the second try, longer.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reports 9 runs of 8+ words against chapters/005-the-sample.md and rewrite/.../008-where-are-the-worms.md, several of them hundreds of words long - effectively the entire scene is the deleted draft; far past the &gt;=5-run threshold, so redraft with the source shut, not sentence patching.",<br>
+  "keeper_note": ""<br>
+ },<br>
+ {<br>
+  "file": "scene 19",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "The study was quiet. Below in the garden a hoe was going. One of the farmwives had stayed to do the weedy bed's edges, against the bed's whole purpose, as she did every week.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reports 8 runs of 8+ words against chapters/005-the-sample.md, several of them hundreds of words long and effectively verbatim; well over the 5-run threshold, so the scene redrafts with the source shut rather than being patched.",<br>
+  "keeper_note": "Scene-level failure; no keeper. Every other finding here is moot until the redraft."<br>
+ },<br>
+ {<br>
+  "file": "scene 19",<br>
+  "rule_id": "ambiguous-word",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "The 'it' chain runs on the grass ('what happens to it in the spring') and then silently switches referent to the blight in the same sentence; the reader has to reverse to parse it. (Hunter filed this as 'sense'; the nearest rule in rules.json is ambiguous-word.)"<br>
+ },<br>
+ {<br>
+  "file": "scene 20",<br>
+  "rule_id": "sense",<br>
+  "quote": "He folded the oilskin along its new soft lines and laid it on the registers.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "The scene opens with the oilskin under the registers and closes with 'he moved the registers off the oilskin', so laying it on top mid-scene contradicts both ends without any move of the registers on the page."<br>
+ },<br>
+ {<br>
+  "file": "scene 21",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "Sorrel brought bread and cheese up at eight and took the sixth sample box down to the yard pump to scrub, and paused at the door with it under her arm.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reports 12 runs of 8+ words against deleted chapters/005 and 006, several hundreds of words long — effectively the whole scene is the old draft verbatim; far past the &gt;=5 redraft threshold, so redraft with the source shut rather than patch sentences."<br>
+ },<br>
+ {<br>
+  "file": "scene 22",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "He walked down to the Drovers at ten, under a sky he checked out of habit and found blameless...",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reproduces 8 runs of 8+ words against chapters/006-the-handover.md covering effectively the entire scene end to end; well over the &gt;=5 threshold, so this is a redraft-with-the-source-shut, not sentence patching."<br>
+ },<br>
+ {<br>
+  "file": "scene 24",<br>
+  "rule_id": "dialect-grammar",<br>
+  "quote": "East he had.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Object-fronted archaic inversion in narration; the 2026-08-31 ruling bans archaic inversion in speech and narration alike, and the preceding sentence ('did not ask how to spell it') already carries the beat in plain English."<br>
+ },<br>
+ {<br>
+  "file": "scene 28",<br>
+  "rule_id": "character-too-quick",<br>
+  "quote": "\"Two columns,\" said Peri, and got the notebook out and ruled them standing in the road, while a goose cart went round her. \"What my head says, shut-out, and where the lean went. Marked separately at night. Then in a month I know what my head is worth and what the Skill is worth, and the Weave gets priced against both. The books never do this.\"",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Edwin has only just said \"you have two instruments, not one\"; Peri immediately derives the whole separated-columns calibration scheme, its cadence, its month-long horizon and its pricing of the Weave against both - this is verbatim the rule's example, and the rule's own source cites this scene's comments."<br>
+ },<br>
+ {<br>
+  "file": "scene 30",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "The sheet has never once told anybody a field was coming up short.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Portable cap on Edwin's speech, and the scene is over budget: this plus \"reasons get given to strangers eventually, usually with an apology attached\" plus \"It isn't lost time. It's the first task\".",<br>
+  "keeper_note": "KEEPER: this one. It names the sheet and a specific failure (a field coming up short), is the argument Edwin has actually been making, and is the character who legitimately talks this way. Cut \"reasons get given to strangers eventually, usually with an apology attached\" instead - that one is fully portable and belongs to nobody."<br>
+ },<br>
+ {<br>
+  "file": "note 31",<br>
+  "rule_id": "sense",<br>
+  "quote": "A rotation that has run unchanged for twenty years is worth knowing about for its own sake, because it means nothing about how that field is farmed has changed either.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Garden-path: 'it means nothing' reads as a complete negation before the clause resolves, and 'for its own sake ... because' also undercuts itself (if it's evidence of something else, it isn't for its own sake); needs a second read."<br>
+ },<br>
+ {<br>
+  "file": "scene 32",<br>
+  "rule_id": "tech-level-anachronism",<br>
+  "quote": "beside the range",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "A kitchen range is 18th-19th century ironwork; in a pre-industrial parish kitchen this should be the hearth or fire, and per the rule it is flag-and-query rather than silently kept."<br>
+ },<br>
+ {<br>
+  "file": "scene 33",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "and I won't give you the other kind",<br>
+  "verdict": "CONFIRMED",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+ },<br>
+ {<br>
+  "file": "scene 33",<br>
+  "rule_id": "implication-stopped-short",<br>
+  "quote": "what a woman does with a loft like that over her head every night",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Closing line insinuates Mattie's situation and no adjacent sentence cashes it out; the scene ends on the unstated half."<br>
+ },<br>
+ {<br>
+  "file": "scene 33",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "A priest who tells you something he doesn't believe is worse than no priest.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Fully portable epigram, prints alone with no scene attached; scene is over budget and this is <span class="redacted">redacted: place</span>.",<br>
+  "keeper_note": "Keeper is Edwin's 'A man with something to hide doesn't usually do that.' — deictic 'that', meaningless lifted out."<br>
+ },<br>
+ {<br>
+  "file": "scene 33",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "A man with something to hide doesn't usually do that.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Counts against the budget, but it is the least portable of the three and survives as the keeper.",<br>
+  "keeper_note": "KEEPER."<br>
+ },<br>
+ {<br>
+  "file": "scene 33",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "A man with something to hide doesn't usually do that.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Scene is over the one-maxim cap (Ferrin's priest line, Edwin's, Peri's rejoinder all cap turns), but the hunter picked the wrong cut.",<br>
+  "keeper_note": "Keeper is this line (Edwin, deictic, in his own register); <span class="redacted">redacted: place</span> is Ferrin's 'A priest who tells you something he doesn't believe is worse than no priest.'"<br>
+ },<br>
+ {<br>
+  "file": "note 33",<br>
+  "rule_id": "sense",<br>
+  "quote": "A wind coming round to the west therefore takes a village's noise away from anybody standing east of it, all at once and quite completely, and puts it into the ears of somebody who was not listening.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Standard usage names a wind by where it comes FROM, so a west wind puts the east side downwind - the side the previous sentence says sound bends down toward - meaning the easterly listener should gain the noise, not lose it; the direction is inverted relative to the note's own physics."<br>
+ },<br>
+ {<br>
+  "file": "scene 34",<br>
+  "rule_id": "sense",<br>
+  "quote": "she wrote the day's figure on the door under the other eleven",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Line 35 works from 'the door's two' and the sums name exactly two prior chainings (end of Seedmonth, Weedmonth eight weeks on), so 'the other eleven' contradicts both the door count and the elapsed-time arithmetic."<br>
+ },<br>
+ {<br>
+  "file": "scene 34",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "what he says at his own gate he means",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Scene is over budget: Edwin's line 31 tail ('that's the best reason there is to run it') and Mattie's closer are both liftable maxims, so one must go.",<br>
+  "keeper_note": "KEEPER is Mattie's 'Ask him at his own gate, not in the street; what he says at his own gate he means' - tied to one named grazier and her own trade knowledge, the least portable of the two; Edwin's 'that's the best reason there is to run it' is the general, printable one and should be cut back to the fact."<br>
+ },<br>
+ {<br>
+  "file": "scene 37",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "A man who does that has usually decided what he'd have said yes to as well.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Three portable maxims in one scene against a budget of one: this line, \"Asking again is pushing, and a man pushed off a no will spend the next fortnight building the no stronger\", and Edwin's \"That's how it ought to be done everywhere, and mostly isn't.\"",<br>
+  "keeper_note": "KEEPER: \"A man who does that has usually decided what he'd have said yes to as well.\" It is the least portable of the three - it cannot stand alone without its antecedent (he decided the no in advance) - and it is the inference the whole scene turns on. Cut the \"Asking again is pushing...\" law and Edwin's \"everywhere, and mostly isn't\"; the latter is the most portable line in the scene and reads as the narrator grading his own character."<br>
+ },<br>
+ {<br>
+  "file": "scene 37",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "I'm not asking you to lie for me, and I'm not asking you to sit quiet on a danger.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "tools/overlap_check.py reports 1 run of 8+ words - \"i'm not asking you to lie for me\" - against chapters/011-measured-ground.md; one run means patch the sentence, not redraft the scene."<br>
+ },<br>
+ {<br>
+  "file": "scene 38",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "The day it needs me is the day it's failed.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Portable turn-capping maxim; the scene carries several, so it is part of a genuine overspend even though it is the one worth keeping.",<br>
+  "keeper_note": "KEEPER. Most particular of the set: it is about this instrument and Edwin's own removal from it, and it lands directly on the preceding 'Anybody can read this instrument.' Cut the others."<br>
+ },<br>
+ {<br>
+  "file": "scene 38",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "Instruments earn their keep on the day they surprise you.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Fully portable general principle about instruments, capping the turn; least stuck to particulars of the four and the first to cut.",<br>
+  "keeper_note": "Not the keeper; line 39 survives."<br>
+ },<br>
+ {<br>
+  "file": "scene 38",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "Instruments earn their keep on the day they surprise you.",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Budget counts narration and dialogue combined; the scene has at least three portable epigrams, and this one is the most universal, so it is over budget.",<br>
+  "keeper_note": "KEEPER for the scene is 'The day it needs me is the day it's failed.'"<br>
+ }<br>
+]<br>
+JUDGE-ADDED findings: [<br>
+ {<br>
+  "file": "scene 4",<br>
+  "rule_id": "causal-which-budget",<br>
+  "quote": "the compost cantrip, which is the spell people come for / One more thing, which I say to every class / the smell of it, which was sat and not sour",<br>
+  "reason": "Three trailing ', which' clauses in roughly 730 words is about 4.1 per 1,000, over the budget of 3; the middle one ('One more thing, which I say to every class') is the least load-bearing."<br>
+ },<br>
+ {<br>
+  "file": "scene 6",<br>
+  "rule_id": "quantity-of-it",<br>
+  "quote": "The whole of his trade was the difference between that and the Pellings' half past twelve.",<br>
+  "reason": "'The whole of his trade' is the flagged '[amount] of the' habit ('the whole of it continues to be a weird recurring phrase'); outside the regex but the same construction, and it lands as the paragraph's verdict."<br>
+ },<br>
+ {<br>
+  "file": "note 7",<br>
+  "rule_id": "cute-cryptic-closer",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "reason": "Fact-or-gesture ruling: FACT. It states the real reason stock survive a crisis, nothing withheld or decoded; passes as a closer."<br>
+ },<br>
+ {<br>
+  "file": "note 7",<br>
+  "rule_id": "aphorism-budget",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "reason": "Two portable general claims in a short note (this one and the closing \"the animal that lives...\"); if the note allows only one, the closer is the keeper - it is particular to nursing sick stock, while \"is a skill\" is generic and could be cut with no loss."<br>
+ },<br>
+ {<br>
+  "file": "scene 8",<br>
+  "rule_id": "negative-parallelism",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "reason": "The not-X-but-Y family with the \"but\" swapped for a semicolon - a denial of one alternative used to introduce the real one. Regex misses it; the construction is the banned habit."<br>
+ },<br>
+ {<br>
+  "file": "scene 14",<br>
+  "rule_id": "simile-budget",<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> like men in a doorway none of them wants to be first through ... like something dropped in a pond, only stopped ... Researchers cast like they footnote",<br>
+  "verdict": "CONFIRMED",<br>
+  "reason": "Five similes in one ~1,100-word scene against a budget of about two per chapter, with neighbouring paragraphs each carrying one. <span class="redacted">redacted sentence: unpublished prose</span><br>
+ },<br>
+ {<br>
+  "file": "scene 17",<br>
+  "rule_id": "aphorism-budget",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "reason": "Second portable narrator maxim in the scene, over the one-per-scene cap; the trailing clause is a general rule with no particulars attached."<br>
+ },<br>
+ {<br>
+  "file": "scene 20",<br>
+  "rule_id": "amount-of-it",<br>
+  "quote": "That's what four generations of it has bought.",<br>
+  "reason": "'[amount] of it' warning sign, and the verb disagrees with the plural head ('generations ... has'); the 'of it' also blurs what exactly four generations were of."<br>
+ },<br>
+ {<br>
+  "file": "scene 21",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "The bank does the arguing.",<br>
+  "reason": "Edwin's speeches repeatedly land on a portable maxim ('It costs them nothing and it makes them feel provided for', 'You've earned the right to be wrong in it', 'The pears are a long game', 'The bank does the arguing') — over the per-scene cap; keeper is 'The bank does the arguing', the most particular and least portable, tied to that specific ford procedure."<br>
+ },<br>
+ {<br>
+  "file": "scene 22",<br>
+  "rule_id": "amount-of-it",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "reason": "Flagged per the standing warning on \"[amount] of it\": the metaphor of spending being-right is portable and slightly clever in a closing paragraph where near-zero cleverness is the rule; worth a look on redraft, though it is particular enough to survive if kept."<br>
+ },<br>
+ {<br>
+  "file": "scene 23",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "a man who chooses what to wear every morning spends a minute a day on it, and had decided to have the minute back",<br>
+  "reason": "Two portable narrator generalisations in one paragraph (this and 'a man in the robe he has walked two days in is believed less'), against the one-per-scene cap. KEEPER: 'a man in the robe he has walked two days in is believed less' - particular to Edwin's errand and to being believed in a field; the minute-a-day one is the more portable, quotable-anywhere half."<br>
+ },<br>
+ {<br>
+  "file": "scene 24",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "a leaving was not finished until somebody had seen it leave",<br>
+  "reason": "Three narrator aphorisms in one scene: 'the climb was an opinion, and everybody present could read it', 'There was no destiny in her good morning.', and this one, which is repeated as a closing beat ('because the leaving was not finished yet'). Over the one-per-scene cap. KEEPER: 'the climb was an opinion, and everybody present could read it' - most particular, unliftable from Mrs Hobbet's shoulder and the hour. The leaving-is-not-finished line is the most portable and is stated twice; 'no destiny in her good morning' is a genre wink that would also survive lifting."<br>
+ },<br>
+ {<br>
+  "file": "note 24",<br>
+  "rule_id": "cute-cryptic-closer",<br>
+  "quote": "because then the number you have written down is a fact about your trays.",<br>
+  "reason": "Ruled fact, not gesture: the closer states plainly what a dried-out test measures instead of withholding it; no decoding required. No violation. Note is ~200 words, real-world content, author persona - within budget."<br>
+ },<br>
+ {<br>
+  "file": "scene 25",<br>
+  "rule_id": "negative-parallelism-split",<br>
+  "quote": "It isn't that nothing bad can happen on this road. It's that a great many people do small pieces of work, every year, so that the kind of bad thing you can plan for has nowhere to sit and wait.",<br>
+  "reason": "Denial sentence followed immediately by the affirming sentence with the same subject - the two-sentence form of not-X-but-Y; the contraction 'It's' dodges the regex but the construction is the banned habit, and it lands as the scene's thesis line."<br>
+ },<br>
+ {<br>
+  "file": "scene 26",<br>
+  "rule_id": "negative-parallelism-split",<br>
+  "quote": "\"So the secret isn't the sentence,\" said Peri, working it through. \"It's the doing.\"",<br>
+  "reason": "The split not-X-but-Y swap, and it is one of a cluster in this scene: \"Not drills and not mountains: real work\" and \"Not because they're lazy. Because by thirty...\". Individually defensible, but three instances of the same rhetorical negation shape in 1,500 words is the fingerprint."<br>
+ },<br>
+ {<br>
+  "file": "scene 28",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "An answer I can't place still keeps. A question I've worded badly is just spent. That's the other thing I've learned since the spring.",<br>
+  "reason": "Peri's speech about the third picture is capped with a portable two-part maxim plus an explicit lesson-label; the concrete part (\"it goes in the file with the date and stays there until it fits something\") already carries the point."<br>
+ },<br>
+ {<br>
+  "file": "note 29",<br>
+  "rule_id": "sense",<br>
+  "quote": "It is worth going to see one, and there are fewer places to do it every decade",<br>
+  "reason": "'one' has no antecedent noun: the nearest candidates are 'a falcon'/'a peregrine', and the thing meant (a murmuration/roost gathering) is never named as a noun in the paragraph."<br>
+ },<br>
+ {<br>
+  "file": "note 29",<br>
+  "rule_id": "cute-cryptic-closer",<br>
+  "quote": "Colour is the first thing to notice in a field and about the last thing to draw a conclusion from.",<br>
+  "reason": "Fact, not gesture - it states the rule plainly with nothing withheld; noted only as a portable maxim closer, which is within tolerance for a note."<br>
+ },<br>
+ {<br>
+  "file": "scene 30",<br>
+  "rule_id": "negative-parallelism-split",<br>
+  "quote": "It isn't lost time. It's the first task: she gets to be somebody feeding guests for an hour before she has to be somebody with a frightened field.",<br>
+  "reason": "The two-sentence denial-then-affirmation with the same subject; the contraction slips the regex but it is the banned construction."<br>
+ },<br>
+ {<br>
+  "file": "scene 30",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "somebody has given them a reason for it, and reasons get given to strangers eventually, usually with an apology attached",<br>
+  "reason": "Portable generalisation buried mid-speech; second aphorism in a scene budgeted for one."<br>
+ },<br>
+ {<br>
+  "file": "scene 30",<br>
+  "rule_id": "quiet-the-way-budget",<br>
+  "quote": "looked at the travellers the way a village looks at what the road brings in",<br>
+  "reason": "Doubled with \"following the conversation the way the whole street followed it\" a paragraph later; two \"the way X does Y\" comparisons in close succession."<br>
+ },<br>
+ {<br>
+  "file": "scene 31",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "Most people don't write down the days nothing happened, and then in a year nobody can say when the nothing stopped.",<br>
+  "reason": "This is the scene's actual portable line - it generalises to \"most people\" and would survive being printed alone; it caps Edwin's turn. It is the one maxim the scene can afford, so if kept it is the KEEPER and nothing else in the scene may cap this way."<br>
+ },<br>
+ {<br>
+  "file": "scene 31",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "Edwin had met a great many ways of ending a conversation, and recognised a good one, and began talking to Tess about the dog instead.",<br>
+  "reason": "Narrator generalising from Edwin's life to a class of conversational moves; with the \"days nothing happened\" line already spending the budget, this is the surplus. KEEPER is the dialogue line, which is stuck to Mattie's door; this one is <span class="redacted">redacted: place</span>."<br>
+ },<br>
+ {<br>
+  "file": "scene 32",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "That is what people want from an expert, and it is a reasonable thing to want, and he could not give it to them, because he did not have it.",<br>
+  "reason": "Portable narrator generalisation about experts and people in general; combined with the closing know/believe line and 'a village does not keep a thing like that from a mother' the scene runs at least two over the one-per-scene aphorism budget. KEEPER: the closing know/believe reason (most particular to Edwin and this room); 'That is what people want from an expert' is the most portable and should go first."<br>
+ },<br>
+ {<br>
+  "file": "scene 32",<br>
+  "rule_id": "generalising-clause-budget",<br>
+  "quote": "because a village does not keep a thing like that from a mother",<br>
+  "reason": "Narrator generalising outward from Mattie to villages and mothers in general; second such clause in the scene, over the one-per-3,500-words budget."<br>
+ },<br>
+ {<br>
+  "file": "scene 33",<br>
+  "rule_id": "verdict-clause-evaluative",<br>
+  "quote": "and underline it, which was fair",<br>
+  "reason": "Trailing 'which' clause delivering a narrator verdict on the action just described."<br>
+ },<br>
+ {<br>
+  "file": "scene 34",<br>
+  "rule_id": "verdict-clause-evaluative",<br>
+  "quote": "It was her fourth question of the morning and the best one.",<br>
+  "reason": "A trailing narrator grade on the beat, resting on three earlier questions the scene never shows; the ranking tells the reader how to score Tess instead of letting the question do it."<br>
+ },<br>
+ {<br>
+  "file": "scene 36",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "A mould has no reason to stop where one man's ground becomes another's.",<br>
+<span class="redacted">redacted sentence: medicine/disease</span> <span class="redacted">redacted sentence: medicine/disease</span><br>
+ },<br>
+ {<br>
+  "file": "scene 37",<br>
+  "rule_id": "type-of-person-clause",<br>
+  "quote": "the way a man answers a question he has been waiting for",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+ },<br>
+ {<br>
+  "file": "scene 38",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "It wants the same day every month, because a measurement that wanders about the calendar can't be compared with itself.",<br>
+  "reason": "Turn-capping, fully portable aphorism about measurement in general - a third maxim in the same conversation, and the cadence is identical to the other two."<br>
+ },<br>
+ {<br>
+  "file": "scene 38",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "is the qualification, and most grown people never sit it",<br>
+  "reason": "Fourth portable line, capping Edwin's turn with a general verdict on grown people; the exam metaphor is lifted straight out of the scene's particulars."<br>
+ },<br>
+ {<br>
+  "file": "scene 39",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "You alter the date the day the world alters, and you say in the letter what altered it.",<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Keeper: the particular middle, the one broken date and the eleven parishes still cross about it, which cannot travel out of this speaker's three hundred years."<br>
+ }<br>
+]<br>
+BORDERLINE findings: [<br>
+ {<br>
+  "file": "scene 1",<br>
+  "rule_id": "viewpoint-overreach",<br>
+  "quote": "She had rehearsed this on the road, more than once.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Rehearsal is fairly inferable from 'She drew herself up' plus the recited speech, but 'more than once' is the same unlicensed specificity DRMacIver flagged in 'four days on the road'; an inference-marked form would be safe."<br>
+ },<br>
+ {<br>
+  "file": "scene 1",<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "23 overlapping runs vs chapters/001-the-wrong-man.md and rewrite/.../001-four-ways-of-asking.md",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "tools/overlap_check.py confirms 23 runs, well over the 5-run redraft threshold, but scene 01 is the deliberately carried-forward accepted opening (ruling: original ch.001 dialogue is Peri's reference), so this needs an author exemption rather than a mechanical redraft."<br>
+ },<br>
+ {<br>
+  "file": "scene 6",<br>
+  "rule_id": "sense",<br>
+  "quote": "what you have instead is thirty thousand mornings of knowing what the air over the coast feels like when it is carrying and what it feels like when it is not",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Thirty thousand mornings is ~82 years against a man stated at three hundred and fifty (and 'three hundred years' of large workings eight lines later); readable as a subset of coast mornings, but the number sits low enough to snag a counting reader."<br>
+ },<br>
+ {<br>
+  "file": "scene 7",<br>
+  "rule_id": "implication-stopped-short",<br>
+  "quote": "Peri did not say whatever she was thinking.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Edwin-POV cannot report her thought, so withholding is legitimate, but 'whatever she was thinking' is the coy formulation the rule polices; a plain observable reaction would be safer - flag for the redraft rather than as a standalone violation."<br>
+ },<br>
+ {<br>
+  "file": "scene 8",<br>
+  "rule_id": "mirror-retort",<br>
+  "quote": "A great many people were taught it,",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "It is frame-reuse with a swapped ending, but the reuse is doing the work - Sepp quotes his own evasion back to pin the agency on him, and \"By you.\" is her own construction; a person correcting a phrase does this. Not worth cutting on its own, though it should be re-earned in the redraft rather than carried over."<br>
+ },<br>
+ {<br>
+  "file": "scene 11",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "whatever the girl's business is, you'll need feeding through it",<br>
+  "verdict": "BORDERLINE",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "keeper_note": "KEEPER: the only maxim-shaped line in the scene, and the least portable available (tied to Mrs Hobbet, the scones, and 'the girl's business'). No competing instance to weigh it against - 'Somebody has taught that girl compost this week' and 'She's keeping an open mind' are inferences/facts, not maxims."<br>
+ },<br>
+ {<br>
+  "file": "scene 13",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "A stupid question gets a true answer too, and it's still cost you the day.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Both cited lines are portable turn-enders, but 'Small things going wrong at the edges' is explicitly attributed to the books Peri reads (characterising quotation rather than her own coined maxim), so the scene may sit at one; if counted as two, the stupid-question line is the keeper.",<br>
+  "keeper_note": "KEEPER: 'A stupid question gets a true answer too, and it's still cost you the day.' — it is cashed out in her own one-question-a-day mechanic; 'Small things going wrong at the edges' is the generic genre line and would go."<br>
+ },<br>
+ {<br>
+  "file": "scene 13",<br>
+  "rule_id": "implication-stopped-short",<br>
+  "quote": "That's the third thing I've asked you for.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "The line does insinuate its point (three asks, three refusals) rather than state it, but it is a countable observation left deliberately dry and Edwin's refusal sits immediately above it; the hunter's stated reason (reader cannot enumerate the three) is a continuity concern, not this rule."<br>
+ },<br>
+ {<br>
+  "file": "scene 14",<br>
+  "rule_id": "ornament-wit",<br>
+  "quote": "like men in a doorway none of them wants to be first through",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "It does characterise the four reluctant signatories rather than being pure decoration, but it is still the narrator's simile on a neutral fact (signature placement) in a scene already dense with narrator similes.",<br>
+  "keeper_note": ""<br>
+ },<br>
+ {<br>
+  "file": "note 14",<br>
+  "rule_id": "sense",<br>
+  "quote": "from the beginning the people running them kept samples: soil and crop, dried, labelled, sealed in jars, season after season for a hundred and eighty years",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "The round figure is right for Broadbalk (1843, 183 years) but the sentence's plural 'them' sweeps in Park Grass (1856, 170), so the single span is loose rather than wrong; a reader who does the arithmetic on the two dates given two sentences earlier can notice the mismatch."<br>
+ },<br>
+ {<br>
+  "file": "scene 15",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "the books always start the trouble somewhere nobody's watching",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "It is a portable generalisation capping Peri's turn, but it is voiced as her book-reader's reasoning rather than narrator wisdom and it is the scene's only maxim, so it stays within budget.",<br>
+  "keeper_note": "KEEPER: this is the sole maxim in the scene and the most particular (it is Peri's stated method, not universal wisdom); nothing else needs cutting on this rule."<br>
+ },<br>
+ {<br>
+  "file": "scene 15",<br>
+  "rule_id": "sense",<br>
+  "quote": "Wystow lay beyond on the basin's dry rim, with its trial fields spread around it and the eastern extension somewhere out between, toward Fenholt.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Parsable from the preceding sentences (Fenholt, then Marsh's estates, then Wystow beyond), but 'the eastern extension' arrives undefined and 'somewhere out between' is vague enough to need a second pass; note also the hunter misquoted 'Wymstow'."<br>
+ },<br>
+ {<br>
+  "file": "note 15",<br>
+  "rule_id": "note-digression-discipline",<br>
+  "quote": "which is a strange thing for a seventeenth-century engineering compromise to have turned into.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Not the winking self-aware sign-off the 2026-08-31 ruling targets ('I'll stop') - it is authorial pleasure in the fact just stated, and the preceding sentence is already the last fact - but it does close the note on commentary rather than on the fact itself, so it is the author's call whether the wryness earns its place.",<br>
+  "keeper_note": ""<br>
+ },<br>
+ {<br>
+  "file": "scene 17",<br>
+  "rule_id": "viewpoint-overreach",<br>
+  "quote": "One signature this time, from a man alone at a desk at night, signing what four men in a doorway would not.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "\"one signature\" and \"four men\" are on the page, and \"alone at a desk at night\" reads as Edwin's picture of the writer rather than a reported fact - but it is stated flatly, without the \"by the state of the boots\" style warrant the rule's counter-example uses, so it is a judgement call for the redraft."<br>
+ },<br>
+ {<br>
+  "file": "scene 18",<br>
+  "rule_id": "description-list",<br>
+  "quote": "Edwin watched her do it, the small stillness, the frown starting between her eyebrows and then stopping, the second try, longer.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Three appositive items in a row do read as a list, but they are stages of an action Edwin is watching unfold rather than a catalogue of features, and the whole clause is bound to what he is doing; moot in any case, since the scene has to be redrafted for contamination."<br>
+ },<br>
+ {<br>
+  "file": "scene 19",<br>
+  "rule_id": "short-mode-requirement",<br>
+  "quote": "Most springs, when I was starting. There was a hunger year coming somewhere every year and I was the man trying to get in front of it, and I was frightened the way you are at that age, all the time and to no purpose.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "True that Edwin never speaks under six words here, but Sorrel does ('Lists.', 'Mm.'), the scene is short and deliberately gives Edwin the long registering mode; a warn worth carrying into the redraft, not a standalone defect."<br>
+ },<br>
+ {<br>
+  "file": "scene 21",<br>
+  "rule_id": "sense",<br>
+  "quote": "something has gone wrong enough that a dozen pear trees will be the least of it, but plant them anyway",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "The order two sentences earlier is 'two dozen pear whips and a dozen apple', so 'a dozen pear trees' halves the pears mid-paragraph; defensible as loose speech, but it sits close enough to the figure to read as a slip."<br>
+ },<br>
+ {<br>
+  "file": "scene 21",<br>
+  "rule_id": "sense",<br>
+  "quote": "If he was not, she took that too, and he would sit down and write out his notes for the fourth lesson, the one about where a tree keeps its next year, because it was the one lesson in the course she had never liked teaching",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "'he would sit down' is meant as tonight-before-leaving, but reads inside the 'if he was not back' branch, and the next exchange ('Write your own version') half-cancels the notes he has just been said to write; needs a re-read to parse."<br>
+ },<br>
+ {<br>
+  "file": "note 24",<br>
+  "rule_id": "sense",<br>
+  "quote": "The one way to ruin the test is to let the trays dry out for an afternoon",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Drying out is the classic killer, but it is not literally the only way to ruin a germination test (mould, heat, wrong temperature), so 'the one way' overclaims slightly in a note whose farming facts are meant to be real facts; the following clause does give the reason, so it is emphasis rather than nonsense.",<br>
+  "keeper_note": ""<br>
+ },<br>
+ {<br>
+  "file": "scene 26",<br>
+  "rule_id": "lossy-conversation-budget",<br>
+  "quote": "\"Can I ask you something?\" she said... \"Ask.\" \"How do I get stronger?\"",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "The scene is ~1,519 words (under the 2,000-word budget window) and does contain friction: Edwin deliberately answers \"the part you didn't ask\", Peri cuts into his explanation with \"And yours got emptied\", and she re-raises a thing he already told her on the first afternoon. It is still a frictionless, high-comprehension exchange overall, so worth a look, but not a clean violation."<br>
+ },<br>
+ {<br>
+  "file": "scene 28",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "it meant an idea was being taken apart and put back together facing the other way",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "It is narrator generalisation but stays welded to Peri's specific stop in the road; it only counts as an overspend because the scene also carries Edwin's fully portable \"Worth isn't truth\" and Peri's \"An answer I can't place still keeps. A question I've worded badly is just spent.\"",<br>
+  "keeper_note": "KEEPER: this line - it is the most particular and least printable-alone of the three. Cut or de-aphorise \"Worth isn't truth.\" (Edwin's surrounding definition of worth already does the work) and Peri's closing pair of maxims."<br>
+ },<br>
+ {<br>
+  "file": "scene 30",<br>
+  "rule_id": "sense",<br>
+  "quote": "two days of it was not a line yet anyway",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "\"A line\" (a trend across days of marking) is inferable but never anchored on the page, and the phrasing also trips the \"[amount] of it\" warning sign; worth an author look."<br>
+ },<br>
+ {<br>
+  "file": "note 30",<br>
+  "rule_id": "sense",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Grammatical (a 'that'-clause after the copula), but it follows a parallel noun-phrase complement ('the peat simply packing down'), so the clause invites one wrong parse before it resolves; a mild garden path, not a sense error."<br>
+ },<br>
+ {<br>
+  "file": "scene 31",<br>
+  "rule_id": "sense",<br>
+  "quote": "Grass out of the rings, for four days, and then they left the farm.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "\"Grass out of the rings\" reads naturally as grass taken from inside the rings and matches the aborted \"grazing inside the -\", but the preposition does stall a reader for a beat, so it is worth a rephrase query rather than a confirmed error."<br>
+ },<br>
+ {<br>
+  "file": "scene 32",<br>
+  "rule_id": "theme-stated",<br>
+  "quote": "Because nobody in that kitchen had asked him to believe them. They had asked him to know, and he did not. She had not been asked to know anything, and had promised only what she could keep.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "It is Edwin's particular reason about this kitchen (permitted by the revised tidy-button scope), but the know/believe pairing is written as a portable chiastic principle about authority, so it reads half as thesis; the last sentence is the portable half.",<br>
+  "keeper_note": "If anything survives here, keep the first two sentences (stuck to that kitchen); the abstracting third, 'She had not been asked to know anything, and had promised only what she could keep,' is the portable one."<br>
+ },<br>
+ {<br>
+  "file": "note 32",<br>
+  "rule_id": "sense",<br>
+  "quote": "The difference is regularly the same field, the same seed, the same farmer, and a wet fortnight in August.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Literally self-contradictory (a difference cannot be 'the same field'); the intended sense - two grades off the same everything, separated only by August weather - is recoverable but takes a second pass, and the list makes the weather read as one more sameness rather than the one variable."<br>
+ },<br>
+ {<br>
+  "file": "scene 33",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "A man with something to hide might do exactly that, if he were clever.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Not independently portable — a rejoinder that only works attached to Edwin's line; it stands or falls with the keeper exchange."<br>
+ },<br>
+ {<br>
+  "file": "scene 34",<br>
+  "rule_id": "motive-off-page",<br>
+  "quote": "Peri with the notebook and without the sword, which she had left standing against the dairy wall unasked and unremarked",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "The act is deliberate and the narration flags its own silence, but the motive is legible in context (a chaining party in a barley field, a priest at the gate she is pointedly not arming against); it reads as restraint rather than withholding, though 'unasked and unremarked' is the phrase doing the teasing."<br>
+ },<br>
+ {<br>
+  "file": "scene 35",<br>
+  "rule_id": "aphorism-budget",<br>
+  "quote": "That's what the boredom buys. There's no other coin that buys it.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "It is the scene's only narrator/speaker aphorism, so within the one-per-scene budget, but the second sentence ('no other coin') is the portable flourish - liftable and printable alone, unlike the first, which is anchored to the three hundred boring afternoons just described.",<br>
+  "keeper_note": "Keeper for the scene: 'That's what the boredom buys' - particular to the work just shown. The follow-on 'There's no other coin that buys it' is the portable half and is the cuttable part if the budget is tightened."<br>
+ },<br>
+ {<br>
+  "file": "scene 36",<br>
+  "rule_id": "sense",<br>
+  "quote": "which is the one thing those two men said to your mother, Tess, that wasn't foolish; it was only wrong.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "The vocative reading is the correct one (Edwin is addressing Tess about Mattie), but the comma-vocative sits exactly where an apposition would, and a reader can misparse 'your mother, Tess' as naming the mother - a real one-beat stumble, not a factual error."<br>
+ },<br>
+ {<br>
+  "file": "scene 36",<br>
+  "rule_id": "short-mode-requirement",<br>
+  "quote": "Now I'll say mine,",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "The quote is misidentified - it is the opening of a long speech, not a short turn - but the underlying observation holds: Edwin has no turn under six words anywhere in the scene, so his voice is never demonstrated in short mode; defensible in a set-piece argument scene, worth noting not fixing."<br>
+ },<br>
+ {<br>
+  "file": "scene 36",<br>
+  "rule_id": "windup-tag-budget",<br>
+  "quote": "said Peri, in the tone of somebody checking a term of the agreement rather than fighting it: the file was hers; that had been settled on the causeway.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "The biography clause itself is 15 words, at the limit, and it is the scene's only windup tag (well inside 1/3,500); but the post-colon gloss continues the same biography in the same sentence, which is what the rule asks to be split off."<br>
+ },<br>
+ {<br>
+  "file": "scene 37",<br>
+  "rule_id": "ornament-wit",<br>
+  "quote": "which for Peri was a long time",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "The funny thing is the narrator's grade on a neutral fact (a silence), not an event or a reaction - but it is sourced in an established character trait and is one clause, so it sits at the edge rather than over it."<br>
+ },<br>
+ {<br>
+  "file": "scene 38",<br>
+  "rule_id": "nominalised-absence",<br>
+  "quote": "until the silence started under his fingers",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "'The silence' here is the story's concrete, touch-detectable dead ground rather than an abstract absence, and 'started' is a physical boundary, not a mind-state verb - but it is still an absence-noun taking a verb, and a subject like 'the dead ground' or a recast on Edwin's hands would remove the tell entirely."<br>
+ },<br>
+ {<br>
+  "file": "scene 39",<br>
+  "rule_id": "unanswered-question",<br>
+  "quote": "\"Why six?\" Peri had her pencil on the table, not writing, which was her way of promising the answer would go in the book later.",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "The reply's first sentence does answer in usable terms (the two weeks dies in nine days, so the date moves tonight) rather than fobbing her off with an epigram, but the specific choice of six weeks over any other number is never grounded, so the number itself goes unexplained."<br>
+ },<br>
+ {<br>
+  "file": "scene 40",<br>
+  "rule_id": "jukebox-flourish",<br>
+  "quote": "like the streets of a town with nobody in it",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "It does a real job - structures made by inhabitants that never had inhabitants, cashed out immediately by 'Not emptied ... Nothing had been in them to die' - but the town/streets figure is drawn from outside the scene's own material and is the kind of empty-place image transplantable to any story; keep only if the author wants the human-scale echo."<br>
+ },<br>
+ {<br>
+  "file": "scene 40",<br>
+  "rule_id": "sense",<br>
+  "quote": "which if it lives there means the ground at that depth is not what the census says two feet higher",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Parses on a second pass (the census reading taken higher up does not describe the deep spit), but the scene has just reported the census as covering all three depths at each hole, so 'says two feet higher' sits awkwardly against that and makes the reader re-read to locate the reference point."<br>
+ },<br>
+ {<br>
+  "file": "scene 40",<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "habits are the only thing he'd let an instrument see",<br>
+  "verdict": "BORDERLINE",<br>
+  "reason": "Peri's line is conditional on 'if he is what I think', is bound to the Weave-instrument premise, and is immediately challenged by Edwin ('is that evidence, or is it the theory protecting itself?') - it functions as a setup that gets punctured rather than a portable cap, so the scene is arguably at budget with one maxim, not over.",<br>
+  "keeper_note": "If ruled over budget, the KEEPER is Peri's 'habits are the only thing he'd let an instrument see' - the most particular and least portable of the three, since it names this priest and this instrument. Edwin's 'It looks like the truth. The truth mostly does.' is the fully portable one and would be <span class="redacted">redacted: place</span>, and Peri's earlier 'It looks strange on the page, believing and doubting in the same line' is a third near-maxim in the same exchange worth watching."<br>
+ }<br>
+]<br>
+FALSE-POSITIVES (rule_id + quote only): [<br>
+ {<br>
+  "file": "scene 1",<br>
+  "rule_id": "announce-before-deliver"<br>
+ },<br>
+ {<br>
+  "file": "scene 1",<br>
+  "rule_id": "implication-stopped-short"<br>
+ },<br>
+ {<br>
+  "file": "scene 1",<br>
+  "rule_id": "line-without-want"<br>
+ },<br>
+ {<br>
+  "file": "scene 3",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 3",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 3",<br>
+  "rule_id": "maxim-capped-speech"<br>
+ },<br>
+ {<br>
+  "file": "scene 3",<br>
+  "rule_id": "viewpoint-overreach"<br>
+ },<br>
+ {<br>
+  "file": "scene 4",<br>
+  "rule_id": "implication-stopped-short"<br>
+ },<br>
+ {<br>
+  "file": "scene 4",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 4",<br>
+  "rule_id": "nominalised-absence"<br>
+ },<br>
+ {<br>
+  "file": "scene 5",<br>
+  "rule_id": "obliqueness-unpaid"<br>
+ },<br>
+ {<br>
+  "file": "scene 5",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 6",<br>
+  "rule_id": "obliqueness-unpaid"<br>
+ },<br>
+ {<br>
+  "file": "scene 7",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 7",<br>
+  "rule_id": "generalising-clause-budget"<br>
+ },<br>
+ {<br>
+  "file": "note 7",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 8",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 10",<br>
+  "rule_id": "fragment-closer-budget"<br>
+ },<br>
+ {<br>
+  "file": "scene 10",<br>
+  "rule_id": "motive-off-page"<br>
+ },<br>
+ {<br>
+  "file": "scene 12",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 12",<br>
+  "rule_id": "implication-stopped-short"<br>
+ },<br>
+ {<br>
+  "file": "scene 13",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 13",<br>
+  "rule_id": "cryptic-dialogue"<br>
+ },<br>
+ {<br>
+  "file": "scene 14",<br>
+  "rule_id": "dialect-grammar"<br>
+ },<br>
+ {<br>
+  "file": "scene 15",<br>
+  "rule_id": "tech-level-anachronism"<br>
+ },<br>
+ {<br>
+  "file": "scene 16",<br>
+  "rule_id": "weak-comic-beat-flat"<br>
+ },<br>
+ {<br>
+  "file": "scene 16",<br>
+  "rule_id": "lossy-conversation-budget"<br>
+ },<br>
+ {<br>
+  "file": "scene 17",<br>
+  "rule_id": "announce-before-deliver"<br>
+ },<br>
+ {<br>
+  "file": "scene 17",<br>
+  "rule_id": "unlocated-narration"<br>
+ },<br>
+ {<br>
+  "file": "scene 20",<br>
+  "rule_id": "speaker-grammar"<br>
+ },<br>
+ {<br>
+  "file": "note 21",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 22",<br>
+  "rule_id": "viewpoint-overreach"<br>
+ },<br>
+ {<br>
+  "file": "scene 22",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "note 22",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 23",<br>
+  "rule_id": "description-list"<br>
+ },<br>
+ {<br>
+  "file": "scene 24",<br>
+  "rule_id": "worldbuilding-to-save-a-line"<br>
+ },<br>
+ {<br>
+  "file": "scene 25",<br>
+  "rule_id": "long-build-short-drop-budget"<br>
+ },<br>
+ {<br>
+  "file": "scene 25",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "note 26",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 27",<br>
+  "rule_id": "system-terminology"<br>
+ },<br>
+ {<br>
+  "file": "note 27",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "note 28",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 29",<br>
+  "rule_id": "fragment-closer-budget"<br>
+ },<br>
+ {<br>
+  "file": "scene 29",<br>
+  "rule_id": "generalising-clause-budget"<br>
+ },<br>
+ {<br>
+  "file": "scene 29",<br>
+  "rule_id": "system-terminology"<br>
+ },<br>
+ {<br>
+  "file": "note 29",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 30",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "note 30",<br>
+  "rule_id": "unexplained-specialist-term"<br>
+ },<br>
+ {<br>
+  "file": "scene 31",<br>
+  "rule_id": "maxim-capped-speech"<br>
+ },<br>
+ {<br>
+  "file": "scene 31",<br>
+  "rule_id": "line-without-want"<br>
+ },<br>
+ {<br>
+  "file": "scene 31",<br>
+  "rule_id": "tech-level-anachronism"<br>
+ },<br>
+ {<br>
+  "file": "scene 32",<br>
+  "rule_id": "maxim-capped-speech"<br>
+ },<br>
+ {<br>
+  "file": "scene 33",<br>
+  "rule_id": "generalising-clause-budget"<br>
+ },<br>
+ {<br>
+  "file": "scene 34",<br>
+  "rule_id": "italics-misplaced"<br>
+ },<br>
+ {<br>
+  "file": "scene 35",<br>
+  "rule_id": "maxim-capped-speech"<br>
+ },<br>
+ {<br>
+  "file": "scene 36",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 37",<br>
+  "rule_id": "weak-comic-beat-flat"<br>
+ },<br>
+ {<br>
+  "file": "scene 37",<br>
+  "rule_id": "dialect-grammar"<br>
+ },<br>
+ {<br>
+  "file": "scene 39",<br>
+  "rule_id": "sense"<br>
+ },<br>
+ {<br>
+  "file": "scene 39",<br>
+  "rule_id": "tech-level-anachronism"<br>
+ },<br>
+ {<br>
+  "file": "scene 40",<br>
+  "rule_id": "implication-stopped-short"<br>
+ },<br>
+ {<br>
+  "file": "scene 40",<br>
+  "rule_id": "ornament-wit"<br>
+ },<br>
+ {<br>
+  "file": "note 40",<br>
+  "rule_id": "unexplained-specialist-term"<br>
+ },<br>
+ {<br>
+  "file": "note 40",<br>
+  "rule_id": "note-explains-the-story"<br>
+ }<br>
+]<br>
+Produce a markdown report: (1) confirmed findings grouped by file with quotes, deduped (the same quote flagged under two rules is one finding), ranked by severity; (2) borderlines separately; (3) recurrences - the same construction confirmed 2+ times across files is a candidate new tier=regex rule; draft the regex; (4) per-rule false-positive counts and, for any rule with 3+ FPs, a proposed counter_example or narrowing. Do not rewrite any prose. Return the report as your final text.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p># Prose-lint synthesis — Book 1 (40 scenes + author's notes)</p>
+<p>Scope: `draft/book-01/scenes/`, rules `tools/lint/rules.json`. 55 CONFIRMED, 40 judge-added, 43 borderline, 64 false positives.</p>
+<p>---</p>
+<p>## 1. Confirmed findings, by severity</p>
+<p>### Tier A — scene-level contamination (redraft with the source shut; ≥5 runs of 8+ words)</p>
+<p>`contamination-overlap` per `tools/overlap_check.py`. These are not patchable; the rule's own remedy at ≥5 runs is a fresh draft from the scene plan with the deleted chapter closed. **Every other finding inside these scenes is moot until the redraft** and should be carried forward as a checklist, not fixed in place.</p>
+<p>| Scene | Runs | Source |<br>
+|---|---|---|<br>
+| 5 | 19 | chapters/002, 001 |<br>
+| 7 | 16 | chapters/002 |<br>
+| 17 | 15 | chapters/005 |<br>
+| 11 | 15 | chapters/003 |<br>
+| 13 | 15 | chapters/003 |<br>
+| 8 | 14 | chapters/002 |<br>
+| 10 | 14 | chapters/003, 002 |<br>
+| 9 | 12 | chapters/002 |<br>
+| 15 | 12 | chapters/004 |<br>
+| 21 | 12 | chapters/005, 006 |<br>
+| 12 | 11 | chapters/003 |<br>
+| 14 | 11 | chapters/003, 004 |<br>
+| 16 | 9 | chapters/004, 005 |<br>
+| 18 | 9 | chapters/005, rewrite/008 |<br>
+| 19 | 8 | chapters/005 |<br>
+| 22 | 8 | chapters/006 |</p>
+<p>Several of these (12, 13, 14, 15, 17, 21, 22) have individual runs *hundreds of words* long — the scene is effectively the deleted chapter.</p>
+<p>**Author decision required, not a lint call — scenes 1, 2, 3.** Scene 2 (25 runs), scene 3 (21), scene 1 (23, filed borderline) are accepted act-one prose, and DRMacIver named ch.001's Edwin/Peri dialogue as Peri's reference voice (`feedback-opening-engine-not-entrance`). Nothing on record exempts the *text* from §3.7. The measurement stands; whether accepted openings get an exemption or a redraft is his ruling.</p>
+<p>### Tier B — sentence-level contamination (patch, under threshold)</p>
+<p>- **Scene 4** (4 runs): "with a stranger's knot behind his breastbone and the tea things not cleared"; "Mrs Tansy, who came in from Nether Wold on the dairy cart…"; "\"Right,\" said Edwin. \"Sorry. Get your trowels out.\""; "and went and sat on the end of the bench next to Widow Sepp".<br>
+- **Scene 6** (3 runs): "The knot behind his breastbone did nothing."; "aimed at him until it had already happened" (*also stands in current scene 3 — fix both*); "and went to bed at his usual hour".<br>
+- **Scene 33** (1): "and I won't give you the other kind" (vs `rewrite/.../GATE.md`).<br>
+- **Scene 37** (1): "I'm not asking you to lie for me".</p>
+<p>### Tier C — sense / continuity errors (reader stops or is misled)</p>
+<p>- **Scene 20** — "He folded the oilskin along its new soft lines and laid it on the registers." Scene opens with the oilskin *under* the registers and closes with "he moved the registers off the oilskin"; nothing moves them on the page.<br>
+- **Scene 34** — "she wrote the day's figure on the door under the other eleven". Line 35 works from "the door's two", and the elapsed-time sums name exactly two prior chainings. Contradicts both the door count and the arithmetic.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> "Rode to form" is not idiom; the conditional does not parse.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> The "it" chain runs on the grass, then switches referent to the blight mid-sentence. (Filed `sense`; nearest rule is `ambiguous-word`.) *Moot — scene 19 redrafts.*<br>
+- **Note 31** — "worth knowing about for its own sake, because it means nothing about how that field is farmed has changed either." Garden path on "it means nothing"; and "for its own sake … because" undercuts itself.<br>
+- **Note 33** — "A wind coming round to the west therefore takes a village's noise away from anybody standing east of it". A west wind puts the *east* side downwind, the side the note's own preceding physics says gains the sound. Direction inverted.<br>
+- **Note 29** — "It is worth going to see one" — "one" has no antecedent noun; the murmuration/roost is never named.<br>
+- **Scene 20** — "That's what four generations of it has bought." Plural head with singular verb, plus the flagged `[amount] of it` habit blurring what the generations were *of*.</p>
+<p>### Tier D — canon/register violations</p>
+<p>- **Scene 9** — "It come from the east with the Wystow post" → `came`. (Moot; scene redrafts.)<br>
+- **Scene 12** — "Girl come up special from the north with a sword"; the same speech also carries "Heard you'd a quest on, Goodman". Plain modern English per the 2026-08-31 ruling. (Moot; scene redrafts.)<br>
+- **Scene 24** — "East he had." Object-fronted archaic inversion in narration; the preceding sentence already carries the beat plainly.<br>
+- **Scene 32** — "beside the range". A kitchen range is 18th–19th c. ironwork; flag-and-query for hearth/fire.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Recast on Edwin or Peri. (Moot; scene redrafts.)<br>
+- **Scene 28** — `character-too-quick`. Edwin has only just said "you have two instruments, not one" and Peri derives the entire separated-columns scheme, its cadence, its month horizon and its pricing of the Weave against both, standing in the road. This is verbatim the rule's own example, and the rule cites this scene's comments as its source. Needs a beat of not-getting-it.</p>
+<p>### Tier E — budget overspends (aphorism / maxim / simile / clause)</p>
+<p>Presented as **keeper + cut**, per scene. Nothing here needs rewriting from scratch; each is one line out.</p>
+<p>| Scene | Keeper | Cut |<br>
+|---|---|---|<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+| 14 (simile ×5 in ~1,100 w) | "like something dropped in a pond, only stopped" — grown from the scene's material, farmer's voice | the tray; the nephew-and-rich-uncle; the doorway; "Researchers cast like they footnote" |<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+| 23 | "a man in the robe he has walked two days in is believed less" | "spends a minute a day on it, and had decided to have the minute back" |<br>
+| 24 (×3) | "the climb was an opinion, and everybody present could read it" | "a leaving was not finished until somebody had seen it leave" (stated twice); "There was no destiny in her good morning." (genre wink) |<br>
+| 28 (×3) | "an idea was being taken apart and put back together facing the other way" | "Worth isn't truth."; "An answer I can't place still keeps. A question I've worded badly is just spent. That's the other thing I've learned since the spring." |<br>
+| 30 (×3) | "The sheet has never once told anybody a field was coming up short." | "reasons get given to strangers eventually, usually with an apology attached" |<br>
+| 31 (×2) | "Most people don't write down the days nothing happened…" (Mattie's door) | "Edwin had met a great many ways of ending a conversation, and recognised a good one" |<br>
+| 32 (×3) | the closing know/believe reason (first two sentences only) | "That is what people want from an expert…"; "because a village does not keep a thing like that from a mother" |<br>
+| 33 (×3) | "A man with something to hide doesn't usually do that." (deictic, Edwin's register) | Ferrin's "A priest who tells you something he doesn't believe is worse than no priest." |<br>
+| 34 (×2) | Mattie's "Ask him at his own gate…; what he says at his own gate he means" | Edwin's "that's the best reason there is to run it" → cut back to the fact |<br>
+<span class="redacted">redacted sentence: medicine/disease</span><br>
+| 37 (×3) | "A man who does that has usually decided what he'd have said yes to as well." | "Asking again is pushing…"; "That's how it ought to be done everywhere, and mostly isn't." (narrator grading his own character — most portable line in the scene) |<br>
+| 38 (×4) | "The day it needs me is the day it's failed." | "Instruments earn their keep on the day they surprise you."; "a measurement that wanders about the calendar can't be compared with itself"; "is the qualification, and most grown people never sit it" |<br>
+| 39 (×2) | the particular middle — the one broken date, the eleven parishes still cross | "a written date gets altered while it's still alive"; "You alter the date the day the world alters, and you say in the letter what altered it." Also: the turn is announced as a lesson ("the part I'd have you learn tonight and keep for life") |<br>
+| 21 | "The bank does the arguing." | "It costs them nothing and it makes them feel provided for"; "You've earned the right to be wrong in it"; "The pears are a long game" *(moot — scene redrafts)* |<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Also: **scene 4** `causal-which-budget` — three trailing ", which" clauses in ~730 w (4.1/1000 vs 3); cut "One more thing, which I say to every class". **Scene 30** `quiet-the-way-budget` — "the way a village looks at what the road brings in" doubled with "the way the whole street followed it" a paragraph later. **Scene 37** `type-of-person-clause` — "the way a man answers a question he has been waiting for" (the sheep-watching and the speed of the no already deliver it). **Scenes 33/34** `verdict-clause-evaluative` — "and underline it, which was fair"; "It was her fourth question of the morning and the best one" (grades Tess against three questions never shown).</p>
+<p>### Tier F — implication stopped short</p>
+<p>- **Scene 14** — "He heard himself say it." Final line; the decision to go is insinuated and nothing cashes it. *(Moot; scene redrafts.)*<br>
+- **Scene 33** — "what a woman does with a loft like that over her head every night." Closing line ends on the unstated half.</p>
+<p>---</p>
+<p>## 2. Borderlines (author's call)</p>
+<p>Grouped; each needs a ruling rather than a fix.</p>
+<p>**Exemption questions.** Scene 1 contamination (23 runs) — carried-forward accepted opening; needs an explicit written exemption or it will re-fire every run.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Note 14, "a hundred and eighty years" right for Broadbalk (1843) but the plural "them" sweeps in Park Grass (1856, 170). Scene 21, "a dozen pear trees" against "two dozen pear whips" two sentences earlier.</p>
+<p>**Parse stumbles, not errors.** Scene 15, "the eastern extension" arrives undefined. Scene 21, "he would sit down and write out his notes" reads inside the *if he was not back* branch. Scene 31, "Grass out of the rings". Scene 36, "your mother, Tess" misparses as apposition. Note 30, garden path on "most of it is that peat…". Note 32, "The difference is regularly the same field" is literally self-contradictory. Scene 40, "what the census says two feet higher" against a census stated to cover all three depths. Note 24, "The one way to ruin the test" overclaims in a note whose facts are meant to be real facts.</p>
+<p>**Viewpoint.** Scene 1, "She had rehearsed this on the road, more than once" — "more than once" is the unlicensed specificity DRMacIver flagged in "four days on the road". Scene 17, "alone at a desk at night" stated flatly without a warrant.</p>
+<p>**Withholding.** Scene 7, "Peri did not say whatever she was thinking" — legitimate in Edwin POV but the coy formulation. Scene 13, "That's the third thing I've asked you for." Scene 34, "unasked and unremarked" is the phrase doing the teasing.</p>
+<p>**Budgets at the edge.** Scenes 11, 13, 15, 35, 40 each sit at one maxim; keepers noted in the source data. Scene 40 `jukebox-flourish`, "like the streets of a town with nobody in it" — does real work but drawn from outside the scene's material. Scene 36 `windup-tag-budget` — the tag is at 15 words and the post-colon gloss continues the same biography in the same sentence. Scene 37, "which for Peri was a long time" — narrator grading a neutral fact, but one clause and sourced in an established trait.</p>
+<p>**Other.** Scene 8 `mirror-retort` (Sepp quoting his evasion back — re-earn in the redraft, don't carry over). Scene 18 `description-list` (moot). Scene 19, 36 `short-mode-requirement` — Edwin never speaks under six words in either scene. Scene 26 `lossy-conversation-budget` — under the word window and has friction, but frictionless overall. Scene 39 `unanswered-question` — the *six* in "why six weeks" is never grounded. Note 15 `note-digression-discipline` — closes on commentary rather than the fact.</p>
+<p>---</p>
+<p>## 3. Recurrences → candidate `tier=regex` rules</p>
+<p>Constructions confirmed 2+ times across files. Regexes are deliberately over-broad recall filters for a judge stage, not verdicts.</p>
+<p>### (a) `negative-parallelism-split` — **highest value; 4 hits, currently invisible to lint**<br>
+Scenes 8, 25, 26 (×3 in one scene), 30. The banned not-X-but-Y with the "but" swapped for a full stop or semicolon; contractions dodge the existing regex. It lands on thesis lines ("It isn't lost time. It's the first task"; "So the secret isn't the sentence… It's the doing").</p>
+<p>```<br>
+(?i)\b(it|that|this|the \w+)\s*(?:'s not|s not|\s+is not|\s+isn't|\s+wasn't|\s+was not)\b[^.;!?]{0,120}[.;]\s+(?:It|That|This|The \w+)\s*(?:'s|s\b|\s+is|\s+was)\b<br>
+```<br>
+Plus the semicolon-only variant: `(?i)\bnot\s+(?:the|a|an)\s+\w+[^.;!?]{0,80};\s+(?:plain|just|only|simply|the|a|an)\b`</p>
+<p>### (b) `amount-of-it` — 3 hits (scenes 6, 20, 22)<br>
+"the whole of his trade", "four generations of it", "six days of being right… any of it". DRMacIver's standing note: "the whole of it continues to be a weird recurring phrase". Existing regex misses the `the whole of his X` form.</p>
+<p>```<br>
+(?i)\b(?:the whole|the most|the rest|the least|the best|the worst|all|some|any|much|none|a (?:great )?deal|\w+ (?:days|weeks|months|years|generations|mornings))\s+of\s+(?:it|them|his|her|their|the)\b<br>
+```</p>
+<p>### (c) `dialect-past-tense-come` — 2 hits (scenes 9, 12), both under `dialect-grammar`<br>
+The bare-`come`-for-`came` form recurs specifically. Cheap and near-zero FP if anchored to a subject.</p>
+<p>```<br>
+(?i)\b(?:it|he|she|they|girl|man|word|post|letter|news|that|which)\s+come\s+(?:up|from|in|down|round|over|back|out|to)\b<br>
+```</p>
+<p>### (d) `trailing-which-verdict` — 3 hits (scenes 4, 33, 34) across `causal-which-budget` and `verdict-clause-evaluative`<br>
+The narrator's trailing appraisal clause. Two rules are catching one habit; consider merging, or at least sharing a regex prefilter.</p>
+<p>```<br>
+(?i),\s+which\s+(?:was|is|were|seemed|reads?|counts?|amounts?)\s+(?:fair|true|right|wrong|the (?:best|worst|point|whole)|about|more or less|not)\b<br>
+```<br>
+And the ranked-verdict variant: `(?i)\b(?:her|his|their)\s+\w+(?:st|th|nd|rd)\s+\w+\s+of\s+the\s+(?:morning|day|afternoon|week)\s+and\s+the\s+(?:best|worst|sharpest|first)\b`</p>
+<p>### (e) `the-way-simile` clustering — 2 confirmed clusters (scenes 6, 30) plus scene 37's `type-of-person-clause`<br>
+The existing budgets fire, but the *adjacency* is the real tell (two horse similes in one paragraph; two "the way X does Y" a paragraph apart). Suggest a proximity check rather than a new pattern: flag any two matches of `\bthe way (?:a|an|the|you|somebody|people|\w+) \w+` within 400 characters, regardless of the per-1,000-word rate.</p>
+<p>### (f) Maxim-capped speech — 14 confirmed instances across 11 scenes<br>
+Too semantic for regex, but the cadence is stable enough for a **recall prefilter**: a sentence that is the last of a quoted turn, contains no proper noun and no first/second-person pronoun, and opens with a generic plural or "A man/woman who…". Worth building as a small script over dialogue-final sentences rather than a rules.json regex — the judge stage already handles these well; the problem is the hunters' hit rate, not the judging.</p>
+<p>---</p>
+<p>## 4. False positives per rule, and proposed narrowings</p>
+<p>| Rule | FPs |<br>
+|---|---|<br>
+| `sense` | **20** |<br>
+| `implication-stopped-short` | **4** |<br>
+| `maxim-capped-speech` | **4** |<br>
+| `generalising-clause-budget` | **3** |<br>
+| `tech-level-anachronism` | **3** |<br>
+| `announce-before-deliver` | 2 |<br>
+| `line-without-want` | 2 |<br>
+| `viewpoint-overreach` | 2 |<br>
+| `obliqueness-unpaid` | 2 |<br>
+| `fragment-closer-budget` | 2 |<br>
+| `dialect-grammar` | 2 |<br>
+| `weak-comic-beat-flat` | 2 |<br>
+| `system-terminology` | 2 |<br>
+| `unexplained-specialist-term` | 2 |<br>
+| 12 further rules | 1 each |</p>
+<p>### `sense` — 20 FPs (31% of all FPs; 6 confirmed)<br>
+The rule is functioning as the hunters' catch-all: anything a reader found slow gets filed here. Note the judge also had to re-file two *confirmed* `sense` hits under other rules (scene 19 → `ambiguous-word`; scene 13's "third thing" → not this rule at all).</p>
+<p>**Proposed narrowing.** Split the rule in two, as the `feedback-does-this-sentence-make-sense` memo already implies: `sense-factual` (the sentence asserts something contradicted elsewhere in the same scene, or physically false — scenes 20, 34, note 33) and `sense-parse` (the sentence is grammatical but garden-paths — note 31, scene 16). Then add to `sense-factual`:</p>
+<p>&gt; **counter_example:** A sentence that merely requires a second pass to parse, or whose referent is recoverable from the preceding two sentences, is not a sense error. Slowness is not nonsense. If the sentence is true and the reader gets there, do not file it. Do not file vagueness, undefined-on-first-use terms, or round approximations under this rule.</p>
+<p>Twelve of the 20 FPs are "needed a re-read" or "the figure is loose"; that clause alone should clear most.</p>
+<p>### `implication-stopped-short` — 4 FPs (2 confirmed)<br>
+Hunters are firing on any withheld information, including legitimate close-third restraint.</p>
+<p>&gt; **counter_example:** In Edwin-POV narration, declining to report another character's thought is not an unpaid implication — it is the viewpoint working. This rule covers only a line whose *point* is insinuated and which no adjacent sentence or immediately following event cashes out. A dry countable observation left unglossed (a tally, a refusal already stated above it) is within voice.</p>
+<p>### `maxim-capped-speech` — 4 FPs (14 confirmed)<br>
+High yield, but hunters flag every sententious-sounding line regardless of budget. The rule is a *budget* rule and needs to be enforced as one.</p>
+<p>&gt; **counter_example:** A single maxim-shaped line in a scene is within budget and is not a finding on its own; file only when the scene carries two or more, and always nominate the keeper. A line attributed to a character's stated source (a book she reads, another person's saying) characterises rather than coins, and does not count against the budget.</p>
+<p>### `generalising-clause-budget` — 3 FPs (1 confirmed)<br>
+Overlaps heavily with `aphorism-budget` and `maxim-capped-speech`; the same clause gets filed under two or three of them, and hunters guess.</p>
+<p>&gt; **Proposed narrowing:** restrict to *trailing subordinate clauses* in narration that generalise outward from the named particular ("because a village does not keep a thing like that from a mother"). A free-standing narrator sentence belongs to `aphorism-budget`; a line inside quotation marks belongs to `maxim-capped-speech`. State that precedence order in all three rules — it is the single biggest source of cross-filing in this run.</p>
+<p>### `tech-level-anachronism` — 3 FPs (1 confirmed)<br>
+&gt; **counter_example:** Pre-industrial parishes have iron, glass, paper, ink, wheels, clocks in a church tower, and post. Flag only objects whose *manufacture* requires industrial process or whose social form is post-1700 (a kitchen range, a match, a percentage, a factory-made tool). When in doubt the rule is flag-and-query at low confidence, not a confident finding.</p>
+<p>---</p>
+<p>### Suggested order of work</p>
+<p>1. Rule the scene 1/2/3 contamination exemption (blocks the largest question in the report).<br>
+2. Redraft the sixteen Tier-A scenes from their scene plans, sources shut, carrying each scene's Tier C–F findings as a checklist.<br>
+3. Patch Tier B (scenes 4, 6, 33, 37) — noting the shared "aimed at him until it had already happened" in scenes 3 and 6.<br>
+4. Apply Tier C sense fixes in the non-redrafting scenes (20, 34, notes 29/31/33) and the Tier E keeper/cut table for scenes 23–40.<br>
+5. Land recurrence rules (a) and (b) before the next run; they are the two habits lint currently cannot see.</p>
+</div>
+</body></html>

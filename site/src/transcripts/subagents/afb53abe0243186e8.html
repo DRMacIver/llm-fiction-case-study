@@ -1,0 +1,72 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦unp…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt;⟦unp…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-afb53abe0243186e8">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (find every finding for chapter 001), then chapters/001-the-wrong-man.md in full.<br>
+<br>
+You are retrofitting this ONE chapter (edit no other file). Two jobs, applied sentence by sentence, with the content, beats, dialogue intent, ending cut, and author's-note block (if present, below the '---') all preserved:<br>
+1. LANGUAGE: apply the thirteen census rules. The big one is the verdict clause — every trailing ", which was new / took some doing / was the mistake / Edwin took to mean…" either ends before the comma or becomes a plain separate sentence of fact; type-of-person clauses become the specific observed thing; maxim-capped speech loses the maxim (characters say what they mean and stop; only Edwin's teaching register may lecture, and rarely); nominalised absences become actions; near-idioms become the real idiom or plain words; interior false precision goes; hedged gesture tags go or become the gesture; windup dialogue tags become plain "said"; register slips (modern/clinical, fake-archaic) fixed; motif-word reuse thinned; fragment closers used sparingly. Do NOT flatten the approved voice: keep the seed-shaped similes at ~2 per chapter, the diegetic clock times and counts, "wants doing", Edwin's occasional composed paragraph. <span class="redacted">redacted sentence: unpublished prose</span><br>
+2. FARMING: apply this chapter's corrections from farming-findings.md exactly (they cite the real mechanism and the corrected line). If a correction changes a number other chapters depend on, apply it here and list it in your report as a cross-chapter dependency — do not edit the other chapter.<br>
+Write the revised chapter in place. Commit: "Retrofit 001: language census rules + farming corrections" with trailer "Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;". Return: verdict-clause count before/after (grep ', which was\|, which took\|took to mean'), the farming corrections applied, any cross-chapter dependencies, and one sentence on anything you declined to change and why.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading all the required context files.</p>
+</div>
+
+<details><summary>24 tool calls</summary>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> chapters/001-the-wrong-man.md</p>
+<p>✅ 8 lines, 261 chars —       42 notes/voice-exemplars.md / <span class="redacted">redacted sentence: unpublished prose</span> /      424 notes/voices.md</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 348 lines, 16999 chars</p>
+<p>🔧 Bash: cat notes/voices.md</p>
+<p>✅ 424 lines, 24733 chars</p>
+<p>🔧 Bash: cat notes/llm-tells.md; echo "=====FARMING====="; cat notes/farming.md</p>
+<p>✅ 281 lines, 16494 chars</p>
+<p>🔧 Bash: cat plans/book-01/farming-findings.md <span class="redacted">unpublished</span></p>
+<p>✅ 442 lines, 23563 chars</p>
+<p>🔧 Bash: grep -n "001" notes/canon/world/farming-glossary.md</p>
+<p>✅ 2 lines, 102 chars</p>
+<p>🔧 Bash: sed -n '1,90p' notes/canon/world/farming-glossary.md</p>
+<p>✅ 90 lines, 4762 chars</p>
+<p>🔧 Bash: sed -n '90,130p' notes/canon/world/farming-glossary.md; echo "=====CH1====="; cat -n chap…</p>
+<p>✅ 215 lines, 20599 chars</p>
+<p>🔧 Bash: grep -c ', which was\|, which took\|took to mean' chapters/001-the-wrong-man.md; grep -n…</p>
+<p>✅ 9 lines, 2684 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import io p='chapters/001-the-wrong-man.md' s=io.open(p,encoding='utf-8…</p>
+<p>✅ 3 lines, 19 chars</p>
+<p>🔧 Bash: sed -n '93,165p' chapters/001-the-wrong-man.md</p>
+<p>✅ 73 lines, 7193 chars</p>
+<p>🔧 Bash: git add chapters/001-the-wrong-man.md &amp;&amp; git commit -q -m "$(cat &lt;&lt;'EOF' Retrofit 001: la…</p>
+<p>✅ 1 lines, 65 chars — b80841e Retrofit 001: language census rules + farming corrections</p>
+</details>
+
+<div class="assistant-prose">
+<p>Verdict-clause grep (`, which was|, which took|took to mean`): **0 before, 0 after**. Chapter 001 was already clean on that exact grep; the census patterns it actually carried were the softer relatives, and those were fixed by hand.</p>
+<p>**Language changes applied** (`<span class="redacted">redacted: private</span>/chapters/001-the-wrong-man.md`):<br>
+- Near-idioms/coinages named explicitly in rule 5: "had her footing on it" → "had her answers ready"; "new-cloaked" → "stiff in the new cloak".<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- Rule 2 type-of-person/appraisal clauses: "an expression he mistrusted... <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Rule 10 windup tag: "delivered her verdict:" → "said:".<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- Preserved deliberately: both seed-shaped similes (the hawser on a child, the war-horse hitched to a milk cart), the causal "which meant" chain in para 2, the diegetic clock times (12:30, half past twelve, ten o'clock, four minutes late, twenty-nine days), Edwin's composed foundations paragraph, the ending cut, and the author's-note block verbatim.</p>
+<p>**Farming corrections applied:** none were outstanding. `plans/book-01/farming-findings.md` <span class="redacted">unpublished</span> lists no `unreal`, `mechanism violation`, or inconsistency finding against ch. 001; its only class of finding was `unexplained term`, and the four notes (Sea-front, Frost list, The months, The compost cantrip) are already published at the foot of the chapter and match the glossary text exactly. Left untouched.</p>
+<p>**Cross-chapter dependencies:** none — no number that other chapters depend on was changed.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> 020's coastal parishes and does not apply to a front being walked over inland moors here.</p>
+</div>
+</body></html>

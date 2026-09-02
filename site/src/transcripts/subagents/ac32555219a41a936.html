@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read ONLY: notes/voices.md (incl. the Lang…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read ONLY: notes/voices.md (incl. the Lang…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-ac32555219a41a936">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. Read ONLY: notes/voices.md (incl. the Language census section), notes/llm-tells.md, .claude/skills/editing-pass/SKILL.md, then chapters/031-the-work-continues.md in full. You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span> Dialogue is exempt from the narration-construction bans. Report ONLY findings within your lens, compactly: quote (short) | problem | fix. Invented problems are as bad as misses. Do not certify anything as clean.</p></blockquote>
+
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/voices.md</p>
+<p>✅ 424 lines, 24733 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/notes/llm-tells.md</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/.claude/skills/editing-pass/SKILL.md</p>
+<p>✅ 130 lines, 9283 chars</p>
+<p>✅ 219 lines, 13540 chars</p>
+<p>🔧 Bash: cat -n <span class="redacted">redacted: private</span>/chapters/031-the-work-continues.md</p>
+<p>✅ 149 lines, 16934 chars</p>
+<p>🔧 Bash: python3 -c " import re text=open('chapters/031-the-work-continues.md').read() prose = tex…</p>
+<p>✅ 17 lines, 4938 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "--nobody/somebody/anybody--" grep -no "nobody\|somebody\|any…</p>
+<p>✅ 23 lines, 2458 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "nobody\|somebody\|anybody" chapters/031-the-work-continue…</p>
+<p>✅ 10 lines, 3416 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Findings (register/mechanical lens only), chapter 031 (`chapters/031-the-work-continues.md`):</p>
+<p>**Mechanical counts**<br>
+- Em-dashes: 0 in 3,159 words. Under budget, no issue.<br>
+- Earth month names: none (compound months used correctly throughout).<br>
+- "which" clauses: 15 total, but almost all are causal/factual (procedural chains) or sit inside dialogue/embedded letters (character voice, exempt). Two narration hits are evaluative and should be flagged (below).</p>
+<p>**Findings**</p>
+<p>1. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s line before we hear it; doubles as a mild spoiler-tag. | Cut the label: `<span class="redacted">redacted: character</span>, who did not know the vale, said: "West."`</p>
+<p>2. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> It wasn't necessary. She did it anyway.`</p>
+<p>3. <span class="redacted">redacted sentence: unpublished prose</span> Also reads as a coined near-idiom rather than a real one. | Describe the actual gesture, e.g. `held it out like something that might still be alive.` or cut the simile.</p>
+<p>4. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> | Census rule caps this construction at one per chapter regardless of individual word count; two present. | Convert one to a plain tag or move the biography to its own sentence — e.g. l.81 → `"What?" said Peri. She'd been watching the second reading, not the first.`</p>
+<p>5. <span class="redacted">redacted sentence: unpublished prose</span> Not a chapter-level violation once narration is isolated — flagging only because the raw count is high enough to trip the census grep.</p>
+<p>6. `"the whole of it"` appears twice (l.59, l.71) in 3,159 words — both inside Sorrel's letter (character voice), so not a narration violation, but note for the arc-level census tally since the phrase is on the retired/watch list.</p>
+<p>7. `stood/standing`: 5 instances (l.5, 13, 115, 123, 145), all plain staging or procedural ("stood at the gate," "stood in the field") — no monoculture problem at this density, not flagging as a fix, noting for census tally only.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Do not read this as a clean bill — only the thirteen census rules, banned constructions, em-dash count, month names, house-word census, and ending shape were checked; sense, staging, and other voice dimensions are out of this lens's scope.</p>
+</div>
+</body></html>

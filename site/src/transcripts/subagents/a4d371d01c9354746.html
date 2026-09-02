@@ -1,0 +1,112 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read first: notes/canon/system.md &quot;The cal…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read first: notes/canon/system.md &quot;The cal…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a4d371d01c9354746">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. Read first: notes/canon/system.md "The calendar" section — the revised month-name ruling (2026-08-24). The mapping, winter-first: January→Wolfmonth, February→Mudmonth, March→Plowmonth, April→Seedmonth, May→Milkmonth, June→Weedmonth, July→Haymonth, August→Cornmonth, September→Harvestmonth, October→Fallowmonth, November→Saltmonth, December→Frostmonth.<br>
+<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> also grep the whole repo (chapters/, notes/, plans/, <span class="redacted">unpublished</span> summaries/) yourself for any I missed — EXCLUDING samples/ (historical, leave untouched) and .claude/.<br>
+<br>
+Rules:<br>
+- Beware false positives: "march"/"may" as ordinary words, "March"/"May" at sentence starts that aren't months, "a maypole", etc. Only replace genuine month references. Read the surrounding line before each replacement.<br>
+- Date phrasing in prose: prefer natural forms — "April the twelfth" → "the twelfth of Seedmonth"; "late in April" → "late in Seedmonth"; "last July" → "last Haymonth"; bare "June" as a month → "Weedmonth". PRESERVE the famine speech's idiom in ch. 002 if it uses "a wet June"-style phrasing: render as "a wet Weedmonth" keeping rhythm — read it aloud in your head; if a replacement wrecks a line's rhythm, rework the line minimally to keep sense and cadence.<br>
+- Chapter 010's date notations (e.g. pantry-door entries) and timeline.md's "(Aug 15)"-style annotations: use a consistent short form — write dates as "15 Cornmonth" (no abbreviation of month compounds).<br>
+- notes/canon/system.md: leave the ruling text itself intact (it names Earth months deliberately in the mapping); same for any line quoting the superseded ruling historically.<br>
+- Check the sweep leaves arithmetic intact (the timeline derivation Day 1 = 15 Cornmonth, Day 10 = 24 Cornmonth, Seal cooldown Day 30 ≈ 14 Harvestmonth — update those derived date labels accordingly).<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> logging the sweep.<br>
+Commit: "Sweep Earth month names to agricultural compound names" with trailer "Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;".<br>
+Return: files changed with replacement counts, any judgment calls (rhythm reworks, false positives skipped).</p></blockquote>
+
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: grep -n -i "calendar" -A 40 <span class="redacted">redacted: private</span>/notes/canon/system.md | sed -n '1,80p' (Read calendar section of system.md)</p>
+<p>✅ 70 lines, 4330 chars</p>
+<p>🔧 Bash: grep -rniE '\b(january|february|march|april|may|june|july|august|september|october|novemb… (Grep repo for month names)</p>
+<p>✅ 1 lines, 126 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 167 lines, 30779 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now I'll write a Python script to do the sweep with careful date-form handling and a skip list.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Write <span class="redacted">redacted: private</span></p>
+<p>✅ 1 lines, 211 chars</p>
+<p>🔧 Bash: python3 <span class="redacted">redacted: private</span> (Run month-name sweep script)</p>
+<p>✅ 24 lines, 806 chars — chapters/001-the-wrong-man.md 1 / <span class="redacted">redacted sentence: unpublished prose</span> / chapters/003-the-improbability-engine.md 2</p>
+<p>🔧 Bash: git diff -U1 &gt; <span class="redacted">redacted: private</span> wc -l <span class="redacted">redacted: private</span> (Save full diff for review)</p>
+<p>✅ 1 lines, 124 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 620 lines, 63302 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>The bulk sweep is good but I found several mangled lines and misses. Fixing each.</p>
+</div>
+
+<details><summary>26 tool calls</summary>
+<p>🔧 Edit chapters/009-fenholt.md</p>
+<p>✅ 1 lines, 164 chars</p>
+<p>🔧 Edit notes/decision-principles.md</p>
+<p>✅ 1 lines, 169 chars</p>
+<p>🔧 Edit notes/canon/characters/mattie-ordish.md</p>
+<p>✅ 1 lines, 180 chars</p>
+<p>🔧 Edit notes/canon/world/silent-soil.md</p>
+<p>✅ 1 lines, 173 chars</p>
+<p>🔧 Edit summaries/book-01-arc-01.md</p>
+<p>✅ 1 lines, 168 chars</p>
+<p>🔧 Edit <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 1 lines, 172 chars</p>
+<p>🔧 Edit plans/book-01/arc-01-findings/010.md <span class="redacted">unpublished</span></p>
+<p>✅ 1 lines, 177 chars</p>
+<p>🔧 Edit <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>✅ 1 lines, 186 chars</p>
+<p>🔧 Edit plans/book-01/arc-02.md <span class="redacted">unpublished</span></p>
+<p>✅ 3 lines, 320 chars</p>
+<p>🔧 Edit plans/book-01/arc-02.md <span class="redacted">unpublished</span></p>
+<p>✅ 1 lines, 164 chars</p>
+<p>🔧 Bash: grep -n "Earth month" <span class="redacted">redacted: private</span>/plans/book-01/arc-02.md <span class="redacted">unpublished</span> (Locate Earth month line in arc-02.md)</p>
+<p>✅ 1 lines, 47 chars</p>
+<p>🔧 Edit plans/book-01/arc-02.md <span class="redacted">unpublished</span></p>
+<p>✅ 1 lines, 164 chars</p>
+<p>🔧 Bash: grep -rnE '\b(January|February|March|April|May|June|July|August|September|October|Novembe… (Verify remaining capitalized month references)</p>
+<p>✅ 8 lines, 838 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p><span class="redacted">redacted sentence: unpublished prose</span> Now append the log line and commit.</p>
+</div>
+
+<p>🔧 Bash: tail -5 <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (See end of arc-revision.md)</p>
+<p>✅ 5 lines, 314 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> (Append sweep log and commit)</p>
+<p>✅ 2 lines, 124 chars</p>
+
+<div class="assistant-prose">
+<p>Done and committed (e456918, 22 files, clean working tree).</p>
+<p>Replacement counts by file (post-fix effective counts; scripted sweep plus manual corrections):</p>
+<p>- chapters/001-the-wrong-man.md — 1; 002-the-ten-o-clock.md — 4 (incl. "Junes" → "Weedmonths"); 003-the-improbability-engine.md — 2; 005-the-sample.md — 4; 009-fenholt.md — 13; 010-the-quiet-field.md — 18; 011-measured-ground.md — 8<br>
+- notes/canon/world/timeline.md — 32 (all "(Aug 15)"-style day labels now "15 Cornmonth"; derivation intact: Day 1 = 15 Cornmonth, Day 10 = 24 Cornmonth, component roundings 25 Seedmonth / 21 Weedmonth, Seal cooldown Day 30 ≈ 14 Harvestmonth); silent-soil.md — 12; green-revolution.md — 2; magic.md — 1; (geography.md and continent.md had no occurrences — grep found none)<br>
+- notes/canon/characters/ferrin.md — 3; mattie-ordish.md — 4; minor.md — 3; sorrel.md — 1<br>
+- summaries/book-01-arc-01.md — 7; plans/book-01/arc-01.md <span class="redacted">unpublished</span> — 1; arc-02.md — 19 plus two stale-claim fixes ("Earth month names are canon" → "the compound month names are canon"; "annotated in Earth months" → "annotated in calendar months"); arc-01-findings/003.md — 1, 009.md — 6, 010.md — 8, arc-revision.md — 7 + sweep log line appended</p>
+<p>Judgment calls:</p>
+<p>- Rhythm: "a wet June"/"a bad June" → "a wet Weedmonth"/"a bad Weedmonth" (idiom and cadence preserved); "It is made of Junes" → "It is made of Weedmonths". Ch. 009 Ferrin's answer capitalized as "The twelfth of Seedmonth." Ch. 011 sheet entry uses short form "*12 Seedmonth — F. walked it...*"; stake date "25 Cornmonth".<br>
+- "April the twelfth" everywhere → "the twelfth of Seedmonth" (ferrin.md keeps the bolding); findings files' line-wrapped "April the / 12th" reworked to "the 12th of / Seedmonth".<br>
+- Deliberately left intact: system.md ruling text (line 280); findings 005.md:150–151 and 009.md:118–119 and arc-revision.md:148–151 (historical discussion of the superseded Earth-name state); decision-principles.md's "(Seedmonth, not April; ...)" example (the script initially clobbered it; restored); samples/ untouched.<br>
+- False positives skipped: all modal "may" (lowercase), "march on the village" (dungeons.md), "May" only replaced where clearly a month (all four "in May" instances).<br>
+- Arithmetic checked: Seedmonth→Weedmonth 8 weeks / Weedmonth→Day 10 9 weeks in ch. 010, chain figures 4 ch / 6 ch 60 <span class="redacted">unpublished</span> / 9 ch 50 <span class="redacted">unpublished</span> unchanged; timeline cross-check (letter "of the 14th" arriving Day 5 = 19 Cornmonth) still coheres since day-of-month numbers were preserved.</p>
+</div>
+</body></html>

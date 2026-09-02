@@ -1,0 +1,81 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a canon/consistency lens for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a canon/consistency lens for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ac0f0c2f4a65109f3">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a canon/consistency lens for the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it; do not read notes/sealed/.<br>
+<br>
+Your material: draft/book-01/scenes/19-the-two-lists.md, read after scenes 01–18 in the same directory (Day 6, after the six revealings).<br>
+<br>
+<span class="redacted">redacted sentence: unpublished prose</span> This had rained."; "spending its savings"), notes/canon/world/timeline.md (Day 6; <span class="redacted">redacted: theme</span>; the rider at the Drovers), notes/theme.md <span class="redacted">unpublished</span> (mortality seeded never as a guarantee — check nothing here states a lifespan), notes/canon/world/farm-teaching.md (the course "at the compost"), notes/reader-notes-book-1.md, notes/reader-notes-rewrite.md. Also chapters/005-the-sample.md, the groundwork this restages.<br>
+<br>
+Report FINDINGS ONLY — line quoted, canon file and line, what is wrong. No "clean" verdicts. Briefly and separately: canon the scene could use and does not. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<details><summary>32 tool calls</summary>
+<p>🔧 Bash: cat draft/book-01/scenes/19-the-two-lists.md</p>
+<p>✅ 31 lines, 3816 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/edwin.md</p>
+<p>🔧 Bash: cat notes/canon/characters/sorrel.md</p>
+<p>✅ 45 lines, 2189 chars</p>
+<p>✅ 44 lines, 2191 chars</p>
+<p>🔧 Bash: cat notes/canon/world/silent-soil.md</p>
+<p>✅ 43 lines, 2189 chars</p>
+<p>🔧 Bash: cat notes/canon/world/timeline.md</p>
+<p>✅ 42 lines, 2239 chars</p>
+<p>🔧 Bash: cat notes/theme.md <span class="redacted">unpublished</span></p>
+<p>✅ 43 lines, 2187 chars</p>
+<p>🔧 Bash: cat notes/canon/world/farm-teaching.md</p>
+<p>✅ 276 lines, 17191 chars</p>
+<p>🔧 Bash: cat notes/reader-notes-book-1.md notes/reader-notes-rewrite.md</p>
+<p>✅ 278 lines, 15595 chars</p>
+<p>🔧 Bash: cat chapters/005-the-sample.md</p>
+<p>✅ 119 lines, 17248 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/edwin.md | sed -n '1,400p'</p>
+<p>🔧 Bash: cat notes/canon/characters/sorrel.md | sed -n '1,400p'</p>
+<p>✅ 400 lines, 24804 chars</p>
+<p>✅ 400 lines, 23028 chars</p>
+<p>🔧 Bash: cat notes/canon/world/silent-soil.md | sed -n '1,400p'</p>
+<p>✅ 400 lines, 23780 chars</p>
+<p>🔧 Bash: grep -n -i "study\|workroom" notes/canon/world/geography.md 2&gt;/dev/null; echo ---; cat no…</p>
+<p>✅ 202 lines, 12112 chars</p>
+<p>🔧 Bash: cat notes/canon/world/timeline.md | sed -n '1,300p'</p>
+<p>✅ 300 lines, 18436 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import re a = open('chapters/005-the-sample.md').read() b = open('draft…</p>
+<p>✅ 50 lines, 7661 chars</p>
+<p>🔧 Bash: grep -rn "sea lanes" notes/ chapters/ draft/ 2&gt;/dev/null; echo ---; grep -rn "third week"…</p>
+<p>✅ 4 lines, 753 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Findings — draft/book-01/scenes/19-the-two-lists.md</p>
+<p>This scene is a near-verbatim restaging of the back half of `chapters/005-the-sample.md` (from "Sorrel closed the grey book on her finger" to the end), with the author's note stripped and a handful of line edits. I diffed the two directly; below are the substantive deltas, checked against canon.</p>
+<p>1. **"the course is at the compost"** (scene 19) replaces ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
+   - This does not parse as English — "the course is at the compost" has no clear reading (a course cannot be located "at" a compost heap; if it means "at the compost stage/lesson" that isn't said). This is exactly the "cleverness that doesn't parse" pattern flagged in `notes/reader-notes-book-1.md` §4 ("the sentence is doing a joke's rhythm without the joke's logic").<br>
+   <span class="redacted">redacted sentence: unpublished prose</span><br>
+   <span class="redacted">redacted sentence: unpublished prose</span> As written it satisfies neither the old phrasing nor a clean new one.</p>
+<p>2. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> Scene 19 drops "sea lanes" and produces a slightly redundant "the coast... the weather" instead of the established "the sea lanes... the coast weather," losing a piece of cross-referenced continuity without an obvious reason.</p>
+<p>3. Minor, non-canon-breaking prose deltas (flagged only because the brief says report every discrepancy; these are not errors, just note them so nothing is missed):<br>
+   - "that's worth their rider" (scene 19) vs. ch. 005's "that's actually worth their rider" — dropped word, no canon effect.<br>
+   - "Call it two weeks" (scene 19, new sentence) vs. ch. 005's "; call it two weeks" (same sentence, semicolon) — punctuation only.<br>
+   - "She did not look up" vs. ch. 005's "She didn't look up" — contraction removed in narration only; harmless.<br>
+   - "The study was quiet" / "crossed the study" (scene 19) vs. ch. 005's "The workroom was quiet" / "crossed the workroom" — this is **correct**, not an error: `notes/canon/world/geography.md` explicitly renames the room "the study" (superseding "the groundwork's 'workroom'") for the third-draft rewrite, "consistent from scene 01 on." Scene 19 is right to use "study."</p>
+<p>Everything else — the two record series (split frost/black winter, sixty years / before Sorrel's time), the two lists' contents, the frost-list/ford-feud/classes-all/coast-letters second sheet, "Blight walks. This had rained," the plot-14 order-of-onset, "no third sheet... <span class="redacted">redacted sentence: unpublished prose</span> 005 word-for-word.</p>
+<p>## Canon the scene could use and does not</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: theme</span> lists"). Since this is read after scenes 01–18, that's probably fine contextually, but if scene 19 is meant to stand nearer the front of a chapter, nothing in it fixes the date the way ch. 005/006 do elsewhere.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- The scene doesn't use `notes/canon/world/farm-teaching.md`'s clarification that the ten o'clock is "the farm-magic course" (compost cantrip being one part of it) — which is precisely the material that would fix finding #1 above cleanly.</p>
+</div>
+</body></html>

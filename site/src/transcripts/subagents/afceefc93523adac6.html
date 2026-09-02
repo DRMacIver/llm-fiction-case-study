@@ -1,0 +1,42 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>In Claude Code (CLI, current version), the user ran the /chrome comma…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>In Claude Code (CLI, current version), the user ran the /chrome comma…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-afceefc93523adac6">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+In Claude Code (CLI, current version), the user ran the /chrome command and it printed no output. I expected browser-automation tools (to drive their logged-in Chrome) to become available, but no browser/chrome tools appear in my deferred tool list via ToolSearch. Questions: (1) What does /chrome do exactly and what tool names does it expose (e.g. mcp__chrome__*, Computer, BrowserNavigate...)? (2) What setup does the user need (Chrome extension? --browser flag? claude in Chrome beta?) for it to work, and how can they verify it's connected? (3) If the connection is established mid-session, do the tools appear automatically or does the session need a restart? Answer concisely and concretely.</p></blockquote>
+
+
+<p>🔧 WebFetch: https://code.claude.com/docs/en/claude_code_docs_map.md</p>
+<p>✅ 40 lines, 1620 chars</p>
+<p>🔧 WebFetch: https://code.claude.com/docs/en/chrome.md</p>
+<p>✅ 302 lines, 19585 chars</p>
+
+<div class="assistant-prose">
+<p>## What `/chrome` actually does</p>
+<p>`/chrome` isn't itself the thing that "prints output" as a report — it opens a **status/management panel** for the `claude-in-chrome` MCP integration: connection status, permission management, "Reconnect extension," and browser selection (if multiple browsers are connected). It's normal for it to look like it "printed nothing" if you expected a text summary — the UI is the interactive panel, not a stdout report.</p>
+<p>**Tool exposure:** the browser tools come in through a built-in MCP server named `claude-in-chrome` (not `mcp__chrome__*`). To see the actual tool list: run `/mcp` → select `claude-in-chrome` → **View tools**. Docs name specific tools like `read_page`, `get_page_text`, `find`, `tabs_context_mcp`, `browser_batch`, plus click/type/navigate/tab-management/screenshot/GIF-recording actions — these are distinct from the `Computer` tool (that's the separate `computer-use` MCP server for native macOS app control, which you already have configured).</p>
+<p>## Setup required</p>
+<p>1. **Claude in Chrome extension** ≥ v1.0.36, installed and enabled from the Chrome Web Store.<br>
+2. **Launch with `--chrome`** (`claude --chrome`), or run `/chrome` → "Enabled by default" to skip the flag going forward.<br>
+3. **Auth**: must be signed in via `/login` on a direct Anthropic plan (Pro/Max/Team/Enterprise). Chrome integration is silently disabled with API-key or `setup-token` long-lived-token auth — no error before v2.1.216, just never connects (403s under the hood).<br>
+4. First-ever connection installs a native-messaging host config file; **Chrome must be restarted once** to pick that up if not detected on the first try.<br>
+5. Not supported in WSL, and not available through Bedrock/Vertex/Foundry.</p>
+<p>**Verify it's connected:** run `/chrome` — it's working when the panel shows "Status: Enabled" **and** "Extension: Installed". If it says "Not detected," <span class="redacted">redacted: place</span> isn't installed/enabled in `chrome://extensions`.</p>
+<p>Given your settings list includes `computer-use` as an MCP server but no `claude-in-chrome` mention, and you're asking why no browser tools appeared — the most likely causes are: extension not installed, wrong auth type (check whether you're on API-key/token auth vs. a direct Pro/Max/Team login), or Chrome needing a restart after the native-messaging host config was written.</p>
+<p>## Mid-session connection</p>
+<p>Tools do **not** require a session restart in the sense of quitting Claude Code — but you do need to run `/chrome` → "Reconnect extension" after fixing the underlying issue (installing <span class="redacted">redacted: place</span>, restarting Chrome, etc.) for the MCP connection to establish within the current session. If Chrome/extension wasn't running at all when you launched, `/chrome` reconnect should pick it up live; no need to fully exit and relaunch `claude --chrome`, though doing so is the fallback if reconnect doesn't work.</p>
+<p>Sources:<br>
+- [chrome](https://code.claude.com/docs/en/chrome.md)</p>
+</div>
+</body></html>

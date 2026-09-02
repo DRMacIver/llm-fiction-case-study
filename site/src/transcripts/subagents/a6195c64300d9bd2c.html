@@ -1,0 +1,74 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a6195c64300d9bd2c">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<br>
+**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
+- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
+- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
+- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
+<br>
+Read `.claude/skills/editing-pass/SKILL.md`. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">unpublished</span> Cite the line and the canon file for every finding.<br>
+<br>
+Your material: scenes 18–24 (Wystow) in `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> and prior-arc summaries `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> Report findings only, each with the file, the line quoted, and what is wrong; do not write "clean". Write `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/lens/3-canon.md`. Do not edit prose. Do not commit.<br>
+<br>
+Your final message: finding count and the worst one.</p></blockquote>
+
+
+<details><summary>32 tool calls</summary>
+<p>🔧 Bash: ls rewrite/book-01/arc-03/scenes/ | grep -E "^(01[89]|2[0-4])"</p>
+<p>✅ 5 lines, 131 chars</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>✅ 910 lines, 57095 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/scenes &amp;&amp; for f in 18-*.md 19-*.md 20-*.md…</p>
+<p>✅ 49 lines, 2229 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 707 lines, 33972 chars</p>
+<p>🔧 Bash: sed -n '1,200p' notes/canon/deferred-questions.md <span class="redacted">unpublished</span> | head -100</p>
+<p>✅ 100 lines, 9134 chars</p>
+<p>🔧 Bash: cat notes/reader-notes-book-1.md | sed -n '1,80p'</p>
+<p>✅ 80 lines, 4533 chars</p>
+<p>🔧 Bash: ls notes/canon/characters/ notes/canon/world/</p>
+<p>✅ 25 lines, 328 chars — notes/canon/characters/: / <span class="redacted">redacted: character</span>.md / edwin.md</p>
+<p>🔧 Bash: grep -n -i "month\|day 50\|day 60\|Fallowmonth\|Harvestmonth\|Cornmonth\|Plowmonth\|calen…</p>
+<p>✅ 80 lines, 5801 chars</p>
+<p>🔧 Bash: grep -n -i "age\|born\|enroll\|seventeen\|21\|twenty-one\|three hundred\|school" notes/ca…</p>
+<p>✅ 60 lines, 4315 chars</p>
+<p>🔧 Bash: grep -n -i "<span class="redacted">redacted: character</span>\|<span class="redacted">redacted: character</span>\|140\|hundred and forty\|two hun…</p>
+<p>✅ 4 lines, 319 chars</p>
+<p>🔧 Read None</p>
+<p>✅ 3 lines, 388 chars</p>
+<p>🔧 Read notes/canon/characters/edwin.md</p>
+<p>✅ 70 lines, 4368 chars</p>
+<p>🔧 Bash: grep -n -i "ossett\|fellowship's house\|wystow\|<span class="redacted">redacted: character</span>\|⟦redacted: charact…</p>
+<p>✅ 60 lines, 6383 chars</p>
+<p>🔧 Read notes/canon/characters/minor.md</p>
+<p>✅ 40 lines, 2581 chars</p>
+<p>🔧 Read notes/canon/characters/minor.md</p>
+<p>✅ 40 lines, 2468 chars</p>
+<p>🔧 Write rewrite/book-01/arc-03/lens/3-canon.md</p>
+<p>✅ 1 lines, 169 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>2 findings. The worst: scene 20 (`<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> 40 days / about 5.7 weeks, not nine — a load-bearing line (it sets the size of <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Second finding: the registry entry in scene 19 (`the-registry.md`) states Edwin's enrolment age as "seventeen," contradicting the RULED canon age of eighteen in `notes/canon/characters/edwin.md` (three years at Wystow from 18, battle spell at 21).</p>
+<p>Full report written to `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/lens/3-canon.md`, including the "checked and clean" items (age flatness for <span class="redacted">redacted: character</span>/<span class="redacted">redacted: character</span>, the college-anachronism handling, Rundle's facts, the two distinct dead surveyors, standing-constraint compliance).</p>
+</div>
+</body></html>

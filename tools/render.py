@@ -2,22 +2,27 @@
 
 Writes:
   site/src/transcripts/<session-id>.md            (split into -part2 etc if >400 turns)
-  site/src/transcripts/subagents/<agent-id>.md
-  site/src/transcripts/README.md                  index table
+  site/src/transcripts/subagents/<agent-id>.html   standalone static pages, NOT in SUMMARY.md
+  site/src/transcripts/README.md                  index table of the 9 sessions
   site/src/SUMMARY.md                              Transcripts section rewritten
 
 Rendering rules (see tools/redact.py docstring for the ⟦...⟧ markers this
 consumes):
-  - user prompts -> blockquote with a bold "User" label
-  - assistant prose -> plain paragraphs
+  - user prompts -> blockquote labelled "David" (session pages) or "User"
+    (subagent pages, whose "user" turn is the orchestrating prompt, not the
+    human author)
+  - assistant prose -> unlabelled paragraphs with a thin left border
   - thinking -> <details><summary>thinking</summary>...</details>
   - each tool_use (+ its tool_result) -> one compact line "🔧 Tool ...";
     a run of more than 5 consecutive tool lines is grouped into one
     <details> block
-  - Agent tool_use blocks link to the subagent's page when resolvable
+  - Agent tool_use blocks link to the subagent's standalone HTML page when
+    resolvable, with an anchor the subagent page links back to
   - ⟦redacted...⟧ markers -> <span class="redacted">...</span>
-  - all transcript text is HTML-escaped and indent-normalised so it can't
-    be misread as markdown (code fences, blockquotes, headings, etc.)
+  - all transcript text is HTML-escaped; session pages embed this as raw
+    HTML inside markdown (mdBook/pulldown-cmark passes raw HTML through
+    untouched), and subagent pages embed it directly in a standalone
+    <!doctype html> file, so nothing here needs markdown-escaping any more.
 """
 from __future__ import annotations
 
@@ -33,6 +38,8 @@ SITE_SRC = REPO_ROOT / "site" / "src"
 TRANSCRIPTS_DIR = SITE_SRC / "transcripts"
 SUBAGENTS_OUT_DIR = TRANSCRIPTS_DIR / "subagents"
 SUMMARY_PATH = SITE_SRC / "SUMMARY.md"
+TITLES_PATH = TRANSCRIPTS_DIR / "titles.json"
+PAGE_NOTES_PATH = REPO_ROOT / "tools" / "page-notes.json"
 
 MAX_TURNS_PER_PART = 400
 TOOL_GROUP_THRESHOLD = 5
@@ -42,23 +49,10 @@ _REDACT_MARKER_RE = re.compile(r"⟦([^⟧]*)⟧")
 
 def esc(text: str) -> str:
     """HTML-escape text and turn the ⟦...⟧ redaction markers this project
-    uses into <span class="redacted"> spans, without letting the escaped
-    text be interpreted as markdown by mdBook."""
+    uses into <span class="redacted"> spans."""
     if text is None:
         return ""
     escaped = html.escape(text, quote=False)
-    # Neutralise leading markdown-significant characters per line (list
-    # markers, headings, blockquotes, code fences) after escaping, so raw
-    # transcript text can never accidentally produce markdown structure.
-    lines = escaped.split("\n")
-    safe_lines = []
-    for line in lines:
-        stripped = line.lstrip(" ")
-        indent = line[: len(line) - len(stripped)]
-        if stripped[:1] in ("#", ">", "-", "*", "+", "`", "|") or re.match(r"^\d+\.\s", stripped):
-            stripped = "&#8203;" + stripped  # zero-width space breaks the markdown token
-        safe_lines.append(indent + stripped)
-    escaped = "\n".join(safe_lines)
 
     def repl(m: re.Match) -> str:
         inner = m.group(1)
@@ -68,9 +62,8 @@ def esc(text: str) -> str:
 
 
 def esc_inline(text: str) -> str:
-    """Like esc() but for short inline strings (tool summary lines): no
-    per-line markdown neutralisation needed since these render inside a
-    single-line context, just escape + redaction spans."""
+    """Like esc() but named separately for short inline strings (tool
+    summary lines, titles): escape + redaction spans."""
     if text is None:
         return ""
     escaped = html.escape(text, quote=False)
@@ -150,7 +143,8 @@ def tool_use_line(block: dict, subagent_ids: set[str]) -> str:
     if block.get("tool") == "Agent":
         sub_id = block.get("subagent_id")
         if sub_id and sub_id in subagent_ids:
-            line = f'🔧 <a href="subagents/{sub_id}.html">{escaped_summary}</a>'
+            anchor = f'<span id="agent-{sub_id}"></span>'
+            line = f'{anchor}🔧 <a href="subagents/{sub_id}.html">{escaped_summary}</a>'
     return line
 
 
@@ -178,20 +172,21 @@ def render_block_group(blocks: list[dict], subagent_ids: set[str]) -> str:
     return "\n".join(f"<p>{ln}</p>" for ln in lines) + "\n"
 
 
-def render_turn(turn: dict, subagent_ids: set[str]) -> str:
+def render_turn(turn: dict, subagent_ids: set[str], user_label: str = "User") -> str:
     role = turn.get("role")
     out = []
     blocks = turn.get("blocks", [])
     i = 0
     if role == "user":
-        # user turns are usually a single text/command block; render as
-        # a blockquote for every text block present.
+        # user turns are usually a single text/command block.
         for b in blocks:
             if b["kind"] == "text":
-                quoted = "\n".join(f"> {line}" for line in esc(b["text"]).split("\n"))
-                out.append(f"**User:**\n>\n{quoted}\n")
+                quoted = esc(b["text"]).replace("\n", "<br>\n")
+                out.append(
+                    f'<blockquote><p><strong>{user_label}:</strong><br>\n{quoted}</p></blockquote>\n'
+                )
             elif b["kind"] == "command":
-                out.append(f"**User:** ran `{esc_inline(b.get('name', ''))}`\n")
+                out.append(f"<p><strong>{user_label}:</strong> ran <code>{esc_inline(b.get('name', ''))}</code></p>\n")
         return "\n".join(out)
 
     # assistant turn: walk blocks, grouping consecutive tool_use/tool_result
@@ -199,11 +194,16 @@ def render_turn(turn: dict, subagent_ids: set[str]) -> str:
         b = blocks[i]
         kind = b["kind"]
         if kind == "text":
-            out.append(esc(b["text"]) + "\n")
+            paragraphs = "\n".join(
+                f"<p>{p.replace(chr(10), '<br>' + chr(10))}</p>"
+                for p in esc(b["text"]).split("\n\n")
+                if p.strip()
+            )
+            out.append(f'<div class="assistant-prose">\n{paragraphs}\n</div>\n')
             i += 1
         elif kind == "thinking":
             out.append(
-                f"<details><summary>thinking</summary>\n\n{esc(b['text'])}\n\n</details>\n"
+                f"<details><summary>thinking</summary>\n<div>{esc(b['text']).replace(chr(10), '<br>' + chr(10))}</div>\n</details>\n"
             )
             i += 1
         elif kind in ("tool_use", "tool_result"):
@@ -217,10 +217,10 @@ def render_turn(turn: dict, subagent_ids: set[str]) -> str:
     return "\n".join(out)
 
 
-def render_transcript_body(doc: dict, subagent_ids: set[str]) -> str:
+def render_transcript_body(doc: dict, subagent_ids: set[str], user_label: str = "User") -> str:
     parts = []
     for turn in doc.get("turns", []):
-        rendered = render_turn(turn, subagent_ids)
+        rendered = render_turn(turn, subagent_ids, user_label)
         if rendered.strip():
             parts.append(rendered)
     return "\n\n".join(parts)
@@ -232,32 +232,109 @@ def chunk_turns(turns: list[dict], size: int) -> list[list[dict]]:
     return [turns[i : i + size] for i in range(0, len(turns), size)]
 
 
-def render_session(doc: dict, title: str, subagent_ids: set[str], out_path_stem: Path) -> list[Path]:
+@dataclass
+class RenderedChunk:
+    heading: str
+    body: str
+    part_no: int
+    n_parts: int
+
+
+def render_chunks(doc: dict, title: str, subagent_ids: set[str], user_label: str = "User") -> list[RenderedChunk]:
     turns = doc.get("turns", [])
     chunks = chunk_turns(turns, MAX_TURNS_PER_PART)
-    written = []
     n_parts = len(chunks)
+    results = []
     for idx, chunk in enumerate(chunks):
         part_no = idx + 1
         chunk_doc = dict(doc)
         chunk_doc["turns"] = chunk
-        body = render_transcript_body(chunk_doc, subagent_ids)
+        body = render_transcript_body(chunk_doc, subagent_ids, user_label)
         heading = title if n_parts == 1 else f"{title} (part {part_no} of {n_parts})"
+        results.append(RenderedChunk(heading, body, part_no, n_parts))
+    return results
+
+
+def render_session(
+    doc: dict, title: str, subagent_ids: set[str], out_path_stem: Path, note: str | None = None
+) -> list[Path]:
+    """Render a top-level session as one or more mdBook markdown pages."""
+    written = []
+    for rc in render_chunks(doc, title, subagent_ids, user_label="David"):
         nav = []
-        if n_parts > 1:
-            if idx > 0:
-                nav.append(f"[← part {part_no - 1}]({out_path_stem.name}-part{part_no - 1}.md)")
-            if idx < n_parts - 1:
-                nav.append(f"[part {part_no + 1} →]({out_path_stem.name}-part{part_no + 1}.md)")
+        if rc.n_parts > 1:
+            if rc.part_no > 1:
+                nav.append(f"[← part {rc.part_no - 1}]({out_path_stem.name}-part{rc.part_no - 1}.md)")
+            if rc.part_no < rc.n_parts:
+                nav.append(f"[part {rc.part_no + 1} →]({out_path_stem.name}-part{rc.part_no + 1}.md)")
         nav_line = " · ".join(nav)
-        page = f"# {heading}\n\n"
+        page = f"# {rc.heading}\n\n"
+        if rc.part_no == 1 and note:
+            page += page_note_html(note)
         if nav_line:
             page += nav_line + "\n\n"
-        page += body + "\n"
+        page += rc.body + "\n"
         if nav_line:
             page += "\n" + nav_line + "\n"
-        fname = out_path_stem.name if n_parts == 1 else f"{out_path_stem.name}-part{part_no}"
+        fname = out_path_stem.name if rc.n_parts == 1 else f"{out_path_stem.name}-part{rc.part_no}"
         dest = out_path_stem.parent / f"{fname}.md"
+        dest.write_text(page)
+        written.append(dest)
+    return written
+
+
+SUBAGENT_STYLE = """<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style>"""
+
+
+def render_subagent_pages(
+    doc: dict,
+    title: str,
+    agent_id: str,
+    parent_session_id: str,
+    subagent_ids: set[str],
+    note: str | None = None,
+) -> list[Path]:
+    """Render a subagent transcript as standalone static HTML file(s) under
+    site/src/transcripts/subagents/. Not listed in SUMMARY.md."""
+    written = []
+    chunks = render_chunks(doc, title, subagent_ids, user_label="User")
+    n_parts = len(chunks)
+    for rc in chunks:
+        fname = agent_id if n_parts == 1 else f"{agent_id}-part{rc.part_no}"
+        nav = []
+        if n_parts > 1:
+            if rc.part_no > 1:
+                nav.append(f'<a href="{agent_id}-part{rc.part_no - 1}.html">← part {rc.part_no - 1}</a>')
+            if rc.part_no < n_parts:
+                nav.append(f'<a href="{agent_id}-part{rc.part_no + 1}.html">part {rc.part_no + 1} →</a>')
+        nav_html = f'<div class="nav-links">{" · ".join(nav)}</div>' if nav else ""
+        header = (
+            f'<div class="subagent-header">'
+            f'<a href="../{parent_session_id}.html#agent-{agent_id}">← back to session</a>'
+            f" &middot; subagent transcript, not indexed</div>"
+        )
+        note_html = page_note_html(note) if rc.part_no == 1 else ""
+        page = (
+            "<!doctype html>\n<html><head><meta charset=\"utf-8\">"
+            f"<title>{html.escape(rc.heading)}</title>{SUBAGENT_STYLE}</head><body>"
+            f"<h1>{html.escape(rc.heading)}</h1>{header}{note_html}{nav_html}{rc.body}{nav_html}"
+            "</body></html>\n"
+        )
+        dest = SUBAGENTS_OUT_DIR / f"{fname}.html"
         dest.write_text(page)
         written.append(dest)
     return written
@@ -269,14 +346,55 @@ def format_date(ts: str | None) -> str:
     return ts.split("T")[0]
 
 
+def load_titles() -> dict:
+    if not TITLES_PATH.is_file():
+        return {}
+    try:
+        return json.loads(TITLES_PATH.read_text())
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def load_page_notes() -> dict:
+    """id -> spoiler-free note string, rendered at the top of that session or
+    subagent page. See tools/page-notes.json."""
+    if not PAGE_NOTES_PATH.is_file():
+        return {}
+    try:
+        raw = json.loads(PAGE_NOTES_PATH.read_text())
+    except (json.JSONDecodeError, OSError):
+        return {}
+    return {k: v for k, v in raw.items() if not k.startswith("_") and isinstance(v, str)}
+
+
+def page_note_html(note: str | None) -> str:
+    if not note:
+        return ""
+    return f'<div class="page-note"><em>{esc_inline(note)}</em></div>\n'
+
+
 def main() -> None:
     TRANSCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
     SUBAGENTS_OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     subagent_ids = load_subagent_ids()
+    titles = load_titles()
+    page_notes = load_page_notes()
 
     index_path = REDACTED_DIR / "index.json"
     index = json.loads(index_path.read_text()) if index_path.is_file() else {"sessions": []}
+
+    # Count subagents per parent session first (used in the README table).
+    subagent_dir = REDACTED_DIR / "subagents"
+    subagent_docs = []
+    if subagent_dir.is_dir():
+        for p in sorted(subagent_dir.glob("*.json")):
+            subagent_docs.append(json.loads(p.read_text()))
+    subagent_count_by_session: dict[str, int] = {}
+    for d in subagent_docs:
+        parent = d.get("parent_session_id")
+        if parent:
+            subagent_count_by_session[parent] = subagent_count_by_session.get(parent, 0) + 1
 
     session_rows = []
     for sess_meta in index.get("sessions", []):
@@ -285,27 +403,37 @@ def main() -> None:
         if not src.is_file():
             continue
         doc = json.loads(src.read_text())
-        title = truncate(sess_meta.get("first_user_prompt", sid), 70) or sid
-        title = esc_inline(title)
+        raw_prompt = sess_meta.get("first_user_prompt", sid) or sid
+        fallback_title = truncate(raw_prompt, 70) or sid
+        fallback_title = esc_inline(fallback_title)
+        title_entry = titles.get(sid, {})
+        display_title = esc_inline(title_entry.get("title", "")) if title_entry.get("title") else ""
         stem = TRANSCRIPTS_DIR / sid
-        written = render_session(doc, title, subagent_ids, stem)
+        written = render_session(
+            doc, display_title or fallback_title, subagent_ids, stem, note=page_notes.get(sid)
+        )
         n_turns = len(doc.get("turns", []))
+        tool_counts = sess_meta.get("tool_counts", {})
         session_rows.append(
             {
                 "id": sid,
                 "date": format_date(sess_meta.get("start")),
-                "title": title,
+                "title": display_title,
+                "nav_title": display_title or fallback_title,
+                "first_prompt": esc_inline(truncate(raw_prompt, 120)),
+                "user_turns": sess_meta.get("user_turns", 0),
+                "tool_uses": sum(tool_counts.values()),
+                "subagent_count": subagent_count_by_session.get(sid, 0),
                 "turns": n_turns,
                 "link": written[0].name,
             }
         )
 
-    subagent_rows = []
-    for p in sorted((REDACTED_DIR / "subagents").glob("*.json")) if (REDACTED_DIR / "subagents").is_dir() else []:
-        doc = json.loads(p.read_text())
-        agent_id = doc.get("session_id", p.stem)
+    for d in subagent_docs:
+        agent_id = d.get("session_id")
+        parent_session_id = d.get("parent_session_id", "")
         first_prompt = ""
-        for t in doc.get("turns", []):
+        for t in d.get("turns", []):
             if t.get("role") == "user":
                 for b in t.get("blocks", []):
                     if b.get("kind") == "text":
@@ -314,59 +442,46 @@ def main() -> None:
             if first_prompt:
                 break
         title = esc_inline(truncate(first_prompt, 70) or agent_id)
-        stem = SUBAGENTS_OUT_DIR / agent_id
-        render_session(doc, title, subagent_ids, stem)
-        subagent_rows.append(
-            {
-                "id": agent_id,
-                "date": format_date(doc.get("start")),
-                "title": title,
-                "turns": len(doc.get("turns", [])),
-                "link": f"subagents/{agent_id}.md",
-            }
+        render_subagent_pages(
+            d, title, agent_id, parent_session_id, subagent_ids, note=page_notes.get(agent_id)
         )
 
-    write_readme(session_rows, subagent_rows)
-    update_summary(session_rows, subagent_rows)
+    write_readme(session_rows)
+    update_summary(session_rows)
 
 
-def write_readme(session_rows: list[dict], subagent_rows: list[dict]) -> None:
+def write_readme(session_rows: list[dict]) -> None:
     lines = ["# Transcripts", "", (
         "Full, redacted build transcripts of the Claude Code sessions used to make this "
         "site and the novel's tooling. Spoilers for anything past the published chapters "
         "are replaced with grey ⟦redacted⟧ markers; see [About this site](../about.md)."
     ), ""]
-    lines += ["## Sessions", "", "| Date | Title | Turns | |", "|---|---|---|---|"]
+    lines += ["## Sessions", "", "| Date | Title | First prompt | User turns | Tool uses | Subagents | |", "|---|---|---|---|---|---|---|"]
     for row in sorted(session_rows, key=lambda r: r["date"]):
         lines.append(
-            f"| {row['date']} | {md_link_text(row['title'])} | {row['turns']} | [open]({row['link']}) |"
+            f"| {row['date']} | {md_link_text(row['title'])} | {md_link_text(row['first_prompt'])} | "
+            f"{row['user_turns']} | {row['tool_uses']} | {row['subagent_count']} | [open]({row['link']}) |"
         )
-    lines += ["", f"## Subagents ({len(subagent_rows)})", "", (
-        "Subagent transcripts are linked inline from the sessions that spawned them "
-        "(look for 🔧 Agent lines); see the full list below."
-    ), "", "| Date | Title | Turns | |", "|---|---|---|---|"]
-    for row in sorted(subagent_rows, key=lambda r: r["date"]):
-        lines.append(
-            f"| {row['date']} | {md_link_text(row['title'])} | {row['turns']} | [open]({row['link']}) |"
-        )
+    lines += ["", (
+        "A **session** is one top-level Claude Code conversation, the kind started directly "
+        "by David; a **subagent** is a separate conversation a session spawns (via the Agent "
+        "or Workflow tools) to do a bounded piece of work and report back. Subagent "
+        "transcripts are linked inline from the session that spawned them (look for 🔧 Agent "
+        "lines) as standalone pages outside this book's navigation and search index, since "
+        "there are far too many of them to list here. Tool calls throughout are shown in a "
+        "simplified, one-line form; the contents of files read or written are never shown. "
+        "Thinking blocks are collapsed behind a \"thinking\" toggle."
+    ), ""]
     (TRANSCRIPTS_DIR / "README.md").write_text("\n".join(lines) + "\n")
 
 
-def update_summary(session_rows: list[dict], subagent_rows: list[dict]) -> None:
-    # mdBook only builds pages reachable from SUMMARY.md, so every subagent
-    # page must be listed too (even though the nav itself favours the inline
-    # 🔧 Agent links) or its link from a session page would 404.
+def update_summary(session_rows: list[dict]) -> None:
     text = SUMMARY_PATH.read_text()
     marker = "- [Transcripts](transcripts.md)"
     lines = ["- [Transcripts](transcripts/README.md)"]
     for row in sorted(session_rows, key=lambda r: r["date"]):
         lines.append(
-            f"  - [{row['date']}: {md_link_text(row['title'])}](transcripts/{row['link']})"
-        )
-    lines.append("  - [Subagents](transcripts/README.md#subagents)")
-    for row in sorted(subagent_rows, key=lambda r: r["date"]):
-        lines.append(
-            f"    - [{row['date']}: {md_link_text(row['title'])}](transcripts/{row['link']})"
+            f"  - [{row['date']}: {md_link_text(row['nav_title'])}](transcripts/{row['link']})"
         )
     replacement = "\n".join(lines)
     if marker in text:

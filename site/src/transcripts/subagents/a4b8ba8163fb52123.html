@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for a fiction project with…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a4b8ba8163fb52123">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and <span class="redacted">redacted: private</span>/draft/book-01/scenes/05-in-some-sort-of-order.md. Also read <span class="redacted">redacted: private</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope "scene") the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.<br>
+<br>
+Candidates:<br>
+[<br>
+ {<br>
+  "rule_id": "missing-qualifier",<br>
+  "quote": "when the thing moved",<br>
+  "reason": "Bare noun phrase 'the thing' is ambiguous; could refer to the fate binding, the Weave vision, or the interaction with Peri; reader must infer referent from prior context"<br>
+ },<br>
+ {<br>
+  "rule_id": "missing-qualifier",<br>
+  "quote": "the nineteenth",<br>
+  "reason": "Bare noun phrase whose referent is unclear; context suggests a date or decision, but doesn't explicitly qualify what 'the nineteenth' means"<br>
+ },<br>
+ {<br>
+  "rule_id": "mirror-retort",<br>
+  "quote": "\"You're sitting square to the desk.\"\n\n\"I always sit square to the desk.\"",<br>
+  "reason": "Reply reuses sentence frame from previous line with only subject/adverb variation, mirroring the speaker's structure rather than expressing disagreement in own construction"<br>
+ },<br>
+ {<br>
+  "rule_id": "maxim-capped-speech",<br>
+  "quote": "\"If we're going to be ignorant, we can at least be ignorant in some sort of order.\" (line 63) and \"I've had kings negotiate with me with less clarity about their own position.\" (line 71)",<br>
+  "reason": "Two maxim-ending turns—portable lines that survive lifting out of scene—when budget is 1 per scene maximum; both generalizable statements unanchored to immediate scene needs"<br>
+ },<br>
+ {<br>
+  "rule_id": "description-list",<br>
+  "quote": "Sorrel was tall and plain, and quick, and for once not moving.",<br>
+  "reason": "Catalogues four separate attributes (height, appearance, manner, state) as a list rather than one noticed thing"<br>
+ },<br>
+ {<br>
+  "rule_id": "motive-off-page",<br>
+  "quote": "Her hand went to her pocket for a pencil and came back without one.",<br>
+  "reason": "Unexplained deliberate act—why reach for a pencil then return without one? Neighboring sentences don't supply motive"<br>
+ }<br>
+]</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll read the files.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1216 lines, 49319 chars</p>
+<p>🔧 Read draft/book-01/scenes/05-in-some-sort-of-order.md</p>
+<p>✅ 76 lines, 4919 chars</p>
+<p>🔧 Bash: python3 -c " import json rs=json.load(open('tools/lint/rules.json')) for r in rs:     if…</p>
+<p>✅ 101 lines, 6104 chars</p>
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>

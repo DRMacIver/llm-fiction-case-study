@@ -27,6 +27,7 @@ SPOILERS_PATH = REPO_ROOT / "tools" / "spoilers.json"
 PARSED_DIR = REPO_ROOT / "build" / "parsed"
 REDACTED_DIR = REPO_ROOT / "build" / "redacted"
 REPORT_PATH = REPO_ROOT / "build" / "redaction-report.json"
+PROSE_INDEX_PATH = REPO_ROOT / "build" / "prose-index.pkl"
 
 DENSITY_THRESHOLD = 0.15
 
@@ -41,6 +42,47 @@ _SCENE_NUM_RE = re.compile(
     r"\b(scene|ch(?:apter)?)\s*0*([0-9]{1,3})\b", re.IGNORECASE
 )
 _SCENE_FILENAME_RE = re.compile(r"\b0*([0-9]{2,3})-[a-z0-9-]+\.md\b", re.IGNORECASE)
+
+# Local, private-machine identifiers that leak operational/filesystem detail
+# (never a story spoiler, but never the site's business to show either):
+# absolute paths under the user's Claude Code project-storage directory or
+# this tool's own scratch directory (session ids, subagent/workflow paths,
+# memory-file paths all live under these), plus bare tool-use/task ids that
+# appear outside of a path (e.g. quoted alone in prose).
+_PRIVATE_PATH_RE = re.compile(
+    r"(?:/Users/[a-zA-Z0-9_.-]+/\.claude/|/private/tmp/claude-501/)[^\s<>`\"')]*"
+)
+_PRIVATE_ID_RE = re.compile(
+    r"\btoolu_[A-Za-z0-9]+\b"
+    r"|\bwf_[0-9a-f]{6,10}-[0-9a-f]{3}\b"
+    r"|\bfeedback-[a-z0-9-]+\.md\b"
+)
+
+# Matches an already-inserted redaction marker verbatim, e.g.
+# "⟦redacted: character⟧" or "⟦redacted sentence: plague/epidemic⟧". Used to
+# protect earlier passes' output from being re-scanned (and corrupted) by
+# later passes -- e.g. a topic-sentence marker whose *topic name* itself
+# contains a word a later term rule matches (a marker for the "Edwin's
+# death/mortality" topic contains the literal text "Edwin's death", which
+# the "Edwin's death" term rule would otherwise also match and blank out,
+# producing a nested "⟦redacted sentence: ⟦redacted: event⟧/mortality⟧").
+_MARKER_RE = re.compile(re.escape(CHAR_MARK) + r"[^" + CHAR_MARK + CHAR_MARK_CLOSE + r"]*" + re.escape(CHAR_MARK_CLOSE))
+
+
+def _apply_outside_markers(text: str, fn) -> str:
+    """Run ``fn`` (str -> str) only on the spans of ``text`` that aren't
+    already an inserted ``⟦...⟧`` redaction marker, leaving markers from
+    earlier passes untouched."""
+    if CHAR_MARK not in text:
+        return fn(text)
+    out = []
+    last_end = 0
+    for m in _MARKER_RE.finditer(text):
+        out.append(fn(text[last_end : m.start()]))
+        out.append(m.group(0))
+        last_end = m.end()
+    out.append(fn(text[last_end:]))
+    return "".join(out)
 
 
 def _word_pattern(term: str) -> re.Pattern:
@@ -183,6 +225,24 @@ def _mark_unpublished_paths(text: str, spoilers: Spoilers, counts: RedactionCoun
     return text
 
 
+def _redact_private_paths(text: str, counts: RedactionCounts) -> str:
+    """Blank local filesystem paths / tool-use ids that leak operational
+    detail (Claude Code project storage, this tool's scratch dir, toolu_
+    ids). Not a story spoiler category -- always the generic "private"
+    marker, matching the existing literal /Users/.../autoroad term's
+    category in spoilers.json.
+    """
+
+    def repl(m: re.Match) -> str:
+        counts.add_category("private")
+        counts.redacted_chars += len(m.group(0))
+        return f"{CHAR_MARK}redacted: private{CHAR_MARK_CLOSE}"
+
+    text = _PRIVATE_PATH_RE.sub(repl, text)
+    text = _PRIVATE_ID_RE.sub(repl, text)
+    return text
+
+
 def _redact_terms(text: str, spoilers: Spoilers, counts: RedactionCounts) -> str:
     for rule in spoilers.terms:
         for pattern in rule.patterns:
@@ -193,6 +253,67 @@ def _redact_terms(text: str, spoilers: Spoilers, counts: RedactionCounts) -> str
 
             text = pattern.sub(repl, text)
     return text
+
+
+def load_prose_index(path: Path = PROSE_INDEX_PATH):
+    """Load the shingle index built by tools/prose_index.py, if present.
+
+    Returns an object with a precomputed ``unpublished_only`` attribute (the
+    unpublished shingle set minus anything that also appears in the
+    published-scenes shingle set, so quoting a sentence that happens to also
+    appear in the published run isn't flagged) plus ``shingle_size``. Returns
+    None (guard disabled) if the index hasn't been built yet.
+    """
+    if not path.is_file():
+        return None
+    from tools.prose_index import ProseIndex  # local import: keeps redact.py
+
+    index = ProseIndex.load(path)
+    if not hasattr(index, "unpublished_only"):
+        index.unpublished_only = index.unpublished - index.published
+    return index
+
+
+def _redact_unpublished_prose_sentences(
+    text: str, prose_index, counts: RedactionCounts
+) -> str:
+    """Sentence-level guard against quoted unpublished story prose.
+
+    Deterministic backstop for term/topic redaction: splits `text` into
+    sentences and, for each one, hashes its 7-word shingles (same
+    normalisation as the index) and checks them against shingles that occur
+    in unpublished story sources but never in the published scenes. Any hit
+    replaces the whole sentence. Sentences shorter than the shingle size
+    can't produce a shingle at all and so can never match -- acceptable,
+    per the design: this is a backstop for verbatim-ish quoting, not a
+    general spoiler detector.
+    """
+    if prose_index is None or not prose_index.unpublished_only:
+        return text
+    from tools.prose_index import shingle_hashes
+
+    spans = []
+    pos = 0
+    for m in _SENTENCE_SPLIT_RE.finditer(text):
+        spans.append((pos, m.start()))
+        pos = m.end()
+    spans.append((pos, len(text)))
+
+    out = []
+    last_end = 0
+    for start, end in spans:
+        sentence = text[start:end]
+        out.append(text[last_end:start])
+        hashes = shingle_hashes(sentence, prose_index.shingle_size)
+        if hashes and not hashes.isdisjoint(prose_index.unpublished_only):
+            counts.add_category("prose_guard:unpublished_quote")
+            counts.redacted_chars += len(sentence)
+            out.append(f"{CHAR_MARK}redacted sentence: unpublished prose{CHAR_MARK_CLOSE}")
+        else:
+            out.append(sentence)
+        last_end = end
+    out.append(text[last_end:])
+    return "".join(out)
 
 
 def _redact_topic_sentences(text: str, spoilers: Spoilers, counts: RedactionCounts) -> str:
@@ -229,7 +350,9 @@ def _redact_topic_sentences(text: str, spoilers: Spoilers, counts: RedactionCoun
     return "".join(out)
 
 
-def redact_text(text: str, spoilers: Spoilers, counts: RedactionCounts) -> str:
+def redact_text(
+    text: str, spoilers: Spoilers, counts: RedactionCounts, prose_index=None
+) -> str:
     if not text:
         return text
     counts.total_chars += len(text)
@@ -237,9 +360,19 @@ def redact_text(text: str, spoilers: Spoilers, counts: RedactionCounts) -> str:
     # contents don't also get double-counted by term redaction; term
     # redaction then still catches things outside those sentences.
     text = _redact_topic_sentences(text, spoilers, counts)
-    text = _redact_terms(text, spoilers, counts)
-    text = _mark_unpublished_paths(text, spoilers, counts)
-    text = _mark_scene_numbers(text, spoilers, counts)
+    # Every pass below runs after topic-sentence redaction may have already
+    # inserted "⟦...⟧" markers into `text`; keep those spans untouched so
+    # a marker's own wording (e.g. a topic name) can't be re-matched and
+    # corrupted into a nested marker.
+    text = _apply_outside_markers(text, lambda t: _redact_private_paths(t, counts))
+    text = _apply_outside_markers(text, lambda t: _redact_terms(t, spoilers, counts))
+    text = _apply_outside_markers(text, lambda t: _mark_unpublished_paths(t, spoilers, counts))
+    text = _apply_outside_markers(text, lambda t: _mark_scene_numbers(t, spoilers, counts))
+    # Deterministic quoted-unpublished-prose guard, last: a backstop for
+    # whatever term/topic redaction above didn't catch.
+    text = _apply_outside_markers(
+        text, lambda t: _redact_unpublished_prose_sentences(t, prose_index, counts)
+    )
     return text
 
 
@@ -253,37 +386,43 @@ TEXT_BLOCK_FIELDS = {
 }
 
 
-def _redact_value(value, spoilers: Spoilers, counts: RedactionCounts):
+def _redact_value(value, spoilers: Spoilers, counts: RedactionCounts, prose_index=None):
     if isinstance(value, str):
-        return redact_text(value, spoilers, counts)
+        return redact_text(value, spoilers, counts, prose_index)
     if isinstance(value, list):
-        return [_redact_value(v, spoilers, counts) for v in value]
+        return [_redact_value(v, spoilers, counts, prose_index) for v in value]
     if isinstance(value, dict):
-        return {k: _redact_value(v, spoilers, counts) for k, v in value.items()}
+        return {k: _redact_value(v, spoilers, counts, prose_index) for k, v in value.items()}
     return value
 
 
-def redact_block(block: dict, spoilers: Spoilers, counts: RedactionCounts) -> dict:
+def redact_block(
+    block: dict, spoilers: Spoilers, counts: RedactionCounts, prose_index=None
+) -> dict:
     block = dict(block)
     kind = block.get("kind")
     fields = TEXT_BLOCK_FIELDS.get(kind, [])
     for field_name in fields:
         if field_name in block and block[field_name] is not None:
-            block[field_name] = _redact_value(block[field_name], spoilers, counts)
+            block[field_name] = _redact_value(block[field_name], spoilers, counts, prose_index)
     if kind == "tool_result" and "stdout_preview" in block and block["stdout_preview"]:
         block["stdout_preview"] = [
-            redact_text(line, spoilers, counts) for line in block["stdout_preview"]
+            redact_text(line, spoilers, counts, prose_index) for line in block["stdout_preview"]
         ]
     return block
 
 
-def redact_transcript(doc: dict, spoilers: Spoilers) -> tuple[dict, RedactionCounts]:
+def redact_transcript(
+    doc: dict, spoilers: Spoilers, prose_index=None
+) -> tuple[dict, RedactionCounts]:
     counts = RedactionCounts()
     doc = dict(doc)
     turns = []
     for turn in doc.get("turns", []):
         turn = dict(turn)
-        turn["blocks"] = [redact_block(b, spoilers, counts) for b in turn.get("blocks", [])]
+        turn["blocks"] = [
+            redact_block(b, spoilers, counts, prose_index) for b in turn.get("blocks", [])
+        ]
         turns.append(turn)
     doc["turns"] = turns
     return doc, counts
@@ -302,6 +441,12 @@ def _iter_parsed_files():
 
 def main() -> None:
     spoilers = Spoilers.load()
+    prose_index = load_prose_index()
+    if prose_index is None:
+        print(
+            "warning: no build/prose-index.pkl found (run `uv run python -m "
+            "tools.prose_index` first) -- unpublished-prose sentence guard disabled"
+        )
     REDACTED_DIR.mkdir(parents=True, exist_ok=True)
     (REDACTED_DIR / "subagents").mkdir(parents=True, exist_ok=True)
 
@@ -310,7 +455,7 @@ def main() -> None:
 
     for src, dst in _iter_parsed_files():
         doc = json.loads(src.read_text())
-        redacted, counts = redact_transcript(doc, spoilers)
+        redacted, counts = redact_transcript(doc, spoilers, prose_index)
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_text(json.dumps(redacted, indent=1))
 
@@ -335,7 +480,9 @@ def main() -> None:
         idx_counts = RedactionCounts()
         for s in index.get("sessions", []):
             if "first_user_prompt" in s:
-                s["first_user_prompt"] = redact_text(s["first_user_prompt"], spoilers, idx_counts)
+                s["first_user_prompt"] = redact_text(
+                    s["first_user_prompt"], spoilers, idx_counts, prose_index
+                )
         (REDACTED_DIR / "index.json").write_text(json.dumps(index, indent=1))
         total_counts.merge(idx_counts)
 

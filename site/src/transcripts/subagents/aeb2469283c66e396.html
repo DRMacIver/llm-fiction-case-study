@@ -1,0 +1,110 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Run the pre-David editing pass on one newly drafted scene of a novel…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Run the pre-David editing pass on one newly drafted scene of a novel…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-aeb2469283c66e396">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Run the pre-David editing pass on one newly drafted scene of a novel in <span class="redacted">redacted: private</span>. First read the whole of .claude/skills/pre-david-pass/SKILL.md and follow it exactly (Parts 1–7; findings only, each with quote, the Part/bullet it fails, one sentence why, and a concrete replacement or 'cut'; never write 'clean'; do NOT edit any file — report only; a finding that cuts a reason, answer, explanation or qualification is presumptively wrong unless the thing is nonsense or does not fit, and the finding must say which).<br>
+<br>
+Read draft/book-01/VOICE.md in full. Scene: draft/book-01/scenes/66-the-fen-margin.md <span class="redacted">unpublished</span> (the night of 13/14 Harvestmonth; the book's first fight, written as work). Read for context the exemplars named in VOICE.md §1 (scenes 01, 06, 05, 02, 13, 19) and the preceding scenes 62–65 in draft/book-01/scenes/. Canon: notes/canon/characters/<span class="redacted">redacted: character</span>.md ('Voice — binding'), notes/canon/characters/peri.md ('How they talk'; the Seal), notes/canon/characters/edwin.md ('How they talk'), notes/premise.md (the 'not cozy' and 'teeth' calibrations: violence real, comedy insures nothing; competence shown procedurally), notes/llm-tells.md.<br>
+<br>
+Two independent reads have warned: Edwin's counted-out speech template; negative parallelism as the reflex correction; narrator aphorisms creeping; long compound opening sentences that announce the scene's turn. Check this scene against all four.<br>
+<br>
+STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history; do not search for them.<br>
+<br>
+Pay particular attention to: whether the fight reads as work and stays in Edwin's viewpoint (what can he see from the second gate four hundred yards off? — the line, the lamps, yes; Peri's footwork in detail? <span class="redacted">redacted: character</span>'s hook going in? flag anything he could not see and propose how the page gets it, e.g. said afterwards); whether the creature descriptions are report and not ornament; the one figure ('a noise ... like a run of hens disturbed on a roost') — earned?; <span class="redacted">redacted: object</span>'s paragraph ('That was the whole of what Edwin could have sworn to afterwards' — banned family); whether the Seal beat is legible and not cryptic (she 'had not said why' — is that a withheld promise or a fact the reader can hold?); the ending on the <span class="redacted">redacted: object</span> at the water (a report left uncommented — permitted; rule on whether the framing sentence 'that he did not comment on and told nobody to comment on' is the narrator pointing at it); counts and clocks; em dashes; dialect ("They'll not cross water"); Peri likeable and not glorified; whether <span class="redacted">redacted: character</span>'s injury lands as real and unglamorous.<br>
+<br>
+Finish with two lines: is there any device a second round of comments would be about, and what would it take to make it work or remove it.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the skill and the core context files.</p>
+</div>
+
+<details><summary>36 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 257 lines, 16258 chars</p>
+<p>✅ 426 lines, 27364 chars</p>
+<p>🔧 Bash: cat -n draft/book-01/scenes/66-the-fen-margin.md <span class="redacted">unpublished</span></p>
+<p>✅ 43 lines, 8860 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 62*.md 63*.md 64*.md 65*.md; do e…</p>
+<p>✅ 150 lines, 25148 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/<span class="redacted">redacted: character</span>.md; echo "=====PERI"; cat notes/canon/ch…</p>
+<p>✅ 41 lines, 2182 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; python3 - &lt;&lt;'EOF' import re def sec(path…</p>
+<p>✅ 244 lines, 15250 chars — &gt;&gt;&gt; <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span> / </p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n -i "seal" peri.md | head -60</p>
+<p>✅ 13 lines, 2526 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '140,175p;240,300p' peri.md; echo…</p>
+<p>✅ 120 lines, 7546 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon &amp;&amp; grep -n -i "seal" system.md | head -40</p>
+<p>✅ 18 lines, 1338 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon &amp;&amp; sed -n '675,740p' system.md</p>
+<p>✅ 66 lines, 4401 chars</p>
+<p>🔧 Bash: awk '/^## How they talk/,/^## Voice/' notes/canon/characters/edwin.md | head -80; echo ==…</p>
+<p>✅ 18 lines, 958 chars</p>
+<p>🔧 Bash: grep -rn -i "<span class="redacted">redacted: object</span>" notes/ draft/book-01/*.md | head -40</p>
+<p>✅ 40 lines, 7545 chars</p>
+<p>🔧 Bash: grep -rln "<span class="redacted">redacted: object</span>" draft/book-01/scenes/ | sort; echo "=== TIMELINE"; sed -n…</p>
+<p>✅ 99 lines, 5959 chars</p>
+<p>🔧 Bash: grep -n "^#\|^\*\*" notes/llm-tells.md | head -60; echo === ; grep -n -i "teeth\|not cozy…</p>
+<p>✅ 15 lines, 762 chars</p>
+<p>🔧 Bash: sed -n '263,360p' notes/llm-tells.md; echo "=====PREMISE"; grep -n -i -A6 "cozy" notes/pr…</p>
+<p>✅ 78 lines, 4642 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; cat 06-the-front-from-the-roof.md; echo "#…</p>
+<p>✅ 39 lines, 6086 chars</p>
+<p>🔧 Bash: grep -c "—" draft/book-01/scenes/66-the-fen-margin.md <span class="redacted">unpublished</span>; grep -rn "Ranner" no…</p>
+<p>✅ 11 lines, 1023 chars</p>
+<p>🔧 Bash: sed -n '39,60p' draft/book-01/scenes/66-the-fen-margin.md <span class="redacted">unpublished</span>; echo "--- emdash…</p>
+<p>✅ 7 lines, 1318 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Findings on `draft/book-01/scenes/66-the-fen-margin.md <span class="redacted">unpublished</span>` (against the version on disk as of my last read, which changed mid-pass — Peri's count at one, the hatch clock, <span class="redacted">redacted: character</span>'s noon "three steps", and the ending's framing are all in their new form below).</p>
+<p>## Part 1 — sense, counts, viewpoint</p>
+<p>1. **"from it he could see the whole of what <span class="redacted">redacted: character</span> had built"** — Part 2 banned family ("the whole of it"/"the whole of what", ruled a weird recurring phrase) and Part 1 (the flat version is just "he could see the post"). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>2. **Viewpoint: everything at the post is written as seen from four hundred yards in the dark.** Part 1, viewpoint knowledge. What he can have at that range is the arc of lamps, the four dark figures, the dogs, movement, and noise. He cannot have: *"went onto <span class="redacted">redacted: character</span>'s bill, and the second onto <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Fix in the page's own established manner (<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s counting and Peri's step-back to what she said afterwards. "then or afterwards" currently half-licenses this and half-denies it, which is the "in between explaining and not explaining" fault.</p>
+<p>3. **"'Stand,' said <span class="redacted">redacted: character</span>, from the gate, not loudly, and the line stood."** — Part 1, sense. She is four hundred yards up the road *and* upwind (the wind is set north-east, off the fen, i.e. from the post toward the gate); a line that hears her "not loudly" at that distance does not make sense. Replace: put the word at the post — <span class="redacted">redacted: character</span> is at the gate all scene by the roster in 65, so the line should be <span class="redacted">redacted: character</span>'s, or <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>4. **"That was the whole of what Edwin could have sworn to afterwards"** followed by six precise specifics — Part 1, a line that contradicts itself, plus the banned family again. Replace: "It was long. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>5. **"he made Peri write hers before he wrote his"** — Part 1, pronoun with no antecedent; "hers" has no noun (no "account" has been said). Fixed by the replacement in 4.</p>
+<p>6. **"Drop the hatches and <span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>, so on first read it collides with "<span class="redacted">redacted: place</span> was over its banks… by four" two paragraphs later. Also the third "the whole of". Replace: "Drop the hatches and <span class="redacted">redacted: place</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>7. **"Nothing that would not cross water would cross that."** — Part 6, weak where it should be strong; the double negative has to be unpicked. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>8. **"And <span class="redacted">redacted: character</span>'s eight acres."** — Part 1, no attribution and both surrounding voices are in play; on a first read it can be taken as Edwin finishing his own thought. Replace: "'And <span class="redacted">redacted: character</span>'s eight acres,' said <span class="redacted">redacted: character</span>."</p>
+<p>9. <span class="redacted">redacted sentence: unpublished prose</span> Thirty is the *listed* length of the cooldown (system.md: quoted inclusively, clears at a midnight); at eight minutes to midnight on the 13th what she can see is the last of it running out. As written the reader takes "thirty days" as what the status says now, i.e. that it has just been recast. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>10. **"the wind he had held for twelve hours"** — Part 1, count against scene 64 <span class="redacted">unpublished</span>: he began at half past three, had it set at half past seven, and told Ferrin four hours setting and eight holding. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>11. **"thick inside the twenty minutes"** — Part 1, definite article with no antecedent. Replace: "thick inside twenty minutes".</p>
+<p>12. <span class="redacted">redacted sentence: unpublished prose</span> Replace: "and had not stopped barking since".</p>
+<p>13. **"like a run of hens disturbed on a roost"** — Part 1, wrong noun for the job. The figure itself is earned (it is canon's own throat-noise comparison, and hens are a thing Edwin sees daily), but "a run of hens" names an enclosure, not a number of birds, so the phrase reads as a sequence of hens. Replace: "like hens disturbed on a roost".</p>
+<p>14. **"streaming the way a heron streams when it comes up out of a dyke"** — Part 6, plainer form; the repeated verb is doing nothing and "streams" intransitive of a heron is a coinage where the idiom exists. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>15. <span class="redacted">redacted sentence: unpublished prose</span> Replace: "with the hook in it".</p>
+<p>16. **"<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Part 6: italics for a quoted phrase inside narration read oddly (his explicit note). <span class="redacted">redacted sentence: unpublished prose</span> Fix at the source: put the two into <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> in the street at noon. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 2 — gestures at meaning, announcing</p>
+<p>17. **"and the first sound it carried was a noise he had never heard before and would know for the rest of his life"** — Part 2, and llm-tell 14 (announcing the effect before delivering it), inside a 90-word compound opening sentence that announces the scene's turn before it happens. The flash-forward instructs the reader to be impressed, and the noise that follows then has to impress someone already braced. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>18. **"It was work."** — llm-tell 14 again: a naming fragment in front of the sentence that delivers the thing named, and the paragraph that follows is much stronger than the label. And **"it did not look like anything; it looked like a line of people"** — Part 2 and the flagged negative-parallelism reflex; "did not look like anything" restates flat to nothing. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>19. **"She did not use it. She used the sword."** — Part 2 negative parallelism as the closing move, and the second sentence is a button on a fact the paragraph has already carried (she has spent the night on the point). <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: object</span> came."</p>
+<p>20. **"Edwin wrote one thing at first light and did not comment on it."** — ruling on the question asked: the *report* at the end is permitted and should stay exactly as it is; the framing clause is the narrator pointing at it, telling the reader this is significant while declining to say what, which is the Part 2 fault in its purest form ("one thing", "did not comment on"). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 3 — would this exist</p>
+<p>21. **"the rope <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>). That is a mile and a quarter of rope, run in the dark, by a parish that has been mustering for eight hours. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 4 — dialect and character</p>
+<p>22. **"They'll not cross water,"** — VOICE.md's dialect ruling (everyone speaks plain modern English; non-first-person "'ll not" is a warning sign) and it sits beside 65's "I'll not write a second". Replace: "They won't cross water." Nothing else in her speech needs touching; the numbers-assembled-against-something shape and the "mage" address are right.</p>
+<p>## Part 5 — devices</p>
+<p>23. **Redundancy: the loop into the wet is delivered twice.** The narration reports it as fact ("The ones that went round the light went into the wet, and did not like it, and came out again on the far side toward the near pasture, and <span class="redacted">redacted: character</span> saw that inside a quarter of an hour and said so") and then <span class="redacted">redacted: character</span> says it again in full. It is also Edwin claiming an observation at four hundred yards that <span class="redacted">redacted: character</span> is the one who made. Cut the narration back to "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>24. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: object</span>, having also been <span class="redacted">redacted: character</span>'s instruction in 65 — three times. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>25. **Thread raised and dropped:** <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> The noon "three steps; I said two" now half-answers it; the cart does not come back at all. One clause from <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>26. **Clock against canon, for a ruling rather than a line edit.** `world/timeline.md` Day 30 has <span class="redacted">redacted: object</span><span class="redacted">redacted sentence: unpublished prose</span> This scene has the second gate untouched all night and the post engaged from 00:08. The scene's version is coherent with 63–65's roster; if it stands, timeline.md's Day 30 entry needs amending at backfill rather than the scene bending to it.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> (alive, on her back, cannot get up, bone-setter twelve miles off — real, unglamorous, and left that way).</p>
+<p>**Device a second round would be about:** the second gate itself — the scene has chosen a viewpoint four hundred yards from its own action and then repeatedly written the action as if the viewpoint were at the post, which is the fault a reader notices once and then cannot stop noticing.</p>
+<p>**What it would take:** commit to the distance and get every close fact by a named route the scene already owns — <span class="redacted">redacted: character</span>'s noon telling in the street, Peri's written account, <span class="redacted">redacted: character</span> at the burning next morning — so that what Edwin has at the time is lamps, shapes, noise and the sound of <span class="redacted">redacted: character</span> going down, and everything sharper than that arrives attributed.</p>
+</div>
+</body></html>

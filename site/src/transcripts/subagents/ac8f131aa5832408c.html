@@ -1,0 +1,130 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are running the `consistency-check` skill on four newly drafted s…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are running the `consistency-check` skill on four newly drafted s…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ac8f131aa5832408c">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are running the `consistency-check` skill on four newly drafted scenes of Book 1 of "Autoroad" (a LitRPG novel repo at <span class="redacted">redacted: private</span>). Do NOT read anything under notes/sealed/.<br>
+<br>
+Target scenes (read these in full):<br>
+- draft/book-01/scenes/43-two-lines-one-field.md <span class="redacted">unpublished</span><br>
+- draft/book-01/scenes/44-where-they-stopped-writing.md <span class="redacted">unpublished</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span><br>
+- draft/book-01/scenes/46-a-list-of-houses.md <span class="redacted">unpublished</span><br>
+<br>
+Ground truth to read FIRST, in full:<br>
+- notes/canon/README.md (claim levels: Established/on-page-cited, Working/binding-until-overruled, Open questions/deferred-with-trigger)<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- notes/canon/world/silent-soil.md<br>
+- grep -rl "Holm Deep" notes/canon and read whichever file(s) it's in (may be world/ or elsewhere)<br>
+- notes/canon/characters/<span class="redacted">redacted: character</span>.md<br>
+- notes/canon/characters/minor.md<br>
+- notes/canon/characters/peri.md<br>
+- notes/canon/characters/edwin.md<br>
+- notes/canon/clue-ledger.md<br>
+- notes/canon/deferred-questions.md <span class="redacted">unpublished</span> (the index of every deferred question, its trigger, and owning file — read the whole triaged table)<br>
+- draft/book-01/SCENES.md — specifically the act-two binding list at the foot of the file<br>
+<br>
+Also read for continuity context only (NOT under review, do not report findings on these directly unless the new scenes contradict something stated in them):<br>
+- draft/book-01/scenes/34 through 42 (whatever their filenames are — glob draft/book-01/scenes/3[4-9]-*.md draft/book-01/scenes/4[0-2]-*.md)<br>
+<br>
+## What to check in the four target scenes<br>
+<br>
+1. Hard contradictions with Established or Working canon — quote the canon line (with file), quote the scene line (with file+location), give the minimal fix.<br>
+2. Deferred questions the scenes resolve casually — check each entry in deferred-questions.md's table against what the scenes say; note the entry's named trigger and whether these scenes constitute that trigger or a premature resolution.<br>
+3. <span class="redacted">redacted sentence: unpublished prose</span> Check all date/day-count references in the four scenes for arithmetic consistency with each other, with timeline.md, and with scenes 34-42.<br>
+4. Names, sums, distances, roster counts that don't add up — within the four scenes themselves, and against canon (character names/spellings, ages — especially checking for any stray "21/three years" shed-age figures that should now read nineteen/second-year per the override — headcounts, money sums, travel distances/times).<br>
+5. New facts the four scenes establish that canon does not yet record — list as backfill candidates for the separate consistency-backfill skill (do not edit canon files yourself).<br>
+<br>
+## Output format<br>
+<br>
+A numbered findings list, most severe first, using the categories above. For each finding: quote scene line + location, quote/cite conflicting canon or note absence, classify as `contradiction` / `drift` / `ambiguity` / `backfill-candidate`, suggest minimal fix. Be terse — no praise, no throat-clearing. If a category has no findings, say so plainly. Do not edit any files — this is a read-only check. Report your full findings list as your final answer.</p></blockquote>
+
+
+<p>🔧 Skill: </p>
+<p>✅ 1 lines, 34 chars</p>
+<p><span id="agent-adb123569a03e3e0d"></span>🔧 <a href="subagents/adb123569a03e3e0d.html">Agent: Consistency check four draft scenes</a></p>
+<p>✅ 6 lines, 1067 chars</p>
+
+<div class="assistant-prose">
+<p>The consistency check is running in the background as a subagent. I'll report the findings as soon as it completes.</p>
+</div>
+
+
+<blockquote><p><strong>User:</strong><br>
+[SYSTEM NOTIFICATION - NOT USER INPUT]<br>
+This is an automated background-task event, NOT a message from the user.<br>
+Do NOT interpret this as user acknowledgement, confirmation, or response to any pending question.<br>
+No human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.<br>
+<br>
+&lt;task-notification&gt;<br>
+&lt;task-id&gt;adb123569a03e3e0d&lt;/task-id&gt;<br>
+&lt;tool-use-id&gt;<span class="redacted">redacted: private</span>&lt;/tool-use-id&gt;<br>
+&lt;output-file&gt;<span class="redacted">redacted: private</span>&lt;/output-file&gt;<br>
+&lt;status&gt;completed&lt;/status&gt;<br>
+&lt;summary&gt;Agent "Consistency check four draft scenes" finished&lt;/summary&gt;<br>
+&lt;note&gt;A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.&lt;/note&gt;<br>
+&lt;result&gt;## Findings — Consistency Check: Scenes 43–46<br>
+<br>
+**Overview:** These four scenes are exceptionally tightly sourced to established canon (chain figures, dates, headcounts, character quotes, and gear descriptions largely reuse or exactly reconstruct on-page material from `notes/canon/world/silent-soil.md`, `timeline.md`, `<span class="redacted">redacted: character</span>.md`, and `minor.md`). I checked all date/day arithmetic, chain-figure arithmetic, mileage, headcounts, and dialogue attributions against canon. No hard contradictions were found. Below are the categories with actual findings; categories with none are stated plainly.<br>
+<br>
+### Contradiction<br>
+**None found.** All chain readings (6 ch 20 → 6 ch 18; 9 ch 50 <span class="redacted">unpublished</span>/48 → 9 ch 73 <span class="redacted">unpublished</span>), dates (28/29 Cornmonth), the Holm Deep interval math (82 days = "eleven weeks and five days"; 239−190=49, 272−239=33), mileage (Fenholt–Ashway bridge = 40−8 = 32 miles, matching scene 44 <span class="redacted">unpublished</span>'s "thirty-two miles west"), the roster arithmetic in scene 45 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+### Deferred question resolved casually<br>
+**None found.** Scene 43 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> No god, holiday, realm, or Edwin class-name is named. No lifespan guarantee is stated for Edwin.<br>
+<br>
+### Day/date/calendar errors<br>
+**None found.** Scene 42 <span class="redacted">unpublished</span> = Day 13 (27 Cornmonth, matches timeline's "first protocol worm count... <span class="redacted">redacted: character</span>'s nine pound"); scene 43 <span class="redacted">unpublished</span> = Days 14–15 (28–29 Cornmonth, "fourth morning" counting from Day 11); scenes 44–46 = Day 15 (29 Cornmonth), matching the Charter's ruling of Holm Deep to 2 Fallowmonth "that morning." All internal arithmetic (23 links in 5 days, 33/49-day Holm Deep figures, "a day of the month left" for the Cornmonth leakage count of 19) is correct.<br>
+<br>
+### Names, sums, distances, headcounts<br>
+**None found in error.** Verified consistent: <span class="redacted">redacted: character</span>'s "four clearings, five with the Twelve Acre" exchange; <span class="redacted">redacted: character</span> "about forty... good pen and a bad cough"; <span class="redacted">redacted: character</span> unnamed-age-in-canon but not contradicted; <span class="redacted">redacted: character</span>'s "nine pound" and brother detail; <span class="redacted">redacted: character</span> "at his sister's."<br>
+<br>
+### Backfill candidates (new facts established on the page, not yet in canon files)<br>
+1. **Scene 43 <span class="redacted">unpublished</span>** — division of labour: Burl holds the post end, Tess writes while Peri walks the chain line and inspects the ground (new procedural detail for the Day 14–15 rerun).<br>
+2. **Scene 45 <span class="redacted">unpublished</span>** — <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+3. **Scene 46 <span class="redacted">unpublished</span>** — <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+4. **Scene 44 <span class="redacted">unpublished</span>** — the Charter-house slate as a weekly public log (distinct from <span class="redacted">redacted: character</span>'s personal leakage-count book), with specific dates 14th/21st/28th Cornmonth and the deduction "somebody walks somewhere on the same day of the week." This is a new instrument/observable worth logging in the clue-ledger equivalent for the current draft (the existing `plans/book-01/clue-ledger.md` <span class="redacted">unpublished</span> is keyed to a prior/superseded scene-numbering scheme and does not cover the current 43–46 range at all — see Drift below).<br>
+5. **Scene 45 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> Not previously established; low-stakes but now on the page as a citable rate.<br>
+<br>
+### Drift / ambiguity<br>
+1. **Clue-ledger staleness.** `plans/book-01/clue-ledger.md` <span class="redacted">unpublished</span> is keyed to an older scene-numbering scheme (`rewrite/book-01/arc-0N/scenes/`, chapters 037–054) that does not correspond to the current `draft/book-01/scenes/` numbering (01–89) these four scenes belong to. It cannot be used to verify clue-budget compliance for scenes 43–46 as currently numbered, and should be treated as not covering this stretch. This is a housekeeping gap, not a content error.<br>
+2. **SCENES.md's own binding note appears to misalign with the draft.** The Act 2 binding block states "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>. The drafted scene 44 <span class="redacted">unpublished</span> ("Where they stopped writing") contains no such clue — it is purely the Charter-board reading scene. Either the binding note's scene number is wrong, or a planned clue was dropped. Flag for author confirmation; not a contradiction of established canon, just a plan/draft mismatch worth resolving before assembly.&lt;/result&gt;<br>
+&lt;usage&gt;&lt;subagent_tokens&gt;244959&lt;/subagent_tokens&gt;&lt;tool_uses&gt;25&lt;/tool_uses&gt;&lt;duration_ms&gt;224965&lt;/duration_ms&gt;&lt;/usage&gt;<br>
+&lt;/task-notification&gt;</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>## Consistency Check — Scenes 43–46</p>
+<p>**Overview:** All four scenes are tightly sourced to canon. All chain-figure arithmetic, dates, mileage, headcounts, and dialogue reuse were verified. No hard contradictions found.</p>
+<p>### Contradiction<br>
+None found. Verified exact matches against canon: chain readings (6ch20→6ch18; 9ch50/48→9ch73), dates (28/29 Cornmonth), Holm Deep interval math (82 days = "eleven weeks and five days"), mileage (Fenholt–Ashway = 32 miles), scene 45 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Deferred question resolved casually<br>
+None found. Scene 43 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> No god, holiday, realm, or Edwin class-name named; no lifespan guarantee stated.</p>
+<p>### Day/date/calendar errors<br>
+None found. Scene 42 <span class="redacted">unpublished</span> = Day 13 (27 Cornmonth); scene 43 <span class="redacted">unpublished</span> = Days 14–15 (28–29 Cornmonth); scenes 44–46 = Day 15 (29 Cornmonth). Internal arithmetic checks out throughout.</p>
+<p>### Names, sums, distances, headcounts<br>
+None found in error.</p>
+<p>### Backfill candidates (for consistency-backfill)<br>
+1. Scene 43 <span class="redacted">unpublished</span> — labour division on the chain rerun: Burl holds the post end, Tess writes, Peri walks the line inspecting ground.<br>
+2. Scene 45 <span class="redacted">unpublished</span> — <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+3. Scene 46 <span class="redacted">unpublished</span> — <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+4. Scene 44 <span class="redacted">unpublished</span> — the Charter-house slate as a weekly public log (dates 14th/21st/28th Cornmonth) distinct from <span class="redacted">redacted: character</span>'s private leakage book, with the deduction "somebody walks somewhere on the same day of the week."<br>
+5. Scene 45 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Drift / ambiguity<br>
+1. `plans/book-01/clue-ledger.md` <span class="redacted">unpublished</span> is keyed to an old scene-numbering scheme (`rewrite/book-01/arc-0N/scenes/`, chapters 037–054) that doesn't map to the current `draft/book-01/scenes/` numbering — it can't currently verify clue-budget compliance for scenes 43–46. Housekeeping gap, not a content error.<br>
+2. `draft/book-01/SCENES.md`'s Act 2 binding note says "<span class="redacted">redacted: character</span>'s people sealed... clue 1 twice (**44**, 69)" implying a grandmother's-people clue should land in scene 44 <span class="redacted">unpublished</span>, but the drafted scene 44 <span class="redacted">unpublished</span> ("Where they stopped writing") contains only the Charter-board reading, no such clue. Either the binding note's scene number is stale or a planned clue was dropped — flag for confirmation before assembly, not a canon contradiction.</p>
+<p>Relevant paths: `draft/book-01/scenes/43-two-lines-one-field.md <span class="redacted">unpublished</span>`, `44-where-they-stopped-writing.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>`, `46-a-list-of-houses.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> `draft/book-01/SCENES.md`.</p>
+</div>
+</body></html>

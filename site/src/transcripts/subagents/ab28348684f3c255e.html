@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ab28348684f3c255e">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<br>
+**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
+- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
+- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
+- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
+<br>
+Read `.claude/skills/editing-pass/SKILL.md`. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">unpublished</span> Cite the line and the canon file for every finding.<br>
+<br>
+Your material: scenes 01–07 (the made road (leads)) in `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> and prior-arc summaries `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> Report findings only, each with the file, the line quoted, and what is wrong; do not write "clean". Write `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/lens/1-canon.md`. Do not edit prose. Do not commit.<br>
+<br>
+Your final message: finding count and the worst one.</p></blockquote>
+
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>✅ 69 lines, 2222 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 710 lines, 29813 chars</p>
+<p>🔧 Bash: cat notes/canon/deferred-questions.md <span class="redacted">unpublished</span> | sed -n '1,60p'; echo "---TIMELINE--…</p>
+<p>✅ 292 lines, 18791 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+<p>✅ 26 lines, 1879 chars</p>
+<p>🔧 Bash: sed -n '374,460p' notes/canon/world/timeline.md</p>
+<p>✅ 87 lines, 5333 chars</p>
+<p>🔧 Bash: tail -80 rewrite/book-01/FLAGS.md; echo "---"; grep -n "<span class="redacted">redacted: character</span>⟦redacted se…</p>
+<p>✅ 103 lines, 7241 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>✅ 180 lines, 10200 chars</p>
+<p>🔧 Bash: grep -n "Millbrook\|surname" notes/canon/characters/peri.md | head -5; echo ---; grep -n…</p>
+<p>✅ 23 lines, 1599 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good — names check out. Now checking Edwin's arm/<span class="redacted">redacted: event</span> injury facts and the letter's four content items against canon for consistency.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: grep -n "forearm\|Harvestmonth\|<span class="redacted">redacted: event</span>\|both bones\|twenty-first\|Saltmonth" n…</p>
+<p>✅ 15 lines, 1086 chars</p>
+<p>🔧 Write rewrite/book-01/arc-03/lens/1-canon.md</p>
+<p>✅ 1 lines, 169 chars</p>
+<p>🔧 Bash: cat &gt;&gt; <span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md &lt;&lt; 'EOF' ⟦redacted sentence: unpublis…</p>
+<p>✅ 1 lines, 4 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>2 findings, both logged to `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` and written up in `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-03/lens/1-canon.md`.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span> This is a direct numeric contradiction of established canon appearing inside an in-world letter meant to be authoritative.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span> coming out *that same evening, after supper, at the Blackrow* (same house, same night), entered in "the grey book," none of which the scene shows. This matches the scene plan's own wording, so it's a plan-vs-timeline.md conflict rather than a page-vs-plan one.</p>
+</div>
+</body></html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the editing subagent for the third draft of Book 1 of the nov…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a4c15c00e8ebdc1c5">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
+<br>
+Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly, including the additions made today. Your material: draft/book-01/scenes/05-in-some-sort-of-order.md, read after scenes 01–04 in the same directory (they bind what is on the page: the fourteenth and what Edwin has said about it, the Pellings' rain tomorrow at 12:30, the kitchen and the study, what Edwin told Peri and what she told him). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required context.</p>
+</div>
+
+<details><summary>24 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>✅ 315 lines, 19859 chars</p>
+<p>🔧 Read draft/book-01/scenes/05-in-some-sort-of-order.md</p>
+<p>✅ 62 lines, 4113 chars</p>
+<p>🔧 Bash: for f in draft/book-01/scenes/01*.md draft/book-01/scenes/02*.md draft/book-01/scenes/03*…</p>
+<p>🔧 Bash: cat notes/canon/characters/sorrel.md; echo "=====EDWIN"; cat notes/canon/characters/edwin…</p>
+<p>✅ 220 lines, 20230 chars</p>
+<p>✅ 44 lines, 2192 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 8 lines, 240 chars</p>
+<p>🔧 Read notes/canon/characters/sorrel.md</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 202 lines, 18960 chars</p>
+<p>✅ 842 lines, 52121 chars</p>
+<p>🔧 Read notes/canon/characters/edwin.md</p>
+<p>✅ 933 lines, 62246 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "status\|timekeep\|hour\|box\|display\|unbidden" notes…</p>
+<p>✅ 39 lines, 2868 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "weather\|front\|rain\|frost list\|roof\|coast" notes/…</p>
+<p>✅ 39 lines, 2682 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '920,1060p' notes/canon/system.md</p>
+<p>✅ 140 lines, 8419 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "roof\|study\|workroom\|Marsh Barton\|Upper Wold\|Pell…</p>
+<p>✅ 13 lines, 895 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Findings</p>
+<p>**1.** "Until then it costs me knowing it's there, and that's all."<br>
+— **Part 1** (a word doing a job it cannot do / no clean flat restatement). "Costs me knowing" reads as *the knowledge is what it costs me*, which inverts the sense; ch. 002's "it costs me nothing but knowing it's there" is the parse the compression lost.<br>
+**Fix:** "Until then it costs me nothing but knowing it's there."</p>
+<p>**2.** "the two questions she had asked the Weave"<br>
+— **Part 1** (check every count) and **Part 5** (a fact delivered at the wrong resolution). <span class="redacted">redacted sentence: unpublished prose</span> The refusal-shaped answer is the single most load-bearing thing Edwin took out of that kitchen, and the summary here drops it; and per the recent Weave ruling the currency is images, not names, which "questions" flattens.<br>
+**Fix:** "the questions she had put to the Weave, including the one it had answered with nobody,"</p>
+<p>**3.** "The sea-front was where he had left it, forty miles off the coast"<br>
+— **Part 1** (a word doing a job it cannot do). He never took hold of it, so he cannot have *left* it anywhere; it has been sitting untouched since breakfast (scenes 01, 03, 04).<br>
+**Fix:** "The sea-front was still forty miles off the coast, where it had been since breakfast,"</p>
+<p>**4.** "Three things on my list," she said. … "Third." She stopped at the door with the list under her arm, and the third thing was not on it.<br>
+— **Part 1** (check every count; a fact contradicted inside the scene). She announces three items on the list and the third is explicitly not on the list. The reveal is the better line and the announced count spoils it.<br>
+**Fix:** "Two things on my list," she said.</p>
+<p>**5.** "Then she picked the frost list back up, because the frost list was what she had come up with."<br>
+— **Part 1** (a word doing a job it cannot do) / **Part 2**. "Come up with" means *invent*; the intended sense is the errand that brought her up the hill, and the idiom collides.<br>
+**Fix:** "because the frost list was what she had come up for."</p>
+<p>**6.** "Every detail, in order. If we're going to be ignorant, we can at least be ignorant in some sort of order."<br>
+— **Part 2** (the joke footnoted) / **Part 6**. "In order" pre-announces the key word of the line two sentences later and takes the surprise off it. Ch. 002 had the bare "Every detail."<br>
+**Fix:** cut ", in order".</p>
+<p>**7.** "Edwin considered it, because Sorrel did not ask idle questions and this was not one."<br>
+— **Part 2** (the unwanted explanation). The clause restates the first half; the reader has just watched the question arrive off the list.<br>
+**Fix:** cut "and this was not one".</p>
+<p>**8.** "Second is the fourteenth. Marsh Barton wants it dry and Upper Wold wants it wet and you've told both clerks twice that you haven't decided."<br>
+— **Part 5** (redundancy: a fact already delivered, delivered again in a different mouth). All of it is on the page in scene 01, in *her* handwriting in his ledger, underlined twice — "Marsh Barton wants the fourteenth dry for hay and Upper Wold wants it wet for roots… You said you would decide." Repeating her own note back at him three hours later is the scene supplying the reader, not her pressing him.<br>
+**Fix:** let the line escalate off the note instead: "Second is the fourteenth. I've written it in your ledger twice and underlined it once, and you've told both clerks you haven't decided."</p>
+<p>**9.** "and I'll write to whichever one you've disappointed. They take it better from me."<br>
+— **Part 1** (pronoun with no clear antecedent). "Whichever one" is a single parish; "they" then has to reach past it to the clerks or the councils.<br>
+**Fix:** "and I'll write to whichever one you've disappointed. A council takes it better from me."</p>
+<p>**10.** "I've had kings negotiate with me with less clarity about their own position than that girl has about hers."<br>
+— **Part 6** (the plainest form lands the beat) and **Part 2** (the footnote). Two "with"s and a comparative tail that explains a comparison the reader has already made; ch. 002 stopped on the bare fact, which is rule 4's shape for him.<br>
+**Fix:** "I've had kings negotiate with me with less clarity about their own position."</p>
+<p>**11.** "Second is the fourteenth…" → "Third." She stopped at the door with the list under her arm<br>
+— **Part 1** (a paragraph starts somewhere the previous one did not leave it). Two lines earlier she is turning a page of the list standing where she was; nothing moves her to the door. Ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
+**Fix:** put the movement in before the ordinal: "She put the list back under her arm and got as far as the door. 'Third.'"</p>
+<p>**12.** "wrote *Marsh Barton, 14th, dry* in the ledger under the Pellings"<br>
+— **Part 1** (check the objects that are already there). <span class="redacted">redacted sentence: unpublished prose</span> Writing "under the Pellings" reads as writing into empty page.<br>
+**Fix:** "in the ledger under her handwriting".</p>
+<p>---</p>
+<p>**The device a second round would be about:** this scene is ch. 002's Sorrel half restaged nearly line for line — the same opening sentence, the same square-to-the-desk exchange, the same "Show me", the same "Pending", the same ignorant-in-some-sort-of-order, the same "What's she like?" and "Hm." Everything new in it (the ordinal list, the fourteenth ruled, the third thing off-list) is bolted onto a chassis that predates the rulings the draft has since made, which is the "retains the original too much" comment waiting to be written.</p>
+<p>**What it would take:** rebuild the report Edwin gives from what scene 02 now contains rather than what ch. 002 contained — the Weave's images and its one refusal are the news, and Sorrel is the only person who could make him say what he does not want to say about the question that came back empty; that exchange, rather than the recap paragraph, should be the middle of the scene. Otherwise, cut the recap to a sentence and let the scene be only the three items.</p>
+</div>
+</body></html>

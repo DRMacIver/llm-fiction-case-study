@@ -1,0 +1,99 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are an editing lens for the bottom-of-chapter author&#x27;s notes of a…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are an editing lens for the bottom-of-chapter author&#x27;s notes of a…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ac6789311bd50ce6d">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are an editing lens for the bottom-of-chapter author's notes of a fiction serial. Working directory: <span class="redacted">redacted: private</span>.<br>
+<br>
+Read, in full:<br>
+1. notes/author.md — the author persona and its binding voice rules (especially "How they sound in a note": no winking at the enthusiasm, no credentials to license facts, no "not X but Y" constructions, no triads with a swerve, rare exclamation marks, notes never explain the story/magic/System, at most one clause pointing at the page, one digression per chapter at most, keep notes short).<br>
+2. notes/farming.md — the policy (real-world facts only; budget: one long note ≤~150 words plus ≤2 short, or ≤4 short, ≤~300 words total per chapter).<br>
+3. The ten note files: draft/book-01/author-notes/01-*.md through 10-*.md (ls the directory; skip README.md).<br>
+<br>
+Do NOT read anything in chapters/, rewrite/, draft/book-01/rejected-act2/ (they do not exist on disk; do not go looking in git history either). Do not read the scene files.<br>
+<br>
+For each note file, check:<br>
+- FACT: every real-world claim. Flag anything false, overstated, or stated with more confidence than the evidence supports (e.g. specific numbers, dates, historical claims, biology, physics). Only flag what you are reasonably confident is wrong or unverifiable-as-stated; say why.<br>
+- VOICE: violations of the persona rules above — winking/self-deprecation about the enthusiasm, credentials offered to license a fact, "not X but Y", swerving triads, explaining the story's magic or world, more than one clause pointing at the page, floating epigrams, over-length.<br>
+- BUDGET: word counts vs the policy.<br>
+<br>
+Report as a numbered list: file, quoted text, the problem, and a proposed replacement wording (in the same voice). If a note is clean, say so in one line. Your final message is a raw findings report, not prose for a human audience beyond that.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the persona and policy files.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Read notes/author.md</p>
+<p>🔧 Read notes/farming.md</p>
+<p>✅ 137 lines, 7691 chars</p>
+<p>✅ 123 lines, 7247 chars</p>
+<p>🔧 Bash: ls -la <span class="redacted">redacted: private</span>/draft/book-01/author-notes/ &amp;&amp; wc -w <span class="redacted">redacted: private</span>/draft… (List note files with word counts)</p>
+<p>✅ 26 lines, 2072 chars — total 88 / drwxr-xr-x@ 13 drmaciver  staff   416 31 Aug 11:47 . / drwxr-xr-x@ 11 drmaciver  staff   352 31 Aug 11:43 ..</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/author-notes/ &amp;&amp; for f in 0*.md 10*.md README.md; do… (Cat all note files)</p>
+<p>✅ 42 lines, 9573 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Findings report. Facts verified against standard references where I was confident; flagged only what I can defend.</p>
+<p>**1. `01-pellings-half-past-twelve-soft.md`** (210 w; 133 + 77)<br>
+- VOICE (page-pointing, 2 clauses + device annotation): "Nobody in this chapter is doing anything to the rain that the moors would not do; the argument is only about where and when." This is the note reaching up to tell the reader how to read the scene's magic, and the note already has its pointer implicitly. Proposed: cut the sentence entirely; end on "…mostly a map of which way the weather arrives."<br>
+- BUDGET: the **Shearing** note is 77 words — past "a sentence or three" for a short. Proposed trim: "Two real constraints. Fleece has to be stored dry: a damp clip heats and rots in the stack and is worth nothing. And a sheep that has just lost its coat has lost its weather-proofing with it; a cold rain on freshly shorn sheep can kill them, in summer, in numbers."<br>
+- FACT: orographic rainfall, damp-clip spoilage, and post-shearing cold mortality all check out.</p>
+<p>**2. `02-a-war-horse-on-a-milk-cart.md`** (129 w)<br>
+- FACT (ok): the doubling rule is Harrington's — life doubles per 1% moisture removed and per ~5 °C cooler. "Every point of moisture" and "every few degrees" is a fair statement of it, and it is correctly hedged as a rule of thumb.<br>
+- VOICE (overstated + a second page-pointer): "which is why every farmhouse older than the seed trade has a shelf that looks exactly like Edwin's." "Every farmhouse" is unsupportable, and the note's one pointing clause is better spent nowhere. Proposed: "A dry jar in a cool kitchen will keep beans good for sowing for years, which is why farmhouses had a shelf of them."<br>
+- Otherwise clean; the closing autobiographical line is said straight (matches the logged ch. 02 claim).</p>
+<p>**3. `03-until-fulfilled.md`** (130 w)<br>
+- FACT (overstated): "there was a statute about it in 1531". The 1531 statute (23 Hen. VIII c. 5, the Statute of Bridges) is about **bridges** and their repair, not fords. Proposed: "Parliament legislated on who must repair bridges in 1531 and the arguments carried on regardless."<br>
+- FACT (overstated): "one of the oldest continuously running arguments in the historical record" — unverifiable as stated. Proposed: "is very old and very well documented."<br>
+- VOICE (negation-then-colon, close cousin of the banned "not X but Y"): "A ford is not a fixed thing: rivers move their gravel about". Proposed: "Rivers move their gravel about, so a crossing has to be maintained or it quietly stops being a crossing."</p>
+<p>**4. `04-four-minutes.md`** (156 w, single long note, over the ~150 cap)<br>
+- VOICE (banned "not X but Y"): "A heap is not a pile of rubbish rotting; it is a very large number of living things eating". Proposed: "A heap is a very large number of living things eating, and everything in how you build one follows from keeping them fed and breathing."<br>
+- VOICE (world content + second page-pointer): "Everything the class does before anyone casts is exactly what you would do at home, and it works." References casting, i.e. the magic, and annotates the scene's construction. Proposed: cut; end on "Left to itself a well-built heap takes a season or so."<br>
+- The Widow Sepp clause is then the note's one permitted pointer and can stay.<br>
+- FACT: 60 °C+ thermophilic peak, wrung-out-cloth moisture, turning for aeration, anaerobic souring — all correct.</p>
+<p>**5. `05-in-some-sort-of-order.md`** (151 w)<br>
+- VOICE (page-pointing beyond one clause + story annotation): "Given one favour to hand out, there is no real decision to make, which does not make the letter to the other parish any nicer to write." This narrates the chapter's dilemma and its magic economy from below the line. Proposed: end at "Late is a smaller harvest. Wet is no harvest."<br>
+- FACT: leaching of soluble sugars from rained-on swath, extended field-drying, stack moulding, and the roots-vs-hay contrast are all sound.</p>
+<p>**6. `06-the-front-from-the-roof.md`** (131 w)<br>
+- FACT (overstated, moderate confidence): "why a moor can take the worst of a front and give it back to the rivers over days instead of hours". Blanket bog is usually at or near saturation and its runoff response is characteristically *flashy*; the flood-buffering claim is contested in the peatland-hydrology literature and does not hold for the intact bog as stated. Proposed: "Sphagnum holds many times its own weight in water, which is why the ground up there is wet even in a dry spell, and why the walking is the way it is."<br>
+- FACT (overstated): "moorland makes its own weather in a small way; all that held water has to evaporate off." Evaporation from sphagnum-dominated bog is comparatively *low* — the moss restricts it. Proposed: cut the sentence.<br>
+- VOICE: clean otherwise; the curlew decline is accurate and the closing line reads as feeling, not a wink.</p>
+<p>**7. `07-can-you-actually-fight.md`** (181 w; 121 + 60)<br>
+- VOICE (world content — the note explains a charm): "The tests Edwin's charm is standing in for are all real." Proposed: "The tests are all real."<br>
+- VOICE (unsupported swipe): "it is worth saying plainly because the books get it wrong". No books are named and I cannot verify the claim. Proposed: "and it is worth saying plainly:".<br>
+- VOICE (floating epigram, and it points at the magic): "Four nights is four nights, whatever bought them." Proposed: cut; end on "somebody awake noticing when things change."<br>
+- FACT: iodine–starch ripeness testing, pressing cheese, biting a grain for hardness, and pre-store condition governing keeping quality are all correct. Autobiographical line matches the logged ch. 07 claim.</p>
+<p>**8. `08-what-youre-standing-in.md`** (162 w, single long note, over the ~150 cap)<br>
+- VOICE (banned "not X but Y", in the final position): "and the difference was farming, not weather." Also weak as fact — the Irish famine turned on a pathogen (*Phytophthora infestans*) reaching a monoculture, plus policy, more than on farming practice generally. Proposed: "England had its last true famine some two centuries before its nearest neighbour had its worst one, and what had changed in between was the farming."  Better still, given the fact problem: replace the whole final sentence with "What ended it was that, over about two centuries, and unevenly."<br>
+- VOICE (three page-pointing clauses where one is allowed): "Everything Edwin says here is a plain description of the pre-modern world"; "It killed exactly as the chapter says"; "it ended the same way it ends here, without anyone slaying anything". Keep the first, cut the other two: "It killed the old first, then the smallest children, quietly, parish by parish. And it ended without anyone slaying anything…" — or, to lose the device annotation as well, "And it ended through better rotations, better winter feed, better roads to move grain from where it grew to where it failed."<br>
+- FACT (ok as hedged): 1315–17 following two rain-drowned harvests, ~10% mortality in parts of northern Europe, and the 1690s "ill years" range of roughly 1-in-20 to 1-in-8 in worst-hit areas are all within the accepted estimates, and "the registers that survive suggest" is the right level of confidence.</p>
+<p>**9. `09-the-cart-up-the-hill.md`** (140 w)<br>
+- VOICE (story annotation from below the line): "The detail in this chapter I most want to vouch for is the shed at the bridge." This is the author commenting on their own craft choices. Proposed: "Anything travelling off the main rounds waited until somebody happened to be going that way…"<br>
+- VOICE (floating epigram): "The system worked. It just worked on its own clock." Proposed: cut, or fold into the fact — "It worked, on its own clock, and everybody planned around the clock."<br>
+- VOICE (list with a swerve on the last item, twice): "taking goods, parcels, shopping errands and the occasional passenger" and "the postal service, the delivery firm and half the news network at once". Keep one at most. Proposed for the second: "They were the postal service and the delivery firm at once, and a good deal of the news."<br>
+- FACT: carriers' fixed rounds and fixed days, and the reconstruction of regional economies from carriers' lists in trade directories, are both sound. "Complaints about parcels sitting for weeks… a fixture of the period's letters" is plausible but unverifiable as stated; consider "and the complaints about it are easy to find."</p>
+<p>**10. `10-more-work-than-the-day-needed.md`** (199 w; 145 + 54)<br>
+- VOICE (floating epigram): "Thirty years of one book beats a map." Follows a sentence that already says it. Proposed: cut, and let "each farm's own record predicts its frosts better than any theory of the district" close the note.<br>
+- FACT: radiation frost, cold-air drainage and pooling, the saving effect of cloud or wind, valley-floor damage, and hen's-egg hail on this island (Horsham 1958 among others) all check out; slate damage at that size is real. Autobiographical line matches the logged ch. 10 claim.<br>
+- BUDGET: within the ~300 total; the long note at 145 is at the edge of the cap.</p>
+<p>Cross-cutting:<br>
+- Em-dash budget is clean throughout — every file uses the dash only in the bold heading, as the format requires.<br>
+- No "fun fact", no credential-offering, no self-deprecation about the enthusiasm anywhere. The persona's autobiographical lines (02, 07, 10) are all said straight and all agree with the log in `notes/author.md`.<br>
+- None of the files carry the `---` / `*Author's note.*` opener from `notes/farming.md` "Format of an author's note". Given the README describes these as standalone per-chapter files assembled by the commenter and uploader, this is probably intentional, but the two documents disagree and one should be updated.<br>
+- Clean-ish files: none are fully clean. **02** and **06** are closest — 02 needs only the "every farmhouse" trim; 06's problems are factual (peat hydrology) rather than voice.</p>
+</div>
+</body></html>

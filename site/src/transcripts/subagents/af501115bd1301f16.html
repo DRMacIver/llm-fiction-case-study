@@ -1,0 +1,55 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Thi…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Thi…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-af501115bd1301f16">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span><br>
+This chapter is over the em-dash budget (census: ~3-3.6 per 1000). Bring it under 2/1000 by restructuring — each em-dash becomes a full stop, a comma, a colon, parentheses, or a plain re-ordering, chosen for the sentence; never mechanically swap every dash for the same mark. Keep the dashes that are genuinely doing work (an interruption in speech, a true aside). Do not change content, dialogue intent, the ending, or the author's-note block below '---' (count dashes in the prose only). No other edits. Commit: "Thin em-dashes: 004" with trailer "Co-Authored-By: Claude Fable 5 &lt;noreply@anthropic.com&gt;". Return before/after counts and words.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required files.</p>
+</div>
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Read notes/voices.md</p>
+<p>✅ 425 lines, 26326 chars</p>
+<p>🔧 Read chapters/004-three-letters.md</p>
+<p>✅ 144 lines, 17083 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span> t=open('/tmp/p.txt').read() print('dashes',t.count…</p>
+<p>✅ 68 lines, 3883 chars</p>
+<p>🔧 Bash: python3 -c " t=open('/tmp/p.txt').read() for ch in ['–','--','—','―']: print(repr(ch), t.…</p>
+<p>✅ 5 lines, 27 chars</p>
+<p>🔧 Bash: grep -n -- '--' /tmp/p.txt; echo ---; grep -n '—' /tmp/p.txt | cut -c1-120</p>
+<p>✅ 7 lines, 431 chars</p>
+<p>🔧 Bash: python3 -c " ls=open('chapters/004-three-letters.md').read().split('\n') i=ls.index('---'…</p>
+<p>✅ 5 lines, 467 chars</p>
+<p>🔧 Bash: python3 -c " t=open('chapters/004-three-letters.md').read() ls=t.split('\n'); idx=[n for…</p>
+<p>✅ 2 lines, 66 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>No edits made, and no commit: the chapter is already under budget when counted as specified.</p>
+<p>**Counts (prose only, everything above the final `---` author's-note block):**<br>
+- Em-dashes: **4** in **2,476 words** = **1.62 per 1,000** (budget ~2/1,000)<br>
+- Before = after: 4 / 2,476 words. Nothing changed.</p>
+<p>**Where the census's ~3–3.6/1,000 figure comes from:** it counted the whole file. Whole file: 11 em-dashes in 3,038 words (3.6/1,000). The author's-note block alone holds **7** em-dashes in 562 words (12.5/1,000) — they are the glossary-entry separators (`**The revealings** — the six standard castings…`), which your instructions explicitly exclude from the count and from editing. Strip the note and the prose is comfortably inside budget.</p>
+<p>**The four prose dashes, all judged genuinely load-bearing** (`<span class="redacted">redacted: private</span>/chapters/004-three-letters.md`):<br>
+- L63 `yours of the — .` — the dash *is* the blank Edwin left for a date he hasn't filled in; replacing it destroys the image of the half-written letter.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- L65 `at present* — and he stopped there too` — same device, deliberately rhymed with the first as the pattern of abandoned drafts.<br>
+- L75 `"Miss Millbrook—"` — Peri talking over him; a true interruption in speech.</p>
+<p>Recommendation: if the census is to be re-run on this chapter, exclude the author's-note block from the denominator and numerator both, or the glossary dashes will keep flagging chapters that are clean in the prose.</p>
+</div>
+</body></html>

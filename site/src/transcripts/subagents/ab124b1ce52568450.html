@@ -1,0 +1,126 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are repairing citation integrity in one canon file at ⟦redacted:…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are repairing citation integrity in one canon file at ⟦redacted:…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ab124b1ce52568450">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are repairing citation integrity in one canon file at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it.<br>
+<br>
+## The file<br>
+<br>
+`notes/canon/world/silent-soil.md` — the **non-sealed** canon file for <span class="redacted">redacted: mechanic</span>. (There is also `notes/sealed/silent-soil.md`, the sealed answer. **Do not edit that one**; you may read it to check coherence, and you must never put its content anywhere outside `notes/sealed/`, nor state it to DRMacIver.)<br>
+<br>
+## Why this file specifically<br>
+<br>
+A project-wide citation repair pass just ran, splitting canon into three domains. **This file fell into none of them and was never repaired.** A verify pass reports it carries **four confirmed fabrications** — quotations cited to a chapter that do not appear in that chapter, or anywhere in `chapters/`. <span class="redacted">redacted sentence: unpublished prose</span> 010.<br>
+<br>
+This matters more here than anywhere else. `CLAUDE.md` names <span class="redacted">redacted: mechanic</span> as the project's original sin — a mystery that accumulated evidence with no written answer — and this is the file where its evidence is recorded. Evidence that turns out not to exist is the worst possible defect in exactly this file.<br>
+<br>
+## Your instrument<br>
+<br>
+    cd <span class="redacted">redacted: private</span> &amp;&amp; python3 scripts/check_citations.py --min-words 5<br>
+<br>
+It classifies misses as FABRICATED / ALTERED / WRONG CHAPTER. Filter to your file.<br>
+<br>
+**Its precision is imperfect and it has a documented blind spot** — read the docstring. <span class="redacted">redacted sentence: unpublished prose</span> NNN: "quoted words")` form gets misreported as wrong-chapter. **Check every finding against the actual chapter yourself with grep before acting.** Do not trust the tool, and do not dismiss a finding because it is inconvenient.<br>
+<br>
+## How to repair<br>
+<br>
+- **WRONG CHAPTER** — correct the number, once you have confirmed the quote really is in the other chapter and that this is not the blind spot above.<br>
+- **ALTERED** — replace with what the page actually says, then check whether the claim built on it still stands. Often it will not: the invented words were doing the work.<br>
+- **FABRICATED** — verify hard. If the phrase appears nowhere: strike the quotation and treat every claim resting on it as **unestablished**. **Do not preserve the claim by finding it a different justification.** If canon believed something because of a sentence that does not exist, the honest record is that canon does not know it. Demote to a question with a named trigger and register it in `notes/canon/deferred-questions.md`. <span class="redacted">unpublished</span><br>
+<br>
+**The sealed-assigned bullet needs particular care.** If a piece of evidence assigned to the sealed answer turns out not to exist on the page, then the sealed answer may be accounting for something that never happened. Check `notes/sealed/silent-soil.md`'s evidence table for that item, and if it relies on the fabricated phrase, **say so prominently in your report as a shape-level finding** — "one evidence row rests on a phrase not on the page" — without quoting sealed content. Do not edit the sealed file; flag it for a follow-up coherence pass.<br>
+<br>
+## Hard rules<br>
+<br>
+- **Never invent a replacement quotation.**<br>
+- **Never delete a real inconsistency to make the count fall.** The record being true is the goal, not the number.<br>
+- Do not edit anything under `chapters/` — they are groundwork for a rewrite; canon changes to match the page, never the reverse.<br>
+- Claim levels per `notes/canon/README.md`. An unverifiable quotation cannot support **Established**.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">unpublished</span> Nothing else.<br>
+<br>
+## Deliverable<br>
+<br>
+Write `notes/decisions/citations-silent-soil.md`: `## Fixed` (by category), `## False positives` (with the reason, including any that are the documented blind spot), `## Claims demoted or cut` — the important section — and `## Sealed-answer implications` (shape only). Then commit.<br>
+<br>
+Your final message: counts by category, how many claims you had to demote, and whether any sealed evidence row is affected — described in shape, with no sealed content and no mechanism named.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the key files.</p>
+</div>
+
+<details><summary>28 tool calls</summary>
+<p>🔧 Bash: cat CLAUDE.md &gt;/dev/null; cat notes/canon/world/silent-soil.md</p>
+<p>✅ 43 lines, 2187 chars</p>
+<p>🔧 Bash: sed -n 1,60p scripts/check_citations.py &amp;&amp; ls chapters/ &amp;&amp; ls notes/canon/deferred-questi…</p>
+<p>✅ 106 lines, 3921 chars</p>
+<p>🔧 Bash: python3 scripts/check_citations.py --min-words 5 &gt; /tmp/claude-501/-Users-drmaciver-Proje…</p>
+<p>✅ 7 lines, 544 chars</p>
+<p>🔧 Bash: sed -n '1,40p;145,160p;218,230p' /tmp/claude-501/-Users-drmaciver-Projects-autoroad/3ef92…</p>
+<p>✅ 69 lines, 3655 chars</p>
+<p>🔧 Bash: sed -n '110,130p;145,165p;240,255p;540,560p;585,610p' notes/canon/world/silent-soil.md</p>
+<p>✅ 105 lines, 6053 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 18 lines, 4661 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters grep -rn "water lies" . ⟦redacted sentence: unpublished p…</p>
+<p>✅ 8 lines, 1342 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '118,135p;243,252p;546,558p' notes/canon/world/silent-soil…</p>
+<p>✅ 43 lines, 2379 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "measured an edge" -B6 -A3 notes/canon/world/silent-soil.…</p>
+<p>✅ 12 lines, 671 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "channel" chapters/019-a-question-of-rosters.md chapters/…</p>
+<p>✅ 8 lines, 2834 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "believe" chapters/019-a-question-of-rosters.md | head -…</p>
+<p>✅ 2 lines, 441 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '149,175p' chapters/019-a-question-of-rosters.md</p>
+<p>✅ 27 lines, 3107 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "fifty miles\|further out\|three years\|measured an edge\…</p>
+<p>✅ 5 lines, 554 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "the same answer, further out" -A2 notes/canon/world/sile…</p>
+<p>✅ 36 lines, 3235 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the edits.</p>
+</div>
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '126,131p;153,160p;550,558p;598,608p' notes/canon/world/si…</p>
+<p>✅ 34 lines, 2098 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' from pathlib import Path p = Path('notes/canon/…</p>
+<p>✅ 1 lines, 101 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "^## \|^| Question" notes/canon/deferred-questions.md ⟦un…</p>
+<p>✅ 14 lines, 659 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' from pathlib import Path p=Path('notes/canon/de…</p>
+<p>✅ 12 lines, 1053 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; git add notes &amp;&amp; git commit -q -F - &lt;&lt;'EOF' Canon: repair citatio…</p>
+<p>✅ 2 lines, 85 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 scripts/check_citations.py --min-words 5 | grep -A3 "worl…</p>
+<p>✅ 9 lines, 608 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' from pathlib import Path ⟦redacted sentence: un…</p>
+<p>✅ 2 lines, 215 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Done, committed (`0c0d12e`, `3c547ed`). Decision record: `<span class="redacted">redacted: private</span>/notes/decisions/citations-silent-soil.md`.</p>
+<p>**Counts (all findings re-checked by grep against `chapters/` before acting):**<br>
+- **FABRICATED, confirmed: 2**, not four. "the same answer, further out" (cited ch. <span class="redacted">redacted sentence: unpublished prose</span> 019) appear nowhere in `chapters/`; both struck.<br>
+- **ALTERED: 3.** The other two of the reported four fabrications were really altered quotations whose originals exist — "they had never measured an edge" (page: "Wystow had never measured an edge…", ch. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> 020:13). All replaced with the page's words.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> 013:231, restated ch. 023:159); the adjacent `(ch. 019)` belongs to <span class="redacted">redacted: place</span>.<br>
+- **False positives: 2**, both the documented forward-binding blind spot — `:155` "a yard a day…" (bound to "the ch. 010 guess" in the same bullet; correctly cited to 020) and `:601` "water lies…". One blind-spot line still reports, unchanged and correct.</p>
+<p>**Claims demoted: 2.** (1) <span class="redacted">redacted: character</span> being believed within three years — cut entirely; ch. 019 establishes her role and terms but no horizon, so canon does not know it. (2) The fifteen-link shortfall being "not a finding" — the page has only Edwin saying it is inside his own guessing error, so whether the north line decelerates is open, not settled-negative. Both registered in `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §5 with named triggers. Nothing was rescued by substitute justification, and no inconsistency was deleted.</p>
+<p>**Sealed:** the `[Assigned — sealed]` bullet's phrase turned out to be an altered, not fabricated, quotation — the material is genuinely on the page and now quoted as written. I read (did not edit) the sealed evidence table and checked every struck phrase against it: **no evidence row rests on a phrase absent from `chapters/`**, and neither struck fabrication appears there. No sealed coherence follow-up needed.</p>
+</div>
+</body></html>

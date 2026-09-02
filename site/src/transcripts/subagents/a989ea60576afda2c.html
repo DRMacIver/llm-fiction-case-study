@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the editing subagent for the third draft of Book 1 of the nov…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a989ea60576afda2c">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
+<br>
+Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/19-the-two-lists.md, read after scenes 01–18 in the same directory (they bind what is on the page; 17–19 are one afternoon). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">unpublished</span> Also chapters/005-the-sample.md — the groundwork this restages, which the author rates good and which drew no comments from him.<br>
+<br>
+Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required context.</p>
+</div>
+
+<details><summary>22 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>✅ 319 lines, 20190 chars</p>
+<p>🔧 Read draft/book-01/scenes/19-the-two-lists.md</p>
+<p>✅ 32 lines, 3904 chars</p>
+<p>🔧 Bash: ls draft/book-01/scenes/ &amp;&amp; cat draft/book-01/scenes/1[5-8]*.md</p>
+<p>✅ 177 lines, 21161 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 44 lines, 2191 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> chapters/005-the-sample.md &amp;&amp; cat not…</p>
+<p>✅ 46 lines, 2189 chars</p>
+<p>🔧 Read notes/canon/characters/sorrel.md</p>
+<p>✅ 842 lines, 52121 chars</p>
+<p>🔧 Read chapters/005-the-sample.md</p>
+<p>✅ 120 lines, 17621 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; grep -n "eleven\|class runs\|Drovers\|ride…</p>
+<p>✅ 50 lines, 22300 chars</p>
+<p>🔧 Bash: sed -n '83,111p' chapters/005-the-sample.md &gt; /tmp/a.txt &amp;&amp; sed -n '3,32p' draft/book-01/…</p>
+<p>✅ 31 lines, 3968 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> | head -40</p>
+<p>✅ 7 lines, 723 chars</p>
+<p>🔧 Bash: sed -n '60,110p' notes/canon/world/farm-teaching.md</p>
+<p>✅ 51 lines, 2857 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Findings</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> The line is an edit of ch. <span class="redacted">redacted sentence: unpublished prose</span> What replaced it does not parse: a course is not "at the compost". A course is at a lesson.<br>
+**Replacement:** *"the course is at the compost cantrip and I won't have…"*</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> The count is inherited from ch. 005, and scenes 01–18 have since contradicted it twice. Scene 04: *"The eleven farmwives from the west parishes and the carter's boy"*; scene 10: *"Edwin taught eleven farmwives and one boy"*; scene 07: *"eleven farmwives and a boy who kept a list"*. And Peri has been in the class since scene 17 — *"every wrist soft, Miss Millbrook's included"*. The class Edwin is worrying about is thirteen wrists, not eleven, and he is the one who counts.<br>
+**Replacement:** drop the number — *"I won't have a class of stiff wrists while I'm off looking at a field"* — or, if the count is wanted, *"thirteen wrists"*.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Edited from ch. <span class="redacted">redacted sentence: unpublished prose</span> As now written, "for the coast" reads first as the voice she uses *when addressing* the coast parishes, and only on a second pass as the voice she keeps for a coast turn; the edit removed the noun that disambiguated it, and this is the last line of the scene, where **Part 6** wants the plainest form.<br>
+**Replacement:** *"in the voice she used when the coast weather was turning"*.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> `sorrel.md` rule 3, added 2026-08-27, after ch. <span class="redacted">redacted sentence: unpublished prose</span> This scene is *about* her two lists and contains no ordinal; her five turns are the frightened-before opener, "Lists.", "Mm.", the Drovers, and "Two weeks."<br>
+**Replacement:** keep the tic and add the ordinal to the closing exchange rather than this one — *"'Two weeks,' Sorrel agreed. 'Second item on mine, then: the classes.'"* — or, if the silent-adding gesture is expendable, *"'Mm,' said Sorrel. 'Oilskin for the registers. Fourth on yours.'"* Flagged, not urgent: the rule is Working and adopted-unless-overruled.</p>
+<p>**5.** *"It's forty miles and a day's looking. <span class="redacted">redacted sentence: unpublished prose</span> 005. Eighty miles there and back plus one day's looking is four to five days at any pace the book has used (Peri plans eighteen to twenty a day, scene 15); the stated reasons do not reach two weeks even with bad roads, so the figure reads as arriving from somewhere other than the sum a man who does sums out loud would do. If it is deliberate padding by a man who has not left in eleven years, nothing on the page says so.<br>
+**Replacement:** if kept, one clause of cover — *"Call it two weeks, because I have not done forty miles in eleven years and I am not going to find out I can on the road."* Otherwise leave; it was not commented on in ch. 005.</p>
+<p>---</p>
+<p>The device a second round would be about is **the two lists themselves, and what is not on them**: Peri Millbrook is bound to Edwin until fulfilled, reported the east to him the previous evening, and is planning her own provisioning — and across a whole afternoon of packing for a journey east she appears on neither sheet and in neither mouth, which leaves the scene standing in the shadow of a thread it does not know it is standing in (Part 5, raised and dropped). Making it work costs one item or one line — *the girl* on the second list, in the same hand as *the ford feud*, or a Sorrel question Edwin does not answer — and the alternative is to have the absence be deliberate on Edwin's part, which the scene would then need to show him doing rather than simply omitting.</p>
+</div>
+</body></html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>&lt;span class=&quot;redacted&quot;&gt;redacted sentence: series structure (Arc/Book numbering)&lt;/span&gt;  **Standin…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ac25794e70d6eebf9">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<br>
+**Standing rules for every agent in this run** (from `CLAUDE.md`; read it first and obey it):<br>
+- Never state the content of anything in `notes/sealed/` outside that directory — not in prose, plan files, reports, commit messages or your final message. Reports about sealed material describe *shape* (counts, which constraints are satisfied, what conflicts) and never content. `plans/` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- Never resolve a canon Open question casually; never delete or weaken canon to fit a draft. Flag conflicts in `<span class="redacted">redacted: private</span>/rewrite/book-01/FLAGS.md` (append; one dated bullet each; say which file owns the question).<br>
+- `notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> §0 lists the standing constraints. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Farming facts are real facts. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Every file you write, you write to disk immediately — a later failure must lose nothing.<br>
+- When you finish, `git add` the files you touched and commit with a short message. Do not commit `comments/` or anything outside the project.<br>
+<br>
+Read `.claude/skills/story-management/SKILL.md` (what a summary is for: story state, not facts — facts live in canon) and every chapter in `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters/` in order. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<br>
+Your final message: the day the arc ends on, Peri's level as shown, and the open threads in one line each.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required context.</p>
+</div>
+
+<details><summary>30 tool calls</summary>
+<p>🔧 Bash: cat CLAUDE.md &amp;&amp; echo "=== SKILL ===" &amp;&amp; cat .claude/skills/story-management/SKILL.md &amp;&amp;…</p>
+<p>✅ 333 lines, 14382 chars</p>
+<p>🔧 Bash: wc -w rewrite/book-01/arc-01/chapters/*.md &amp;&amp; echo "=== LEDGER ===" &amp;&amp; cat plans/book-01/…</p>
+<p>✅ 224 lines, 12655 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; for f in 001* 002* 003* 004*; d…</p>
+<p>✅ 41 lines, 2202 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 1101 lines, 56913 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; for f in 005* 006* 007* 008* 00…</p>
+<p>✅ 52 lines, 2222 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 1156 lines, 59248 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; for f in 010* 011* 012* 013*; d…</p>
+<p>✅ 49 lines, 2225 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 1005 lines, 49492 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; for f in 014* 015* 016*; do ech…</p>
+<p>✅ 671 lines, 29956 chars</p>
+<p>🔧 Bash: grep -n -i "^\*\*Day\|Day [0-9]\|day-count\|Timeline\|timeline" plans/book-01/arc-01.md ⟦…</p>
+<p>✅ 229 lines, 15068 chars</p>
+<p>🔧 Bash: grep -n "Day\|Movement" plans/book-01/arc-01.md <span class="redacted">unpublished</span> | head -80; echo "=== TIMEL…</p>
+<p>✅ 38 lines, 2236 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,120p' notes/canon/world/timeline.md; echo "==== ARCPLAN…</p>
+<p>✅ 301 lines, 17249 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 141 lines, 8598 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 108 lines, 6681 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 30 lines, 1631 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now I have everything. Writing the summary.</p>
+</div>
+
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span>/rewrite/book-01/summaries &amp;&amp; cat &gt; <span class="redacted">redacted: private</span>⟦redac…</p>
+<p>✅ 2 lines, 87 chars</p>
+
+<div class="assistant-prose">
+<p>Now the ledger update and the flag.</p>
+</div>
+
+<p>🔧 Bash: python3 - &lt;&lt;'PY' import re p='plans/book-01/clue-ledger.md <span class="redacted">unpublished</span>' s=open(p).read(…</p>
+<p>✅ 1 lines, 66 chars</p>
+
+<div class="assistant-prose">
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Committed as 811ac37.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> (Other levels on the page: Edwin's [Wayfaring] 12; Mrs Hobbet's heap-making 4.)</p>
+<p>**Open threads:**<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- Why — no revealing asks it, and he says so.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- Sennet's north headland to the same thorn <span class="redacted">redacted: character</span>, and "My sheep are fine."<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a8f91cd38960feac9">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the judge in a prose-lint pipeline for <span class="redacted">redacted: private</span>.<br>
+Target file: the .md file in draft/book-01/scenes/ whose name starts with 16-. Read it in full. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br>
+Candidates from haiku hunters (be sceptical; they over-report by design):<br>
+[<br>
+ {<br>
+  "rule_id": "weak-comic-beat-flat",<br>
+  "quote": "where a plate would go",<br>
+  "reason": "Comic observation (he has neglected food due to work focus) reported in narrative description without character reaction, so wit arrives spent"<br>
+ },<br>
+ {<br>
+  "rule_id": "sense",<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  "reason": "Conditional clause hard to parse; 'rode to form' is ambiguous and 'would be badly packed' lacks explicit subject"<br>
+ },<br>
+ {<br>
+  "rule_id": "lossy-conversation-budget",<br>
+  "quote": "\"You're going to Fenholt,\" she said. She did not put it as a question.\n\n\"I haven't said that.\"\n\n\"No,\" she agreed, and took herself and her candle up the stairs.",<br>
+  "reason": "All dialogue in the scene shows perfect understanding with no moments of mishearing, partial listening, or deflection; every exchange is comprehended fully and addressed directly, reading as one mind talking to itself rather than two separate listeners."<br>
+ },<br>
+ {<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "You've stopped drafting,\" said Sorrel from the doorway, later, with a candle in her hand. She had been up doing the frost list, the one they kept taking back off each other.",<br>
+  "reason": "Scene contains 9 overlapping runs of 8+ words from deleted chapters/004-three-letters.md and chapters/005-the-sample.md (exceeds 5-run threshold for redraft-with-source-shut)"<br>
+ }<br>
+]<br>
+For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.<br>
+<br>
+Judge hints: phrases like "you learn", "says you should", "there is only one answer" often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; "wants [gerund]" retired; "nought" retired, write "zero"); "'ll not" in non-first person is a judgement call, not a ban; "[amount] of it" and "I'll say it" are warning signs needing judgement.<br>
+You may add violations the hunters missed as judge_added {rule_id, quote, reason}. Never rewrite the text.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll read the scene and rules.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | head -40</p>
+<p>✅ 40 lines, 1021 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1196 lines, 51733 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/scenes/16-rings-dont-grow.md; echo ====; python3 -c…</p>
+<p>✅ 31 lines, 3182 chars</p>
+<p>🔧 Bash: python3 -c " import json rs=json.load(open('tools/lint/rules.json')) for r in rs:     if…</p>
+<p>✅ 63 lines, 3013 chars</p>
+<p>🔧 Bash: python3 tools/overlap_check.py draft/book-01/scenes/16-rings-dont-grow.md 2&gt;&amp;1 | head -40…</p>
+<p>✅ 11 lines, 5598 chars</p>
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>

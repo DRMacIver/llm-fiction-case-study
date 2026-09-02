@@ -1,0 +1,103 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Run the pre-David pass exactly as specified in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/.c…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Run the pre-David pass exactly as specified in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/.c…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a473fa56660471063">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Run the pre-David pass exactly as specified in <span class="redacted">redacted: private</span>/.claude/skills/pre-david-pass/SKILL.md (read it first, in full, and follow every part) on three freshly drafted scenes: draft/book-01/scenes/107-the-circular.md <span class="redacted">unpublished</span>, 108-under-a-stone.md <span class="redacted">unpublished</span>, 109-eight-days-out-of-fenholt.md <span class="redacted">unpublished</span>. Read draft/book-01/VOICE.md in full first, then draft/book-01/SCENES.md's act-three binding list (end of file), notes/canon/characters/ for <span class="redacted">redacted: character</span>, Peri, Edwin, Sorrel, <span class="redacted">redacted: character</span>, minor.md (<span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, Ossett), and scenes 105, 106 for immediate context. Warnings to police: the 'writing it down' motif (107 is a writing scene: rule on whether the narration glosses it; 108 ends on Edwin deciding to answer the second page first — a plan, not an act: flag; 109 ends on Peri's line about the frost list — earned or a bow?); 'because' density (these three were drafted after a because-thinning pass on 90–100: count and propose reattachments); <span class="redacted">redacted: character</span>'s register (her 'That's a count I can read' speech in 109 — verdict tail? 'I'd like that written somewhere that isn't my book' — hers?); <span class="redacted">redacted: character</span> (formal, chases, no epigrams) and <span class="redacted">redacted: character</span> (an old man's grievance; 'The order was well made. It took seven of us thirty years' — composed? <span class="redacted">redacted sentence: unpublished prose</span> count them; is the letter in his voice); the summary of <span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span> STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history. Report numbered findings with the quoted line, the fault, and a proposed replacement. Do not edit any file.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the skill and the required context files.</p>
+</div>
+
+<details><summary>30 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 257 lines, 16258 chars</p>
+<p>✅ 426 lines, 27364 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/107-the-circular.md <span class="redacted">unpublished</span> draft/book-01/scenes/108-under…</p>
+<p>✅ 127 lines, 19732 chars</p>
+<p>🔧 Bash: tail -120 draft/book-01/SCENES.md &amp;&amp; echo ====105 &amp;&amp; cat draft/book-01/scenes/105-*.md &amp;&amp;…</p>
+<p>✅ 114 lines, 10039 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/105-*.md draft/book-01/scenes/106-*.md</p>
+<p>🔧 Bash: ls notes/canon/characters/ &amp;&amp; cat notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>✅ 74 lines, 11233 chars</p>
+<p>✅ 49 lines, 2226 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; wc -l *.md &amp;&amp; sed -n '1,400p' minor.md</p>
+<p>✅ 410 lines, 24536 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '400,627p' minor.md</p>
+<p>✅ 228 lines, 13375 chars</p>
+<p>🔧 Bash: grep -n -i "register\|voice\|says\|epigram\|verdict" notes/canon/characters/⟦redacted: ch…</p>
+<p>✅ 32 lines, 2339 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 107-the-circular.md <span class="redacted">unpublished</span>…</p>
+<p>✅ 18 lines, 267 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; grep -n "—" 107-the-circular.md ⟦unpublish…</p>
+<p>✅ 3 lines, 156 chars</p>
+<p>🔧 Bash: sed -n '290,470p' <span class="redacted">redacted: private</span>/notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>✅ 180 lines, 11355 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; grep -n -E "'ll not|'d not|nought|wants [a…</p>
+<p>✅ 17 lines, 1262 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n -i "aphorism\|maxim\|of Applefor…</p>
+<p>✅ 18 lines, 1495 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '745,775p' edwin.md; echo ---; se…</p>
+<p>✅ 86 lines, 5469 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>I read the skill in full, VOICE.md, SCENES.md's act-three binding list, the canon files (<span class="redacted">redacted: character</span>, edwin, sorrel, peri, <span class="redacted">redacted: character</span>, minor for <span class="redacted">redacted: character</span>/<span class="redacted">redacted: character</span>/Ossett), and scenes 105–106. No file was edited. I did not open `chapters/`, `rewrite/`, `rejected-act2/`, `summaries/` or `plans/book-01/arc-0*.md`, <span class="redacted">unpublished</span> or their history.</p>
+<p>## Part 1 — sense, counts, facts</p>
+<p>**1. 109. "wrote five sentences on it" / "Tell them it's five sentences"** — the letter that follows contains three sentences plus a heading and a signature. Fails Part 1's count check, and it is a count said twice, so it will be counted. Fix: either make it three ("wrote three sentences", "Tell them it's three sentences") or add two real sentences to the letter — I'd take three, since <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**2. 109. "It's four sentences. She'll want the fourth more than the fifth."** — Two problems. <span class="redacted">redacted sentence: unpublished prose</span> (b) There is no fifth sentence anywhere in the Sorrel letter — the only five-count in the scene belongs to the committee letter, so the reader reaches for the wrong document. Fix: "Finish it tomorrow. You've got three. The one you've not written is the frost list," and let Peri's last speech carry the rest.</p>
+<p>**3. 108. "Four nights in six she had warned at a day's notice, and the warning had been right four times in six"** — two different four-in-sixes in one sentence, and neither restates flat: is the denominator frost nights or warnings? Edwin then re-uses it a third way ("she's had it right four nights in six on her own"), and Peri a fourth in 109. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**4. 108. <span class="redacted">redacted sentence: unpublished prose</span> Fix: "for three days" → "from the first to the third"; "three days deciding" → "two days deciding".</p>
+<p>**5. 108. "The frosts had come... in the last week of Fallowmonth" in a letter that arrives 1 Saltmonth** — Appleford is seventy-odd miles off and the Fenholt bag in 109 takes eight days. A letter reporting the last week of Fallowmonth cannot be in his hand on the first of Saltmonth. Fix: "in the third week of Fallowmonth", and have her frost record run to the twentieth.</p>
+<p>**6. 107. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**7. 107. "Nine houses, which were the parishes and guild houses that had written to him... Three guilds: the Charter, <span class="redacted">redacted: place</span>, the Fellowship."** — the nine are defined as parishes *and guild houses*, and then three guilds are listed separately: does nine include three, or is it twelve? Also <span class="redacted">redacted: place</span> is a wardens' house, not a guild (minor.md). Fix: "Nine parishes. Three houses: the Charter, the <span class="redacted">redacted: place</span> Wardens, the Fellowship."</p>
+<p>**8. 107. "Four sites, which he lettered A to D and did not name."** — the column's head is *Who the paper goes to*; sites are not recipients. The item is real (the lettering matters) but it is in the wrong column, and the paragraph reads as a list that has lost its rule. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**9. 109. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**10. 109. "the first column's whip control... on page three of <span class="redacted">redacted: event</span>"** — the proof is "two columns to a page" (108), so the first column cannot be on page three. Fix: make it consistent — either the whip control sits at the foot of the first column running over onto page three (say so: "where the first column ran on to page three") or move the committee's change to the column, not the page.</p>
+<p>**11. 107. "He said why. It took two more lines."** — <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Fix: supply the two lines, e.g. — "A blessing holds a thing that's trying to go wrong. There's nothing here trying to go wrong. The ground isn't sick. It's quiet, and a hold on quiet does nothing but cost you the mana."</p>
+<p>## Part 2 — gesture at meaning, announcing fragments, glosses</p>
+<p>**12. 107 opening. "Four columns. He ruled them on the twenty-eighth..."** — the announcing fragment the skill names explicitly ("lands stronger as just..."). Fix: cut the fragment. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**13. 107. "because the heads were the argument and the columns were only the evidence"** — a narrator gloss that tells the reader the writing is significant; it is also a balanced verdict in the narration. Fix: cut; the four heads follow immediately and make the point themselves.</p>
+<p>**14. 107. "which she did now in libraries as well as kitchens"** — a callback tail, cleverness attached to a stage direction. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**15. 107. <span class="redacted">redacted sentence: unpublished prose</span> Fix: cut "which was the only reading he wanted".</p>
+<p>**16. 107. "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> came to things:"** — narrator flourish of the "weird and unnecessary line" family, followed by a resume dump (age, chair, grievance, fifty-two years) before he has said anything. Fix: "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**17. 108. "and the whole of the vale was now certain"** — "the whole of it" is explicitly named as a banned recurring phrase. Fix: "and the vale was now certain".</p>
+<p>**18. 108 ending. "because a man who has been made a hero by his own ten o'clock class had better find out from the woman who told them otherwise"** — a resolving button: an epigram in the third person about himself, closing the scene like a bow. Ending on the decision is fine (VOICE §2); the epigram is not. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Part 3 / Part 5 — devices, register, reuse</p>
+<p>**19. <span class="redacted">redacted sentence: unpublished prose</span> Four maxims in three scenes, two in one scene, and three of them share one grammatical mould. `edwin.md` 13 rules one aphorism a scene and forbids the contrastive pair from being it. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**20. 107. <span class="redacted">redacted sentence: unpublished prose</span> Column two survives because <span class="redacted">redacted: character</span> interrupts it; the others have no second voice. Fix: cut the first and third columns to the material that is *new* — Mattie's amendment with her name, and the boy's question answered in print — and put the third column's content in Peri's mouth as an objection (she wrote the attempts page; she is the one who can ask whether the five wrong versions should carry her name too).</p>
+<p>**21. 107. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> I taught it in the better manner. You have written it in the worse."** — a composed antithesis; canon has him as a man with an inherited grievance, not a phrasemaker, and the balanced two-half verdict is Edwin's shape. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**22. 107. <span class="redacted">redacted: character</span>: "The order was well made. It took seven of us thirty years. <span class="redacted">redacted sentence: unpublished prose</span> 027). Per VOICE §3.7 a canon-quoted groundwork line is a fact, never a line to reuse. Fix: keep the fact (he concedes the seventh was well made, on the strength of the no-harm sentence) in new words: "The order was well made. It took seven of us thirty years. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**23. 107. <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**24. 109. <span class="redacted">redacted: character</span>: "That's a count I can read... That's the four things doing what the four things were for, and I'd like that written somewhere that isn't my book."** — three faults against `<span class="redacted">redacted: character</span>.md`. (a) "That's a count I can read" opens on a definitional verdict — 7a, Edwin's. (b) "That's the four things doing what the four things were for" closes the speech on a summary that returns to the top — rule 1, which she does not do. (c) "somewhere that isn't my book" argues for the record on behalf of a stranger, which rule 2 gives to Edwin; <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> The pile that precedes it ("<span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span> wrote it. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**25. <span class="redacted">redacted sentence: unpublished prose</span> Individually fine, as a run it is a tic. Fix: keep <span class="redacted">redacted: character</span>'s "would not sit down" (canon) and <span class="redacted">redacted: character</span>'s exit; change "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**26. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Rulings the caller asked for explicitly</p>
+<p>- **"Writing it down" motif.** The three scenes are legitimately documentary and that is not the fault; the fault is that the narration glosses the act six times (findings 13, 15, 16, and 105's "a space a man had decided to leave" is the ancestor). Cut the glosses; keep the subject.<br>
+- **108 ending on a plan, not an act.** Not a fault per VOICE §2 — a scene may end on a decision. The fault is the epigram wrapped round it (finding 18).<br>
+- **109 ending on Peri's frost-list line.** Earned, not a bow: it is information Edwin missed, she has the standing to say it, and it points forward. Keep it — but fix the count it sits on (findings 2, 26).<br>
+- **Openings.** 107 fails (finding 12). 108 (the letter under a stone) passes: object, event, no trailer. 109 is borderline — "The Charter's post-bag came up from the Fellowship's house on the fourth of Saltmonth at nine in the morning, eight days out of Fenholt, and <span class="redacted">redacted: character</span> carried it, because..." is object + time + trailer + because in one breath. Suggest: "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Counted templates.** Four columns: the scene's business, keep (drop the announcing fragment). Three things in the bag (109): keep — it is the scene's structure and <span class="redacted">redacted: character</span>'s ordering does work. Five sentences: fails on count (finding 1).<br>
+- **"because" density.** 107: 9 in 1,400 words; 108: 7 in 1,123; 109: 3 in 1,240. 109 is where you want to be. The worst cluster is 107's opening sentence (two in one sentence) and the reasons stacked in the fourth-column paragraph. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span> finished and <span class="redacted">redacted: event</span> wanted two more days, and because there were things in the letter that wanted longer than that" — drop the second "because" and start a new sentence ("Some of what was in it wanted longer than two days.").<br>
+- **Em dashes:** none in body text in any of the three (only the title lines). Clean.<br>
+- **Dialect:** none. No "I'll not", no "wants [gerund]", no "nought".<br>
+<span class="redacted">redacted sentence: unpublished prose</span> The frost list's "four nights in six" is not fine (finding 3).<br>
+- **Clocks:** all three use called hours, no clock-reading. Clean.</p>
+<p>## Two lines on the device</p>
+<p>The device a second round of comments would be about is **the maxim mould** — four "an X that Ys is an X that Z" lines in three consecutive scenes, in Edwin's mouth, at the exact moments the scenes want to land. Trimming to one a scene (finding 19) is the repair; if it recurs in 110–113 the answer is not rephrasing but giving the load to the other person in the room, as 106 does when Peri, not Edwin, says what *presumed* is worth.</p>
+<p>The second is **the four-column recitation** (finding 20): a document summarised by the narrator in the order of its own headings. It works once. If 113's circular-taught-to-five scene summarises the sheet again, the reader is reading the same list a third time.</p>
+</div>
+</body></html>

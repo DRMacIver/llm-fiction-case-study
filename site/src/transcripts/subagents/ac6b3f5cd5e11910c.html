@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ac6b3f5cd5e11910c">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="sense", and scope includes "note". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/author-notes/06-the-front-from-the-roof.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for prose faults in the author notes. Let me start by reading the rules and the target file.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/author-notes/06-the-front-from-the-roof.md</p>
+<p>✅ 2 lines, 541 chars</p>
+<p>✅ 1216 lines, 49319 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1070 lines, 57859 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me read the author notes file completely:</p>
+</div>
+
+<p>🔧 Read draft/book-01/author-notes/06-the-front-from-the-roof.md</p>
+<p>✅ 1 lines, 93 chars</p>
+
+<div class="assistant-prose">
+<p>Let me read the author notes file using bash:</p>
+</div>
+
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/author-notes/06-the-front-from-the-roof.md</p>
+<p>✅ 1 lines, 536 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me analyze this author note for violations of the selected semantic/sense rules that apply to notes.</p>
+<p>The rules I need to check are those with `tier=="semantic"` AND `lens=="sense"` AND scope includes "note":</p>
+<p>1. **shape-filled-fact-unchecked** (line 1386-1407)<br>
+2. **missing-connective** (line 2024-2044)<br>
+3. **cause-left-out** (line 2046-2067)<br>
+4. **near-idiom-general** (line 1679-1704)<br>
+5. **ambiguous-word** (line 1706-1727)</p>
+<p>Let me examine the author note carefully:</p>
+<p>The note describes moorland ecology and curlews. Let me check each rule:</p>
+<p>**shape-filled-fact-unchecked**: The facts stated (sphagnum holding water, curlew calls, moorland wetness) all check out against real-world knowledge. No unchecked facts.</p>
+<p>**missing-connective**: Checking transitions between sentences:<br>
+- "sphagnum moss...which you learn...your boot" → "Ground like that is wet..." (clear connection via "Ground like that")<br>
+- "The curlew is the bird of it...call..." → "and it is worth going up..." (clear)<br>
+- All transitions read clearly.</p>
+<p>**cause-left-out**: Looking for stated facts with missing significance:<br>
+- "the population graphs say you should go soon" - This statement references population graphs implying a cause (declining curlew populations), but the significance is not explicitly stated. The sentence before ("and it is worth going up just to hear") provides a reason to go, but not why the population graphs specifically matter. The reader must infer that populations are declining.</p>
+<p>**near-idiom-general**: Checking for invented near-idioms:<br>
+- "trust a bright green patch of it with your boot" - This is poetic but follows normal English idiom patterns ("trust X with Y").</p>
+<p>**ambiguous-word**: All technical and common words are used in their standard sense.</p>
+</div>
+
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

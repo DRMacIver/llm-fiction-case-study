@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for a fiction project with…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for a fiction project with…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-ab2a3d214e7966abb">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the judge in a prose-lint pipeline for a fiction project with a tightly specified voice. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json and <span class="redacted">redacted: private</span>/draft/book-01/scenes/04-four-minutes.md. Also read <span class="redacted">redacted: private</span>/notes/voice-exemplars.md for calibration of what GOOD looks like. Below are candidate violations from cheap scanners. For each, rule CONFIRMED (a real instance worth fixing), FALSE-POSITIVE (misread, counter-example, licensed diegetic use, or the rule doesn't say that), or BORDERLINE (defensible either way), with a one-line reason. Merge duplicates (same quote+rule). Always read one sentence either side of a quote before ruling. For budget rules (aphorism-budget, maxim-capped-speech): when a scene is over budget, CONFIRM the excess instances and put which line should SURVIVE (the most particular, least portable one) in keeper_note. Word-census recurrences: a scene about a thing may use its word freely — only confirm off-topic recurrence. Then add to judge_added any clear violations of the semantic rules (scope "scene") the scanners missed. Be strict: false CONFIRMEDs cost the human editor's time.<br>
+<br>
+Candidates:<br>
+[<br>
+ {<br>
+  "rule_id": "obliqueness-unpaid",<br>
+  "quote": "\"You're the one that's calm this morning,\" said Edwin, and went and sat on the end of the bench next to Widow Sepp.",<br>
+  "reason": "Line characterizes Mrs. Tansy as calm without textual support; reader hasn't been given enough context to understand the characterization."<br>
+ },<br>
+ {<br>
+  "rule_id": "triad-swerve-budget",<br>
+  "quote": "Widow Sepp, seventy-odd and small and upright with it, her stiff right wrist held in against her side, looked at the heap. Mrs Tansy, who came in from Nether Wold on the dairy cart and was broad, and red-faced from the ride, looked at the other women to see what they were doing about it, and did the same. Dob, who was small for eleven, was standing up, and did not pretend to be looking anywhere else at all.",<br>
+  "reason": "Three-item list where first two show avoidance (looking at heap, looking at other women) and third item swerves by doing the opposite (looking directly at Edwin without pretense)"<br>
+ },<br>
+ {<br>
+  "rule_id": "line-without-want",<br>
+  "quote": "\"You're the one that's calm this morning,\"",<br>
+  "reason": "Edwin already gave Mrs Tansy functional instruction to go first; this subsequent line appears observational rather than having a clear functional want—not asking for answer, agreement, closure, or conveying an unambiguous feeling-want"<br>
+ },<br>
+ {<br>
+  "rule_id": "description-list",<br>
+  "quote": "Widow Sepp, seventy-odd and small and upright with it, her stiff right wrist held in against her side, looked at the heap. Mrs Tansy, who came in from Nether Wold on the dairy cart and was broad, and red-faced from the ride, looked at the other women to see what they were doing about it, and did the same. Dob, who was small for eleven, was standing up, and did not pretend to be looking anywhere else at all.",<br>
+  "reason": "Catalogs multiple characteristics per farmwife (age, size, build, origin, complexion) rather than one noticed thing at first close look."<br>
+ },<br>
+ {<br>
+  "rule_id": "system-terminology",<br>
+  "quote": "The course had reached the compost cantrip, which is the spell people come to the course for and the one he teaches third, after a fortnight of heaps with no magic in them: a woman who has spent two weeks learning what a heap does by itself knows what the magic is for, and a woman who has not will use it on a heap that was never going to work and blame the spell.",<br>
+  "reason": "Uses 'course' (twice) when the established term throughout the scene is 'class' (class garden, the best nose in the class, the class's own barrows)"<br>
+ },<br>
+ {<br>
+  "rule_id": "system-terminology",<br>
+  "quote": "One more thing, which I say to every course the week it gets the cantrip, and will say again: you do not cast it angry.",<br>
+  "reason": "Uses 'course' when the established term throughout the scene is 'class'"<br>
+ }<br>
+]</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll read the relevant files.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json; echo ====; cat <span class="redacted">redacted: private</span>/draft/b…</p>
+<p>✅ 292 lines, 10040 chars</p>
+<p>🔧 Read notes/voice-exemplars.md</p>
+<p>✅ 71 lines, 4138 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/04-four-minutes.md</p>
+<p>✅ 37 lines, 4225 chars</p>
+<p>🔧 Bash: python3 -c " import json rs=json.load(open('tools/lint/rules.json')) for r in rs:   if r[…</p>
+<p>✅ 151 lines, 7728 chars</p>
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>

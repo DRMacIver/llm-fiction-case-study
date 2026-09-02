@@ -1,0 +1,116 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Facts-only consistency check on a freshly drafted scene in ⟦redacted:…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Facts-only consistency check on a freshly drafted scene in ⟦redacted:…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a0fd99f5cb92e0f1e">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Facts-only consistency check on a freshly drafted scene in <span class="redacted">redacted: private</span>: draft/book-01/scenes/73-thirteen-down.md <span class="redacted">unpublished</span> (Day 37 = 21 Harvestmonth, 06:00–08:30, the muster and the walk to Holm Deep's mouth). Read it, then check every checkable fact against notes/canon/world/dungeons.md (the Place section, the mouth-air history, delve craft on the page, <span class="redacted">redacted: event</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.md, minor.md (<span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> row 73 and the deeps rows, draft/book-01/SCENES.md row 73 and its binding list, and scenes 63, 71, 72 for continuity (the party: Fenholt four including <span class="redacted">redacted: character</span>, <span class="redacted">redacted: place</span> seven including <span class="redacted">redacted: character</span>, Edwin, Peri; <span class="redacted">redacted: character</span> at the mouth). Read notes/sealed/deeps.md (report shape only, never content) and check the sealed guards: the slate records date, hour, air; the candle; `[Holm Deep.]` at the chain for everyone; air direction stated with the time; nobody explains the hole; the mason's sentence is said once, unasked and unanswered; no lode/scouring. Particular checks: (1) was the candle already used on-page in scene 63 <span class="redacted">unpublished</span> and what did it do there; does 'Same as the thirteenth' hold; (2) the smell was 'told on the seventh' — is that right (which scene had Edwin at the mouth: 54?); (3) '<span class="redacted">redacted: character</span>' and '<span class="redacted">redacted: character</span>' are new names — does canon have names for <span class="redacted">redacted: place</span>'s four unnamed or Fenholt's other hands, and any collision; (4) does Edwin's saying 'Here' contradict anything; (5) the walk time and distance; (6) the sunrise plausibility of 'in the dark' at 06:00 on 21 Harvestmonth (late August equivalent); (7) 'the four things' — what were they in 65, and is it consistent that Edwin is asked to say them. STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history. Report numbered findings with the quoted line, canon source, and minimal fix; then a 'New facts' list. Do not edit any file.</p></blockquote>
+
+
+<details><summary>56 tool calls</summary>
+<p>🔧 Bash: cat draft/book-01/scenes/73-thirteen-down.md <span class="redacted">unpublished</span></p>
+<p>🔧 Bash: cat notes/canon/world/dungeons.md</p>
+<p>✅ 37 lines, 6319 chars</p>
+<p>✅ 41 lines, 2191 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== timeline day 37 ===" grep -n -A5 -B2 "Day 37" notes/cano…</p>
+<p>✅ 42 lines, 2221 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== edwin staff ===" grep -n -i "staff" notes/canon/characte…</p>
+<p>✅ 21 lines, 1365 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== clue-ledger row 73 and deeps ===" grep -n -B2 -A5 "^| 73…</p>
+<p>✅ 151 lines, 29290 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== SCENES.md row 73 ===" grep -n -B2 -A5 "^| 73\|| *73 *|"…</p>
+<p>✅ 9 lines, 1005 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== minor.md relevant characters ===" grep -n -i "⟦redacted:…</p>
+<p>✅ 39 lines, 2918 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== Place section, mouth-air history, delve craft, delve day…</p>
+<p>✅ 23 lines, 1196 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '1,50p' draft/book-01/scenes/63-*.md 2&gt;/dev/null || ls draf…</p>
+<p>✅ 41 lines, 6348 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "candle mentions in scenes:" grep -rn -i "candle" draft/book-…</p>
+<p>✅ 47 lines, 13558 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rln "thirteenth" draft/book-01/scenes/*.md echo "---" grep -…</p>
+<p>✅ 9 lines, 3251 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '320,340p' notes/canon/world/timeline.md echo "---54 scene,…</p>
+<p>✅ 31 lines, 1660 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> for f in 64 65 66 67 68 69 70 71; do echo "=== $f ==="; grep -n -i…</p>
+<p>✅ 12 lines, 2733 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '36,250p' notes/canon/world/dungeons.md</p>
+<p>✅ 215 lines, 13081 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '681,765p' notes/canon/world/dungeons.md</p>
+<p>✅ 85 lines, 4826 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '1,40p' notes/canon/world/timeline.md | grep -n "Harvestmon…</p>
+<p>✅ 20 lines, 1431 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '281,295p' notes/canon/world/timeline.md</p>
+<p>✅ 15 lines, 967 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> cat draft/book-01/scenes/59-the-slate-at-the-chain.md <span class="redacted">unpublished</span></p>
+<p>✅ 39 lines, 6596 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '225,260p' notes/canon/characters/minor.md echo "---search…</p>
+<p>✅ 37 lines, 2320 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> cat draft/book-01/scenes/71-*.md draft/book-01/scenes/72-*.md</p>
+<p>✅ 78 lines, 11990 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>✅ 23 lines, 4452 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n -i "harvestmonth\|month.*correspond\|calendar\|august\|sun…</p>
+<p>✅ 23 lines, 2286 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '1,40p' notes/canon/world/timeline.md echo "---continent la…</p>
+<p>✅ 52 lines, 2975 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 31 lines, 2023 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '95,105p;170,180p' notes/canon/characters/edwin.md echo "--…</p>
+<p>✅ 66 lines, 3703 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n -i "draws\|drawing\|blowing\|blows\|air.*mouth\|mouth.*air…</p>
+<p>✅ 5 lines, 347 chars</p>
+<p>🔧 Read notes/sealed/deeps.md</p>
+<p>✅ 880 lines, 59312 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> sed -n '110,135p;215,230p' notes/canon/world/institutions.md</p>
+<p>✅ 42 lines, 2781 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Consistency check: `draft/book-01/scenes/73-thirteen-down.md <span class="redacted">unpublished</span>`</p>
+<p>### Findings</p>
+<p>**1. "Same as the thirteenth" — wrong reference date, and the candle scene it echoes is on-page as the tenth, not the thirteenth.**<br>
+Quoted: *"<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+The only on-page candle-at-the-mouth scene with Edwin present is `scenes/59-the-slate-at-the-chain.md <span class="redacted">unpublished</span>` (dated "Tenth of Harvestmonth"), where the candle "leaned toward them... not much, and steadily" — a mild, steady lean, which is the same character as scene 73 <span class="redacted">unpublished</span>'s "It bent away from the throat... <span class="redacted">redacted sentence: unpublished prose</span> stronger than a candle reading, not a candle comparison point at all. `timeline.md` Day 29 (13 Harvestmonth) also puts Edwin at the Fenholt pump and then the church tower that whole day/night — he is never at the mouth on the 13th. **Fix:** change "Same as the thirteenth" to "Same as the tenth."</p>
+<p>**2. "He had felt it on the thirteenth" — Edwin was never at the mouth on the 13th.**<br>
+Quoted: *"He had felt it on the thirteenth, and had been told the smell of it on the seventh, and he knew it now..."*<br>
+`timeline.md` Day 29 places Edwin at the Fenholt pump reading the sky, then on the church tower 15:20–19:30+ holding back mist, the whole day/night of the 13th/14th — <span class="redacted">redacted: event</span> night. He is not at the mouth. His only on-page mouth visit before <span class="redacted">redacted: event</span> is the tenth (`scenes/59`). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**3. "had been told the smell of it on the seventh" — wrong, on two counts.**<br>
+Per `scenes/59`, <span class="redacted">redacted: character</span> says *"I was there on the fifth... I was there on the seventh instead"* — those are her solo visits; Edwin isn't present for either. <span class="redacted">redacted sentence: unpublished prose</span> And old" beside him — he isn't "told," he smells it and half-names it himself. **Fix:** "had smelled it himself on the tenth" (or similar), not "told... on the seventh."</p>
+<p>**4. "Edwin had asked on the thirteenth" (re: the candle/box, 'it's in the book') — same date error as #1/#2; no scene shows this exchange.**<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+Again, Edwin was not at the mouth on the 13th, so this conversation cannot have happened there. The one on-page moment closest to it is scene 59 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Also worth noting: in scene 59 <span class="redacted">unpublished</span> Edwin and Peri stand *behind* the chain while <span class="redacted">redacted: character</span> alone crosses it and receives the box — so scene 73 <span class="redacted">unpublished</span>'s "It came to Edwin as it had come on the thirteenth" implies he'd received this box himself before, which the drafted material doesn't support (his crossing in scene 73 <span class="redacted">unpublished</span> is his first). **Fix:** either move this beat to the tenth and rewrite as Edwin learning about the box (not "it's in the book") from <span class="redacted">redacted: character</span>'s scene-59 explanation, or cut the claim that he'd received the box before.</p>
+<p>**5. "<span class="redacted">redacted: character</span>" and "<span class="redacted">redacted: character</span>" — new names, no collision found, both fill established-unnamed slots correctly.**<br>
+`minor.md` lists <span class="redacted">redacted: place</span>'s six as <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, plus "four unnamed" — "<span class="redacted">redacted: character</span>" fills one of those slots and doesn't collide with any existing name. Fenholt's four (<span class="redacted">redacted: character</span> + three) are listed as <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, "the other rostered hands unnamed" — "<span class="redacted">redacted: character</span>" fills that remaining slot. No name collisions found anywhere in canon/plans/scenes. <span class="redacted">unpublished</span> Both are consistent with the roster counts in `scenes/71`/`scenes/72` (Fenholt four, <span class="redacted">redacted: place</span> seven with <span class="redacted">redacted: character</span>). Per `plans/book-01/clue-ledger.md` <span class="redacted">unpublished</span>'s current-draft plan (the row explicitly tagged scene 73 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**6. Edwin's "Here" — no contradiction found.** Roll-call/roster procedure (<span class="redacted">redacted: character</span> reading names, <span class="redacted">redacted: character</span> entering, "Enter it") is consistent with `scenes/72`'s established muster mechanics; nothing elsewhere specifies a different response format.</p>
+<p>**7. "The four things" — established elsewhere as a different, unrelated list, and Edwin reciting Peri's list is a role mismatch.**<br>
+Two problems:<br>
+- `notes/canon/world/institutions.md` already names **"the four things"** as a specific, itemized post-break institutional reform (delve-date-move rule, monthly leakage counts, monthly post to <span class="redacted">redacted: place</span>/Wystow, day rate) — a completely different four things from scene 73 <span class="redacted">unpublished</span>'s. That beat is chronologically later (post-delve reforms) and not yet drafted in the current scenes, but it **will** reuse the exact phrase "the four things" for a different list — a naming collision worth flagging before that scene is drafted.<br>
+- Within the drafted material, "the four things" as *used* in scene 73 <span class="redacted">unpublished</span> traces to `scenes/65-the-sluice-keepers-door.md <span class="redacted">unpublished</span>`, where <span class="redacted">redacted: character</span> drills Peri on sword-in-the-line combat conduct ("stand still... <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Scene 73 <span class="redacted">unpublished</span> has <span class="redacted">redacted: character</span> ask **Edwin** to also "say the four things," and "found he knew" them. But Edwin isn't in the fighting line (he's the twelfth, "with the light," "not in the line" per `scenes/72`) — Peri's sword-conduct instructions don't apply to his role, and nothing establishes that he was taught or overheard them. Him reciting Peri's combat drill is a role mismatch as written.<br>
+**Fix:** either give Edwin a distinct, delve-specific "four things" appropriate to his non-combat role (nothing established on-page for this), or cut his reciting them and leave only Peri's check.</p>
+<p>**Checks that hold, no issue found:**<br>
+- Sunrise/dark-at-06:00 plausibility: the story's month mapping is Wolfmonth=January…Harvestmonth=**September** (not August; `system.md` line 965-967, `continent.md` "48–52°N analogue"), so 21 Harvestmonth ≈ 21 September, near the equinox. Dark at 06:00 with "the light coming" by 06:20 is squarely plausible at that latitude and date — no contradiction, though the prompt's "late August equivalent" premise was itself off by a month.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: event</span> day's clock exactly.<br>
+- Sealed guards (`notes/sealed/deeps.md`, content not disclosed): slate records date/hour/air — present; `[Holm Deep.]` at the chain for everyone — present; air direction stated with the time — present; nobody explains the hole — held; the mason's sentence said once, unasked and unanswered — held, matches the ledger's planned placement for this scene; no lode/scouring anywhere in the scene — held. All guards check out.<br>
+- Edwin's staff description and <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> "The boots she had walked from home in" overstates this. The resoling detail is new and unproblematic on its own. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### New facts (for canon backfill consideration)<br>
+- Fenholt's fourth Fenholt-house hand (previously unnamed) is named **<span class="redacted">redacted: character</span>**.<br>
+- One of <span class="redacted">redacted: place</span>'s four previously-unnamed hands is named **<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- Muster breakfast custom: eaten standing, per a <span class="redacted">redacted: place</span> practice <span class="redacted">redacted: character</span> adopted from <span class="redacted">redacted: character</span> ("<span class="redacted">redacted: character</span>'s house ate standing before a hill").<br>
+- <span class="redacted">redacted: character</span> inspects boots personally, hands-on, at the laces; sends <span class="redacted">redacted: character</span> back for a dry pair; takes a knife off a <span class="redacted">redacted: place</span> hand's belt into his pack under "nothing that catches."<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- Candle procedure detail: <span class="redacted">redacted: character</span> counts ten under her breath while watching the flame before reading it.<br>
+- The walk-out order: <span class="redacted">redacted: character</span>'s six in a loose file behind <span class="redacted">redacted: character</span>'s four, <span class="redacted">redacted: character</span> at the back; Peri beside Edwin, second lamp unlit at her belt.</p>
+</div>
+</body></html>

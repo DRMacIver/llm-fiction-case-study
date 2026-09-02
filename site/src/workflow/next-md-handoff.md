@@ -1,0 +1,17 @@
+# NEXT.md and the session handoff
+
+Claude Code sessions don't carry memory from one conversation to the next. Whatever a session knows about where a long-running project stands, it has to get from files, because nothing else survives between one terminal session and the next one, days or weeks later, possibly run by a different instance of the model entirely. For a project the size of a novel-in-progress, with a moving canon, a shifting scene count, and a publishing schedule already partly live, "read everything" isn't a workable recovery strategy. Autoroad's answer is a single living document, `plans/NEXT.md`, whose whole job is to be the first thing a fresh session reads.
+
+## What the file actually contains
+
+The structure repeats a small number of sections every time it's updated: a note on current state as of the date it was last touched, a section explicitly headed to orient a session that has lost all context, a record of what's been settled as binding fact or ruling since the last update, a numbered immediate queue of what to do next with enough context attached that a session can start on item one without asking what it means, and a section for work that's owed but not next, cascade fixes and follow-ups that a completed task revealed but didn't itself require.
+
+On the day the draft reached its end, the queue read, in order: get David's read on the two most recently drafted acts, run the consistency-backfill skill over every "new facts" list the editing lenses had produced but not yet folded into canon, run an advisory pass checking that explanations weren't cut for brevity where they shouldn't have been, write author's notes for the newly finished chapters, and update the chapter-grouping file that controls how scenes get bundled for Royal Road. Each item names the file or skill it depends on, so a session can go straight to the work rather than reconstructing the plan from scratch.
+
+## Why the queue is numbered and dated, not a wiki page
+
+A queue with owed items, not just next items, exists because completing a task in this project routinely surfaces more work than it resolves. Redrafting an act flags several deliberate departures from an earlier planning document that need reconciling later, and a chapter amendment applied under delegated authority during a backfill needs a note left for whoever reads the affected chapter next. Rather than resolving these immediately and risking a rushed fix, they get logged as owed, with enough detail that a later session, possibly weeks removed, can act on them without rediscovering why they matter.
+
+The file is edited in place, every session, and nothing about it is append-only: closed queue items get removed, not marked done and left cluttering the top of the document, because the point is to be read quickly by a session that has nothing else to go on. Contrast this with canon files, which do keep dated history at the bottom, because canon needs an audit trail and NEXT.md needs to be short.
+
+The clearest example of the pattern in use is the session that produced the last major queue update, taking the draft from a partial state to a finished one: it read the old queue, worked through most of it, and left a new one behind. [2026-09-02, drafting to the end of book one](../transcripts/7257e15f-eb7f-4d0b-83e8-dde205ef5352.md).

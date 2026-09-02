@@ -1,0 +1,179 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a hostile attribution judge for the novel at ⟦redacted: priva…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a hostile attribution judge for the novel at ⟦redacted: priva…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a1f208dce54aacfaf">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a hostile attribution judge for the novel at <span class="redacted">redacted: private</span>. You have full repository access. Do not edit anything.<br>
+<br>
+Your job is to score the dialogue of `chapters/019-a-question-of-rosters.md` on the project's own two instruments, defined in `notes/dialogue-voices.md`. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>.md`, and the "How they talk" bullets for <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span> and <span class="redacted">redacted: character</span> in `notes/canon/characters/minor.md`. You are canon-literate and you are meant to be hostile: do not give credit you cannot justify.<br>
+<br>
+## Sample<br>
+<br>
+**Every spoken line in chapter 019**, by these five speakers only: <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, Edwin. Ignore Peri's few lines. Extract them yourself from the chapter. Number them.<br>
+<br>
+## Instrument 1 — PROP-COVER<br>
+<br>
+Mask, in every line: possessives, proper nouns (people, houses, places), tool names, coin and money terms, month names and dates, and any piece of subject expertise that identifies a speaker by what they know rather than by how they talk. Replace each with a neutral placeholder.<br>
+<br>
+Then, for each masked line, ask: **can this line still be placed with its correct speaker, on grammar and construction alone?** Count how many still place.<br>
+<br>
+Report: total lines, number that place, rate as a percentage. **For every line that places, name the specific construction that did it** (e.g. "the pile that runs out", "framing correction before answering", "refusal in procedure", "demands the form"). If a line places only because you already know the chapter, that does not count — say so and score it as failing.<br>
+<br>
+## Instrument 2 — SWAP TEST<br>
+<br>
+Take **three** lines from each of the five speakers (Edwin, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>) — fifteen lines. Put each in another named speaker's mouth. Ask: **would a reader reject this as impossible from that speaker?**<br>
+<br>
+Report a table: speaker, how many of their three were rejected, out of three. Then a total out of fifteen.<br>
+<br>
+**Then — and this is the most important part of your job — split those rejections into two categories:**<br>
+- **Rejected on STANDING or FACT**: the reader rejects it because the speaker does not own that thing, has not done that thing, or would not know that. (A reader rejects "the nineteen was mine" in <span class="redacted">redacted: character</span>'s mouth because <span class="redacted">redacted: character</span> does not own the roster, not because it does not sound like him.)<br>
+- **Rejected on VOICE ALONE**: the reader rejects it because the *sentence construction* is wrong for that speaker, independent of who owns what.<br>
+<br>
+Give both counts out of fifteen. The voice-alone figure is the real result and I need it to be strict. When in doubt, classify a rejection as standing rather than voice.<br>
+<br>
+## Also report<br>
+<br>
+- Any place where two different speakers in this chapter use the same construction or the same formulation.<br>
+- Which speaker is least distinguishable and why.<br>
+<br>
+Be candid and be exact. Your final message should be the full scored report — the numbered masked lines with verdicts, both instruments' tables, the standing/voice split, and the two extra observations. Nothing else.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required files.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Read notes/dialogue-voices.md</p>
+<p>✅ 1066 lines, 69877 chars</p>
+<p>🔧 Read chapters/019-a-question-of-rosters.md</p>
+<p>✅ 200 lines, 22508 chars</p>
+<p>🔧 Bash: sed -n '/Voice — binding/,/^## /p' notes/canon/characters/edwin.md | head -80; echo "====…</p>
+<p>🔧 Bash: grep -n -i -A6 "How they talk" notes/canon/characters/minor.md</p>
+<p>✅ 161 lines, 10010 chars</p>
+<p>✅ 7 lines, 509 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '190,215p' notes/canon/characters/minor.md; echo ====; gre…</p>
+<p>✅ 28 lines, 1773 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p># Attribution report — chapter 019, "A Question of Rosters"</p>
+<p>Sample: every spoken line by <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, <span class="redacted">redacted: character</span>, Edwin. **52 turns.** <span class="redacted">redacted: character</span> 18, Edwin 15, <span class="redacted">redacted: character</span> 10, <span class="redacted">redacted: character</span> 6, <span class="redacted">redacted: character</span> 3. Peri's two lines excluded.</p>
+<p>Masking convention: possessives, proper nouns, tool names, coin, months and dates, and subject expertise replaced by a type-preserving placeholder ([DATE], [FIG], [NAME]). Type-preserving is the convention this file already scores <span class="redacted">redacted: character</span>'s anchors under; it is generous to her and I have said so where it matters.</p>
+<p>## Instrument 1 — PROP-COVER</p>
+<p>| # | Speaker | Masked line | Verdict |<br>
+|---|---|---|---|<br>
+| 1 | <span class="redacted">redacted: character</span> | "[FIG] on the books. [FIG]." | **fail.** A bare-figure opener is Edwin's cheapest passport (§2.3); a bare count off a roster is <span class="redacted">redacted: character</span>'s. Places on nothing. |<br>
+| 2 | <span class="redacted">redacted: character</span> | "[FIG], of which [FIG] can be rostered for a delve. [FIG] was what I had in [MONTH] and [FIG] was what I had on [DATE]. <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 3 | <span class="redacted">redacted: character</span> | "It was true when I posted [DATE]." | **fail.** First person + a date + what he did: that is <span class="redacted">redacted: character</span>'s attestation shape verbatim. Points at the wrong speaker. |<br>
+| 4 | <span class="redacted">redacted: character</span> | "It was." | **fail.** Two words, no marker. |<br>
+| 5 | Edwin | "Who told her twice?" | **fail.** Short question; <span class="redacted">redacted: character</span>'s equally. |<br>
+| 6 | <span class="redacted">redacted: character</span> | "I did, once. [NAME] did the other." | **places** — warrant as two nameable people who can be asked, one of them herself. |<br>
+| 7 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Which is true. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 8 | Edwin | "And now?" | **fail.** |<br>
+| 9 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 10 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span> with me." | **fail.** A request; anybody's. |<br>
+| 11 | Edwin | "That's a cut. Somebody dug that." | **fail.** With the ground-reading masked, a bare demonstrative ruling. <span class="redacted">redacted: character</span> or <span class="redacted">redacted: character</span> could carry it. |<br>
+| 12 | <span class="redacted">redacted: character</span> | "How long ago?" | **fail.** |<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 14 | Edwin | "It's alive. All of it's alive. That's not that." | **fail.** Short units with the conclusion last is §6.1's Peri shape. |<br>
+| 15 | <span class="redacted">redacted: character</span> | "Then say what it is." | **fail.** Bare imperative carrying no name, count, tool or ground (§2.5); "Then [X]" is Edwin's besides. |<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span> going [DIST] toward [PLACE] and joining <span class="redacted">redacted: place</span> that runs behind [FIG] farms." | **fail, and it points the wrong way.** This is <span class="redacted">redacted: character</span>'s rule 1 — a pile joined on with "and" until it runs out — in his mouth. No second balanced half. |<br>
+| 17 | Edwin | "I can't get from [PLACE] to this pool. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 18 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Every one. <span class="redacted">redacted sentence: unpublished prose</span> It never touched a road." | **places** — counts she took herself, assembled as rebuttal, doubled insistence, ends on repetition instead of a verdict. |<br>
+| 19 | <span class="redacted">redacted: character</span> | "Say it as a finding. <span class="redacted">redacted sentence: unpublished prose</span> Flagged: her canon file quotes this exact line, so the construction and the evidence for it are the same sentence. |<br>
+| 20 | Edwin | "It's not mine." | **places** — copula plus possessive, three words. The single cleanest placement in the chapter. |<br>
+| 21 | <span class="redacted">redacted: character</span> | "I know whose it is. <span class="redacted">redacted sentence: unpublished prose</span> Leak. |<br>
+| 22 | <span class="redacted">redacted: character</span> | "That's a change to [X]. <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 23 | <span class="redacted">redacted: character</span> | "Then write both." | **fail.** §2.5 names this line by number as the proof that the bare imperative belongs to nobody. |<br>
+| 24 | <span class="redacted">redacted: character</span> | "You could have raised the rate." | **fail.** |<br>
+| 25 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> I'd have got it, too. They'd have paid it. <span class="redacted">redacted sentence: unpublished prose</span> Weakly, and partly on an anaphoric triple, which is a device more than a voice. |<br>
+| 26 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s engine. What places it is that only he made that decision, which is content. |<br>
+| 27 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> [TITLE], I've been at you since [MONTH]. <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 28 | <span class="redacted">redacted: character</span> | "Put both in." | **fail.** Bare imperative, and a straight repeat of line 23's move. |<br>
+| 29 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span>'s or Edwin's. |<br>
+| 30 | Edwin | "It will." | **fail.** |<br>
+| 31 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+<span class="redacted">redacted sentence: unpublished prose</span> His file cites this line. |<br>
+| 34 | <span class="redacted">redacted: character</span> | "Send it to my house. <span class="redacted">redacted sentence: unpublished prose</span> Places only on owning another house. |<br>
+| 35 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> four lines later. |<br>
+| 36 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 37 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> No other speaker here surrenders the last clause. |<br>
+| 38 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: character</span>'s shape. |<br>
+| 39 | <span class="redacted">redacted: character</span> | "It wants a guild letter." | **fail.** Four words; the construction is <span class="redacted">redacted: character</span>'s in the two lines on either side. |<br>
+| 40 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> does the same move at line 42 ("Start with those three"). A construction in two mouths attributes nothing (§2.7). |<br>
+| 41 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> The counts were entered. The date was argued [FIG] times. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 42 | <span class="redacted">redacted: character</span> | "What's the arrangement? <span class="redacted">redacted sentence: unpublished prose</span> Start with those three." | **fail, and it points the wrong way.** "What's the arrangement? Not the reasons." is quoted in `minor.md` as **<span class="redacted">redacted: character</span>'s** construction. This is <span class="redacted">redacted: character</span>'s marker in <span class="redacted">redacted: character</span>'s mouth, in a scene where <span class="redacted">redacted: character</span> is present. |<br>
+| 43 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Nobody else in the chapter assigns. |<br>
+| 44 | Edwin | "Agreed." | **fail.** |<br>
+| 45 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 46 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 47 | Edwin | "That's [METHOD]. It's mine. I've a whole speech." | **places** — copula plus possessive twice, then the possession of an unused thing. Same machinery as 20. |<br>
+| 48 | <span class="redacted">redacted: character</span> | "She said. <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 49 | <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+| 50 | Edwin | "Did she." | **fail.** |<br>
+| 51 | <span class="redacted">redacted: character</span> | "She's [AGE] and she's had a fortnight. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> |<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Then get [NAME] in. <span class="redacted">redacted sentence: unpublished prose</span> |</p>
+<p>**Prop-cover: 22 of 52 = 42%.**</p>
+<p>| Speaker | Places | Lines | Rate |<br>
+|---|---|---|---|<br>
+| <span class="redacted">redacted: character</span> | 10 | 18 | 56% |<br>
+| Edwin | 7 | 15 | 47% |<br>
+| <span class="redacted">redacted: character</span> | 2 | 6 | 33% |<br>
+| <span class="redacted">redacted: character</span> | 2 | 10 | 20% |<br>
+| <span class="redacted">redacted: character</span> | 1 | 3 | 33% |</p>
+<p>Two of the failures are worse than failures — line 16 (<span class="redacted">redacted: character</span>'s pile in Edwin's mouth) and line 42 (<span class="redacted">redacted: character</span>'s canon-quoted form-demand in <span class="redacted">redacted: character</span>'s mouth) place with the *wrong* speaker. Line 19's pass is circular: `minor.md` quotes that sentence as the evidence for the rule it passes on. Discount it and the honest figure is 21/52 = 40%.</p>
+<p>For context, this sits at the top of the file's stated band — "about a half in an ordinary scene", and this is an uncapped five-hander with long speeches available, which is where a drafter hides.</p>
+<p>## Instrument 2 — SWAP TEST</p>
+<p>| Speaker | Line swapped into | Rejected? | Ground |<br>
+|---|---|---|---|<br>
+| Edwin | "It's not mine." → <span class="redacted">redacted: character</span> | no | <span class="redacted">redacted: character</span> could say it, of a finding not his. |<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> | **yes** | **voice** — <span class="redacted">redacted: character</span> never supplies a rationale for a document; he cites who gave him the entry. The absent-reader purpose-clause is a different mind, not a different job. |<br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> | no | <span class="redacted">redacted: character</span> defers and owns limits comfortably. |<br>
+| <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> | **yes** | **standing** — the hands are hers to roster; <span class="redacted">redacted: character</span> holds books, not a squad. Construction is available to him. |<br>
+| <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> | no | <span class="redacted">redacted: character</span> is a warden and inherits from one. |<br>
+| <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> | **yes** | **standing** — she wasn't there. The additive count-pile itself is in <span class="redacted">redacted: character</span>'s mouth at line 38. |<br>
+| <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Strip the office and the ruefulness is arguably his too. |<br>
+| <span class="redacted">redacted: character</span> | "Put both in." → anyone | no | <span class="redacted">redacted: character</span> says the same move eight lines earlier. |<br>
+| <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> | **yes** | **standing** — his rate, his parish, his hands. |<br>
+| <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> | **yes** | **standing** — only the clerk enters. The procedural-refusal grammar would sit fine in her mouth; this is the closest call in the fifteen and I have given it to standing per your tie-break. |<br>
+| <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> | no | |<br>
+| <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+| <span class="redacted">redacted: character</span> | "Say it as a finding. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> | no | <span class="redacted">redacted: character</span> makes an almost identical demand at line 27. Live collision. |<br>
+| <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> | **yes** | **voice** — the metadiscursive frame announcing its own singularity is hers alone; <span class="redacted">redacted: character</span> has no move that stands outside her own speech. |<br>
+| <span class="redacted">redacted: character</span> | "And I'll write separately that <span class="redacted">redacted: place</span> doesn't want your charter…" → <span class="redacted">redacted: character</span> | **yes** | **standing** — she cannot speak for another house. |</p>
+<p>| Speaker | Rejected |<br>
+|---|---|<br>
+| Edwin | 1/3 |<br>
+| <span class="redacted">redacted: character</span> | 2/3 |<br>
+| <span class="redacted">redacted: character</span> | 2/3 |<br>
+| <span class="redacted">redacted: character</span> | 1/3 |<br>
+| <span class="redacted">redacted: character</span> | 2/3 |</p>
+<p>**Total rejected: 8/15.**<br>
+**Rejected on standing or fact: 6/15.**<br>
+**Rejected on VOICE ALONE: 2/15.**</p>
+<p>Two of fifteen. That is the round-4 band exactly (3/6 and 2/6 scaled), from a chapter whose attribution number is the best in the record. The 42% is largely a partition — and in this chapter the partition is *institutional*: the roster-holder, the guildmaster, the clerk, the visiting warden, the consultant. Take the offices away and six of the eight rejections evaporate. The two survivors are Edwin's absent-reader warrant and <span class="redacted">redacted: character</span>'s I-say-this-once frame.</p>
+<p>## Shared constructions in two mouths</p>
+<p>- **"It wants X."** <span class="redacted">redacted: character</span> 39, <span class="redacted">redacted: character</span> 38, 40 and 35 ("it wants saying by me"). Four instances, two mouths, three of them inside twenty lines. §2.7 violation, and it is what kills line 40.<br>
+- **Write it down twice.** <span class="redacted">redacted: character</span>'s "Then write both" (23) and <span class="redacted">redacted: character</span>'s "Put both in" (28) are the same two-word ruling, and <span class="redacted">redacted: character</span>'s is the line `dialogue-voices.md` §2.5 already cites as attributing nothing.<br>
+- **The ledger demand.** "I want it in the book… with a name against it" (<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> Three speakers, one skeleton. Edwin's is written not spoken, which partly saves it, but <span class="redacted">redacted: character</span> and <span class="redacted">redacted: character</span> are speaking it aloud in the same chapter.<br>
+- **Enumerate and count the enumeration.** <span class="redacted">redacted: character</span> "which is three things" / "in three sentences"; <span class="redacted">redacted: character</span> "Start with those three." §2.6 says a construction used twice by one speaker is that speaker's for the scene — here it is used by both.<br>
+- **The additive and-pile**, which is <span class="redacted">redacted: character</span>'s rule 1, is carried by Edwin (16), <span class="redacted">redacted: character</span> (34, 38, 40) and <span class="redacted">redacted: character</span> (26). It is the chapter's default sentence and it belongs to one person.<br>
+- **"I'd rather…"** Edwin 32, <span class="redacted">redacted: character</span> 34's "it'll be worth it" in the same slot.</p>
+<p>## Least distinguishable</p>
+<p>**<span class="redacted">redacted: character</span>**, decisively. 2 of 10 lines place with the props covered — the lowest rate of anyone with a real sample — and both of her swap rejections that hold are one voice rejection and one standing rejection. Her file gives her exactly one countable construction (demand the form; say it once and say you are saying it once) and this chapter spends it twice at lines 19 and 41, then writes her remaining eight lines in <span class="redacted">redacted: character</span>'s additive pile with future first-person clauses hung off it. Worse, her *other* canon construction — "What's the arrangement? Not the reasons." — is given to <span class="redacted">redacted: character</span> at line 42, in a scene where <span class="redacted">redacted: character</span> is sitting there. She is a warden-shaped hole with a good standing: a reader knows which lines are hers because she is the only person from the other house.</p>
+<p><span class="redacted">redacted: character</span> is lower on raw rate but three lines is not a measurement, and the one line he gets (22) is his rule executed cleanly.</p>
+</div>
+</body></html>

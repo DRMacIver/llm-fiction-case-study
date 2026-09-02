@@ -1,0 +1,134 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are running the project&#x27;s editing pass on newly drafted prose at…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are running the project&#x27;s editing pass on newly drafted prose at…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-aaf2c4bc7dfc65f0a">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are running the project's editing pass on newly drafted prose at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first, then `.claude/skills/editing-pass/SKILL.md` and follow it.<br>
+<br>
+Your range: **scenes 1–15** in `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes/`. Read the whole arc first for context, then edit only your range.<br>
+<br>
+This is the pilot for scene-first drafting in Voice E, so the editing pass matters more than usual. Apply the skill in full, and pay particular attention to:<br>
+- **The construction-ownership check** (added 2026-08-28) — one character's declared prop-free marker in another's mouth. Known collisions: **<span class="redacted">redacted: character</span> against Edwin**, **<span class="redacted">redacted: character</span> against <span class="redacted">redacted: character</span>**, **Mattie against Ferrin**. Report per line.<br>
+- **Per-1,000-word span budgets**, not per-chapter rates. A device whose total is fine but whose distribution leaves a span empty has failed; **move one, never add one**. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Dialogue rules** — every line has a want; answer the question asked; obliqueness paid for on the page.<br>
+<br>
+**Fix what is clearly wrong; flag what is a judgement call.** Do not revoice — this is a line pass, not a rewrite, and homogenising the prose is the failure mode the whole scene-first structure exists to avoid.<br>
+<br>
+Write `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/edit-A.md` with findings and what you changed.<br>
+<br>
+Your final message: counts by category, and the worst thing you found.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the project instructions and skill.</p>
+</div>
+
+<details><summary>70 tool calls</summary>
+<p>🔧 Bash: cat .claude/skills/editing-pass/SKILL.md &amp;&amp; ls rewrite/book-01/arc-01/ &amp;&amp; ls rewrite/book…</p>
+<p>✅ 219 lines, 13205 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 13 lines, 210 chars —     5565 notes/voices.md /     2934 notes/llm-tells.md /     2419 notes/premise.md</p>
+<p>🔧 Bash: cat notes/voices.md</p>
+<p>✅ 44 lines, 2191 chars</p>
+<p>🔧 Bash: sed -n '1,400p' <span class="redacted">redacted: private</span> | sed -n '60,400p'</p>
+<p>✅ 341 lines, 20629 chars</p>
+<p>🔧 Bash: sed -n '400,700p' <span class="redacted">redacted: private</span></p>
+<p>✅ 180 lines, 10255 chars</p>
+<p>🔧 Bash: wc -w notes/voice-fusion-draft.md &amp;&amp; cat notes/voice-fusion-draft.md</p>
+<p>✅ 40 lines, 2175 chars</p>
+<p>🔧 Bash: sed -n '30,330p' <span class="redacted">redacted: private</span></p>
+<p>✅ 301 lines, 16810 chars</p>
+<p>🔧 Bash: sed -n '330,420p' <span class="redacted">redacted: private</span></p>
+<p>✅ 91 lines, 7327 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; wc -w *.md; ls ../; ls ../chapter…</p>
+<p>✅ 45 lines, 1372 chars —      859 01-the-three-bends.md /      829 02-the-doorstep.md /      773 03-the-argument-he-is-winning.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; cat 01-the-three-bends.md 02-the-…</p>
+<p>✅ 317 lines, 15713 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; cat 05*.md 06*.md 07*.md 08*.md</p>
+<p>✅ 317 lines, 14536 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; cat 09*.md 10*.md 11*.md 12*.md</p>
+<p>✅ 360 lines, 17176 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; cat 13*.md 14*.md 15*.md</p>
+<p>✅ 272 lines, 11636 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; cat 1[6-9]*.md 2*.md</p>
+<p>✅ 45 lines, 2203 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; cat 0*.md 1[0-5]*.md &gt; /tmp/r.txt…</p>
+<p>✅ 20 lines, 427 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; for f in 0*.md 1[0-5]*.md; do n=$…</p>
+<p>✅ 29 lines, 2094 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; grep -n ', which\|, and which' 0*…</p>
+<p>✅ 26 lines, 2550 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; python3 - &lt;&lt;'EOF' import re,glob…</p>
+<p>✅ 20 lines, 3546 chars — 01-the-three-bends.md polysyndeton | wn kind of climbing.  <span class="redacted">redacted sentence: unpublished prose</span> Grey s… / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; python3 - &lt;&lt;'EOF' import re,glob…</p>
+<p>✅ 79 lines, 5919 chars — 01-the-three-bends.md doubled | branch, and the branch / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '1,400p' edwin.md | grep -n -A40…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 60 lines, 4789 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '454,530p' edwin.md; echo ===PERI…</p>
+<p>✅ 79 lines, 4805 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '530,660p' edwin.md</p>
+<p>✅ 131 lines, 8149 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '660,780p' edwin.md</p>
+<p>✅ 121 lines, 7576 chars</p>
+<p>🔧 Bash: grep -rn "four days\|one a day\|four ways\|four measures\|eleven days" notes/canon/ notes…</p>
+<p>✅ 26 lines, 2775 chars</p>
+<p>🔧 Bash: sed -n '1090,1130p' notes/canon/characters/peri.md; echo ===; sed -n '315,335p' notes/can…</p>
+<p>✅ 43 lines, 2530 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; python3 - &lt;&lt;'EOF' import re,glob,…</p>
+<p>✅ 6 lines, 341 chars — [('one', 65), ('four', 65), ('two', 35), ('three', 23), ('eleven', 22), ('ten', 18), ('nine', 16), ('hundred', 13), ('six', 12), ('forty', 6), ('eight', 6), ('twenty', 5), ('five', 3), ('thousand', 1)… / sent 828 withnum 195 24 / mean 14.1 under8 49 over30 15 max 73</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; grep -oh "[a-z,'’ ]\{0,22\}\belev…</p>
+<p>✅ 21 lines, 812 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; grep -c "<span class="redacted">redacted: character</span>\|⟦…</p>
+<p>✅ 15 lines, 367 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; python3 - &lt;&lt;'PY' import io def su…</p>
+<p>✅ 8 lines, 272 chars — Exit code 1 / ok 01-the-three-bends.md / ok 02-the-doorstep.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; sed -n '25,29p' 10-the-hunger-yea…</p>
+<p>✅ 5 lines, 386 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; python3 - &lt;&lt;'PY' def sub(f,a,b):…</p>
+<p>✅ 8 lines, 464 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; awk 'length&gt;82{print FILENAME": "…</p>
+<p>✅ 5 lines, 197 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; python3 - &lt;&lt;'PY' import re,textwr…</p>
+<p>✅ 20 lines, 1259 chars</p>
+<p>🔧 Bash: git diff --stat -- rewrite/book-01/arc-01/scenes/03* rewrite/book-01/arc-01/scenes/05* re…</p>
+<p>✅ 11 lines, 630 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Wrap-only, text identical. Now writing the report.</p>
+</div>
+
+<p>🔧 Bash: cat &gt; rewrite/book-01/arc-01/edit-A.md &lt;&lt;'EOF' ⟦redacted sentence: series structure (Arc/…</p>
+<p>✅ 1 lines, 41 chars</p>
+<p>🔧 Bash: git add rewrite/book-01/arc-01/edit-A.md rewrite/book-01/arc-01/scenes/0*.md rewrite/book…</p>
+<p>✅ 1 lines, 60 chars — 547913f Editing pass A: scenes 01-15 line edits and findings</p>
+
+<div class="assistant-prose">
+<p>Report: `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/edit-A.md` (committed 547913f).</p>
+<p>**Counts by category**</p>
+<p>- Applied fixes: **7** — 2 Pass 1 sense errors (02 wrong-way quantity; 12 reference failure), 5 retired constructions (10 type-of-person + evaluative `which`; 09 hedged gesture tag; 13 evaluative `which`; 13 polysyndeton verdict tail; 01 fraction-joke). Plus an 80-col reflow in 03/05/07, verified token-identical.<br>
+- Pass 1 (sense) findings: **5** — 1 arithmetic contradiction, 1 impossible staging, 1 reference failure, 1 unmarked time-gap, 1 self-undermining number. Plus 1 out-of-remit canon flag for `consistency-check` (Weave-gives-images).<br>
+- Pass 2 (voice) findings: **21** — 4 stacked on scene 14; 1 span-budget failure (figures of speech); 1 theme-stated ×3; 1 number-census; 2 aphorism-over-budget scenes; 2 contrastive-pair over-rations; 10 judgement calls.<br>
+- Construction ownership: **12 lines reported individually.** None of the three named collisions (<span class="redacted">redacted: character</span>/Edwin, <span class="redacted">redacted: character</span>/<span class="redacted">redacted: character</span>, Mattie/Ferrin) is reachable — none of those characters appears in scenes 01–15. 5 clean uses of Edwin's passports, 3 permitted uses in other mouths (Sorrel's licensed ledger figure; Mrs Corry's stake, explicitly reassigned to her in 13; Widow Sepp's citation), 1 flag (Peri, 14), 1 verified non-violation (Edwin's interrupted dash in 04).<br>
+- Entrances: **0 of 15 violate rule 13.** Endings: 14 of 15 clean.<br>
+- Census rows out of range: **2** (dialogue share 44% vs 30–40; number-bearing sentences 24% vs 25–35), same direction — a note, not yet drift.</p>
+<p>**Worst thing found**</p>
+<p>Two candidates, both left unapplied because fixing either is an authorial act:</p>
+<p>The worst *sense* defect is scene 01's account of Peri's search. Four days at one question a day, of which two were lost — but the lost time is also called "a day and a half", and the remaining two days are then made to hold five questions. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>The worst *voice* defect is scene 14, Edwin's refusal — the peak of the range — which carries four violations at once: anaphora at an emotional peak (rule 4's mechanical form breached four times, the fault flagged in every one of three blind-test rounds), <span class="redacted">redacted: character</span>'s inventory pile, <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> It is also the only scene in the range with zero figures of speech, inside an 11–14 span that fails the per-1,000 floor. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

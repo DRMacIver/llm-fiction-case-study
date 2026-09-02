@@ -1,0 +1,175 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Run the pre-David editing pass on four newly drafted scenes of a nove…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Run the pre-David editing pass on four newly drafted scenes of a nove…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a64033e8e86573e39">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Run the pre-David editing pass on four newly drafted scenes of a novel in <span class="redacted">redacted: private</span>. First read the whole of .claude/skills/pre-david-pass/SKILL.md and follow it exactly (Parts 1–7; findings only, each with quote, the Part/bullet it fails, one sentence why, and a concrete replacement or 'cut'; never write 'clean'; do NOT edit any file — report only; a finding that cuts a reason, answer, explanation or qualification is presumptively wrong unless the thing is nonsense or does not fit, and the finding must say which).<br>
+<br>
+Read draft/book-01/VOICE.md in full (exemplars; 'People say what they mean'; 'Dialect is off'; scene endings; no em dashes in body text - spaced hyphens instead; character voice notes).<br>
+<br>
+Scenes: draft/book-01/scenes/47-dont-tell-me-yet.md <span class="redacted">unpublished</span>, 48-the-eleventh-of-cornmonth.md <span class="redacted">unpublished</span>, 49-the-middles-walk.md <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (all Day 16 = 30 Cornmonth). Read for context the exemplars named in VOICE.md §1 (scenes 01, 06, 05, 02, 13, 19) and the preceding scenes 40–46 in draft/book-01/scenes/. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+STRICT: never read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, or plans/book-01/arc-0*.md, <span class="redacted">unpublished</span> or their git history; do not search for them.<br>
+<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Finish with two lines per scene: is there any device a second round of comments would be about, and what would it take to make it work or remove it.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the skill and voice memo.</p>
+</div>
+
+<details><summary>40 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 257 lines, 16258 chars</p>
+<p>✅ 426 lines, 27364 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; wc -w 47-dont-tell-me-yet.md <span class="redacted">unpublished</span>…</p>
+<p>✅ 7 lines, 197 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 47-dont-tell-me-yet.md ⟦unpublish…</p>
+<p>✅ 132 lines, 22027 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 40-*.md 41-*.md 42-*.md 43-*.md 4…</p>
+<p>✅ 23 lines, 2229 chars</p>
+<p>🔧 Bash: cat "<span class="redacted">redacted: private</span>"</p>
+<p>✅ 23 lines, 2229 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 373 lines, 50704 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; cat mattie-ordish.md &amp;&amp; echo "@@@@@MINOR…</p>
+<p>✅ 45 lines, 2240 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '1,400p' mattie-ordish.md</p>
+<p>✅ 400 lines, 23068 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '400,600p' mattie-ordish.md; echo…</p>
+<p>✅ 119 lines, 7198 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; awk '/## How they talk/,/^## [^H]/' peri…</p>
+<p>✅ 103 lines, 5651 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; awk '/## How they talk/,/^## /{print}' e…</p>
+<p>✅ 1 lines, 64 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; grep -n "How they talk" edwin.md &amp;&amp; sed…</p>
+<p>✅ 6 lines, 201 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '474,560p' edwin.md</p>
+<p>✅ 87 lines, 5421 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/characters &amp;&amp; sed -n '560,660p' edwin.md</p>
+<p>✅ 101 lines, 6315 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01 &amp;&amp; grep -n -E "^\| *(4[4-9]|50)" SCENES.md | head -3…</p>
+<p>✅ 26 lines, 1172 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/world &amp;&amp; grep -n -i "month" timeline.md | head -60; ec…</p>
+<p>✅ 72 lines, 5193 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/world &amp;&amp; sed -n '210,240p' silent-soil.md; sed -n '45,…</p>
+<p>✅ 68 lines, 4191 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon/world &amp;&amp; sed -n '130,200p' timeline.md</p>
+<p>✅ 70 lines, 4103 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; grep -n "—" 4[789]-*.md 50-*.md; echo "@@@…</p>
+<p>✅ 8 lines, 2587 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Findings</p>
+<p>### Part 1 — Does this sentence make sense? (counts, clocks, back-references)</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, "check every count." Scene 47 <span class="redacted">unpublished</span> dates the three inner bands: inner ring = Weedmonth (~10 weeks back from 30 Cornmonth), third band = start of Haymonth ("seven, eight weeks"), second band = back end of Haymonth ("five or six weeks"). The list must be **ten, eight and five**; "three weeks" is the outer band's lag behind the parish, which the same speech then uses again two sentences later. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**49** — *"The inner ring stopped in Weedmonth. The outer stopped on the eleventh. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, "check the clock." Mid-Weedmonth to 11 Cornmonth is 56 days on this calendar (Weedmonth, Haymonth, Cornmonth; timeline.md), i.e. **eight weeks, not ten or eleven**. Forty-odd yards in eight weeks is five yards a week. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, self-contradiction: he says four and then calls it five, and Peri writes four. One figure, used three times. Make all three "five yards a week" (per the corrected eight weeks above).</p>
+<p>**49** — *"The inner ring's three points are a hundred and sixty yards apart and its middle is good."*<br>
+Part 1, "check every count," and it contradicts the scene itself: scene 47 <span class="redacted">unpublished</span> fixes the inner ring at **sixty yards across**, so three points on it cannot be a hundred and sixty yards apart. The real reason a small ring fits well is that the three points spread right round it, while the outer arc shows only a shallow segment. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, clock and self-contradiction: an afternoon versus an hour, and "a wrong answer" versus an answer he got right. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, dependents of a fact already on the page: scene 42 <span class="redacted">unpublished</span> has the same docking "**at the start of the month**." The eleventh is not the start of the month, and the eleventh is what this whole scene turns on. Either 42's phrase becomes "a fortnight since" or this becomes a second visit; the scenes cannot both stand. Flagging for a ruling, not proposing a change to 48.</p>
+<p>**48** — *"Green, even, a hand over his head, the best stand he'd seen in the parish"*<br>
+Part 1, "a fact overstated into a falsehood," and a farming error: barley does not stand above a man's head. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>" is fine.)</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, count and self-contradiction: nobody saw anything on the twelfth — the eleventh was seen by her and the factor's man, the thirteenth by her alone; and she is one of the two, so the date is partly hers. <span class="redacted">redacted sentence: unpublished prose</span> Thirteenth, edge going, seen by me. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**50** — *"Because I'm doing it tomorrow, before the outer band's ready, so there's nowhere to put it but where I've said."*<br>
+Part 1, no single flat restatement: boarding one bay does not remove the other places the crop could go, so the "nowhere to put it" does not follow from doing it tomorrow. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, phrasing that will not restate: "three times into an arithmetic" is not a thing a person is. Replace: "by a man who has done the same arithmetic three times because he doesn't like it."</p>
+<p>**49** — *"So it isn't a circle," said Peri. "You said that on the fourteenth. <span class="redacted">redacted sentence: unpublished prose</span> This is the somewhere else."*<br>
+Part 1, "check every inference." The fourteenth's option two was a very large circle centred **outside the field**; a middle that walks north-east across the field is neither of the two he gave. Calling it "the somewhere else" makes a fit that is not one, and the reader who followed 43 will notice. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, wrong verb: a chain and three marks are not built. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**49** — *"He did it on the day the bands went over"*<br>
+Part 1, wrong noun for a real thing: the **parish** went over; the field did not go over, it showed bands because it had stopped. Replace: "He did it that same afternoon, in the last of the light, on the headland."</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, clock: this is a quarter past seven in the morning; the dinner hour is midday. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, "does the justification distinguish?" Everyone on a farm is up early; Burl and Tess are up too. Give the reason that is hers: "because the top field is the first thing she looks at, and has been since Seedmonth."</p>
+<p>**47** — *"I've looked at barley for fifty years"* (and the narration's fifty in 48's setup)<br>
+Part 1, "scale against canon" / Part 3, ages: Mattie is about fifty (`mattie-ordish.md`, Established). Fifty years of looking at barley starts at birth. Replace with "forty years." (Canon carries the same "fifty years" phrase from ch. 013; by the "groundwork wording is not canon" rule that binds nothing.)</p>
+<p>**47** — *"and I've told you the date I cut the hay"*<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Either put the date in her mouth here — "I cut that hay on the ninth of Weedmonth and it's on the door" — or drop the claim that he already has it.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>"*<br>
+Part 1, "a cause left out." A stopped crop standing taller than the neighbour's is a finding, and neither Edwin nor Mattie says a word about it, in a scene where every other colour difference is dated. Either have Mattie's reading account for it ("It's taller than <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**48** — *"I'd written to you a fortnight before and heard nothing"*<br>
+Part 1, check the clock across scenes: a letter written ~27 Haymonth reaching the tower on 19 Cornmonth (timeline.md, Day 5) is three weeks in the post, where Wystow's is five days. Flagging for a ruling — either the letter is later ("I'd written to you the week before") or the slow carrier is worth one clause.</p>
+<p>**48/49** — the afternoon is spent twice.<br>
+Part 1, dependents: 48 has him at the kitchen table "for an hour"/"the afternoon" on the arithmetic; 49 has twelve chainings and three runs of dirt geometry "in the last of the afternoon." Twelve chainings across four bands is not the last of an afternoon that was spent indoors. One of the two wants a stated hour.</p>
+<p>### Part 2 — The gesture at meaning</p>
+<p>**48** — *"and the two things had nothing whatever to do with each other, because she had not known this field existed until the letter came on the nineteenth, and the field had not known her at all. He knew that. He looked at the date anyway."* and *"Mattie, who did not know what the date meant to either of them and would not have thought it meant anything"*<br>
+<span class="redacted">redacted sentence: unpublished prose</span> "The field had not known her at all" is the banned family — a figure with nothing under it. Keep the noticing, cut the gloss (this cuts an explanation, and the ground is that the explanation is the fault: it is the narration telling the reader what to feel). Proposed:</p>
+<p>&gt; The eleventh of Cornmonth. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+&gt;<br>
+&gt; Neither of them wrote it. Mattie put the kettle across.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 2, the "did not say" flourish carrying a composed epigram, and "made unnecessary for an afternoon" is a phrase that will not restate flat. It is also the third scene running with this construction (46: "and did not say so"; 42). <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**49** — *"because a sum you do not want to do is generally the one that is worth doing"*<br>
+Part 2 / aphorism budget: a portable maxim in the scene's first sentence, spending the whole scene's budget on a general truth rather than his actual reason. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**48** — *"Barley doesn't keep a calendar. It keeps a weather."*<br>
+Part 2 / Part 1: "keeps a weather" is not English and the antithesis is doing the work a mechanism should do. Replace, keeping the reason: "Barley doesn't keep a calendar. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 2, a portable closer at a peak that gestures at an apocalypse the speech has not earned. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**50** — *"A man who only writes down what turned out true has a book that's no use to anybody."*<br>
+Part 5, rule 6c in `edwin.md`: the composed teaching paragraph's last sentence is a fact and **never** a proverb, and this is a proverb. <span class="redacted">redacted sentence: unpublished prose</span> The pages I use are the wrong ones."</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1, "'nothing happened'": say what kind of nothing, particularly from the man who insists on it everywhere else. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Part 4 / Part 5 — voice and character</p>
+<p>**47** — *"Nobody's asked them yet what week the barley thinks it is."* — **ruling: it fails, and it is Mattie's only line of this kind in the scene.**<br>
+`mattie-ordish.md` rule 7a bans any aphorism, antithesis or reversal for her with zero tolerance, and this one personifies the crop, has a second limb, and is printable on its own — it is Edwin's register in her mouth, which the file names as the exact fault (ch. 012's counter-exemplar). It is also the scene's aphorism budget spent by the wrong speaker. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**47** — *"I'll walk it," she said. <span class="redacted">redacted sentence: unpublished prose</span><br>
+`mattie-ordish.md` rules 1 and 7e: short declaratives, no subordination; the finite subordinate clause is Peri's separator and Mattie's asyndeton is now her only one (dialect being off). The reason must be kept — the fix is grammar, not content: "I'll walk it first. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**47** — *"The outer's three weeks behind the parish."*<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**48** — Mattie's whole eleventh-of-Cornmonth speech.<br>
+Part 5, device: the speech puts a person and a date in one utterance ("The factor's man walked that field on the eleventh of Cornmonth"), carries four dates, and grades a document's value — all three listed under **Never** in `mattie-ordish.md` rule 3, and it out-numbers Edwin in his own arithmetic scene. The content is right and must stay; the delivery is the fault. <span class="redacted">redacted sentence: unpublished prose</span> He stood in the crop. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+VOICE.md, "Dialect is off": first-person "I'll not" is specifically retired ("particularly weird"), and the "'d not" family is the same register three times in two scenes. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 3, chronology of institutions: "first-year" imports year-cohorts at a college into a world where nothing agricultural-formal predates Edwin. Replace: "to a farmer."</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**47** — <span class="redacted">redacted: character</span>'s opening paragraph, and the questions Peri never asks.<br>
+Part 5, "a thread raised and dropped": scene 46 <span class="redacted">unpublished</span> ends with <span class="redacted">redacted: character</span> saying "Ask me the rest tomorrow," and here she stands silent for a quarter of an hour, says something the reader cannot cash (*"she would want him at the mouth one day, and not today"* — VOICE.md, "people say what they mean": a request with its reason withheld), and leaves. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Part 6 — weak where it should be strong</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Warning under VOICE.md's retired "wants [gerund]" family; "want to go" for *need to go* is on the line. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**47** — *"Hers is the board."*<br>
+VOICE.md, "people say what they mean" — compressed to the point of code as the scene's last three words. Elaborate: "Tess wrote them. Her name goes on with mine."</p>
+<p>**49** — *"He did it on the day the bands went over, in the last of the afternoon, on the headland, in the dirt, with the iron trowel, and it took three goes."*<br>
+Part 6: five prepositional phrases in file order before the verb pays off. "He did it that afternoon on the headland, in the dirt, with the iron trowel, and it took three goes."</p>
+<p>### Canon discrepancies for a ruling (not line edits)</p>
+<p>- **50, "That's forty pound of barley."** `silent-soil.md` and `mattie-ordish.md` both record this crop as "**nine pound and better**" (ch. 013). Eleven acres at four quarters and about a pound a quarter is nearer forty, so the draft's figure is the agronomically right one and the canon figure looks like the *docking* loss (<span class="redacted">redacted: character</span>'s nine pound at 1s 3d on forty acres) that migrated; but canon says nine, so it needs a decision before either goes further.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> **about a yard a week**." Forty yards in eight weeks is five. One of the two is wrong; the scene's own arithmetic says canon is.</p>
+<p>---</p>
+<p>## Two lines a scene</p>
+<p>**47.** The device a second round would be about is **Mattie's mouth**: the scene's whole engine is her reading dated bands aloud, which is Edwin's and <span class="redacted">redacted: character</span>'s currency, and the "what week the barley thinks it is" line is that leak surfacing as an epigram. To make it work, keep every date but hang each on an act she did (the hand in the crop, the hay she cut, the alehouse keeper's field) and let Edwin do the arithmetic out loud; to remove it, give the week-counts to Tess reading the board back.</p>
+<p>**48.** The device is **the eleventh-of-Cornmonth paragraph**: as written the narration argues the coincidence away in three sentences and then confirms the significance through Mattie, which is louder than saying nothing. To make it work, cut to the two of them looking and neither writing; to remove it, let the date land with no paragraph at all and trust the reader who has counted from the fifteenth.</p>
+<p>**49.** The device is **the dirt geometry as an explanation**: the three fixed marks and four fitted middles are followable, but the error argument that justifies them contains an impossible number (a hundred and sixty yards across a sixty-yard ring), and one wrong figure there costs the reader the whole construction. To make it work, restate the conditioning in terms of how far round each arc the three points spread; to remove it, drop the error paragraph and let *noise* stand on Peri's page unargued.</p>
+<p>**50.** The device is **the prediction lecture**: the content is right and welcome, but it is delivered *to* the woman who has just paid for it and who invented the second control, so it reads as teaching aimed at the wrong person. To make it work, address it to the book and to Peri with Mattie's leave — one clause does it; to remove it, let Peri's "which way would you be wrong?" be the only frame the prediction gets.</p>
+</div>
+</body></html>

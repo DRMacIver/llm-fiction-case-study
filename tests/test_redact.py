@@ -167,3 +167,69 @@ def test_never_leaks_the_raw_term_text(spoilers):
     out = redact.redact_text("Halla and Halla's and the Bittle all appear here.", spoilers, counts)
     assert "Halla" not in out
     assert "Bittle" not in out
+
+
+def test_claude_projects_path_redacted_as_private(spoilers):
+    counts = redact.RedactionCounts()
+    text = (
+        "read the full transcript at: "
+        "/Users/drmaciver/.claude/projects/-Users-drmaciver-Projects-autoroad/"
+        "0c653b33-1efd-45bb-b7ab-26ed3dca981e.jsonl"
+    )
+    out = redact.redact_text(text, spoilers, counts)
+    assert ".claude" not in out
+    assert "0c653b33" not in out
+    assert "redacted: private" in out
+    assert counts.by_category["private"] >= 1
+
+
+def test_scratch_tmp_path_redacted_as_private(spoilers):
+    counts = redact.RedactionCounts()
+    text = "Files under /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad/session/foo.json"
+    out = redact.redact_text(text, spoilers, counts)
+    assert "claude-501" not in out
+    assert "redacted: private" in out
+
+
+def test_topic_marker_not_corrupted_by_later_term_pass(tmp_path):
+    # Regression: a topic-sentence marker's own topic *name* can contain a
+    # word that a later term rule also matches (e.g. topic "Edwin's
+    # death/mortality" contains the literal text "Edwin's death", which a
+    # term rule for "Edwin's death" would otherwise re-match and blank out
+    # inside the marker), producing a nested/corrupted marker like
+    # "⟦redacted sentence: ⟦redacted: event⟧/mortality⟧" instead of a clean
+    # single marker.
+    data = {
+        "terms": [
+            {
+                "term": "Edwin's death",
+                "variants": ["Edwin's mortality"],
+                "category": "event",
+                "scope": "ending",
+                "why": "test",
+            }
+        ],
+        "topics": ["Edwin's death/mortality"],
+        "topic_regexes": [
+            {
+                "topic": "Edwin's death/mortality",
+                "pattern": r"\bEdwin('s)?\s+(dies|died|death|mortality)\b",
+            }
+        ],
+        "unpublished_path_rules": {"path_prefixes": [], "scene_number_threshold": 40},
+    }
+    p = tmp_path / "spoilers.json"
+    p.write_text(json.dumps(data))
+    spoilers = redact.Spoilers.load(p)
+
+    counts = redact.RedactionCounts()
+    out = redact.redact_text("Edwin's death is near.", spoilers, counts)
+    assert out == "⟦redacted sentence: Edwin's death/mortality⟧"
+    assert out.count(redact.CHAR_MARK) == 1  # single, non-nested marker
+
+
+def test_toolu_id_redacted_as_private(spoilers):
+    counts = redact.RedactionCounts()
+    out = redact.redact_text("tool call toolu_01CSjJ5NdHPt86TgeEc8H1hH returned.", spoilers, counts)
+    assert "toolu_" not in out
+    assert "redacted: private" in out

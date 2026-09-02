@@ -1,0 +1,120 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the voice director for a novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read `…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the voice director for a novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read `…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ac886c23ac7200fe0">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the voice director for a novel at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it.<br>
+<br>
+Context: the author says the current narrative voice is "pretty close but not quite there" — specifically that it is hard to make an agricultural mystery exciting. He has supplied four inspiration books, which have now been studied. Craft studies are in `<span class="redacted">redacted: private</span>/samples/round5/study/`: `herriot.md`, `mcphee.md`, `weir.md`, `pratchett.md`, and `current-voice.md` (a diagnostic of what we have now). Read all five in full.<br>
+<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Your job: write THREE candidate successor voices. Each is a genuine synthesis of the current voice with the inspirations — not a replacement of it. The current voice's virtues (concrete competence, dialogue that costs something, no showing off, English agricultural texture) are the base; the inspirations supply what it lacks.<br>
+<br>
+The three must be genuinely DIFFERENT ANSWERS to "how do you make an agricultural mystery exciting", not three shades of the same answer. Do not simply label them Herriot / McPhee / Weir. Each should draw on more than one source. Think about what actually generates forward pull in prose, pick three different mechanisms, and build a voice around each. Give each a memorable name.<br>
+<br>
+For each voice write, in `<span class="redacted">redacted: private</span>/samples/round5/voices/voice-N-slug.md` (N = 1,2,3):<br>
+<br>
+## The bet<br>
+One paragraph: what this voice believes makes the reader turn the page, and why it suits THIS book.<br>
+## Where it comes from<br>
+Which techniques from which studies, named, and what it keeps from the current voice.<br>
+## Rules<br>
+Ten to fifteen binding, checkable rules — the kind a writer can be held to. Distance, tense/person, sentence rhythm, how a discovery is staged, how numbers are used, how much the narrator may acknowledge an open question, comedy mechanism and density, dialogue, scene shape, chapter openings and endings, what is banned.<br>
+## What it does to the anti-LLM rules<br>
+Which rules of `notes/llm-tells.md` it keeps, amends, or overrides, and why the override is safe.<br>
+## Demonstration<br>
+Rewrite this paragraph, from chapter 13, in the voice — then two sentences on what you changed and why:<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> It was going over in bands."<br>
+## Risks<br>
+What will go wrong with this voice, and the early warning signs.<br>
+<br>
+Also write `<span class="redacted">redacted: private</span>/samples/round5/voices/README.md`: a one-page comparison table and an honest note on which you would bet on and why.<br>
+<br>
+Do not edit anything outside `samples/round5/`. Your final message: the three names and one line each on the bet.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required context.</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 11 lines, 380 chars —      433 samples/round5/study/current-voice.md /      246 samples/round5/study/herriot.md /       80 samples/round5/study/mcphee.md</p>
+<p>🔧 Read samples/round5/study/current-voice.md</p>
+<p>✅ 434 lines, 26395 chars</p>
+<p>🔧 Bash: cat samples/round5/study/herriot.md samples/round5/study/mcphee.md samples/round5/study/w…</p>
+<p>✅ 36 lines, 2177 chars</p>
+<p>🔧 Bash: sed -n '30,250p' samples/round5/study/herriot.md</p>
+<p>✅ 217 lines, 14992 chars</p>
+<p>🔧 Bash: cat samples/round5/study/mcphee.md; echo "=====PRATCHETT====="; cat samples/round5/study/…</p>
+<p>✅ 24 lines, 2045 chars</p>
+<p>🔧 Bash: sed -n '10,80p' samples/round5/study/mcphee.md</p>
+<p>✅ 71 lines, 14390 chars</p>
+<p>🔧 Bash: cat samples/round5/study/pratchett.md; echo "===WEIR==="; sed -n '1,120p' samples/round5/…</p>
+<p>✅ 188 lines, 24173 chars</p>
+<p>🔧 Bash: sed -n '120,230p' samples/round5/study/weir.md</p>
+<p>✅ 111 lines, 7102 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the project's own voice documents.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: cat notes/voices.md</p>
+<p>✅ 44 lines, 2191 chars</p>
+<p>🔧 Bash: grep -n "^#\|^##\|^###" notes/voices.md | head -60</p>
+<p>✅ 10 lines, 466 chars</p>
+<p>🔧 Bash: sed -n '86,280p' notes/voices.md</p>
+<p>✅ 195 lines, 12241 chars</p>
+<p>🔧 Bash: sed -n '280,529p' notes/voices.md</p>
+<p>✅ 250 lines, 14575 chars</p>
+<p>🔧 Bash: cat notes/voice-exemplars.md; echo "======LLMTELLS"; sed -n '1,140p' notes/llm-tells.md</p>
+<p>✅ 204 lines, 12281 chars</p>
+<p>🔧 Bash: sed -n '140,261p' notes/llm-tells.md; echo "===PREMISE==="; sed -n '1,184p' notes/premise…</p>
+<p>✅ 307 lines, 17915 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now chapter 13.</p>
+</div>
+
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 277 lines, 23675 chars</p>
+
+<div class="assistant-prose">
+<p>Now I'll write the three voices.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span>/samples/round5/voices &amp;&amp; cat &gt; <span class="redacted">redacted: private</span>/samples/r…</p>
+<p>✅ 1 lines, 2 chars</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span>/samples/round5/voices/voice-2-the-open-wager.md &lt;&lt;'EOF' # Voice…</p>
+<p>✅ 1 lines, 2 chars</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span>/samples/round5/voices/voice-3-the-call-out.md &lt;&lt;'EOF' # Voice 3…</p>
+<p>✅ 1 lines, 2 chars</p>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span>/samples/round5/voices/README.md &lt;&lt;'EOF' # Round 5: three candid…</p>
+<p>✅ 5 lines, 90 chars</p>
+<p>🔧 Bash: git add samples/round5/voices &amp;&amp; git commit -q -m "Round 5: three candidate successor voi…</p>
+<p>✅ 1 lines, 49 chars — 88b6ed3 Round 5: three candidate successor voices</p>
+</details>
+
+<div class="assistant-prose">
+<p>**1. The Rising Water** (`<span class="redacted">redacted: private</span>/samples/round5/voices/voice-1-the-rising-water.md`) — the reader turns the page because they can picture the world in which this thing wins: McPhee's translated numbers, unglossed symptom paragraphs and dread-by-accumulation, with the consequence always attached to a named acre or person.</p>
+<p>**2. The Open Wager** (`<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**3. The Call-Out** (`<span class="redacted">redacted: private</span>/samples/round5/voices/voice-3-the-call-out.md`) — the reader turns the page because a job is going wrong in someone's yard while they watch: Herriot's comedy running under unresolved jeopardy, technical content only as defence or dispute, and the mystery advancing as a by-product of work that can't be put off.</p>
+<p>README at `<span class="redacted">redacted: private</span>/samples/round5/voices/README.md` compares them and bets on The Open Wager plus two borrowed rules; committed as 88b6ed3.</p>
+</div>
+</body></html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Hou…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Repo: &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. &lt;span class=&quot;redacted&quot;&gt;redacted sentence: unpublished prose&lt;/span&gt; Hou…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a2c184a85a260a42a">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Repo: <span class="redacted">redacted: private</span>. <span class="redacted">redacted sentence: unpublished prose</span> House-word convergence), .claude/skills/editing-pass/SKILL.md, then chapters/018-holm-deep.md in full.<br>
+You are a narrow reviewer with ONE lens. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Report ONLY findings within your lens, compactly, each as: quote (short) | problem | suggested fix. Precision matters: invented problems are as bad as misses. Do NOT declare the chapter clean or certify anything — absence of findings is simply an empty list.</p></blockquote>
+
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Read notes/voices.md</p>
+<p>✅ 182 lines, 10997 chars</p>
+<p>🔧 Read notes/llm-tells.md</p>
+<p>✅ 161 lines, 10468 chars</p>
+<p>🔧 Read chapters/018-holm-deep.md</p>
+<p>✅ 246 lines, 22644 chars</p>
+<p>🔧 Bash: wc -w <span class="redacted">redacted: private</span>/chapters/018-holm-deep.md; grep -o "—" <span class="redacted">redacted: private</span>/chap…</p>
+<p>✅ 2 lines, 78 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters <span class="redacted">redacted sentence: unpublished prose</span>   c=$(grep -oi "$w…</p>
+<p>✅ 11 lines, 207 chars — nobody:       14 / somebody:        9 / anybody:        5</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters grep -noi "nobody\|somebody\|anybody" 018-holm-deep.md ec…</p>
+<p>✅ 65 lines, 791 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters sed -n '29p;47p;103p;163p;169p;3p' 018-holm-deep.md</p>
+<p>✅ 6 lines, 1986 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Findings (register/mechanical lens only):</p>
+<p>**House-word census (~4,260 words):**</p>
+<p>- nobody/somebody/anybody: 28 total (~66/10k words) — three times the halved target rate the voice notes set (~11/10k). Heaviest cluster: lines 137–141 (4 in two paragraphs: "Nobody knows why"/"Nobody's known why"/"Nobody follows anything. <span class="redacted">redacted sentence: unpublished prose</span> Nobody had been left."). | Overused indefinite-pronoun tic, well past the already-halved budget | Cut or vary a third to half of these — many are stage-setting ("Nobody hurried," "standing... and Nobody talked much") that could just be dropped.</p>
+<p>- stood/standing: 19 instances (~45/10k) — heavier than the 64k-word census average (~30/10k) that was already flagged as monoculture. Dense run in the first-chamber fight scene (lines 41, 45, 47, 53) — "Edwin stood," "She stood where she was put," "the line stood," "<span class="redacted">redacted: character</span> stood a pace back" all within one paragraph block. | Staging-verb monoculture, exactly the pattern flagged in llm-tells.md | Vary with "waited," "held her place," "stayed by," or cut the stage direction where redundant with the action already described.</p>
+<p>- "out loud": 4 instances (lines 41, 161, 191, 239), ~9/10k — over twice the census rate (~3.6/10k). | Most of these tag speech/counting that doesn't need the tag (e.g. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>- "the whole of": 5 instances (lines 127, 155, 169, 177, 209), ~12/10k — more than 3x the census rate (~3.4/10k), and two land within 14 lines of each other (155, 169). | Fingerprint construction recurring at elevated density | Replace with "all of it," "entirely," or restructure at least half these instances.</p>
+<p>- "half past": 3 instances (27, 33, 175), two of which are the identical phrase "half past eight" seven lines apart (27, 33) describing the same clock moment from two speakers. | Repeated clock phrasing in close proximity, the exact case voices.md flags for varying | Vary the second occurrence's phrasing.</p>
+<p>**Self-annotated devices / aphorism budget (max 1 narrator aphorism/scene):**</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>) means, structurally identical to the banned "which she knew, which is why she did it" pattern named in llm-tells.md | Cut the explanatory clause; let the beat (Peri not turning) stand unglossed. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

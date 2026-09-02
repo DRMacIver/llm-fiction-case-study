@@ -1,0 +1,93 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are checking the coherence of the project&#x27;s sealed material at ⟦r…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are checking the coherence of the project&#x27;s sealed material at ⟦r…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a5519e6912ecccc6f">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are checking the coherence of the project's sealed material at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it.<br>
+<br>
+**SECRECY, from `CLAUDE.md` and binding absolutely.** Sealed answers live in `notes/sealed/`. **Never state, summarise, hint at or paraphrase a sealed answer's content to DRMacIver** — not in a chat reply, a commit message, a plan, a summary, a canon file outside `notes/sealed/`, or a "harmless" gloss. Reports about sealed material describe only its *shape*: how many constraints it satisfies, what discrepancies exist, confidence. Your own final message is read by DRMacIver, so **it must contain no spoilers** — shape only. The file you write is for the author-facing-forward, not for him.<br>
+<br>
+Four sealed answers now exist in `notes/sealed/`: the pre-existing `silent-soil.md` and three written today. Read all four in full.<br>
+<br>
+Check:<br>
+1. **Against each other.** Do any two answers conflict, share a mechanism in a way that cheapens both, or explain the same evidence differently? The silent-soil answer states that the Deeps thread is not connected to it — verify the new Deeps answer respects that rather than quietly leaning on it.<br>
+2. **Against the whole.** Together, do these four make a world that holds — one where anchor 2 survives, there is no great evil, and the System's asymmetry is intact?<br>
+3. **Coverage.** Read `notes/audit/REPORT.md` §"Load-bearing mysteries" and its watch list, and `notes/canon/deferred-beats.md`. Is there a *fourth* mystery now accumulating evidence with no written answer — the watch list names Peri's pre-Choosing life. If so, say so prominently; per `CLAUDE.md` that is the highest-severity category.<br>
+4. **The discrepancy lists**, taken together. Any discrepancy appearing on two lists is more serious than either list knows.<br>
+<br>
+Write `<span class="redacted">redacted: private</span>/notes/sealed/COHERENCE.md` with your findings, and update the individual answer files only where a conflict requires it (say what you changed and why).<br>
+<br>
+Your final message to DRMacIver: **shape only.** How many conflicts found and at what severity, whether the four cohere, whether a new unanswered mystery exists and its name only, and what most needs attention. No mechanisms, no content.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required files.</p>
+</div>
+
+<details><summary>38 tool calls</summary>
+<p>🔧 Bash: ls notes/sealed/ &amp;&amp; wc -l notes/sealed/* notes/audit/REPORT.md notes/canon/deferred-beats…</p>
+<p>🔧 Read CLAUDE.md</p>
+<p>✅ 109 lines, 6054 chars</p>
+<p>✅ 13 lines, 398 chars — destiny.md / <span class="redacted">redacted: character</span>-grandmother-people.md / m1-destiny-craft-review.md</p>
+<p>🔧 Bash: cat notes/sealed/destiny.md</p>
+<p>✅ 47 lines, 2210 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
+<p>✅ 47 lines, 2210 chars</p>
+<p>🔧 Read notes/sealed/destiny.md</p>
+<p>✅ 679 lines, 45878 chars</p>
+<p>🔧 Read notes/sealed/<span class="redacted">redacted: character</span>-grandmother-people.md</p>
+<p>✅ 730 lines, 48827 chars</p>
+<p>🔧 Bash: git log --oneline -15 -- notes/sealed/ &amp;&amp; echo ---- &amp;&amp; ls -la notes/sealed/ &amp;&amp; echo ----…</p>
+<p>✅ 18 lines, 1121 chars</p>
+<p>🔧 Bash: sed -n '200,320p' notes/audit/REPORT.md</p>
+<p>✅ 121 lines, 6824 chars</p>
+<p>🔧 Bash: grep -n "^#\{1,3\} " notes/sealed/silent-soil.md</p>
+<p>✅ 62 lines, 2455 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,70p' notes/sealed/silent-soil.md</p>
+<p>✅ 69 lines, 3816 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "deep\|destiny\|seal of the loom\|⟦redacted: character…</p>
+<p>✅ 72 lines, 7343 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1633,1700p;1844,1895p;2540,2560p' notes/sealed/silent-soi…</p>
+<p>✅ 141 lines, 7026 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i "another county\|<span class="redacted">redacted: character</span>.*struck\|struck…</p>
+<p>✅ 3 lines, 139 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat notes/canon/deferred-beats.md</p>
+<p>✅ 126 lines, 7465 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '2612,2660p' notes/sealed/silent-soil.md</p>
+<p>✅ 49 lines, 2518 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "keeping\|Keeping" notes/sealed/<span class="redacted">redacted: character</span>-gra…</p>
+<p>✅ 24 lines, 2356 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' import re p='notes/sealed/<span class="redacted">redacted: character</span>…</p>
+<p>✅ 19 lines, 1893 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'PY' p='notes/sealed/destiny.md' s=open(p).read() old…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; notes/sealed/COHERENCE.md &lt;&lt;'EOF' # Sealed material — coher…</p>
+<p>✅ 1 lines, 54 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>**Correction to the brief first: there are three sealed answers, not four.** `notes/sealed/` holds `silent-soil.md` plus the two written 2026-08-28; the other two files there are adversarial craft critiques of candidate answers, not answers. **There is no Deeps answer.** M2 is still unwritten, so the "does the new Deeps answer respect the non-connection" check could not be run. What I could verify — that neither new answer leans on the Deeps or disturbs the silent-soil non-connection rows — passes.</p>
+<p>**Conflicts: four.**<br>
+- 2 HIGH. One was a naming collision between two answers that would have told a reader to connect two threads that must never connect; I fixed it by renaming, which the affected file explicitly licenses as a free change. The other was a missing guard where one answer's mechanism could have quietly contaminated another answer's central epistemic guarantee; I added it as a binding rule. Neither answer had it on its list.<br>
+- 1 MODERATE, needing your ruling, not mine: two answers now collide on their own, and one of them carries a commitment (made against a superseded version of the other) not to let that collision happen. Flagged in both files; I recommend relaxing the commitment, but did not.<br>
+- 1 MINOR, no action: two files phrase the same end state with different timing. Recorded so a later pass doesn't misread the older one.</p>
+<p>**Do the three cohere? Yes.** Anchor 2 survives three times over and none of the answers needs a villain to work; System asymmetry is intact; the schedules don't collide. One structural caution: the locked ending is now over-determined — three independent justifications for one act — which is robustness but also three chances to say it out loud. I've written a standing rule against that.</p>
+<p>**Unanswered mysteries, by severity.**<br>
+1. **M2 — what a Deep is.** Highest severity, and the 2026-08-28 work made it worse rather than better: one of the new answers hands a specific character a sealed background that a reader can connect to the Deep's evidence, and no guard exists in either file. It has an appointment in ink that cannot be dramatized by an author who doesn't know the answer.<br>
+2. **Peri's pre-Choosing life.** Not M4 today — neither new answer adds evidence — but one of the new answers *schedules* the exact beat that tips it, and it now sits on three lists with no answer.</p>
+<p>**Cross-list discrepancies:** three that appear on two or more lists, all promoted. The worst is a narrative adjacency both files independently rate their most fragile joint; a second is a canon defect where three canon files quote as Established a sentence that is not in the chapter, and a deferred beat is scheduled on it.</p>
+<p>Findings and actions: `<span class="redacted">redacted: private</span>/notes/sealed/COHERENCE.md`. Edits to `<span class="redacted">redacted: private</span>/notes/sealed/destiny.md` and `<span class="redacted">redacted: private</span>/notes/sealed/<span class="redacted">redacted: character</span>-grandmother-people.md`. Committed.</p>
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+</div>
+</body></html>

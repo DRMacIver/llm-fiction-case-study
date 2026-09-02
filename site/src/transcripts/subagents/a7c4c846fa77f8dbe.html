@@ -1,0 +1,85 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the editing subagent for the third draft of Book 1 of the nov…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a7c4c846fa77f8dbe">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
+<br>
+Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/06-the-front-from-the-roof.md, read after scenes 01–05 in the same directory (they bind what is on the page). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required files.</p>
+</div>
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>✅ 319 lines, 20190 chars</p>
+<p>🔧 Read draft/book-01/scenes/06-the-front-from-the-roof.md</p>
+<p>✅ 20 lines, 3311 chars</p>
+<p>🔧 Bash: for f in draft/book-01/scenes/0[1-5]*.md; do echo "=== $f"; cat "$f"; done</p>
+<p>🔧 Bash: cat notes/canon/world/magic.md</p>
+<p>✅ 296 lines, 24814 chars</p>
+<p>✅ 44 lines, 2245 chars</p>
+<p>🔧 Bash: grep -n -i "weather\|front\|mana\|empt\|roof\|tower" notes/canon/world/magic.md | head -80</p>
+<p>✅ 30 lines, 2120 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/sorrel.md; echo "=====EDWIN"; cat notes/canon/characters/edwin…</p>
+<p>✅ 44 lines, 2192 chars</p>
+<p>🔧 Bash: sed -n '1,130p' notes/canon/world/magic.md; echo "..."; sed -n '400,520p' notes/canon/wor…</p>
+<p>✅ 252 lines, 14203 chars</p>
+<p>🔧 Bash: grep -n -i "mana\|status\|sheet\|hour" notes/canon/system.md | head -60</p>
+<p>✅ 43 lines, 3115 chars</p>
+<p>🔧 Bash: sed -n '270,330p' notes/canon/system.md</p>
+<p>✅ 61 lines, 3634 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 205 lines, 18296 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Findings</p>
+<p>**Part 1**</p>
+<p>1. **"looked forty miles off toward the coast"** — Part 1, *check every count*. Scene 05 puts the front "still forty miles off the coast," i.e. forty miles *beyond* the coast; this line makes forty miles the distance from tower to coast. Canon (`magic.md`) also uses forty miles for the *width* of a front and Edwin's range, so a third sense muddies it further. Replacement: "looked out toward the coast."</p>
+<p>2. **"at nothing a farmer could have seen"** — Part 1, *a word doing a job it cannot do*, and Part 5, *the line he liked*. Scene 02's load-bearing beat is "What you have found, Miss Millbrook, is a farmer. — Yes. Not as a figure of speech." The narration now uses "farmer" as the word for someone who *cannot* do what Edwin does, which reverses the thesis the previous scene spent a page establishing. Replacement: "at nothing anyone else on the hill could have seen," or cut the clause and end on "toward the coast."</p>
+<p>3. **"you cannot see the shape from underneath; you have to have stood on this roof for enough years that you know what the air over the coast feels like"** — Part 1, *check every inference*. The stated problem is a problem of vantage (underneath); the offered remedy is experience, not height, and the semicolon asserts they are the same move. Also *pronoun/reference*: the generic "you" is asked to have stood on a specific roof that only Edwin has stood on. Replacement: "and you cannot see it at all, from underneath or from here; what you have instead is thirty thousand mornings of knowing what the air over the coast feels like when it is carrying."</p>
+<p>4. **"twenty miles off and drifting, and he set it there for the night"** — Part 1, *cannot choose between two flat restatements*. "Set it there" and "drifting" are opposite claims about the same front in the same clause. Replacement: "twenty miles off, and he set it there for the night."</p>
+<p>5. <span class="redacted">redacted sentence: unpublished prose</span> If he lets go tonight and is emptied for days, nothing delivers the Pellings' *half past twelve* tomorrow — the whole of the scene's stated trade is the difference between a drifting front and a named half-hour. Fix in the prose, not by shuffling: give the release a hand-off — "he set it there for the night, twenty miles off, where the morning's work would be only a nudge and a half-hour's steering, and let go."</p>
+<p>6. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span> itself; the finding is 5.</p>
+<p>7. **"he stood at the rail with his hands on the warm iron"** — Part 1, *check the clock* and *dependents of an edit*. The light has just gone ("by the time the light went"); the rail has been unlit for at least a working's worth of time and is not warm. It also repeats the opening sentence's staging verbatim in the same scene. Replacement: "and he stood at the rail with his hands on iron that had gone cold under them."</p>
+<p>8. **"had been warm for an hour"** — Part 1, *check the clock*. He came up in the early afternoon after a noon conversation; an iron rail in that sun has been warm since mid-morning, and "for an hour" asserts a change of state nothing in the scene motivates. Replacement: "was warm from the day."</p>
+<p>9. **"It had been sitting off the coast since before breakfast"** — Part 1, *check every count*. Scenes 01, 03 and 05 all say "since breakfast" (03: "waiting since breakfast"; 05: "where it had been since breakfast"). Replacement: "since breakfast."</p>
+<p>10. **"It took most of a page." … "since he had written a page about something he did not understand"** — Part 1, *check every count*. Most of a page in one sentence, a page in the next. Replacement: make the second "a page of it" → "since he had written that much about something he did not understand."</p>
+<p>11. **"He was not a man who wrote things down for the sake of it"** — Part 1, *the flat version is empty*, with a Part 3 edge (`institutions.md` literacy; `system.md` "the scarce thing is patience, not knowledge"). He keeps a ledger, a thirty-year frost list, and coast correspondence; the sentence exists only to make the page of notes feel significant, and the significance is already carried by the underlining. Cut.</p>
+<p>12. **"a line across the top in her hand"** — Part 1, *a word doing a job it cannot do*. "A line across the top" first reads as a ruled line; the words follow, so the reader has to reparse. Replacement: "with nothing written on it but two words in her hand."</p>
+<p>**Part 2**</p>
+<p>13. **"felt the size of what was not there, which after three hundred years was the most familiar feeling he owned"** — Part 2, *the gesture at meaning*; "owned" is also Part 1 word-job. "The size of what was not there" is the banned *doing some of what an X can do* family — a phrase shaped like weight whose claim is only that emptiness is meaningful. "The most familiar feeling he owned" overclaims against three hundred years of forks, heaps and rain. Replacement: "and felt how little of himself was left, which was a feeling he had had after every large working for three hundred years."</p>
+<p>14. **"The knot behind the breastbone sat inside the emptiness and did nothing."** — Part 2, *gesture at meaning*, plus Part 6 (scenes 03 and 05 both use the plain "his breastbone"). The knot is a physical sensation and the emptiness is mana; "sat inside" fuses two categories to imply a relation the scene does not claim. Replacement: "The knot behind his breastbone did nothing."</p>
+<p>15. <span class="redacted">redacted sentence: unpublished prose</span> The colon-list immediately above already is everything the mage-sight caught; the fragment restates it as a summary and tells the reader it mattered. Cut.</p>
+<p>16. **"which he did not notice himself doing"** — Part 2, *the unwanted explanation of a joke*. Scene 05's whole exchange is Sorrel reading the square-to-the-desk tell off him while he denies it; footnoting the callback kills it. Cut the clause: "He sat square to the desk and wrote…"</p>
+<p>**Part 3**</p>
+<p>17. **"The study had one candle lit and the ledger open"** — Part 3, *where would this person actually do this?* Sorrel went down at noon and he was on the roof until after dark; a candle has either burned unattended in an empty study all afternoon or been lit by nobody. Replacement: "He lit the study candle. The ledger was open where he had left it, and Sorrel had left a sheet of paper…"</p>
+<p>**Part 5**</p>
+<p>18. **Sorrel's note, *In order.*** — Part 5, *redundancy*. At noon, to his face, she said "tonight you'll write down everything you saw … If we're going to be ignorant, we can at least be ignorant in some sort of order." The note delivers the same instruction and the same joke a second time, three hours later, to a man who is already sitting down to obey it. Either cut the note, or make it carry something the noon scene did not — e.g. the sheet is *ruled into columns*, which is her being funnier than a reminder: "a sheet of paper ruled into four columns, and nothing written on it at all."</p>
+<p>**Part 6**</p>
+<p>19. **"It annoyed him, slightly, that it had come so easily. He had wanted something to argue with."** — Part 6, *the plainest, most direct form*. This restages the line the author himself rewrote, and loses exactly what his version supplied: the causal joint, and no <span class="redacted">redacted: character</span>. Replacement: "It came easily, which annoyed him, because he had wanted something to argue with."</p>
+<p>20. **"There is no better word for it and he had stopped looking for one in his first century."** — Part 6 / Part 1 word-job. The antecedent is the phrase "took hold," not a word. Replacement: "There is no better way to say it, and he had stopped looking for one in his first century."</p>
+<p>21. **"It came off the coast slow and sulky and heavy, and he brought it up over the moors through the afternoon, and the moors took the worst of it, the way moors do, and nobody but the curlews had a complaint."** — Part 6, *prefer the participial form to a chain of "and"s in a physical beat*. Four coordinated clauses flatten the one paragraph that is the scene's work. Replacement: "It came off the coast slow and sulky and heavy. He brought it up over the moors through the afternoon, and the moors took the worst of it, the way moors do, and nobody but the curlews had a complaint."</p>
+<p>**Part 7**</p>
+<p>22. **"He went to bed at his usual hour. <span class="redacted">redacted sentence: unpublished prose</span> The final sentence is a settling aphorism about his character, wrapped in a pluperfect participial that softens the verb it exists to reach; it closes the scene down instead of leaving it pointing forward, and it is the second narrator aphorism in the scene (with "The walking was the work"). Replacement: end the scene on the page of notes, or "He ate bread and cheese standing up at the dresser. He went to bed at his usual hour, and lay awake longer than he meant to, and in the morning the page was still on the desk where he had left it."</p>
+<p>---</p>
+<p>The device a second round would be about is **the emptying**: the scene asserts the price ("that was the price and it was the same price every time," "gives it back over days") but nothing in the scene or the next morning is shown costing him — he goes down, writes a page, eats, sleeps, and delivers a named half-hour of rain tomorrow. That is Part 5's *asserted, not shown*, and rephrasing "he felt the size of what was not there" will not fix it.</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

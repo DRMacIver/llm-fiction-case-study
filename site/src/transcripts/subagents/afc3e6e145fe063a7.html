@@ -1,0 +1,62 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-afc3e6e145fe063a7">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="narration", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/09-the-cart-up-the-hill.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for prose faults in the specified scene. Let me start by reading the rules file and the scene.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/scenes/09-the-cart-up-the-hill.md</p>
+<p>✅ 24 lines, 2866 chars</p>
+<p>✅ 1216 lines, 49319 chars</p>
+
+<div class="assistant-prose">
+<p>Let me read the rest of the rules file to ensure I capture all semantic narration rules for scenes.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1071 lines, 57866 chars</p>
+
+<div class="assistant-prose">
+<p>Now I'll hunt for violations of semantic narration rules in the scene. Let me systematically check the selected rules against the text.</p>
+<p>The semantic narration rules with scope including "scene" are:<br>
+- generalising-clause-budget<br>
+- windup-tag-budget<br>
+- wants-gerund-budget<br>
+- prose-not-at-rest<br>
+- unlocated-narration<br>
+- motive-off-page<br>
+- viewpoint-overreach<br>
+- nominalised-absence<br>
+- description-list<br>
+- rest-register-misplaced<br>
+- unearned-authority<br>
+- likeability-drift</p>
+<p>Let me examine the scene carefully for each rule:</p>
+<p>**prose-not-at-rest**: Checking for a good mix of plain reporting sentences vs. shaped/witty sentences. The scene shows healthy variety—plain statements like "Four hundred sheep had been sheared dry" and "Nobody remarked on it" alternate with shaped observations like "watched his rain do what it had been told." No violation.</p>
+<p>**unlocated-narration**: Checking for village knowledge without a channel. "Nobody remarked on it" in context: the next sentence anchors this to Edwin as observer ("Edwin stood at the study window"). The neighboring sentence supplies the location. No violation.</p>
+<p>**motive-off-page**: Checking "He signed for it" (line 21). The immediately preceding sentence states: "It could go with that, and a note asking what they had meant." This supplies the cause—he can send it with the autumn post. No violation.</p>
+<p>**viewpoint-overreach**: Edwin's specific claims (the arrangement holding "longer than the present generation of carters," the carter being "off his route") are all either general knowledge for the area or Edwin's reasonable inference from visible signs. No violation.</p>
+<p>**Other rules**: Checking description-list (descriptions are woven in, not listed), wants-gerund-budget (no "wants soaking" in narration), windup-tags (dialogue tags are short, no biographies), generalising-clauses (no generalising closers), nominalised-absence (no silence/absence as subject), rest-register-misplaced (the scene has wit, not pure McPhee rest), unearned-authority (no unjustified orders), likeability-drift (Edwin's actions are reasonable).</p>
+<p>No violations found across the selected semantic narration rules.</p>
+</div>
+
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Editing task in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read draft/book-01/VOICE.md in f…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Editing task in &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read draft/book-01/VOICE.md in f…</h1><div class="subagent-header"><a href="../7257e15f-eb7f-4d0b-83e8-dde205ef5352.html#agent-a2d73f8a775d89b79">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Editing task in <span class="redacted">redacted: private</span>. Read draft/book-01/VOICE.md in full first (binding voice memo: no em dashes in body text, plain modern English, prose at rest, endings are cuts not cadences, no negative parallelism, no buttons). Then read draft/book-01/scenes/58-*.md, 61-*.md, 62-*.md, and skim 59, 60, 63 for context. Do not read chapters/, rewrite/, draft/book-01/rejected-act2/, summaries/, plans/book-01/arc-0*.md <span class="redacted">unpublished</span> or their git history.<br>
+<br>
+An independent quality read has found that the 'writing it down' motif (write/wrote/written/book/entry/day book) has hardened into a house verb: roughly sixty instances across 58–66, thirteen in scene 61 <span class="redacted">unpublished</span> and twelve in scene 62 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Fix it:<br>
+<br>
+1. In 61 and 62, cut the motif by about half. Keep it only where writing is a decision with consequences (an entry that makes an obligation under the Charter's clause; <span class="redacted">redacted: character</span>'s yes with the hour on it; the 'possibly carried' discipline; Peri writing Edwin's account with nothing under it in 62, which is the scene's point and stays). Delete it where it is a period at the end of a paragraph or a substitute for a reaction. Replace with nothing, or with the plain action or plain speech that was underneath. Do not add new figures, aphorisms or buttons; do not revoice; make the smallest edits that remove the tic.<br>
+2. No scene among 58–62 may end on somebody writing something. Check each ending; where one does, cut back to the last plain forward-pointing line before it, or end on the speech.<br>
+3. Scene 58 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> Rewrite the opening so the scene starts with the event: Tess at the dairy door. Keep the date somewhere in the first paragraph, plainly.<br>
+4. Also check 59's ending ("Edwin watched her not write it") and 62's ("neither of them said anything else until the second gate") and cut or flatten if they are buttons.<br>
+<br>
+Edit the files directly with minimal diffs (one paragraph per line; preserve line structure). Then run `python3 tools/overlap_check.py draft/book-01/scenes/58-*.md draft/book-01/scenes/61-*.md draft/book-01/scenes/62-*.md` from the repo root and rephrase any 8+ word run it reports in text you changed. Report: instance counts of write/wrote/written/book before and after per scene, each changed ending quoted before/after, and the new opening of 58.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the voice memo and the scenes.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Read draft/book-01/VOICE.md</p>
+<p>✅ 257 lines, 16258 chars</p>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | sed -n '55,70p'</p>
+<p>✅ 16 lines, 459 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 58-*.md 61-*.md 62-*.md; do echo…</p>
+<p>✅ 120 lines, 18290 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 59-*.md 60-*.md 63-*.md; do echo…</p>
+<p>✅ 130 lines, 20258 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 58-*.md 59-*.md 60-*.md 61-*.md 6…</p>
+<p>✅ 10 lines, 456 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now applying the edits.</p>
+</div>
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; python3 - &lt;&lt;'EOF' import io,re def ed(fn,…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 58-*.md 59-*.md 61-*.md 62-*.md;…</p>
+<p>✅ 4 lines, 128 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; grep -noiE '.{40}\b(write|writes|writing|w…</p>
+<p>✅ 7 lines, 618 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; awk '{n=$0; while(match(tolower(n),/(^|[^a…</p>
+<p>✅ 14 lines, 164 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; python3 - &lt;&lt;'EOF' fn='61-stranger-further-…</p>
+<p>✅ 1 lines, 2 chars</p>
+<p>🔧 Bash: python3 tools/overlap_check.py draft/book-01/scenes/58-*.md draft/book-01/scenes/61-*.md…</p>
+<p>✅ 4 lines, 339 chars</p>
+<p>🔧 Bash: git diff --stat &amp;&amp; head -3 draft/book-01/scenes/58-*.md &amp;&amp; echo "---62 tail---" &amp;&amp; tail -…</p>
+<p>✅ 12 lines, 1210 chars</p>
+<p>🔧 Bash: git add -A &amp;&amp; git commit -q -F - &lt;&lt;'EOF' Scenes 58-62: cut the 'writing it down' tic  The…</p>
+<p>✅ 3 lines, 217 chars — On branch main / nothing to commit, working tree clean / 3824151 Scenes 67-68: pre-David findings applied (<span class="redacted">redacted: character</span> attests instead of maxims, <span class="redacted">redacted: character</span> owns the doors, the lesson is a second lesson, blessing cost shown, dialect)</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span></p>
+<p>✅ 3 lines, 383 chars — 3824151 Scenes 67-68: pre-David findings applied (<span class="redacted">redacted: character</span> attests instead of maxims, <span class="redacted">redacted: character</span> owns the doors, the lesson is a second lesson, blessing cost shown, dialect) / 3a96b99 Scenes 62-65 findings applied; 66 (the fen margin) drafted / f40f34b Scenes 60-65: findings applied properly (afternoon costed in 60; fan and letter sum in 61; nineteenth and mist physics in 63); overlaps cleared</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> | tail -4</p>
+<p>✅ 5 lines, 199 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Done. All edits are in the working tree and committed (the repo's commit at HEAD contains them; `git status` is clean).</p>
+<p>## Counts (write/writes/writing/wrote/written/book/books/entry/entries/notebook)</p>
+<p>| scene | before | after |<br>
+|---|---|---|<br>
+| 58 | 3 | 3 |<br>
+| 59 | 11 | 8 |<br>
+| 61 | 20 | 10 |<br>
+| 62 | 15 | 9 |</p>
+<p>61 and 62 are each cut by half. What was kept in 61: the day book as the source <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> In 62: "you'll want to write it... <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>What went: `<span class="redacted">redacted: character</span> wrote it. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## Endings changed</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Edwin watched her not write it. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**62** — before: `"I know. I'll write it again." She started walking. "I've written that you said it twice. The heap, and here."` / "He came after her. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**58, 60, 61** already ended on speech or on plain action, not on writing, and are unchanged. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>## New opening of 58</p>
+<p>The structure-announcing sentence is deleted outright; the scene now opens on the event, with the date plain in the first clause:</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Burl is no longer pre-labelled; he arrives in the doorway and the narration only remarks on his talkativeness after he has spoken.</p>
+<p>## Overlap check</p>
+<p>`python3 tools/overlap_check.py` on 58, 61, 62: zero runs for 58 and 61. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

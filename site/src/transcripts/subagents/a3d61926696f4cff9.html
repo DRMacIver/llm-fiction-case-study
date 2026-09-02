@@ -1,0 +1,51 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a3d61926696f4cff9">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="world", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/09-the-cart-up-the-hill.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for prose faults in the scene file. Let me start by reading the rules and then the scene.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/scenes/09-the-cart-up-the-hill.md</p>
+<p>✅ 24 lines, 2866 chars</p>
+<p>✅ 1216 lines, 49319 chars</p>
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1070 lines, 57859 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me examine the scene for violations of the semantic + world + scene scope rules.</p>
+<p>The qualifying rules are:<br>
+1. **worldbuilding-to-save-a-line** (line 1924)<br>
+2. **tech-level-anachronism** (line 2164)<br>
+3. **canon-scale-contradiction** (line 2185)<br>
+4. **system-terminology** (line 2209)<br>
+5. **italics-misplaced** (line 2231)</p>
+<p>Let me systematically check for violations:</p>
+<p>**worldbuilding-to-save-a-line**: Looking for invented canon to justify lines. The details (sample box, dovetailed, boxing bench, clerk's hand, etc.) all serve necessary narrative purposes. "The philosophy of the thing was above his wage" is a natural characterization of the carter, not invented worldbuilding. No violation.</p>
+<p>**tech-level-anachronism**: Checking for post-industrial objects. Sample box (dovetailed), clerk, bench, docket, shed, dresser, catalogues—all plausible pre-industrial. The Agricultural College could exist as a pre-industrial institution. No violation.</p>
+<p>**canon-scale-contradiction**: The rule specifies flagging "only a number bound to a person by an age-marker." "Four hundred sheep" is a quantity, not age-bound to a person. "The arrangement had held longer than the present generation of carters" is a duration comparison, not an age-marker. No age-marked numbers that contradict canon. No violation.</p>
+<p>**system-terminology**: Looking for wrong established nouns. "Sample," "box," "clerk," "direction" (established in first use), "college," "docket," "dresser," "catalogues"—all seem contextually appropriate. No obvious mismatches with established system terminology. No violation.</p>
+<p>**italics-misplaced**: The two italicized passages are quoted text (the written address on the parcel and the clerk's annotation). These are correct uses of italics for quoted material, not emphasis italics in wrong places. No violation.</p>
+</div>
+
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

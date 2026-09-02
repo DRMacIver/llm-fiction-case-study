@@ -1,0 +1,69 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the editing subagent for the third draft of Book 1 of the nov…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a376f4b905e6cc222">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
+<br>
+Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/21-the-handover.md, read after scenes 01–20 in the same directory (they bind what is on the page — including scene 20, the new collapse scene, which must not be repeated here, and the plan's rule that this is <span class="redacted">redacted: theme</span> and 20 was not). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">unpublished</span> Also chapters/006-the-handover.md — the groundwork this restages, which the author rates good and which drew no comments from him on this passage.<br>
+<br>
+Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required context.</p>
+</div>
+
+<details><summary>22 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>✅ 319 lines, 20190 chars</p>
+<p>🔧 Read draft/book-01/scenes/21-the-handover.md</p>
+<p>✅ 50 lines, 5991 chars</p>
+<p>🔧 Bash: cat CLAUDE.md &gt; /dev/null &amp;&amp; ls draft/book-01/scenes/ &amp;&amp; wc -w draft/book-01/scenes/*.md</p>
+<p>✅ 43 lines, 1710 chars</p>
+<p>🔧 Bash: cat notes/canon/characters/sorrel.md</p>
+<p>✅ 44 lines, 2191 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/13-when-did-you-last-leave.md draft/book-01/scenes/14-three-lett…</p>
+<p>✅ 24 lines, 2215 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/19-the-two-lists.md draft/book-01/scenes/20-one-more-week.md dra…</p>
+<p>✅ 123 lines, 13303 chars</p>
+<p>🔧 Bash: cat chapters/006-the-handover.md</p>
+<p>✅ 157 lines, 17203 chars</p>
+<p>🔧 Bash: grep -rn "keeping charm\|thirty years\|hundred years yet\|never level\|outliv\|pear" note…</p>
+<p>✅ 60 lines, 7336 chars</p>
+<p>🔧 Bash: sed -n '1,200p' notes/theme.md <span class="redacted">unpublished</span></p>
+<p>✅ 200 lines, 10971 chars</p>
+<p>🔧 Bash: sed -n '55,115p' notes/canon/world/farm-teaching.md; echo ====; grep -n "compost course\|…</p>
+<p>✅ 63 lines, 3520 chars</p>
+<p>🔧 Bash: tail -60 notes/canon/characters/sorrel.md; echo =====; grep -n "Ruled\|RULED" notes/canon…</p>
+<p>✅ 62 lines, 3838 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>## Findings</p>
+<p>**Part 1**</p>
+<p>1. **"The course was on the compost cantrip, with the keeping charm and the rest still to come."** — Part 1, dependents-of-every-edit; also Part 3, chronology-of-institutions. This replaced ch. <span class="redacted">redacted sentence: unpublished prose</span> (a) The next sentence, "The autumn course, pruning and frost-sense, started a month after that", now hangs off a "that" with no date attached — the six-week span was what made "a month after" mean anything. <span class="redacted">redacted sentence: unpublished prose</span> So the clause both contradicts canon and contradicts the sentence after it. <span class="redacted">redacted sentence: unpublished prose</span> Sorrel would take it through to the end…"* (keeps the 2026-08-29 ruling that there is no "compost course" while restoring the anchor; drop "the keeping charm and the rest" entirely).</p>
+<p>2. **"I'll eat pears off those trees for a good while, and they'll outlast me."** — Part 1, the flat restatement is empty, and the fact does not check. `theme.md` bans ch. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Replacement: *"I'll eat pears off those trees for fifty years, if I'm let, and they'll be here after that either way."* The number is the ordinary-truth beat; "if I'm let" is the part that cannot be read as a guarantee.</p>
+<p>3. **"they won't hit their stride till you're my— till they're twenty."** — Part 1, an interrupted line with no plausible completion. In ch. 006 the swerve pointed forward into the age exchange that followed it, which is now cut; standing alone the reader cannot finish "till you're my—". <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>4. **"Sorrel wrote *plant regardless* in her fast hand, and said nothing to the rest of it"** — Part 1, pronoun with no clear antecedent, and Part 2's gesture family. "The rest of it" is patch text covering the removed exchange; flat-restated it says only "there was more and she let it go." Replacement: cut "and said nothing to the rest of it" (the beat is already carried by her writing and moving on), or name it — *"and did not take up the pears."*</p>
+<p>5. <span class="redacted">redacted sentence: unpublished prose</span> Convene. Get both of them to the ford itself… It takes about an hour."** — Part 1, an inference that does not hold inside the scene. He states the thing cannot be written down and then dictates it, in order, with a duration, to a woman who is writing it down. This passed unremarked in ch. 006, but scene 20 has since made the ford the *named cost* of leaving ("nobody can do but me… there's no writing it down"), so the contradiction is now load-bearing rather than incidental. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>6. **Scene opening: "The letter to Wystow got written after supper."** — Part 1, a paragraph that starts somewhere the previous one did not leave it. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> The reader will ask when he decided. Replacement: one sentence before the letter, doing the reversal plainly — *"He had given the registers one more day and got the same answer out of them twice, which was as much as a week would have given him."*</p>
+<p>**Part 5**</p>
+<p>7. <span class="redacted">redacted sentence: unpublished prose</span> At a scene's distance it reads as the draft repeating itself rather than the character. Replacement: *"Fenholt's two days away, not twenty. Whatever's in that field will keep for the time it takes me to walk back."*</p>
+<p>8. **The last third gives Sorrel no line.** — Part 5, a device half-removed. Cutting *"You've a hundred years yet"* and *"You'll manage"* was correct under the `theme.md` ruling, but nothing replaced them, and Sorrel's last four beats are "did not look up", "held it up with an eyebrow", "in her fast hand", "said nothing". <span class="redacted">redacted sentence: unpublished prose</span> The mortality beat needs an answer from her that is not insurance. Replacement, after the pears: *"'I'll want the tree man's name, then,' said Sorrel, to the correspondence. 'In case I'm the one taking delivery.'"* — she meets the mortality claim by planning around it, which is her mode and not comfort.</p>
+<p>---</p>
+<p>**The device a second round would be about:** the pear order as the scene's mortality beat. <span class="redacted">redacted sentence: Edwin's death/mortality</span></p>
+<p>**What it would take:** put a real span on it and let Sorrel answer it in practical terms — the trees planned for, the delivery planned around him — so the mortality is in what they *do* about the order, not in a clause he lets fall; or cut the mortality out of the pears entirely and let the order be an order, and seed the mortality where Sorrel has something to write down.</p>
+</div>
+</body></html>

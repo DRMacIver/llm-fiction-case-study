@@ -1,0 +1,67 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a29a7098e81151b3e">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="dialogue", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/01-pellings-half-past-twelve-soft.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you hunt for prose faults. Let me start by reading the rules file and the scene.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/scenes/01-pellings-half-past-twelve-soft.md</p>
+<p>✅ 40 lines, 4175 chars</p>
+<p>✅ 1216 lines, 49319 chars</p>
+
+<div class="assistant-prose">
+<p>Let me continue reading the rules file to find semantic dialogue rules:</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1070 lines, 57859 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me analyze the scene against the semantic dialogue rules. First, let me identify the relevant rules from the JSON:</p>
+</div>
+
+<p>🔧 Bash: python3 &lt;&lt; 'EOF' import json  with open('tools/lint/rules.json', 'r') as f:     rules = j…</p>
+<p>✅ 12 lines, 296 chars — Semantic dialogue rules for scenes: /   - lossy-conversation-budget /   - short-mode-requirement</p>
+
+<div class="assistant-prose">
+<p>Now let me examine the dialogue in the scene against each rule:</p>
+</div>
+
+<p>🔧 Bash: cat &gt; /tmp/check_dialogue.md &lt;&lt; 'EOF' Checking dialogue rules against scene 01:  1. lossy…</p>
+<p>✅ 41 lines, 2040 chars</p>
+
+<div class="assistant-prose">
+<p>Based on my analysis of the scene against all 11 semantic dialogue rules for scenes, I find that the dialogue in "01 — Pellings, half past twelve, soft" follows all the rules correctly:</p>
+<p>- The greeting-to-question exchange demonstrates appropriate lossiness<br>
+- Both speakers have lines under 6 words<br>
+- All exchanges are clear and understandable<br>
+- Maxim-capped speech is within budget (1 per scene)<br>
+- Characters show distinct dialogue competence (Edwin witty, Peri earnest)<br>
+- Every line serves a purpose with a clear want<br>
+- Questions are answered directly<br>
+- Speaker grammar is distinctly different (Edwin's balanced ledger-shaped sentences vs. Peri's formal style)<br>
+- No reflexive echoes or mirror retorts<br>
+- Peri doesn't reason out conclusions too quickly—she delivers a rehearsed proclamation</p>
+<p>The scene demonstrates solid dialogue craft with no violations of the selected rules.</p>
+</div>
+
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

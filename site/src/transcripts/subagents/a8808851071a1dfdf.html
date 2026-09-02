@@ -1,0 +1,63 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are a prose-fault hunter. Read &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;/tools/lint/rul…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a8808851071a1dfdf">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are a prose-fault hunter. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json (a JSON array of rules). Select ONLY rules where tier=="semantic", lens=="narration", and scope includes "scene". SKIP rule "contamination-overlap" entirely (it is tooled elsewhere). Then read <span class="redacted">redacted: private</span>/draft/book-01/scenes/03-until-fulfilled.md in full. Hunt for violations of the selected rules. Study each rule's description, why, examples, and counter_examples; counter_examples must NOT be flagged. CRITICAL: before flagging any candidate, re-read one full sentence BEFORE and AFTER the quote — if the neighbouring sentence supplies the missing cause/implication/qualifier, or shows a number is a duration rather than an age, do not flag. Report candidates generously beyond that bar — a judge filters later. Every candidate needs an exact verbatim quote from the file, the rule_id, and a one-line reason. Never rewrite the text. If nothing, return an empty findings list.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll help you find prose-fault violations in the scene file. Let me start by reading the rules and the scene.</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>🔧 Read draft/book-01/scenes/03-until-fulfilled.md</p>
+<p>✅ 50 lines, 4534 chars</p>
+<p>✅ 1216 lines, 49319 chars</p>
+
+<div class="assistant-prose">
+<p>Let me read the rest of the rules file to find all semantic narration rules:</p>
+</div>
+
+<p>🔧 Read tools/lint/rules.json</p>
+<p>✅ 1071 lines, 57866 chars</p>
+
+<div class="assistant-prose">
+<p>I'll now systematically check the scene against the selected rules.</p>
+</div>
+
+<p>🔧 Bash: python3 -c " import json  with open('tools/lint/rules.json', 'r') as f:     rules = json.…</p>
+<p>✅ 12 lines, 236 chars</p>
+
+<div class="assistant-prose">
+<p>Now I'll check the scene against each rule, being careful to read one sentence before and after each potential violation.</p>
+<p>Let me examine the key potential violations:</p>
+<p>**1. motive-off-page** - Line 35<br>
+Looking at the context:</p>
+<p>Line 33: "The Weave sent me here." Whiter, and her chin up, and not moving an inch. "I'm sorry about the sheep. I'm not sorry about the rest, because the world needs saving, and it's you, and I'd rather have you angry than have the world end. Also I did try asking first."</p>
+<p>**Line 35: "He picked up both cups, hers not finished, and put them by the sink."**</p>
+<p>Line 37: "You did not try asking. You announced."</p>
+<p>This action—picking up cups during an emotional exchange—is deliberate but lacks a stated motive. The surrounding sentences don't clarify why he does this at this moment. No because-clause, no explanation of whether he's deflecting, grounding himself, or dismissing her.</p>
+<p>The next mention of cups is line 41 ("He put the kettle back on"), which might suggest tea-making, but the rule requires the motive "at the time."</p>
+<p>**2. prose-not-at-rest** - Checking for three consecutive plain reporting sentences:<br>
+Lines 14-15: "He was three hundred and fifty years old and held more mana than anyone living. Neither was any use." (Plain, but line 13 is shaped.) The scene has good balance between shaped and plain sentences overall. No violation.</p>
+<p>**3. nominalised-absence** - Line 41:<br>
+"The knot behind his breastbone sat there and did nothing."<br>
+The knot is established as a physical sensation earlier. "Did nothing" conveys inertness rather than nominalizing an absence as subject. Borderline, but "the knot" is a concrete sensation, not a nominalised absence like "the not-saying." No clear violation.</p>
+<p>**4. Other rules** (generalising-clause-budget, windup-tag-budget, wants-gerund-budget, unlocated-narration, viewpoint-overreach, description-list, rest-register-misplaced, unearned-authority, likeability-drift): No violations found.</p>
+</div>
+
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>

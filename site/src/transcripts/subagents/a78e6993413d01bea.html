@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the editing subagent for the third draft of Book 1 of the nov…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a78e6993413d01bea">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
+<br>
+Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/17-lid-up-the-whole-way.md, read after scenes 01–16 in the same directory (they bind what is on the page — including scene 16's letter and the cleared bench, scene 04's class and Dob's wall being in the village, and the parcel on the dresser). <span class="redacted">redacted sentence: unpublished prose</span> Also chapters/005-the-sample.md — the groundwork this restages, which the author rates good and which drew no comments from him.<br>
+<br>
+Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required context.</p>
+</div>
+
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>✅ 319 lines, 20190 chars</p>
+<p>🔧 Read draft/book-01/scenes/17-lid-up-the-whole-way.md</p>
+<p>✅ 44 lines, 6934 chars</p>
+
+<div class="assistant-prose">
+<p>I'll read the prior scenes, canon, and groundwork chapter.</p>
+</div>
+
+<details><summary>20 tool calls</summary>
+<p>🔧 Bash: cat CLAUDE.md &gt; /dev/null; ls draft/book-01/scenes/ &amp;&amp; echo "=====" &amp;&amp; cat draft/book-01/…</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 212 lines, 20779 chars</p>
+<p>✅ 44 lines, 2243 chars</p>
+<p>🔧 Bash: cat notes/canon/world/silent-soil.md &amp;&amp; echo "===MAGIC SOIL SECTIONS===" &amp;&amp; grep -n -i -A…</p>
+<p>✅ 43 lines, 2189 chars</p>
+<p>🔧 Bash: cat chapters/005-the-sample.md &amp;&amp; echo "===SORREL===" &amp;&amp; cat notes/canon/characters/sorre…</p>
+<p>✅ 20 lines, 2045 chars</p>
+<p>🔧 Bash: sed -n '1,80p' chapters/005-the-sample.md</p>
+<p>✅ 79 lines, 11150 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/04-four-minutes.md</p>
+<p>✅ 37 lines, 4063 chars</p>
+<p>🔧 Bash: grep -rn "Monday\|Tuesday\|Wednesday\|Thursday\|Friday\|Saturday\|Sunday\|first day\|seco…</p>
+<p>✅ 4 lines, 2097 chars</p>
+<p>🔧 Bash: sed -n '1,120p' notes/canon/characters/edwin.md &amp;&amp; echo "=====MINOR=====" &amp;&amp; grep -n -i -…</p>
+<p>✅ 188 lines, 10925 chars</p>
+<p>🔧 Bash: grep -n -A12 "Gentlemen" chapters/004*.md; echo "---"; ls chapters | head -8</p>
+<p>✅ 34 lines, 4354 chars</p>
+<p>🔧 Bash: sed -n '1,40p' chapters/005-the-sample.md &gt; /tmp/a.txt &amp;&amp; diff &lt;(fold -s -w1 /dev/null) /…</p>
+<p>✅ 63 lines, 5507 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Report on `draft/book-01/scenes/17-lid-up-the-whole-way.md`.</p>
+<p>**1.** *"the weight right, and the smell of the mineral of it and nothing over the top of that."* — Part 1 (a word doing a job it cannot do; explanation stops halfway) and Part 2 (gesture at meaning). Two flat restatements are available and I cannot choose: either "it smelled of plain earth, as it should" or "it lacked the smell life puts over the top of earth" — and the second contradicts the sentence it sits in, which claims the block is "soil in health by everything a hand could tell". "the mineral of it" and "over the top of that" are both doing work the reader cannot cash. This is new against ch. 005, which had the plain form. Replacement: restore *"the smell right, the weight right."*</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Two sentences earlier: *"roots fine as hair and white as they should be"*. In ch. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> was the whole point — it was the new claim (he cannot tell whether they live). Cutting the <span class="redacted">redacted: character</span> leaves a sentence that only repeats the earlier one. Replacement: *"The roots were alive, or at least where roots should be and white."*</p>
+<p>**3.** *"and taught the cantrip herself with every wrist soft"* — Part 1 (a reference with no clear antecedent). "The cantrip" has no antecedent in this scene; the last cantrip named on the page is in scene 04, thirteen scenes back. Ch. 005 said "the compost revision", which named it. Replacement: *"and taught the compost cantrip herself"*.</p>
+<p>**4.** *"Late (4 min) Monday."* — Part 3 (would this exist; and what the record would actually say) and Part 1 (dependent of an edit). Nothing anywhere in the draft names a day of the week; the scene has also dropped ch. 005's "on the sixth day", so "Monday" is now the only calendar in the scene and it arrives from a system the book has not established. It is also doing the same job as the next clause, *"four minutes that the week's precedent had taught them to allow"*, which already dates it. Replacement: *"Late (4 min) this week."* — or cut the third sentence of the chalk entirely and let "the week's precedent" carry it.</p>
+<p>**5.** *"a box that answered, item for item, a letter still in a post sack"* — Part 1 (check every count). The letter he sent in scene 16 asks for five things: the sample to spec, boxed as the field office knows how, the plot registers for five years, **the names of who cast the revealings and in what order**, and carriage by hired rider at his charge. The box answers four. The names are not in it; the College's letter says only "with the plot registers for five years copied in the bottom". "Item for item" is therefore false, and this is the sentence in the scene most likely to be counted. Fix at the source, in the College's letter: after *"with the plot registers for five years copied in the bottom"*, add *"and the names of the four of us who cast, in the order we cast in."* (Inherited from ch. 005, but scene 16's letter is new and is what makes the count checkable.)</p>
+<p>**6.** *"The rider came up the hill at twenty past eight in the morning, and by every count Edwin could make that was too early."* — Part 6 (weak where it should be strong). The verdict is the beat, and merging it into a trailing clause buries it behind the clock. Ch. 005's two-sentence form lands it. Replacement: *"The rider came up the hill at twenty past eight in the morning. By every count Edwin could make, that was too early."*</p>
+<p>Second-round device: Dob's wall. It is now carrying a second *"First in 11 yrs"* immediately after the Day 1 entry that already said those exact words, plus a date-stamp the book has no calendar for — so the chalk reads as if Dob wrote the same superlative twice about two different things. Making it work means the entry either references the earlier line rather than repeating it (*"Goodman Moss missed the ten o'clock entire. Worse than Monday."*) or drops the second superlative and keeps only the miss; removing it means letting the farmwives' four-plus-six minutes carry the village's verdict alone, which they already do.</p>
+</div>
+</body></html>

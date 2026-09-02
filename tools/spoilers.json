@@ -668,6 +668,142 @@
       "category": "mechanic",
       "scope": "beyond-book1",
       "why": "Peri's class advancement in Book 4, tied to the healing arc."
+    },
+    {
+      "term": "/Users/drmaciver/Projects/autoroad",
+      "variants": [],
+      "category": "private",
+      "scope": "n/a",
+      "why": "Local absolute filesystem path to the novel repo; reveals machine/user detail and repo location, never the site's business to show."
+    },
+    {
+      "term": "hundred years left",
+      "variants": [
+        "about a hundred years left"
+      ],
+      "category": "character",
+      "scope": "ending",
+      "why": "Explicit statement of Edwin's remaining lifespan; direct mortality spoiler."
+    },
+    {
+      "term": "eleven years of the fill-in method",
+      "variants": [],
+      "category": "plot",
+      "scope": "book1",
+      "why": "Reveals Sorrel/Peri succession-tension backstory (Sorrel's years of unrewarded service) ahead of publication."
+    },
+    {
+      "term": "the conclusion of the series should be his death and successful passing on of the torch",
+      "variants": [
+        "conclusion of the series should be his death"
+      ],
+      "category": "plot",
+      "scope": "ending",
+      "why": "States the series' ending outright (Edwin's death, torch passed on) without using the word Edwin/mortality, so the death topic regex doesn't catch it."
+    },
+    {
+      "term": "five jobs that want roughly a book each",
+      "variants": [],
+      "category": "plot",
+      "scope": "ending",
+      "why": "Series-structure outline (five-book job breakdown ending in 'and the death') from planning notes."
+    },
+    {
+      "term": "walked into two thousand villages",
+      "variants": [],
+      "category": "plot",
+      "scope": "book1",
+      "why": "Unpublished detail about the scale of Edwin's travels, cited in a consistency-audit finding."
+    },
+    {
+      "term": "mortality as ordinary truth",
+      "variants": [
+        "mortality-as-ordinary-truth"
+      ],
+      "category": "theme",
+      "scope": "ending",
+      "why": "Named statement of the series' thematic mortality constraint, doesn't contain a death/mortality-topic trigger word paired with Edwin."
+    },
+    {
+      "term": "has healed nothing in thirty-one chapters",
+      "variants": [
+        "has none and never did"
+      ],
+      "category": "plot",
+      "scope": "book1",
+      "why": "Reveals an unpublished mechanic detail about Ferrin (no healing magic) from craft-discussion commentary."
+    },
+    {
+      "term": "family Millbrook",
+      "variants": [],
+      "category": "character",
+      "scope": "beyond-book1",
+      "why": "Additional word-order variant of the existing Kelder Millbrook family-background term."
+    },
+    {
+      "term": "He won, on beasts.",
+      "variants": [],
+      "category": "plot",
+      "scope": "book1",
+      "why": "Standalone unpublished plot-outcome fragment (a wager/contest result), sandwiched between prose-guard redactions in the same passage as the Ferrin healing-void leak."
+    },
+    {
+      "term": "Peri speaks once across all three samples",
+      "variants": [
+        "Peri speaks once across all three scenes"
+      ],
+      "category": "plot",
+      "scope": "book1",
+      "why": "Reveals a specific unpublished-scene finding about Peri's dialogue frequency in a multi-voice drafting experiment."
+    },
+    {
+      "term": "the scoreboard is a physical object in a yard",
+      "variants": [],
+      "category": "plot",
+      "scope": "book1",
+      "why": "Describes an unpublished scene mechanism (Peri's yard scoreboard) from craft-discussion commentary."
+    },
+    {
+      "term": "The grey book had been open on Peri's knee since eight",
+      "variants": [],
+      "category": "prose",
+      "scope": "book1",
+      "why": "Verbatim unpublished prose describing an unpublished scene (Peri's ledger book)."
+    },
+    {
+      "term": "Peri wrote it all down.",
+      "variants": [],
+      "category": "prose",
+      "scope": "book1",
+      "why": "Verbatim unpublished prose fragment, adjacent to the grey-book scene leak."
+    },
+    {
+      "term": "she's furniture in that sentence",
+      "variants": [],
+      "category": "plot",
+      "scope": "book1",
+      "why": "Reveals a specific unpublished-scene craft finding about how Peri is (mis)written in a draft passage."
+    },
+    {
+      "term": "makes Edwin's life's work the thing that kills him",
+      "variants": [],
+      "category": "plot",
+      "scope": "ending",
+      "why": "Discusses a considered (even if ultimately rejected) mechanism for Edwin's death while planning the ending."
+    },
+    {
+      "term": "120 planted observables",
+      "variants": [],
+      "category": "plot",
+      "scope": "ending",
+      "why": "Reveals the scale/structure of a sealed mystery-answer consistency check across the whole series."
+    },
+    {
+      "term": "reconciled against all 140 scenes",
+      "variants": [],
+      "category": "plot",
+      "scope": "ending",
+      "why": "Reveals the total planned scene count for the series, a structural spoiler."
     }
   ],
   "topic_regexes": [
@@ -681,11 +817,15 @@
     },
     {
       "topic": "medicine/disease",
-      "pattern": "\\b(physician|disease|medical|medicine(?!\\s+cabinet)|doctor)\\b"
+      "pattern": "\\b(physician|disease|medical|medicine(?!\\s+cabinet))\\b"
     },
     {
       "topic": "handover/succession",
-      "pattern": "\\b(handover|hands?\\s+over\\s+(his|the)\\s+work|succession\\s+(conflict|to\\s+peri))\\b"
+      "pattern": "\\b(hand(s|ing)?\\s+over\\s+(his|the|it)\\s+work|hand(s|ing)?\\s+(over\\s+)?(the\\s+)?next\\s+phase|succession\\s+(conflict|to\\s+peri)|handover\\s+shape|peri'?s\\s+reckoning)\\b"
+    },
+    {
+      "topic": "series structure (Arc/Book numbering)",
+      "pattern": "\\b(Arc\\s*[0-9]|Book\\s*(2|3|two|three)\\b|Book\\s*[0-9]'s)"
     }
   ],
   "unpublished_path_rules": {

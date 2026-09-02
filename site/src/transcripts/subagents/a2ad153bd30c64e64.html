@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-a2ad153bd30c64e64">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the judge in a prose-lint pipeline for <span class="redacted">redacted: private</span>.<br>
+Target file: the .md file in draft/book-01/scenes/ whose name starts with 17-. Read it in full. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br>
+Candidates from haiku hunters (be sceptical; they over-report by design):<br>
+[<br>
+ {<br>
+  "rule_id": "announce-before-deliver",<br>
+  "quote": "Silence. Not dead soil. Dead soil he knew; you met it in the spoil a well throws up, in salt pan, in the burnt ground where a charcoal stack had stood too many years, and it was a poor thin nothing.",<br>
+  "reason": "Bare naming fragment 'Silence.' placed before explanation that clarifies but does not perform/deliver the announced silence; the drumroll is not paid off by a strong enough sentence that stands alone."<br>
+ },<br>
+ {<br>
+  "rule_id": "viewpoint-overreach",<br>
+  "quote": "One signature this time, from a man alone at a desk at night, signing what four men in a doorway would not.",<br>
+  "reason": "Edwin sees one signature but cannot know it was written 'at night'; no evidence in the letter establishes when it was written."<br>
+ },<br>
+ {<br>
+  "rule_id": "unlocated-narration",<br>
+  "quote": "The farmwives waited in the class garden through four minutes that the week's precedent had taught them to allow, and then through six more that they allowed on their own judgment, and then Mrs Tansy went and found Sorrel, and Sorrel came out and looked up once at the study window, where nothing could be seen but a man's back, and taught the compost cantrip herself with every wrist soft, Miss Millbrook's included, and did not hurry the biscuits.",<br>
+  "reason": "Reports detailed knowledge of events Edwin did not witness (farmwives' internal judgments, Sorrel's actions in the class) without indicating how Edwin came to know them; no named knowledge route provided."<br>
+ },<br>
+ {<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "The rider came up the hill at twenty past eight in the morning. By every count Edwin could make, that was too early.",<br>
+  "reason": "Scene contains 15 overlapping 8+ word runs with deleted draft chapters/005-the-sample.md; exceeds &gt;=5 threshold requiring redraft per rule."<br>
+ }<br>
+]<br>
+For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.<br>
+<br>
+Judge hints: phrases like "you learn", "says you should", "there is only one answer" often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; "wants [gerund]" retired; "nought" retired, write "zero"); "'ll not" in non-first person is a judgement call, not a ban; "[amount] of it" and "I'll say it" are warning signs needing judgement.<br>
+You may add violations the hunters missed as judge_added {rule_id, quote, reason}. Never rewrite the text.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll read the target file and rules.</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | head -30</p>
+<p>✅ 30 lines, 772 chars</p>
+<p>🔧 Bash: wc -c <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>✅ 1 lines, 65 chars —   111146 <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/scenes/17-lid-up-the-whole-way.md</p>
+<p>✅ 43 lines, 6898 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('tools/lint/rules.json')) def find(o,ids,path='…</p>
+<p>✅ 82 lines, 4098 chars</p>
+<p>🔧 Bash: python3 tools/overlap_check.py draft/book-01/scenes/17-lid-up-the-whole-way.md 2&gt;&amp;1 | hea…</p>
+<p>✅ 16 lines, 6789 chars</p>
+<p>🔧 Bash: python3 -c " import json;d=json.load(open('tools/lint/rules.json')) def w(o):     if isin…</p>
+<p>✅ 110 lines, 5720 chars</p>
+<p>🔧 Bash: python3 -c " import json;d=json.load(open('tools/lint/rules.json')) ids={'aphorism-budget…</p>
+<p>✅ 71 lines, 2767 chars</p>
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the judge in a prose-lint pipeline for &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. T…</h1><div class="subagent-header"><a href="../d1679987-c781-4167-82f2-4fb2b67962c1.html#agent-abed5362247d56ddb">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the judge in a prose-lint pipeline for <span class="redacted">redacted: private</span>.<br>
+Target file: the .md file in draft/book-01/scenes/ whose name starts with 05-. Read it in full. Read <span class="redacted">redacted: private</span>/tools/lint/rules.json for the rule definitions (including counter_examples - a candidate matching a counter_example is FALSE-POSITIVE).<br>
+Candidates from haiku hunters (be sceptical; they over-report by design):<br>
+[<br>
+ {<br>
+  "rule_id": "obliqueness-unpaid",<br>
+  "quote": "\"Hm,\" said Sorrel, and went down.",<br>
+  "reason": "Sorrel's response is oblique/ambiguous (insinuating approval or concern without stating it), followed by her exit. Edwin doesn't clarify the meaning, doesn't visibly understand, and the evasion isn't treated as a point. The line goes unanswered before a stage direction and topic change to Edwin's solitude."<br>
+ },<br>
+ {<br>
+  "rule_id": "sense",<br>
+  "quote": "roots that are watered late are only late",<br>
+  "reason": "Uses 'late' as both adverb and predicate adjective; 'only late' requires rereading to parse as '[only delayed, not ruined]' — the compression doesn't survive flat restatement without inferring the contrast with 'lost'"<br>
+ },<br>
+ {<br>
+  "rule_id": "contamination-overlap",<br>
+  "quote": "The scene contains 19 overlapping runs of 8+ words matching deleted chapters/002, chapters/001, and other rejected drafts (per tools/overlap_check.py)",<br>
+  "reason": "Prose copied from groundwork chapters during description additions on 2026-08-30; exceeds the &gt;=5 threshold requiring fresh redraft with source shut"<br>
+ }<br>
+]<br>
+For each candidate rule CONFIRMED / FALSE-POSITIVE / BORDERLINE with a one-line reason. Read one sentence either side of every quote before ruling. Budget rules (aphorism, maxim caps): if over budget, nominate the KEEPER - the most particular, least portable instance - in keeper_note.<br>
+<br>
+Judge hints: phrases like "you learn", "says you should", "there is only one answer" often mark implication-withheld violations. Recent rulings you must enforce: dialect is off (plain modern English; "wants [gerund]" retired; "nought" retired, write "zero"); "'ll not" in non-first person is a judgement call, not a ban; "[amount] of it" and "I'll say it" are warning signs needing judgement.<br>
+You may add violations the hunters missed as judge_added {rule_id, quote, reason}. Never rewrite the text.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll read the target file and rules.</p>
+</div>
+
+<details><summary>12 tool calls</summary>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | head -20</p>
+<p>✅ 20 lines, 511 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/tools/lint/rules.json</p>
+<p>✅ 54 lines, 2247 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span>/draft/book-01/scenes/05-in-some-sort-of-order.md; echo ====; pyth…</p>
+<p>✅ 77 lines, 4696 chars</p>
+<p>🔧 Bash: python3 -c " import json rs=json.load(open('tools/lint/rules.json')) for r in rs:     if…</p>
+<p>✅ 39 lines, 4703 chars</p>
+<p>🔧 Bash: python3 tools/overlap_check.py draft/book-01/scenes/05-in-some-sort-of-order.md 2&gt;&amp;1 | he…</p>
+<p>✅ 20 lines, 2691 chars</p>
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>

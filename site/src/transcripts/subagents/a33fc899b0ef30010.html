@@ -1,0 +1,163 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the copy-editor for the third draft of Book 1 of the novel at…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the copy-editor for the third draft of Book 1 of the novel at…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a33fc899b0ef30010">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the copy-editor for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
+<br>
+Your material: draft/book-01/scenes/01-pellings-half-past-twelve-soft.md and draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md, read as one continuous span. These are drafted by the main session and read by the author scene by scene; the author has been doing a lot of copy-editing himself and has asked for an editing pass before he sees each scene. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> Also read chapters/001-the-wrong-man.md — the groundwork chapter these scenes restage; the author liked its Edwin/Peri dialogue and called it one of the few places Peri was voiced well.<br>
+<br>
+Report FINDINGS ONLY, line by line, each with the quote, what is wrong, and a proposed replacement where one is obvious. Look hardest for: sentences that sound like meaning and don't parse when said flat; lines that sound clever without a proposition underneath; a construction in the wrong mouth (Edwin's balanced two-halves or trailing-because warrant in Peri's; Peri's false-start dash or disbelief-repetition in Edwin's; the bare imperative; Peri over her two-"and"s-per-speech cap); anything a listener in the room would be confused by (does each line answer the line before it, or the want behind it?); continuity inside the two scenes (objects, hands, who has said what); the em-dash budget (~2 per 1,000 words); narrator aphorisms (max one per scene); figures of speech that are transplantable rather than grown from the scene; banned constructions from llm-tells.md; any sentence in the last two lines of a scene doing cleverness. Also say, in two lines, whether the dialogue reads as two people having a conversation or as two people saying things at each other, and where it tips.<br>
+<br>
+Do not edit any file. Do not commit. Your final message is the full report.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required context.</p>
+</div>
+
+<details><summary>28 tool calls</summary>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 13 lines, 511 chars —      706 draft/book-01/scenes/01-pellings-half-past-twelve-soft.md /     1578 draft/book-01/scenes/02-a-war-horse-on-a-milk-cart.md /      655 notes/reader-notes-rewrite.md</p>
+<p>🔧 Bash: cat CLAUDE.md &gt; /dev/null; echo "=== SCENE 1 ==="; cat -n draft/book-01/scenes/01-pelling…</p>
+<p>✅ 126 lines, 12689 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat notes/reader-notes-rewrite.md; echo "=====LLMTELLS"; cat note…</p>
+<p>✅ 401 lines, 23630 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '/^#* *4\./,/^#* *5\./p' notes/reader-notes-book-1.md | he…</p>
+<p>✅ 226 lines, 15027 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat notes/voices.md</p>
+<p>✅ 44 lines, 2191 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '/Dialogue rules/,$p' notes/voices.md | head -250</p>
+<p>✅ 249 lines, 14941 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '/Voice — binding/,/^## /p' notes/canon/characters/edwin.m…</p>
+<p>✅ 38 lines, 2236 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; awk '/Voice — binding/,0' notes/canon/characters/edwin.md | sed -…</p>
+<p>✅ 200 lines, 12432 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; awk '/Voice — binding/,0' notes/canon/characters/edwin.md | sed -…</p>
+<p>✅ 201 lines, 11969 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; awk '/^## Voice — binding/,/^## [^V]/' notes/canon/characters/per…</p>
+<p>✅ 250 lines, 15585 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; awk '/^## Voice — binding/,/^## [^V]/' notes/canon/characters/per…</p>
+<p>✅ 171 lines, 10541 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat chapters/001-the-wrong-man.md</p>
+<p>✅ 171 lines, 16422 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,140p' notes/voice-fusion-draft.md</p>
+<p>✅ 139 lines, 7667 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat draft/book-01/scenes/01*.md draft/book-01/scenes/02*.md &gt; /tm…</p>
+<p>✅ 12 lines, 130 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>I've read all the specified material. Findings below.</p>
+<p>---</p>
+<p># EDITING REPORT — scenes 01 and 02, read as one span</p>
+<p>**Mechanical counts (2,284 words):** em-dashes 3, of which 2 are the two title headers — **one em-dash in the actual prose** (Edwin's interruption at 02 L85). Under budget, but see F14. "the whole of" ×2 (watch-list). "honest" ×1, the exact retired phrase. "half past" ×3 in 2,284 words.</p>
+<p>---</p>
+<p>## PASS 1 — SENSE (a hostile literal reader)</p>
+<p>**F1. 02 L17 — "something worn close over the whole person, and moving, slowly, like light on water that is not itself moving."**<br>
+Does not survive being said flat. "Moving… like light on water that is not itself moving" — the relative clause's antecedent is ambiguous (light or water?), and either reading contradicts the main clause. Two flat versions, cannot choose: llm-tells' test says cut, don't repair the phrasing.<br>
+→ *"something worn close over her, moving slowly, the way light moves on still water."*</p>
+<p>**F2. 02 L83 — "and he knew the shape of it: the argument that had gone wrong at the root."**<br>
+Direct hit on the family DRMacIver banned by name two days ago ("You use phrases like 'the whole shape of it' a lot and it's a weird phrase that means very little and I don't like it"). <span class="redacted">redacted sentence: unpublished prose</span><br>
+→ *"and he knew where it had gone wrong. It had gone wrong at the root."*</p>
+<p>**F3. 02 L77 — "I have helped some parishes, one at a time, which is a different size of thing"**<br>
+Same family: "a different size of thing" gestures at weight and names nothing. Also an evaluative trailing "which" clause (zero budget) inside quotation marks.<br>
+→ *"I have helped some parishes, one at a time. Saving the world doesn't describe anything I've done."* (<span class="redacted">redacted: place</span> also removes one of the speech's three "and"-joined halves.)</p>
+<p>**F4. 02 L39/43/47 — the loaf, "what the loaf was for."**<br>
+"I don't know what the loaf was for" and "He knew what the loaf was for" do not parse: the loaf is an image in a vision, and images are not *for* things. She means she can't read it; he means he knows who the woman is. <span class="redacted">redacted sentence: unpublished prose</span> In ch. 001 the antecedent was "most lives saved," a quantity, and the sentence worked. Here the reference chain is broken.<br>
+→ Peri: *"I can't make the loaf fit. I've had it three days."* (drop "I don't know what the loaf was for" — the next sentence already says it). Edwin: *"He knew who the woman with the loaf was. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**F5. 02 L39 — "One thing a day from the Weave, everything else from anybody who'd stand still, and put them together."**<br>
+"and put them together" hangs off no subject and no verb it can share. The reader re-reads.<br>
+→ *"One thing a day from the Weave, everything else from anybody who'd stand still. Then you put them together."*</p>
+<p>**F6. 02 L39 — "A man writing in a book, with the window on his left." She looked at the window, which was on his left.**<br>
+<span class="redacted">redacted sentence: unpublished prose</span> **They are in the kitchen.** The man-writing-in-a-book image is the *study* (scene 01: "in plain view of the study window", "three columns into arranging it"). The kitchen window being also on his left is coincidence, and nothing in the scene has established which way he is facing at the table. Worse: she names three images — hill, **beans in jars**, man at a window — and the kitchen inventory at 02 L3 (herbs, dresser, catalogues, sampler) contains no beans in jars, so two of her three confirmations go unpaid on the page.<br>
+→ Either put the beans in jars into L3's inventory and let *that* be what she looks at (self-verifying, in the right room, and funnier), or cut the "she looked at the window" beat.</p>
+<p>**F7. 02 L3 — "A dresser of crockery that did not match, because thirty years of parishes had each sent a piece."**<br>
+Two problems. (a) Agreement: "thirty years… had each sent a piece" — years cannot each send a piece. (b) Continuity inside the same scene: L61 has him working for "three hundred years" and L17 "three hundred and fifty years". Thirty years of parish gifts contradicts the man the scene is establishing.<br>
+→ *"A dresser of crockery, no two pieces alike, because parishes send things."*</p>
+<p>**F8. 02 L3 — "Seed catalogues in a stack going back further than she had been alive."**<br>
+Doesn't parse ("further than she had been alive"). ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
+→ *"A stack of seed catalogues older than she was."*</p>
+<p>**F9. 02 L59/79/81 — cup vs mug.** "She had the grace to look at her cup" (L59), then "her mug in both hands" (L79), "She set the mug down" (L81). Same vessel, two names, twenty lines apart. Pick one; the exact continuity class DRMacIver flagged in the ch. 001/002 margins.</p>
+<p>**F10. 02 L11 — "He gave her three, and found he had counted them."**<br>
+<span class="redacted">redacted sentence: unpublished prose</span> Two faults: the register is stage-direction flat, so the beat arrives spent; and the proposition is thin — she *said* three, so counting them is what anyone does. If the intent is "he was already paying her more attention than he wanted to," that isn't in the sentence.<br>
+→ *"He gave her three, which was one more than he had meant to be paying attention."* — or cut the clause and let "He gave her three" stand plain.</p>
+<p>**F11. <span class="redacted">redacted sentence: unpublished prose</span><br>
+Jukebox test fails on the scene's own material: Edwin *is* the farmer, and reading skies is his literal paid job in the paragraph above. The comparison compares him to himself.<br>
+→ *"he read people without deciding to, and had done for three hundred years."* Or cut the tag.</p>
+<p>**F12. 01 L9 — "the only people who climbed the whole hill without slowing were the ones who had not yet found out that they could stop."**<br>
+Flat version is ambiguous between "they were allowed to pause for breath" and "they need not have climbed at all" — and the preceding list (post left at the bottom, parishes write, the class waits in the garden) supports the second, while "slowing / stop" supports the first. Two flat versions, cannot choose.<br>
+→ *"and the only people who came the whole way up were the ones who had not yet found out they did not have to."*</p>
+<p>**F13. 01 L7 — "Then he looked up, because the hill was still being climbed."**<br>
+Agentless passive on the scene's one event, plus a trailing-because. ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
+→ *"He looked up. Whoever it was had not stopped."*</p>
+<p>**F14. 02 L85 — Peri has no false start in 1,578 words of sustained pressure.** The prose contains exactly one em-dash and it is *Edwin's* interruption. <span class="redacted">redacted sentence: unpublished prose</span> This scene is pressure from the first line — every fact she offers gets demolished — and she never once starts a sentence wrong. Her reference voice in ch. 001 has it ("They always do, in the— they always do."). This is the largest single voice miss in the span.<br>
+→ Candidates: L43, at "The third time I got the wording right" (she is defending three failed attempts); L81, at "and that's what hiding looks like" (the point where she is furthest out on the limb).</p>
+<p>---</p>
+<p>## PASS 2 — VOICE</p>
+<p>### Construction ownership</p>
+<p>**F15. 02 L43 — Peri's Weave speech runs five "and"s.** "…and it showed me a woman with a bandage on her arm… and it showed me nothing at all… and it showed me the hill again, and before the hill a woman cutting a loaf…" Hard cap in `peri.md` 1 is **two "and"s per speech**. It is also 7a, the inventory pile joined by "and" — **<span class="redacted">redacted: character</span>'s construction**, banned for Peri by name, and the file records that she has historically out-Hallaed <span class="redacted">redacted: character</span> at exactly this.<br>
+→ Break the anaphoric chain and count instead (her own move): *"Two things, and I spent a long time on the wording. The second one took three goes. First I said* who can help me save the world*. It gave me a woman with a bandage on her arm. Then* who will fight beside me*. Nothing at all. The third time I had it right, and it gave me the hill — and before the hill, a woman cutting a loaf at a table with a great many children at it."*</p>
+<p>**F16. 02 L51 — four "and"s in one sentence.** "I asked at the post-house and the man said… and that you were the best there was at it, and when I said *archmage* he laughed. And in the village…" Same cap, same pile.<br>
+→ *"I asked at the post-house. The man said,* Moss? The farm mage*, and that you were the best there was at it. When I said* archmage *he laughed. In the village they said you teach a spell for compost."*</p>
+<p>**F17. <span class="redacted">redacted sentence: unpublished prose</span> 001). Density matters more than any single hit here.<br>
+→ "Next." → *"That's the range, and it's the same answer. What else was on his list?"* The two at L85 are inside a teaching run and are the most defensible; "Tell me about this class of yours" is inherited from ch. 001 and the author liked that scene — I'd leave it and fix "Next."</p>
+<p>**F18. 02 L39 — "It doesn't do names. It shows you things."** Negative parallelism (dialogue rule 3 puts the narration bans inside quotation marks), and structurally a balanced two-half with the verdict in the second, which is **Edwin's shape, banned for Peri** (7b).<br>
+→ *"It doesn't do names. It showed me three things."* (which is where the speech goes anyway).</p>
+<p>**F19. 02 L81 — "and that's what hiding looks like from the outside."** An evaluative clause grading her own evidence for the record — 7b again, Edwin's. Her version of the same move is the fact plus what she does with it.<br>
+→ *"and he laughed. Nobody laughs at a name that's true."*</p>
+<p>**F20. <span class="redacted">redacted sentence: unpublished prose</span> Its absence, plus F14, is why she is placeable in this scene only by who is holding the argument.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**F21. 02 L61 — "no reason to go empty"** and **02 L59 — "He said you'd the largest mana pool"**. <span class="redacted">redacted sentence: unpublished prose</span> She is quoting a man, but the words reach the page in her mouth.<br>
+→ *"no reason to run it down"* / *"He said you had the largest mana pool of anyone living."*</p>
+<p>### Retired and banned constructions</p>
+<p>**F22. 02 L43 — "She said this the way another girl might have said she had spent a long time on her hair."** The **"in the way/manner of a [person] who"** form, which `voices.md` language-rule 2 **retires outright**. Converts Peri into a sociological type at the moment the reader most needs her to be one girl.<br>
+→ *"She was proud of the wording and did not hide it."* Or cut; "I spent a long time on the wording" already carries it.</p>
+<p>**F23. <span class="redacted">redacted sentence: unpublished prose</span> Note the rewrite made this *worse* than ch. 001, which used second person ("the way you might report finding a war-horse hitched to a milk cart") and so read as narratorial aside rather than type-assignment.<br>
+→ Restore the ch. 001 phrasing, and cut F22.</p>
+<p>**F24. <span class="redacted">redacted sentence: unpublished prose</span><br>
+→ *"I have to hold all of it."* / *"and that's all I know about it."*</p>
+<p>**F25. 02 L45 — "He could not honestly say the Weave had got that one wrong."** "honest" is RETIRED as a narrator adjective; the literal sense is permitted *at most once per arc*, and this is the arc's second scene, so it is spent on line 45 of the book. It also isn't earning it — the sentence works without.<br>
+→ *"He could not say the Weave had got that one wrong."*</p>
+<p>**F26. 02 L83 — "and it took as long as it took."** Doubled-verb chiasmus (grep rule in the editing-pass pre-pass), portable narrator aphorism, and the second-person generalisation "You went down to the foundations" alongside it.<br>
+→ *"You went down to the foundations and took them apart. It was slow."*</p>
+<p>**F27. 02 L79 — "Every word of it had gone in as fuel."** Coinage, and the narrator grading the beat. ch. 001's plain version — "He had just handed her evidence *for* her theory" — is clearer, funnier, and reports rather than appraises. This is the paragraph the author singled out as working.<br>
+→ Restore ch. 001's sentence.</p>
+<p>**F28. 02 L77 — "Yes, and not as a manner of speaking."** Near-idiom: the English idiom is *in* a manner of speaking, so the negation lands on a phrase that isn't there.<br>
+→ *"Yes. Not as a figure of speech."*</p>
+<p>**F29. 02 L35 — "had her answers stacked."** Coinage where an idiom exists; ch. 001 had "had her answers ready."<br>
+**F30. 02 L13 — "nearly had him scalding his hand."** Near-idiom; ch. 001's "nearly made him scald himself" is the phrase that exists.<br>
+**F31. 02 L17 — "a walking saint"** reads as a coined compound (ch. 001: "an itinerant saint"). **02 L19 — "she was at the very beginning"** has no object (ch. 001: "at the very start of it").<br>
+**F32. 01 L5 — "the kind that is off a fleece by evening."** Generic present makes it a rule about rain rather than a description of this rain; ch. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Aphorism budget (one per scene, narration and dialogue combined)</p>
+<p>**F33. Scene 01 runs three.** "Most people used the time to reconsider." / "the only people who climbed the whole hill… had not yet found out that they could stop" (F12) / "an expression Edwin had stopped being hurt by around the year he turned two hundred." Keep the third — it is the funniest and the most stuck to its particulars — and demote the other two to report.</p>
+<p>**F34. <span class="redacted">redacted sentence: unpublished prose</span> Every one of them is separately flagged above; fixing them fixes the budget.</p>
+<p>### Prose at rest</p>
+<p>**F35. Scene 01, paragraphs 3–6 each land a crafted turn** (the reconsidering, the aphorism, the sword, the expression-he-stopped-being-hurt-by). 706 words with no paragraph that only reports. This is the "slow gentle laziness" register the author bounced off, arriving through density of turns rather than through slowness. One of these paragraphs should just move a body up a hill.</p>
+<p>### Endings</p>
+<p>**F36. Both scene endings are clean.** 01 closes on the tea invitation (inherited from ch. 001, forward-pointing, gentler scene-break rule satisfied); 02 closes mid-sentence on Edwin's interrupted "what the word *save* actually—". No closing bow, no callback, no composed flash-forward. Nothing to fix.</p>
+<p>### Things that are working (so they don't get edited out)</p>
+<p>- **02 L15 "She was wearing fate magic."** — the drumroll fragment from ch. 001 ("Fate magic. She was wearing fate magic.") is gone. Exactly the fix llm-tells item 14 asks for.<br>
+- **01 L19 "If it's Upper Wold about the fourteenth, I haven't decided, and I've said so twice."** — answers DRMacIver's "why is Edwin handling a well?" note: small, dull, already handled, and it plants the fourteenth for the underlined note in L5.<br>
+- **02 L57 "Then let me be quick about it. The farm mage, best there is at it, and the man laughed. Where did *archmage* come from?"** — the best line of the span: it audits her evidence, reframes before answering, and asks a real question.<br>
+- **02 L61 and L69** — the licensed composed teaching paragraphs, each ending on work rather than a proverb.<br>
+- ch. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### Dialogue rule 8 (nobody mishears)</p>
+<p>**F37.** Across 2,284 words every line is received in full and replied to at its best reading. Nobody interrupts, mishears, or answers the wrong part until Peri's "Excuse me" at the very end. The list exchange (L63–71) is the natural home for one: Peri answering a question Edwin didn't ask, or offering item four when he has already discounted it.</p>
+<p>---</p>
+<p>## The two-line verdict</p>
+<p>Mostly a conversation, and the spine of scene 02 is genuinely two people: Edwin's corrections take up Peri's actual words, and her theory eats each refutation, so every turn changes the state of the argument.</p>
+<p>It tips into saying-things-at-each-other twice — the Weave monologue (L43) and her three-things summation (L81), both composed paragraphs no listener prompted, delivered at length to a man who has asked a narrow question — and both are exactly where Peri picks up Edwin's grammar (the balanced verdict half, the "and" pile) and loses her own.</p>
+</div>
+</body></html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are running the pilot gate for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;.…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are running the pilot gate for the novel at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;.…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-ac8f38a4538cbd990">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are running the pilot gate for the novel at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first. **This is a pass/fail measurement and your job is to report it honestly, not to make it pass.**<br>
+<br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+| Measure | Groundwork baseline | Pass |<br>
+|---|---|---|<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Run `scripts/check_citations.py`-style rigour: use `samples/round5/full-chapter/census.py` over the assembled chapters and over the scene files. **Read that script's docstring first** — four of its rows are struck or demoted as unreliable (openings on name/pronoun; figures/1000; the downgrade grep; the fragment heuristic) and must not be scored. **Its DISTRIBUTION block is the pass/fail row.** Comedy beats are not machine-detectable: hand-count them per 1,000-word span.<br>
+<br>
+Also: read the arc as a reader, cold, before you look at any number, and write that down first. Then compare. Where the reading and the census disagree is the most informative thing this exercise can produce.<br>
+<br>
+Additionally run the two dialogue instruments from `notes/dialogue-voices.md` as **per-line diagnostics only** — prop-cover and the swap test. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Write `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- `## Read cold` — your experience of the arc as prose, before the numbers. Is it exciting? Does the mystery pull? Where does it sag, by scene?<br>
+- `## The gate` — the three criteria, measured, pass or fail each, with the method.<br>
+- `## Against the census` — where the numbers and the reading disagree.<br>
+- `## Distribution` — the per-1,000-word span coverage, including the hand-counted comedy beats.<br>
+- `## Miscast lines` — from the dialogue diagnostics, per line.<br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+<br>
+**If the gate fails, say so plainly and stop. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Then commit everything from this workflow.<br>
+<br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the project instructions and the gate definition.</p>
+</div>
+
+<p>🔧 Bash: cat CLAUDE.md | head -5 &amp;&amp; echo "---PROCESS---" &amp;&amp; sed -n '1,400p' notes/process.md</p>
+<p>✅ 280 lines, 15927 chars</p>
+<p>🔧 Bash: ls rewrite/book-01/arc-01/ &amp;&amp; echo "---" &amp;&amp; ls rewrite/book-01/arc-01/chapters/ &amp;&amp; echo "…</p>
+<p>✅ 65 lines, 1422 chars</p>
+
+<div class="assistant-prose">
+<p>Now let me read the arc cold, as a reader, before touching any numbers.</p>
+</div>
+
+<details><summary>34 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; for f in 001*.md 002*.md 003*.m…</p>
+<p>✅ 41 lines, 2201 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
+<p>✅ 41 lines, 2201 chars</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 287 lines, 15313 chars</p>
+<p>🔧 Read rewrite/book-01/arc-01/chapters/002-until-fulfilled.md</p>
+<p>✅ 256 lines, 12342 chars</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 291 lines, 15418 chars</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 266 lines, 13300 chars</p>
+<p>🔧 Read rewrite/book-01/arc-01/chapters/005-come-where.md</p>
+<p>✅ 266 lines, 12695 chars</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 173 lines, 9176 chars</p>
+<p>🔧 Read <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 253 lines, 13436 chars</p>
+<p>🔧 Read rewrite/book-01/arc-01/chapters/008-where-are-the-worms.md</p>
+<p>✅ 276 lines, 14180 chars</p>
+<p>🔧 Read rewrite/book-01/arc-01/chapters/009-the-two-lists.md</p>
+<p>✅ 277 lines, 14185 chars</p>
+<p>🔧 Read rewrite/book-01/arc-01/chapters/010-guess-first.md</p>
+<p>✅ 283 lines, 13969 chars</p>
+<p>🔧 Read rewrite/book-01/arc-01/chapters/011-a-committed-number.md</p>
+<p>✅ 193 lines, 9452 chars</p>
+<p>🔧 Read rewrite/book-01/arc-01/chapters/012-the-count-of-fifty.md</p>
+<p>✅ 275 lines, 13439 chars</p>
+<p>🔧 Read rewrite/book-01/arc-01/chapters/013-a-man-with-a-staff.md</p>
+<p>✅ 196 lines, 9181 chars</p>
+<p>🔧 Read rewrite/book-01/arc-01/chapters/014-the-outside-of-it.md</p>
+<p>✅ 213 lines, 10395 chars</p>
+<p>🔧 Read rewrite/book-01/arc-01/chapters/015-nothing-to-write.md</p>
+<p>✅ 262 lines, 12636 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me write my cold read before touching numbers.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span> &amp;&amp; cat &gt; <span class="redacted">redacted: private</span></p>
+<p>🔧 Bash: sed -n '1,120p' samples/round5/full-chapter/census.py</p>
+<p>✅ 1 lines, 2 chars</p>
+<p>✅ 120 lines, 4465 chars</p>
+<p>🔧 Bash: grep -n "DISTRIBUTION\|def main\|dist\|span" samples/round5/full-chapter/census.py | head…</p>
+<p>✅ 28 lines, 1868 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the three gate measures. First, chapter word counts.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; python3 - &lt;&lt;'EOF' import re,glo…</p>
+<p>✅ 16 lines, 502 chars — 001-four-ways-of-asking.md: 2793 / 002-until-fulfilled.md: 2195 / <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; for f in *.md; do echo "### $f";…</p>
+<p>✅ 209 lines, 9258 chars</p>
+
+<div class="assistant-prose">
+<p>Let me check what the baseline measure actually counted, so I score the same thing.</p>
+</div>
+
+<p>🔧 Bash: grep -n -i "date/clock\|clock-stamp\|stamped\|announc\|duration\|46%\|10%" samples/round5…</p>
+<p>✅ 6 lines, 485 chars</p>
+<p>🔧 Bash: sed -n '25,110p' samples/round5/study/current-voice.md</p>
+<p>✅ 86 lines, 4795 chars</p>
+
+<div class="assistant-prose">
+<p>Let me calibrate my scoring against the baseline corpus so I'm measuring the same thing.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; python3 - &lt;&lt;'EOF' import re,glob files=["010-","013-",…</p>
+<p>✅ 32 lines, 3278 chars — ===== 010-the-quiet-field.md 8 scenes / <span class="redacted">redacted sentence: unpublished prose</span> / <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes &amp;&amp; python3 - &lt;&lt;'EOF' import re,glob…</p>
+<p>✅ 1 lines, 31 chars — scenes=42 clockflag=0 durflag=0</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; python3 - &lt;&lt;'EOF' import re,glob clock=re.compile(r"\b…</p>
+<p>✅ 1 lines, 46 chars — baseline scenes=165 clock=72 (44%) dur=12 (7%)</p>
+</details>
+
+<div class="assistant-prose">
+<p>The regex reproduces the baseline (44%/7% vs the stated 46%/10%) on the same 165 scenes, so the instrument is validated. Now the DISTRIBUTION block.</p>
+</div>
+
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 175 lines, 10295 chars</p>
+
+<div class="assistant-prose">
+<p>Now the dialogue instruments.</p>
+</div>
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: grep -n -i "prop-cover\|prop cover\|swap test\|swap-test" notes/dialogue-voices.md | head…</p>
+<p>✅ 20 lines, 1557 chars</p>
+<p>🔧 Bash: sed -n '45,70p;195,215p' notes/dialogue-voices.md</p>
+<p>✅ 46 lines, 2956 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; python3 - &lt;&lt;'EOF' import re,glo…</p>
+<p>✅ 1 lines, 73 chars — dialogue lines (&gt;=15 chars): 668; containing a 'because' warrant: 58 (9%)</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters &amp;&amp; python3 -c " import re,glob w=e…</p>
+<p>✅ 1 lines, 53 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now writing the gate report.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> ⟦redacted sentence: serie…</p>
+<p>✅ 1 lines, 74 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 3 lines, 59 chars</p>
+<p>🔧 Bash: git commit -q -m "$(cat &lt;&lt;'EOF' ⟦redacted sentence: series structure (Arc/Book numbering)…</p>
+<p>✅ 1 lines, 72 chars — <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+</details>
+
+<div class="assistant-prose">
+<p>**GATE: PASS (3 of 3).**</p>
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><br>
+|---|---|---|---|---|<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+| Chapters over 3,000 words | 27/31 | &lt;1 in 5 | **0 of 15** | PASS |</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Report at `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

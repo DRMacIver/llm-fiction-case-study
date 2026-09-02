@@ -1,0 +1,84 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the editing subagent for the third draft of Book 1 of the nov…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-abdf5df490519028b">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
+<br>
+Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. Your material: draft/book-01/scenes/04-four-minutes.md, read after scenes 01–03 in the same directory (they bind what is on the page). The author's stated goal for this scene: "see if you can manage a scene 4 I have nothing to complain about." Be that reader. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required files.</p>
+</div>
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>✅ 273 lines, 16761 chars</p>
+<p>🔧 Read draft/book-01/scenes/04-four-minutes.md</p>
+<p>✅ 38 lines, 4342 chars</p>
+<p>🔧 Bash: cat draft/book-01/scenes/01*.md draft/book-01/scenes/02*.md draft/book-01/scenes/03*.md</p>
+<p>✅ 179 lines, 15955 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 40 lines, 2208 chars</p>
+<p>🔧 Bash: sed -n '1,400p' notes/canon/world/farm-teaching.md</p>
+<p>✅ 270 lines, 16826 chars</p>
+<p>🔧 Bash: grep -n -i -A12 "never cast it angry\|dry-cast\|compost cantrip" notes/canon/world/magic.…</p>
+<p>✅ 111 lines, 7083 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n -i -B4 -A18 "dry-cast" notes/canon/world/magic.md; echo "…</p>
+<p>✅ 155 lines, 9956 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Report on `<span class="redacted">redacted: private</span>/draft/book-01/scenes/04-four-minutes.md`.</p>
+<p>---</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1 — *a paragraph starts somewhere the previous one did not leave it* / fact check inside the scene. Scene 03 ends with him at the **kitchen** window, and establishes the kitchen is below the study ("which looked the same way as the one upstairs"). He is downstairs, he is late, and he goes *up* the stairs to reach the yard. Nothing in the scene sends him upstairs for anything.<br>
+<span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**2.** "which the knot noticed"<br>
+Part 1 — *a word doing a job it cannot do*. The knot is a sensation behind his breastbone; it cannot notice. The intended proposition is that hurrying made him feel it.<br>
+Replacement: "which he felt in the knot" — or cut the clause; the sentence stands without it.</p>
+<p>**3.** "He knew it the way everyone knew it, without looking at anything, because the System kept the hour for the whole world the way it kept the date"<br>
+Part 1 — *word doing a job it cannot do*, and Part 5 *asserted, not shown*. "Without looking at anything" implies there is a thing one could look at; canon (`system.md`, Timekeeping) is explicit that no clock-craft ever developed, so there is nothing to not-look-at and the phrase describes a negative the world has no positive for. The rest of the clause is the narrator explaining the System to the reader at the top of a scene.<br>
+Replacement: "It was ten o'clock. Everybody always knew what time it was, which is why being late is a statement and not an accident, and for eleven years the hour had found him already in the class garden with his sleeves rolled."</p>
+<p>**4.** "It was the third week of the compost course, and the third week is the week of the cantrip" … *versus* … "which I say every third week and will say again" and "said the class, who had heard it twice before."<br>
+Part 1 — *check every count*. Three mutually exclusive facts. <span class="redacted">redacted sentence: unpublished prose</span> "Every third week" reads as the teacher's habit across many courses, but the class chorus attributes the repetitions to *these* students.<br>
+Replacement: keep the teacher's habit, fix the chorus's source — "'One more thing, which I say the first time every class hears it, and which you will hear me say again: you do not cast it angry.'" and "'Calm hands,' said Widow Sepp, before he got there." (Sepp is a repeat regular in canon; the joke survives and the arithmetic works.)</p>
+<p>**5.** "Mrs Tansy," he said. "You've had it three weeks and not cast it yet."<br>
+Part 1 — *check every fact* / Part 4 *knowledge states*. Contradicts the scene's own premise that the cantrip is given today, in week three. She cannot have "had it" for three weeks and declined to cast it. (Canon fixes her at three weeks attending at Day 2, so the attendance figure is right and the object of "had it" is wrong.)<br>
+Replacement: "You've been coming three weeks and I've not had a cast out of you yet. Come and do this one."</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+Part 1 — *cannot produce one flat restatement*, plus Part 2. Three unrelated propositions chained on "and". The middle one is canon's idiom (`magic.md`) but arrives unglossed: nothing on the page connects a stiff wrist to asking the heap for three days, so the reader cannot get from wrist to spell. And the closing musing ("whether the one had anything to do with the other") pairs *stiff wrist* with *good nose*, which is a coincidence with no proposition under it — a beat that notes something and claims only that it is meaningful.<br>
+Replacement: keep the nose, drop the chain — "She had the best nose in the class and a wrist that would not turn a heap, and she had long since stopped apologising for either."</p>
+<p>**7.** "The west parishes came early as a matter of principle, and so the eleven farmwives and the carter's boy had been in the garden since a quarter to"<br>
+Part 3 — *the rule on inventing* and Part 1 *check every inference*. <span class="redacted">redacted sentence: unpublished prose</span> Scenes 01 and 03 already establish the quarter-to without needing a custom.<br>
+Replacement: cut the invention — "They had been in the garden since a quarter to, the eleven farmwives and the carter's boy, as they had been every morning in every weather, and never once without him."</p>
+<p>**8.** "and had never once been there without him"<br>
+Part 3 — *would this exist in a real world*. Eleven years of a daily class is roughly four thousand mornings; an absolute never, with an apprentice of eleven years' standing on the premises, is a claim the world will not support and one the reader will test. The scene only needs *never late*.<br>
+Replacement: "and he had never once been late to them."</p>
+<p>**9.** "It had not had a lateness on it before, and Dob gave it a line to itself."<br>
+Part 6 — *a coinage where an idiom exists*. "A lateness" is manufactured where plain English is available, on a sentence that lands the beat.<br>
+Replacement: "Nothing on it had ever been late before, and Dob gave it a line to itself."</p>
+<p>**10.** Mrs Tansy is put straight onto a live cast on the class's real heap.<br>
+<span class="redacted">redacted sentence: unpublished prose</span> 002)", and this scene has just spent a paragraph on the cantrip's failure mode ruining a heap. Edwin's own design says her first attempt is dry. Handing a first-timer the class's only good heap contradicts the pedagogy the scene is about.<br>
+Replacement: one clause reinstates it — "'Dry first,' he said. 'Hands and the words, no mana. Then do it for real.'" placed before he sits down; the ending beat is unchanged.</p>
+<p>**11.** The sea-front.<br>
+Part 5 — *a thread raised and dropped*. Scene 03 ends on him not moving toward the front or the class, with the front waiting since breakfast and rain owed to the Pellings at half past twelve tomorrow. This scene spends the whole morning on a heap and never registers that the front is still sitting off the coast unattended. The scene stands in the shadow of a thing it does not know it is standing in.<br>
+Replacement: one clause at the turn where he takes the fork — "There was a front off the coast that had been waiting since breakfast and would wait another hour. He took the fork from the wall."</p>
+<p>---</p>
+<p>The device a second round would be about is **the ending**: he hands the cast to Mrs Tansy, delivers "You're the one that's calm, this morning," and then sits down on the bench while Sepp moves up for him and they both look at the heap. That last clause turns a cut into a settling — the scene's forward work (Tansy has not cast yet) is left open, but the final image is warmth and rest, which is the cadence the voice files forbid in the last two paragraphs. To make it work, end on the unfinished work rather than the seat: cut everything after "and went and sat on the end of the bench next to Widow Sepp", or end on Tansy's hands going to the heap; to remove it, drop the bench entirely and cut on his line.</p>
+</div>
+</body></html>

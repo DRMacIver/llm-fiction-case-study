@@ -1,0 +1,91 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are assembling drafted scenes into chapters for the novel at ⟦red…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are assembling drafted scenes into chapters for the novel at ⟦red…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-acac0d13dad5f2821">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are assembling drafted scenes into chapters for the novel at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first.<br>
+<br>
+<span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> Your job is **chapter assembly**, pipeline step 6 in `notes/process.md`.<br>
+<br>
+**Assembly groups, orders, cuts and titles. It never revoices.** If you find yourself smoothing prose, stop: a second homogenising sweep over every scene is the voice-collapse mechanism this whole structure exists to avoid. Fixing a genuine seam — a repeated word across a join, a dangling reference — is allowed and should be noted.<br>
+<br>
+Group consecutive scenes into chapters of **~2,000 words** (occasionally to 3,000; over 3,000 wants a reason). Write each to `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters/NNN-slug.md`, numbered from 001, with a `# Chapter N: Title` heading.<br>
+<br>
+**At least two cuts must fall inside a scene**, per `plans/book-01/arc-01.md` <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> A third candidate is inside D4. A mid-scene cut means the scene's text is split across two chapter files — the prose is continuous, the chapter boundary is not.<br>
+<br>
+Also place author's notes against their spacing budget (`notes/farming.md`), if any scene has earned one.<br>
+<br>
+Write `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Your final message: chapter count, the word-count distribution, how many chapters exceed 3,000 words, and where the mid-scene cuts landed.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the project context and the drafted scenes.</p>
+</div>
+
+<details><summary>18 tool calls</summary>
+<p>🔧 Bash: cat CLAUDE.md &gt;/dev/null; ls rewrite/book-01/arc-01/; echo ---; ls rewrite/book-01/arc-01…</p>
+<p>🔧 Bash: sed -n '1,200p' notes/process.md</p>
+<p>✅ 92 lines, 3634 chars</p>
+<p>✅ 200 lines, 11338 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '1,400p' plans/book-01/arc-01.md <span class="redacted">unpublished</span> | grep -n -…</p>
+<p>✅ 151 lines, 8317 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls rewrite/book-01/arc-01/chapters/; grep -n -i -A30 "author's no…</p>
+<p>✅ 63 lines, 3621 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes; for f in *.md; do echo "=====FILE $…</p>
+<p>✅ 41 lines, 2187 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/scenes; for f in *.md; do echo "=====$f"; h…</p>
+<p>✅ 50 lines, 2237 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 1395 lines, 70795 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 1250 lines, 65554 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 1125 lines, 55127 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now I'll assemble. Writing a script to build the chapter files.</p>
+</div>
+
+<details><summary>14 tool calls</summary>
+<p>🔧 Bash: cat &gt; <span class="redacted">redacted: private</span> &lt;&lt;'PY' import os, re, textwrap SRC = "<span class="redacted">redacted: private</span>/re…</p>
+<p>✅ 16 lines, 401 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters; tail -5 001-*.md; echo "== ch2 he…</p>
+<p>✅ 48 lines, 1667 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters; for f in *.md; do echo "-- $f"; s…</p>
+<p>✅ 90 lines, 7655 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters; python3 - &lt;&lt;'PY' p='005-come-wher…</p>
+<p>✅ 2 lines, 136 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01; cat &gt; ASSEMBLY.md &lt;&lt;'MD' ⟦redacted sentenc…</p>
+<p>✅ 1 lines, 4 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/rewrite/book-01/arc-01; python3 - &lt;&lt;'PY' p='ASSEMBLY.md'; t=open(p…</p>
+<p>✅ 5 lines, 327 chars</p>
+<p>🔧 Bash: <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span>  Chapter assembly (process.md…</p>
+<p>✅ 1 lines, 50 chars — <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span></p>
+</details>
+
+<div class="assistant-prose">
+<p>**15 chapters** from 42 scenes (33,861 scene words; 33,648 words of assembled prose, notes excluded). Files in `<span class="redacted">redacted: private</span>/rewrite/book-01/arc-01/chapters/`, mapping in `<span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span> Committed as b82a6b8.</p>
+<p>Word-count distribution (prose only): 2798, 2203, 2616, 2443, 2273, 1632, 2430, 2560, 2541, 2392, 1751, 2265, 1653, 1774, 2317. Mean 2,243; median 2,317; range 1,632–2,798.</p>
+<p>**Chapters over 3,000 words: 0.** (Gate row "chapters over 3,000 under 1 in 5" passes at 0 of 15.)</p>
+<p>Mid-scene cuts — two, as required:<br>
+1. <span class="redacted">redacted sentence: unpublished prose</span> 001 ends on "…and I did try asking first. Seal of the Loom." / ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
+2. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> 009 opens on "Nought."</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Both are kept as chapter boundaries (002/003 and 007/008), so the hooks are intact but land on joins. The two inside-scene cuts above are the equivalent moments elsewhere. The D4 candidate is likewise a scene join (32/33) and is the 011/012 boundary; not split further, since it would have made a ~1,000-word chapter.</p>
+<p>Author's notes on chs. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Seam fixed: one word — ch. 005's opening "She came back out with bread" → "Peri came back out with bread" (pronoun dangled across the new chapter break). <span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working on the novel project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read `CL…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are working on the novel project at &lt;span class=&quot;redacted&quot;&gt;redacted: private&lt;/span&gt;. Read `CL…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a55cce6fd0c336b24">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+<br>
+You are working on the novel project at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it.<br>
+<br>
+Source material for this pass:<br>
+- `notes/audit/chapters/*.md` — a per-chapter archivist report for all 31 chapters (facts with [stated]/[implied] tags and quoted evidence, back-references, questions, tensions). These were written by agents who had NOT read canon, so they are an independent record of what is on the page. They are reports, not gospel: where a report's claim is load-bearing, verify it against the actual chapter in `chapters/` before acting on it.<br>
+- `notes/canon/**` — the canon files. `notes/canon/README.md` defines the claim levels (Established / Working / Open question) and the citation conventions. Follow them exactly.<br>
+<br>
+Hard rules:<br>
+- **Never resolve a canon Open question casually.** If the chapters imply an answer, record that they do and flag it for DRMacIver; do not close it yourself.<br>
+- **Never delete or weaken canon to fit a draft.** If a chapter and canon contradict, flag the conflict with both citations; do not silently pick a side.<br>
+- Do not edit anything under `chapters/` or `plans/`. <span class="redacted">unpublished</span> Canon files only, and only the ones you own (below).<br>
+- Mark new entries you introduce yourself as **(Claude, Working, 2026-08-27)**. Facts that are genuinely on-page get **Established** with a chapter citation in the existing "ch. NNN" style.<br>
+- `notes/sealed/` holds sealed answers. You MAY read them to check clues cohere. You must NEVER put sealed content into canon files, your report, or any user-facing text — describe only its shape (constraint satisfied / discrepancy exists / confidence).<br>
+<br>
+Your job, in your domain:<br>
+1. **Completeness** — every fact in the chapter reports that belongs in your domain should be present in your canon files, at the right claim level with the right citation. Add what is missing. Existing entries whose citation or claim level is now wrong get corrected.<br>
+2. **Consistency** — find contradictions: chapter-vs-canon, chapter-vs-chapter, and canon-vs-canon. Do the arithmetic on numbers, dates, distances, ages, durations, money and counts.<br>
+3. **Answers to questions** — go through the Questions sections of the reports in your domain. For each: is it already answered in canon? Then note where. Is it answerable by combining what is on the page? Then answer it and add it as Working canon. Is it a genuine hole? Then it goes on the open list.<br>
+4. **Load-bearing mysteries** — per CLAUDE.md, any mystery the story is accumulating evidence for must have a written answer. If you find one whose answer is not written down anywhere, say so prominently (naming the mystery, not inventing the answer).<br>
+<br>
+Write your findings report to `notes/audit/DOMAIN.md` (replace DOMAIN with your domain slug given below), with sections: `## Canon edits made` (file, what, why), `## Contradictions` (each with both citations and a recommendation, ranked by how load-bearing), `## Questions answered` (question → answer → where it now lives), `## Open questions for DRMacIver` (genuine holes and anything needing an author decision), `## Load-bearing mysteries without written answers`.<br>
+<br>
+Your final message should be a compact summary: counts per section, and the three most serious contradictions in one line each. The full detail belongs in the file.<br>
+<br>
+<br>
+Your domain slug: **timeline** (write to `notes/audit/timeline.md`).<br>
+Files you own and may edit: notes/canon/world/timeline.md<br>
+Do not edit canon files owned by the other domains (system-and-magic, characters, world, timeline) — if you find a problem in their territory, report it instead.<br>
+<br>
+Your domain brief: The calendar and the day-by-day timeline of the whole story so far. Build the date chain from the chapter reports and check it end to end: month lengths, dates, elapsed intervals, travel durations, cooldowns and their expiry, injury and recovery windows, "eight weeks in", "a fortnight", ages. This is the domain where arithmetic errors hide, so actually do the arithmetic rather than eyeballing it, and show the chain in your report so it can be audited.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the project instructions and canon.</p>
+</div>
+
+<details><summary>58 tool calls</summary>
+<p>🔧 Bash: <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 84 lines, 1749 chars — 001-the-wrong-man.md / 002-the-ten-o-clock.md / 003-the-improbability-engine.md</p>
+<p>🔧 Bash: cat notes/canon/README.md &amp;&amp; echo ===== &amp;&amp; cat notes/canon/world/timeline.md</p>
+<p>✅ 74 lines, 3944 chars</p>
+<p>🔧 Bash: cat notes/canon/world/timeline.md</p>
+<p>✅ 42 lines, 2239 chars</p>
+<p>🔧 Bash: sed -n '40,577p' <span class="redacted">redacted: private</span></p>
+<p>✅ 38 lines, 2235 chars</p>
+<p>🔧 Bash: awk 'NR&gt;=40 &amp;&amp; NR&lt;=250' notes/canon/world/timeline.md</p>
+<p>✅ 211 lines, 13022 chars</p>
+<p>🔧 Bash: awk 'NR&gt;=250 &amp;&amp; NR&lt;=577' notes/canon/world/timeline.md</p>
+<p>✅ 328 lines, 20414 chars</p>
+<p>🔧 Bash: grep -n -i "month" notes/canon/system.md | head -50</p>
+<p>✅ 14 lines, 999 chars</p>
+<p>🔧 Bash: wc -c notes/audit/chapters/*.md | tail -3 &amp;&amp; grep -c "" notes/audit/chapters/*.md | head…</p>
+<p>✅ 34 lines, 1616 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/audit/chapters &amp;&amp; for f in *.md; do echo "=== $f"; awk '/^##…</p>
+<p>✅ 16 lines, 2027 chars</p>
+<p>🔧 Bash: grep -n -iE "day|date|week|month|year|o'clock|hour|age[ds]?\b|elapsed" <span class="redacted">redacted: private</span></p>
+<p>✅ 14 lines, 2189 chars</p>
+<p>🔧 Bash: grep -nE "^(===|-)" <span class="redacted">redacted: private</span> | grep -iE "^[0-9]+:===|calendar|weekday|how (l…</p>
+<p>✅ 116 lines, 21856 chars</p>
+<p>🔧 Bash: awk 'NR&gt;=1 &amp;&amp; NR&lt;=42' notes/canon/world/timeline.md</p>
+<p>✅ 42 lines, 2397 chars</p>
+<p>🔧 Bash: grep -n -A25 -i "RULED\|eighteen" notes/canon/world/development.md | head -80</p>
+<p>✅ 79 lines, 4694 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "six weeks\|eight weeks\|eight before\|⟦red…</p>
+<p>✅ 14 lines, 5460 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "four months\|three months\|two months\|fiv…</p>
+<p>✅ 28 lines, 15068 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '85,115p' 028-letters-from-the-vale.md</p>
+<p>✅ 31 lines, 2942 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '60,84p' 028-letters-from-the-vale.md &amp;&amp; echo -…</p>
+<p>✅ 44 lines, 7223 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "choosing" *.md | head -30</p>
+<p>✅ 4 lines, 768 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "twelfth day\|four to six\|six days\|days e…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "post\|twelfth\|days" 011-measured-ground.m…</p>
+<p>✅ 14 lines, 4705 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "second hand\|never answered\|no answer\|di…</p>
+<p>✅ 3 lines, 472 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '79,120p' 025-the-famous-dropout.md</p>
+<p>✅ 41 lines, 2672 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '1,44p' 028-letters-from-the-vale.md</p>
+<p>✅ 43 lines, 4733 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "sennet\|21 yd\|yd 1 ft\|sixteen yards\|twe…</p>
+<p>✅ 7 lines, 1574 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "twelve days\|drew\|blew\|blowing\|twenty-n…</p>
+<p>✅ 5 lines, 2157 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "frostmonth\|next due\|year following" 021-…</p>
+<p>✅ 8 lines, 3385 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "fifty-six\|days\|the third\|twenty-fifth"…</p>
+<p>✅ 10 lines, 4219 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; grep -n -i "twenty-first\|twenty-fifth\|miles\|the eig…</p>
+<p>✅ 14 lines, 5191 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/chapters &amp;&amp; sed -n '1,10p' 026-the-trial-fields.md &amp;&amp; echo --- &amp;&amp;…</p>
+<p>✅ 16 lines, 2115 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me make the canon edits.</p>
+</div>
+
+<details><summary>18 tool calls</summary>
+<p>🔧 Bash: grep -n "<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 2 lines, 147 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import io p='notes/canon/world/timeline.md' s=open(p).read()  # 1. Fix…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' p='notes/canon/world/timeline.md' s=open(p).read()  # 2. Move the out-o…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' p='notes/canon/world/timeline.md' s=open(p).read()  anchor="\n## Open q…</p>
+<p>✅ 4 lines, 101 chars — Exit code 1 / Traceback (most recent call last): /   File "&lt;stdin&gt;", line 144, in &lt;module&gt;</p>
+<p>🔧 Bash: grep -n "seventy miles in eleven" notes/canon/world/timeline.md</p>
+<p>✅ 1 lines, 75 chars</p>
+<p>🔧 Bash: sed -n '450,454p' notes/canon/world/timeline.md</p>
+<p>✅ 5 lines, 285 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'PYEOF' p='notes/canon/world/timeline.md' s=open(p).read() anchor="\n## Open…</p>
+<p>✅ 4 lines, 261 chars — Exit code 1 / Traceback (most recent call last): /   File "&lt;stdin&gt;", line 5, in &lt;module&gt;</p>
+<p>🔧 Bash: mkdir -p <span class="redacted">redacted: private</span> &amp;&amp; cat &gt; <span class="redacted">redacted: private</span></p>
+<p>✅ 1 lines, 4 chars</p>
+<p>🔧 Bash: python3 - &lt;&lt;'PYEOF' p='notes/canon/world/timeline.md' s=open(p).read() anchor="\n## Open…</p>
+<p>✅ 1 lines, 2 chars — ok</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now the open questions additions.</p>
+</div>
+
+<p>🔧 Bash: python3 - &lt;&lt;'PYEOF' p='notes/canon/world/timeline.md' s=open(p).read() s=s.rstrip('\n')+'…</p>
+<p>✅ 4 lines, 157 chars</p>
+
+<div class="assistant-prose">
+<p>Now the findings report.</p>
+</div>
+
+<p>🔧 Bash: cat &gt; notes/audit/timeline.md &lt;&lt;'EOF' # Audit: timeline (2026-08-27)  Domain: the calenda…</p>
+<p>✅ 1 lines, 96 chars</p>
+
+<div class="assistant-prose">
+<p>Report at `<span class="redacted">redacted: private</span>/notes/audit/timeline.md`; canon edits in `<span class="redacted">redacted: private</span>/notes/canon/world/timeline.md`. Committed as e154c1e.</p>
+<p>**Counts** — Canon edits: 8 (1 date correction, 1 bullet re-ordering + expansion, 2 fact additions, 2 new sections, 3 new open questions, 1 note upgraded). Contradictions: 6 ranked + 7 sub-threshold frictions. Questions answered: 9. Open questions for DRMacIver: 5. Load-bearing mysteries without written answers: 0 in this domain (sealed material checked; shape only, no discrepancy found).</p>
+<p>The date chain itself is sound: all 96 story-days, all three arc reckoning formulae, and essentially every spoken interval check out exactly.</p>
+<p>**Three most serious:**<br>
+1. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+2. Ch. <span class="redacted">redacted sentence: unpublished prose</span><br>
+3. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> 030's printed circular says "four months of contact" where it is now five, and ch. 031 twice says the <span class="redacted">redacted: place</span> box sat "two months" where it is 92 days — the second inside a line Edwin dictates into a register.</p>
+</div>
+</body></html>

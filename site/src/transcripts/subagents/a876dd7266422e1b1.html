@@ -1,0 +1,154 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are doing research for a canon-consistency check on the story Aut…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are doing research for a canon-consistency check on the story Aut…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a876dd7266422e1b1">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are doing research for a canon-consistency check on the story Autoroad, repo <span class="redacted">redacted: private</span>.<br>
+<br>
+Read every scene file draft/book-01/scenes/025-*.md through draft/book-01/scenes/051-*.md (or however they're numbered/named — list draft/book-01/scenes/ first to get exact filenames for numbers 25 through 51) in FULL, in order.<br>
+<br>
+Do NOT read notes/sealed/** — off limits.<br>
+<br>
+As you read, extract and quote (with exact scene number/filename and, where possible, surrounding context) every occurrence of the following. Be exhaustive — these are used for a downstream consistency check against later scenes 52-55, so precision and completeness matter more than brevity:<br>
+<br>
+1. Any promise, plan, or arrangement made "at the pantry door" — what was promised, and on which day/date it was made or is due.<br>
+2. Every reference to "the ninth", "the fifth", or "a fortnight later" (or equivalent phrasings like "in a fortnight", "two weeks from now") — quote the sentence and note which calendar day is implied or stated.<br>
+3. The oak stakes — who gave them, when, to whom, for what purpose, how many, any other physical detail (size, count, marks).<br>
+4. "The carrier" — every mention, what/who it refers to, its role.<br>
+5. Tess's "hundred seconds" — the exact context of this event/phrase, and how many weeks before the point-of-reference it happened (or any date given).<br>
+6. Scene 51 <span class="redacted">unpublished</span> specifically: what Mattie says about <span class="redacted">redacted: character</span>'s field — quote her lines exactly and describe the scene context (who's present, what's being discussed).<br>
+7. Scenes 44-46 specifically: what the Charter book and the slate showed — quote the relevant passages describing their contents.<br>
+<br>
+Also note any dates/days explicitly stated anywhere in scenes 25-51 (e.g. "the eleventh", "day 40") that might matter for a calendar cross-check, with scene number.<br>
+<br>
+Report back with a clearly organized list under each of the 7 headings above, with exact quotes and scene file names/numbers for every item. This is the only output I will see — be complete, do not summarize away specifics, and do not omit an item because it seems minor.</p></blockquote>
+
+
+<details><summary>18 tool calls</summary>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span>/draft/book-01/scenes/ | sed -n '1,80p'</p>
+<p>✅ 55 lines, 1431 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes/ &amp;&amp; for f in 25-* 26-* 27-* 28-* 29-* 30-* 31…</p>
+<p>✅ 35 lines, 2214 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes/ &amp;&amp; files=$(ls | awk -F- '{n=$1+0; if(n&gt;=25 &amp;…</p>
+<p>✅ 27 lines, 723 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes/ &amp;&amp; grep -n -i -E "pantry door|ninth|fifth|fo…</p>
+<p>✅ 30 lines, 9163 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes/ &amp;&amp; grep -n -i -E "hundred seconds|the ninth|…</p>
+<p>✅ 53 lines, 17835 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes/ &amp;&amp; grep -rn -i "hundred" 2[5-9]-*.md 3[0-9]-…</p>
+<p>✅ 26 lines, 10361 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes/ &amp;&amp; for f in 31-the-pantry-door.md 38-twelve-…</p>
+<p>✅ 29 lines, 2018 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 1 lines, 96 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 353 lines, 33406 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let me read the remaining scenes not yet fully viewed (25-30, 32-37, 39-43, 47-50) to check for anything missed, particularly around pantry-door promises, dates, and other keyword contexts.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes/ &amp;&amp; for f in 39-read-it-as-six.md 42-a-factor…</p>
+<p>✅ 1 lines, 19 chars</p>
+<p>🔧 Read /tmp/x.txt</p>
+<p>✅ 309 lines, 26899 chars</p>
+
+<div class="assistant-prose">
+<p>## Consistency-Check Extraction: Scenes 25–51 (Autoroad, draft/book-01)</p>
+<p>### 1. "At the pantry door" — promises/arrangements</p>
+<p>- **Scene 31 ("The pantry door")**, lines 22–68: The literal pantry door at Mattie Ordish's farm has Mattie's ring measurements written on it in charcoal (see #3 below for full diagram detail). <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> I've a fortnight. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Referenced back in **scene 44 <span class="redacted">unpublished</span>** (line 35, quoted via scene 47 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span>, line 150, exact text.)<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> (*"another house's clerk's time... <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Scene 39 explicitly revises the promise from "two weeks" to "six," addressed to Sorrel (not Mattie): *"I said two weeks. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>### 2. "The ninth" / "the fifth" / "a fortnight later" / equivalents</p>
+<p>- No literal "the ninth" or "the fifth" as calendar-day references found in scenes 25–51 (searched exhaustively).<br>
+- "Nine" appears as a *stake count* (nine dated oak stakes — see #3) and in "nine weeks" (hay, hundred-seconds) and "nine pound" (money) — not calendar days.<br>
+- Fortnight references (all found):<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  - Scene 31: Edwin's own "I've a fortnight" promise (see #1).<br>
+  <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+  - Scene 38: alehouse keeper's "You told her a fortnight."<br>
+  - Scene 40: "it heals over in a fortnight" (re: grass, unrelated to timeline).<br>
+  - Scene 41 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+  - Scene 48 <span class="redacted">unpublished</span>: "The third: a fortnight after that" — this is a **ripening-band date interval**, not a promise (see #6/#7 discussion below — it's part of the four-band dating in scene 48 <span class="redacted">unpublished</span>).<br>
+- "Two weeks": Scene 39 ("I said two weeks. Read it as six...") — to Sorrel, re: frost work. Scene 51 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> body: "The eighth day," she said... "I didn't write it on the road. I wrote it that night at the Sluice"), and scene 51 <span class="redacted">unpublished</span> states it is now **eight days later** than that entry per Peri's own line ("it's been eight days"). Flag: title says "two weeks ago" but body math says the entry was made 8 days prior — worth checking whether this is deliberate imprecision (rounding) or an inconsistency for the downstream check.</p>
+<p>### 3. The oak stakes</p>
+<p>- **Scene 38 ("Twelve stakes")**, full detail:<br>
+<span class="redacted">redacted sentence: unpublished prose</span> He said so twice").<br>
+  - Given to: Edwin/Peri's party, for Mattie's field-monitoring project — collected the day after Edwin wrote "Oak, sound, driven" in Mattie's yard.<br>
+  <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> Peri logged letter, time, and chain distance from fixed points (gatepost, thorn stump, water trough, a willow on the ditch).<br>
+  <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>, but "Sennet had said no." Edwin: "Leave K, L and M... <span class="redacted">redacted sentence: unpublished prose</span><br>
+  - This is confirmed again in scene 42 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+  - However, scene 45 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>" — implying two of the reserved K/L/M stakes (not all three) eventually got placed in Sennet's grass, making eleven total in the protocol description, though only nine were driven as of scene 38/42. Scene 44 <span class="redacted">unpublished</span> also refers to "eleven stakes" as the ask. This transition from 9 (scene 38, 42) to 11 (scenes 44, 45) is worth flagging for consistency-check — it isn't explicitly shown on-page when/how K or L got driven into Sennet's grass, or whether it's meant to be 9+2=11 despite only "K, L, M" (three) being reserved and only two ending up placed.<br>
+  - Scene 51 <span class="redacted">unpublished</span> also references "item four" in the stake-reading protocol relating to answering people in the street (see scene 45 <span class="redacted">unpublished</span>).</p>
+<p>### 4. "The carrier"</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> Six, more like. <span class="redacted">redacted sentence: unpublished prose</span> once when he doesn't"), now applied to the Wystow letter's transit. <span class="redacted">redacted sentence: unpublished prose</span><br>
+- The carrier is otherwise a background logistics element — no named individual, purely a schedule/service reference.</p>
+<p>### 5. Tess's "hundred seconds"</p>
+<p>- **Scene 32 ("Nobody's going to laugh")**, line 39 (context: household gathering after the initial "man with a staff" council scene, Tess speaking from the stairs where she'd been listening):<br>
+<span class="redacted">redacted sentence: unpublished prose</span> "It doesn't... <span class="redacted">redacted sentence: unpublished prose</span><br>
+  This is Tess's own account, given in scene 32, of standing in the ring and counting to 100 (implicitly seconds).<br>
+- **Scene 50 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+  This explicitly dates the event as **"nine weeks ago"** relative to scene 50 <span class="redacted">unpublished</span>'s point in the story. Scene 50 <span class="redacted">unpublished</span> occurs on the night before the party leaves for the pale field (<span class="redacted">redacted: character</span>'s), i.e., the night of scene 51 <span class="redacted">unpublished</span>'s cold open — so "nine weeks ago" is anchored to a point very late in the Fenholt arc (near scene 50 <span class="redacted">unpublished</span>/51), useful for a calendar cross-check against scene 32's placement (which is early in the Fenholt arc, shortly after the party's arrival and the initial council meeting).</p>
+<p>### 6. Scene 51 <span class="redacted">unpublished</span> — Mattie's lines about <span class="redacted">redacted: character</span>'s field</p>
+<p>Full context: This is the very end of scene 51 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s**). Present: Edwin, Peri, Mattie (at the range with the kettle). Edwin has just asked Peri to fetch "the pale field" notes and told her they'll go "the day after tomorrow." Mattie, from the range, asks "What pale field?" — and Edwin (from scene 50 <span class="redacted">unpublished</span>'s closing line) has "the pen still in his hand" when asked. Scene 51 <span class="redacted">unpublished</span> then answers that cold open:</p>
+<p>- *"<span class="redacted">redacted: character</span>'s," she said.* (line 337)<br>
+- *"You know it."* (Edwin)<br>
+- *"Everybody knows it. It's been pale since I was a girl. Old <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Note: this is the **only** appearance of "<span class="redacted">redacted: character</span>" across scenes 25–51 — Mattie is the source of all information about him (his age, temperament, the field's history "since I was a girl," and the grazier tenancy).</p>
+<p>### 7. Scenes 44–46 — Charter book and slate contents</p>
+<p>**Scene 44 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: place</span> Wardens named... It had been posted in **Seedmonth**."<br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted: event</span> postponed from midsummer. A new date to be posted."**<br>
+<span class="redacted">redacted sentence: unpublished prose</span> **28th. Nine. <span class="redacted">redacted sentence: unpublished prose</span> Ten. <span class="redacted">redacted sentence: unpublished prose</span> Peri's reading: "The days are a week apart. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**Scene 45 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- Clerk <span class="redacted">redacted: character</span> and journeyman <span class="redacted">redacted: character</span> <span class="redacted">redacted: character</span> arguing over a roster for the Holm Deep delve muster.<br>
+- <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> note under #3 above regarding the 9 vs 11 stake discrepancy.<br>
+- <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- <span class="redacted">redacted: character</span> reads the roster aloud: "**Nineteen names**... <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>'s draft.)<br>
+- <span class="redacted">redacted: character</span> writes the date (2nd of Fallowmonth) and muster hour into "the book" under the newly lodged stake protocol.</p>
+<p>**Scene 46 <span class="redacted">unpublished</span> ("A list of houses")** — the new Holm Deep notice posted (replacing the old one), and <span class="redacted">redacted: character</span>'s numeric testimony:<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>: "**Thirty-three days**."<br>
+- <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+- Peri's private notebook entry (not Charter material, but written in this scene, physically in the same beat): a physical description of an unnamed figure under the heading "*Adventurer*??" — boiled leather rubbed pale at left shoulder, hooded lamp with dented hood and replaced horn panel, fen billhook (four-foot haft, edge bright six inches/dull rest), worn boots, a restitched glove. Peri says "That's her. That's the list."</p>
+<p>### Other explicit dates/days found, scene by scene (for calendar cross-check)</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Scene 33**: *"The twelfth of Seedmonth. <span class="redacted">redacted sentence: unpublished prose</span><br>
+<span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Scene 38**: stakes dated "25 Cornmonth" (the day the stakes were driven).<br>
+- **Scene 42 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Scene 43 <span class="redacted">unpublished</span>**: *"28 Cornmonth. Half past nine."* (Peri's notebook entry, west-east chain line reading) and "Twenty-three links in five days" (from the previous chain reading).<br>
+- **Scene 44 <span class="redacted">unpublished</span>**: clearing notice dated Milkmonth; reciprocity agreement posted "in Seedmonth"; "They're short... <span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Scene 45 <span class="redacted">unpublished</span>**: Holm Deep delve set for "the second of Fallowmonth."<br>
+- **Scene 46 <span class="redacted">unpublished</span>**: Holm Deep delve "due the tenth of Haymonth," now reset to "the second of Fallowmonth" = "eleven weeks and five days" / "thirty-three days" off; <span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Scene 47 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Scene 48 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Scene 49 <span class="redacted">unpublished</span>**: no new explicit calendar dates; discusses rate consistency (~yard/day to yard-and-a-bit/week) and centre drift ("about a yard a week," "forty to fifty yards" drift total).<br>
+- **Scene 50 <span class="redacted">unpublished</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><br>
+- **Scene 51 <span class="redacted">unpublished</span>**: "The eighth day" (Peri's original sighting of the pale field, during the outbound journey to Fenholt — recorded that night "at the Sluice"); "it's been eight days" since then (stated in scene 51 <span class="redacted">unpublished</span> dialogue) vs. <span class="redacted">redacted sentence: unpublished prose</span> "We go the day after tomorrow. Twelve miles..." "The knot? ... Nothing. **Sixteen days** and nothing" (a recurring separate thread Peri asks about nightly, now at 16 days with no change).</p>
+<p>**Flag for downstream check**: Scene 51 <span class="redacted">unpublished</span>'s title ("two weeks ago") vs. its own body text ("the eighth day," "it's been eight days," "left off... on the tenth") appears to describe events that are 8–10 days in the past, not 14 — worth confirming this isn't a drift/inconsistency before scenes 52–55 build on it.</p>
+</div>
+</body></html>

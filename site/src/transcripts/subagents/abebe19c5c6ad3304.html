@@ -1,0 +1,160 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are repairing citation integrity in the novel&#x27;s notes at ⟦redacte…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are repairing citation integrity in the novel&#x27;s notes at ⟦redacte…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-abebe19c5c6ad3304">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+<br>
+You are repairing citation integrity in the novel's notes at <span class="redacted">redacted: private</span>. Read `CLAUDE.md` first and obey it.<br>
+<br>
+## Why this exists<br>
+<br>
+<span class="redacted">redacted sentence: unpublished prose</span> 021 in four canon files. It appears in no chapter. <span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span> It survived a whole-story consistency audit that explicitly checked for claims citing unsupporting chapters.<br>
+<br>
+So the project now has a mechanical check: `scripts/check_citations.py`. Run it yourself:<br>
+<br>
+    cd <span class="redacted">redacted: private</span> &amp;&amp; python3 scripts/check_citations.py --min-words 5<br>
+<br>
+Its current output is also saved at `<span class="redacted">redacted: private</span>`. It classifies each mismatch as **FABRICATED** (no substantial match anywhere), **ALTERED** (a real line, extended or reworded in canon), or **WRONG CHAPTER** (verbatim but cited to the wrong number).<br>
+<br>
+## The catch, and your first job<br>
+<br>
+**The script's precision is imperfect and some findings are parser artefacts** — it sometimes captures ordinary prose or markdown structure as a "quote". Do not trust a finding without checking the chapter yourself. Equally, **do not dismiss a finding because it is inconvenient**: grep the chapter for the phrase and for its distinctive fragments before you conclude anything.<br>
+<br>
+Report your true/false-positive rate for your files. If you find a systematic parser flaw, **fix `scripts/check_citations.py`** — but only one agent may edit it, and that is the `characters` agent. Others: report the flaw instead.<br>
+<br>
+## How to repair, by category<br>
+<br>
+- **WRONG CHAPTER** — correct the citation number. Cheap and safe.<br>
+- **ALTERED** — the canon entry quotes words the page does not contain. **Replace the quotation with what the page actually says**, and then check whether the claim built on it still stands. Often it will not: the invented words were doing the work. Demote or rewrite the claim accordingly, and say so.<br>
+- **FABRICATED** — verify hard, because this is the severe category. If the phrase genuinely appears nowhere: strike the quotation, and treat every claim resting on it as **unestablished**. Do not preserve the claim by finding a different justification for it — if canon believed something because of a sentence that does not exist, the honest record is that canon does not know it. Demote to an open question with a trigger (`notes/canon/deferred-questions.md` <span class="redacted">unpublished</span> is the register), or cut.<br>
+<br>
+## Hard rules<br>
+<br>
+- **Never invent a replacement quotation.** If you cannot find supporting text, the claim is unsupported and says so.<br>
+- **Never delete a real inconsistency to make the count fall.** The count is not the goal; the record being true is.<br>
+<span class="redacted">redacted sentence: unpublished prose</span><br>
+- Claim levels per `notes/canon/README.md`. A quotation you could not verify cannot support **Established**.<br>
+- Never put sealed content outside `notes/sealed/`; do not edit `notes/sealed/` at all.<br>
+- Do not edit `notes/audit/**` or arc findings files — they are dated records and rewriting them destroys the audit trail. Note errors there instead.<br>
+<br>
+Write your report to `notes/decisions/citations-DOMAIN.md`: `## Fixed` (by category, with counts), `## False positives` (and why), `## Claims demoted or cut` (this is the important section — what canon believed on no evidence), `## Still unresolved`.<br>
+<br>
+Your final message: counts by category, your false-positive rate, and the most consequential claim you had to demote.<br>
+<br>
+<br>
+Your domain slug: **notes-and-plans** — report to `notes/decisions/citations-notes-and-plans.md`.<br>
+<br>
+**Files you own and may edit:** `notes/*.md` at the top level (voices.md, theme.md, premise.md, concept.md, author.md, dialogue-voices.md, farming.md, reader-notes-book-1.md and the rest), `plans/**`, <span class="redacted">unpublished</span> `summaries/**`<br>
+<br>
+Do not edit files owned by the other two domains (characters, world-and-system); report problems in their territory instead.<br>
+<br>
+Note that `notes/author.md` is written in an author persona and quotes chapters as illustrations; a misquote there is a *published-facing* error, so treat it as high severity. `summaries/` is the reader-facing record of what happened and a bad citation there propagates into future planning.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required files.</p>
+</div>
+
+<details><summary>54 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span> | head -200 (Read saved citation report)</p>
+<p>✅ 200 lines, 8376 chars</p>
+<p>🔧 Bash: cat notes/canon/README.md &amp;&amp; ls notes/ plans/ <span class="redacted">unpublished</span> summaries/ notes/decisions 2&gt;… (Read canon README and list dirs)</p>
+<p>✅ 132 lines, 5443 chars</p>
+<p>🔧 Bash: grep -nE '^(notes/[a-z0-9-]+\.md|plans/|summaries/ <span class="redacted">unpublished</span>)' <span class="redacted">redacted: private</span> |… (Filter findings to my domain)</p>
+<p>✅ 112 lines, 9572 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls chapters | head -40; echo ---; sed -n '420,430p' notes/dialogu…</p>
+<p>✅ 45 lines, 1435 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '95,125p' notes/reader-notes-book-1.md; echo ===; sed -n '…</p>
+<p>✅ 33 lines, 1663 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '540,575p' notes/voices.md</p>
+<p>✅ 6 lines, 1190 chars</p>
+<p>✅ 36 lines, 1988 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for p in "hail Sorrel had broken" "mist off the green" "market da…</p>
+<p>✅ 17 lines, 474 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> echo ==…</p>
+<p>✅ 3 lines, 566 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> echo "--C"; sed…</p>
+<p>✅ 24 lines, 1129 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rin "in a month" chapters/*.md; echo "--"; grep -rin "ask m…</p>
+<p>✅ 7 lines, 2509 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rin "Wayfaring" chapters/009-fenholt.md chapters/008-road-l…</p>
+<p>✅ 2 lines, 955 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -rn "month" chapters/009-fenholt.md | grep -in "ask\|month\.…</p>
+<p>✅ 19 lines, 6719 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '37,80p' chapters/009-fenholt.md</p>
+<p>✅ 43 lines, 3278 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '129,150p' chapters/020-the-field-in-autumn.md</p>
+<p>✅ 21 lines, 1803 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for f in "plans/farm-curriculum/b-higher-curricula.md:56 ⟦unpubli…</p>
+<p>✅ 56 lines, 3043 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for p in "quickening assay" "census can" "never yet walked throug…</p>
+<p>✅ 19 lines, 2465 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 9 lines, 2447 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; for p in "keeps its next year" "walked through" "holds the door\|…</p>
+<p>✅ 9 lines, 1303 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '23p' chapters/006-the-handover.md; echo "--"; grep -rn "k…</p>
+<p>✅ 3 lines, 715 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "^&gt;" chapters/001-the-wrong-man.md | cut -c1-200; echo "-…</p>
+<p>✅ 47 lines, 2366 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; echo "--rr92"; sed -n '88,96p' notes/rewrite-readiness.md; echo "…</p>
+<p>✅ 32 lines, 1916 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; ls plans/rewrite-readiness.md; <span class="redacted">unpublished</span> grep -n "hundred yea…</p>
+<p>✅ 14 lines, 1433 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '90,96p' plans/rewrite-readiness.md; <span class="redacted">unpublished</span> echo "-…</p>
+<p>✅ 58 lines, 9997 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '103p' chapters/012-the-charter-board.md; echo "--18"; gre…</p>
+<p>✅ 4 lines, 1064 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '152,160p' plans/farm-curriculum/decision.md; ⟦unpublished…</p>
+<p>✅ 11 lines, 688 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> summaries/ | cu…</p>
+<p>✅ 6 lines, 486 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now applying the fixes.</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: python3 - &lt;&lt;'EOF' import re,io def sub(path, old, new, count=1):     s=open(path).read()…</p>
+<p>✅ 13 lines, 742 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '70,74p' plans/book-01/arc-02.md; <span class="redacted">unpublished</span> sed -n '84…</p>
+<p>✅ 12 lines, 740 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' def sub(path, old, new):     s=open(path).read(…</p>
+<p>✅ 18 lines, 1147 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "Ask me about" plans/book-01/arc-02.md; <span class="redacted">unpublished</span> sed…</p>
+<p>✅ 7 lines, 464 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '270,278p' plans/book-01/arc-02.md; <span class="redacted">unpublished</span> echo ---…</p>
+<p>✅ 12 lines, 777 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; python3 - &lt;&lt;'EOF' def sub(path, old, new):     s=open(path).read(…</p>
+<p>✅ 1 lines, 98 chars</p>
+<p>🔧 Bash: python3 scripts/check_citations.py --min-words 5 &gt; /tmp/c2.txt 2&gt;&amp;1; head -6 /tmp/c2.txt;…</p>
+<p>✅ 7 lines, 190 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat &gt; notes/decisions/citations-notes-and-plans.md &lt;&lt;'EOF' # Cita…</p>
+<p>✅ 1 lines, 76 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Domain **notes-and-plans** (`notes/*.md`, `plans/**`, <span class="redacted">unpublished</span> `summaries/**`). Report: `<span class="redacted">redacted: private</span>/notes/decisions/citations-notes-and-plans.md`. Committed as 61d4c0f.</p>
+<p>**Counts.** 54 findings in the domain; 24 lie in `plans/book-01/arc-01-findings/**`, <span class="redacted">unpublished</span> which the brief forbids editing (reported, untouched). Of the 30 actionable:<br>
+- FABRICATED: 6 flagged → **4 real** (one appearing at 3 sites), 8 false positives.<br>
+- ALTERED: 7 flagged → **4 real** (2 at multiple sites), 4 false positives.<br>
+- WRONG CHAPTER: 9 flagged → **1 real**, 8 false positives.<br>
+- `summaries/**`: zero findings. `notes/author.md`: zero findings.</p>
+<p>**False-positive rate: 19/30 = 63%.** Two systematic parser flaws, reported for the `characters` agent (I do not own the script): (1) a quote followed by its own `(ch. NNN)` citation is bound to a *later* chapter number appearing elsewhere in the sentence or list — this alone produced all 8 bogus WRONG CHAPTER hits, and would be a large fraction of the whole run's 57; (2) scare quotes, invented illustrative dialogue, quoted *canon-file* lines, reader feedback quoted from DRMacIver, and explicitly-labelled deleted-seed-chapter quotes are all read as chapter citations.</p>
+<p>**Most consequential demotion: nothing on the page establishes that <span class="redacted">redacted: character</span> can sew.** `plans/book-01/arc-03.md` <span class="redacted">unpublished</span> beat 9 schedules Peri's stitches to come out on the road, by <span class="redacted">redacted: character</span>, warranted by *<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> 012)*. <span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span>, the prettiness being precisely what marks it as not her work. The misquotation inverted the sentence's agent and a scheduled beat was built on the inversion. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> 009 in the arc-02 plan (and in `notes/canon/deferred-beats.md:8` and `world/timeline.md:343`, which I do not own — flagged for those agents). It is in no chapter; ch. 009 has Edwin answer Peri outright. It survives only as her retrospective report in ch. 020, so ch. 020's callback points at a scene the book does not contain — a real chapter-level gap logged for the rewrite, not fixable in canon.</p>
+</div>
+</body></html>

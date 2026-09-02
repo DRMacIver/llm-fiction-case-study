@@ -1,0 +1,84 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are the editing subagent for the third draft of Book 1 of the nov…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>You are the editing subagent for the third draft of Book 1 of the nov…</h1><div class="subagent-header"><a href="../3ef92e14-71be-4557-a7d1-f251a7410081.html#agent-a8e6260d0de3321a3">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+You are the editing subagent for the third draft of Book 1 of the novel at <span class="redacted">redacted: private</span>. Read CLAUDE.md first and obey it. Do not read notes/sealed/.<br>
+<br>
+Your brief is the skill at .claude/skills/pre-david-pass/SKILL.md — read it in full and follow it exactly. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">unpublished</span> under "Owed fixes — Fix 1" (read that spec; the scene must not be a decision scene and must not contain a line quotable as him choosing). Read it after scenes 01–19 in the same directory (they bind what is on the page: what Peri knows, what the registers said, the rider at the Drovers). <span class="redacted">redacted sentence: unpublished prose</span><br>
+<br>
+Report findings only, per the skill's "How to report": quote, the Part and bullet failed, why in the skill's terms, and a concrete replacement or "cut". Then the two closing lines on any device a second round would be about. Do not edit. Do not commit. Your final message is the report.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll start by reading the required context.</p>
+</div>
+
+<details><summary>32 tool calls</summary>
+<p>🔧 Read .claude/skills/pre-david-pass/SKILL.md</p>
+<p>✅ 319 lines, 20190 chars</p>
+<p>🔧 Read draft/book-01/scenes/20-one-more-week.md</p>
+<p>✅ 44 lines, 3673 chars</p>
+<p>🔧 Bash: sed -n '1,200p' plans/book-01/arc-01.md <span class="redacted">unpublished</span> | head -100; echo ===; grep -n "Owe…</p>
+<p>🔧 Bash: ls draft/book-01/scenes/</p>
+<p>✅ 101 lines, 5384 chars</p>
+<p>✅ 20 lines, 513 chars — 01-pellings-half-past-twelve-soft.md / 02-a-war-horse-on-a-milk-cart.md / 03-until-fulfilled.md</p>
+<p>🔧 Bash: grep -n "Owed fix" -A 80 plans/book-01/arc-01.md <span class="redacted">unpublished</span></p>
+<p>✅ 179 lines, 12433 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/draft/book-01/scenes &amp;&amp; for f in 1*.md 0*.md; do echo "=== $f"; ca…</p>
+<p>✅ 19 lines, 2002 chars</p>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span></p>
+<p>✅ 19 lines, 2002 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 660 lines, 70932 chars</p>
+<p>🔧 Read <span class="redacted">redacted: private</span></p>
+<p>✅ 181 lines, 15854 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 4 lines, 99 chars —      932 characters/edwin.md /     1322 characters/peri.md /      402 world/geography.md</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon &amp;&amp; grep -n -i "ford\|frostmonth\|feud" world/geography…</p>
+<p>✅ 15 lines, 1400 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon &amp;&amp; sed -n '25,60p' world/geography.md</p>
+<p>✅ 36 lines, 2152 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon &amp;&amp; grep -n -i "Fenholt\|ring\|does not know\|knows\b"…</p>
+<p>✅ 28 lines, 2095 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon &amp;&amp; sed -n '100,200p' characters/peri.md</p>
+<p>✅ 101 lines, 6244 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>/notes/canon &amp;&amp; grep -n -i "convene\|bank does the arguing\|renegot…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span><span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>✅ 12 lines, 979 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Report on `draft/book-01/scenes/20-one-more-week.md`.</p>
+<p>---</p>
+<p>**1. "She had been at the ten o'clock, which Sorrel had taught … and now it was four o'clock"** — Part 1, *check the clock / check every count*. Sorrel taught the ten o'clock in scene 17, on the day the box arrived; scenes 18–19 then occupy that same day from eleven in the morning through eight at night ("He worked through the afternoon and into the evening"), so there is no four o'clock free on that day. If the scene is the following day (which "I've had them one afternoon" and the placement require), then Edwin has missed a *second* consecutive ten o'clock and the scene never says so — and scene 17 made a first miss a village event with its own line under REMARKABLE THINGS. Replacement: make the second miss explicit and let Peri date it — "You missed it again. Sorrel taught it again."</p>
+<p>**2. "I've had them one afternoon"** — Part 1, *count*. On the day-after reading he has had the registers an afternoon, an evening, and a morning. Replacement: "I've had them a night."</p>
+<p>**3. "Five years of plot numbers and there's an order in them, and I've had them one afternoon. A week at that bench and I'd know what walks and what doesn't."** — Part 1, *check every fact*, and Part 5, *redundancy*. <span class="redacted">redacted sentence: unpublished prose</span> This had rained." The thing a week is being requested for has been done. Replacement: the week has to buy something the night did not — the order of onset *against the castings*, or the four casters' names against the plots, or the earlier five years he has not reached. Name that, and drop "what walks and what doesn't".</p>
+<p>**4. "The rider's been at the Drovers since breakfast eating."** — Part 1, *count / clock*. The rider arrived at twenty past eight the previous morning (scene 17) and was still at the Drovers at eight that evening (scene 19). "Since breakfast" is a day short. Replacement: "The rider's been at the Drovers since yesterday, eating."</p>
+<p>**5. "The Wystow letter can go tomorrow either way."** — Part 1, *check the dependents / who said what*. Scene 19 ends with Sorrel extracting a promise — "There will be a letter in the morning?" "There'll be a letter." It is now four o'clock the next day and the letter has not gone. Either the scene knows he has broken that (which is a real beat and would serve the spec — a man buying delay in his own coin) or the line has to go. Replacement: have Peri or the fact of the fed rider land it — "There'll be a letter in the morning." / "You said that yesterday."</p>
+<p>**6. "You said the rings were getting bigger."** — Part 4, *knowledge states*, and Part 1, *no clear antecedent*. Peri has not been told about the Fenholt letter or any rings. Scene 15 is explicit that he stood in the doorway with three eastern letters behind him and said only "Thank you for the report"; scene 16 and 19 are Sorrel's. Nothing on the page gives Peri "rings", and Edwin's answer then compounds it — "She measured with a chain", "She'd not have written" — with a *she* Peri has never heard of. Replacement: cut the exchange, or make it Peri asking about the thing she *does* know is in the tower ("The box came from the east") and Edwin answering the register question instead. If the rings are to be in the scene at all, he has to give them to her here, in words, as new information — which is a different scene and probably the wrong one.</p>
+<p>**7. "Marsh Barton and Upper Wold have a thing at the ford every Frostmonth that nobody can do but me, because I've done it for four generations of them and there's no writing it down"** — Part 3, *literacy*, and Part 1, *check every fact*. <span class="redacted">redacted sentence: unpublished prose</span> The claim also dies one scene later, when 26–27 hand the duties over. Replacement: the cost is not that it cannot be written but that it cannot be *substituted* — four generations of them will sit down for him and not for a letter or a deputy in the first winter. "They'll sit at that bank for me. They'll not sit at it for a letter, and the first year somebody else convenes it they'll find out they don't have to come."</p>
+<p>**8. "I don't know what the thing at the ford is." / "No. Nobody does. That's what I'm telling you."** — Part 1, *check every fact*. Scene 12 shows the thing at the ford in full and shows the Marsh Barton chairman perfectly aware of it: market-day precedence, heard out in a kitchen and a root field, this year's split given and known. "Nobody does" is false on the page and reads as significance where the reader already has the facts. Replacement: cut both lines; Peri's honest line is that she has seen him do it — she has not — so let her ask what happens if he is not there, and let the answer be item 7.</p>
+<p>**9. "If a man went east this week, he'd be back for the frosts. That's not the trouble. The trouble is the ford."** — Part 1, *check every inference*. He costed it himself the previous evening: forty miles and a day's looking, "two weeks at the outside", and the first frosts are the back end of the month after next. On his own numbers he is back well before Frostmonth, so the ford is not a cost of going, and the sentence that hangs the scene's stated price on it does not follow. Replacement: he has to say why two weeks is not what this will be — that a thing his six revealings cannot name is not a two-week job and he knows it — and the ford then costs something. Without that, cut the ford as the price and use the fourth lesson or the frost list, which a fortnight does reach.</p>
+<p>**10. "That's what a week here costs against a week there."** — Part 1, *the flat restatement is empty*. A week at the bench versus a week on the road does not decide anything about Frostmonth; the two sides of the comparison are not commensurate and the sentence is doing arithmetic that has no terms. Cut; item 9's replacement carries the accounting.</p>
+<p>**11. "There's nothing east of the bridge has moved in three days that I know of."** — Part 1, *cannot choose between two restatements*. Weather? News? The rings? Nothing in the scene fixes the subject, and Edwin's weather sense is the reading a reader will reach for, which makes the line say he is watching the east — the opposite of the argument he is making. Replacement: "Nothing's come east of the bridge in three days but that box."</p>
+<p>**12. "The registers want a week," he said. It was not to her.** — Part 6, *weak where it should be strong*. "It was not to her" is a limp way to mark the scene's whole method (arguing with himself in company). Replacement: "'The registers want a week,' he said, to the oilskin."</p>
+<p>**13. "There's nothing on any road that reads a register better than a bench does."** — Part 2, *the gesture at meaning*. The comparison is between a road and a bench as readers of registers, which is not a comparison the reader can hold; flattened it says only "benches are better for reading", which is not worth a sentence of this shape. Replacement: "Registers want a table and a lamp. I'd be reading them off my knee in a barn."</p>
+<p>**14. "Mrs Tansy's heap is steaming."** — Part 1, *antecedent*. No heap has been established as Mrs Tansy's; the heaps on the page are the class's — the first at the end of the garden, the second along the north wall. Replacement: "The north wall heap is steaming."</p>
+<p>**15. "Peri wrote something in the notebook, and it was not about twine."** — Part 2, *the noticing beat*. It works only if the reader knows what she wrote instead, and here the preceding line is one she should not be able to receive at all (item 6). If item 6 is cut this line goes with it; if the exchange is rebuilt, the proposition under her writing has to be visible from what he actually said.</p>
+<p>---</p>
+<p>The device a second round would be about is the **oilskin**, and specifically its last two sentences: "the oilskin did not go back in the cupboard. He hung it over the settle by the door, where it would be in the way." The spec bans a decision scene and any line quotable as him choosing — this is the quotable line, given final position and the weight of a verdict, and it says *he is going* more cleanly than any sentence of dialogue could. <span class="redacted">redacted sentence: unpublished prose</span></p>
+</div>
+</body></html>

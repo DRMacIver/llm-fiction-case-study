@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Skeptically verify one dialogue finding from an editing pass on ⟦reda…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+</style></head><body><h1>Skeptically verify one dialogue finding from an editing pass on ⟦reda…</h1><div class="subagent-header"><a href="../0c653b33-1efd-45bb-b7ab-26ed3dca981e.html#agent-a9da7030809f0d3cf">← back to session</a> &middot; subagent transcript, not indexed</div><blockquote><p><strong>User:</strong><br>
+Skeptically verify one dialogue finding from an editing pass on <span class="redacted">redacted: private</span>/chapters/029-what-peri-asked.md. Read <span class="redacted">redacted: private</span>/notes/voices.md "Dialogue rules (round four)" and the relevant "How they talk" section in <span class="redacted">redacted: private</span>/notes/canon/characters/ (speaker: <span class="redacted">redacted: character</span>), then read the chapter around the quoted line.<br>
+Finding: {"category":"wrong-register","speaker":"<span class="redacted">redacted: character</span><span class="redacted">redacted sentence: unpublished prose</span> It is the one line on the page that fails the strip-the-tags test: with the tag removed it reattaches to Edwin. <span class="redacted">redacted: character</span> names the instance and what was done about it; she does not define a term. It is also the scene's second free-standing aphorism (rule 3).","rewrite":"\"In my grandmother's people a person who wants out says so at the table and gets let out, and it's still called an agreement after. Yours doesn't let anybody out.\"","severity":"fix"}<br>
+Try to refute it: is the listener actually confused, or has the reader been set up (rule 4's allowed cases)? Is the "echo" a one-per-arc deliberate one doing work? Would the rewrite be worse, add non-canon facts, or break the speaker's grammar? Default to real=false if the case is weak. If the finding is real but the rewrite is poor, give a better one.</p></blockquote>
+
+
+<div class="assistant-prose">
+<p>I'll verify this finding.</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: sed -n '/Dialogue rules (round four)/,/^## /p' notes/voices.md; ls notes/canon/characters/</p>
+<p>✅ 8 lines, 82 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "round four" notes/voices.md</p>
+<p>✅ 1 lines, 56 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; sed -n '176,260p' notes/voices.md; echo ====; sed -n '/How they t…</p>
+<p>✅ 87 lines, 5147 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; cat notes/canon/characters/<span class="redacted">redacted: character</span>.md</p>
+<p>✅ 234 lines, 13902 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span>; grep -n "grandmother" -A 40 -B 40 chapters/029-what-peri-asked.md…</p>
+<p>✅ 81 lines, 7091 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Verified against `notes/voices.md` rules 3/4/7 and `notes/canon/characters/<span class="redacted">redacted: character</span>.md` "How they talk".</p>
+<p><span class="redacted">redacted sentence: unpublished prose</span> Where Edwin names the principle, <span class="redacted">redacted: character</span> is supposed to name the instance and what was done about it. Strip the tag and it reattaches to Edwin, who is sitting three feet away with his back turned and saying nothing — which makes the misattribution more visible, not less. <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>**Rule 3 half does not hold** and should be dropped from the finding. <span class="redacted">redacted sentence: unpublished prose</span> The flagged line is at worst the scene's *only* aphorism. <span class="redacted">redacted sentence: unpublished prose</span><span class="redacted">redacted: character</span> clarifies ("That's what I'd say"). So the case rests on register alone, but there it is specific and file-cited.</p>
+<p><span class="redacted">redacted sentence: series structure (Arc/Book numbering)</span><span class="redacted">redacted sentence: unpublished prose</span> <span class="redacted">redacted sentence: unpublished prose</span></p>
+<p>Fix should replace only the flagged sentence, leaving the custom sentence and the following one untouched, and use her insistent habit (say the thing twice, don't finish tidy).</p>
+</div>
+
+<p>🔧 StructuredOutput</p>
+<p>✅ 1 lines, 39 chars</p>
+</body></html>
