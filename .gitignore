@@ -1,0 +1,9 @@
+site/book
+build/
+.venv
+__pycache__
+.pytest_cache
+
+# Never commit raw (unredacted) transcripts
+*transcript*
+!tools/**

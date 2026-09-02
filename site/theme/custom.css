@@ -1,0 +1,13 @@
+.redacted {
+  display: inline-block;
+  background: #7a7a7a;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 0.4em;
+  font-size: 0.85em;
+  font-style: italic;
+}
+details > summary {
+  cursor: pointer;
+  color: #666;
+}

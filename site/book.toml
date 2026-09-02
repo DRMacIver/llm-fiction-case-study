@@ -1,0 +1,11 @@
+[book]
+title = "How to Save the World: the making of"
+authors = []
+language = "en"
+src = "src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "coal"
+git-repository-url = ""
+additional-css = ["theme/custom.css"]

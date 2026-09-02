@@ -1,0 +1,700 @@
+{
+  "notes": "Curated, deduplicated from several haiku research passes over the novel's planning notes and unpublished scenes, cross-checked against the published-entity allow-list (scenes 1-40) which takes precedence: any term already public there was dropped even if a research pass flagged it. 'scope' is book1 (unpublished but within Book 1), beyond-book1 (Book 2+), or ending (series conclusion, hardest spoilers).",
+  "topics": [
+    "Edwin's death and mortality",
+    "The plague and its indiscriminate killing",
+    "Medicine and the spread of healing magic",
+    "The handover of world-saving work to Peri",
+    "Child mortality as the series' true enemy",
+    "The Sorrel/Peri succession tension",
+    "The true meaning of Peri's sealed destiny for Edwin",
+    "Holm Deep's break and the delve that follows",
+    "The silent soil's true cause and extent"
+  ],
+  "terms": [
+    {
+      "term": "Halla",
+      "variants": [
+        "Halla Dunmore",
+        "Halla's",
+        "Dunmore",
+        "warden Halla"
+      ],
+      "category": "character",
+      "scope": "book1",
+      "why": "Warden/delver recruited to the party; not established in the published run; succession/heritage subplot."
+    },
+    {
+      "term": "Rill",
+      "variants": [
+        "Guildmaster Rill"
+      ],
+      "category": "character",
+      "scope": "book1",
+      "why": "Charter guildmaster, unpublished administrator with plot-relevant decisions."
+    },
+    {
+      "term": "Ambry",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Assessor/warden character, unpublished."
+    },
+    {
+      "term": "Mistress Anwell",
+      "variants": [
+        "Anwell"
+      ],
+      "category": "character",
+      "scope": "book1",
+      "why": "College registry clerk, unpublished."
+    },
+    {
+      "term": "Draycot",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Field-office clerk, unpublished, ties to the mystery-box plot."
+    },
+    {
+      "term": "Kellow",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Charter clerk, unpublished."
+    },
+    {
+      "term": "Nabb",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Warden injured in the Deep, unpublished."
+    },
+    {
+      "term": "Ody",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Warden/fighter, unpublished delve character."
+    },
+    {
+      "term": "Denbigh",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "College soils fellow, unpublished."
+    },
+    {
+      "term": "Whately",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "College soils fellow, unpublished."
+    },
+    {
+      "term": "Pell",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "College water mage, unpublished."
+    },
+    {
+      "term": "Wicken",
+      "variants": [
+        "the Wickens",
+        "Wicken family",
+        "Wicken place",
+        "Wicken stack"
+      ],
+      "category": "character",
+      "scope": "book1",
+      "why": "Farming family and their farm, site of a creature incident, unpublished."
+    },
+    {
+      "term": "Odgers",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Drainage engineer on Lord Marsh's works, unpublished."
+    },
+    {
+      "term": "Bray",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Engineering ledger-keeper, unpublished."
+    },
+    {
+      "term": "Bilney",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Farmer adjacent to the Ninefoot drain, unpublished."
+    },
+    {
+      "term": "Cecily Hobbs",
+      "variants": [
+        "Cecily"
+      ],
+      "category": "character",
+      "scope": "book1",
+      "why": "Injured in the creature attack, unpublished."
+    },
+    {
+      "term": "Dysart",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Injured warden, unpublished."
+    },
+    {
+      "term": "Tibb",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Young Bridgemoor warden hand, unpublished."
+    },
+    {
+      "term": "Fenner",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Bridgemoor warden hand, unpublished."
+    },
+    {
+      "term": "Coll",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Warden on the delve team, unpublished."
+    },
+    {
+      "term": "Merrit",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Warden on the delve team, unpublished."
+    },
+    {
+      "term": "Old Barrow",
+      "variants": [
+        "Barrow"
+      ],
+      "category": "character",
+      "scope": "book1",
+      "why": "Elderly farmhand hurt by a creature, unpublished."
+    },
+    {
+      "term": "Jem Puckett",
+      "variants": [
+        "Jem"
+      ],
+      "category": "character",
+      "scope": "book1",
+      "why": "Messenger boy, unpublished crisis-night character."
+    },
+    {
+      "term": "Loy",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Farmer whose land is flooded to stop creatures, unpublished."
+    },
+    {
+      "term": "Hedge",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Farmer client east of the rim, unpublished."
+    },
+    {
+      "term": "Odderin",
+      "variants": [
+        "Odderin's grandson"
+      ],
+      "category": "character",
+      "scope": "book1",
+      "why": "Owner of the pale field at Ranner's Sluice and its history, unpublished."
+    },
+    {
+      "term": "Petch",
+      "variants": [],
+      "category": "character",
+      "scope": "book1",
+      "why": "Barley farmer confronting Peri over docked trade, unpublished."
+    },
+    {
+      "term": "Mrs Verity",
+      "variants": [
+        "Verity"
+      ],
+      "category": "character",
+      "scope": "beyond-book1",
+      "why": "Thurle parish contact, gatekeeper to a Book 2 mystery."
+    },
+    {
+      "term": "Kelder Millbrook",
+      "variants": [
+        "Kelder",
+        "Millbrook family",
+        "Peri's father",
+        "Peri's brother",
+        "Peri's grandfather"
+      ],
+      "category": "character",
+      "scope": "beyond-book1",
+      "why": "Peri's wealthy wool-merchant family background, unrevealed on page."
+    },
+    {
+      "term": "Lord Marsh's engineers",
+      "variants": [
+        "J. Odgers"
+      ],
+      "category": "character",
+      "scope": "book1",
+      "why": "Drainage crew on the Ninefoot works, unpublished."
+    },
+    {
+      "term": "Thurle",
+      "variants": [
+        "Thurle box",
+        "parish of Thurle"
+      ],
+      "category": "place",
+      "scope": "beyond-book1",
+      "why": "Western parish and its mystery parcel, a Book 2 plot thread."
+    },
+    {
+      "term": "Ninefoot",
+      "variants": [
+        "the Ninefoot"
+      ],
+      "category": "place",
+      "scope": "book1",
+      "why": "Drainage project where a major ground anomaly is found; unpublished."
+    },
+    {
+      "term": "the Bittle",
+      "variants": [
+        "Bittle"
+      ],
+      "category": "place",
+      "scope": "book1",
+      "why": "Chalk-hill site of a major later investigation, unpublished."
+    },
+    {
+      "term": "the Ram",
+      "variants": [],
+      "category": "place",
+      "scope": "book1",
+      "why": "Guild house where the auger is settled at book's end, unpublished."
+    },
+    {
+      "term": "Bridgemoor",
+      "variants": [
+        "Bridgemoor's well",
+        "Bridgemoor wardens"
+      ],
+      "category": "place",
+      "scope": "beyond-book1",
+      "why": "Distant settlement tied to a Book 2 dungeon/well thread."
+    },
+    {
+      "term": "Harrowfield",
+      "variants": [],
+      "category": "place",
+      "scope": "book1",
+      "why": "Lord Marsh's estate, unpublished."
+    },
+    {
+      "term": "the made channel",
+      "variants": [
+        "made channel",
+        "the cut"
+      ],
+      "category": "place",
+      "scope": "book1",
+      "why": "Ancient constructed waterway linked to the Deep, unpublished."
+    },
+    {
+      "term": "Wystow college's Extension",
+      "variants": [
+        "the extension",
+        "plot fourteen"
+      ],
+      "category": "place",
+      "scope": "book1",
+      "why": "College trial-plot site with a suspended anomaly, unpublished."
+    },
+    {
+      "term": "Stow Warren",
+      "variants": [],
+      "category": "place",
+      "scope": "book1",
+      "why": "Drainage outlet location, unpublished."
+    },
+    {
+      "term": "Read the Weave",
+      "variants": [],
+      "category": "mechanic",
+      "scope": "book1",
+      "why": "Peri's question-asking fate spell and its cooldown mechanics, unpublished detail."
+    },
+    {
+      "term": "Bind Destiny",
+      "variants": [],
+      "category": "mechanic",
+      "scope": "book1",
+      "why": "Peri's binding-people fate spell, unpublished mechanic."
+    },
+    {
+      "term": "the seventh revealing",
+      "variants": [
+        "seventh revealing",
+        "custom revealing"
+      ],
+      "category": "mechanic",
+      "scope": "book1",
+      "why": "A purpose-built diagnostic spell Edwin devises later in Book 1; unpublished."
+    },
+    {
+      "term": "the silent soil",
+      "variants": [
+        "silent ground",
+        "stopped ground",
+        "the rings' true cause"
+      ],
+      "category": "mechanic",
+      "scope": "book1",
+      "why": "The central unsolved mystery's true nature and extent, unpublished beyond its surface appearance."
+    },
+    {
+      "term": "four different years",
+      "variants": [
+        "four beginnings",
+        "four different beginnings"
+      ],
+      "category": "mechanic",
+      "scope": "book1",
+      "why": "Revelation that separate silent-soil sites began in different years, unpublished."
+    },
+    {
+      "term": "the Deep's drain",
+      "variants": [
+        "drain runs the wrong way",
+        "upward drain"
+      ],
+      "category": "mechanic",
+      "scope": "book1",
+      "why": "Anomalous water behaviour inside Holm Deep, unpublished discovery."
+    },
+    {
+      "term": "mawk",
+      "variants": [
+        "mawks",
+        "the long thing"
+      ],
+      "category": "object",
+      "scope": "book1",
+      "why": "Dangerous creatures that emerge from Holm Deep and attack the village; unpublished crisis."
+    },
+    {
+      "term": "healing cantrips",
+      "variants": [
+        "five cantrips",
+        "healing spells taught in every kitchen"
+      ],
+      "category": "mechanic",
+      "scope": "beyond-book1",
+      "why": "Part of the later healing-magic revolution storyline."
+    },
+    {
+      "term": "sick-beast blessing",
+      "variants": [
+        "sick-beast charm",
+        "beast charm"
+      ],
+      "category": "mechanic",
+      "scope": "beyond-book1",
+      "why": "Foundational farm-magic spell later re-purposed toward the healing-magic arc."
+    },
+    {
+      "term": "the handover",
+      "variants": [
+        "handover to Peri",
+        "the succession"
+      ],
+      "category": "theme",
+      "scope": "ending",
+      "why": "Series-spanning theme of Edwin passing his work to Peri (and the Sorrel/Peri succession tension)."
+    },
+    {
+      "term": "the three positions",
+      "variants": [
+        "Sorrel's position",
+        "Peri's position",
+        "Edwin's position",
+        "the trap: where am I most needed"
+      ],
+      "category": "theme",
+      "scope": "book1",
+      "why": "Unrevealed thematic framework contrasting the three leads' approaches to duty."
+    },
+    {
+      "term": "Edwin's refusal of the call",
+      "variants": [
+        "refusal of the call"
+      ],
+      "category": "theme",
+      "scope": "book1",
+      "why": "Analysis of Edwin's retreat into the tower as a narrative failure mode, unpublished framing."
+    },
+    {
+      "term": "Peri's ambition arc",
+      "variants": [
+        "ambition arc"
+      ],
+      "category": "theme",
+      "scope": "book1",
+      "why": "Unrevealed shape of Peri's character arc."
+    },
+    {
+      "term": "the drill (speed training)",
+      "variants": [
+        "Halla trains Edwin",
+        "speed work"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Halla pushes Edwin to train combat speed after the Deep; unpublished."
+    },
+    {
+      "term": "Edwin learns fate magic",
+      "variants": [
+        "Edwin asks Peri to teach fate magic"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Edwin requests fate-magic lessons from Peri; unpublished later beat."
+    },
+    {
+      "term": "Holm Deep breaks",
+      "variants": [
+        "the break",
+        "Holm Deep break",
+        "the delve",
+        "the descent"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Major Arc 2 crisis: the dungeon partially breaks and is delved, with severe injuries; unpublished."
+    },
+    {
+      "term": "Peri's hand injury",
+      "variants": [
+        "eleven stitches"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Combat injury during the Deep delve, unpublished."
+    },
+    {
+      "term": "Edwin's broken arm",
+      "variants": [
+        "two bones broken",
+        "splint"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Combat injury during the Deep delve, unpublished."
+    },
+    {
+      "term": "Edwin's one battle spell",
+      "variants": [
+        "magic missile at nineteen",
+        "fired magic missile"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Backstory: Edwin's single youthful combat-magic failure and dropout from college."
+    },
+    {
+      "term": "Edwin dropped out of Wydow",
+      "variants": [
+        "dropped out of college"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Edwin's college backstory, unpublished."
+    },
+    {
+      "term": "the frost list altered",
+      "variants": [
+        "frost list is Sorrel's"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Sorrel's standing established via the frost list; unpublished."
+    },
+    {
+      "term": "Peri's consent line",
+      "variants": [
+        "consent line",
+        "never used to make someone stay"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Peri's public vow about limits on the Seal; unpublished."
+    },
+    {
+      "term": "the circular / guild network",
+      "variants": [
+        "the circular",
+        "guild sheets",
+        "the network"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Cooperative resolution mechanism for the mystery via printed circulars; unpublished ending of Book 1."
+    },
+    {
+      "term": "creatures escalate off the fen margin",
+      "variants": [
+        "four, seven, nineteen"
+      ],
+      "category": "event",
+      "scope": "book1",
+      "why": "Escalating creature-attack counts foreshadowing the Deep crisis; unpublished."
+    },
+    {
+      "term": "the plague",
+      "variants": [
+        "plague year",
+        "Book 5 plague"
+      ],
+      "category": "event",
+      "scope": "ending",
+      "why": "Catastrophe that kills indiscriminately and is the mechanism of Edwin's death; series-ending hard spoiler."
+    },
+    {
+      "term": "Edwin's death",
+      "variants": [
+        "Edwin dies",
+        "Edwin's mortality",
+        "Edwin's age"
+      ],
+      "category": "event",
+      "scope": "ending",
+      "why": "Edwin dies mortal and ordinary, from plague, in the final book; the core hard spoiler."
+    },
+    {
+      "term": "Peri fails to re-seal Edwin",
+      "variants": [
+        "Seal fails on Edwin",
+        "one binding per person"
+      ],
+      "category": "mechanic",
+      "scope": "ending",
+      "why": "Peri cannot save Edwin because he's already bound; explains why the Seal fails at the ending."
+    },
+    {
+      "term": "destiny: fulfilled",
+      "variants": [
+        "destiny fulfilled",
+        "destiny completed"
+      ],
+      "category": "mechanic",
+      "scope": "ending",
+      "why": "Notification Edwin receives on death, marking his sealed destiny complete."
+    },
+    {
+      "term": "child mortality crisis",
+      "variants": [
+        "child mortality",
+        "children dying"
+      ],
+      "category": "theme",
+      "scope": "beyond-book1",
+      "why": "The series' true spine: saving the world from ordinary child mortality."
+    },
+    {
+      "term": "church opposition to healing",
+      "variants": [
+        "the healing taboo",
+        "healing orders",
+        "church opposes healing"
+      ],
+      "category": "theme",
+      "scope": "beyond-book1",
+      "why": "Institutional religious opposition to spreading healing magic, a Books 2-5 thread."
+    },
+    {
+      "term": "healing magic revolution",
+      "variants": [
+        "second revolution in healing",
+        "healing revolution"
+      ],
+      "category": "event",
+      "scope": "beyond-book1",
+      "why": "Edwin and Peri's future project spreading healing cantrips to every kitchen."
+    },
+    {
+      "term": "the dying child",
+      "variants": [
+        "Peri saves a dying child",
+        "sick child beat"
+      ],
+      "category": "event",
+      "scope": "beyond-book1",
+      "why": "Formative Book 2 beat where Peri uses fate magic to save a dying child."
+    },
+    {
+      "term": "poly romance with Peri",
+      "variants": [
+        "Peri's harem",
+        "polyamory",
+        "Book 2 romance begins"
+      ],
+      "category": "event",
+      "scope": "beyond-book1",
+      "why": "Romance subplot beginning in Book 2, unrevealed in the published run."
+    },
+    {
+      "term": "Peri's tier-up",
+      "variants": [
+        "tier 2 unique class",
+        "second tier class"
+      ],
+      "category": "mechanic",
+      "scope": "beyond-book1",
+      "why": "Peri's class advancement in Book 4, tied to the healing arc."
+    }
+  ],
+  "topic_regexes": [
+    {
+      "topic": "Edwin's death/mortality",
+      "pattern": "\\bEdwin('s)?\\s+(dies|died|dying|death|mortality|is\\s+mortal)\\b"
+    },
+    {
+      "topic": "plague/epidemic",
+      "pattern": "\\b(plague|epidemic|pandemic)\\b"
+    },
+    {
+      "topic": "medicine/disease",
+      "pattern": "\\b(physician|disease|medical|medicine(?!\\s+cabinet)|doctor)\\b"
+    },
+    {
+      "topic": "handover/succession",
+      "pattern": "\\b(handover|hands?\\s+over\\s+(his|the)\\s+work|succession\\s+(conflict|to\\s+peri))\\b"
+    }
+  ],
+  "unpublished_path_rules": {
+    "description": "Paths matching these are unpublished planning/craft material; when a filename or scene number from here is mentioned in a transcript, keep the basename/number visible but append an [unpublished] tag rather than redacting it outright.",
+    "path_prefixes": [
+      "plans/",
+      "notes/theme.md",
+      "notes/canon/deferred-questions.md"
+    ],
+    "scene_number_threshold": 40
+  }
+}
