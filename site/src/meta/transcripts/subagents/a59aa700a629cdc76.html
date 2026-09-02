@@ -222,7 +222,195 @@ th,td{border:1px solid #ddd;padding:.3em .7em;}
 <p>Let's smoke-test full redact on meta output and check anonymization/private paths.</p>
 </div>
 
+<details><summary>6 tool calls</summary>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> SB=/private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howt…</p>
 <p>✅ 5 lines, 226 chars</p>
 <p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -m tools.parse_transcripts --source autoroad 2&gt;&amp;1 |…</p>
+<p>✅ 9 lines, 115 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "def main\|argparse\|premise_revealed_at\|Path.home\|--src…</p>
+<p>✅ 3 lines, 142 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, prose_index.py doesn't need source-parametrizing (it's autoroad-specific already). Let's run it.</p>
+</div>
+
+<p>🔧 Bash: uv run python -m tools.prose_index 2&gt;&amp;1 | tail -20</p>
+<p>✅ 1 lines, 215 chars</p>
+
+<div class="assistant-prose">
+<p>Now run redact.py for both sources:</p>
+</div>
+
+<details><summary>10 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -m tools.redact --source autoroad 2&gt;&amp;1 | tail -10 ec…</p>
+<p>✅ 12 lines, 683 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git stash uv run python -m tools.redact 2&gt;&amp;1 | tail -20 git stash…</p>
+<p>✅ 34 lines, 1588 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> python3 -c " import pickletools with open('build/prose-index.pkl',…</p>
+<p>✅ 30 lines, 1235 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "import\|save(\|load(\|__main__" tests/test_prose_guard.py…</p>
+<p>✅ 8 lines, 255 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c "from tools.prose_index import main; main()" 2&gt;&amp;1…</p>
+<p>✅ 1 lines, 215 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now redact.py works without <code>-m</code> collision:</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c "from tools.redact import main; main()" --source…</p>
+<p>✅ 1 lines, 42 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git stash uv run python -c "from tools.prose_index import main; ma…</p>
+<p>✅ 20 lines, 783 chars</p>
+
+<div class="assistant-prose">
+<p>Identical output — confirms behavior unchanged for autoroad. Now redact the meta source:</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c "from tools.redact import main; main()" --source…</p>
+<p>✅ 1 lines, 40 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -rli "«OTHER-PROJECT»" build/meta/redacted/ | wc -l grep -rl…</p>
+<p>✅ 2 lines, 17 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -o '.\{0,40\}<span class="redacted">redacted: private</span>\{0,40\}' build/meta/redacted…</p>
+<p>✅ 1 lines, 113 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "cwd" tools/render.py grep -rl '/Users/' build/meta/redact…</p>
+<p>✅ 1 lines, 8 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> grep -n "update_summary\|write_readme\|def main\|SUMMARY_PATH\|RED…</p>
+<p>✅ 19 lines, 1387 chars</p>
+<p>🔧 Bash: sed -n '390,440p' <span class="redacted">redacted: private</span></p>
+<p>✅ 50 lines, 1775 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now find the tail of main() calling write_readme/update_summary and update it:</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: grep -n "write_readme(session_rows)\|update_summary(session_rows)" <span class="redacted">redacted: private</span></p>
+<p>✅ 2 lines, 71 chars</p>
+<p>🔧 Edit tools/render.py</p>
+<p>✅ 1 lines, 162 chars</p>
+<p>🔧 Bash: uv run pytest -q tests/test_render.py 2&gt;&amp;1 | tail -40</p>
+<p>✅ 2 lines, 98 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Now let's run the full pipeline for both sources for real.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run python -c "from tools.render import main; main()" --source…</p>
+<p>✅ 1 lines, 31 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git status --short site/src/transcripts | head -20 echo --- uv run…</p>
+<p>✅ 26 lines, 1216 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git diff --stat site/src/transcripts/index.md | tail -5 diff &lt;(git…</p>
+<p>✅ 6 lines, 573 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good — just genuine new session content growth, not a regression. Now let's inspect the meta output and SUMMARY.md.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> cat site/src/meta/transcripts/index.md echo ---SUMMARY tail--- tai…</p>
+<p>✅ 23 lines, 2014 chars</p>
+
+<div class="assistant-prose">
+<p>Excellent — SUMMARY updated correctly with sub-entry at deeper indent. Now let's grep the whole meta site output for &quot;«OTHER-PROJECT»&quot; and &quot;/Users/&quot;.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "«OTHER-PROJECT» matches:" grep -rli "«OTHER-PROJECT»" site/s…</p>
+<p>✅ 7 lines, 425 chars</p>
+<p>🔧 Bash: uv run pytest -q 2&gt;&amp;1 | tail -40</p>
+<p>✅ 4 lines, 259 chars</p>
+
+<div class="assistant-prose">
+<p>All 172 tests pass (no new tests added yet — let me add tests for source-profile switching and anonymization now).</p>
+</div>
+
+<p>🔧 Bash: sed -n '1,40p' <span class="redacted">redacted: private</span></p>
+<p>✅ 40 lines, 1104 chars</p>
+
+<div class="assistant-prose">
+<p>Now let's add tests to test_redact.py for the meta-profile flags and anonymization, and a test_sources.py for source-profile loading.</p>
+</div>
+
+<details><summary>6 tool calls</summary>
+<p>🔧 Bash: tail -30 <span class="redacted">redacted: private</span></p>
+<p>✅ 30 lines, 1243 chars</p>
+<p>🔧 Bash: cat &gt;&gt; <span class="redacted">redacted: private</span> &lt;&lt; 'EOF'   # -------------------------------------------------…</p>
+<p>✅ 1 lines, 4 chars</p>
+<p>🔧 Bash: grep -n "path_spoilers\|def _text_block" <span class="redacted">redacted: private</span> | head</p>
+<p>✅ 8 lines, 454 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Good, both exist. Let's run these new tests.</p>
+</div>
+
+<p>🔧 Bash: uv run pytest -q tests/test_redact.py 2&gt;&amp;1 | tail -50</p>
+<p>✅ 22 lines, 1116 chars</p>
+
+<div class="assistant-prose">
+<p>Oops, my own test text is bad (&quot;ls&quot; has no path). Fix it.</p>
+</div>
+
+<p>🔧 Edit tests/test_redact.py</p>
+<p>✅ 1 lines, 309 chars</p>
+<p>🔧 Bash: uv run pytest -q tests/test_redact.py 2&gt;&amp;1 | tail -20</p>
+<p>✅ 2 lines, 98 chars</p>
+
+<div class="assistant-prose">
+<p>Now let's add a small test_sources.py, and tests for parse_transcripts.py source parametrization (repo_root, keep_content, premise_cutoff).</p>
+</div>
+
+<p>🔧 Write tests/test_sources.py</p>
+<p>✅ 1 lines, 158 chars</p>
+
+<div class="assistant-prose">
+<p>Now add tests for parse_transcripts repo_root/premise_cutoff/keep_content parametrization:</p>
+</div>
+
+<p>🔧 Bash: cat &gt;&gt; <span class="redacted">redacted: private</span> &lt;&lt; 'EOF'   # -------------------------------------------------…</p>
+<p>✅ 2 lines, 98 chars</p>
+
+<div class="assistant-prose">
+<p>All new tests pass. Now full test suite and mdbook build.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> uv run pytest -q 2&gt;&amp;1 | tail -20</p>
+<p>✅ 4 lines, 259 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> which mdbook &amp;&amp; mdbook build site 2&gt;&amp;1 | tail -60</p>
+<p>✅ 4 lines, 167 chars</p>
+
+<div class="assistant-prose">
+<p>mdbook build succeeded. Let's do the final grep checks against the built book too, and gather final counts.</p>
+</div>
+
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> echo "=== grep «OTHER-PROJECT» under site/src/meta ===" grep -rli…</p>
+<p>✅ 12 lines, 2394 chars</p>
+<p>🔧 Bash: cd <span class="redacted">redacted: private</span> git status --short | grep -v "^ M site/src/transcripts" | head -30…</p>
+<p>✅ 31 lines, 1487 chars</p>
+
+<div class="assistant-prose">
+<p>Task complete. Summary:</p>
+<p><strong>Pipeline generalization</strong> (<code>tools/sources.json</code> + new <code>tools/sources.py</code>): defines two source profiles, <code>autoroad</code> (unchanged full profile) and <code>meta</code> (this project's own transcripts). <code>tools/parse_transcripts.py</code>, <code>tools/redact.py</code>, <code>tools/render.py</code> all gained a <code>--source</code> CLI flag and were parametrized (repo_root, premise_cutoff, keep_file_contents, redaction profile flags, anonymization map) while keeping all existing function signatures back-compatible via new optional kwargs — verified byte-identical output for the <code>autoroad</code> source before/after (same redaction counts: 2190 files, 1324 over threshold).</p>
+<p><strong>Meta profile</strong>: private-info redaction with a <em>broader</em> path regex (any <code>/Users/&lt;user&gt;/...</code>, not just the two narrow prefixes), the same term list and the same 5 hard-spoiler topic regexes from <code>tools/spoilers.json</code>, no scene/unpublished-path tagging, no prose guard, no premise cutoff, and file contents never kept (via <code>keep_content_enabled=False</code>, redundant-but-explicit alongside <code>premise_cutoff=None</code>). An anonymization pass (<code>build_anonymize_patterns</code>/<code>_anonymize</code> in <code>tools/redact.py</code>) runs first, everywhere, replacing <code>«OTHER-PROJECT»(s)</code>, <code>«OTHER-PROJECT»</code>, <code>«OTHER-PROJECT»</code>, bare <code>«OTHER-PROJECT»</code>/<code>«OTHER-PROJECT»</code>, and <code>«OTHER-PROJECT»</code> with <code>«OTHER-PROJECT»</code>.</p>
+<p><strong>Rendering</strong>: <code>site/src/meta/transcripts/index.md</code> got the required two-sentence note; <code>update_summary()</code> was generalized to scope its rewrite to any marker line (autoroad's top-level marker or meta's indented one), inserting session sub-entries one level deeper while leaving the marker line and its siblings alone.</p>
+<p><strong>Tests added</strong>: <code>tests/test_sources.py</code> (source-profile loading/validation), plus new cases in <code>tests/test_redact.py</code> (anonymization ordering/word-boundaries, anonymize-before-other-passes, broad vs. narrow private-path redaction, disabling scene/path tagging, premise-cutoff toggling) and <code>tests/test_parse_transcripts.py</code> (custom repo_root, premise-cutoff-disabled never keeps content, explicit keep-content override).</p>
+<p><strong>Run results</strong>:</p>
+<ul>
+<li><code>uv run pytest -q</code>: 185 passed.</li>
+<li><code>mdbook build site</code>: succeeded.</li>
+<li>meta source: 1 session, 443 subagents, 445 pages under <code>site/src/meta/transcripts/</code> (443 subagent HTML pages + <code>index.md</code> + 1 session <code>.md</code>).</li>
+<li><code>grep -rli «OTHER-PROJECT» site/src/meta/</code> (and the built <code>site/book/meta/</code>): 0 hits.</li>
+<li><code>grep -rn &quot;/Users/&quot; site/src/meta/</code>: 2 files, both from a subagent transcript quoting this very task's own instructions verbatim (e.g. <code>a private path (/Users/, .claude/projects)</code>, <code>no &quot;/Users/&quot; path survives</code>) — bare mentions of the literal string as descriptive text, never an actual filesystem path (no username/segment follows). No real path leaks.</li>
+</ul>
+<p>Not committed, per instructions. Key files: <code>tools/sources.json</code>, <code>tools/sources.py</code>, <code>tools/parse_transcripts.py</code>, <code>tools/redact.py</code>, <code>tools/render.py</code>, <code>tests/test_sources.py</code>, <code>tests/test_redact.py</code>, <code>tests/test_parse_transcripts.py</code>, <code>site/src/meta/transcripts/</code>, <code>site/src/SUMMARY.md</code>.</p>
+</div>
 </body></html>

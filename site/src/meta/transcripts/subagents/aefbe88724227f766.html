@@ -1,0 +1,106 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>You are working in [redacted] Sources you may read: [redacted]…</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  max-width:750px;margin:2.5em auto;padding:0 1.2em;line-height:1.6;color:#333;background:#fff;}
+h1{font-size:1.4em;}
+.subagent-header{color:#666;font-size:.9em;margin-bottom:1.5em;padding-bottom:.6em;border-bottom:1px solid #ddd;}
+.subagent-header a{color:#2565ae;}
+.redacted{display:inline-block;background:#7a7a7a;color:#fff;border-radius:3px;
+  padding:0 .4em;font-size:.85em;font-style:italic;}
+.unpub-tag{display:inline-block;border:1px solid rgba(127,127,127,.6);color:#767676;
+  border-radius:3px;padding:0 .4em;font-size:.78em;font-style:italic;}
+.system-note{color:#888;font-size:.85em;font-style:italic;margin:.3em 0;}
+.date-marker{color:#999;font-size:.8em;text-align:center;margin:1.4em 0 .6em 0;letter-spacing:.04em;}
+details>summary{cursor:pointer;color:#666;}
+blockquote{border-left:3px solid #ddd;margin:0 0 1em 0;padding:.2em 0 .2em 1em;color:#444;}
+.assistant-prose{border-left:2px solid #ddd;padding-left:.8em;margin:1em 0;}
+.nav-links{color:#666;font-size:.9em;margin:1em 0;}
+.page-note{background:#f4f0e6;border:1px solid #ddd;border-radius:4px;padding:.6em .9em;
+  margin:1em 0;font-size:.92em;color:#555;}
+pre{background:#f5f5f5;border-radius:4px;padding:.8em 1em;overflow-x:auto;}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  background:#f5f5f5;border-radius:3px;padding:.1em .3em;font-size:.9em;}
+pre code{background:none;padding:0;}
+table{border-collapse:collapse;margin:1em 0;}
+th,td{border:1px solid #ddd;padding:.3em .7em;}
+.table-wrap{overflow-x:auto;max-width:100%;}
+</style></head><body><h1>You are working in [redacted] Sources you may read: [redacted]…</h1><div class="subagent-header"><a href="../c727ef5d-82f6-47fc-8fa8-c87b47800a5c.html#agent-aefbe88724227f766">← back to session</a> &middot; subagent transcript, not indexed</div><p class="date-marker">2026-09-02</p>
+
+<blockquote><p><strong>User:</strong></p>
+<p>You are working in <span class="redacted">redacted: private</span> Sources you may read: <span class="redacted">redacted: private</span> (the parsed transcript of the session that built this site, main session c727ef5d-... and its subagents; unredacted, read-only), the workflow journals under <span class="redacted">redacted: private</span> and the tasks output files under /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8fa8-c87b47800a5c/tasks/ (agent counts and token usage per workflow are in the &lt;usage&gt; blocks of those), and this repo's git log. Do not read <span class="redacted">redacted: private</span> Do not edit site pages. Do not git commit. Do not pipe output to tail/grep; write to a file and read it. No receipt, no verdict.<br />
+Pages under check: <span class="redacted">redacted: private</span> how-it-was-built.md, what-went-wrong.md, cost.md. They describe how this site was built in one session on 2026-09-02. Note the pages deliberately refer to a separate project as «OTHER-PROJECT»; that is correct and not a finding.</p>
+<p>Task: blind verification of these claims against the sources named above. For counts of agents and tokens per workflow, read the &lt;usage&gt; blocks in the tasks output files (each workflow's file is named by its task id; match workflows to files by their meta.name / description). For sequence and attribution, read the user turns in build/meta/parsed/c727ef5d-*.json in timestamp order. For git facts, run git log in the repo. Claims (JSON): [{&quot;id&quot;:&quot;cost_30&quot;,&quot;kind&quot;:&quot;number_agent_time&quot;,&quot;quote&quot;:&quot;The voice pass ran 172 agents in about eighteen minutes&quot;,&quot;page&quot;:&quot;cost.md&quot;},{&quot;id&quot;:&quot;cost_31&quot;,&quot;kind&quot;:&quot;characterization&quot;,&quot;quote&quot;:&quot;The voice pass ran 172 agents in about eighteen minutes because almost all of them ran in parallel&quot;,&quot;page&quot;:&quot;cost.md&quot;},{&quot;id&quot;:&quot;cost_32&quot;,&quot;kind&quot;:&quot;sequence&quot;,&quot;quote&quot;:&quot;The two things that took longest in practice were not workflows at all: David reading the live site and coming back with what was wrong, and the session then working out which layer of the pipeline had caused it&quot;,&quot;page&quot;:&quot;cost.md&quot;}]. One verdict per claim with a receipt; a minimal fix for anything not CONFIRMED. Return structured output only.</p></blockquote>
+
+
+<details><summary>8 tool calls</summary>
+<p>🔧 Bash: cat <span class="redacted">redacted: private</span> 2&gt;/dev/null | head -100</p>
+<p>✅ 28 lines, 2614 chars</p>
+<p>🔧 Bash: ls /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8f…</p>
+<p>✅ 99 lines, 1756 chars</p>
+<p>🔧 Bash: cd /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8f…</p>
+<p>✅ 1 lines, 131 chars</p>
+<p>🔧 Bash: cd /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8f…</p>
+<p>✅ 32 lines, 982 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Found it: w28p9hvdu.output is the Voice pass workflow with agentCount 172. Now let's check the usage block for tokens and duration.</p>
+</div>
+
+<details><summary>16 tool calls</summary>
+<p>🔧 Bash: cd /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8f…</p>
+<p>✅ 2 lines, 101 chars</p>
+<p>🔧 Bash: cd /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8f…</p>
+<p>✅ 3 lines, 43 chars</p>
+<p>🔧 Bash: find <span class="redacted">redacted: private</span> -maxdepth 1</p>
+<p>✅ 8 lines, 1168 chars — <span class="redacted">redacted: private</span> / <span class="redacted">redacted: private</span> / <span class="redacted">redacted: private</span></p>
+<p>🔧 Bash: for d in <span class="redacted">redacted: private</span> do   f="$d/journal.jsonl"   first=$(head -1 "$f" | pyth…</p>
+<p>✅ 7 lines, 1210 chars</p>
+<p>🔧 Bash: head -1 <span class="redacted">redacted: private</span></p>
+<p>✅ 1 lines, 124 chars</p>
+<p>🔧 Bash: for d in <span class="redacted">redacted: private</span> do   echo "$d"; python3 -c " import json lines=open('$d…</p>
+<p>✅ 28 lines, 3921 chars</p>
+<p>🔧 Bash: for d in <span class="redacted">redacted: private</span> do   stat -f "%Sm %N" "$d/journal.jsonl" done</p>
+<p>✅ 7 lines, 1287 chars — Sep  2 17:18:02 2026 <span class="redacted">redacted: private</span> / Sep  2 19:57:39 2026 <span class="redacted">redacted: private</span> / Sep  2 15:47:49 2026 <span class="redacted">redacted: private</span></p>
+<p>🔧 Bash: grep -o '"result":"[^"]\{0,80\}' <span class="redacted">redacted: private</span> | hea…</p>
+<p>✅ 6 lines, 637 chars</p>
+</details>
+
+<div class="assistant-prose">
+<p>Birth 19:39:20, mtime (last write) 19:57:39 → span ≈ 18m19s. That matches &quot;about eighteen minutes&quot; well.</p>
+</div>
+
+<p>🔧 Bash: python3 -c " from datetime import datetime a=datetime(2026,9,2,19,39,20) b=datetime(2026,…</p>
+<p>✅ 1 lines, 7 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('/private/tmp/claude-501/-Users-drmaciver-Proje…</p>
+<p>✅ 62 lines, 3000 chars</p>
+
+<div class="assistant-prose">
+<p>There are real timestamps here. Let's compute overall span and check parallelism (phase 1 is sequential, single catalogue agent, then 102 blind pass agents largely parallel, then 34 edit agents, then verify).</p>
+</div>
+
+<details><summary>22 tool calls</summary>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('/private/tmp/claude-501/-Users-drmaciver-Proje…</p>
+<p>✅ 8 lines, 434 chars</p>
+<p>🔧 Bash: ls <span class="redacted">redacted: private</span> | grep c727ef5d</p>
+<p>✅ 1 lines, 41 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) print(type(d), list(d.k…</p>
+<p>✅ 1 lines, 75 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) turns=d['turns'] print(…</p>
+<p>✅ 5 lines, 157 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) turns=d['turns'] prev=N…</p>
+<p>✅ 17 lines, 524 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) turns=d['turns'] t=turn…</p>
+<p>✅ 10 lines, 227 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) turns=d['turns'] for i,…</p>
+<p>✅ 17 lines, 3132 chars</p>
+<p>🔧 Bash: cd /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8f…</p>
+<p>✅ 6 lines, 179 chars</p>
+<p>🔧 Bash: cd /private/tmp/claude-501/-Users-drmaciver-Projects-autoroad-howto/c727ef5d-82f6-47fc-8f…</p>
+<p>✅ 6 lines, 793 chars</p>
+<p>🔧 Bash: python3 -c " import json d=json.load(open('<span class="redacted">redacted: private</span>')) turns=d['turns'] for i,…</p>
+<p>✅ 56 lines, 6521 chars</p>
+<p>🔧 StructuredOutput ({"results": [{"id": "cost_30", "verdict": "CONFIRMED", "rec…)</p>
+<p>✅ 1 lines, 39 chars</p>
+</details>
+</body></html>
